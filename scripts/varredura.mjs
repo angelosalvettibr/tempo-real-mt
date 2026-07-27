@@ -66,15 +66,29 @@ const OFICIAIS = [
 // de RSS: ele oferece manchete, resumo e a foto que escolheu incluir, para
 // ser distribuído com crédito e link. Diferente de raspar o texto do site.
 // Como cada um usa um caminho, o robô testa os candidatos e fica com o que responder.
-const CAMINHOS_RSS = ['/rss', '/feed', '/rss.xml', '/feed/', '/rss/noticias', '/index.php/rss'];
+const CAMINHOS_RSS = ['/feed', '/rss', '/feed/', '/rss.xml', '/?feed=rss2', '/feed/rss', '/rss/noticias'];
 
 const VEICULOS_MT = [
-  { id:'midianews',   nome:'MidiaNews',      site:'https://www.midianews.com.br' },
-  { id:'olhardireto', nome:'Olhar Direto',   site:'https://www.olhardireto.com.br' },
-  { id:'folhamax',    nome:'FolhaMax',       site:'https://www.folhamax.com' },
-  { id:'odocumento',  nome:'O Documento',    site:'https://odocumento.com.br' },
-  { id:'gazeta',      nome:'Gazeta Digital', site:'https://www.gazetadigital.com.br' },
-  { id:'rdnews',      nome:'RDNews',         site:'https://www.rdnews.com.br' }
+  // O Documento: confirmado, responde em /rss com foto em todos os itens.
+  { id:'odocumento',  nome:'O Documento',        site:'https://odocumento.com.br' },
+  // MidiaNews e RDNews rodam no CMS Trinix e NAO publicam RSS. Ficam de fora.
+  // Os de baixo em geral rodam WordPress, onde /feed existe e traz a foto.
+  { id:'estadaomt',   nome:'Estadão MT',         site:'https://www.estadaomatogrosso.com.br' },
+  { id:'olivre',      nome:'O Livre',            site:'https://www.olivre.com.br' },
+  { id:'issoenoticia',nome:'Isso É Notícia',     site:'https://issoenoticia.com.br' },
+  { id:'muvuca',      nome:'Muvuca Popular',     site:'https://www.muvucapopular.com.br' },
+  { id:'minutomt',    nome:'Minuto MT',          site:'https://minutomt.com.br' },
+  { id:'cenariomt',   nome:'CenárioMT',          site:'https://www.cenariomt.com.br' },
+  { id:'pontocurva',  nome:'Ponto na Curva',     site:'https://www.pontonacurva.com.br' },
+  { id:'vgnoticias',  nome:'VG Notícias',        site:'https://www.vgnoticias.com.br' },
+  { id:'sonoticias',  nome:'Só Notícias',        site:'https://www.sonoticias.com.br' },
+  { id:'vipmt',       nome:'VIP MT',             site:'https://vipmt.com.br' },
+  { id:'midiajur',    nome:'Midia Jur',          site:'https://www.midiajur.com.br' },
+  { id:'canaldiario', nome:'Canal Diário',       site:'https://canaldiario.com.br' },
+  { id:'passandoalimpo', nome:'Passando a Limpo', site:'https://passandoalimpomt.com.br' },
+  { id:'olhardireto', nome:'Olhar Direto',       site:'https://www.olhardireto.com.br' },
+  { id:'folhamax',    nome:'FolhaMax',           site:'https://www.folhamax.com' },
+  { id:'gazeta',      nome:'Gazeta Digital',     site:'https://www.gazetadigital.com.br' }
 ].map(f => ({ ...f, editoria:'mt', tipo:'veiculo', opcional:true }));
 
 const FONTES = [...AGENCIA_BRASIL, ...BUSCAS, ...OFICIAIS];
@@ -226,7 +240,7 @@ for (const v of VEICULOS_MT) {
   if (!achou) { relatorio.push(`aviso ${v.id.padEnd(12)} sem RSS nos caminhos testados`); continue; }
 
   try {
-    const brutos = lerRSS(await buscar(achou)).slice(0, POR_FONTE);
+    const brutos = lerRSS(await buscar(achou)).slice(0, 8);
     let ok = 0, velhos = 0, comFoto = 0;
     for (const b of brutos) {
       const ts = Date.parse(b.data);
