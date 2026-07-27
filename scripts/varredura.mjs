@@ -10,6 +10,21 @@
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 
+// ===========================================================================
+// A CHAVE. Decide o que vai ao ar.
+//
+//   false = edição cheia. Publica o licenciado (texto e foto liberados) e
+//           também manchete + veículo + link do que vem do Google Notícias.
+//           Agregação com crédito: o clique vai para quem apurou.
+//
+//   true  = edição limpa. Publica SÓ fonte que autoriza republicação.
+//           O Google Notícias vira apenas termômetro: diz o que está quente
+//           e ajuda a escolher o destaque, mas não vai para o site.
+//           Hoje isso deixa a edição pequena, porque os órgãos de MT não
+//           publicam RSS. Cresce à medida que ligarmos fontes oficiais.
+// ===========================================================================
+const SO_LICENCIADO = false;
+
 const JANELA_HORAS = 24;
 const POR_FONTE = 15;
 const SAIDA = 'dados/edicao.json';
@@ -28,7 +43,7 @@ const AGENCIA_BRASIL = [
   { id:'ab-economia', editoria:'nacional', url:'https://agenciabrasil.ebc.com.br/rss/economia/feed.xml' },
   { id:'ab-justica',  editoria:'nacional', url:'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml'  },
   { id:'ab-geral',    editoria:'nacional', url:'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml'    }
-].map(f => ({ ...f, tipo:'agencia', nome:'Agência Brasil' }));
+].map(f => ({ ...f, tipo:'agencia', nome:'Agência Brasil', licenciado:true }));
 
 /* ========================================================================= */
 /* FONTE 2 — Google News RSS. Sem chave, sem cadastro, nunca sai do ar.      */
@@ -47,7 +62,7 @@ const BUSCAS = [
   { id:'gn-agro-2',  editoria:'agro',     q:'agronegócio "Mato Grosso" exportação OR cotação -"Mato Grosso do Sul" when:1d' },
   { id:'gn-nacional',editoria:'nacional', q:'eleições 2026 Brasil convenção OR pesquisa when:1d' }
 ].map(f => ({
-  ...f, tipo:'google-news', nome:'Google Notícias',
+  ...f, tipo:'google-news', nome:'Google Notícias', licenciado:false,
   url:`https://news.google.com/rss/search?q=${encodeURIComponent(f.q)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`
 }));
 
@@ -60,7 +75,7 @@ const BUSCAS = [
 const OFICIAIS = [
   { id:'gov-mt', editoria:'mt',     nome:'Governo de MT',        url:'https://www.mt.gov.br/rss' },
   { id:'vg-pref',editoria:'vg',     nome:'Prefeitura de VG',     url:'https://www.varzeagrande.mt.gov.br/rss' }
-].map(f => ({ ...f, tipo:'oficial', opcional:true }));
+].map(f => ({ ...f, tipo:'oficial', opcional:true, licenciado:true }));
 
 // Veículos de MT. Assinar o RSS que o próprio veículo publica é o uso normal
 // de RSS: ele oferece manchete, resumo e a foto que escolheu incluir, para
@@ -89,7 +104,7 @@ const VEICULOS_MT = [
   { id:'olhardireto', nome:'Olhar Direto',       site:'https://www.olhardireto.com.br' },
   { id:'folhamax',    nome:'FolhaMax',           site:'https://www.folhamax.com' },
   { id:'gazeta',      nome:'Gazeta Digital',     site:'https://www.gazetadigital.com.br' }
-].map(f => ({ ...f, editoria:'mt', tipo:'veiculo', opcional:true }));
+].map(f => ({ ...f, editoria:'mt', tipo:'veiculo', opcional:true, licenciado:false }));
 
 const FONTES = [...AGENCIA_BRASIL, ...BUSCAS, ...OFICIAIS];
 
@@ -217,6 +232,7 @@ for (const f of FONTES) {
         imagem: b.imagem || '',
         iso,
         hora: horaBR(iso),
+        licenciado: !!f.licenciado,
         destaque: false
       });
       ok++;
@@ -254,7 +270,7 @@ for (const v of VEICULOS_MT) {
         editoria: ehAgro(b.titulo + ' ' + b.resumo) ? 'agro' : v.editoria,
         chapeu: v.nome, titulo: b.titulo, resumo: b.resumo.slice(0,300),
         fonte: v.nome, link: b.link, imagem: b.imagem || '',
-        iso, hora: horaBR(iso), destaque:false
+        iso, hora: horaBR(iso), licenciado:false, destaque:false
       });
       ok++;
     }
@@ -269,17 +285,47 @@ const finais = itens
   .filter(i => { const k = chave(i.titulo); if (vistos.has(k)) return false; vistos.add(k); return true; })
   .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
 
-if (finais.length) finais[0].destaque = true;
+// ---------------------------------------------------------------- termômetro
+// Quantos veículos diferentes estão dando a mesma história? Isso mede o que é
+// grande de verdade. Serve para escolher o destaque — e, no modo limpo, para
+// dizer à redação o que apurar.
+const VAZIAS = new Set(('de da do das dos e ou a o as os um uma em no na nos nas por para com sem sobre que se ao aos apos ate entre pelo pela como mais menos nao seu sua seus suas este esta isso ser tem ter vai vao foi sao estao diz contra durante ainda').split(' '));
+const chavesDe = t => [...new Set(semAcento(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(p => p.length >= 4 && !VAZIAS.has(p)))];
+const parecidas = (a,b) => {
+  const A = chavesDe(a), B = chavesDe(b);
+  if (A.length < 2 || B.length < 2) return 0;
+  return A.filter(p => B.includes(p)).length / Math.min(A.length, B.length);
+};
+
+for (const i of finais) {
+  i.quentura = finais.filter(o => o !== i && o.fonte !== i.fonte && parecidas(i.titulo, o.titulo) >= 0.45).length;
+}
+
+const soPauta = SO_LICENCIADO
+  ? finais.filter(i => !i.licenciado && i.quentura >= 1)
+          .sort((a,b) => b.quentura - a.quentura).slice(0, 40)
+  : [];
+
+const publicados = SO_LICENCIADO ? finais.filter(i => i.licenciado) : finais;
+
+// Destaque: o mais quente entre os publicados; empate desempata pelo mais novo.
+if (publicados.length) {
+  publicados.sort((a,b) => (b.quentura - a.quentura) || (Date.parse(b.iso) - Date.parse(a.iso)));
+  publicados[0].destaque = true;
+  publicados.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+}
 
 console.log('\n  TEMPO REAL MT · varredura ' + new Date().toISOString());
 console.log('  ' + '-'.repeat(64));
 relatorio.forEach(l => console.log('  ' + l));
 console.log('  ' + '-'.repeat(64));
 
-const porEditoria = finais.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
-console.log(`  ${finais.length} itens na janela de ${JANELA_HORAS}h:`, JSON.stringify(porEditoria));
+const porEditoria = publicados.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
+console.log(`  modo: ${SO_LICENCIADO ? 'SO LICENCIADO' : 'edicao cheia'}`);
+console.log(`  ${publicados.length} publicados de ${finais.length} coletados:`, JSON.stringify(porEditoria));
+if (soPauta.length) console.log(`  ${soPauta.length} sugestoes de pauta (quentes, sem fonte licenciada)`);
 
-if (finais.length === 0) {
+if (publicados.length === 0) {
   console.log('\n  Varredura vazia. A edição anterior foi preservada.\n');
   try { await readFile(SAIDA); process.exit(0); } catch { /* sem arquivo anterior, segue */ }
 }
@@ -291,7 +337,9 @@ await writeFile(SAIDA, JSON.stringify({
   janelaHoras: JANELA_HORAS,
   fontesConsultadas: FONTES.length,
   relatorio,
-  itens: finais
+  modo: SO_LICENCIADO ? 'so-licenciado' : 'edicao-cheia',
+  itens: publicados,
+  pautas: soPauta
 }, null, 2), 'utf8');
 
 console.log('  gravado em ' + SAIDA + '\n');
