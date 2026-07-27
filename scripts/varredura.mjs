@@ -17,15 +17,16 @@ const AGENCIA_BRASIL = [
   { id:'ab-geral',    editoria:'nacional', url:'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml'    }
 ].map(f => ({ ...f, tipo:'agencia', nome:'Agência Brasil' }));
 
-// Google Notícias. O operador when:1d limita às últimas 24h.
+// Google Notícias. when:1d limita às últimas 24h.
+// -"Mato Grosso do Sul" evita que Campo Grande entre na editoria de MT.
 const BUSCAS = [
-  { id:'gn-cuiaba',   editoria:'cuiaba',   q:'Cuiabá prefeitura OR câmara OR vereadores when:1d' },
-  { id:'gn-vg',       editoria:'vg',       q:'"Várzea Grande" when:1d' },
-  { id:'gn-mt-pol',   editoria:'mt',       q:'"Mato Grosso" governo OR assembleia OR eleições when:1d' },
-  { id:'gn-mt-just',  editoria:'mt',       q:'"Mato Grosso" "Tribunal de Contas" OR TJMT OR "Ministério Público" when:1d' },
-  { id:'gn-agro',     editoria:'agro',     q:'"Mato Grosso" soja OR milho OR algodão OR Imea OR safra when:1d' },
-  { id:'gn-agro-2',   editoria:'agro',     q:'agronegócio Mato Grosso exportação OR cotação when:1d' },
-  { id:'gn-nacional', editoria:'nacional', q:'eleições 2026 Brasil convenção OR pesquisa when:1d' }
+  { id:'gn-cuiaba',  editoria:'cuiaba',   q:'Cuiabá prefeitura OR câmara OR vereadores when:1d' },
+  { id:'gn-vg',      editoria:'vg',       q:'"Várzea Grande" "Mato Grosso" -"Mato Grosso do Sul" when:1d' },
+  { id:'gn-mt-pol',  editoria:'mt',       q:'"Mato Grosso" governo OR assembleia OR eleições -"Mato Grosso do Sul" -"Campo Grande" when:1d' },
+  { id:'gn-mt-just', editoria:'mt',       q:'TJMT OR "TCE-MT" OR "Ministério Público de Mato Grosso" -"Mato Grosso do Sul" when:1d' },
+  { id:'gn-agro',    editoria:'agro',     q:'"Mato Grosso" soja OR milho OR algodão OR Imea OR safra -"Mato Grosso do Sul" when:1d' },
+  { id:'gn-agro-2',  editoria:'agro',     q:'agronegócio "Mato Grosso" exportação OR cotação -"Mato Grosso do Sul" when:1d' },
+  { id:'gn-nacional',editoria:'nacional', q:'eleições 2026 Brasil convenção OR pesquisa when:1d' }
 ].map(f => ({
   ...f, tipo:'google-news', nome:'Google Notícias',
   url:`https://news.google.com/rss/search?q=${encodeURIComponent(f.q)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`
@@ -54,11 +55,19 @@ const AGRO = ['soja','milho','algodão','boi','pecuária','safra','agro','grão'
   'fertilizante','colheita','plantio','imea','commodities'];
 
 const semAcento = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-const limpar = s => String(s||'')
-  .replace(/<!\[CDATA\[|\]\]>/g,'').replace(/<[^>]+>/g,' ')
-  .replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"')
-  .replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')
-  .replace(/\s+/g,' ').trim();
+
+// Decodifica entidades ANTES de remover tags, duas passadas. O Google Notícias
+// manda a descrição com as tags escapadas; na ordem errada, o HTML escapado
+// vira texto visível na tela.
+const limpar = s => {
+  let t = String(s||'').replace(/<!\[CDATA\[|\]\]>/g,'');
+  for (let i = 0; i < 2; i++) {
+    t = t.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
+         .replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&nbsp;/g,' ');
+    t = t.replace(/<[^>]+>/g,' ');
+  }
+  return t.replace(/\s+/g,' ').trim();
+};
 
 const campo = (b,t) => { const m = b.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</${t}>`,'i')); return m ? m[1].trim() : ''; };
 const attr  = (b,t,a) => { const m = b.match(new RegExp(`<${t}[^>]*${a}="([^"]+)"`,'i')); return m ? m[1] : ''; };
@@ -118,6 +127,10 @@ for (const f of FONTES) {
       const alvo = semAcento(`${b.titulo} ${b.resumo} ${b.veiculo}`);
       if (RE_BLOQUEIO.test(alvo)) { bloqueados++; continue; }
 
+      // Rede de segurança: se o Mato Grosso do Sul escapar da busca, morre aqui.
+      const MS = /(mato grosso do sul|campo grande|ponta pora|tres lagoas|dourados|corumba|\bms\b)/;
+      if (f.editoria !== 'nacional' && MS.test(alvo)) { velhos++; continue; }
+
       const { titulo, veiculo } = separarVeiculo(b.titulo, b.veiculo);
       const iso = new Date(ts).toISOString();
       const credito = veiculo || f.nome;
@@ -127,7 +140,7 @@ for (const f of FONTES) {
         editoria: ehAgro(titulo + ' ' + b.resumo) ? 'agro' : f.editoria,
         chapeu: credito,
         titulo,
-        resumo: b.resumo.slice(0, 300),
+        resumo: f.tipo === 'google-news' ? '' : b.resumo.slice(0, 300),
         fonte: credito,
         link: b.link,
         iso,
@@ -156,6 +169,7 @@ console.log('  ' + '-'.repeat(64));
 
 const porEditoria = finais.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
 console.log(`  ${finais.length} itens na janela de ${JANELA_HORAS}h:`, JSON.stringify(porEditoria));
+
 // Varredura vazia não apaga a edição que está no ar.
 if (finais.length === 0) {
   console.log('\n  Varredura vazia. Edição anterior preservada.\n');
