@@ -30,20 +30,24 @@ const aaaammdd = d => d.toISOString().slice(0,10).replace(/-/g,'');
 export const slug = t => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
   .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70);
 
-// O PNCP e lento e instavel. Espera de 60s e tres tentativas.
+// O PNCP e lento e instavel. Espera curta, uma repeticao, e um cronometro
+// geral: se a coleta toda passar de ORCAMENTO_MS, desiste e segue. Melhor
+// perder o Radar numa rodada do que travar a varredura inteira.
+const ORCAMENTO_MS = 90000;
 const dormir = ms => new Promise(r => setTimeout(r, ms));
-async function buscar(url, ms=60000, tentativas=3){
+
+async function buscar(url, ms = 20000, tentativas = 2){
   let ultimo;
-  for (let i=0; i<tentativas; i++) {
+  for (let i = 0; i < tentativas; i++) {
     const c = new AbortController();
-    const t = setTimeout(()=>c.abort(), ms);
+    const t = setTimeout(() => c.abort(), ms);
     try {
       const r = await fetch(url, { signal:c.signal, headers:{ 'User-Agent':'TempoRealMT/1.0', Accept:'application/json' }});
       if (!r.ok) throw new Error('HTTP '+r.status);
       return await r.json();
     } catch(e) {
       ultimo = e;
-      if (i < tentativas-1) await dormir(4000 * (i+1));
+      if (i < tentativas-1) await dormir(2000);
     } finally { clearTimeout(t); }
   }
   throw ultimo;
@@ -56,7 +60,13 @@ export async function coletarPNCP(){
   const ini = new Date(Date.now() - REGRAS.diasDeJanela*86400000);
   const achados = [], relatorio = [];
 
-  for (const mod of [6, 8, 9, 4]) {
+  const comecou = Date.now();
+
+  for (const mod of [8, 9, 6, 4]) {          // dispensa e inexigibilidade primeiro: sao as que viram materia
+    if (Date.now() - comecou > ORCAMENTO_MS) {
+      relatorio.push(`aviso pncp-mod-${mod}  pulado, orcamento de tempo esgotado`);
+      continue;
+    }
     const url = `${PNCP}/contratacoes/publicacao`
       + `?dataInicial=${aaaammdd(ini)}&dataFinal=${aaaammdd(fim)}`
       + `&codigoModalidadeContratacao=${mod}&uf=MT&pagina=1&tamanhoPagina=50`;
