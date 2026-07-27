@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEMPO REAL · MT — Mato Grosso, Cuiabá e Várzea Grande agora</title>
+<meta name="description" content="Notícias de Mato Grosso, Cuiabá e Várzea Grande atualizadas a cada duas horas. Política, agro, contas públicas e nacional, com fonte e link em cada linha.">
+<meta name="theme-color" content="#FAF9F5">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="TEMPO REAL MT">
+<meta property="og:title" content="TEMPO REAL · MT">
+<meta property="og:description" content="Mato Grosso, Cuiabá e Várzea Grande em tempo real.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fundo:#FAF9F5; --painel:#FFF; --painel-2:#F1EFE8;
+  --borda:#E4E1D8; --borda-2:#CBC7BA;
+  --texto:#15191F; --texto-2:#4C525B; --fraco:#878C95;
+  --sinal:#BF3320; --alta:#0D7A50;
+  --mt:#1A5C9B; --cuiaba:#8A4A0B; --vg:#0A6B5B; --agro:#8A6608; --nacional:#5B5560;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --display:'Archivo',system-ui,-apple-system,sans-serif;
+  --serif:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font-family:var(--display);line-height:1.4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sinal);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 18px}
+
+header{border-bottom:2px solid var(--texto);background:var(--painel)}
+.topo{display:flex;align-items:center;gap:20px;padding:15px 0;flex-wrap:wrap}
+.marca{display:flex;align-items:center;gap:11px}
+.marca .barra{width:3px;height:38px;background:var(--sinal)}
+.marca .nome{font-size:25px;font-weight:900;letter-spacing:-.035em;line-height:1}
+.marca .nome span{color:var(--sinal)}
+.marca .uf{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--fraco);display:block;margin-top:4px}
+.estado{font-family:var(--mono);font-size:11.5px;color:var(--texto-2);display:flex;align-items:center;gap:8px;margin-left:auto}
+.estado b{color:var(--texto);font-weight:600}
+.pulso{width:7px;height:7px;border-radius:50%;background:var(--alta);animation:bate 2.4s infinite}
+@keyframes bate{0%,100%{opacity:1}50%{opacity:.2}}
+@media (prefers-reduced-motion:reduce){.pulso{animation:none}}
+.acoes{display:flex;gap:7px}
+.bt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border:1.5px solid var(--texto);background:transparent;color:var(--texto);cursor:pointer;transition:.14s}
+.bt:hover{background:var(--texto);color:var(--painel)}
+.bt.forte{background:var(--sinal);border-color:var(--sinal);color:#fff}
+.bt.forte:hover{background:#8F2617;border-color:#8F2617}
+
+.mercado{border-bottom:1px solid var(--borda);background:var(--painel-2)}
+.mercado .wrap{display:flex;overflow-x:auto;scrollbar-width:none}
+.mercado .wrap::-webkit-scrollbar{display:none}
+.cot{padding:10px 18px 10px 0;margin-right:18px;border-right:1px solid var(--borda-2);white-space:nowrap;display:flex;align-items:baseline;gap:7px}
+.cot:last-child{border-right:0}
+.cot em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--fraco);text-transform:uppercase}
+.cot b{font-family:var(--mono);font-size:13.5px;font-weight:600}
+.cot i{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--alta)}
+
+.filtros{border-bottom:1px solid var(--borda);background:var(--painel);position:sticky;top:0;z-index:20}
+.filtros .wrap{display:flex;gap:6px;align-items:center;padding:10px 18px;flex-wrap:wrap}
+.f{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border:1px solid var(--borda-2);background:transparent;color:var(--texto-2);cursor:pointer;transition:.14s}
+.f:hover{color:var(--texto);border-color:var(--texto)}
+.f[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:var(--painel);font-weight:600}
+.filtros .conta{font-family:var(--mono);font-size:10.5px;color:var(--fraco);margin-left:auto}
+
+main{padding:26px 0 10px}
+.destaque{border-bottom:3px solid var(--texto);padding-bottom:24px;margin-bottom:26px}
+.destaque .chapeu{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:9px}
+.destaque h1{font-size:clamp(27px,3.8vw,42px);font-weight:800;letter-spacing:-.032em;line-height:1.06;margin-bottom:12px;max-width:22ch}
+.destaque p{font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--texto-2);max-width:64ch}
+.destaque .rodape-item{font-family:var(--mono);font-size:10.5px;color:var(--fraco);margin-top:14px;display:flex;gap:14px;flex-wrap:wrap}
+.destaque:hover h1{color:var(--sinal)}
+
+.bloco{margin-bottom:34px}
+.bloco-h{display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--texto);padding-bottom:8px;margin-bottom:18px}
+.bloco-h h2{font-size:15px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.bloco-h .n{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-left:auto}
+.itens{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--borda)}
+.item{background:var(--fundo);padding:18px;display:block;transition:.14s}
+.item:hover{background:var(--painel)}
+.item .chapeu{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+.item h3{font-size:17px;font-weight:700;letter-spacing:-.017em;line-height:1.22;margin-bottom:8px}
+.item:hover h3{color:var(--sinal)}
+.item p{font-family:var(--serif);font-size:14.5px;line-height:1.5;color:var(--texto-2)}
+.item .meta{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-top:11px;padding-top:10px;border-top:1px dotted var(--borda-2);display:flex;gap:12px;flex-wrap:wrap}
+.item .meta b{color:var(--texto-2);font-weight:500}
+.c-mt{color:var(--mt)} .c-cuiaba{color:var(--cuiaba)} .c-vg{color:var(--vg)}
+.c-agro{color:var(--agro)} .c-nacional{color:var(--nacional)}
+
+.vazio{font-family:var(--serif);font-size:16px;color:var(--fraco);padding:40px 0;text-align:center}
+
+.venda{background:var(--texto);color:#F2F1ED;padding:34px 0;margin-top:14px}
+.venda .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:center}
+.venda h2{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:10px;color:#fff}
+.venda p{font-family:var(--serif);font-size:16.5px;color:#B9BDC4;line-height:1.5;max-width:56ch}
+.venda .preco{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#9299A2;margin-top:16px}
+.venda .preco b{color:#fff;font-size:21px;font-weight:600}
+.venda ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.venda li{font-family:var(--mono);font-size:11.5px;color:#B9BDC4;border-bottom:1px solid #333A44;padding-bottom:9px}
+.venda li b{color:#fff;font-weight:500}
+
+footer{padding:30px 0 36px;border-top:1px solid var(--borda);background:var(--painel)}
+.rod{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px}
+footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:11px}
+footer p,footer li{font-family:var(--serif);font-size:14px;line-height:1.55;color:var(--texto-2)}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+footer li b{font-family:var(--mono);font-size:10.5px;color:var(--texto);font-weight:500}
+.assina{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-top:24px;padding-top:16px;border-top:1px solid var(--borda);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:940px){
+  .itens{grid-template-columns:repeat(2,1fr)}
+  .venda .wrap,.rod{grid-template-columns:1fr;gap:22px}
+}
+@media (max-width:620px){
+  .itens{grid-template-columns:1fr}
+  .estado{width:100%;margin-left:0;order:3}
+  .acoes{width:100%}
+  .bt{flex:1;text-align:center;padding:8px 4px}
+  .filtros{position:static}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topo">
+    <a class="marca" href="./" aria-label="Tempo Real MT, início">
+      <span class="barra" aria-hidden="true"></span>
+      <span>
+        <span class="nome">TEMPO <span>REAL</span></span>
+        <span class="uf">Mato Grosso · Cuiabá · Várzea Grande</span>
+      </span>
+    </a>
+    <div class="estado">
+      <span class="pulso" aria-hidden="true"></span>
+      <span>atualizado <b id="quando">—</b></span>
+      <span id="relogio">—</span>
+    </div>
+    <div class="acoes">
+      <button class="bt" id="btAtualizar">Atualizar</button>
+      <button class="bt">WhatsApp</button>
+      <button class="bt forte">Assinar</button>
+    </div>
+  </div>
+</header>
+
+<div class="mercado">
+  <div class="wrap">
+    <div class="cot"><em>Soja Paranaguá 20/07</em><b>R$ 141,02</b><i>▲ máx. 6 meses</i></div>
+    <div class="cot"><em>Chicago nov</em><b>US$ 12,03</b><i>▲</i></div>
+    <div class="cot"><em>Custeio 26/27</em><b>R$ 4.321/ha</b><i>▲ 3,35%</i></div>
+    <div class="cot"><em>Safra 25/26 vendida</em><b>87,68%</b><i>▲ 6,64 p.p.</i></div>
+    <div class="cot"><em>Safra 26/27 vendida</em><b>23,33%</b><i>▲ 4,84 p.p.</i></div>
+    <div class="cot"><em>Eleitorado MT</em><b>2.638.230</b><i>aptos</i></div>
+  </div>
+</div>
+
+<div class="filtros">
+  <div class="wrap">
+    <button class="f" data-f="tudo" aria-pressed="true">Tudo</button>
+    <button class="f" data-f="mt" aria-pressed="false">Mato Grosso</button>
+    <button class="f" data-f="cuiaba" aria-pressed="false">Cuiabá</button>
+    <button class="f" data-f="vg" aria-pressed="false">Várzea Grande</button>
+    <button class="f" data-f="agro" aria-pressed="false">Agro</button>
+    <button class="f" data-f="nacional" aria-pressed="false">Nacional</button>
+    <span class="conta" id="conta">—</span>
+  </div>
+</div>
+
+<main class="wrap" id="conteudo">
+  <p class="vazio">Carregando a edição…</p>
+</main>
+
+<section class="venda">
+  <div class="wrap">
+    <div>
+      <h2>Quem tem a informação primeiro trabalha com vantagem.</h2>
+      <p>O edital sai às 6h no PNCP. O ato de dispensa sai na página 47 do diário oficial. O boletim do Imea muda o preço da saca. Quem lê tudo isso todo dia sai na frente — e ninguém tem tempo de ler tudo isso todo dia.</p>
+      <div class="preco">a partir de <b>R$ 149</b> / mês · 14 dias grátis</div>
+    </div>
+    <ul>
+      <li><b>Alerta por CNPJ</b> — seu número citado em qualquer diário de MT</li>
+      <li><b>Licitação do seu CNAE</b> — no dia em que o edital sai</li>
+      <li><b>Cotação e custo</b> — soja, milho, boi, algodão, diesel</li>
+      <li><b>WhatsApp às 7h</b> — quatro linhas, não quarenta páginas</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rod">
+      <div>
+        <h4>Como funciona</h4>
+        <p>Um robô varre as fontes a cada duas horas. Nada com mais de 24 horas fica no ar. Toda linha traz a fonte e o link para o original — se você quiser conferir, é um clique.</p>
+      </div>
+      <div>
+        <h4>Fontes desta edição</h4>
+        <ul id="fontes"><li>—</li></ul>
+      </div>
+      <div>
+        <h4>Créditos</h4>
+        <p>Conteúdo de assessorias públicas e de agências que autorizam republicação, sempre com crédito. Material de agência internacional é descartado automaticamente por restrição de licença.</p>
+      </div>
+    </div>
+    <div class="assina">
+      <span>TEMPO REAL · MT — Cuiabá, Mato Grosso</span>
+      <span id="rodape-gerado">—</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const EDITORIAS = {
+  mt:       { nome:'Mato Grosso',   cor:'c-mt' },
+  cuiaba:   { nome:'Cuiabá',        cor:'c-cuiaba' },
+  vg:       { nome:'Várzea Grande', cor:'c-vg' },
+  agro:     { nome:'Agro',          cor:'c-agro' },
+  nacional: { nome:'Nacional',      cor:'c-nacional' }
+};
+
+let EDICAO = { itens: [] };
+let filtro = 'tudo';
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function faz(iso){
+  const min = Math.round((Date.now() - Date.parse(iso)) / 60000);
+  if (!isFinite(min)) return '';
+  if (min < 1) return 'agora';
+  if (min < 60) return 'há ' + min + ' min';
+  const h = Math.round(min / 60);
+  return 'há ' + h + (h === 1 ? ' hora' : ' horas');
+}
+
+function cartao(i){
+  const ed = EDITORIAS[i.editoria] || { nome:i.editoria, cor:'c-nacional' };
+  return `<a class="item" href="${esc(i.link)}" target="_blank" rel="noopener">
+    <span class="chapeu ${ed.cor}">${esc(i.chapeu || ed.nome)}</span>
+    <h3>${esc(i.titulo)}</h3>
+    <p>${esc(i.resumo)}</p>
+    <span class="meta"><span>${esc(i.hora || '')}</span><span>fonte: <b>${esc(i.fonte)}</b></span><span>abrir ↗</span></span>
+  </a>`;
+}
+
+function pintar(){
+  const todos = EDICAO.itens || [];
+  const lista = filtro === 'tudo' ? todos : todos.filter(i => i.editoria === filtro);
+  const alvo = $('#conteudo');
+
+  if (!lista.length) {
+    alvo.innerHTML = '<p class="vazio">Nada nesta editoria nas últimas 24 horas. A próxima varredura sai em até duas horas.</p>';
+    $('#conta').textContent = '0 itens';
+    return;
+  }
+
+  let html = '';
+  const destaque = lista.find(i => i.destaque) || lista[0];
+
+  if (filtro === 'tudo') {
+    const ed = EDITORIAS[destaque.editoria] || {};
+    html += `<a class="destaque" href="${esc(destaque.link)}" target="_blank" rel="noopener">
+      <span class="chapeu">${esc(destaque.chapeu || ed.nome || '')}</span>
+      <h1>${esc(destaque.titulo)}</h1>
+      <p>${esc(destaque.resumo)}</p>
+      <span class="rodape-item"><span>${esc(destaque.hora || '')}</span><span>fonte: ${esc(destaque.fonte)}</span><span>abrir original ↗</span></span>
+    </a>`;
+  }
+
+  const restantes = lista.filter(i => i !== destaque || filtro !== 'tudo');
+  for (const chave of Object.keys(EDITORIAS)) {
+    const doBloco = restantes.filter(i => i.editoria === chave);
+    if (!doBloco.length) continue;
+    html += `<section class="bloco">
+      <div class="bloco-h"><h2>${EDITORIAS[chave].nome}</h2><span class="n">${doBloco.length} ${doBloco.length === 1 ? 'item' : 'itens'}</span></div>
+      <div class="itens">${doBloco.map(cartao).join('')}</div>
+    </section>`;
+  }
+
+  alvo.innerHTML = html;
+  $('#conta').textContent = lista.length + (lista.length === 1 ? ' item' : ' itens');
+}
+
+function pintarRodape(){
+  const fontes = [...new Set((EDICAO.itens || []).map(i => i.fonte))].sort();
+  $('#fontes').innerHTML = fontes.length
+    ? fontes.slice(0, 8).map(f => `<li><b>${esc(f)}</b></li>`).join('')
+    : '<li>—</li>';
+  if (EDICAO.gerado) {
+    $('#quando').textContent = faz(EDICAO.gerado);
+    $('#rodape-gerado').textContent = 'edição gerada em ' +
+      new Date(EDICAO.gerado).toLocaleString('pt-BR', { timeZone:'America/Cuiaba' });
+  }
+}
+
+async function carregar(){
+  try {
+    const r = await fetch('dados/edicao.json?t=' + Date.now(), { cache:'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    EDICAO = await r.json();
+  } catch (e) {
+    // Abrindo o arquivo direto do computador (file://) o navegador bloqueia o fetch.
+    // Nesse caso mostramos um aviso em vez de tela vazia.
+    if (!EDICAO.itens.length) {
+      $('#conteudo').innerHTML = '<p class="vazio">Não consegui ler <b>dados/edicao.json</b>.<br>No seu computador isso é normal: o navegador bloqueia leitura de arquivo local. Publique no Vercel ou rode <b>npx serve</b> na pasta.</p>';
+      return;
+    }
+  }
+  pintar();
+  pintarRodape();
+}
+
+document.querySelectorAll('.f').forEach(b => b.addEventListener('click', () => {
+  filtro = b.dataset.f;
+  document.querySelectorAll('.f').forEach(o => o.setAttribute('aria-pressed', o === b));
+  pintar();
+}));
+
+$('#btAtualizar').addEventListener('click', carregar);
+
+setInterval(() => {
+  $('#relogio').textContent = new Date().toLocaleTimeString('pt-BR', { timeZone:'America/Cuiaba' });
+  if (EDICAO.gerado) $('#quando').textContent = faz(EDICAO.gerado);
+}, 1000);
+
+// recarrega sozinho a cada 5 minutos, para pegar a varredura nova
+setInterval(carregar, 5 * 60 * 1000);
+
+carregar();
+</script>
+</body>
+</html>
