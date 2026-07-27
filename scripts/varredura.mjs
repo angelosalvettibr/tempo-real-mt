@@ -9,6 +9,7 @@
 //   · varredura vazia NÃO apaga a edição anterior
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
+import { coletarPNCP, apurar, escrever, pagina, slug } from './radar.mjs';
 
 // ===========================================================================
 // A CHAVE. Decide o que vai ao ar.
@@ -280,6 +281,49 @@ for (const v of VEICULOS_MT) {
   }
 }
 
+// ================== RADAR — conteúdo original =============================
+// Aqui o robô deixa de copiar título e passa a escrever matéria. Lê o PNCP,
+// aplica as regras, escreve o texto a partir dos campos do documento e grava
+// uma página HTML própria em /materia. Essa página é sua e ranqueia no Google.
+let originais = 0;
+try {
+  const { contratacoes, relatorio: relPncp } = await coletarPNCP();
+  relatorio.push(...relPncp);
+
+  const historias = apurar(contratacoes).slice(0, 8);
+  await mkdir('materia', { recursive: true });
+
+  for (const h of historias) {
+    const m = escrever(h);
+    const iso = h.c.publicacao ? new Date(h.c.publicacao).toISOString() : new Date().toISOString();
+    const arquivo = slug(m.titulo) + '.html';
+
+    await writeFile('materia/' + arquivo, pagina(m, h.c, iso), 'utf8');
+
+    itens.push({
+      id: 'radar:' + slug(m.titulo),
+      editoria: h.c.municipio && /cuiaba/i.test(semAcento(h.c.municipio)) ? 'cuiaba'
+              : h.c.municipio && /varzea/i.test(semAcento(h.c.municipio)) ? 'vg' : 'mt',
+      chapeu: 'Exclusivo · Radar',
+      titulo: m.titulo,
+      resumo: m.linhaFina,
+      fonte: 'Tempo Real MT',
+      link: '/materia/' + arquivo,
+      imagem: '',
+      iso,
+      hora: horaBR(iso),
+      licenciado: true,
+      original: true,
+      peso: h.peso,
+      destaque: false
+    });
+    originais++;
+  }
+  relatorio.push(`ok    radar         ${originais} matérias originais escritas`);
+} catch (e) {
+  relatorio.push(`aviso radar         ${e.message}`);
+}
+
 const vistos = new Set();
 const finais = itens
   .filter(i => { const k = chave(i.titulo); if (vistos.has(k)) return false; vistos.add(k); return true; })
@@ -306,11 +350,11 @@ const soPauta = SO_LICENCIADO
           .sort((a,b) => b.quentura - a.quentura).slice(0, 40)
   : [];
 
-const publicados = SO_LICENCIADO ? finais.filter(i => i.licenciado) : finais;
+const publicados = SO_LICENCIADO ? finais.filter(i => i.licenciado || i.original) : finais;
 
 // Destaque: o mais quente entre os publicados; empate desempata pelo mais novo.
 if (publicados.length) {
-  publicados.sort((a,b) => (b.quentura - a.quentura) || (Date.parse(b.iso) - Date.parse(a.iso)));
+  publicados.sort((a,b) => (Number(!!b.original) - Number(!!a.original)) || ((b.peso||0) - (a.peso||0)) || (b.quentura - a.quentura) || (Date.parse(b.iso) - Date.parse(a.iso)));
   publicados[0].destaque = true;
   publicados.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
 }
@@ -323,6 +367,7 @@ console.log('  ' + '-'.repeat(64));
 const porEditoria = publicados.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
 console.log(`  modo: ${SO_LICENCIADO ? 'SO LICENCIADO' : 'edicao cheia'}`);
 console.log(`  ${publicados.length} publicados de ${finais.length} coletados:`, JSON.stringify(porEditoria));
+console.log(`  ${originais} matérias ORIGINAIS geradas em /materia`);
 if (soPauta.length) console.log(`  ${soPauta.length} sugestoes de pauta (quentes, sem fonte licenciada)`);
 
 if (publicados.length === 0) {
