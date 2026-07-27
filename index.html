@@ -90,11 +90,15 @@ main{padding:26px 0 10px}
 .capa .selo{position:relative;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;max-width:90%}
 .capa.sem-foto::before{content:"";position:absolute;inset:0;background:
   repeating-linear-gradient(135deg,transparent 0 9px,rgba(0,0,0,.045) 9px 10px)}
-.capa.mt{background:#E4EEF8}    .capa.mt .selo{color:#154C81}
-.capa.cuiaba{background:#F7EBDD} .capa.cuiaba .selo{color:#7A4109}
-.capa.vg{background:#E0F0EB}    .capa.vg .selo{color:#08574A}
-.capa.agro{background:#FAF0D6}  .capa.agro .selo{color:#77590A}
-.capa.nacional{background:#EEEDEA} .capa.nacional .selo{color:#43484F}
+.capa.sem-foto{background:#15191F;align-items:center;justify-content:center;padding:16px}
+.capa.sem-foto .selo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.01em;
+  text-transform:uppercase;color:#fff;text-align:center;line-height:1.1;max-width:100%}
+.capa.sem-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px}
+.capa.mt.sem-foto::after{background:#4A9BE0}
+.capa.cuiaba.sem-foto::after{background:#E08A3C}
+.capa.vg.sem-foto::after{background:#25A78F}
+.capa.agro.sem-foto::after{background:#D9AE2E}
+.capa.nacional.sem-foto::after{background:#8A93A0}
 .destaque .capa{aspect-ratio:21/9;margin-bottom:16px}
 .destaque .capa .selo{font-size:13px}
 .item .meta{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-top:11px;padding-top:10px;border-top:1px dotted var(--borda-2);display:flex;gap:12px;flex-wrap:wrap}
@@ -249,10 +253,10 @@ function faz(iso){
 function capa(i){
   const ed = EDITORIAS[i.editoria] || { nome:i.editoria };
   if (i.imagem) {
-    return `<div class="capa ${i.editoria}"><img src="${esc(i.imagem)}" alt="" loading="lazy"
-      onerror="this.remove();this.parentNode.classList.add('sem-foto')"><span class="selo"></span></div>`;
+    return `<div class="capa ${i.editoria}"><img src="${esc(i.imagem)}" alt="${esc(i.fonte)}" loading="lazy"
+      onerror="const p=this.parentNode;this.remove();p.classList.add('sem-foto');p.querySelector('.selo').textContent=this.alt||''"><span class="selo"></span></div>`;
   }
-  return `<div class="capa ${i.editoria} sem-foto"><span class="selo">${esc(ed.nome)}<br>${esc(i.fonte)}</span></div>`;
+  return `<div class="capa ${i.editoria} sem-foto"><span class="selo">${esc(i.fonte)}</span></div>`;
 }
 
 function cartao(i){
