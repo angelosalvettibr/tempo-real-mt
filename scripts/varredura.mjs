@@ -62,6 +62,21 @@ const OFICIAIS = [
   { id:'vg-pref',editoria:'vg',     nome:'Prefeitura de VG',     url:'https://www.varzeagrande.mt.gov.br/rss' }
 ].map(f => ({ ...f, tipo:'oficial', opcional:true }));
 
+// Veículos de MT. Assinar o RSS que o próprio veículo publica é o uso normal
+// de RSS: ele oferece manchete, resumo e a foto que escolheu incluir, para
+// ser distribuído com crédito e link. Diferente de raspar o texto do site.
+// Como cada um usa um caminho, o robô testa os candidatos e fica com o que responder.
+const CAMINHOS_RSS = ['/rss', '/feed', '/rss.xml', '/feed/', '/rss/noticias', '/index.php/rss'];
+
+const VEICULOS_MT = [
+  { id:'midianews',   nome:'MidiaNews',      site:'https://www.midianews.com.br' },
+  { id:'olhardireto', nome:'Olhar Direto',   site:'https://www.olhardireto.com.br' },
+  { id:'folhamax',    nome:'FolhaMax',       site:'https://www.folhamax.com' },
+  { id:'odocumento',  nome:'O Documento',    site:'https://odocumento.com.br' },
+  { id:'gazeta',      nome:'Gazeta Digital', site:'https://www.gazetadigital.com.br' },
+  { id:'rdnews',      nome:'RDNews',         site:'https://www.rdnews.com.br' }
+].map(f => ({ ...f, editoria:'mt', tipo:'veiculo', opcional:true }));
+
 const FONTES = [...AGENCIA_BRASIL, ...BUSCAS, ...OFICIAIS];
 
 // Cinto de segurança: mesmo com o feed de parceiros fora da lista,
@@ -196,6 +211,42 @@ for (const f of FONTES) {
   } catch (e) {
     const marca = f.opcional ? 'aviso' : 'FALHA';
     relatorio.push(`${marca} ${f.id.padEnd(12)} ${e.message}`);
+  }
+}
+
+// Descoberta de feed dos veículos de MT
+for (const v of VEICULOS_MT) {
+  let achou = '';
+  for (const c of CAMINHOS_RSS) {
+    try {
+      const xml = await buscar(v.site + c, 12000);
+      if (lerRSS(xml).length > 0) { achou = v.site + c; break; }
+    } catch { /* tenta o proximo */ }
+  }
+  if (!achou) { relatorio.push(`aviso ${v.id.padEnd(12)} sem RSS nos caminhos testados`); continue; }
+
+  try {
+    const brutos = lerRSS(await buscar(achou)).slice(0, POR_FONTE);
+    let ok = 0, velhos = 0, comFoto = 0;
+    for (const b of brutos) {
+      const ts = Date.parse(b.data);
+      if (Number.isNaN(ts) || ts < corte) { velhos++; continue; }
+      const alvo = semAcento(`${b.titulo} ${b.resumo}`);
+      if (RE_BLOQUEIO.test(alvo)) continue;
+      const iso = new Date(ts).toISOString();
+      if (b.imagem) comFoto++;
+      itens.push({
+        id: `${v.id}:${chave(b.titulo)}`,
+        editoria: ehAgro(b.titulo + ' ' + b.resumo) ? 'agro' : v.editoria,
+        chapeu: v.nome, titulo: b.titulo, resumo: b.resumo.slice(0,300),
+        fonte: v.nome, link: b.link, imagem: b.imagem || '',
+        iso, hora: horaBR(iso), destaque:false
+      });
+      ok++;
+    }
+    relatorio.push(`ok    ${v.id.padEnd(12)} ${String(ok).padStart(3)} novos · ${comFoto} com foto · ${achou.replace(v.site,'')}`);
+  } catch (e) {
+    relatorio.push(`aviso ${v.id.padEnd(12)} ${e.message}`);
   }
 }
 
