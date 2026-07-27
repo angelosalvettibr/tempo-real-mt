@@ -10,6 +10,7 @@
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { coletarPNCP, apurar, escrever, pagina, slug } from './radar.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado } from './redator.mjs';
 
 // ===========================================================================
 // A CHAVE. Decide o que vai ao ar.
@@ -168,15 +169,28 @@ function lerRSS(xml){
   })).filter(i => i.titulo && i.link);
 }
 
-async function buscar(url, ms = 25000){
-  const c = new AbortController();
-  const t = setTimeout(() => c.abort(), ms);
-  try {
-    const r = await fetch(url, { signal:c.signal, redirect:'follow',
-      headers:{ 'User-Agent':'TempoRealMT/1.0 (+contato@seu-dominio.com.br)', 'Accept':'application/rss+xml, application/xml, text/xml, */*' }});
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    return await r.text();
-  } finally { clearTimeout(t); }
+const dormir = ms => new Promise(r => setTimeout(r, ms));
+
+// Com repeticao e espera crescente. O Google Noticias devolve 503 quando acha
+// que estamos batendo demais; esperar e tentar de novo resolve.
+async function buscar(url, ms = 25000, tentativas = 3){
+  let ultimo;
+  for (let i = 0; i < tentativas; i++) {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), ms);
+    try {
+      const r = await fetch(url, { signal:c.signal, redirect:'follow',
+        headers:{ 'User-Agent':'TempoRealMT/1.0 (+contato@temporealmt.com.br)',
+                  'Accept':'application/rss+xml, application/xml, text/xml, */*',
+                  'Accept-Language':'pt-BR,pt;q=0.9' }});
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.text();
+    } catch (e) {
+      ultimo = e;
+      if (i < tentativas - 1) await dormir(2500 * (i + 1));
+    } finally { clearTimeout(t); }
+  }
+  throw ultimo;
 }
 
 const chave = t => semAcento(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70);
@@ -204,6 +218,7 @@ const relatorio = [];
 
 for (const f of FONTES) {
   try {
+    if (f.tipo === 'google-news') await dormir(1800);   // nao atropelar o Google
     const brutos = lerRSS(await buscar(f.url)).slice(0, POR_FONTE);
     let ok = 0, velhos = 0, bloqueados = 0;
 
@@ -324,6 +339,45 @@ try {
   relatorio.push(`aviso radar         ${e.message}`);
 }
 
+// ============== REDATOR: reescreve release oficial em materia propria ======
+// So dominios que autorizam reproducao. Nada de veiculo privado.
+const PODE_REESCREVER = /(agenciabrasil\.ebc\.com\.br|camara\.leg\.br|senado\.leg\.br|\.gov\.br)/i;
+let reescritas = 0;
+
+if (temChave()) {
+  const candidatos = itens
+    .filter(i => i.licenciado && i.link && PODE_REESCREVER.test(i.link) && !i.original)
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso))
+    .slice(0, 6);
+
+  await mkdir('materia', { recursive: true });
+
+  for (const i of candidatos) {
+    try {
+      const texto = await textoCompleto(i.link);
+      const m = await reescrever({ fonte: i.fonte, titulo: i.titulo, texto });
+      const arquivo = slug(m.titulo) + '.html';
+      await writeFile('materia/' + arquivo,
+        pagina({ chapeu:'Noticia', titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, checar:[] },
+               { link: i.link, municipio:'' }, i.iso), 'utf8');
+      i.titulo = m.titulo;
+      i.resumo = m.linhaFina;
+      i.link = '/materia/' + arquivo;
+      i.chapeu = 'Nosso texto';
+      i.original = true;
+      i.baseadoEm = i.fonte;
+      i.fonte = 'Tempo Real MT, com informacoes de ' + i.baseadoEm;
+      reescritas++;
+      await dormir(1200);
+    } catch (e) {
+      relatorio.push('aviso redator      ' + String(e.message).slice(0,70));
+    }
+  }
+  relatorio.push('ok    redator       ' + reescritas + ' materias reescritas, modelo ' + modeloUsado());
+} else {
+  relatorio.push('aviso redator      sem GEMINI_API_KEY, reescrita desligada');
+}
+
 const vistos = new Set();
 const finais = itens
   .filter(i => { const k = chave(i.titulo); if (vistos.has(k)) return false; vistos.add(k); return true; })
@@ -367,7 +421,7 @@ console.log('  ' + '-'.repeat(64));
 const porEditoria = publicados.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
 console.log(`  modo: ${SO_LICENCIADO ? 'SO LICENCIADO' : 'edicao cheia'}`);
 console.log(`  ${publicados.length} publicados de ${finais.length} coletados:`, JSON.stringify(porEditoria));
-console.log(`  ${originais} matérias ORIGINAIS geradas em /materia`);
+console.log(`  ${originais + reescritas} materias PROPRIAS em /materia (${originais} do Radar, ${reescritas} reescritas)`);
 if (soPauta.length) console.log(`  ${soPauta.length} sugestoes de pauta (quentes, sem fonte licenciada)`);
 
 if (publicados.length === 0) {

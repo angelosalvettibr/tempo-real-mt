@@ -30,14 +30,23 @@ const aaaammdd = d => d.toISOString().slice(0,10).replace(/-/g,'');
 export const slug = t => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
   .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70);
 
-async function buscar(url, ms=25000){
-  const c = new AbortController();
-  const t = setTimeout(()=>c.abort(), ms);
-  try {
-    const r = await fetch(url, { signal:c.signal, headers:{ 'User-Agent':'TempoRealMT/1.0', Accept:'application/json' }});
-    if (!r.ok) throw new Error('HTTP '+r.status);
-    return await r.json();
-  } finally { clearTimeout(t); }
+// O PNCP e lento e instavel. Espera de 60s e tres tentativas.
+const dormir = ms => new Promise(r => setTimeout(r, ms));
+async function buscar(url, ms=60000, tentativas=3){
+  let ultimo;
+  for (let i=0; i<tentativas; i++) {
+    const c = new AbortController();
+    const t = setTimeout(()=>c.abort(), ms);
+    try {
+      const r = await fetch(url, { signal:c.signal, headers:{ 'User-Agent':'TempoRealMT/1.0', Accept:'application/json' }});
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      return await r.json();
+    } catch(e) {
+      ultimo = e;
+      if (i < tentativas-1) await dormir(4000 * (i+1));
+    } finally { clearTimeout(t); }
+  }
+  throw ultimo;
 }
 
 /* --------------------------------------------------------------- coleta ---- */
