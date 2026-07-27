@@ -156,7 +156,6 @@ console.log('  ' + '-'.repeat(64));
 
 const porEditoria = finais.reduce((a,i) => (a[i.editoria] = (a[i.editoria]||0)+1, a), {});
 console.log(`  ${finais.length} itens na janela de ${JANELA_HORAS}h:`, JSON.stringify(porEditoria));
-
 // Varredura vazia não apaga a edição que está no ar.
 if (finais.length === 0) {
   console.log('\n  Varredura vazia. Edição anterior preservada.\n');
@@ -164,4 +163,13 @@ if (finais.length === 0) {
 }
 
 await mkdir('dados', { recursive: true });
-awa
+await writeFile(SAIDA, JSON.stringify({
+  gerado: new Date().toISOString(),
+  origem: 'varredura-automatica',
+  janelaHoras: JANELA_HORAS,
+  fontesConsultadas: FONTES.length,
+  relatorio,
+  itens: finais
+}, null, 2), 'utf8');
+
+console.log('  gravado em ' + SAIDA + '\n');
