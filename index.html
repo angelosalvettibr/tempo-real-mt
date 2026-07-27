@@ -85,6 +85,18 @@ main{padding:26px 0 10px}
 .item h3{font-size:17px;font-weight:700;letter-spacing:-.017em;line-height:1.22;margin-bottom:8px}
 .item:hover h3{color:var(--sinal)}
 .item p{font-family:var(--serif);font-size:14.5px;line-height:1.5;color:var(--texto-2)}
+.capa{position:relative;aspect-ratio:16/9;overflow:hidden;margin-bottom:11px;background:var(--painel-2);display:flex;align-items:flex-end;padding:12px}
+.capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.capa .selo{position:relative;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;max-width:90%}
+.capa.sem-foto::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,transparent 0 9px,rgba(0,0,0,.045) 9px 10px)}
+.capa.mt{background:#E4EEF8}    .capa.mt .selo{color:#154C81}
+.capa.cuiaba{background:#F7EBDD} .capa.cuiaba .selo{color:#7A4109}
+.capa.vg{background:#E0F0EB}    .capa.vg .selo{color:#08574A}
+.capa.agro{background:#FAF0D6}  .capa.agro .selo{color:#77590A}
+.capa.nacional{background:#EEEDEA} .capa.nacional .selo{color:#43484F}
+.destaque .capa{aspect-ratio:21/9;margin-bottom:16px}
+.destaque .capa .selo{font-size:13px}
 .item .meta{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-top:11px;padding-top:10px;border-top:1px dotted var(--borda-2);display:flex;gap:12px;flex-wrap:wrap}
 .item .meta b{color:var(--texto-2);font-weight:500}
 .c-mt{color:var(--mt)} .c-cuiaba{color:var(--cuiaba)} .c-vg{color:var(--vg)}
@@ -140,9 +152,7 @@ footer li b{font-family:var(--mono);font-size:10.5px;color:var(--texto);font-wei
       <span id="relogio">—</span>
     </div>
     <div class="acoes">
-      <button class="bt" id="btAtualizar">Atualizar</button>
-      <button class="bt">WhatsApp</button>
-      <button class="bt forte">Assinar</button>
+      <button class="bt" id="btAtualizar">Atualizar agora</button>
     </div>
   </div>
 </header>
@@ -177,15 +187,14 @@ footer li b{font-family:var(--mono);font-size:10.5px;color:var(--texto);font-wei
 <section class="venda">
   <div class="wrap">
     <div>
-      <h2>Quem tem a informação primeiro trabalha com vantagem.</h2>
-      <p>O edital sai às 6h no PNCP. O ato de dispensa sai na página 47 do diário oficial. O boletim do Imea muda o preço da saca. Quem lê tudo isso todo dia sai na frente — e ninguém tem tempo de ler tudo isso todo dia.</p>
-      <div class="preco">a partir de <b>R$ 149</b> / mês · 14 dias grátis</div>
+      <h2>Mato Grosso inteiro numa tela só.</h2>
+      <p>Um robô lê as fontes de 15 em 15 minutos e junta aqui o que saiu sobre Cuiabá, Várzea Grande, o estado, o agro e a eleição. Cada linha traz o veículo que apurou e o link para a matéria completa. Nada com mais de 24 horas fica no ar.</p>
     </div>
     <ul>
-      <li><b>Alerta por CNPJ</b> — seu número citado em qualquer diário de MT</li>
-      <li><b>Licitação do seu CNAE</b> — no dia em que o edital sai</li>
-      <li><b>Cotação e custo</b> — soja, milho, boi, algodão, diesel</li>
-      <li><b>WhatsApp às 7h</b> — quatro linhas, não quarenta páginas</li>
+      <li><b>Sem opinião</b> — o que saiu, quando saiu, onde conferir</li>
+      <li><b>Sem manchete de clique</b> — o título é o do veículo</li>
+      <li><b>Crédito sempre</b> — quem apurou aparece em cada linha</li>
+      <li><b>Leitura em um clique</b> — o texto completo é lá na fonte</li>
     </ul>
   </div>
 </section>
@@ -237,9 +246,19 @@ function faz(iso){
   return 'há ' + h + (h === 1 ? ' hora' : ' horas');
 }
 
+function capa(i){
+  const ed = EDITORIAS[i.editoria] || { nome:i.editoria };
+  if (i.imagem) {
+    return `<div class="capa ${i.editoria}"><img src="${esc(i.imagem)}" alt="" loading="lazy"
+      onerror="this.remove();this.parentNode.classList.add('sem-foto')"><span class="selo"></span></div>`;
+  }
+  return `<div class="capa ${i.editoria} sem-foto"><span class="selo">${esc(ed.nome)}<br>${esc(i.fonte)}</span></div>`;
+}
+
 function cartao(i){
   const ed = EDITORIAS[i.editoria] || { nome:i.editoria, cor:'c-nacional' };
   return `<a class="item" href="${esc(i.link)}" target="_blank" rel="noopener">
+    ${capa(i)}
     <span class="chapeu ${ed.cor}">${esc(i.chapeu || ed.nome)}</span>
     <h3>${esc(i.titulo)}</h3>
     <p>${esc(i.resumo)}</p>
@@ -264,6 +283,7 @@ function pintar(){
   if (filtro === 'tudo') {
     const ed = EDITORIAS[destaque.editoria] || {};
     html += `<a class="destaque" href="${esc(destaque.link)}" target="_blank" rel="noopener">
+      ${capa(destaque)}
       <span class="chapeu">${esc(destaque.chapeu || ed.nome || '')}</span>
       <h1>${esc(destaque.titulo)}</h1>
       <p>${esc(destaque.resumo)}</p>
