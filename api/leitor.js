@@ -11,7 +11,8 @@
 
 const URL_KV   = process.env.KV_REST_API_URL   || '';
 const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
-const ligado = () => URL_KV && TOKEN_KV;
+// Booleano de verdade. Antes devolvia o proprio token, que vazava na resposta.
+const ligado = () => Boolean(URL_KV && TOKEN_KV);
 
 // Uma chamada ao Redis pela API REST do Upstash.
 async function redis(...comando){
