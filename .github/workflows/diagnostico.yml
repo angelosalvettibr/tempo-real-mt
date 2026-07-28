@@ -1,0 +1,18 @@
+name: Diagnostico
+
+on: { workflow_dispatch: {} }
+
+# Sem permissao de escrita: este robo NAO pode alterar nada no repositorio.
+permissions: { contents: read }
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node scripts/diagnostico.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
