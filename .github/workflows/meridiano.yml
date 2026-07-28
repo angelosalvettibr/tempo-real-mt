@@ -1,12 +1,27 @@
 name: Il Meridiano
 
-on: { schedule: [ { cron: '0 */3 * * *' } ], workflow_dispatch: {} }
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: 'Estado da edicao regional'
+        required: false
+        default: 'mt'
+        type: choice
+        options: ['mt', 'rs', 'rj']
+
 permissions: { contents: write }
 
 jobs:
   edicao:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    strategy:
+      max-parallel: 1          # um estado por vez, para nao brigar no commit
+      matrix:
+        estado: [mt]           # acrescente rs e rj quando quiser as tres edicoes
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -14,9 +29,10 @@ jobs:
       - run: node scripts/meridiano.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ESTADO: ${{ inputs.estado || matrix.estado }}
       - run: |
           git config user.name "Il Meridiano"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash || true
-          git add dados/edicao.json materia
-          git diff --staged --quiet || (git commit -m "edicao" && git push)
+          git add dados/edicao.json dados/arquivo.json materia
+          git diff --staged --quiet || (git commit -m "edicao ${{ inputs.estado || matrix.estado }}" && git push)
