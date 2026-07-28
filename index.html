@@ -16,7 +16,7 @@
 :root{
   --papel:#FFFFFF; --areia:#F7F6F3; --tinta:#0E0E0E; --tinta2:#555; --tinta3:#767676;
   --linha:#E2E2E2; --linha2:#C9C9C9; --fraco:#8E8E8E;
-  --rosso:#C8102E; --verde:#0F6B3F; --oro:#8A6B14;
+  --rosso:#B34700; --verde:#1F6B4A; --oro:#8A6B14;
   --tit:'Playfair Display',Georgia,serif;
   --txt:'Source Serif 4',Georgia,serif;
   --mono:'IBM Plex Mono',monospace;
@@ -80,8 +80,11 @@ main{padding:34px 0 0;min-height:50vh}
 
 /* ---------------- chapéu e selo ---------------- */
 .chapeu{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);display:block}
-.evid{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;color:var(--tinta3);margin-top:11px}
-.evid::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 6px}
+.evid{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;color:var(--tinta3);margin-top:11px;cursor:help;position:relative}
+.evid::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 7px}
+/* a origem e informacao de segundo nivel: fica recolhida ate alguem querer */
+.evid .txt{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .25s ease,opacity .2s ease}
+.evid:hover .txt,.evid:focus .txt,.art:hover .evid .txt,.abre:hover .evid .txt{max-width:340px;opacity:1}
 .evid.confirmado{color:var(--verde)}
 .evid.atribuido{color:var(--oro)}
 .evid.sem-confirmacao{color:var(--fraco)}
@@ -243,7 +246,7 @@ const SELO_NIVEL = {
 function selo(i){
   const n = i.nivel || 'confirmado';
   const txt = i.selo || (n === 'confirmado' ? 'Confirmado oficialmente' : 'Sem confirmação');
-  return `<span class="evid ${n}">${esc(txt)}</span>`;
+  return `<span class="evid ${n}" tabindex="0" title="${esc(txt)}"><span class="txt">${esc(txt)}</span></span>`;
 }
 
 // O numero e o que da peso visual quando nao ha foto. Extraimos a cifra mais
