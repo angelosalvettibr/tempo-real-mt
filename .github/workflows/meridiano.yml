@@ -35,9 +35,12 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: edicao-${{ matrix.edicao }}
+          # SO o proprio arquivo. Antes cada maquina enviava todos os
+          # edicao-*.json que vieram no checkout, e ao juntar os pacotes a
+          # copia velha de uma sobrescrevia a nova de outra.
           path: |
-            dados/edicao-*.json
-            dados/arquivo-*.json
+            dados/edicao-${{ matrix.edicao }}.json
+            dados/arquivo-${{ matrix.edicao }}.json
             materia/
           retention-days: 1
           if-no-files-found: ignore
