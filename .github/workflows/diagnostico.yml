@@ -1,14 +1,22 @@
 name: Diagnostico
 
-on: { workflow_dispatch: {} }
+on:
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: 'Qual estado testar (mt, rs, rj) ou vazio para todos'
+        required: false
+        default: 'mt'
+        type: choice
+        options: ['mt', 'rs', 'rj', 'todos']
 
-# Sem permissao de escrita: este robo NAO pode alterar nada no repositorio.
+# Somente leitura: este robo nao consegue alterar nada, nem se tentasse.
 permissions: { contents: read }
 
 jobs:
   testar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -16,3 +24,4 @@ jobs:
       - run: node scripts/diagnostico.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ESTADO: ${{ inputs.estado }}
