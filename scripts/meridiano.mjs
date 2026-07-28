@@ -200,6 +200,8 @@ console.log('\n  IL MERIDIANO · ' + new Date().toISOString());
 console.log('  ' + '='.repeat(66));
 
 const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
+const E = ESTADOS[UF] || ESTADOS.mt;
+
 console.log('\n  1. PAUTA — o que os veículos estão dando');
 const P = await colher(PAUTA, 'pauta');
 P.rel.forEach(l=>console.log('  '+l));
@@ -235,7 +237,6 @@ F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
 
 console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');
-const E = ESTADOS[UF] || ESTADOS.mt;
 console.log(`     estado: ${E.nome}`);
 
 async function porSitemap(base){
