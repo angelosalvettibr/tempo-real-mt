@@ -13,7 +13,7 @@ const CHAVE = process.env.GEMINI_API_KEY || '';
 const API = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 // O nome do modelo muda com o tempo. Testamos em ordem e ficamos com o que responde.
-const MODELOS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-flash-latest', 'gemini-1.5-flash'];
+const MODELOS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-flash-latest', 'gemini-1.5-flash'];
 let modeloBom = '';
 
 export const temChave = () => CHAVE.length > 10;
@@ -29,7 +29,13 @@ async function chamar(prompt, ms = 45000){
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.4, maxOutputTokens: 1200 }
+          generationConfig: {
+            temperature: 0.4,
+            maxOutputTokens: 4000,
+            // Flash 2.5 vem com raciocinio ligado e gasta o orcamento pensando,
+            // devolvendo resposta cortada. Zerado, sobra tudo para o texto.
+            thinkingConfig: { thinkingBudget: 0 }
+          }
         })
       });
       if (!r.ok) { erros.push(`${m}: HTTP ${r.status}`); continue; }
@@ -99,12 +105,33 @@ export async function reescrever({ fonte, titulo, texto }){
 
   const bruto = await chamar(PROMPT(fonte, titulo, texto));
 
-  const t = bruto.match(/TITULO:\s*(.+)/i)?.[1]?.trim() || '';
-  const lf = bruto.match(/LINHAFINA:\s*(.+)/i)?.[1]?.trim() || '';
-  const corpo = (bruto.split(/CORPO:\s*/i)[1] || '')
-    .split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 40);
+  // O modelo as vezes devolve com markdown, com acento no rotulo, ou sem
+  // rotulo nenhum. Limpamos e tentamos varios formatos antes de desistir.
+  const limpo = String(bruto)
+    .replace(/```[a-z]*\n?/gi, '')
+    .replace(/\*\*/g, '')
+    .replace(/^#+\s*/gm, '')
+    .trim();
 
-  if (!t || corpo.length < 2) throw new Error('resposta fora do formato');
+  let t  = limpo.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1]?.trim() || '';
+  let lf = limpo.match(/LINHA\s*_?\s*FINA\s*:\s*(.+)/i)?.[1]?.trim() || '';
+  let corpo = (limpo.split(/CORPO\s*:\s*/i)[1] || '')
+    .split(/\n\s*\n/).map(x => x.trim()).filter(x => x.length > 40);
+
+  // Plano B: sem rotulos. Primeira linha vira titulo, segunda a linha fina,
+  // o resto vira corpo.
+  if (!t || corpo.length < 2) {
+    const blocos = limpo.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
+    if (blocos.length >= 3) {
+      if (!t)  t  = blocos[0].replace(/^["']|["']$/g, '').slice(0, 130);
+      if (!lf) lf = blocos[1].slice(0, 240);
+      if (corpo.length < 2) corpo = blocos.slice(2).filter(x => x.length > 40);
+    }
+  }
+
+  if (!t || corpo.length < 2) {
+    throw new Error('resposta fora do formato: ' + limpo.slice(0, 90).replace(/\n/g, ' '));
+  }
 
   // Trava de segurança: todo número que aparece no texto novo tem que existir
   // no original. Se o modelo inventou uma cifra, a matéria é descartada.
