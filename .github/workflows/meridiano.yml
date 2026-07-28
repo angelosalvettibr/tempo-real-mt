@@ -5,25 +5,25 @@ on:
     - cron: '0 */3 * * *'
   workflow_dispatch:
     inputs:
-      estado:
+      edicao:
         description: 'Qual edicao gerar'
         required: false
-        default: 'todos'
+        default: 'todas'
         type: choice
-        options: ['todos', 'mt', 'rs', 'rj']
+        options: ['todas', 'br', 'mundo', 'mt', 'rs', 'rj']
 
 permissions: { contents: write }
 
 jobs:
-  # Os tres estados rodam AO MESMO TEMPO. Cada um grava so o seu arquivo,
-  # entao nao ha colisao. O commit acontece depois, num passo separado.
+  # Cinco edicoes ao mesmo tempo. br e mundo cuidam do que e comum; as tres
+  # estaduais cuidam so do regional e nao disputam vaga com Brasilia.
   edicao:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     strategy:
-      fail-fast: false          # um estado quebrar nao derruba os outros
+      fail-fast: false
       matrix:
-        estado: [mt, rs, rj]
+        edicao: [br, mundo, mt, rs, rj]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,10 +31,10 @@ jobs:
       - run: node scripts/meridiano.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ESTADO: ${{ (inputs.estado == 'todos' || inputs.estado == '') && matrix.estado || inputs.estado }}
+          ESTADO: ${{ (inputs.edicao == 'todas' || inputs.edicao == '') && matrix.edicao || inputs.edicao }}
       - uses: actions/upload-artifact@v4
         with:
-          name: edicao-${{ matrix.estado }}
+          name: edicao-${{ matrix.edicao }}
           path: |
             dados/edicao-*.json
             dados/arquivo-*.json
@@ -42,7 +42,6 @@ jobs:
           retention-days: 1
           if-no-files-found: ignore
 
-  # Junta o resultado dos tres e faz UM commit so.
   publicar:
     needs: edicao
     if: always()
@@ -59,4 +58,4 @@ jobs:
           git config user.name "Il Meridiano"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dados materia
-          git diff --staged --quiet || (git commit -m "edicao dos tres estados" && git push)
+          git diff --staged --quiet || (git commit -m "edicao: br, mundo, mt, rs, rj" && git push)
