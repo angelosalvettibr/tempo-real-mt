@@ -263,9 +263,42 @@ function pintarDescarte(){
 
 async function carregar(){
   try{
-    const r = await fetch('dados/edicao.json?t='+Date.now(), { cache:'no-store' });
-    if(!r.ok) throw new Error('HTTP '+r.status);
-    ED = await r.json();
+    // Cada estado grava o proprio arquivo. Buscamos os tres ao mesmo tempo:
+    // se um faltar, os outros entram e o site nao fica vazio.
+    const puxa = async uf => {
+      try {
+        const r = await fetch(`dados/edicao-${uf}.json?t=${Date.now()}`, { cache:'no-store' });
+        return r.ok ? await r.json() : null;
+      } catch { return null; }
+    };
+    const partes = (await Promise.all(Object.keys(ESTADOS).map(puxa))).filter(Boolean);
+    if (!partes.length) throw new Error('nenhuma edicao encontrada');
+
+    // Brasil e Mundo sao os mesmos nos tres: guardamos uma vez so.
+    const vistos = new Set();
+    const itens = [];
+    for (const p of partes) {
+      for (const i of (p.itens || [])) {
+        const k = (i.editoria === 'regional' ? i.uf + ':' : '') + i.id;
+        if (vistos.has(k)) continue;
+        vistos.add(k);
+        itens.push(i);
+      }
+    }
+    itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+
+    const pautas = [];
+    for (const p of partes) for (const x of (p.pautas || [])) pautas.push(x);
+
+    ED = {
+      gerado: partes.map(p => p.gerado).sort().pop(),
+      numeros: partes.reduce((a,p) => {
+        const n = p.numeros || {};
+        for (const k of Object.keys(n)) a[k] = (a[k]||0) + n[k];
+        return a;
+      }, {}),
+      itens, pautas
+    };
   }catch(e){
     $('#conteudo').innerHTML = '<p class="aviso">Não consegui ler <b>dados/edicao.json</b>.<br>Se estiver abrindo do computador, publique ou rode <b>npx serve</b> na pasta.</p>';
     return;
