@@ -60,22 +60,17 @@ nav button[aria-pressed="true"]{color:var(--rosso);border-bottom-color:var(--ros
 main{padding:30px 0 10px;min-height:40vh}
 .aviso{text-align:center;padding:60px 20px;color:var(--fraco);font-size:17px}
 
-/* destaque */
-.abre{border-bottom:2px solid var(--tinta);padding-bottom:26px;margin-bottom:28px}
+/* abertura: a principal ocupa duas colunas, a segunda fica ao lado */
+.topo-edicao{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:2px solid var(--tinta);margin-bottom:0}
+.abre{padding:0 30px 26px 0;border-right:1px solid var(--linha)}
 .chapeu{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);display:block;margin-bottom:10px}
-.abre h2{font-family:var(--tit);font-size:clamp(30px,4.6vw,50px);font-weight:900;letter-spacing:-.022em;line-height:1.04;margin-bottom:14px;max-width:20ch}
-.abre p{font-size:19.5px;line-height:1.55;color:var(--tinta2);max-width:62ch}
+.abre h2{font-family:var(--tit);font-size:clamp(28px,3.9vw,44px);font-weight:900;letter-spacing:-.022em;line-height:1.05;margin-bottom:13px}
+.abre p{font-size:18.5px;line-height:1.55;color:var(--tinta2)}
 .abre:hover h2{color:var(--rosso)}
-
-/* grade */
-.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.art{padding:22px 26px;border-right:1px solid var(--linha);border-bottom:1px solid var(--linha)}
-.art:nth-child(3n){border-right:0}
-.art h3{font-family:var(--tit);font-size:22px;font-weight:700;line-height:1.16;letter-spacing:-.012em;margin-bottom:9px}
-.art:hover h3{color:var(--rosso)}
-.art p{font-size:16px;line-height:1.5;color:var(--tinta2)}
-.assina{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--fraco);margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-.assina b{color:var(--tinta2);font-weight:500}
+.segunda{padding:0 0 26px 26px}
+.segunda h3{font-family:var(--tit);font-size:24px;font-weight:700;line-height:1.16;margin-bottom:10px}
+.segunda p{font-size:16px;line-height:1.5;color:var(--tinta2)}
+.segunda:hover h3{color:var(--rosso)}
 
 /* como nasceu */
 .nasceu{display:none;margin-top:14px;border-top:1px dotted var(--linha2);padding-top:12px;font-family:var(--mono);font-size:10.5px;line-height:1.7;color:var(--tinta2)}
@@ -117,7 +112,7 @@ footer ul{list-style:none}
 footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 .selo-final{font-family:var(--mono);font-size:10px;color:var(--fraco);letter-spacing:.05em;margin-top:24px;padding-top:16px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
-@media (max-width:900px){ .grade{grid-template-columns:repeat(2,1fr)} .art:nth-child(3n){border-right:1px solid var(--linha)} .art:nth-child(2n){border-right:0} .rod{grid-template-columns:1fr 1fr} .descarte ul{columns:1} }
+@media (max-width:900px){ .topo-edicao{grid-template-columns:1fr} .abre{border-right:0;padding-right:0;border-bottom:1px solid var(--linha);margin-bottom:22px} .segunda{padding-left:0} .grade{grid-template-columns:repeat(2,1fr)} .art:nth-child(3n){border-right:1px solid var(--linha)} .art:nth-child(2n){border-right:0} .rod{grid-template-columns:1fr 1fr} .descarte ul{columns:1} }
 @media (max-width:560px){ .grade{grid-template-columns:1fr} .art{border-right:0!important} .rod{grid-template-columns:1fr} .metodo .liga{margin-left:0;width:100%} }
 </style>
 </head>
@@ -251,22 +246,34 @@ function pintar(){
     return;
   }
 
-  const d = lista[0], resto = lista.slice(1);
-  let h = `<a class="abre" href="${esc(d.link)}">
-    <span class="chapeu">${esc(chapeuDe(d))} · nosso texto</span>
-    <h2>${esc(d.titulo)}</h2>
-    <p>${esc(d.resumo)}</p>
-    <div class="assina"><span>${esc(d.hora)}</span><span>${esc(d.fonte)}</span></div>
-    ${nasceu(d)}
-  </a>`;
+  const d = lista[0], segunda = lista[1], resto = lista.slice(2);
 
-  h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
-    <span class="chapeu">${esc(chapeuDe(i))}</span>
-    <h3>${esc(i.titulo)}</h3>
-    <p>${esc(i.resumo)}</p>
-    <div class="assina"><span>${esc(i.hora)}</span><span>${esc(i.fonte)}</span></div>
-    ${nasceu(i)}
-  </a>`).join('') + '</div>';
+  let h = `<div class="topo-edicao">
+    <a class="abre" href="${esc(d.link)}">
+      <span class="chapeu">${esc(chapeuDe(d))} · nosso texto</span>
+      <h2>${esc(d.titulo)}</h2>
+      <p>${esc(d.resumo)}</p>
+      <div class="assina"><span>${esc(d.hora)}</span><span>${esc(d.fonte)}</span></div>
+      ${nasceu(d)}
+    </a>
+    ${segunda ? `<a class="segunda" href="${esc(segunda.link)}">
+      <span class="chapeu">${esc(chapeuDe(segunda))}</span>
+      <h3>${esc(segunda.titulo)}</h3>
+      <p>${esc(segunda.resumo)}</p>
+      <div class="assina"><span>${esc(segunda.hora)}</span><span>${esc(segunda.fonte)}</span></div>
+      ${nasceu(segunda)}
+    </a>` : '<div></div>'}
+  </div>`;
+
+  if (resto.length) {
+    h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
+      <span class="chapeu">${esc(chapeuDe(i))}</span>
+      <h3>${esc(i.titulo)}</h3>
+      <p>${esc(i.resumo)}</p>
+      <div class="assina"><span>${esc(i.hora)}</span><span>${esc(i.fonte)}</span></div>
+      ${nasceu(i)}
+    </a>`).join('') + '</div>';
+  }
 
   alvo.innerHTML = h;
 }
@@ -402,7 +409,14 @@ function aplicarEstado(){
   location.hash = estado;
   pintar(); pintarCircula();
 }
-$('#selEstado').addEventListener('change', e => { estado = e.target.value; aplicarEstado(); });
+$('#selEstado').addEventListener('change', e => {
+  estado = e.target.value;
+  // quem escolhe um estado quer ver aquele estado: leva junto para a aba
+  filtro = 'regional';
+  document.querySelectorAll('nav button').forEach(o =>
+    o.setAttribute('aria-pressed', o.dataset.f === 'regional'));
+  aplicarEstado();
+});
 window.addEventListener('hashchange', () => {
   const novo = location.hash.replace('#','').toLowerCase();
   if (ESTADOS[novo] && novo !== estado) { estado = novo; aplicarEstado(); }
