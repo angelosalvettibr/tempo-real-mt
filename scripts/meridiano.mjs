@@ -14,7 +14,7 @@ import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, t
 import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA } from './estados.mjs';
 
 const JANELA_HORAS = 24;
-const QUANTAS_REESCREVER = 10;
+const QUANTAS_REESCREVER = 8;
 
 /* ===================== 1. PAUTA — termômetro, não publica ================= */
 
@@ -326,13 +326,15 @@ if (temChave()) {
     .filter(i => PODE_REESCREVER.test(i.link))
     .slice(0, QUANTAS_REESCREVER);
 
-  for (const i of fila) {
+  // As reescritas tambem iam em fila: cada uma esperava a anterior, e uma
+  // pagina lenta segurava todas. Agora vao de tres em tres.
+  async function escreverUma(i){
     try {
-      const texto = await textoCompleto(i.link);
+      const texto = await textoCompleto(i.link, 12000);
       const m = await reescrever({ fonte: i.veiculo, titulo: i.titulo, texto });
       const arq = slug(m.titulo)+'.html';
       await writeFile('materia/'+arq, pagina(
-        { chapeu: i.editoria==='regional'?'Mato Grosso':i.editoria==='internacional'?'Mundo':'Brasil',
+        { chapeu: i.editoria==='regional'?E.nome:i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, checar:[] },
         { link:i.link, municipio:'' }, i.iso), 'utf8');
       publicados.push({
@@ -340,13 +342,18 @@ if (temChave()) {
         titulo:m.titulo, resumo:m.linhaFina,
         fonte:'Il Meridiano, com informações de '+i.veiculo,
         origemLink:i.link, origemNome:i.veiculo,
-        pautadoPor:i.pautadoPor||[], quentura:i.quentura||0, uf: i.uf || (i.editoria==='regional' ? UF : null),
+        pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
+        uf: i.uf || (i.editoria==='regional' ? UF : null),
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true
       });
       escritas++;
-      console.log('     ok    '+m.titulo.slice(0,60));
-      await dormir(1200);
-    } catch(e){ console.log('     pulou '+String(e.message).slice(0,60)); }
+      console.log('     ok    '+m.titulo.slice(0,58));
+    } catch(e){ console.log('     pulou '+String(e.message).slice(0,58)); }
+  }
+
+  for (let k = 0; k < fila.length; k += 3) {
+    await Promise.all(fila.slice(k, k+3).map(escreverUma));
+    if (k + 3 < fila.length) await dormir(800);
   }
 } else {
   console.log('     sem GEMINI_API_KEY — reescrita desligada');
@@ -357,8 +364,9 @@ if (temChave()) {
 // indice e a base do assistente: ele so podera responder citando materia
 // publicada aqui, com link. Sem arquivo, a IA nao tem o que citar e inventa.
 try {
-  let arquivo = { criado: new Date().toISOString(), itens: [] };
-  try { arquivo = JSON.parse(await readFile('dados/arquivo.json','utf8')); } catch {}
+  const CAMINHO_ARQ = `dados/arquivo-${UF}.json`;
+  let arquivo = { uf: UF, criado: new Date().toISOString(), itens: [] };
+  try { arquivo = JSON.parse(await readFile(CAMINHO_ARQ,'utf8')); } catch {}
 
   const jaTem = new Set((arquivo.itens || []).map(i => i.id));
   let novas = 0;
@@ -377,13 +385,15 @@ try {
   arquivo.atualizado = new Date().toISOString();
   arquivo.total = arquivo.itens.length;
 
-  await writeFile('dados/arquivo.json', JSON.stringify(arquivo, null, 2), 'utf8');
-  console.log(`  arquivo: +${novas} novas · ${arquivo.total} materias guardadas no total`);
+  await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
+  console.log(`  arquivo ${UF}: +${novas} novas · ${arquivo.total} materias guardadas`);
 } catch (e) {
   console.log('  aviso arquivo: ' + e.message);
 }
 
-await writeFile('dados/edicao.json', JSON.stringify({
+await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
+  uf: UF,
+  estado: E.nome,
   gerado: new Date().toISOString(),
   modelo: modeloUsado(),
   numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, semFonte:soPautaFiltrada.length },

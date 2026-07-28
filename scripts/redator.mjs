@@ -51,7 +51,7 @@ export async function preparar(){
   return { escolhido: modeloBom, disponiveis: nomes.filter(n=>/flash/i.test(n)).slice(0,8) };
 }
 
-async function chamar(prompt, ms = 60000){
+async function chamar(prompt, ms = 35000){
   if (!modeloBom) await preparar();
   if (!modeloBom) throw new Error('nenhum modelo disponivel para esta chave');
 
@@ -80,7 +80,7 @@ async function chamar(prompt, ms = 60000){
   throw new Error('falhou com e sem thinkingConfig');
 }
 
-export async function textoCompleto(url, ms = 20000){
+export async function textoCompleto(url, ms = 12000){
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), ms);
   try {
