@@ -12,6 +12,8 @@
 const CHAVE = process.env.GEMINI_API_KEY || '';
 const API = 'https://generativelanguage.googleapis.com/v1beta/models';
 
+export const temChave = () => CHAVE.length > 10;
+
 // Em vez de adivinhar o nome do modelo, perguntamos ao Google quais existem
 // para esta chave e escolhemos o melhor flash disponivel. Nome de modelo muda
 // com o tempo; a lista da API nao mente.
