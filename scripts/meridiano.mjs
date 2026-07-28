@@ -215,41 +215,42 @@ const E = ESTADOS[UF] || ESTADOS.mt;
 console.log(`     estado: ${E.nome}`);
 
 async function porSitemap(base){
-  for (const c of CAMINHOS_SITEMAP) {
-    try {
-      const xml = await buscar(base + c, 15000, 1);
-      if (!/<(urlset|sitemapindex)/i.test(xml)) continue;
-
-      let entradas = lerSitemap(xml);
-      // se for indice de sitemaps, entra no que tiver cara de noticia
-      if (ehIndice(xml)) {
-        const filho = entradas.find(e => /(noticia|news|post|materia)/i.test(e.url)) || entradas[0];
-        if (!filho) continue;
-        const xml2 = await buscar(filho.url, 15000, 1);
-        entradas = lerSitemap(xml2);
-      }
-      const noticias = filtrarNoticias(entradas, 48);
-      if (noticias.length >= 2) return noticias;
-    } catch { /* proximo caminho */ }
-  }
-  return [];
+  // Antes: 6 caminhos em fila, 15s cada = ate 90s por orgao. Agora todos
+  // juntos, 8s. O primeiro que responder com noticia vence.
+  const tentativas = CAMINHOS_SITEMAP.map(async c => {
+    const xml = await buscar(base + c, 8000, 1);
+    if (!/<(urlset|sitemapindex)/i.test(xml)) throw new Error('nao e sitemap');
+    let entradas = lerSitemap(xml);
+    if (ehIndice(xml)) {
+      const filho = entradas.find(e => /(noticia|news|post|materia)/i.test(e.url)) || entradas[0];
+      if (!filho) throw new Error('indice vazio');
+      entradas = lerSitemap(await buscar(filho.url, 8000, 1));
+    }
+    const noticias = filtrarNoticias(entradas, 48);
+    if (noticias.length < 2) throw new Error('sem noticia recente');
+    return noticias;
+  });
+  try { return await Promise.any(tentativas); } catch { return []; }
 }
 
-for (const o of [...E.assessorias, ...E.setoriais.filter(x=>x.base)]) {
+const ORGAOS_DO_ESTADO = [...E.assessorias, ...E.setoriais.filter(x=>x.base)];
+async function tratarOrgao(o){
   let entrou = 0;
 
   // 1. pagina de listagem
-  for (const caminho of CAMINHOS_ASSESSORIA) {
-    try {
-      const html = await buscar(o.base + caminho, 12000, 1);
-      const m = lerListagem(html, o.base);
-      if (m.length < 3) continue;
+  const porPagina = CAMINHOS_ASSESSORIA.map(async caminho => {
+    const html = await buscar(o.base + caminho, 8000, 1);
+    const m = lerListagem(html, o.base);
+    if (m.length < 3) throw new Error('pouca coisa');
+    return { m, caminho };
+  });
+  try {
+    { const { m, caminho } = await Promise.any(porPagina);
       for (const x of m) F.itens.push({ titulo:x.titulo, link:x.link, resumo:'',
         iso:new Date().toISOString(), veiculo:o.nome, editoria:'regional', uf:UF, fonteId:o.id });
       console.log(`  ok    ${o.id.padEnd(12)} ${String(m.length).padStart(2)} · pagina ${caminho}`);
-      entrou = m.length; break;
-    } catch {}
-  }
+      entrou = m.length; }
+  } catch {}
 
   // 2. sitemap.xml — funciona onde a pagina e montada por JavaScript
   if (!entrou) {
@@ -270,7 +271,11 @@ for (const o of [...E.assessorias, ...E.setoriais.filter(x=>x.base)]) {
   }
 
   if (!entrou) console.log(`  aviso ${o.id.padEnd(12)} sem pagina nem sitemap`);
-  await dormir(350);
+}
+
+for (let k = 0; k < ORGAOS_DO_ESTADO.length; k += 4) {
+  await Promise.all(ORGAOS_DO_ESTADO.slice(k, k+4).map(tratarOrgao));
+  if (k + 4 < ORGAOS_DO_ESTADO.length) await dormir(400);
 }
 console.log(`     ${F.itens.length} itens de fonte livre no total`);
 
