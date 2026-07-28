@@ -354,7 +354,20 @@ async function carregar(){
     const pautas = [];
     for (const p of partes) for (const x of (p.pautas || [])) pautas.push(x);
 
+    // as notas de circulacao de todas as edicoes, sem duplicar
+    const vistosC = new Set();
+    const circulando = [];
+    for (const p of partes) {
+      for (const c of (p.circulando || [])) {
+        const k = (c.uf || '') + ':' + c.id;
+        if (vistosC.has(k)) continue;
+        vistosC.add(k);
+        circulando.push(c);
+      }
+    }
+
     ED = {
+      circulando,
       gerado: partes.map(p => p.gerado).sort().pop(),
       numeros: partes.reduce((a,p) => {
         const n = p.numeros || {};
