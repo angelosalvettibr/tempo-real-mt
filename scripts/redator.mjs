@@ -192,26 +192,27 @@ export const modeloUsado = () => modeloBom || '(nenhum)';
 //   2. nunca nomear pessoa fisica comum (so cargo ou orgao publico)
 //   3. nunca dizer que e falso — nao confirmado e diferente de mentira
 
-const PROMPT_CIRCULA = (titulo, resumo, editoria) => `Você é redator do MERIDIANO, um jornal que só publica o que confere.
+const PROMPT_CIRCULA = (titulo, resumo, editoria) => `Você escreve para o MERIDIANO, um jornal que só publica o que confere.
 
-Esta informação está circulando na imprensa, mas NÃO encontramos registro em fonte oficial. Escreva uma nota curta informando o leitor sobre isso.
+A informação abaixo está sendo veiculada na imprensa, mas NÃO encontramos registro em fonte oficial. Escreva uma nota curta e técnica informando o leitor.
+
+TOM: seco, de nota de agência. O bloco em que a nota aparece já avisa que se trata de informação em circulação — então NÃO repita "circula", "relatos que circulam", "segundo relatos". Vá direto ao teor, usando o condicional.
 
 REGRAS QUE NÃO PODEM SER QUEBRADAS:
-1. NUNCA afirme o fato como certo. Use "circula", "teria", "segundo relatos que circulam".
-2. NUNCA cite nome de pessoa física comum. Se houver, troque por descrição genérica ("um casal", "um homem de 40 anos"). Cargo público e nome de órgão PODEM aparecer.
-3. NUNCA diga que é falso ou mentira. Não confirmado é diferente de falso.
-4. NUNCA cite ou nomeie os veículos que publicaram.
-5. Use apenas o que está na informação abaixo. Não acrescente contexto, número, data ou nome que não esteja lá.
-6. Não opine, não julgue, não alarme.
-7. Português do Brasil, tom seco de jornal.
+1. NUNCA afirme como fato consumado. Use o condicional: "teria sido", "teria afirmado", "estaria".
+2. NUNCA cite nome de pessoa física comum. Troque por descrição ("um casal", "um homem de 40 anos"). Cargo público, nome de político e nome de órgão PODEM aparecer.
+3. NUNCA diga que é falso, boato ou fake. Não confirmado é diferente de falso.
+4. NUNCA nomeie os veículos que publicaram.
+5. Use apenas o que está abaixo. Não acrescente número, data, nome ou contexto.
+6. Sem opinião, sem alarme, sem adjetivo.
 
 FORMATO — exatamente isto, sem markdown:
-TITULO: (uma linha, até 85 caracteres, começando com "Circula que" ou construção equivalente que deixe claro não ser confirmado)
+TITULO: (uma linha até 85 caracteres, no condicional, SEM começar com "Circula")
 CORPO:
-(2 parágrafos curtos. O primeiro relata o que circula. O segundo diz que procuramos registro oficial e não localizamos, e que isso não significa que seja falso — significa que não está confirmado.)
+(exatamente 2 parágrafos curtos. O primeiro relata o teor em uma ou duas frases. O segundo informa, de forma objetiva, que a checagem em fontes oficiais não localizou registro até o fechamento.)
 
 EDITORIA: ${editoria}
-INFORMAÇÃO QUE CIRCULA: ${titulo}
+INFORMAÇÃO: ${titulo}
 ${resumo ? 'DETALHE: ' + resumo : ''}`;
 
 export async function escreverCirculacao({ titulo, resumo, editoria }){
@@ -228,6 +229,9 @@ export async function escreverCirculacao({ titulo, resumo, editoria }){
     if (b.length >= 2) { t = t || b[0].slice(0,120); corpo = corpo.length ? corpo : b.slice(1); }
   }
   if (!t || !corpo.length) throw new Error('nota fora do formato');
+  // o rotulo do bloco ja diz que circula; no titulo fica redundante
+  t = t.replace(/^circula(-se)?\s+(que\s+)?/i, '').replace(/^informa[çc][ãa]o de que\s+/i, '');
+  t = t.charAt(0).toUpperCase() + t.slice(1);
 
   // Trava de saida: se o modelo afirmou como certo, recusamos.
   const afirmativo = new RegExp([
@@ -246,4 +250,90 @@ export async function escreverCirculacao({ titulo, resumo, editoria }){
     corpo,
     aviso: 'Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.'
   };
+}
+
+
+/* ================= O QUE ISSO QUER DIZER ================================= */
+//
+// Contexto, nao opiniao. So entra o que se deduz de fato verificavel:
+// repeticao registrada no nosso arquivo, comparacao com numero que esta no
+// proprio texto, e quem o documento diz que e afetado.
+//
+// Nada de previsao, juizo de valor ou intencao atribuida a alguem. E se nao
+// houver material suficiente, o bloco simplesmente NAO aparece — melhor
+// ausente do que inventando.
+
+const PROMPT_CONTEXTO = (titulo, corpo, historico) => `Você escreve o bloco "O que isso quer dizer" do MERIDIANO.
+
+É contexto factual, não análise. Duas ou três frases, no máximo.
+
+SÓ PODE DIZER:
+1. Repetição: se o histórico abaixo mostra caso parecido, diga quantas vezes e quando.
+2. Comparação: se há número anterior no texto ou no histórico, compare.
+3. Quem é afetado: se o texto diz quem, repita.
+4. Prazo ou próxima etapa: se o texto traz data, informe.
+
+NUNCA PODE:
+- Prever o que vai acontecer
+- Dizer se é bom ou ruim, certo ou errado
+- Atribuir intenção a alguém ("o governo quer", "a estratégia é")
+- Usar "indica que", "sugere que", "especialistas", "a tendência", "pode significar"
+- Citar número que não esteja no texto nem no histórico
+
+Se não houver nada factual a acrescentar, responda apenas: NADA
+
+FORMATO: só o texto corrido, sem título, sem markdown, 2 ou 3 frases.
+
+MATÉRIA: ${titulo}
+${corpo.slice(0, 1200)}
+
+${historico.length ? 'CASOS PARECIDOS NO NOSSO ARQUIVO:\n' + historico.map(h => `- ${h.dia}: ${h.titulo}`).join('\n') : 'ARQUIVO: nenhum caso parecido registrado.'}`;
+
+export async function escreverContexto({ titulo, corpo, historico = [] }){
+  if (!temChave()) return null;
+  // Sem historico e sem numero no texto, nao ha o que dizer de factual.
+  const temNumero = /\d/.test(corpo);
+  if (!historico.length && !temNumero) return null;
+
+  try {
+    const bruto = await chamar(PROMPT_CONTEXTO(titulo, corpo, historico));
+    const t = String(bruto).replace(/```[a-z]*\n?/gi,'').replace(/\*\*/g,'')
+      .replace(/^O que isso quer dizer:?/i,'').trim();
+
+    if (!t || /^nada$/i.test(t) || t.length < 40) return null;
+
+    // Trava de saida: opiniao ou previsao disfarçada nao passa.
+    const proibido = new RegExp([
+      'indica que','sugere que','aponta para','a tendencia','pode significar',
+      'especialistas','analistas','a expectativa','deve levar','provavelmente',
+      'e um sinal','demonstra que','revela que','estrategia','pretende','quer '
+    ].join('|'), 'i');
+    if (proibido.test(t.normalize('NFD').replace(/[\u0300-\u036f]/g,''))) return null;
+
+    // Numero inventado tambem nao.
+    const nums = x => (String(x).match(/\d[\d.,]{1,}/g)||[]).map(n=>n.replace(/[.,]/g,''));
+    const conhecidos = new Set([...nums(corpo), ...nums(historico.map(h=>h.titulo).join(' '))]);
+    if (nums(t).some(n => !conhecidos.has(n))) return null;
+
+    return t.length > 420 ? t.slice(0, 420).replace(/\s+\S*$/,'') + '.' : t;
+  } catch { return null; }
+}
+
+// Procura no arquivo casos parecidos com o que estamos publicando agora.
+export function acharParecidos(arquivo, titulo, limite = 4){
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const chaves = t => [...new Set(sa(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+    .filter(p => p.length >= 4).map(p => p.slice(0,5)))];
+  const A = chaves(titulo);
+  if (A.length < 2) return [];
+
+  return (arquivo.itens || [])
+    .map(i => {
+      const B = chaves(i.titulo);
+      const nota = B.length < 2 ? 0 : A.filter(p => B.includes(p)).length / Math.min(A.length, B.length);
+      return { ...i, nota };
+    })
+    .filter(i => i.nota >= 0.35 && sa(i.titulo) !== sa(titulo))
+    .sort((a,b) => b.nota - a.nota)
+    .slice(0, limite);
 }
