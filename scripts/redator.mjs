@@ -240,6 +240,17 @@ export async function escreverCirculacao({ titulo, resumo, editoria }){
     if (b.length >= 2) { t = t || b[0].slice(0,120); corpo = corpo.length ? corpo : b.slice(1); }
   }
   if (!t || !corpo.length) throw new Error('nota fora do formato');
+
+  // O modelo as vezes devolve os rotulos do pedido junto com a resposta, e
+  // "EDITORIA: internacional" acabou publicado dentro do resumo.
+  const limparVazamento = x => String(x)
+    .replace(/\b(EDITORIA|INFORMA[ÇC][ÃA]O|DETALHE|FORMATO|TOM|REGRAS?|T[IÍ]TULO|CORPO)\s*:.*$/gim, '')
+    .replace(/\b(EDITORIA|DETALHE)\s*:\s*[\w-]+/gi, '')
+    .replace(/\s+/g, ' ').trim();
+  t = limparVazamento(t);
+  corpo = corpo.map(limparVazamento).filter(x => x.length > 30);
+  if (!t || !corpo.length) throw new Error('nota vazia depois da limpeza');
+
   // se o primeiro paragrafo so repete o titulo, nao serve
   const sa = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const pal = x => new Set(sa(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>=4));

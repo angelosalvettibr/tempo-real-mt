@@ -508,7 +508,8 @@ if (temChave()) {
 
       await writeFile('materia/'+arq, pagina(
         { chapeu: i.editoria==='regional'?E.nome:i.editoria==='internacional'?'Mundo':'Brasil',
-          titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto, checar:[] },
+          titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
+          origemNome: i.veiculo, radar: false, checar:[] },
         { link:i.link, municipio:'' }, i.iso), 'utf8');
       publicados.push({
         id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
@@ -659,22 +660,77 @@ try {
 // nao nomeia veiculo, nao nomeia pessoa comum, nao diz que e falso.
 const circulando = [];
 if (temChave() && soPautaFiltrada.length) {
-  const candidatas = soPautaFiltrada
-    .filter(p => (p.quentura || 0) >= 0)   // uma fonte ja basta: o bloco diz que nao esta confirmado
-    .slice(0, 6);
+  // Antes o terremoto do Japao saiu cinco vezes: uma confirmada e quatro como
+  // rumor. Tres travas resolvem — nao repetir o que ja foi publicado, nao
+  // repetir entre as proprias notas, e nao transformar explicacao em noticia.
+  const jaPublicado = publicados.map(p => p.titulo);
+  const NAO_E_NOTICIA = new RegExp([
+    // explicacao, contexto, servico: nao e fato a confirmar
+    'por que','porque','entenda','saiba','como funciona','o que e','quantos',
+    'registraria','costuma','historicamente','veja como','confira',
+    // construcao existencial vaga: "haveria uma corrida contra o tempo" nao e
+    // fato verificavel, e figura de linguagem
+    '^(haveria|existiria|estaria havendo|seria possivel|poderia haver)',
+    // opiniao e analise
+    'opiniao','analise','editorial','artigo','coluna'
+  ].join('|'), 'i');
+
+  const escolhidas = [];
+  for (const p of soPautaFiltrada) {
+    if (escolhidas.length >= 6) break;
+    // Mesmo assunto: alem da semelhanca geral, comparamos os nomes proprios e
+    // termos fortes. "Terremoto no Japao teria provocado desabamento" e a
+    // mesma historia de "Terremoto atinge o sul do Japao" — o limiar geral
+    // sozinho nao pegava, porque as frases sao diferentes.
+    const nucleo = x => new Set(semAcento(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+      .filter(w => w.length >= 5).map(w => w.slice(0,6)));
+    const mesmoAssunto = (a2, b2) => {
+      if (parecidas(a2, b2) >= 0.35) return true;
+      const A = nucleo(a2), B = nucleo(b2);
+      if (A.size < 2 || B.size < 2) return false;
+      const comuns = [...A].filter(w => B.has(w)).length;
+      return comuns >= 2;
+    };
+
+    if (jaPublicado.some(t => mesmoAssunto(t, p.titulo))) continue;
+    if (escolhidas.some(x => mesmoAssunto(x.titulo, p.titulo))) continue;
+    // explicacao ou contexto nao e noticia nao confirmada
+    if (NAO_E_NOTICIA.test(semAcento(p.titulo))) continue;
+    escolhidas.push(p);
+  }
+  const candidatas = escolhidas;
+  const cortadasCirc = soPautaFiltrada.length - candidatas.length;
+  if (cortadasCirc > 0) console.log(`     ${cortadasCirc} descartadas: ja publicadas, repetidas ou nao noticiosas`);
 
   for (const c of candidatas) {
     try {
-      const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: EDITORIA });
+      // Terremoto no Japao caindo em BRASIL era efeito de herdar a editoria da
+      // edicao. Agora o assunto decide.
+      const FORA = /(japao|eua|estados unidos|china|russia|ucrania|israel|gaza|argentina|peru|papa|vaticano|onu|europa|franca|italia|alemanha|coreia|india|mexico|chile|venezuela|colombia|apple|google|microsoft)/;
+      const edNota = FORA.test(semAcento(c.titulo)) ? 'internacional' : EDITORIA;
+
+      const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: edNota });
       // pagina propria: quando a confirmacao chegar, esta mesma pagina e
       // atualizada — e o leitor ve o caminho da historia
       const arqC = 'nc-' + slug(n.titulo) + '.html';
+
+      // Provenencia: o leitor tem direito de saber o que foi procurado e onde.
+      // Nao nomeamos veiculo — dizemos que circula e onde fomos checar.
+      const ondeBuscamos = GERAL
+        ? (GERAL.livres || []).map(f => f.nome)
+        : [...(E.assessorias || []).map(o => o.nome), ...(E.setoriais || []).map(o => o.nome)];
+      const provenencia = {
+        circulaEm: (c.quentura || 0) + 1,
+        buscadoEm: [...new Set(ondeBuscamos)].slice(0, 8),
+        quando: new Date().toLocaleString('pt-BR', { timeZone:'America/Cuiaba' })
+      };
       await writeFile('materia/' + arqC, pagina({
         chapeu: GERAL ? GERAL.nome : E.nome,
         titulo: n.titulo,
         linhaFina: n.aviso,
         corpo: n.corpo,
         naoConfirmada: true,
+        provenencia,
         checar: ['Procurar o registro no órgão competente',
                  'Confirmar data, local e envolvidos',
                  'Ouvir o outro lado antes de publicar como confirmada']
@@ -684,7 +740,7 @@ if (temChave() && soPautaFiltrada.length) {
         link: '/materia/' + arqC,
         corpo: n.corpo,
         id: 'circ:' + slug(n.titulo),
-        editoria: EDITORIA, uf: GERAL ? null : UF,
+        editoria: edNota, uf: edNota === 'regional' ? UF : null,
         titulo: n.titulo, corpo: n.corpo, aviso: n.aviso,
         iso: new Date().toISOString(),
         hora: horaBR(new Date().toISOString())

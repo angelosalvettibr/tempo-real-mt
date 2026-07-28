@@ -280,6 +280,16 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
+.proc{border:1px solid var(--linha);padding:16px 20px;margin:26px 0;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.6;background:#FAFAF8}
+.proc summary{cursor:pointer;list-style:none;outline:none}
+.proc summary::-webkit-details-marker{display:none}
+.proc summary b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta)}
+.proc summary::after{content:" ▸";color:var(--fraco)}
+.proc[open] summary::after{content:" ▾"}
+.proc p{margin-top:11px;color:#3C3C3C}
+.proc ul{margin:10px 0 0 18px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5A5A5A}
+.proc li{margin-bottom:4px}
+.proc .obs{font-size:13.5px;color:var(--fraco);border-top:1px dotted var(--linha);padding-top:10px;margin-top:12px}
 .contexto{border-left:3px solid var(--tinta);padding:18px 22px;margin:30px 0;background:#fff}
 .contexto b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:9px}
 .contexto p{font-family:'Source Serif 4',Georgia,serif;font-size:16.5px;line-height:1.6;color:#333A42;margin:0}
@@ -305,7 +315,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 <article class="wrap">
   ${m.naoConfirmada
     ? '<span class="selo nc">Sem confirmação oficial</span>'
-    : '<span class="selo">Reportagem de dados · exclusivo</span>'}
+    : m.radar
+      ? '<span class="selo">Reportagem de dados · exclusivo</span>'
+      : `<span class="selo">${esc(m.origemNome ? 'Com informações de ' + m.origemNome : 'Texto da nossa redação')}</span>`}
   <span class="chapeu">${esc(m.chapeu)}</span>
   <h1>${esc(m.titulo)}</h1>
   ${m.naoConfirmada
@@ -315,6 +327,13 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
   <div class="corpo">${corpoHtml}</div>
 
+  ${m.provenencia ? `<details class="proc">
+    <summary><b>O que procuramos antes de publicar</b></summary>
+    <p>Esta informação apareceu em ${m.provenencia.circulaEm} ${m.provenencia.circulaEm === 1 ? 'veículo' : 'veículos'} da imprensa. Consultamos as fontes oficiais abaixo em ${esc(m.provenencia.quando)} e não localizamos registro sobre o caso.</p>
+    <ul>${m.provenencia.buscadoEm.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    <p class="obs">Se você souber de registro oficial que não encontramos, escreva para a redação. Corrigimos e transformamos em matéria confirmada.</p>
+  </details>` : ''}
+
   ${m.contexto ? `<div class="contexto">
     <b>O que isso quer dizer</b>
     <p>${esc(m.contexto)}</p>
@@ -322,7 +341,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
   <details class="fonte-box">
     <summary><b>De onde vem esta informação</b></summary>
-    Texto produzido a partir dos dados publicados pelo próprio órgão no Portal Nacional de Contratações Públicas (PNCP), sistema oficial onde toda compra pública é registrada. Nenhum número foi estimado: todos constam do documento original.
+    ${m.radar
+      ? 'Texto produzido a partir dos dados publicados pelo próprio órgão no Portal Nacional de Contratações Públicas (PNCP), sistema oficial onde toda compra pública é registrada. Nenhum número foi estimado: todos constam do documento original.'
+      : m.naoConfirmada
+        ? 'Esta informação está circulando na imprensa e não localizamos registro em fonte oficial. Não afirmamos o fato: relatamos que ele circula e que a nossa checagem não encontrou o documento.'
+        : `Reescrevemos com nossas palavras a partir do material publicado por ${esc(m.origemNome || 'fonte que autoriza reprodução')}. Nenhum número foi alterado: todos constam do original, cujo endereço está abaixo.`}
     <br><br>Documento: <a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.link)}</a>
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
   </details>
