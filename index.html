@@ -42,6 +42,12 @@ nav .wrap{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;padding:0}
 nav button{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;background:none;border:0;border-bottom:3px solid transparent;padding:13px 18px;cursor:pointer;color:var(--tinta2);transition:.15s}
 nav button:hover{color:var(--tinta)}
 nav button[aria-pressed="true"]{color:var(--rosso);border-bottom-color:var(--rosso);font-weight:600}
+.sel-estado{display:flex;align-items:center;gap:7px;padding:0 6px 0 16px;margin-left:6px;border-left:1px solid var(--linha)}
+.sel-estado label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco)}
+.sel-estado select{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1px solid var(--linha2);background:var(--carta);padding:6px 8px;cursor:pointer;color:var(--tinta)}
+.sel-estado select:hover{border-color:var(--tinta)}
+.vazio-estado{text-align:center;padding:50px 20px;color:var(--tinta2)}
+.vazio-estado b{display:block;font-family:var(--tit);font-size:21px;margin-bottom:8px;color:var(--tinta)}
 
 /* explicação do método */
 .metodo{background:#F3EEE3;border-bottom:1px solid var(--linha);padding:16px 0}
@@ -118,10 +124,18 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
   </div>
   <nav>
     <div class="wrap">
-      <button data-f="tudo" aria-pressed="true">Tudo</button>
-      <button data-f="internacional" aria-pressed="false">Mundo</button>
+      <button data-f="capa" aria-pressed="true">Capa</button>
       <button data-f="brasil" aria-pressed="false">Brasil</button>
-      <button data-f="regional" aria-pressed="false">Mato Grosso</button>
+      <button data-f="internacional" aria-pressed="false">Mundo</button>
+      <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
+      <span class="sel-estado">
+        <label for="selEstado">estado</label>
+        <select id="selEstado">
+          <option value="mt">Mato Grosso</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="rj">Rio de Janeiro</option>
+        </select>
+      </span>
     </div>
   </nav>
 </header>
@@ -176,8 +190,13 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 </footer>
 
 <script>
-const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Mato Grosso' };
-let ED = { itens:[], pautas:[] }, filtro = 'tudo';
+const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Estado' };
+const ESTADOS = { mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
+let ED = { itens:[], pautas:[] }, filtro = 'capa';
+// o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
+// e o link pode ser compartilhado ja no estado certo
+let estado = (location.hash.replace('#','') || 'mt').toLowerCase();
+if (!ESTADOS[estado]) estado = 'mt';
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const faz = iso => { const m = Math.round((Date.now()-Date.parse(iso))/60000);
@@ -196,9 +215,20 @@ function nasceu(i){
 }
 
 function pintar(){
-  const lista = filtro==='tudo' ? ED.itens : ED.itens.filter(i=>i.editoria===filtro);
+  const doEstado = i => !i.uf || i.uf === estado;
+  const lista = filtro === 'capa'
+    ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
+    : filtro === 'regional'
+      ? ED.itens.filter(i => i.editoria === 'regional' && doEstado(i))
+      : ED.itens.filter(i => i.editoria === filtro);
   const alvo = $('#conteudo');
-  if(!lista.length){ alvo.innerHTML = '<p class="aviso">Nada nesta editoria nas últimas 24 horas.</p>'; return; }
+  if(!lista.length){
+    alvo.innerHTML = filtro === 'regional'
+      ? `<div class="vazio-estado"><b>Ainda não temos edição de ${esc(ESTADOS[estado])}</b>
+         As fontes públicas deste estado estão sendo conectadas. A capa, com Brasil e Mundo, continua completa.</div>`
+      : '<p class="aviso">Nada nesta editoria nas últimas 24 horas.</p>';
+    return;
+  }
 
   const d = lista[0], resto = lista.slice(1);
   let h = `<a class="abre" href="${esc(d.link)}">
@@ -254,6 +284,19 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
   document.querySelectorAll('nav button').forEach(o => o.setAttribute('aria-pressed', o===b));
   pintar();
 }));
+
+function aplicarEstado(){
+  $('#selEstado').value = estado;
+  $('#btEstado').textContent = ESTADOS[estado];
+  location.hash = estado;
+  pintar();
+}
+$('#selEstado').addEventListener('change', e => { estado = e.target.value; aplicarEstado(); });
+window.addEventListener('hashchange', () => {
+  const novo = location.hash.replace('#','').toLowerCase();
+  if (ESTADOS[novo] && novo !== estado) { estado = novo; aplicarEstado(); }
+});
+aplicarEstado();
 
 $('#btMetodo').addEventListener('click', e => {
   const on = document.body.classList.toggle('mostra-metodo');
