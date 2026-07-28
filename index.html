@@ -86,6 +86,22 @@ body.mostra-metodo .nasceu{display:block}
 .nasceu em{font-style:normal;color:var(--rosso)}
 
 /* pautas descartadas */
+.circula{background:#F3EEE3;border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
+.circula h4{font-family:var(--tit);font-size:26px;font-weight:700;margin-bottom:8px}
+.circula .exp{font-size:16px;color:var(--tinta2);max-width:74ch;margin-bottom:24px;line-height:1.55}
+.circula .exp b{color:var(--tinta)}
+.nota-c{background:var(--carta);border:1px solid var(--linha);padding:22px 24px;margin-bottom:14px}
+.nota-c .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#8A6D1F;background:#F7EFD9;border:1px solid #E3D3A4;padding:3px 8px;display:inline-block;margin-bottom:11px}
+.nota-c h5{font-family:var(--tit);font-size:21px;font-weight:700;line-height:1.2;margin-bottom:10px}
+.nota-c p{font-size:16px;line-height:1.6;color:var(--tinta2);margin-bottom:11px}
+.nota-c .ressalva{font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--fraco);border-top:1px dotted var(--linha2);padding-top:11px;margin-top:4px}
+.nota-c .ajuda{margin-top:13px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--tinta);color:var(--tinta);padding:9px 14px;cursor:pointer}
+.nota-c .ajuda:hover{background:var(--tinta);color:var(--papel)}
+.caixa{display:none;margin-top:12px;border-top:1px solid var(--linha);padding-top:12px}
+.caixa.aberta{display:block}
+.caixa textarea{width:100%;min-height:88px;font-family:var(--txt);font-size:15px;border:1px solid var(--linha2);padding:11px;resize:vertical;background:var(--papel)}
+.caixa .env{margin-top:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--tinta);color:var(--papel);border:0;padding:10px 16px;cursor:pointer}
+.caixa small{display:block;margin-top:9px;font-family:var(--mono);font-size:10px;color:var(--fraco);line-height:1.6}
 .descarte{background:#F3EEE3;border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
 .descarte h4{font-family:var(--tit);font-size:24px;font-weight:700;margin-bottom:6px}
 .descarte .exp{font-size:16px;color:var(--tinta2);max-width:70ch;margin-bottom:18px}
@@ -155,11 +171,11 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
   <p class="aviso">Carregando a edição…</p>
 </main>
 
-<section class="descarte" id="boxDescarte" style="display:none">
+<section class="circula" id="boxCircula" style="display:none">
   <div class="wrap">
-    <h4>O que não publicamos hoje</h4>
-    <p class="exp">Estas histórias apareceram nos veículos monitorados, mas nenhuma fonte que autoriza reprodução as tinha. Sem isso não publicamos: reescrever apuração alheia seria pegar carona, e sem o documento original não temos como conferir. Elas ficam aqui como pauta para a redação.</p>
-    <ul id="listaDescarte"></ul>
+    <h4>Circulando hoje</h4>
+    <p class="exp">Informações que estão correndo na imprensa e para as quais <b>não localizamos registro oficial</b> até o fechamento desta edição. Não significa que sejam falsas — significa que não estão confirmadas. Publicamos assim, com essa ressalva, porque achamos que você tem o direito de saber o que circula e o que ainda não foi comprovado.</p>
+    <div id="listaCircula"></div>
   </div>
 </section>
 
@@ -251,6 +267,48 @@ function pintar(){
   alvo.innerHTML = h;
 }
 
+function pintarCircula(){
+  const todas = ED.circulando || [];
+  // obedece a aba escolhida: no Brasil so nota nacional, no estado so daquele estado
+  const lista = filtro === 'capa'
+    ? todas.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
+    : filtro === 'regional'
+      ? todas.filter(i => i.editoria === 'regional' && i.uf === estado)
+      : todas.filter(i => i.editoria === filtro);
+
+  const box = $('#boxCircula');
+  if (!lista.length) { box.style.display = 'none'; return; }
+  box.style.display = '';
+
+  $('#listaCircula').innerHTML = lista.map((i, n) => `
+    <article class="nota-c">
+      <span class="selo">sem confirmação oficial</span>
+      <h5>${esc(i.titulo)}</h5>
+      ${(i.corpo||[]).map(p => `<p>${esc(p)}</p>`).join('')}
+      <p class="ressalva">${esc(i.aviso||'')}</p>
+      <button class="ajuda" data-n="${n}">Você sabe algo sobre isso?</button>
+      <div class="caixa" id="cx${n}">
+        <textarea placeholder="Conte o que você sabe. Pode ser anônimo."></textarea>
+        <button class="env" data-n="${n}">Enviar para a redação</button>
+        <small>Vai direto para a redação e não aparece no site. Se apurarmos, vira matéria — com o documento.</small>
+      </div>
+    </article>`).join('');
+
+  $('#listaCircula').querySelectorAll('.ajuda').forEach(b => b.addEventListener('click', () => {
+    document.getElementById('cx' + b.dataset.n).classList.toggle('aberta');
+  }));
+  $('#listaCircula').querySelectorAll('.env').forEach(b => b.addEventListener('click', () => {
+    const cx = document.getElementById('cx' + b.dataset.n);
+    const t = cx.querySelector('textarea').value.trim();
+    if (t.length < 10) { alert('Escreva um pouco mais para a redação entender.'); return; }
+    // sem banco ainda: abre o e-mail da redação com o texto pronto
+    const assunto = encodeURIComponent('Contribuição do leitor');
+    const corpo = encodeURIComponent(t + '\n\n---\nSobre: ' + (ED.circulando[b.dataset.n]?.titulo || ''));
+    location.href = `mailto:redacao@meridiano.com.br?subject=${assunto}&body=${corpo}`;
+    cx.innerHTML = '<p style="font-family:var(--mono);font-size:11px;color:var(--fraco)">Obrigado. A redação vai ler.</p>';
+  }));
+}
+
 function pintarDescarte(){
   const p = ED.pautas || [];
   if(!p.length) return;
@@ -305,7 +363,7 @@ async function carregar(){
     $('#conteudo').innerHTML = '<p class="aviso">Não consegui ler <b>dados/edicao.json</b>.<br>Se estiver abrindo do computador, publique ou rode <b>npx serve</b> na pasta.</p>';
     return;
   }
-  pintar(); pintarDescarte();
+  pintar(); pintarCircula(); pintarDescarte();
   if(ED.gerado){
     $('#quando').textContent = faz(ED.gerado);
     $('#rodape').textContent = 'edição de ' + new Date(ED.gerado).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'});
@@ -317,7 +375,7 @@ async function carregar(){
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   filtro = b.dataset.f;
   document.querySelectorAll('nav button').forEach(o => o.setAttribute('aria-pressed', o===b));
-  pintar();
+  pintar(); pintarCircula();
 }));
 
 function aplicarEstado(){
@@ -325,7 +383,7 @@ function aplicarEstado(){
   const p = $('#praca'); if (p) p.textContent = 'edição ' + ESTADOS[estado];
   $('#btEstado').textContent = ESTADOS[estado];
   location.hash = estado;
-  pintar();
+  pintar(); pintarCircula();
 }
 $('#selEstado').addEventListener('change', e => { estado = e.target.value; aplicarEstado(); });
 window.addEventListener('hashchange', () => {
