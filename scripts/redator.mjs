@@ -354,3 +354,59 @@ export function acharParecidos(arquivo, titulo, limite = 4){
     .sort((a,b) => b.nota - a.nota)
     .slice(0, limite);
 }
+
+
+/* ============== DE QUEM E A INFORMACAO ================================== */
+// Extrai o orgao a quem a materia atribui o fato. E a atribuicao mais
+// verdadeira: a informacao nasceu no orgao, o veiculo so passou adiante.
+// Quando nao ha orgao nomeado, devolve null — e ai o selo tem que dizer que
+// outros veiculos publicaram, porque omitir os dois seria apuracao alheia
+// sem credito nenhum.
+
+const ORGAOS_CONHECIDOS = [
+  // siglas primeiro: sao as mais precisas
+  'Itamaraty','STF','STJ','TSE','TCU','TRF','TST','TRE','TCE','TCM','MPF','MPT','MPE','AGU','PGR','CGU',
+  'INSS','IBGE','Inmet','Anvisa','ANP','Aneel','Anatel','ANTT','ANAC','ANS','Ibama','ICMBio','Incra','Funai',
+  'Bacen','Cade','CVM','Caixa Econômica Federal','Caixa','Banco do Brasil','Petrobras','Correios','Sefaz','Sema','Sinfra','Sesp','Detran','Procon','Ipea','Fiocruz','Embrapa','Conab',
+  // nomes compostos, do mais especifico para o mais generico
+  'Ministério da Fazenda','Ministério da Saúde','Ministério da Agricultura','Ministério da Justiça',
+  'Ministério do Trabalho','Ministério da Educação','Ministério das Cidades','Ministério dos Transportes',
+  'Ministério do Meio Ambiente','Ministério da Defesa','Ministério das Relações Exteriores',
+  'Banco Central','Receita Federal','Polícia Rodoviária Federal','Polícia Federal','Polícia Judiciária Civil',
+  'Polícia Civil','Polícia Militar','Corpo de Bombeiros','Defesa Civil','Justiça Eleitoral',
+  'Supremo Tribunal Federal','Superior Tribunal de Justiça','Tribunal Superior Eleitoral',
+  'Tribunal de Contas da União','Tribunal de Contas do Estado','Tribunal de Contas','Tribunal de Justiça',
+  'Ministério Público Federal','Ministério Público do Trabalho','Ministério Público',
+  'Defensoria Pública','Procuradoria-Geral','Controladoria-Geral','Assembleia Legislativa',
+  'Câmara dos Deputados','Câmara Municipal','Governo do Estado','Governo Federal','Senado'
+];
+
+export function acharOrgao(texto){
+  const t = String(texto || '');
+
+  // 1. nome composto completo: "Secretaria Municipal de Saude", "Prefeitura de Cuiaba"
+  const compostos = [
+    /\b(Minist[ée]rio d[aeo]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(Secretaria(?:\s+(?:Municipal|Estadual|Nacional))?\s+d[aeo]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(Prefeitura(?:\s+Municipal)?\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(Tribunal\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(Governo\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(Assembleia\s+Legislativa(?:\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)?)/,
+    /\b(C[âa]mara(?:\s+Municipal)?\s+d[eoa]s?\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)/
+  ];
+  for (const re of compostos) {
+    const m = t.match(re);
+    if (m && m[1]) {
+      const n = m[1].replace(/\s+/g,' ').trim().replace(/[,.;:]$/,'');
+      if (n.length >= 8 && n.length <= 56) return n;
+    }
+  }
+
+  // 2. orgao conhecido, do nome mais longo para o mais curto
+  for (const o of [...ORGAOS_CONHECIDOS].sort((a,b) => b.length - a.length)) {
+    const re = new RegExp('\\b' + o.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b',
+                          o === o.toUpperCase() ? '' : 'i');
+    if (re.test(t)) return o;
+  }
+  return null;
+}

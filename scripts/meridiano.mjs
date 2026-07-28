@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
@@ -385,17 +385,23 @@ if (bloq.length) {
 //   apurado    lemos o documento oficial
 //   atribuido  veiculos independentes atribuem a mesma fonte oficial
 //   circulando nem documento, nem convergencia
-function nivelDe(item){
+function nivelDe(item, textoCompleto){
   const oficial = item.link && PODE_REESCREVER.test(item.link);
-  if (oficial) return { nivel:'apurado', selo:'Apurado pela redação' };
+  if (oficial) return { nivel:'confirmado', selo:'Confirmado oficialmente' };
 
+  // A informacao nasceu no orgao; o veiculo so passou adiante. Atribuir ao
+  // orgao e mais verdadeiro, mais util ao leitor, e nao da palco a concorrente.
+  const orgao = acharOrgao((item.titulo || '') + ' ' + (textoCompleto || item.resumo || ''));
+  if (orgao) return { nivel:'atribuido', selo:'Atribuído a ' + orgao, orgao };
+
+  // Sem orgao nomeado nao ha a quem atribuir. Ai o selo precisa dizer que
+  // outros veiculos publicaram — omitir os dois seria apuracao alheia sem
+  // credito nenhum, e essa e a linha que nao se cruza.
   const veiculos = [...new Set(item.pautadoPor || [])];
   if (veiculos.length >= 2) {
-    return { nivel:'atribuido',
-             selo:'Atribuído a fonte oficial por ' + veiculos.slice(0,3).join(', '),
-             veiculos };
+    return { nivel:'atribuido', selo:'Publicado por ' + veiculos.slice(0,3).join(', '), veiculos };
   }
-  return { nivel:'circulando', selo:'Sem confirmação oficial' };
+  return { nivel:'sem-confirmacao', selo:'Sem confirmação' };
 }
 
 const promovidos = [];
@@ -502,7 +508,7 @@ if (temChave()) {
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
         uf: GERAL ? null : UF,
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
-        ...nivelDe(i)
+        ...nivelDe(i, texto)
       });
       escritas++;
       console.log('     ok    '+m.titulo.slice(0,58));
