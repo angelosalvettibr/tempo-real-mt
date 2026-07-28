@@ -349,21 +349,23 @@
       "estado": "ativa",
       "aprovada": true,
       "nome": "TJRJ",
-      "dominio": "tjrj.jus.br",
+      "dominio": "www.tjrj.jus.br",
       "uf": "rj",
       "tipo": "assessoria",
       "licenca": "livre",
       "metodo": "pagina",
       "ok": true,
       "itens": 15,
-      "sistema": null,
+      "sistema": "Liferay",
       "bloqueada": false,
       "chave": "rj:tjrj",
       "ultimoVivo": "2026-07-28",
       "diasFora": 0,
       "mediaItens": 15,
       "confiabilidade": 100,
-      "nota": 89
+      "nota": 89,
+      "caminho": "/noticias",
+      "url": "https://www.tjrj.jus.br/noticias"
     },
     "mt:novo-portalnorte": {
       "primeiroVisto": "2026-07-28",
@@ -1979,8 +1981,1320 @@
       "mediaItens": 300,
       "confiabilidade": 100,
       "nota": 75
+    },
+    "rj:g1rj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 100
+        }
+      ],
+      "estado": "ativa",
+      "aprovada": true,
+      "chave": "rj:g1rj",
+      "nome": "g1 Rio",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "dominio": "g1.globo.com",
+      "ok": true,
+      "itens": 100,
+      "metodo": "rss",
+      "url": "https://g1.globo.com/rss/g1/rio-de-janeiro/",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 100,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:odia": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:odia",
+      "nome": "O Dia",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "dominio": "odia.ig.com.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "HTTP 200, 0 itens",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:extra": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "ativa",
+      "aprovada": true,
+      "chave": "rj:extra",
+      "nome": "Extra",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "dominio": "extra.globo.com",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://extra.globo.com/rss.xml",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:diariodorio": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 30
+        }
+      ],
+      "estado": "ativa",
+      "aprovada": true,
+      "chave": "rj:diariodorio",
+      "nome": "Diário do Rio",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "dominio": "diariodorio.com",
+      "ok": true,
+      "itens": 30,
+      "metodo": "rss",
+      "url": "https://diariodorio.com/feed/",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 30,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:bandrio": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:bandrio",
+      "nome": "Band Rio",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "dominio": "www.band.uol.com.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "HTTP 403, 0 itens",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:gov-rj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "bloqueada",
+      "aprovada": true,
+      "chave": "rj:gov-rj",
+      "nome": "Governo do RJ",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "pauta",
+      "dominio": "rj.gov.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "a confirmar",
+      "diasFora": 2,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0,
+      "bloqueada": true,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Arj.gov.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    },
+    "rj:alerj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "bloqueada",
+      "aprovada": true,
+      "chave": "rj:alerj",
+      "nome": "Alerj",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "pauta",
+      "dominio": "alerj.rj.gov.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "a confirmar",
+      "diasFora": 2,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0,
+      "bloqueada": true,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Aalerj.rj.gov.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    },
+    "rj:tce-rj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "bloqueada",
+      "aprovada": true,
+      "chave": "rj:tce-rj",
+      "nome": "TCE-RJ",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "pauta",
+      "dominio": "tcerj.tc.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "a confirmar",
+      "diasFora": 2,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0,
+      "bloqueada": true,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Atcerj.tc.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    },
+    "rj:mprj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:mprj",
+      "nome": "MPRJ",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "livre",
+      "dominio": "www.mprj.mp.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "nem pagina nem sitemap",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 16
+    },
+    "rj:prefrio": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 4
+        }
+      ],
+      "estado": "ativa",
+      "aprovada": true,
+      "chave": "rj:prefrio",
+      "nome": "Prefeitura do Rio",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "livre",
+      "dominio": "prefeitura.rio",
+      "ok": true,
+      "itens": 4,
+      "metodo": "pagina",
+      "caminho": "/",
+      "sistema": "WordPress",
+      "url": "https://prefeitura.rio/",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 4,
+      "confiabilidade": 100,
+      "nota": 72
+    },
+    "rj:camararj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:camararj",
+      "nome": "Câmara do Rio",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "livre",
+      "dominio": "www.camara.rj.gov.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "nem pagina nem sitemap",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 16
+    },
+    "rj:tre-rj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 14
+        }
+      ],
+      "estado": "ativa",
+      "aprovada": true,
+      "chave": "rj:tre-rj",
+      "nome": "TRE-RJ",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "livre",
+      "dominio": "www.tre-rj.jus.br",
+      "ok": true,
+      "itens": 14,
+      "metodo": "pagina",
+      "caminho": "/comunicacao/noticias",
+      "sistema": "outro",
+      "url": "https://www.tre-rj.jus.br/comunicacao/noticias",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 14,
+      "confiabilidade": 100,
+      "nota": 89
+    },
+    "rj:niteroi": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:niteroi",
+      "nome": "Prefeitura de Niterói",
+      "uf": "rj",
+      "tipo": "assessoria",
+      "licenca": "livre",
+      "dominio": "www.niteroi.rj.gov.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "nem pagina nem sitemap",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 16
+    },
+    "rj:firjan": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:firjan",
+      "nome": "Firjan",
+      "uf": "rj",
+      "tipo": "setorial",
+      "licenca": "livre",
+      "dominio": "www.firjan.com.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "nem pagina nem sitemap",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 16
+    },
+    "rj:fecomercio-rj": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "instavel",
+      "aprovada": true,
+      "chave": "rj:fecomercio-rj",
+      "nome": "Fecomércio RJ",
+      "uf": "rj",
+      "tipo": "setorial",
+      "licenca": "livre",
+      "dominio": "www.fecomercio-rj.org.br",
+      "ok": false,
+      "itens": 0,
+      "motivo": "nem pagina nem sitemap",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 16
+    },
+    "rj:novo:jcconcursos-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 30
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "JC Concursos",
+      "dominio": "jcconcursos.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 30,
+      "metodo": "rss",
+      "url": "https://jcconcursos.com.br/feed/",
+      "sistema": "outro",
+      "apareceuVezes": 5,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:jcconcursos-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 30,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:cbn-globo-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "CBN",
+      "dominio": "cbn.globo.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Acbn.globo.com&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 4,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:cbn-globo-com",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:ultimosegundo-ig-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 51
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "iG Último Segundo",
+      "dominio": "ultimosegundo.ig.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 51,
+      "metodo": "rss",
+      "url": "https://ultimosegundo.ig.com.br/rss",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:ultimosegundo-ig-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 51,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:temporealrj-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Tempo Real RJ",
+      "dominio": "temporealrj.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://temporealrj.com/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:temporealrj-com",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:gazetadealagoas-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 50
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Gazeta de Alagoas",
+      "dominio": "gazetadealagoas.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 50,
+      "metodo": "rss",
+      "url": "https://gazetadealagoas.com.br/rss",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:gazetadealagoas-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 50,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:correiodamanha-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "correiodamanha.com.br",
+      "dominio": "correiodamanha.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Acorreiodamanha.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 4,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:correiodamanha-com-br",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:tribunadepetropolis-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Tribuna de Petrópolis",
+      "dominio": "tribunadepetropolis.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://tribunadepetropolis.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:tribunadepetropolis-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:osaogoncalo-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 50
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "O São Gonçalo",
+      "dominio": "osaogoncalo.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 50,
+      "metodo": "rss",
+      "url": "https://osaogoncalo.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:osaogoncalo-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 50,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:jornalogoncalense-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "O Gonçalense",
+      "dominio": "jornalogoncalense.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://jornalogoncalense.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:jornalogoncalense-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:radio93-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "radio93.com.br",
+      "dominio": "radio93.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://radio93.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:radio93-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:diariodotransporte-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 12
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Diário do Transporte",
+      "dominio": "diariodotransporte.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 12,
+      "metodo": "rss",
+      "url": "https://diariodotransporte.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:diariodotransporte-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 12,
+      "confiabilidade": 100,
+      "nota": 74
+    },
+    "rj:novo:tupi-fm": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Super Rádio Tupi",
+      "dominio": "tupi.fm",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://tupi.fm/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:tupi-fm",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:mauaagora-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 20
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "mauaagora.com.br",
+      "dominio": "mauaagora.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 20,
+      "metodo": "rss",
+      "url": "https://mauaagora.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:mauaagora-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 20,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:brasildefato-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 99
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Brasil de Fato",
+      "dominio": "brasildefato.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 99,
+      "metodo": "rss",
+      "url": "https://brasildefato.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:brasildefato-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 99,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:veja-abril-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 20
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "VEJA",
+      "dominio": "veja.abril.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 20,
+      "metodo": "rss",
+      "url": "https://veja.abril.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:veja-abril-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 20,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:cartacapital-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "CartaCapital",
+      "dominio": "cartacapital.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Acartacapital.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 3,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:cartacapital-com-br",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:kinvo-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Kinvo",
+      "dominio": "kinvo.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Akinvo.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:kinvo-com-br",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:moneytimes-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Money Times",
+      "dominio": "moneytimes.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://moneytimes.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:moneytimes-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:sbtnews-sbt-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 100
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "SBT News",
+      "dominio": "sbtnews.sbt.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 100,
+      "metodo": "rss",
+      "url": "https://sbtnews.sbt.com.br/rss.xml",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:sbtnews-sbt-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 100,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:band-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "band.com.br",
+      "dominio": "band.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Aband.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 4,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:band-com-br",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:oglobo-globo-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "O GLOBO",
+      "dominio": "oglobo.globo.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Aoglobo.globo.com&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 15,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:oglobo-globo-com",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:valor-globo-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Valor Econômico",
+      "dominio": "valor.globo.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Avalor.globo.com&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:valor-globo-com",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:noticias-r7-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": false,
+          "itens": 0
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "R7",
+      "dominio": "noticias.r7.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": false,
+      "itens": 0,
+      "metodo": "google",
+      "url": "https://news.google.com/rss/search?q=site%3Anoticias.r7.com&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "apareceuVezes": 4,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:noticias-r7-com",
+      "diasFora": 1,
+      "mediaItens": 0,
+      "confiabilidade": 0,
+      "nota": 0
+    },
+    "rj:novo:francesnews-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 20
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Francês News",
+      "dominio": "francesnews.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 20,
+      "metodo": "rss",
+      "url": "https://francesnews.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:francesnews-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 20,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:tmc-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "tmc.com.br",
+      "dominio": "tmc.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://tmc.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 3,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:tmc-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:tvprefeito-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "TV Prefeito",
+      "dominio": "tvprefeito.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://tvprefeito.com/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:tvprefeito-com",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:blogdobg-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 30
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Blog do BG",
+      "dominio": "blogdobg.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 30,
+      "metodo": "rss",
+      "url": "https://blogdobg.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:blogdobg-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 30,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:revistaoeste-com": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Revista Oeste",
+      "dominio": "revistaoeste.com",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://revistaoeste.com/feed/",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:revistaoeste-com",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:n1n-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 10
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Portal N1N",
+      "dominio": "n1n.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 10,
+      "metodo": "rss",
+      "url": "https://n1n.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:n1n-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 10,
+      "confiabilidade": 100,
+      "nota": 70
+    },
+    "rj:novo:reportermaceio-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 100
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Repórter Maceió",
+      "dominio": "reportermaceio.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 100,
+      "metodo": "rss",
+      "url": "https://reportermaceio.com.br/feed",
+      "sistema": "WordPress",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:reportermaceio-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 100,
+      "confiabilidade": 100,
+      "nota": 75
+    },
+    "rj:novo:tribunadosertao-com-br": {
+      "primeiroVisto": "2026-07-28",
+      "historico": [
+        {
+          "dia": "2026-07-28",
+          "ok": true,
+          "itens": 12
+        }
+      ],
+      "estado": "quarentena",
+      "aprovada": false,
+      "nome": "Tribuna do Sertão",
+      "dominio": "tribunadosertao.com.br",
+      "uf": "rj",
+      "tipo": "veiculo",
+      "licenca": "pauta",
+      "ok": true,
+      "itens": 12,
+      "metodo": "rss",
+      "url": "https://tribunadosertao.com.br/feed",
+      "sistema": "outro",
+      "apareceuVezes": 2,
+      "descobertoEm": "2026-07-28",
+      "chave": "rj:novo:tribunadosertao-com-br",
+      "ultimoVivo": "2026-07-28",
+      "diasFora": 0,
+      "mediaItens": 12,
+      "confiabilidade": 100,
+      "nota": 74
     }
   },
-  "atualizado": "2026-07-28T18:26:35.020Z",
-  "total": 70
+  "atualizado": "2026-07-28T18:30:07.447Z",
+  "total": 116
 }
