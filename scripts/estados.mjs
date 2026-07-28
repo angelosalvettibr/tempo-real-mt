@@ -131,13 +131,13 @@ export const NACIONAL = [
   { id:'ab-justica',  nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml' },
   { id:'ab-geral',    nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml' },
   { id:'ab-inter',    nome:'Agência Brasil', editoria:'internacional', url:'https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml' },
-  { id:'camara',      nome:'Agência Câmara', editoria:'brasil',        url:'https://www.camara.leg.br/noticias/rss/ultimas.xml' },
-  { id:'senado',      nome:'Agência Senado', editoria:'brasil',        url:'https://www12.senado.leg.br/noticias/rss/ultimas' },
+  { id:'camara',      nome:'Agência Câmara Notícias', editoria:'brasil', url:'https://www.camara.leg.br/noticias/rss/ultimas.xml', base:'https://www.camara.leg.br/noticias' },
+  { id:'senado',      nome:'Agência Senado', editoria:'brasil',        url:'https://www12.senado.leg.br/noticias/rss/ultimas', base:'https://www12.senado.leg.br/noticias' },
   { id:'onu',         nome:'ONU News',       editoria:'internacional', url:'https://news.un.org/feed/subscribe/pt/news/all/rss.xml' },
   { id:'conversation',nome:'The Conversation',editoria:'internacional',url:'https://theconversation.com/br/articles.atom' },
   { id:'vaticano',    nome:'Vatican News',   editoria:'internacional', url:'https://www.vaticannews.va/pt.rss.xml' },
-  { id:'embrapa',     nome:'Embrapa',        editoria:'brasil',        url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss' },
-  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss' }
+  { id:'embrapa',     nome:'Embrapa',        editoria:'brasil',        url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss', base:'https://www.embrapa.br' },
+  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' }
 ];
 
 // Pauta nacional e internacional, igual para todos os estados.

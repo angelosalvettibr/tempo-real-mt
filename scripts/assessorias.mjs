@@ -91,3 +91,52 @@ export function lerListagem(html, base){
     return true;
   }).slice(0, 15);
 }
+
+/* ---------------------------------------------------------- sitemap ------ */
+// Muitos sites de órgão público montam a lista de notícias por JavaScript — o
+// robô baixa a página e ela vem vazia. Mas quase todos publicam sitemap.xml,
+// que é o mapa que eles entregam ao Google. XML puro, com a URL de cada
+// notícia e a data. É o caminho mais confiável que existe para esses sites.
+
+export const CAMINHOS_SITEMAP = [
+  '/sitemap.xml', '/sitemap_index.xml', '/sitemap-news.xml',
+  '/news-sitemap.xml', '/sitemap/sitemap-index.xml', '/wp-sitemap.xml'
+];
+
+// Lê <loc> e <lastmod> de um sitemap ou de um índice de sitemaps.
+export function lerSitemap(xml){
+  const blocos = [...xml.matchAll(/<(?:url|sitemap)>([\s\S]*?)<\/(?:url|sitemap)>/gi)].map(m => m[1]);
+  return blocos.map(b => ({
+    url: (b.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1] || '').trim(),
+    data: (b.match(/<lastmod>([\s\S]*?)<\/lastmod>/i)?.[1]
+        || b.match(/<news:publication_date>([\s\S]*?)<\/news:publication_date>/i)?.[1] || '').trim(),
+    titulo: (b.match(/<news:title>([\s\S]*?)<\/news:title>/i)?.[1] || '')
+      .replace(/<!\[CDATA\[|\]\]>/g,'').trim()
+  })).filter(i => i.url);
+}
+
+export const ehIndice = xml => /<sitemapindex/i.test(xml);
+
+// Um sitemap tem milhares de URLs. Só interessam as de notícia e recentes.
+export function filtrarNoticias(entradas, horas = 48){
+  const corte = Date.now() - horas * 3600 * 1000;
+  const ehNoticia = u => /\/(noticia|noticias|not|imprensa|comunicacao|sala-de-imprensa|press|release|materia|materias)s?\//i.test(u)
+                      || /\/20\d{2}[\/-]\d{2}/.test(u);
+  return entradas
+    .filter(e => ehNoticia(e.url))
+    .filter(e => { const t = Date.parse(e.data); return Number.isNaN(t) ? false : t >= corte; })
+    .sort((a,b) => Date.parse(b.data) - Date.parse(a.data))
+    .slice(0, 20);
+}
+
+// Quando o sitemap não traz o título, pegamos do <title> ou do og:title da página.
+export function tituloDaPagina(html){
+  const og = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i)?.[1];
+  const tt = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+  const bruto = (og || tt || '')
+    .replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"')
+    .replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')
+    .replace(/\s+/g,' ').trim();
+  // tira o sufixo do veículo: "Manchete - TCE-MT" ou "Manchete | Governo de MT"
+  return bruto.split(/\s+[|–—]\s+|\s+-\s+(?=[A-ZÁÉÍÓÚ][^-]{2,28}$)/)[0].trim();
+}

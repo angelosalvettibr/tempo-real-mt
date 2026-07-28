@@ -10,7 +10,8 @@
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
-import { ORGAOS, ALTERNATIVOS, lerListagem } from './assessorias.mjs';
+import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
+import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA } from './estados.mjs';
 
 const JANELA_HORAS = 24;
 const QUANTAS_REESCREVER = 10;
@@ -201,28 +202,68 @@ const F = await colher(FONTE_LIVRE, 'livre');
 F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
 
-console.log('\n  2b. ASSESSORIAS DE MT — release publico, sem RSS');
-for (const o of ORGAOS) {
-  let achou = false;
-  for (const caminho of [o.url.replace(o.base,''), ...ALTERNATIVOS]) {
+console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');
+const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
+const E = ESTADOS[UF] || ESTADOS.mt;
+console.log(`     estado: ${E.nome}`);
+
+async function porSitemap(base){
+  for (const c of CAMINHOS_SITEMAP) {
     try {
-      const html = await buscar(o.base + caminho, 15000, 1);
-      const manchetes = lerListagem(html, o.base);
-      if (manchetes.length < 3) continue;
-      for (const m of manchetes) {
-        F.itens.push({
-          titulo: m.titulo, link: m.link, resumo: '',
-          iso: new Date().toISOString(),
-          veiculo: o.nome, editoria: 'regional', fonteId: o.id
-        });
+      const xml = await buscar(base + c, 15000, 1);
+      if (!/<(urlset|sitemapindex)/i.test(xml)) continue;
+
+      let entradas = lerSitemap(xml);
+      // se for indice de sitemaps, entra no que tiver cara de noticia
+      if (ehIndice(xml)) {
+        const filho = entradas.find(e => /(noticia|news|post|materia)/i.test(e.url)) || entradas[0];
+        if (!filho) continue;
+        const xml2 = await buscar(filho.url, 15000, 1);
+        entradas = lerSitemap(xml2);
       }
-      console.log(`  ok    orgao:${o.id.padEnd(12)} ${String(manchetes.length).padStart(3)} · ${caminho}`);
-      achou = true;
-      break;
-    } catch { /* tenta o proximo caminho */ }
+      const noticias = filtrarNoticias(entradas, 48);
+      if (noticias.length >= 2) return noticias;
+    } catch { /* proximo caminho */ }
   }
-  if (!achou) console.log(`  aviso orgao:${o.id.padEnd(12)} nenhuma pagina de noticias encontrada`);
-  await dormir(400);
+  return [];
+}
+
+for (const o of [...E.assessorias, ...E.setoriais.filter(x=>x.base)]) {
+  let entrou = 0;
+
+  // 1. pagina de listagem
+  for (const caminho of CAMINHOS_ASSESSORIA) {
+    try {
+      const html = await buscar(o.base + caminho, 12000, 1);
+      const m = lerListagem(html, o.base);
+      if (m.length < 3) continue;
+      for (const x of m) F.itens.push({ titulo:x.titulo, link:x.link, resumo:'',
+        iso:new Date().toISOString(), veiculo:o.nome, editoria:'regional', fonteId:o.id });
+      console.log(`  ok    ${o.id.padEnd(12)} ${String(m.length).padStart(2)} · pagina ${caminho}`);
+      entrou = m.length; break;
+    } catch {}
+  }
+
+  // 2. sitemap.xml — funciona onde a pagina e montada por JavaScript
+  if (!entrou) {
+    const noticias = await porSitemap(o.base);
+    for (const n of noticias.slice(0, 8)) {
+      let titulo = n.titulo;
+      if (!titulo) {
+        try { titulo = tituloDaPagina(await buscar(n.url, 12000, 1)); } catch {}
+      }
+      if (!titulo || titulo.length < 25) continue;
+      F.itens.push({ titulo, link:n.url, resumo:'',
+        iso:new Date(Date.parse(n.data) || Date.now()).toISOString(),
+        veiculo:o.nome, editoria:'regional', fonteId:o.id });
+      entrou++;
+      await dormir(300);
+    }
+    if (entrou) console.log(`  ok    ${o.id.padEnd(12)} ${String(entrou).padStart(2)} · sitemap`);
+  }
+
+  if (!entrou) console.log(`  aviso ${o.id.padEnd(12)} sem pagina nem sitemap`);
+  await dormir(350);
 }
 console.log(`     ${F.itens.length} itens de fonte livre no total`);
 
