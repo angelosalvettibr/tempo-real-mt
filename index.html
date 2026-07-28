@@ -340,6 +340,10 @@ async function carregar(){
         return null;
       }
     };
+    const ARQUIVOS = ['br','mundo', ...Object.keys(ESTADOS)];
+    const partes = (await Promise.all(ARQUIVOS.map(puxa))).filter(Boolean);
+    window.__diag = diagnostico;
+
     if (!partes.length) {
       const local = location.protocol === 'file:';
       $('#conteudo').innerHTML = `<div class="erro-box">
