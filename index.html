@@ -52,6 +52,20 @@ nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;ri
 .sel-estado select:hover{border-color:var(--tinta)}
 
 /* ---------------- método ---------------- */
+.area-leitor{margin-left:auto;display:flex;align-items:center;gap:9px}
+.area-leitor .quem{color:var(--tinta2)}
+.bt-mini{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--linha2);color:var(--tinta2);padding:4px 9px;cursor:pointer}
+.bt-mini:hover{border-color:var(--tinta);color:var(--tinta)}
+.caixa-apelido{display:none;border-bottom:1px solid var(--linha);background:var(--areia);padding:22px 0}
+.caixa-apelido.aberta{display:block}
+.caixa-apelido b{font-family:var(--tit);font-size:20px;display:block;margin-bottom:7px}
+.caixa-apelido p{font-size:15px;line-height:1.6;color:var(--tinta2);max-width:66ch;margin-bottom:14px}
+.linha-campo{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.linha-campo input{font-family:var(--mono);font-size:14px;border:1px solid var(--linha2);padding:9px 12px;min-width:210px;background:#fff}
+.bt-salvar{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--tinta);color:#fff;border:0;padding:10px 16px;cursor:pointer}
+.aviso-ap{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:10px}
+.sug{font-family:var(--mono);font-size:11px;background:#fff;border:1px solid var(--linha2);padding:3px 8px;margin-left:4px;cursor:pointer;color:var(--tinta)}
+.sug:hover{border-color:var(--tinta)}
 .metodo{border-bottom:1px solid var(--linha);padding:12px 0;background:var(--areia)}
 .metodo .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--tinta2)}
 .metodo b{background:var(--tinta);color:var(--papel);padding:2px 7px;font-weight:500}
@@ -202,6 +216,19 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
   </div>
 </div>
 
+<div class="caixa-apelido" id="caixa-apelido">
+  <div class="wrap">
+    <b>Escolha um apelido</b>
+    <p>Serve só para o Meridiano lembrar o que você já leu e abrir na sua praça. Não pedimos e-mail, nome nem telefone — você sabe quem é, nós não. Fica guardado neste navegador.</p>
+    <div class="linha-campo">
+      <input id="campo-apelido" placeholder="njeletto" maxlength="24" autocomplete="off" spellcheck="false">
+      <button class="bt-salvar" id="btSalvar">usar este</button>
+      <button class="bt-mini" id="btFechar">agora não</button>
+    </div>
+    <div class="aviso-ap" id="aviso-apelido"></div>
+  </div>
+</div>
+
 <main class="wrap" id="conteudo">
   <p class="aviso">Carregando a edição…</p>
 </main>
@@ -306,7 +333,7 @@ function pintar(){
   const resto = lista.slice(5);
 
   let h = `<div class="abertura">
-    <a class="abre" href="${esc(d.link)}">
+    <a class="abre" href="${esc(d.link)}" data-id="${esc(d.id)}">
       <span class="chapeu">${esc(chapeuDe(d))}</span>
       <h2>${esc(d.titulo)}</h2>
       <p class="linhafina">${esc(d.resumo)}</p>
@@ -315,7 +342,7 @@ function pintar(){
     </a>
     <div class="olhada">
       <span class="rot">O dia em uma olhada</span>
-      ${olhada.map(i => `<a href="${esc(i.link)}">
+      ${olhada.map(i => `<a href="${esc(i.link)}" data-id="${esc(i.id)}">
         <h4>${esc(i.titulo)}</h4>
         <div class="meta">${esc(chapeuDe(i))} · ${esc(i.hora)}</div>
       </a>`).join('')}
@@ -324,7 +351,7 @@ function pintar(){
 
   if (resto.length) {
     h += `<div class="secao"><h3>${filtro === 'capa' ? 'Edição' : esc(NOMES[filtro] || chapeuDe(resto[0]))}</h3><span>${resto.length} ${resto.length === 1 ? 'matéria' : 'matérias'}</span></div>`;
-    h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
+    h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}" data-id="${esc(i.id)}">
       <span class="chapeu">${esc(chapeuDe(i))}</span>
       ${cifra(i)}
       <h3>${esc(i.titulo)}</h3>
@@ -492,9 +519,116 @@ $('#btMetodo').addEventListener('click', e => {
   e.target.textContent = on ? 'Ocultar o método' : 'Ver o método em cada matéria';
 });
 
+/* ===================== LEITOR ANÔNIMO =====================================
+   O leitor escolhe um apelido. Ele fica guardado no navegador dele, e o
+   histórico de leitura se liga só a esse apelido. Sem e-mail, sem nome, sem
+   telefone. Ele sabe quem é; nós não.
+   Enquanto o banco não estiver ligado, tudo funciona local e nada é enviado.
+=========================================================================== */
+
+/* Grava pelo /api/leitor, que roda no Vercel. A chave de escrita fica no
+   servidor — se ficasse aqui no código da página, qualquer um poderia apagar
+   tudo. Se o armazenamento ainda não estiver ligado, a função responde ok e o
+   navegador segue guardando localmente. */
+
+const leitor = {
+  get apelido(){ try { return localStorage.getItem('meridiano_apelido') || ''; } catch { return ''; } },
+  set apelido(v){ try { localStorage.setItem('meridiano_apelido', v); } catch {} },
+  get lidas(){ try { return JSON.parse(localStorage.getItem('meridiano_lidas') || '{}'); } catch { return {}; } },
+  set lidas(v){ try { localStorage.setItem('meridiano_lidas', JSON.stringify(v)); } catch {} }
+};
+
+async function api(acao, dados = {}){
+  try {
+    const r = await fetch('/api/leitor', {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify({ acao, ...dados })
+    });
+    return r.ok ? await r.json() : null;
+  } catch { return null; }
+}
+
+async function checarApelido(nome){
+  const limpo = String(nome).toLowerCase().trim()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9_-]/g,'');
+  if (limpo.length < 3)  return { ok:false, msg:'Use pelo menos 3 caracteres.' };
+  if (limpo.length > 24) return { ok:false, msg:'Use no máximo 24 caracteres.' };
+
+  const r = await api('apelido', { apelido: limpo });
+  if (!r) return { ok:true, apelido:limpo };
+  return r.ok ? { ok:true, apelido:r.apelido } : { ok:false, msg:r.msg, sugestoes:r.sugestoes || [] };
+}
+
+function registrarLeitura(i){
+  const l = leitor.lidas;
+  l[i.id] = (l[i.id] || 0) + 1;
+  leitor.lidas = l;
+  api('leitura', {
+    apelido: leitor.apelido || '', id: i.id, titulo: i.titulo,
+    editoria: i.editoria, uf: i.uf || '', nivel: i.nivel || ''
+  });
+}
+
+function abrirCaixaApelido(){
+  const cx = document.getElementById('caixa-apelido');
+  if (cx) cx.classList.add('aberta');
+}
+
+function montarApelido(){
+  const alvo = document.getElementById('area-leitor');
+  if (!alvo) return;
+  const a = leitor.apelido;
+  alvo.innerHTML = a
+    ? `<span class="quem">olá, <b>${esc(a)}</b></span>
+       <button class="bt-mini" id="btTrocar">trocar</button>`
+    : `<button class="bt-mini" id="btEntrar">escolher um apelido</button>`;
+
+  const btE = document.getElementById('btEntrar');
+  const btT = document.getElementById('btTrocar');
+  if (btE) btE.addEventListener('click', abrirCaixaApelido);
+  if (btT) btT.addEventListener('click', abrirCaixaApelido);
+}
+
+async function salvarApelido(){
+  const campo = document.getElementById('campo-apelido');
+  const aviso = document.getElementById('aviso-apelido');
+  const r = await checarApelido(campo.value);
+
+  if (r.ok) {
+    leitor.apelido = r.apelido;
+    document.getElementById('caixa-apelido').classList.remove('aberta');
+    montarApelido();
+    return;
+  }
+  aviso.innerHTML = esc(r.msg) + (r.sugestoes?.length
+    ? ' Livres: ' + r.sugestoes.map(x => `<button class="sug" data-s="${esc(x)}">${esc(x)}</button>`).join(' ')
+    : '');
+  aviso.querySelectorAll('.sug').forEach(b => b.addEventListener('click', () => {
+    campo.value = b.dataset.s;
+    aviso.textContent = '';
+  }));
+}
+
 $('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
 setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30000);
 setInterval(carregar, 5*60*1000);
+document.getElementById('btSalvar').addEventListener('click', salvarApelido);
+document.getElementById('btFechar').addEventListener('click', () =>
+  document.getElementById('caixa-apelido').classList.remove('aberta'));
+document.getElementById('campo-apelido').addEventListener('keydown', e => {
+  if (e.key === 'Enter') salvarApelido();
+});
+montarApelido();
+
+// conta a leitura quando o leitor abre a materia
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[data-id]');
+  if (!a) return;
+  const i = (ED.itens || []).find(x => x.id === a.dataset.id);
+  if (i) registrarLeitura(i);
+});
+
 carregar();
 </script>
 </body>
