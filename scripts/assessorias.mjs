@@ -47,7 +47,11 @@ export function lerListagem(html, base){
   // 2. titulo de secao e curto e sem verbo. Manchete tem verbo.
   const VERBOS = /\b(e|sao|foi|foram|tem|tera|teve|vai|vao|deve|devem|pode|podem|faz|fazem|fez|diz|dizem|disse|abre|abrem|abriu|fecha|fechou|aprova|aprovou|aprovam|nega|negou|lanca|lancou|anuncia|anunciou|apresenta|apresentou|recebe|recebeu|entrega|entregou|realiza|realizou|inicia|iniciou|comeca|comecou|termina|terminou|suspende|suspendeu|determina|determinou|decide|decidiu|julga|julgou|condena|condenou|prende|prendeu|autoriza|autorizou|libera|liberou|amplia|ampliou|reduz|reduziu|cresce|cresceu|cai|caiu|sobe|subiu|passa|passou|chega|chegou|segue|seguem|participa|participou|assina|assinou|define|definiu|convoca|convocou|publica|publicou|investiga|apura|elege|elegeu|empossa|empossou|avalia|defende|propoe|propos|volta|voltou|marca|marcou|registra|registrou|atinge|atingiu|supera|superou|garante|garantiu|reforca|amplia|destaca|alerta|orienta|explica|confirma|confirmou)\b/i;
 
-  const MENU = /^(leia|veja|mais|clique|saiba|acesse|home|in[ií]cio|contato|expediente|publicidade|voltar|pr[óo]xim|anterior|todas|todos|ouvidoria|transpar[êe]ncia|portal|acesso|fale|mapa|login|entrar|pesquis|buscar|menu|compartilh|carta de servi|secretaria|superintend|coordenad|assessoria|gabinete|diretoria|departamento|ver a program|confira a program|servi[çc]os|institucional|legisla[çc]|licita[çc][õo]es|concursos?|not[íi]cias|galeria|v[íi]deos?|fotos?|agenda|webmail|intranet|perguntas)/i;
+  const MENU = /^(leia|veja|mais|clique|saiba|acesse|home|in[ií]cio|contato|expediente|publicidade|voltar|pr[óo]xim|anterior|todas|todos|ouvidoria|transpar[êe]ncia|portal|acesso|fale|mapa|login|entrar|pesquis|buscar|menu|compartilh|carta de servi|secretaria|superintend|coordenad|assessoria|gabinete|diretoria|departamento|ver a program|confira a program|servi[çc]os|institucional|legisla[çc]|licita[çc][õo]es|concursos?|not[íi]cias|galeria|v[íi]deos?|fotos?|agenda|webmail|intranet|perguntas|urna eletr|requerimentos|manuais|cadastros|certid|formul[áa]rios|downloads?|publica[çc][õo]es|documentos|relat[óo]rios|editais|lei municipal|lei estadual|decreto n|portaria n|resolu[çc][ãa]o n)/i;
+
+// Frase de menu costuma terminar com termo generico: "Outras informacoes e
+// servicos", "e mais", "e outros". Manchete nao termina assim.
+const CAUDA_MENU = /(outras informa[çc][õo]es|e servi[çc]os|e mais|e outros|clique aqui|saiba mais)\s*$/i;
 
   const achados = [...html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]{20,240}?)<\/a>/gi)]
     .map(m => {
@@ -69,7 +73,7 @@ export function lerListagem(html, base){
       // eliminatorios: nao adianta pontuar quem e claramente menu
       if (t.length < 30) return false;
       if (t.split(/\s+/).length < 5) return false;
-      if (MENU.test(t)) return false;
+      if (MENU.test(t) || CAUDA_MENU.test(t)) return false;
       if (/^[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s]{20,}$/.test(t)) return false;
 
       // pontuacao: cada sinal de que e manchete vale pontos.

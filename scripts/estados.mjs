@@ -32,15 +32,10 @@ export const ESTADOS = {
     ],
 
     assessorias: [
-      { id:'gov-mt',     nome:'Governo de MT',       base:'https://www.mt.gov.br' },
+      { id:'gov-mt',     nome:'Governo de MT',       base:'https://portal.mt.gov.br' },
       { id:'almt',       nome:'Assembleia de MT',    base:'https://www.al.mt.gov.br' },
-      { id:'tce-mt',     nome:'TCE-MT',              base:'https://www.tce.mt.gov.br' },
-      { id:'tjmt',       nome:'TJMT',                base:'https://www.tjmt.jus.br' },
-      { id:'mpmt',       nome:'MPMT',                base:'https://www.mpmt.mp.br' },
-      { id:'sinfra-mt',  nome:'Sinfra-MT',           base:'https://www.sinfra.mt.gov.br' },
-      { id:'sesp-mt',    nome:'Sesp-MT',             base:'https://www.seguranca.mt.gov.br' },
       { id:'sema-mt',    nome:'Sema-MT',             base:'https://www.sema.mt.gov.br' },
-      { id:'sefaz-mt',   nome:'Sefaz-MT',            base:'https://www.sefaz.mt.gov.br' },
+      { id:'sefaz-mt',   nome:'Sefaz-MT',            base:'https://www5.sefaz.mt.gov.br' },
       { id:'cuiaba',     nome:'Prefeitura de Cuiabá',base:'https://www.cuiaba.mt.gov.br' },
       { id:'vg',         nome:'Prefeitura de VG',    base:'https://www.varzeagrande.mt.gov.br' },
       { id:'tre-mt',     nome:'TRE-MT',              base:'https://www.tre-mt.jus.br' }
@@ -48,9 +43,6 @@ export const ESTADOS = {
 
     // a economia da praça: aqui sai conteúdo livre e exclusivo
     setoriais: [
-      { id:'imea',     nome:'Imea',        url:'https://www.imea.com.br/imea-site/rss',  base:'https://www.imea.com.br' },
-      { id:'aprosoja', nome:'Aprosoja-MT', url:'https://aprosoja.com.br/feed/',           base:'https://aprosoja.com.br' },
-      { id:'famato',   nome:'Famato',      url:'https://sistemafamato.org.br/feed/',      base:'https://sistemafamato.org.br' },
       { id:'acrimat',  nome:'Acrimat',     url:'https://acrimat.org.br/feed/',            base:'https://acrimat.org.br' },
       { id:'fiemt',    nome:'Fiemt',       url:'https://www.fiemt.com.br/feed/',          base:'https://www.fiemt.com.br' }
     ]
@@ -161,5 +153,33 @@ export const PAUTA_GERAL = [
   { id:'jota',       nome:'JOTA',        editoria:'brasil',        url:'https://www.jota.info/feed' },
   { id:'globorural', nome:'Globo Rural', editoria:'brasil',        url:'https://g1.globo.com/rss/g1/economia/agronegocios/' }
 ];
+
+// Estes bloqueiam robô por firewall ou montam a página em JavaScript. O texto
+// deles não conseguimos ler — mas o Google indexa. Entram como pauta de peso:
+// se o TCE publicou, a história é oficial, mesmo que a gente busque o texto
+// em outra fonte. Confirmado pelo espião em 28/07/2026.
+export const BLOQUEADOS = {
+  mt: [
+    { id:'tce-mt',   nome:'TCE-MT',      dominio:'tce.mt.gov.br',        motivo:'recusa conexao' },
+    { id:'tjmt',     nome:'TJMT',        dominio:'tjmt.jus.br',          motivo:'site em Angular' },
+    { id:'mpmt',     nome:'MPMT',        dominio:'mpmt.mp.br',           motivo:'recusa conexao' },
+    { id:'sesp-mt',  nome:'Sesp-MT',     dominio:'seguranca.mt.gov.br',  motivo:'recusa conexao' },
+    { id:'sinfra',   nome:'Sinfra-MT',   dominio:'sinfra.mt.gov.br',     motivo:'firewall' },
+    { id:'imea',     nome:'Imea',        dominio:'imea.com.br',          motivo:'site em JavaScript' },
+    { id:'aprosoja', nome:'Aprosoja-MT', dominio:'aprosoja.com.br',      motivo:'Cloudflare 403' },
+    { id:'famato',   nome:'Famato',      dominio:'sistemafamato.org.br', motivo:'recusa conexao' }
+  ],
+  rs: [
+    { id:'gov-rs', nome:'Governo do RS', dominio:'estado.rs.gov.br',  motivo:'a confirmar' },
+    { id:'tce-rs', nome:'TCE-RS',        dominio:'tce.rs.gov.br',     motivo:'a confirmar' },
+    { id:'tjrs',   nome:'TJRS',          dominio:'tjrs.jus.br',       motivo:'a confirmar' },
+    { id:'fiergs', nome:'Fiergs',        dominio:'fiergs.org.br',     motivo:'a confirmar' }
+  ],
+  rj: [
+    { id:'gov-rj', nome:'Governo do RJ', dominio:'rj.gov.br',         motivo:'a confirmar' },
+    { id:'alerj',  nome:'Alerj',         dominio:'alerj.rj.gov.br',   motivo:'a confirmar' },
+    { id:'tce-rj', nome:'TCE-RJ',        dominio:'tcerj.tc.br',       motivo:'a confirmar' }
+  ]
+};
 
 export const CAMINHOS_ASSESSORIA = ['/noticias', '/noticia', '/imprensa', '/comunicacao/noticias', '/sala-de-imprensa', '/'];

@@ -11,7 +11,7 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
-import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA } from './estados.mjs';
+import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
 const JANELA_HORAS = 24;
 const QUANTAS_REESCREVER = 8;
@@ -279,6 +279,36 @@ for (let k = 0; k < ORGAOS_DO_ESTADO.length; k += 4) {
 }
 console.log(`     ${F.itens.length} itens de fonte livre no total`);
 
+// Orgaos que recusam nosso robo mas o Google indexa. Entram como PAUTA
+// oficial: se o TCE publicou, a historia existe e e de fonte publica. Nao
+// da para pegar o texto deles, mas o sinal vale — e muitas vezes a mesma
+// historia aparece na Agencia Brasil ou em orgao que abre.
+const bloq = BLOQUEADOS[UF] || [];
+if (bloq.length) {
+  console.log('\n  2c. ORGAOS BLOQUEADOS — pauta oficial pelo indice do Google');
+  const buscas = bloq.map(b => ({ ...b, url: gnews(`site:${b.dominio}`) }));
+  for (let k = 0; k < buscas.length; k += 4) {
+    await Promise.all(buscas.slice(k, k+4).map(async b => {
+      try {
+        const itens = lerRSS(await buscar(b.url, 12000, 1)).slice(0, 6);
+        let n = 0;
+        for (const it of itens) {
+          const ts = Date.parse(it.data);
+          if (Number.isNaN(ts) || ts < corte) continue;
+          let titulo = it.titulo;
+          if (it.veiculo && titulo.endsWith(' - '+it.veiculo)) titulo = titulo.slice(0, -(it.veiculo.length+3)).trim();
+          if (titulo.length < 30) continue;
+          P.itens.push({ titulo, link: it.link, resumo:'', iso:new Date(ts).toISOString(),
+                         veiculo: b.nome, editoria:'regional', uf:UF, oficial:true, fonteId:b.id });
+          n++;
+        }
+        console.log(`  ok    ${b.id.padEnd(12)} ${String(n).padStart(2)} · ${b.motivo}`);
+      } catch { console.log(`  aviso ${b.id.padEnd(12)} sem retorno`); }
+    }));
+    if (k + 4 < buscas.length) await dormir(1200);
+  }
+}
+
 console.log('\n  3. CRUZAMENTO');
 const confirmadas = [], soPauta = [];
 for (const l of F.itens) {
@@ -286,6 +316,9 @@ for (const l of F.itens) {
   if (casam.length) {
     l.pautadoPor = [...new Set(casam.map(c=>c.veiculo))].slice(0,4);
     l.quentura = casam.length;
+    // pautada por orgao publico vale por tres veiculos comuns
+    if (casam.some(c => c.oficial)) l.quentura += 3;
+    l.temOficial = casam.some(c => c.oficial);
     confirmadas.push(l);
   }
 }
