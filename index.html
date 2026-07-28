@@ -63,6 +63,7 @@ main{padding:30px 0 10px;min-height:40vh}
 /* abertura: a principal ocupa duas colunas, a segunda fica ao lado */
 .topo-edicao{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:2px solid var(--tinta);margin-bottom:0}
 .abre{padding:0 30px 26px 0;border-right:1px solid var(--linha)}
+.evid{font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border:1px solid;display:inline-block;margin-bottom:9px;line-height:1.4}
 .chapeu{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);display:block;margin-bottom:10px}
 .abre h2{font-family:var(--tit);font-size:clamp(28px,3.9vw,44px);font-weight:900;letter-spacing:-.022em;line-height:1.05;margin-bottom:13px}
 .abre p{font-size:18.5px;line-height:1.55;color:var(--tinta2)}
@@ -85,12 +86,13 @@ body.mostra-metodo .nasceu{display:block}
 .circula h4{font-family:var(--tit);font-size:26px;font-weight:700;margin-bottom:8px}
 .circula .exp{font-size:16px;color:var(--tinta2);max-width:74ch;margin-bottom:24px;line-height:1.55}
 .circula .exp b{color:var(--tinta)}
-.nota-c{background:var(--carta);border:1px solid var(--linha);padding:22px 24px;margin-bottom:14px}
+.lista-c{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linha)}
+.nota-c{background:var(--carta);padding:20px 22px;display:flex;flex-direction:column}
 .nota-c .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#8A6D1F;background:#F7EFD9;border:1px solid #E3D3A4;padding:3px 8px;display:inline-block;margin-bottom:11px}
-.nota-c h5{font-family:var(--tit);font-size:21px;font-weight:700;line-height:1.2;margin-bottom:10px}
-.nota-c p{font-size:16px;line-height:1.6;color:var(--tinta2);margin-bottom:11px}
-.nota-c .ressalva{font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--fraco);border-top:1px dotted var(--linha2);padding-top:11px;margin-top:4px}
-.nota-c .ajuda{margin-top:13px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--tinta);color:var(--tinta);padding:9px 14px;cursor:pointer}
+.nota-c h5{font-family:var(--tit);font-size:19px;font-weight:700;line-height:1.22;margin-bottom:9px}
+.nota-c p{font-size:15px;line-height:1.55;color:var(--tinta2);margin-bottom:10px;flex:1}
+
+.nota-c .ajuda{margin-top:auto;align-self:flex-start;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--tinta);color:var(--tinta);padding:9px 14px;cursor:pointer}
 .nota-c .ajuda:hover{background:var(--tinta);color:var(--papel)}
 .caixa{display:none;margin-top:12px;border-top:1px solid var(--linha);padding-top:12px}
 .caixa.aberta{display:block}
@@ -112,8 +114,8 @@ footer ul{list-style:none}
 footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 .selo-final{font-family:var(--mono);font-size:10px;color:var(--fraco);letter-spacing:.05em;margin-top:24px;padding-top:16px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
-@media (max-width:900px){ .topo-edicao{grid-template-columns:1fr} .abre{border-right:0;padding-right:0;border-bottom:1px solid var(--linha);margin-bottom:22px} .segunda{padding-left:0} .grade{grid-template-columns:repeat(2,1fr)} .art:nth-child(3n){border-right:1px solid var(--linha)} .art:nth-child(2n){border-right:0} .rod{grid-template-columns:1fr 1fr} .descarte ul{columns:1} }
-@media (max-width:560px){ .grade{grid-template-columns:1fr} .art{border-right:0!important} .rod{grid-template-columns:1fr} .metodo .liga{margin-left:0;width:100%} }
+@media (max-width:900px){ .lista-c{grid-template-columns:repeat(2,1fr)} .topo-edicao{grid-template-columns:1fr} .abre{border-right:0;padding-right:0;border-bottom:1px solid var(--linha);margin-bottom:22px} .segunda{padding-left:0} .grade{grid-template-columns:repeat(2,1fr)} .art:nth-child(3n){border-right:1px solid var(--linha)} .art:nth-child(2n){border-right:0} .rod{grid-template-columns:1fr 1fr} .descarte ul{columns:1} }
+@media (max-width:560px){ .lista-c{grid-template-columns:1fr} .grade{grid-template-columns:1fr} .art{border-right:0!important} .rod{grid-template-columns:1fr} .metodo .liga{margin-left:0;width:100%} }
 </style>
 </head>
 <body>
@@ -204,6 +206,19 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 <script>
 const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Estado' };
 // o chapeu mostra o nome do estado da propria materia, nao a palavra "Estado"
+const SELO_NIVEL = {
+  apurado:   { txt:'Apurado pela redação',       cor:'#1F5C3D', fundo:'#E7F1EB', borda:'#BFD9CB' },
+  atribuido: { txt:'Atribuído a fonte oficial',  cor:'#8A6D1F', fundo:'#F7EFD9', borda:'#E3D3A4' }
+};
+function selo(i){
+  const s = SELO_NIVEL[i.nivel];
+  if (!s) return '';
+  const txt = i.nivel === 'atribuido' && (i.veiculos||[]).length
+    ? 'Atribuído a fonte oficial por ' + i.veiculos.slice(0,3).join(', ')
+    : s.txt;
+  return `<span class="evid" style="color:${s.cor};background:${s.fundo};border-color:${s.borda}">${esc(txt)}</span>`;
+}
+
 const chapeuDe = i => i.editoria === 'regional'
   ? (ESTADOS[i.uf] || NOMES.regional)
   : (NOMES[i.editoria] || i.editoria);
@@ -250,14 +265,14 @@ function pintar(){
 
   let h = `<div class="topo-edicao">
     <a class="abre" href="${esc(d.link)}">
-      <span class="chapeu">${esc(chapeuDe(d))} · nosso texto</span>
+      ${selo(d)}<span class="chapeu">${esc(chapeuDe(d))}</span>
       <h2>${esc(d.titulo)}</h2>
       <p>${esc(d.resumo)}</p>
       <div class="assina"><span>${esc(d.hora)}</span><span>${esc(d.fonte)}</span></div>
       ${nasceu(d)}
     </a>
     ${segunda ? `<a class="segunda" href="${esc(segunda.link)}">
-      <span class="chapeu">${esc(chapeuDe(segunda))}</span>
+      ${selo(segunda)}<span class="chapeu">${esc(chapeuDe(segunda))}</span>
       <h3>${esc(segunda.titulo)}</h3>
       <p>${esc(segunda.resumo)}</p>
       <div class="assina"><span>${esc(segunda.hora)}</span><span>${esc(segunda.fonte)}</span></div>
@@ -267,7 +282,7 @@ function pintar(){
 
   if (resto.length) {
     h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
-      <span class="chapeu">${esc(chapeuDe(i))}</span>
+      ${selo(i)}<span class="chapeu">${esc(chapeuDe(i))}</span>
       <h3>${esc(i.titulo)}</h3>
       <p>${esc(i.resumo)}</p>
       <div class="assina"><span>${esc(i.hora)}</span><span>${esc(i.fonte)}</span></div>
@@ -291,19 +306,18 @@ function pintarCircula(){
   if (!lista.length) { box.style.display = 'none'; return; }
   box.style.display = '';
 
-  $('#listaCircula').innerHTML = lista.map((i, n) => `
+  $('#listaCircula').innerHTML = '<div class="lista-c">' + lista.map((i, n) => `
     <article class="nota-c">
       <span class="selo">sem confirmação oficial</span>
       <h5>${esc(i.titulo)}</h5>
-      ${(i.corpo||[]).map(p => `<p>${esc(p)}</p>`).join('')}
-      <p class="ressalva">${esc(i.aviso||'')}</p>
-      <button class="ajuda" data-n="${n}">Você sabe algo sobre isso?</button>
+      <p>${esc((i.corpo||[])[0] || '')}</p>
+      <button class="ajuda" data-n="${n}">Você sabe algo?</button>
       <div class="caixa" id="cx${n}">
         <textarea placeholder="Conte o que você sabe. Pode ser anônimo."></textarea>
-        <button class="env" data-n="${n}">Enviar para a redação</button>
-        <small>Vai direto para a redação e não aparece no site. Se apurarmos, vira matéria — com o documento.</small>
+        <button class="env" data-n="${n}">Enviar</button>
+        <small>Vai direto para a redação e não aparece no site.</small>
       </div>
-    </article>`).join('');
+    </article>`).join('') + '</div>';
 
   $('#listaCircula').querySelectorAll('.ajuda').forEach(b => b.addEventListener('click', () => {
     document.getElementById('cx' + b.dataset.n).classList.toggle('aberta');
