@@ -205,6 +205,30 @@ const P = await colher(PAUTA, 'pauta');
 P.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${P.itens.length} manchetes de pauta`);
 
+// Veiculo que nao responde vira busca no Google pelo dominio dele. Assim
+// GZH, Correio do Povo e Matinal continuam pautando mesmo sem RSS — o Google
+// indexa todos eles. Uniforme e sem adivinhar endereco de feed.
+const caiu = P.rel.filter(l => l.startsWith('aviso'))
+  .map(l => l.match(/aviso pauta:(\S+)/)?.[1]).filter(Boolean);
+
+if (caiu.length) {
+  const resgate = [...E.veiculos, ...PAUTA_GERAL]
+    .filter(v => caiu.includes(v.id) && v.url)
+    .map(v => {
+      const dom = (v.url.match(/\/\/([^\/]+)/) || [])[1];
+      return dom ? { ...v, url: gnews(`site:${dom.replace(/^www\./,'')} when:1d`) } : null;
+    })
+    .filter(Boolean);
+
+  if (resgate.length) {
+    console.log(`\n  1b. RESGATE — ${resgate.length} veiculos sem RSS, pelo indice do Google`);
+    const R = await colher(resgate, 'resgate', 4);
+    R.rel.forEach(l => console.log('  ' + l));
+    P.itens.push(...R.itens);
+    console.log(`     ${P.itens.length} manchetes de pauta no total`);
+  }
+}
+
 console.log('\n  2. FONTE LIVRE — de onde o texto pode sair');
 const F = await colher(FONTE_LIVRE, 'livre');
 F.rel.forEach(l=>console.log('  '+l));
@@ -389,9 +413,53 @@ if (temChave()) {
     } catch(e){ console.log('     pulou '+String(e.message).slice(0,58)); }
   }
 
-  for (let k = 0; k < fila.length; k += 3) {
-    await Promise.all(fila.slice(k, k+3).map(escreverUma));
-    if (k + 3 < fila.length) await dormir(800);
+  // Sem teto, a unica assessoria que abre domina a edicao inteira — e cinco
+  // materias da mesma prefeitura, duas sobre o mesmo evento, viram boletim
+  // oficial em vez de jornal.
+  const TETO_POR_FONTE = 3;
+
+  // Reveza entre as fontes antes de repetir: uma de cada, depois a segunda de
+  // cada. Assim uma prefeitura falante nao ocupa a edicao inteira, e as fontes
+  // com pouco volume ainda aparecem.
+  function revezar(itens){
+    const porFonte = new Map();
+    for (const i of itens) {
+      if (!porFonte.has(i.veiculo)) porFonte.set(i.veiculo, []);
+      porFonte.get(i.veiculo).push(i);
+    }
+    const filas = [...porFonte.values()];
+    const saida = [];
+    let sobrou = true;
+    while (sobrou) {
+      sobrou = false;
+      for (const f of filas) {
+        const x = f.shift();
+        if (x) { saida.push(x); sobrou = true; }
+      }
+    }
+    return saida;
+  }
+
+  const usos = new Map();
+  const titulosJaFeitos = [];
+
+  const filaLimpa = revezar(fila).filter(i => {
+    const n = (usos.get(i.veiculo) || 0);
+    if (n >= TETO_POR_FONTE) return false;
+    // mesma historia com titulo diferente: "MT AgroFestival lanca programacao"
+    // e "Prefeitura lanca programacao do AgroFestival" sao a mesma coisa
+    if (titulosJaFeitos.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
+    usos.set(i.veiculo, n + 1);
+    titulosJaFeitos.push(i.titulo);
+    return true;
+  });
+
+  const cortadas = fila.length - filaLimpa.length;
+  if (cortadas) console.log(`     ${cortadas} descartadas por repeticao ou teto de ${TETO_POR_FONTE} por fonte`);
+
+  for (let k = 0; k < filaLimpa.length; k += 3) {
+    await Promise.all(filaLimpa.slice(k, k+3).map(escreverUma));
+    if (k + 3 < filaLimpa.length) await dormir(800);
   }
 } else {
   console.log('     sem GEMINI_API_KEY — reescrita desligada');

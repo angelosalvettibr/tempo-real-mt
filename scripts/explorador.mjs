@@ -41,6 +41,28 @@ async function pegar(url, ms = 10000){
 }
 
 const contarRSS = x => (x.match(/<(item|entry)\b/gi) || []).length;
+
+// Veiculo descoberto numa busca do RS nao e necessariamente gaucho: CNN,
+// Estadao e Terra aparecem em qualquer busca. Deduzimos a praça pelo dominio
+// e pelo nome; na duvida, marcamos como nacional.
+const NACIONAIS = /^(g1|globo|folha|uol|estadao|terra|r7|ig|band|cnnbrasil|record|sbt|metropoles|poder360|infomoney|exame|veja|istoe|carta|jota|migalhas|conjur|gazetadopovo|correiobraziliense|em\.com|otempo|opovo|nexojornal|intercept|brasildefato|pciconcursos|estrategiaconcursos|qconcursos|gran|direcao)/i;
+
+const PISTAS_UF = {
+  mt: /(mt|matogrosso|mato-grosso|cuiaba|varzea|sinop|sorriso|rondonopolis|pantanal|cenariomt|olhardireto|midianews)/i,
+  rs: /(rs|riograndedosul|gaucha|gaucho|portoalegre|poa|caxias|pelotas|santamaria|camaqua|sepeense|alegrete|uirapuru|leouve|sul21|matinal)/i,
+  rj: /(rj|riodejaneiro|carioca|fluminense|niteroi|petropolis|baixada|odia|extra)/i
+};
+
+function deduzirPraca(dominio, nome, ufDaRodada){
+  const alvo = (dominio + ' ' + nome).toLowerCase().replace(/[^a-z0-9]/g,'');
+  if (NACIONAIS.test(alvo)) return 'br';
+  for (const [uf, re] of Object.entries(PISTAS_UF)) if (re.test(alvo)) return uf;
+  // sem pista: fica como nacional, para nao sujar a praça errada
+  return 'br';
+}
+
+// Sites que nao sao jornal: concurso, classificado, agregador puro.
+const NAO_E_JORNAL = /(concurso|vagas|emprego|classificado|imoveis|autos|loteria|horoscopo|receitas|cupom|desconto)/i;
 const sistemaDe = h => {
   if (/wp-content|wp-includes/i.test(h)) return 'WordPress';
   if (/ng-version|angular/i.test(h)) return 'Angular';
@@ -140,6 +162,11 @@ async function descobrir(uf, E, cat){
     await dormir(1500);
   }
 
+  // ja temos este dominio, mesmo com www ou subdominio diferente?
+  const raiz = d => String(d).replace(/^www\./,'').split('.').slice(-3).join('.');
+  const achouRepetido = (cat, dom) => Object.values(cat.fontes)
+    .some(f => f.dominio && raiz(f.dominio) === raiz(dom));
+
   const novos = [];
   for (const [dominio, e] of encontrados) {
     const chave = `${uf}:novo:${dominio.replace(/\./g,'-')}`;
@@ -152,12 +179,17 @@ async function descobrir(uf, E, cat){
       try {
         const r = await pegar('https://' + dominio + c, 8000);
         const n = contarRSS(r.txt);
-        if (r.ok && n >= 3) { achou = { url:'https://'+dominio+c, itens:n, sistema:sistemaDe(r.txt) }; break; }
+        // feed com centenas de itens e agregador: entope a pauta sem acrescentar
+        if (r.ok && n >= 3 && n <= 120) { achou = { url:'https://'+dominio+c, itens:n, sistema:sistemaDe(r.txt) }; break; }
       } catch {}
     }
 
+    // filtro de qualidade: nem tudo que aparece no Google e fonte de noticia
+    if (NAO_E_JORNAL.test(dominio + ' ' + e.veiculo)) continue;
+    if (achouRepetido(cat, dominio)) continue;
+
     anotar(cat, chave, {
-      nome: e.veiculo, dominio, uf, tipo:'veiculo', licenca:'pauta',
+      nome: e.veiculo, dominio, uf: deduzirPraca(dominio, e.veiculo, uf), tipo:'veiculo', licenca:'pauta',
       aprovada: false,
       ok: !!achou,
       itens: achou?.itens || 0,
