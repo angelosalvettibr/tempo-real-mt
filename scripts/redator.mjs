@@ -12,47 +12,72 @@
 const CHAVE = process.env.GEMINI_API_KEY || '';
 const API = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-// O nome do modelo muda com o tempo. Testamos em ordem e ficamos com o que responde.
-const MODELOS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-flash-latest', 'gemini-1.5-flash'];
+// Em vez de adivinhar o nome do modelo, perguntamos ao Google quais existem
+// para esta chave e escolhemos o melhor flash disponivel. Nome de modelo muda
+// com o tempo; a lista da API nao mente.
 let modeloBom = '';
+let listaCache = null;
 
-export const temChave = () => CHAVE.length > 10;
+async function listarModelos(){
+  if (listaCache) return listaCache;
+  const r = await fetch(`${API}?key=${CHAVE}&pageSize=100`);
+  if (!r.ok) throw new Error('listagem de modelos falhou: HTTP ' + r.status);
+  const j = await r.json();
+  listaCache = (j.models || [])
+    .filter(m => (m.supportedGenerationMethods || []).includes('generateContent'))
+    .map(m => String(m.name).replace(/^models\//, ''));
+  return listaCache;
+}
 
-async function chamar(prompt, ms = 45000){
-  const erros = [];
-  for (const m of (modeloBom ? [modeloBom] : MODELOS)) {
+function escolher(nomes){
+  const vivo = n => !/vision|embedding|aqa|image|tts|audio|live|thinking-exp/i.test(n);
+  const flash = nomes.filter(n => /flash/i.test(n) && vivo(n));
+  const ordem = [
+    n => /^gemini-flash-latest$/.test(n),
+    n => /^gemini-2\.5-flash$/.test(n),
+    n => /^gemini-2\.0-flash$/.test(n),
+    n => /flash-latest/.test(n),
+    n => /flash/.test(n)
+  ];
+  for (const teste of ordem) { const achou = flash.find(teste); if (achou) return achou; }
+  return nomes.find(vivo) || '';
+}
+
+export async function preparar(){
+  const nomes = await listarModelos();
+  modeloBom = escolher(nomes);
+  return { escolhido: modeloBom, disponiveis: nomes.filter(n=>/flash/i.test(n)).slice(0,8) };
+}
+
+async function chamar(prompt, ms = 60000){
+  if (!modeloBom) await preparar();
+  if (!modeloBom) throw new Error('nenhum modelo disponivel para esta chave');
+
+  // Primeira tentativa desliga o raciocinio (economiza token e evita resposta
+  // cortada). Se a API reclamar do campo, tenta de novo sem ele.
+  for (const comThinking of [true, false]) {
+    const cfg = { temperature: 0.4, maxOutputTokens: 4000 };
+    if (comThinking) cfg.thinkingConfig = { thinkingBudget: 0 };
+
     const c = new AbortController();
     const t = setTimeout(() => c.abort(), ms);
     try {
-      const r = await fetch(`${API}/${m}:generateContent?key=${CHAVE}`, {
-        method: 'POST', signal: c.signal,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            temperature: 0.4,
-            maxOutputTokens: 4000,
-            // Flash 2.5 vem com raciocinio ligado e gasta o orcamento pensando,
-            // devolvendo resposta cortada. Zerado, sobra tudo para o texto.
-            thinkingConfig: { thinkingBudget: 0 }
-          }
-        })
+      const r = await fetch(`${API}/${modeloBom}:generateContent?key=${CHAVE}`, {
+        method:'POST', signal:c.signal,
+        headers:{ 'Content-Type':'application/json' },
+        body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }], generationConfig: cfg })
       });
-      if (!r.ok) { erros.push(`${m}: HTTP ${r.status}`); continue; }
+      if (r.status === 400 && comThinking) continue;
+      if (!r.ok) throw new Error(`${modeloBom}: HTTP ${r.status} ${(await r.text()).slice(0,120)}`);
       const j = await r.json();
-      const txt = j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '';
-      if (!txt) { erros.push(`${m}: resposta vazia`); continue; }
-      modeloBom = m;
+      const txt = j?.candidates?.[0]?.content?.parts?.map(p=>p.text).join('') || '';
+      if (!txt) throw new Error(`${modeloBom}: resposta vazia`);
       return txt;
-    } catch (e) {
-      erros.push(`${m}: ${e.message}`);
     } finally { clearTimeout(t); }
   }
-  throw new Error(erros.join(' | '));
+  throw new Error('falhou com e sem thinkingConfig');
 }
 
-// Busca o texto completo da matéria oficial. Só chamamos isto para domínios
-// que autorizam reprodução — a lista de permitidos fica em varredura.mjs.
 export async function textoCompleto(url, ms = 20000){
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), ms);

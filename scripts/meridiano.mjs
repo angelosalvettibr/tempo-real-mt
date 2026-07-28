@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 
 const JANELA_HORAS = 24;
@@ -198,6 +198,14 @@ const publicados = [];
 let escritas = 0;
 
 if (temChave()) {
+  try {
+    const info = await preparar();
+    console.log('     modelo escolhido: ' + info.escolhido);
+    console.log('     flash disponiveis: ' + info.disponiveis.join(', '));
+  } catch (e) {
+    console.log('     ATENCAO ' + e.message);
+  }
+
   const fila = [...confirmadas, ...F.itens.filter(i=>!confirmadas.includes(i))]
     .filter(i => PODE_REESCREVER.test(i.link))
     .slice(0, QUANTAS_REESCREVER);
