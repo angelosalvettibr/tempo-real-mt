@@ -59,7 +59,9 @@ nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;ri
 .caixa-apelido{display:none;border-bottom:1px solid var(--linha);background:var(--areia);padding:22px 0}
 .caixa-apelido.aberta{display:block}
 .caixa-apelido b{font-family:var(--tit);font-size:20px;display:block;margin-bottom:7px}
-.caixa-apelido p{font-size:15px;line-height:1.6;color:var(--tinta2);max-width:66ch;margin-bottom:14px}
+.caixa-apelido p{font-size:15px;line-height:1.6;color:var(--tinta2);max-width:70ch;margin-bottom:10px}
+.caixa-apelido .anon{background:#fff;border-left:3px solid var(--verde);padding:11px 15px;margin-bottom:15px}
+.caixa-apelido .anon b{display:inline;font-family:var(--txt);font-size:15px;color:var(--tinta)}
 .linha-campo{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .linha-campo input{font-family:var(--mono);font-size:14px;border:1px solid var(--linha2);padding:9px 12px;min-width:210px;background:#fff}
 .bt-salvar{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--tinta);color:#fff;border:0;padding:10px 16px;cursor:pointer}
@@ -220,11 +222,12 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
 <div class="caixa-apelido" id="caixa-apelido">
   <div class="wrap">
     <b>Escolha um apelido</b>
-    <p>Serve só para o Meridiano lembrar o que você já leu e abrir na sua praça. Não pedimos e-mail, nome nem telefone — você sabe quem é, nós não. Fica guardado neste navegador.</p>
+    <p>Serve para o Meridiano abrir direto na sua praça, marcar o que você já leu e deixar de repetir o que não te interessa. Quanto mais você lê, melhor o jornal fica para você.</p>
+    <p class="anon"><b>Não pedimos e-mail, nome nem telefone.</b> Você inventa um apelido qualquer — só você sabe que é você. Para nós é uma etiqueta sem dono. Ele fica guardado neste navegador, e você pode apagar tudo quando quiser.</p>
     <div class="linha-campo">
       <input id="campo-apelido" placeholder="njeletto" maxlength="24" autocomplete="off" spellcheck="false">
-      <button class="bt-salvar" id="btSalvar">usar este</button>
-      <button class="bt-mini" id="btFechar">agora não</button>
+      <button class="bt-salvar" data-ap="salvar">usar este</button>
+      <button class="bt-mini" data-ap="fechar">agora não</button>
     </div>
     <div class="aviso-ap" id="aviso-apelido"></div>
   </div>
@@ -578,18 +581,30 @@ function abrirCaixaApelido(){
 
 function montarApelido(){
   const alvo = document.getElementById('area-leitor');
-  if (!alvo) { console.warn('Meridiano: area do leitor nao encontrada'); return; }
+  if (!alvo) return;
   const a = leitor.apelido;
   alvo.innerHTML = a
     ? `<span class="quem">olá, <b>${esc(a)}</b></span>
-       <button class="bt-mini" id="btTrocar">trocar</button>`
-    : `<button class="bt-mini" id="btEntrar">escolher um apelido</button>`;
-
-  const btE = document.getElementById('btEntrar');
-  const btT = document.getElementById('btTrocar');
-  if (btE) btE.addEventListener('click', abrirCaixaApelido);
-  if (btT) btT.addEventListener('click', abrirCaixaApelido);
+       <button class="bt-mini" data-ap="abrir">trocar</button>`
+    : `<button class="bt-mini" data-ap="abrir">quem é você?</button>`;
 }
+
+// O clique e escutado na pagina inteira, nao no botao. Assim funciona
+// independente de quando o botao nasce ou de quantas vezes a area e
+// redesenhada — que era o motivo de nao responder.
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-ap]');
+  if (!b) return;
+  const acao = b.dataset.ap;
+  const cx = document.getElementById('caixa-apelido');
+  if (acao === 'abrir')  { cx.classList.add('aberta'); document.getElementById('campo-apelido')?.focus(); }
+  if (acao === 'fechar') cx.classList.remove('aberta');
+  if (acao === 'salvar') salvarApelido();
+  if (acao === 'sugestao') {
+    document.getElementById('campo-apelido').value = b.textContent;
+    document.getElementById('aviso-apelido').textContent = '';
+  }
+});
 
 async function salvarApelido(){
   const campo = document.getElementById('campo-apelido');
@@ -603,12 +618,8 @@ async function salvarApelido(){
     return;
   }
   aviso.innerHTML = esc(r.msg) + (r.sugestoes?.length
-    ? ' Livres: ' + r.sugestoes.map(x => `<button class="sug" data-s="${esc(x)}">${esc(x)}</button>`).join(' ')
+    ? ' Livres: ' + r.sugestoes.map(x => `<button class="sug" data-ap="sugestao">${esc(x)}</button>`).join(' ')
     : '');
-  aviso.querySelectorAll('.sug').forEach(b => b.addEventListener('click', () => {
-    campo.value = b.dataset.s;
-    aviso.textContent = '';
-  }));
 }
 
 $('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
@@ -616,15 +627,10 @@ setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30
 setInterval(carregar, 5*60*1000);
 // A area do leitor nao pode depender de nada que venha antes. Se o carregamento
 // da edicao falhar, o apelido continua funcionando.
-(function ligarLeitor(){
-  const btS = document.getElementById('btSalvar');
-  const btF = document.getElementById('btFechar');
-  const cmp = document.getElementById('campo-apelido');
-  if (btS) btS.addEventListener('click', salvarApelido);
-  if (btF) btF.addEventListener('click', () => document.getElementById('caixa-apelido').classList.remove('aberta'));
-  if (cmp) cmp.addEventListener('keydown', e => { if (e.key === 'Enter') salvarApelido(); });
-  montarApelido();
-})();
+document.getElementById('campo-apelido')?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') salvarApelido();
+});
+montarApelido();
 
 // conta a leitura quando o leitor abre a materia
 document.addEventListener('click', e => {
