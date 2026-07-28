@@ -116,6 +116,56 @@ export const ESTADOS = {
   }
 };
 
+// BR e MUNDO agora sao edicoes proprias, nao mais carona das estaduais.
+// Antes as tres maquinas dos estados buscavam as mesmas fontes nacionais e
+// gastavam as vagas de reescrita com Brasilia — o regional ficava de fora.
+export const EDICOES_GERAIS = {
+  br: {
+    nome: 'Brasil', uf: 'br',
+    pauta: [
+      { id:'g1',         nome:'g1',          url:'https://g1.globo.com/rss/g1/' },
+      { id:'g1politica', nome:'g1 Política', url:'https://g1.globo.com/rss/g1/politica/' },
+      { id:'g1economia', nome:'g1 Economia', url:'https://g1.globo.com/rss/g1/economia/' },
+      { id:'folha',      nome:'Folha',       url:'https://feeds.folha.uol.com.br/emcimadahora/rss091.xml' },
+      { id:'cnn',        nome:'CNN Brasil',  url:'https://www.cnnbrasil.com.br/feed/' },
+      { id:'uol',        nome:'UOL',         url:'https://rss.uol.com.br/feed/noticias.xml' },
+      { id:'estadao',    nome:'Estadão',     url:'https://www.estadao.com.br/arquivo/rss/ultimas.xml' },
+      { id:'poder360',   nome:'Poder360',    url:'https://www.poder360.com.br/feed/' },
+      { id:'metropoles', nome:'Metrópoles',  url:'https://www.metropoles.com/feed' },
+      { id:'infomoney',  nome:'InfoMoney',   url:'https://www.infomoney.com.br/feed/' },
+      { id:'jota',       nome:'JOTA',        url:'https://www.jota.info/feed' },
+      { id:'globorural', nome:'Agro',        url:'https://g1.globo.com/rss/g1/economia/agronegocios/' }
+    ],
+    livres: [
+      { id:'ab-politica', nome:'Agência Brasil', url:'https://agenciabrasil.ebc.com.br/rss/politica/feed.xml' },
+      { id:'ab-economia', nome:'Agência Brasil', url:'https://agenciabrasil.ebc.com.br/rss/economia/feed.xml' },
+      { id:'ab-justica',  nome:'Agência Brasil', url:'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml' },
+      { id:'ab-geral',    nome:'Agência Brasil', url:'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml' },
+      { id:'camara',      nome:'Agência Câmara Notícias', url:'https://www.camara.leg.br/noticias/rss/ultimas.xml', base:'https://www.camara.leg.br/noticias' },
+      { id:'senado',      nome:'Agência Senado', url:'https://www12.senado.leg.br/noticias/rss/ultimas', base:'https://www12.senado.leg.br/noticias' },
+      { id:'embrapa',     nome:'Embrapa', url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss', base:'https://www.embrapa.br' },
+      { id:'conab',       nome:'Conab',   url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' }
+    ]
+  },
+  mundo: {
+    nome: 'Mundo', uf: 'mundo',
+    pauta: [
+      { id:'g1mundo',    nome:'g1 Mundo',    url:'https://g1.globo.com/rss/g1/mundo/' },
+      { id:'folhamundo', nome:'Folha Mundo', url:'https://feeds.folha.uol.com.br/mundo/rss091.xml' },
+      { id:'bbcbrasil',  nome:'BBC Brasil',  url:'https://feeds.bbci.co.uk/portuguese/rss.xml' },
+      { id:'dw',         nome:'DW Brasil',   url:'https://rss.dw.com/rdf/rss-br-all' },
+      { id:'rfi',        nome:'RFI Brasil',  url:'https://www.rfi.fr/br/rss' },
+      { id:'euronews',   nome:'Euronews',    url:'https://pt.euronews.com/rss' }
+    ],
+    livres: [
+      { id:'ab-inter',     nome:'Agência Brasil',  url:'https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml' },
+      { id:'onu',          nome:'ONU News',        url:'https://news.un.org/feed/subscribe/pt/news/all/rss.xml' },
+      { id:'conversation', nome:'The Conversation',url:'https://theconversation.com/br/articles.atom' },
+      { id:'vaticano',     nome:'Vatican News',    url:'https://www.vaticannews.va/pt.rss.xml' }
+    ]
+  }
+};
+
 // Compartilhado por todos os estados.
 export const NACIONAL = [
   { id:'ab-politica', nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/politica/feed.xml' },

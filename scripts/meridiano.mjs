@@ -11,7 +11,7 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
-import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
+import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
 const JANELA_HORAS = 24;
 const QUANTAS_REESCREVER = 8;
@@ -200,10 +200,25 @@ console.log('\n  IL MERIDIANO · ' + new Date().toISOString());
 console.log('  ' + '='.repeat(66));
 
 const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
-const E = ESTADOS[UF] || ESTADOS.mt;
+
+// Cinco edicoes: br, mundo, mt, rs, rj. As duas primeiras cuidam do que e
+// comum a todos; as tres estaduais cuidam so do regional. Assim o nacional
+// para de ocupar as vagas de reescrita das estaduais.
+const GERAL = EDICOES_GERAIS[UF] || null;
+const E = GERAL || ESTADOS[UF] || ESTADOS.mt;
+const EDITORIA = UF === 'br' ? 'brasil' : UF === 'mundo' ? 'internacional' : 'regional';
 
 console.log('\n  1. PAUTA — o que os veículos estão dando');
-const P = await colher(PAUTA, 'pauta');
+const listaPauta = GERAL
+  ? GERAL.pauta.map(f => ({ ...f, editoria: EDITORIA }))
+  : [...E.veiculos.map(f => ({ ...f, editoria:'regional' })),
+     ...PAUTA_GERAL.filter(f => /^gn-/.test(f.id)).map(f => ({ ...f, editoria:'regional' })),
+     { id:`gn-${UF}`, nome:E.nome, editoria:'regional',
+       url:gnews(`"${E.nome}" ${E.excluir||''} when:1d`) },
+     { id:`gn-${UF}-cap`, nome:E.capital, editoria:'regional',
+       url:gnews(`"${E.capital}" prefeitura OR camara OR policia when:1d`) }];
+
+const P = await colher(listaPauta, 'pauta');
 P.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${P.itens.length} manchetes de pauta`);
 
@@ -214,7 +229,7 @@ const caiu = P.rel.filter(l => l.startsWith('aviso'))
   .map(l => l.match(/aviso pauta:(\S+)/)?.[1]).filter(Boolean);
 
 if (caiu.length) {
-  const resgate = [...E.veiculos, ...PAUTA_GERAL]
+  const resgate = (GERAL ? GERAL.pauta : [...E.veiculos, ...PAUTA_GERAL])
     .filter(v => caiu.includes(v.id) && v.url)
     .map(v => {
       const dom = (v.url.match(/\/\/([^\/]+)/) || [])[1];
@@ -232,10 +247,15 @@ if (caiu.length) {
 }
 
 console.log('\n  2. FONTE LIVRE — de onde o texto pode sair');
-const F = await colher(FONTE_LIVRE, 'livre');
+const listaLivre = GERAL
+  ? GERAL.livres.map(f => ({ ...f, editoria: EDITORIA }))
+  : [];   // nas estaduais o texto vem das assessorias, no passo 2b
+
+const F = listaLivre.length ? await colher(listaLivre, 'livre') : { itens: [], rel: [] };
 F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
 
+if (!GERAL) {
 console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');
 console.log(`     estado: ${E.nome}`);
 
@@ -303,6 +323,7 @@ for (let k = 0; k < ORGAOS_DO_ESTADO.length; k += 4) {
   if (k + 4 < ORGAOS_DO_ESTADO.length) await dormir(400);
 }
 console.log(`     ${F.itens.length} itens de fonte livre no total`);
+}
 
 // Orgaos que recusam nosso robo mas o Google indexa. Entram como PAUTA
 // oficial: se o TCE publicou, a historia existe e e de fonte publica. Nao
@@ -401,12 +422,12 @@ if (temChave()) {
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, checar:[] },
         { link:i.link, municipio:'' }, i.iso), 'utf8');
       publicados.push({
-        id:'ilm:'+slug(m.titulo), editoria:i.editoria, chapeu:'Nosso texto',
+        id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
         titulo:m.titulo, resumo:m.linhaFina,
         fonte:'Il Meridiano, com informações de '+i.veiculo,
         origemLink:i.link, origemNome:i.veiculo,
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
-        uf: i.uf || (i.editoria==='regional' ? UF : null),
+        uf: GERAL ? null : UF,
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true
       });
       escritas++;
