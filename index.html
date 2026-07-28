@@ -449,7 +449,7 @@ async function carregar(){
       itens.push({
         id: c.id, editoria: c.editoria, uf: c.uf,
         titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
-        fonte: 'Meridiano', link: '#', iso: c.iso, hora: c.hora,
+        fonte: 'Meridiano', link: c.link || '#', iso: c.iso, hora: c.hora,
         nivel: 'sem-confirmacao', selo: 'Sem confirmação'
       });
     }
