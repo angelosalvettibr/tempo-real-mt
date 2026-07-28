@@ -578,7 +578,7 @@ function abrirCaixaApelido(){
 
 function montarApelido(){
   const alvo = document.getElementById('area-leitor');
-  if (!alvo) return;
+  if (!alvo) { console.warn('Meridiano: area do leitor nao encontrada'); return; }
   const a = leitor.apelido;
   alvo.innerHTML = a
     ? `<span class="quem">olá, <b>${esc(a)}</b></span>
@@ -614,13 +614,17 @@ async function salvarApelido(){
 $('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
 setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30000);
 setInterval(carregar, 5*60*1000);
-document.getElementById('btSalvar').addEventListener('click', salvarApelido);
-document.getElementById('btFechar').addEventListener('click', () =>
-  document.getElementById('caixa-apelido').classList.remove('aberta'));
-document.getElementById('campo-apelido').addEventListener('keydown', e => {
-  if (e.key === 'Enter') salvarApelido();
-});
-montarApelido();
+// A area do leitor nao pode depender de nada que venha antes. Se o carregamento
+// da edicao falhar, o apelido continua funcionando.
+(function ligarLeitor(){
+  const btS = document.getElementById('btSalvar');
+  const btF = document.getElementById('btFechar');
+  const cmp = document.getElementById('campo-apelido');
+  if (btS) btS.addEventListener('click', salvarApelido);
+  if (btF) btF.addEventListener('click', () => document.getElementById('caixa-apelido').classList.remove('aberta'));
+  if (cmp) cmp.addEventListener('keydown', e => { if (e.key === 'Enter') salvarApelido(); });
+  montarApelido();
+})();
 
 // conta a leitura quando o leitor abre a materia
 document.addEventListener('click', e => {
