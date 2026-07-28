@@ -10,6 +10,7 @@
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
+import { ORGAOS, ALTERNATIVOS, lerListagem } from './assessorias.mjs';
 
 const JANELA_HORAS = 24;
 const QUANTAS_REESCREVER = 10;
@@ -64,7 +65,7 @@ const FONTE_LIVRE = [
 ];
 
 // Só destes domínios o texto pode ser lido e reescrito.
-const PODE_REESCREVER = /(agenciabrasil\.ebc\.com\.br|camara\.leg\.br|senado\.leg\.br|news\.un\.org|theconversation\.com|vaticannews\.va|\.gov\.br)/i;
+const PODE_REESCREVER = /(agenciabrasil\.ebc\.com\.br|camara\.leg\.br|senado\.leg\.br|news\.un\.org|theconversation\.com|vaticannews\.va|\.gov\.br|\.jus\.br|\.mp\.br|\.leg\.br)/i;
 
 const BLOQUEIO = ['reuters','afp','associated press','efe','ansa','sputnik','xinhua','lusa','dpa'];
 const RE_BLOQUEIO = new RegExp('\\b(' + BLOQUEIO.map(b=>b.replace(/ /g,'\\s+')).join('|') + ')\\b','i');
@@ -183,6 +184,31 @@ console.log('\n  2. FONTE LIVRE — de onde o texto pode sair');
 const F = await colher(FONTE_LIVRE, 'livre');
 F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
+
+console.log('\n  2b. ASSESSORIAS DE MT — release publico, sem RSS');
+for (const o of ORGAOS) {
+  let achou = false;
+  for (const caminho of [o.url.replace(o.base,''), ...ALTERNATIVOS]) {
+    try {
+      const html = await buscar(o.base + caminho, 15000, 1);
+      const manchetes = lerListagem(html, o.base);
+      if (manchetes.length < 3) continue;
+      for (const m of manchetes) {
+        F.itens.push({
+          titulo: m.titulo, link: m.link, resumo: '',
+          iso: new Date().toISOString(),
+          veiculo: o.nome, editoria: 'regional', fonteId: o.id
+        });
+      }
+      console.log(`  ok    orgao:${o.id.padEnd(12)} ${String(manchetes.length).padStart(3)} · ${caminho}`);
+      achou = true;
+      break;
+    } catch { /* tenta o proximo caminho */ }
+  }
+  if (!achou) console.log(`  aviso orgao:${o.id.padEnd(12)} nenhuma pagina de noticias encontrada`);
+  await dormir(400);
+}
+console.log(`     ${F.itens.length} itens de fonte livre no total`);
 
 console.log('\n  3. CRUZAMENTO');
 const confirmadas = [], soPauta = [];
