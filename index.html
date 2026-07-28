@@ -14,9 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --papel:#FBF9F4; --carta:#FFF; --tinta:#161412; --tinta2:#4A453E;
-  --linha:#DFD8CB; --linha2:#C4BAA8; --fraco:#8A8175;
-  --rosso:#A8241C; --verde:#1F5C3D; --oro:#8A6D1F;
+  --papel:#FFFFFF; --carta:#FFF; --tinta:#111111; --tinta2:#4A4A4A;
+  --linha:#E0E0E0; --linha2:#C8C8C8; --fraco:#8A8A8A;
+  --rosso:#C8102E; --verde:#0F6B3F; --oro:#8A6D1F; --areia:#F6F5F2;
   --tit:'Playfair Display',Georgia,serif;
   --txt:'Source Serif 4',Georgia,serif;
   --mono:'IBM Plex Mono',monospace;
@@ -28,13 +28,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rosso);outline-offs
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
 
 /* cabeçalho */
-.faixa{background:var(--tinta);color:#D8D2C6;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;padding:7px 0}
+.faixa{background:var(--tinta);color:#CFCFCF;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;padding:7px 0}
 .faixa .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 .faixa b{color:#fff;font-weight:500}
-header{border-bottom:3px double var(--tinta);background:var(--papel)}
-.masthead{text-align:center;padding:26px 0 18px}
+header{border-bottom:2px solid var(--tinta);background:var(--papel)}
+.masthead{text-align:center;padding:22px 0 14px}
 .masthead .lema{font-family:var(--mono);font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--fraco);margin-bottom:10px}
 .masthead h1{font-family:var(--tit);font-size:clamp(38px,8vw,74px);font-weight:900;letter-spacing:-.02em;line-height:.94}
+.masthead h1{color:var(--rosso)}
 .masthead h1 em{font-style:italic;font-weight:700;color:var(--rosso)}
 .masthead .sub{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--fraco);margin-top:11px}
 nav{border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
@@ -50,7 +51,7 @@ nav button[aria-pressed="true"]{color:var(--rosso);border-bottom-color:var(--ros
 .vazio-estado b{display:block;font-family:var(--tit);font-size:21px;margin-bottom:8px;color:var(--tinta)}
 
 /* explicação do método */
-.metodo{background:#F3EEE3;border-bottom:1px solid var(--linha);padding:16px 0}
+.metodo{background:var(--areia);border-bottom:1px solid var(--linha);padding:16px 0}
 .metodo .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--tinta2)}
 .metodo b{background:var(--tinta);color:var(--papel);padding:3px 8px;font-weight:500}
 .metodo .seta{color:var(--rosso)}
@@ -63,9 +64,17 @@ main{padding:30px 0 10px;min-height:40vh}
 /* abertura: a principal ocupa duas colunas, a segunda fica ao lado */
 .topo-edicao{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:2px solid var(--tinta);margin-bottom:0}
 .abre{padding:0 30px 26px 0;border-right:1px solid var(--linha)}
-.evid{font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border:1px solid;display:inline-block;margin-bottom:9px;line-height:1.4}
+.evid{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;display:inline-block;margin:2px 0 8px;line-height:1.4}
+.faixa-sec{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--tinta);padding-bottom:7px;margin:34px 0 0}
+.faixa-sec h3{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta)}
+.faixa-sec .exp-sec{font-family:var(--mono);font-size:10.5px;color:var(--fraco);letter-spacing:.02em}
+.faixa-sec.apurado h3{color:var(--verde)}
+.faixa-sec.atribuido h3{color:var(--oro)}
+.faixa-sec::before{content:"";width:9px;height:9px;background:currentColor;display:inline-block}
+.faixa-sec.apurado::before{background:var(--verde)}
+.faixa-sec.atribuido::before{background:var(--oro)}
 .chapeu{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);display:block;margin-bottom:10px}
-.abre h2{font-family:var(--tit);font-size:clamp(28px,3.9vw,44px);font-weight:900;letter-spacing:-.022em;line-height:1.05;margin-bottom:13px}
+.abre h2{font-family:var(--tit);font-size:clamp(29px,4.1vw,47px);font-weight:900;letter-spacing:-.022em;line-height:1.05;margin-bottom:13px}
 .abre p{font-size:18.5px;line-height:1.55;color:var(--tinta2)}
 .abre:hover h2{color:var(--rosso)}
 .segunda{padding:0 0 26px 26px}
@@ -82,7 +91,7 @@ body.mostra-metodo .nasceu{display:block}
 .nasceu em{font-style:normal;color:var(--rosso)}
 
 /* pautas descartadas */
-.circula{background:#F3EEE3;border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
+.circula{background:var(--areia);border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
 .circula h4{font-family:var(--tit);font-size:26px;font-weight:700;margin-bottom:8px}
 .circula .exp{font-size:16px;color:var(--tinta2);max-width:74ch;margin-bottom:24px;line-height:1.55}
 .circula .exp b{color:var(--tinta)}
@@ -99,7 +108,7 @@ body.mostra-metodo .nasceu{display:block}
 .caixa textarea{width:100%;min-height:88px;font-family:var(--txt);font-size:15px;border:1px solid var(--linha2);padding:11px;resize:vertical;background:var(--papel)}
 .caixa .env{margin-top:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--tinta);color:var(--papel);border:0;padding:10px 16px;cursor:pointer}
 .caixa small{display:block;margin-top:9px;font-family:var(--mono);font-size:10px;color:var(--fraco);line-height:1.6}
-.descarte{background:#F3EEE3;border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
+.descarte{background:var(--areia);border-top:3px double var(--tinta);margin-top:36px;padding:28px 0 34px}
 .descarte h4{font-family:var(--tit);font-size:24px;font-weight:700;margin-bottom:6px}
 .descarte .exp{font-size:16px;color:var(--tinta2);max-width:70ch;margin-bottom:18px}
 .descarte ul{list-style:none;columns:2;column-gap:34px}
@@ -168,13 +177,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
   <p class="aviso">Carregando a edição…</p>
 </main>
 
-<section class="circula" id="boxCircula" style="display:none">
-  <div class="wrap">
-    <h4>Circulando hoje</h4>
-    <p class="exp">Informações que estão correndo na imprensa e para as quais <b>não localizamos registro oficial</b> até o fechamento desta edição. Não significa que sejam falsas — significa que não estão confirmadas. Publicamos assim, com essa ressalva, porque achamos que você tem o direito de saber o que circula e o que ainda não foi comprovado.</p>
-    <div id="listaCircula"></div>
-  </div>
-</section>
+
 
 <footer>
   <div class="wrap">
@@ -207,22 +210,21 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Estado' };
 // o chapeu mostra o nome do estado da propria materia, nao a palavra "Estado"
 const SELO_NIVEL = {
-  apurado:   { txt:'Apurado pela redação',       cor:'#1F5C3D', fundo:'#E7F1EB', borda:'#BFD9CB' },
-  atribuido: { txt:'Atribuído a fonte oficial',  cor:'#8A6D1F', fundo:'#F7EFD9', borda:'#E3D3A4' }
+  confirmado:       { cor:'var(--verde)', fundo:'#EAF3EE' },
+  atribuido:        { cor:'var(--oro)',   fundo:'#F9F2E0' },
+  'sem-confirmacao':{ cor:'var(--fraco)', fundo:'#F2F2F2' }
 };
 function selo(i){
-  const s = SELO_NIVEL[i.nivel];
-  if (!s) return '';
-  const txt = i.nivel === 'atribuido' && (i.veiculos||[]).length
-    ? 'Atribuído a fonte oficial por ' + i.veiculos.slice(0,3).join(', ')
-    : s.txt;
-  return `<span class="evid" style="color:${s.cor};background:${s.fundo};border-color:${s.borda}">${esc(txt)}</span>`;
+  const n = i.nivel || 'confirmado';
+  const c = SELO_NIVEL[n] || SELO_NIVEL.confirmado;
+  const txt = i.selo || (n === 'confirmado' ? 'Confirmado oficialmente' : 'Sem confirmação');
+  return `<span class="evid" style="color:${c.cor};background:${c.fundo}">${esc(txt)}</span>`;
 }
 
+const ESTADOS = { mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
 const chapeuDe = i => i.editoria === 'regional'
   ? (ESTADOS[i.uf] || NOMES.regional)
   : (NOMES[i.editoria] || i.editoria);
-const ESTADOS = { mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
 let ED = { itens:[], pautas:[] }, filtro = 'capa';
 // o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
 // e o link pode ser compartilhado ja no estado certo
@@ -265,73 +267,37 @@ function pintar(){
 
   let h = `<div class="topo-edicao">
     <a class="abre" href="${esc(d.link)}">
-      ${selo(d)}<span class="chapeu">${esc(chapeuDe(d))}</span>
+      <span class="chapeu">${esc(chapeuDe(d))}</span>
       <h2>${esc(d.titulo)}</h2>
       <p>${esc(d.resumo)}</p>
-      <div class="assina"><span>${esc(d.hora)}</span><span>${esc(d.fonte)}</span></div>
+      ${selo(d)}
+      <div class="assina"><span>${esc(d.hora)}</span></div>
       ${nasceu(d)}
     </a>
     ${segunda ? `<a class="segunda" href="${esc(segunda.link)}">
-      ${selo(segunda)}<span class="chapeu">${esc(chapeuDe(segunda))}</span>
+      <span class="chapeu">${esc(chapeuDe(segunda))}</span>
       <h3>${esc(segunda.titulo)}</h3>
       <p>${esc(segunda.resumo)}</p>
-      <div class="assina"><span>${esc(segunda.hora)}</span><span>${esc(segunda.fonte)}</span></div>
+      ${selo(segunda)}
+      <div class="assina"><span>${esc(segunda.hora)}</span></div>
       ${nasceu(segunda)}
     </a>` : '<div></div>'}
   </div>`;
 
+  // Agrupado por nivel de evidencia: o selo aparece uma vez, na faixa da
+  // secao, e as materias abaixo herdam. Repetir em cada cartao poluia.
   if (resto.length) {
     h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
-      ${selo(i)}<span class="chapeu">${esc(chapeuDe(i))}</span>
+      <span class="chapeu">${esc(chapeuDe(i))}</span>
       <h3>${esc(i.titulo)}</h3>
       <p>${esc(i.resumo)}</p>
-      <div class="assina"><span>${esc(i.hora)}</span><span>${esc(i.fonte)}</span></div>
+      ${selo(i)}
+      <div class="assina"><span>${esc(i.hora)}</span></div>
       ${nasceu(i)}
     </a>`).join('') + '</div>';
   }
 
   alvo.innerHTML = h;
-}
-
-function pintarCircula(){
-  const todas = ED.circulando || [];
-  // obedece a aba escolhida: no Brasil so nota nacional, no estado so daquele estado
-  const lista = filtro === 'capa'
-    ? todas.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
-    : filtro === 'regional'
-      ? todas.filter(i => i.editoria === 'regional' && i.uf === estado)
-      : todas.filter(i => i.editoria === filtro);
-
-  const box = $('#boxCircula');
-  if (!lista.length) { box.style.display = 'none'; return; }
-  box.style.display = '';
-
-  $('#listaCircula').innerHTML = '<div class="lista-c">' + lista.map((i, n) => `
-    <article class="nota-c">
-      <span class="selo">sem confirmação oficial</span>
-      <h5>${esc(i.titulo)}</h5>
-      <p>${esc((i.corpo||[])[0] || '')}</p>
-      <button class="ajuda" data-n="${n}">Você sabe algo?</button>
-      <div class="caixa" id="cx${n}">
-        <textarea placeholder="Conte o que você sabe. Pode ser anônimo."></textarea>
-        <button class="env" data-n="${n}">Enviar</button>
-        <small>Vai direto para a redação e não aparece no site.</small>
-      </div>
-    </article>`).join('') + '</div>';
-
-  $('#listaCircula').querySelectorAll('.ajuda').forEach(b => b.addEventListener('click', () => {
-    document.getElementById('cx' + b.dataset.n).classList.toggle('aberta');
-  }));
-  $('#listaCircula').querySelectorAll('.env').forEach(b => b.addEventListener('click', () => {
-    const cx = document.getElementById('cx' + b.dataset.n);
-    const t = cx.querySelector('textarea').value.trim();
-    if (t.length < 10) { alert('Escreva um pouco mais para a redação entender.'); return; }
-    // sem banco ainda: abre o e-mail da redação com o texto pronto
-    const assunto = encodeURIComponent('Contribuição do leitor');
-    const corpo = encodeURIComponent(t + '\n\n---\nSobre: ' + (ED.circulando[b.dataset.n]?.titulo || ''));
-    location.href = `mailto:redacao@meridiano.com.br?subject=${assunto}&body=${corpo}`;
-    cx.innerHTML = '<p style="font-family:var(--mono);font-size:11px;color:var(--fraco)">Obrigado. A redação vai ler.</p>';
-  }));
 }
 
 function pintarDescarte(){
@@ -370,7 +336,21 @@ async function carregar(){
         itens.push(i);
       }
     }
-    itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+    // as notas sem confirmacao entram na edicao normal, com selo cinza
+    for (const c of circulando) {
+      itens.push({
+        id: c.id, editoria: c.editoria, uf: c.uf,
+        titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
+        fonte: 'Meridiano', link: '#', iso: c.iso, hora: c.hora,
+        nivel: 'sem-confirmacao', selo: 'Sem confirmação'
+      });
+    }
+
+    // ordem por importancia, nao por evidencia: confirmado pesa, mas o que
+    // muitos veiculos deram tambem, e o mais recente desempata
+    const peso = i => (i.nivel === 'confirmado' ? 3 : i.nivel === 'atribuido' ? 2 : 0)
+                    + Math.min(3, i.quentura || 0);
+    itens.sort((a,b) => (peso(b) - peso(a)) || (Date.parse(b.iso) - Date.parse(a.iso)));
 
     const pautas = [];
     for (const p of partes) for (const x of (p.pautas || [])) pautas.push(x);
@@ -401,7 +381,7 @@ async function carregar(){
     $('#conteudo').innerHTML = '<p class="aviso">Não consegui ler <b>dados/edicao.json</b>.<br>Se estiver abrindo do computador, publique ou rode <b>npx serve</b> na pasta.</p>';
     return;
   }
-  pintar(); pintarCircula(); pintarDescarte();
+  pintar(); pintarDescarte();
   if(ED.gerado){
     $('#quando').textContent = faz(ED.gerado);
     $('#rodape').textContent = 'edição de ' + new Date(ED.gerado).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'});
@@ -413,7 +393,7 @@ async function carregar(){
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   filtro = b.dataset.f;
   document.querySelectorAll('nav button').forEach(o => o.setAttribute('aria-pressed', o===b));
-  pintar(); pintarCircula();
+  pintar();
 }));
 
 function aplicarEstado(){
@@ -421,7 +401,7 @@ function aplicarEstado(){
   const p = $('#praca'); if (p) p.textContent = 'edição ' + ESTADOS[estado];
   $('#btEstado').textContent = ESTADOS[estado];
   location.hash = estado;
-  pintar(); pintarCircula();
+  pintar();
 }
 $('#selEstado').addEventListener('change', e => {
   estado = e.target.value;
