@@ -6,22 +6,24 @@ on:
   workflow_dispatch:
     inputs:
       estado:
-        description: 'Estado da edicao regional'
+        description: 'Um estado so (deixe vazio para os tres)'
         required: false
-        default: 'mt'
+        default: ''
         type: choice
-        options: ['mt', 'rs', 'rj']
+        options: ['', 'mt', 'rs', 'rj']
 
 permissions: { contents: write }
 
 jobs:
+  # Os tres estados rodam AO MESMO TEMPO. Cada um grava so o seu arquivo,
+  # entao nao ha colisao. O commit acontece depois, num passo separado.
   edicao:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     strategy:
-      max-parallel: 1          # um estado por vez, para nao brigar no commit
+      fail-fast: false          # um estado quebrar nao derruba os outros
       matrix:
-        estado: [mt]           # acrescente rs e rj quando quiser as tres edicoes
+        estado: [mt, rs, rj]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,9 +32,31 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ESTADO: ${{ inputs.estado || matrix.estado }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: edicao-${{ matrix.estado }}
+          path: |
+            dados/edicao-*.json
+            dados/arquivo-*.json
+            materia/
+          retention-days: 1
+          if-no-files-found: ignore
+
+  # Junta o resultado dos tres e faz UM commit so.
+  publicar:
+    needs: edicao
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: recebido, merge-multiple: true }
       - run: |
+          mkdir -p dados materia
+          cp -f recebido/dados/*.json dados/ 2>/dev/null || true
+          cp -rf recebido/materia/* materia/ 2>/dev/null || true
+          rm -rf recebido
           git config user.name "Il Meridiano"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash || true
-          git add dados/edicao.json dados/arquivo.json materia
-          git diff --staged --quiet || (git commit -m "edicao ${{ inputs.estado || matrix.estado }}" && git push)
+          git add dados materia
+          git diff --staged --quiet || (git commit -m "edicao dos tres estados" && git push)
