@@ -556,8 +556,8 @@ try {
 const circulando = [];
 if (temChave() && soPautaFiltrada.length) {
   const candidatas = soPautaFiltrada
-    .filter(p => (p.quentura || 0) >= 2)          // so o que ecoa de verdade
-    .slice(0, 4);
+    .filter(p => (p.quentura || 0) >= 1)   // duas fontes ja e circulacao
+    .slice(0, 6);
 
   for (const c of candidatas) {
     try {
@@ -574,7 +574,8 @@ if (temChave() && soPautaFiltrada.length) {
       console.log('     circ pulou: ' + String(e.message).slice(0,52));
     }
   }
-  if (circulando.length) console.log(`\n  5. CIRCULANDO — ${circulando.length} notas escritas`);
+  console.log(`\n  5. CIRCULANDO — ${candidatas.length} candidatas · ${circulando.length} notas escritas`);
+  if (!candidatas.length) console.log('     nenhuma historia com eco suficiente nesta rodada');
 }
 
 await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
