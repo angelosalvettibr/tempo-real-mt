@@ -5,7 +5,8 @@ import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA } from './estados.m
 import { lerListagem } from './assessorias.mjs';
 
 const CHAVE = process.env.GEMINI_API_KEY || '';
-const SO_ESTADO = process.env.ESTADO || '';   // opcional: testar um estado só
+const SO_ESTADO = (process.env.ESTADO || '').trim().toLowerCase();
+const TODOS = !SO_ESTADO || SO_ESTADO === 'todos';
 const dormir = ms => new Promise(r => setTimeout(r, ms));
 
 let verdes = 0, vermelhos = 0;
@@ -17,8 +18,12 @@ async function pegar(url, ms = 12000){
   const t0 = Date.now();
   try {
     const r = await fetch(url, { signal:c.signal, redirect:'follow',
-      headers:{ 'User-Agent':'IlMeridiano/1.0 (+contato@ilmeridiano.com.br)',
-                Accept:'application/rss+xml, application/atom+xml, application/xml, text/html, */*' }});
+      headers:{
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+        'Accept':'application/rss+xml, application/atom+xml, application/xml;q=0.9, text/html;q=0.8, */*;q=0.7',
+        'Accept-Language':'pt-BR,pt;q=0.9,en;q=0.8',
+        'X-Contact':'contato@ilmeridiano.com.br'
+      }});
     const bytes = new Uint8Array(await r.arrayBuffer());
     const ct = r.headers.get('content-type') || '';
     let cs = (ct.match(/charset=([\w-]+)/i) || [])[1];
@@ -62,7 +67,7 @@ async function feed(id, nome, url, cesta){
 }
 
 console.log('\n  DIAGNÓSTICO IL MERIDIANO · ' + new Date().toISOString());
-console.log('  nada será gravado · nenhum commit será feito');
+console.log(`  estado: ${TODOS ? 'todos' : SO_ESTADO.toUpperCase()} · nada será gravado, nenhum commit será feito`);
 console.log('  ' + '='.repeat(76));
 
 console.log('\n  PAUTA GERAL — nacional e internacional, igual para todos os estados');
@@ -74,7 +79,7 @@ console.log('  ' + '-'.repeat(76));
 for (const f of NACIONAL) await feed(f.id, f.nome, f.url, null);
 
 for (const [uf, E] of Object.entries(ESTADOS)) {
-  if (SO_ESTADO && SO_ESTADO !== uf) continue;
+  if (!TODOS && SO_ESTADO !== uf) continue;
 
   console.log(`\n  ${'='.repeat(76)}`);
   console.log(`  ESTADO: ${E.nome} (${E.uf}) · capital ${E.capital}`);

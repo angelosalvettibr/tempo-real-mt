@@ -114,8 +114,12 @@ async function buscar(url, ms=20000, tentativas=2){
     const t = setTimeout(()=>c.abort(), ms);
     try {
       const r = await fetch(url, { signal:c.signal, redirect:'follow',
-        headers:{ 'User-Agent':'IlMeridiano/1.0 (+contato@ilmeridiano.com.br)',
-                  Accept:'application/rss+xml, application/atom+xml, application/xml, text/xml, */*' }});
+        headers:{
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+        'Accept':'application/rss+xml, application/atom+xml, application/xml;q=0.9, text/html;q=0.8, */*;q=0.7',
+        'Accept-Language':'pt-BR,pt;q=0.9,en;q=0.8',
+        'X-Contact':'contato@ilmeridiano.com.br'
+      }});
       if (!r.ok) throw new Error('HTTP '+r.status);
 
       // Folha e varios portais publicam RSS em ISO-8859-1. Ler tudo como UTF-8

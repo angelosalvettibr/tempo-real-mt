@@ -26,8 +26,8 @@ export const ESTADOS = {
       { id:'cenariomt',   nome:'CenárioMT',      url:'https://www.cenariomt.com.br/feed' },
       { id:'vgnoticias',  nome:'VG Notícias',    url:'https://www.vgnoticias.com.br/feed' },
       { id:'sonoticias',  nome:'Só Notícias',    url:'https://www.sonoticias.com.br/feed' },
-      { id:'hipernoticias',nome:'Hipernotícias', url:'https://www.hipernoticias.com.br/feed/' },
-      { id:'reportermt',  nome:'Repórter MT',    url:'https://www.reportermt.com.br/feed/' },
+      { id:'hipernoticias',nome:'Hipernotícias', url:'https://www.hipernoticias.com.br/rss' },
+      { id:'reportermt',  nome:'Repórter MT',    url:'https://www.reportermt.com.br/rss' },
       { id:'primeirapagina',nome:'Primeira Página', url:'https://www.primeirapagina.com.br/feed/' }
     ],
 
@@ -64,8 +64,8 @@ export const ESTADOS = {
 
     veiculos: [
       { id:'g1rs',       nome:'g1 RS',              url:'https://g1.globo.com/rss/g1/rs/rio-grande-do-sul/' },
-      { id:'gzh',        nome:'GZH',                url:'https://gauchazh.clicrbs.com.br/rss/ultimas/' },
-      { id:'correiodopovo',nome:'Correio do Povo',  url:'https://www.correiodopovo.com.br/rss/' },
+      { id:'gzh',        nome:'GZH',                url:'https://gauchazh.clicrbs.com.br/rss/ultimas.xml' },
+      { id:'correiodopovo',nome:'Correio do Povo',  url:'https://www.correiodopovo.com.br/rss/ultimas.xml' },
       { id:'jc',         nome:'Jornal do Comércio', url:'https://www.jornaldocomercio.com/rss' },
       { id:'sul21',      nome:'Sul21',              url:'https://sul21.com.br/feed/' },
       { id:'matinal',    nome:'Matinal',            url:'https://www.matinaljornalismo.com.br/feed/' },
@@ -131,13 +131,13 @@ export const NACIONAL = [
   { id:'ab-justica',  nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml' },
   { id:'ab-geral',    nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml' },
   { id:'ab-inter',    nome:'Agência Brasil', editoria:'internacional', url:'https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml' },
-  { id:'camara',      nome:'Agência Câmara', editoria:'brasil',        url:'https://www.camara.leg.br/noticias/rss' },
-  { id:'senado',      nome:'Agência Senado', editoria:'brasil',        url:'https://www12.senado.leg.br/noticias/ultimas/feed' },
+  { id:'camara',      nome:'Agência Câmara', editoria:'brasil',        url:'https://www.camara.leg.br/noticias/rss/ultimas.xml' },
+  { id:'senado',      nome:'Agência Senado', editoria:'brasil',        url:'https://www12.senado.leg.br/noticias/rss/ultimas' },
   { id:'onu',         nome:'ONU News',       editoria:'internacional', url:'https://news.un.org/feed/subscribe/pt/news/all/rss.xml' },
   { id:'conversation',nome:'The Conversation',editoria:'internacional',url:'https://theconversation.com/br/articles.atom' },
   { id:'vaticano',    nome:'Vatican News',   editoria:'internacional', url:'https://www.vaticannews.va/pt.rss.xml' },
-  { id:'embrapa',     nome:'Embrapa',        editoria:'brasil',        url:'https://www.embrapa.br/rss/noticias' },
-  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/rss/noticias' }
+  { id:'embrapa',     nome:'Embrapa',        editoria:'brasil',        url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss' },
+  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss' }
 ];
 
 // Pauta nacional e internacional, igual para todos os estados.
@@ -150,7 +150,7 @@ export const PAUTA_GERAL = [
   { id:'folhamundo', nome:'Folha Mundo', editoria:'internacional', url:'https://feeds.folha.uol.com.br/mundo/rss091.xml' },
   { id:'cnn',        nome:'CNN Brasil',  editoria:'brasil',        url:'https://www.cnnbrasil.com.br/feed/' },
   { id:'uol',        nome:'UOL',         editoria:'brasil',        url:'https://rss.uol.com.br/feed/noticias.xml' },
-  { id:'estadao',    nome:'Estadão',     editoria:'brasil',        url:'https://www.estadao.com.br/rss/ultimas.xml' },
+  { id:'estadao',    nome:'Estadão',     editoria:'brasil',        url:'https://www.estadao.com.br/arquivo/rss/ultimas.xml' },
   { id:'poder360',   nome:'Poder360',    editoria:'brasil',        url:'https://www.poder360.com.br/feed/' },
   { id:'metropoles', nome:'Metrópoles',  editoria:'brasil',        url:'https://www.metropoles.com/feed' },
   { id:'bbcbrasil',  nome:'BBC Brasil',  editoria:'internacional', url:'https://feeds.bbci.co.uk/portuguese/rss.xml' },
@@ -159,7 +159,7 @@ export const PAUTA_GERAL = [
   { id:'euronews',   nome:'Euronews',    editoria:'internacional', url:'https://pt.euronews.com/rss' },
   { id:'infomoney',  nome:'InfoMoney',   editoria:'brasil',        url:'https://www.infomoney.com.br/feed/' },
   { id:'jota',       nome:'JOTA',        editoria:'brasil',        url:'https://www.jota.info/feed' },
-  { id:'globorural', nome:'Globo Rural', editoria:'brasil',        url:'https://globorural.globo.com/rss/ultimas/feed.xml' }
+  { id:'globorural', nome:'Globo Rural', editoria:'brasil',        url:'https://g1.globo.com/rss/g1/economia/agronegocios/' }
 ];
 
 export const CAMINHOS_ASSESSORIA = ['/noticias', '/noticia', '/imprensa', '/comunicacao/noticias', '/sala-de-imprensa', '/'];

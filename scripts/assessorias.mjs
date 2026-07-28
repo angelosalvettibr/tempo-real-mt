@@ -64,14 +64,23 @@ export function lerListagem(html, base){
     })
     .filter(i => {
       if (!/^https?:\/\//.test(i.link) || !i.link.startsWith(base)) return false;
-      if (!LINK_NOTICIA.some(re => re.test(i.link))) return false;   // link tem que ser de noticia
       const t = i.titulo;
-      if (t.length < 32) return false;                               // manchete e longa
-      if (t.split(/\s+/).length < 6) return false;                   // e tem varias palavras
-      if (MENU.test(t)) return false;                                // nao e item de menu
-      if (!VERBOS.test(semAcento(t))) return false;                  // manchete tem verbo
-      if (/^[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s]{20,}$/.test(t)) return false;          // TUDO MAIUSCULO e banner
-      return true;
+
+      // eliminatorios: nao adianta pontuar quem e claramente menu
+      if (t.length < 30) return false;
+      if (t.split(/\s+/).length < 5) return false;
+      if (MENU.test(t)) return false;
+      if (/^[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s]{20,}$/.test(t)) return false;
+
+      // pontuacao: cada sinal de que e manchete vale pontos.
+      // Exigir todos os sinais derrubou 3 de 5 orgaos que funcionavam.
+      let p = 0;
+      if (LINK_NOTICIA.some(re => re.test(i.link))) p += 2;   // link de noticia
+      if (VERBOS.test(semAcento(t))) p += 2;                  // titulo com verbo
+      if (t.split(/\s+/).length >= 8) p += 1;                 // frase longa
+      if (t.length >= 45) p += 1;
+      if (/[:,;]|"|"|'/.test(t)) p += 1;                      // pontuacao interna
+      return p >= 3;
     });
 
   const visto = new Set();
