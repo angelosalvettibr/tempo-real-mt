@@ -11,6 +11,7 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
+import { detectarMunicipio, destaques } from './municipios.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
@@ -507,12 +508,14 @@ if (temChave()) {
         historico: parecidos.map(x => ({ dia: (x.iso||'').slice(0,10), titulo: x.titulo }))
       });
 
+      const mun = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
       await writeFile('materia/'+arq, pagina(
-        { chapeu: i.editoria==='regional'?E.nome:i.editoria==='internacional'?'Mundo':'Brasil',
+        { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
           origemNome: i.veiculo, radar: false, checar:[] },
-        { link:i.link, municipio:'' }, i.iso), 'utf8');
+        { link:i.link, municipio: mun ? mun.nome : '' }, i.iso), 'utf8');
       publicados.push({
+        municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
         id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
         titulo:m.titulo, resumo:m.linhaFina,
         fonte:'Meridiano, com informações de '+i.veiculo,
@@ -728,7 +731,9 @@ if (temChave() && soPautaFiltrada.length) {
               origemNome: caca.fonte, radar: false, checar: [],
               resgatada: { procuradoEm: caca.procuradoEm, orgao: caca.fonte } },
             { link: caca.link, municipio: '' }, agora), 'utf8');
+          const munR = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
           publicados.push({
+            municipio: munR ? munR.id : null, municipioNome: munR ? munR.nome : null,
             id: 'ilm:' + slug(m.titulo), editoria: edNota, chapeu: 'Nosso texto',
             titulo: m.titulo, resumo: m.linhaFina,
             fonte: 'Meridiano, com informacoes de ' + caca.fonte,
@@ -778,7 +783,9 @@ if (temChave() && soPautaFiltrada.length) {
                  'Ouvir o outro lado antes de publicar como confirmada']
       }, { link: '', municipio: '' }, new Date().toISOString()), 'utf8');
 
+      const munC = GERAL ? null : detectarMunicipio(n.titulo + ' ' + n.corpo.join(' '), UF);
       circulando.push({
+        municipio: munC ? munC.id : null, municipioNome: munC ? munC.nome : null,
         link: '/materia/' + arqC,
         corpo: n.corpo,
         id: 'circ:' + slug(n.titulo),
@@ -802,6 +809,9 @@ await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
   gerado: new Date().toISOString(),
   modelo: modeloUsado(),
   numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, resgatadas, semFonte:soPautaFiltrada.length },
+  // a capa le esta lista para montar as abas de cidade: quem manda e o
+  // municipios.mjs, e mais nada precisa ser editado a mao
+  cidades: destaques(UF),
   itens: publicados,
   circulando,
   pautas: soPautaFiltrada.slice(0,18).map(p=>({

@@ -53,8 +53,15 @@ export const OFICIAIS = {
     { id:'cuiaba',    nome:'Prefeitura de Cuiabá',           url:'https://www.cuiaba.mt.gov.br/noticias',    base:'https://www.cuiaba.mt.gov.br',     temas:[] },
     { id:'vg',        nome:'Prefeitura de Várzea Grande',    url:'https://www.varzeagrande.mt.gov.br/noticias', base:'https://www.varzeagrande.mt.gov.br', temas:[] },
     { id:'sinop',     nome:'Prefeitura de Sinop',            url:'https://www.sinop.mt.gov.br/noticias',     base:'https://www.sinop.mt.gov.br',      temas:[] },
+    { id:'camara-sinop', nome:'Câmara de Sinop',             url:'https://www.camarasinop.mt.gov.br/noticias', base:'https://www.camarasinop.mt.gov.br', temas:[] },
     { id:'rondonopolis', nome:'Prefeitura de Rondonópolis',  url:'https://www.rondonopolis.mt.gov.br/noticias', base:'https://www.rondonopolis.mt.gov.br', temas:[] },
-    { id:'sorriso',   nome:'Prefeitura de Sorriso',          url:'https://www.sorriso.mt.gov.br/noticias',   base:'https://www.sorriso.mt.gov.br',    temas:[] }
+    { id:'sorriso',   nome:'Prefeitura de Sorriso',          url:'https://www.sorriso.mt.gov.br/noticias',   base:'https://www.sorriso.mt.gov.br',    temas:[] },
+    // --- hiperlocal: Cuiaba e Varzea Grande ---
+    { id:'camara-cba', nome:'Câmara de Cuiabá',              url:'https://www.camaracuiaba.mt.gov.br/noticias', base:'https://www.camaracuiaba.mt.gov.br', temas:[] },
+    { id:'camara-vg',  nome:'Câmara de Várzea Grande',       url:'https://www.camaravg.mt.gov.br/noticias',  base:'https://www.camaravg.mt.gov.br',   temas:[] },
+    { id:'sanecap',    nome:'Sanecap',                       url:'https://www.sanecap.com.br/noticias',      base:'https://www.sanecap.com.br',       temas:['obras'] },
+    { id:'dae-vg',     nome:'DAE Várzea Grande',             url:'https://www.daevg.com.br/noticias',        base:'https://www.daevg.com.br',         temas:['obras'] },
+    { id:'defesacivil-cba', nome:'Defesa Civil de Cuiabá',   url:'https://www.cuiaba.mt.gov.br/defesacivil/noticias', base:'https://www.cuiaba.mt.gov.br', temas:['defesa'] }
   ],
 
   rs: [
@@ -71,7 +78,10 @@ export const OFICIAIS = {
     { id:'gov-rs',    nome:'Governo do RS',                  url:'https://estado.rs.gov.br/noticias',        base:'https://estado.rs.gov.br',         temas:[] },
     { id:'al-rs',     nome:'Assembleia do RS',               url:'https://www.al.rs.gov.br/agenciadenoticias', base:'https://www.al.rs.gov.br',       temas:[] },
     { id:'poa',       nome:'Prefeitura de Porto Alegre',     url:'https://prefeitura.poa.br/noticias',       base:'https://prefeitura.poa.br',        temas:[] },
-    { id:'caxias',    nome:'Prefeitura de Caxias do Sul',    url:'https://caxias.rs.gov.br/noticias',        base:'https://caxias.rs.gov.br',         temas:[] }
+    { id:'caxias',    nome:'Prefeitura de Caxias do Sul',    url:'https://caxias.rs.gov.br/noticias',        base:'https://caxias.rs.gov.br',         temas:[] },
+    { id:'camara-caxias', nome:'Câmara de Caxias do Sul', url:'https://www.camaracaxias.rs.gov.br/noticias', base:'https://www.camaracaxias.rs.gov.br', temas:[] },
+    { id:'santoangelo', nome:'Prefeitura de Santo Ângelo',   url:'https://www.santoangelo.rs.gov.br/noticias', base:'https://www.santoangelo.rs.gov.br', temas:[] },
+    { id:'camara-santoangelo', nome:'Câmara de Santo Ângelo', url:'https://www.camarasantoangelo.rs.gov.br/noticias', base:'https://www.camarasantoangelo.rs.gov.br', temas:[] }
   ],
 
   rj: [
@@ -87,7 +97,9 @@ export const OFICIAIS = {
     { id:'alerj',     nome:'Alerj',                          url:'https://www.alerj.rj.gov.br/Visualizar/Noticias', base:'https://www.alerj.rj.gov.br', temas:[] },
     { id:'rio',       nome:'Prefeitura do Rio',              url:'https://prefeitura.rio/noticias',          base:'https://prefeitura.rio',           temas:[] },
     { id:'defesacivil-rio', nome:'Defesa Civil do Rio',      url:'https://www.rio.rj.gov.br/web/defesacivil/noticias', base:'https://www.rio.rj.gov.br', temas:['defesa'] },
-    { id:'niteroi',   nome:'Prefeitura de Niterói',          url:'https://www.niteroi.rj.gov.br/noticias',   base:'https://www.niteroi.rj.gov.br',    temas:[] }
+    { id:'niteroi',   nome:'Prefeitura de Niterói',          url:'https://www.niteroi.rj.gov.br/noticias',   base:'https://www.niteroi.rj.gov.br',    temas:[] },
+    { id:'buzios',    nome:'Prefeitura de Búzios',           url:'https://www.buzios.rj.gov.br/noticias',    base:'https://www.buzios.rj.gov.br',     temas:[] },
+    { id:'camara-buzios', nome:'Câmara de Búzios',           url:'https://www.cmab.rj.gov.br/noticias',      base:'https://www.cmab.rj.gov.br',       temas:[] }
   ],
 
   // Vale para qualquer edição: o caso pode ser estadual, mas o registro
