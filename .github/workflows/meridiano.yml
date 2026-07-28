@@ -1,0 +1,22 @@
+name: Il Meridiano
+
+on: { schedule: [ { cron: '0 */3 * * *' } ], workflow_dispatch: {} }
+permissions: { contents: write }
+
+jobs:
+  edicao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node scripts/meridiano.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - run: |
+          git config user.name "Il Meridiano"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash || true
+          git add dados/edicao.json materia
+          git diff --staged --quiet || (git commit -m "edicao" && git push)
