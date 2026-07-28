@@ -208,6 +208,10 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 
 <script>
 const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Estado' };
+// o chapeu mostra o nome do estado da propria materia, nao a palavra "Estado"
+const chapeuDe = i => i.editoria === 'regional'
+  ? (ESTADOS[i.uf] || NOMES.regional)
+  : (NOMES[i.editoria] || i.editoria);
 const ESTADOS = { mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
 let ED = { itens:[], pautas:[] }, filtro = 'capa';
 // o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
@@ -249,7 +253,7 @@ function pintar(){
 
   const d = lista[0], resto = lista.slice(1);
   let h = `<a class="abre" href="${esc(d.link)}">
-    <span class="chapeu">${esc(NOMES[d.editoria]||d.editoria)} · nosso texto</span>
+    <span class="chapeu">${esc(chapeuDe(d))} · nosso texto</span>
     <h2>${esc(d.titulo)}</h2>
     <p>${esc(d.resumo)}</p>
     <div class="assina"><span>${esc(d.hora)}</span><span>${esc(d.fonte)}</span></div>
@@ -257,7 +261,7 @@ function pintar(){
   </a>`;
 
   h += '<div class="grade">' + resto.map(i => `<a class="art" href="${esc(i.link)}">
-    <span class="chapeu">${esc(NOMES[i.editoria]||i.editoria)}</span>
+    <span class="chapeu">${esc(chapeuDe(i))}</span>
     <h3>${esc(i.titulo)}</h3>
     <p>${esc(i.resumo)}</p>
     <div class="assina"><span>${esc(i.hora)}</span><span>${esc(i.fonte)}</span></div>
