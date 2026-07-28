@@ -40,7 +40,8 @@ jobs:
           # copia velha de uma sobrescrevia a nova de outra.
           path: |
             dados/edicao-${{ matrix.edicao }}.json
-            dados/arquivo-${{ matrix.edicao }}.json
+            dados/arquivo/${{ matrix.edicao }}-*.json
+            dados/arquivo/indice.json
             materia/
           retention-days: 1
           if-no-files-found: ignore
@@ -56,6 +57,7 @@ jobs:
       - run: |
           mkdir -p dados materia
           cp -f recebido/dados/*.json dados/ 2>/dev/null || true
+          mkdir -p dados/arquivo && cp -f recebido/dados/arquivo/*.json dados/arquivo/ 2>/dev/null || true
           cp -rf recebido/materia/* materia/ 2>/dev/null || true
           rm -rf recebido
           git config user.name "Il Meridiano"
