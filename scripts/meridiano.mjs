@@ -439,6 +439,13 @@ for (const p of P.itens) {
   const eco = P.itens.filter(o => o !== p && o.veiculo !== p.veiculo && parecidas(o.titulo, p.titulo) >= 0.35);
   p.quentura = eco.length;
   p.tambemEm = [...new Set(eco.map(e => e.veiculo))].slice(0, 3);
+  // Quem publicou, com a manchete e o endereco. E o que permite creditar a
+  // fonte com nome e link, em vez de reescrever no escuro.
+  p.ondeCirculou = [{ veiculo:p.veiculo, titulo:p.titulo, link:p.link },
+                    ...eco.map(e => ({ veiculo:e.veiculo, titulo:e.titulo, link:e.link }))]
+    .filter(x => x.veiculo && x.titulo)
+    .filter((x,i,a) => a.findIndex(y => y.veiculo === x.veiculo) === i)
+    .slice(0, 6);
   soPauta.push(p);
 }
 
@@ -753,7 +760,11 @@ if (temChave() && soPautaFiltrada.length) {
         }
       }
 
-      const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: edNota });
+      const ondeCirculou = c.ondeCirculou || [{ veiculo:c.veiculo, titulo:c.titulo, link:c.link }];
+      const n = await escreverCirculacao({
+        titulo: c.titulo, editoria: edNota,
+        manchetes: ondeCirculou.map(x => x.titulo)
+      });
       // pagina propria: quando a confirmacao chegar, esta mesma pagina e
       // atualizada — e o leitor ve o caminho da historia
       const arqC = 'nc-' + slug(n.titulo) + '.html';
@@ -777,6 +788,8 @@ if (temChave() && soPautaFiltrada.length) {
         linhaFina: n.aviso,
         corpo: n.corpo,
         naoConfirmada: true,
+        seSabe: n.seSabe, falta: n.falta,
+        ondeCirculou,
         provenencia,
         checar: ['Procurar o registro no órgão competente',
                  'Confirmar data, local e envolvidos',
@@ -786,6 +799,7 @@ if (temChave() && soPautaFiltrada.length) {
       const munC = GERAL ? null : detectarMunicipio(n.titulo + ' ' + n.corpo.join(' '), UF);
       circulando.push({
         municipio: munC ? munC.id : null, municipioNome: munC ? munC.nome : null,
+        seSabe: n.seSabe, falta: n.falta, ondeCirculou,
         link: '/materia/' + arqC,
         corpo: n.corpo,
         id: 'circ:' + slug(n.titulo),

@@ -280,6 +280,23 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
+.saber{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:28px 0}
+.saber>div{padding:16px 19px}
+.saber>div+div{border-left:1px solid var(--linha)}
+.saber b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:10px}
+.saber .sim b{color:var(--verde)}
+.saber .nao b{color:var(--sinal)}
+.saber ul{margin:0 0 0 16px;font-family:'Source Serif 4',Georgia,serif;font-size:14.5px;line-height:1.55;color:#3C3C3C}
+.saber li{margin-bottom:7px}
+@media(max-width:620px){.saber{grid-template-columns:1fr}.saber>div+div{border-left:0;border-top:1px solid var(--linha)}}
+.circulou{border:1px solid var(--linha);padding:16px 19px;margin:26px 0;background:#FAFAF8}
+.circulou b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:4px}
+.circulou .obs{font-family:'Source Serif 4',Georgia,serif;font-size:13.5px;color:var(--fraco);margin-bottom:12px}
+.circulou ol{margin:0 0 0 17px;font-family:'Source Serif 4',Georgia,serif;font-size:14.5px;line-height:1.5}
+.circulou li{margin-bottom:9px}
+.circulou .vc{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sinal);display:block}
+.circulou a{color:#3C3C3C;text-decoration:none;border-bottom:1px solid var(--linha2,#E4E1D8)}
+.circulou a:hover{border-bottom-color:var(--tinta)}
 .resgate{border-left:3px solid var(--verde);background:#F4F8F5;padding:15px 19px;margin:26px 0;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.62}
 .resgate b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:8px}
 .resgate p{color:#33403A}
@@ -329,6 +346,17 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <div class="assina">Redação Meridiano · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
 
   <div class="corpo">${corpoHtml}</div>
+
+  ${(m.seSabe?.length || m.falta?.length) ? `<div class="saber">
+    <div class="sim"><b>O que se sabe</b><ul>${(m.seSabe||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="nao"><b>O que falta para confirmar</b><ul>${(m.falta||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+  </div>` : ''}
+
+  ${m.ondeCirculou?.length ? `<div class="circulou">
+    <b>Onde esta informação circulou</b>
+    <p class="obs">Não reproduzimos o texto de ninguém. Listamos quem publicou, com o endereço original, para você conferir na fonte.</p>
+    <ol>${m.ondeCirculou.map(v => `<li><span class="vc">${esc(v.veiculo)}</span>${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener nofollow">${esc(v.titulo)}</a>` : esc(v.titulo)}</li>`).join('')}</ol>
+  </div>` : ''}
 
   ${m.resgatada ? `<div class="resgate">
     <b>Como esta matéria chegou aqui</b>

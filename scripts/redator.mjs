@@ -203,61 +203,74 @@ export const modeloUsado = () => modeloBom || '(nenhum)';
 //   2. nunca nomear pessoa fisica comum (so cargo ou orgao publico)
 //   3. nunca dizer que e falso — nao confirmado e diferente de mentira
 
-const PROMPT_CIRCULA = (titulo, resumo, editoria) => `Você escreve para o MERIDIANO, um jornal que só publica o que confere.
+const PROMPT_CIRCULA = (titulo, editoria, manchetes) => `Você escreve para o MERIDIANO, um jornal que só publica o que confere.
 
-A informação abaixo está sendo veiculada na imprensa, mas NÃO encontramos registro em fonte oficial. Escreva uma nota curta e técnica informando o leitor.
+A informação abaixo está sendo veiculada por ${manchetes.length} ${manchetes.length === 1 ? 'veículo' : 'veículos'} da imprensa, mas NÃO encontramos registro em fonte oficial. Sua tarefa não é contar a história como se fosse verdade: é dizer com precisão o que está sendo alegado, o que já dá para afirmar e o que ainda falta para virar fato.
 
-TOM: seco, de nota de agência. O bloco em que a nota aparece já avisa que se trata de informação em circulação — então NÃO repita "circula", "relatos que circulam", "segundo relatos". Vá direto ao teor, usando o condicional.
+TOM: seco, de nota de agência. Condicional o tempo todo.
 
 REGRAS QUE NÃO PODEM SER QUEBRADAS:
-1. NUNCA afirme como fato consumado. Use o condicional: "teria sido", "teria afirmado", "estaria".
-2. NUNCA cite nome de pessoa física comum. Troque por descrição ("um casal", "um homem de 40 anos"). Cargo público, nome de político e nome de órgão PODEM aparecer.
+1. NUNCA afirme como fato consumado. Use "teria", "estaria", "seria".
+2. NUNCA cite nome de pessoa física comum. Troque por descrição ("um homem de 40 anos"). Cargo público, nome de político e nome de órgão PODEM aparecer.
 3. NUNCA diga que é falso, boato ou fake. Não confirmado é diferente de falso.
-4. NUNCA nomeie os veículos que publicaram.
-5. Use apenas o que está abaixo. Não acrescente número, data, nome ou contexto.
-6. Sem opinião, sem alarme, sem adjetivo.
+4. NUNCA escreva o nome dos veículos no texto. Diga "os veículos que publicaram" ou "as publicações". Os nomes aparecem creditados em bloco próprio, com link.
+5. NÃO INVENTE. Só use o que está nas manchetes abaixo. Não acrescente número, data, local, causa ou consequência que não esteja lá. Lacuna vai na lista FALTA — nunca preenchida por suposição.
+6. Sem opinião, sem alarme, sem adjetivo de efeito.
 
 FORMATO — exatamente isto, sem markdown:
-TITULO: (uma linha até 85 caracteres, no condicional, SEM começar com "Circula")
+TITULO: (uma linha até 85 caracteres, no condicional)
 CORPO:
-(exatamente 1 parágrafo, de uma ou duas frases. Ele deve ACRESCENTAR ao título: onde, quando, quantos, qual órgão. NUNCA repita o que já está no título com outras palavras. Se não houver nada a acrescentar, escreva apenas a informação de contexto disponível.)
+(2 a 3 parágrafos, de 2 a 3 frases cada, separados por linha em branco. O primeiro diz o teor da alegação. O segundo reúne o que as manchetes acrescentam entre si — onde, quando, quantos, qual órgão citado. O terceiro, se houver material, situa o que estaria em jogo. Se as manchetes divergem entre si, DIGA que divergem e em quê.)
+SESABE:
+- (o que é possível afirmar com segurança neste momento, 2 a 4 itens de até 16 palavras. Vale "que o assunto está sendo publicado por N veículos" — isso é fato.)
+FALTA:
+- (a lacuna concreta que impede confirmar: número do procedimento, data exata, manifestação do órgão, identificação oficial. 2 a 4 itens.)
 
 EDITORIA: ${editoria}
-INFORMAÇÃO: ${titulo}
-${resumo ? 'DETALHE: ' + resumo : ''}`;
+MANCHETES QUE CIRCULAM:
+${manchetes.map((m, n) => (n+1) + '. ' + m).join('\n')}`;
 
-export async function escreverCirculacao({ titulo, resumo, editoria }){
+export async function escreverCirculacao({ titulo, editoria, manchetes }){
   if (!temChave()) throw new Error('sem GEMINI_API_KEY');
-  const bruto = await chamar(PROMPT_CIRCULA(titulo, resumo || '', editoria || 'regional'));
+
+  const lista = (manchetes && manchetes.length ? manchetes : [titulo])
+    .map(x => String(x || '').trim()).filter(Boolean).slice(0, 8);
+
+  const bruto = await chamar(PROMPT_CIRCULA(titulo, editoria || 'regional', lista));
   const limpo = String(bruto).replace(/```[a-z]*\n?/gi,'').replace(/\*\*/g,'').trim();
 
-  let t = limpo.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1]?.trim() || '';
-  let corpo = (limpo.split(/CORPO\s*:\s*/i)[1] || '')
-    .split(/\n\s*\n/).map(x => x.trim()).filter(x => x.length > 40);
-
-  if (!t || corpo.length < 1) {
-    const b = limpo.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
-    if (b.length >= 2) { t = t || b[0].slice(0,120); corpo = corpo.length ? corpo : b.slice(1); }
-  }
-  if (!t || !corpo.length) throw new Error('nota fora do formato');
-
-  // O modelo as vezes devolve os rotulos do pedido junto com a resposta, e
-  // "EDITORIA: internacional" acabou publicado dentro do resumo.
   const limparVazamento = x => String(x)
-    .replace(/\b(EDITORIA|INFORMA[ÇC][ÃA]O|DETALHE|FORMATO|TOM|REGRAS?|T[IÍ]TULO|CORPO)\s*:.*$/gim, '')
+    .replace(/\b(EDITORIA|MANCHETES?|INFORMA[ÇC][ÃA]O|DETALHE|FORMATO|TOM|REGRAS?|T[IÍ]TULO|CORPO|SESABE|FALTA)\s*:.*$/gim, '')
     .replace(/\b(EDITORIA|DETALHE)\s*:\s*[\w-]+/gi, '')
+    .replace(/^[-•\d.\s]+/, '')
     .replace(/\s+/g, ' ').trim();
+
+  const secao = (nome, ate) => {
+    const re = new RegExp(nome + '\\s*:\\s*([\\s\\S]*?)(?=' + (ate ? ate + '\\s*:' : '$') + ')', 'i');
+    return (limpo.match(re)?.[1] || '');
+  };
+
+  let t = limpo.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1]?.trim() || '';
+
+  let corpo = secao('CORPO', 'SESABE')
+    .split(/\n\s*\n/).map(x => limparVazamento(x)).filter(x => x.length > 40);
+
+  const emLista = txt => txt.split(/\n/).map(x => limparVazamento(x))
+    .filter(x => x.length > 8 && x.length < 200).slice(0, 4);
+
+  const seSabe = emLista(secao('SESABE', 'FALTA'));
+  const falta  = emLista(secao('FALTA', null));
+
   t = limparVazamento(t);
-  corpo = corpo.map(limparVazamento).filter(x => x.length > 30);
-  if (!t || !corpo.length) throw new Error('nota vazia depois da limpeza');
+  if (!t || !corpo.length) throw new Error('nota fora do formato');
 
   // se o primeiro paragrafo so repete o titulo, nao serve
   const sa = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const pal = x => new Set(sa(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>=4));
   const pt = pal(t), pc = pal(corpo[0]);
   const iguais = [...pt].filter(w => pc.has(w)).length;
-  if (pt.size && iguais / pt.size > 0.75) throw new Error('nota repete o titulo');
-  // o rotulo do bloco ja diz que circula; no titulo fica redundante
+  if (pt.size && iguais / pt.size > 0.85) throw new Error('nota repete o titulo');
+
   t = t.replace(/^circula(-se)?\s+(que\s+)?/i, '').replace(/^informa[çc][ãa]o de que\s+/i, '');
   t = t.charAt(0).toUpperCase() + t.slice(1);
 
@@ -275,7 +288,7 @@ export async function escreverCirculacao({ titulo, resumo, editoria }){
 
   return {
     titulo: t.replace(/^["\']|["\']$/g,''),
-    corpo,
+    corpo, seSabe, falta,
     aviso: 'Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.'
   };
 }
