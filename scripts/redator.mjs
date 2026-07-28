@@ -85,7 +85,7 @@ export async function textoCompleto(url, ms = 12000){
   const t = setTimeout(() => c.abort(), ms);
   try {
     const r = await fetch(url, { signal:c.signal, redirect:'follow',
-      headers:{ 'User-Agent':'TempoRealMT/1.0' }});
+      headers:{ 'User-Agent':'Meridiano/1.0' }});
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const html = await r.text();
     const corpo = (html.match(/<article[\s\S]*?<\/article>/i)?.[0])
@@ -101,7 +101,7 @@ export async function textoCompleto(url, ms = 12000){
   } finally { clearTimeout(t); }
 }
 
-const PROMPT = (fonte, titulo, texto) => `Você é redator de um veículo de notícias de Mato Grosso chamado TEMPO REAL MT.
+const PROMPT = (fonte, titulo, texto) => `Você é redator de um veículo de notícias de Mato Grosso chamado MERIDIANO.
 
 Reescreva a notícia abaixo com suas próprias palavras, para publicação no nosso site.
 
@@ -177,3 +177,73 @@ export async function reescrever({ fonte, titulo, texto }){
 }
 
 export const modeloUsado = () => modeloBom || '(nenhum)';
+
+
+/* ================= NOTA DE CIRCULACAO ==================================== */
+//
+// Para historia que corre na imprensa mas nao tem registro oficial.
+//
+// O que a nota afirma e VERDADEIRO e e nosso: que a informacao esta
+// circulando, e que procuramos documento oficial e nao achamos. Nao afirma o
+// fato em si. Nao reproduz apuracao de ninguem — relata a circulacao.
+//
+// Tres travas dentro do prompt, e elas nao sao decorativas:
+//   1. nunca afirmar o fato como certo
+//   2. nunca nomear pessoa fisica comum (so cargo ou orgao publico)
+//   3. nunca dizer que e falso — nao confirmado e diferente de mentira
+
+const PROMPT_CIRCULA = (titulo, resumo, editoria) => `Você é redator do MERIDIANO, um jornal que só publica o que confere.
+
+Esta informação está circulando na imprensa, mas NÃO encontramos registro em fonte oficial. Escreva uma nota curta informando o leitor sobre isso.
+
+REGRAS QUE NÃO PODEM SER QUEBRADAS:
+1. NUNCA afirme o fato como certo. Use "circula", "teria", "segundo relatos que circulam".
+2. NUNCA cite nome de pessoa física comum. Se houver, troque por descrição genérica ("um casal", "um homem de 40 anos"). Cargo público e nome de órgão PODEM aparecer.
+3. NUNCA diga que é falso ou mentira. Não confirmado é diferente de falso.
+4. NUNCA cite ou nomeie os veículos que publicaram.
+5. Use apenas o que está na informação abaixo. Não acrescente contexto, número, data ou nome que não esteja lá.
+6. Não opine, não julgue, não alarme.
+7. Português do Brasil, tom seco de jornal.
+
+FORMATO — exatamente isto, sem markdown:
+TITULO: (uma linha, até 85 caracteres, começando com "Circula que" ou construção equivalente que deixe claro não ser confirmado)
+CORPO:
+(2 parágrafos curtos. O primeiro relata o que circula. O segundo diz que procuramos registro oficial e não localizamos, e que isso não significa que seja falso — significa que não está confirmado.)
+
+EDITORIA: ${editoria}
+INFORMAÇÃO QUE CIRCULA: ${titulo}
+${resumo ? 'DETALHE: ' + resumo : ''}`;
+
+export async function escreverCirculacao({ titulo, resumo, editoria }){
+  if (!temChave()) throw new Error('sem GEMINI_API_KEY');
+  const bruto = await chamar(PROMPT_CIRCULA(titulo, resumo || '', editoria || 'regional'));
+  const limpo = String(bruto).replace(/```[a-z]*\n?/gi,'').replace(/\*\*/g,'').trim();
+
+  let t = limpo.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1]?.trim() || '';
+  let corpo = (limpo.split(/CORPO\s*:\s*/i)[1] || '')
+    .split(/\n\s*\n/).map(x => x.trim()).filter(x => x.length > 40);
+
+  if (!t || corpo.length < 1) {
+    const b = limpo.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
+    if (b.length >= 2) { t = t || b[0].slice(0,120); corpo = corpo.length ? corpo : b.slice(1); }
+  }
+  if (!t || !corpo.length) throw new Error('nota fora do formato');
+
+  // Trava de saida: se o modelo afirmou como certo, recusamos.
+  const afirmativo = new RegExp([
+    'foi (preso|presa|condenad[oa]|indiciad[oa]|demitid[oa])',
+    'e (fals[ao]|mentira|verdade|culpad[oa]|inocente)',
+    '(confirmou|comprovou|desmentiu|provou) que',
+    'nao e verdade', 'trata-se de (fake|mentira|boato)', 'fake news comprovad'
+  ].join('|'), 'i');
+  const texto = t + ' ' + corpo.join(' ');
+  if (afirmativo.test(texto.normalize('NFD').replace(/[\u0300-\u036f]/g,''))) {
+    throw new Error('nota afirmativa demais, descartada');
+  }
+
+  return {
+    titulo: t.replace(/^["\']|["\']$/g,''),
+    corpo,
+    aviso: 'Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.'
+  };
+}

@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado, preparar } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
@@ -549,6 +549,34 @@ try {
   console.log('  aviso arquivo: ' + e.message);
 }
 
+// ============ CIRCULANDO — o que corre sem registro oficial ==============
+// Nota escrita por nos sobre um fato que e nosso: a informacao esta
+// circulando e nao achamos documento. Nao reproduz apuracao de ninguem,
+// nao nomeia veiculo, nao nomeia pessoa comum, nao diz que e falso.
+const circulando = [];
+if (temChave() && soPautaFiltrada.length) {
+  const candidatas = soPautaFiltrada
+    .filter(p => (p.quentura || 0) >= 2)          // so o que ecoa de verdade
+    .slice(0, 4);
+
+  for (const c of candidatas) {
+    try {
+      const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: EDITORIA });
+      circulando.push({
+        id: 'circ:' + slug(n.titulo),
+        editoria: EDITORIA, uf: GERAL ? null : UF,
+        titulo: n.titulo, corpo: n.corpo, aviso: n.aviso,
+        iso: new Date().toISOString(),
+        hora: horaBR(new Date().toISOString())
+      });
+      await dormir(900);
+    } catch (e) {
+      console.log('     circ pulou: ' + String(e.message).slice(0,52));
+    }
+  }
+  if (circulando.length) console.log(`\n  5. CIRCULANDO — ${circulando.length} notas escritas`);
+}
+
 await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
   uf: UF,
   estado: E.nome,
@@ -556,6 +584,7 @@ await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
   modelo: modeloUsado(),
   numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, semFonte:soPautaFiltrada.length },
   itens: publicados,
+  circulando,
   pautas: soPautaFiltrada.slice(0,18).map(p=>({
     titulo:p.titulo, veiculo:p.veiculo, editoria:p.editoria,
     quentura:p.quentura||0, tambemEm:p.tambemEm||[]
