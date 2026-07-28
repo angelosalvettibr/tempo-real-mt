@@ -162,11 +162,14 @@ function parecidas(a,b){
 const horaBR = iso => new Date(iso).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',timeZone:'America/Cuiaba'}).replace(':','h');
 const corte = Date.now() - JANELA_HORAS*3600*1000;
 
-async function colher(lista, rotulo){
+// Antes era um feed por vez: 30 feeds a 2s cada = 1 minuto so de espera.
+// Agora vao em lotes de 6 ao mesmo tempo. Mesma cortesia com cada servidor,
+// mas o tempo total cai para um quinto.
+async function colher(lista, rotulo, tamanhoLote = 6){
   const saida = [], rel = [];
-  for (const f of lista) {
+
+  async function uma(f){
     try {
-      if (f.url.includes('news.google')) await dormir(1500);
       const itens = lerRSS(await buscar(f.url)).slice(0, 12);
       let ok = 0;
       for (const b of itens) {
@@ -175,14 +178,18 @@ async function colher(lista, rotulo){
         if (RE_BLOQUEIO.test(semAcento(b.titulo+' '+b.resumo+' '+b.veiculo))) continue;
         let titulo = b.titulo;
         if (b.veiculo && titulo.endsWith(' - '+b.veiculo)) titulo = titulo.slice(0, -(b.veiculo.length+3)).trim();
-        // "Estado do agro" e nome de secao, nao manchete. Manchete e frase.
         if (titulo.length < 30 || titulo.split(/\s+/).length < 5) continue;
         saida.push({ titulo, link:b.link, resumo:b.resumo, iso:new Date(ts).toISOString(),
                      veiculo: b.veiculo || f.nome, editoria: f.editoria, fonteId: f.id });
         ok++;
       }
       rel.push(`ok    ${rotulo}:${f.id.padEnd(14)} ${String(ok).padStart(3)}`);
-    } catch(e){ rel.push(`aviso ${rotulo}:${f.id.padEnd(14)} ${String(e.message).slice(0,40)}`); }
+    } catch(e){ rel.push(`aviso ${rotulo}:${f.id.padEnd(14)} ${String(e.message).slice(0,34)}`); }
+  }
+
+  for (let i = 0; i < lista.length; i += tamanhoLote) {
+    await Promise.all(lista.slice(i, i + tamanhoLote).map(uma));
+    if (i + tamanhoLote < lista.length) await dormir(600);
   }
   return { itens: saida, rel };
 }
@@ -192,6 +199,7 @@ async function colher(lista, rotulo){
 console.log('\n  IL MERIDIANO · ' + new Date().toISOString());
 console.log('  ' + '='.repeat(66));
 
+const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
 console.log('\n  1. PAUTA — o que os veículos estão dando');
 const P = await colher(PAUTA, 'pauta');
 P.rel.forEach(l=>console.log('  '+l));
@@ -203,7 +211,6 @@ F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
 
 console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');
-const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
 const E = ESTADOS[UF] || ESTADOS.mt;
 console.log(`     estado: ${E.nome}`);
 
@@ -238,7 +245,7 @@ for (const o of [...E.assessorias, ...E.setoriais.filter(x=>x.base)]) {
       const m = lerListagem(html, o.base);
       if (m.length < 3) continue;
       for (const x of m) F.itens.push({ titulo:x.titulo, link:x.link, resumo:'',
-        iso:new Date().toISOString(), veiculo:o.nome, editoria:'regional', fonteId:o.id });
+        iso:new Date().toISOString(), veiculo:o.nome, editoria:'regional', uf:UF, fonteId:o.id });
       console.log(`  ok    ${o.id.padEnd(12)} ${String(m.length).padStart(2)} · pagina ${caminho}`);
       entrou = m.length; break;
     } catch {}
@@ -255,7 +262,7 @@ for (const o of [...E.assessorias, ...E.setoriais.filter(x=>x.base)]) {
       if (!titulo || titulo.length < 25) continue;
       F.itens.push({ titulo, link:n.url, resumo:'',
         iso:new Date(Date.parse(n.data) || Date.now()).toISOString(),
-        veiculo:o.nome, editoria:'regional', fonteId:o.id });
+        veiculo:o.nome, editoria:'regional', uf:UF, fonteId:o.id });
       entrou++;
       await dormir(300);
     }
@@ -333,7 +340,7 @@ if (temChave()) {
         titulo:m.titulo, resumo:m.linhaFina,
         fonte:'Il Meridiano, com informações de '+i.veiculo,
         origemLink:i.link, origemNome:i.veiculo,
-        pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
+        pautadoPor:i.pautadoPor||[], quentura:i.quentura||0, uf: i.uf || (i.editoria==='regional' ? UF : null),
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true
       });
       escritas++;
@@ -343,6 +350,37 @@ if (temChave()) {
   }
 } else {
   console.log('     sem GEMINI_API_KEY — reescrita desligada');
+}
+
+// ===================== ARQUIVO — a memoria do jornal =======================
+// A edicao expira em 24h, mas o que NOS escrevemos fica para sempre. Este
+// indice e a base do assistente: ele so podera responder citando materia
+// publicada aqui, com link. Sem arquivo, a IA nao tem o que citar e inventa.
+try {
+  let arquivo = { criado: new Date().toISOString(), itens: [] };
+  try { arquivo = JSON.parse(await readFile('dados/arquivo.json','utf8')); } catch {}
+
+  const jaTem = new Set((arquivo.itens || []).map(i => i.id));
+  let novas = 0;
+  for (const p of publicados) {
+    if (!p.original || jaTem.has(p.id)) continue;
+    arquivo.itens.push({
+      id: p.id, titulo: p.titulo, resumo: p.resumo,
+      editoria: p.editoria, uf: p.uf || null,
+      fonte: p.fonte, origemLink: p.origemLink || '',
+      link: p.link, iso: p.iso,
+      dia: p.iso.slice(0,10)
+    });
+    novas++;
+  }
+  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+  arquivo.atualizado = new Date().toISOString();
+  arquivo.total = arquivo.itens.length;
+
+  await writeFile('dados/arquivo.json', JSON.stringify(arquivo, null, 2), 'utf8');
+  console.log(`  arquivo: +${novas} novas · ${arquivo.total} materias guardadas no total`);
+} catch (e) {
+  console.log('  aviso arquivo: ' + e.message);
 }
 
 await writeFile('dados/edicao.json', JSON.stringify({
