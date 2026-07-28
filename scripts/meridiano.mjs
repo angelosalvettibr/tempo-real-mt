@@ -28,6 +28,16 @@ const PAUTA = [
   { id:'g1politica', nome:'g1 Política', editoria:'brasil', url:'https://g1.globo.com/rss/g1/politica/' },
   { id:'g1economia', nome:'g1 Economia', editoria:'brasil', url:'https://g1.globo.com/rss/g1/economia/' },
 
+  { id:'cnn',        nome:'CNN Brasil',   editoria:'brasil',        url:'https://www.cnnbrasil.com.br/feed/' },
+  { id:'cnn-inter',  nome:'CNN Internacional', editoria:'internacional', url:'https://www.cnnbrasil.com.br/internacional/feed/' },
+  { id:'uol',        nome:'UOL',          editoria:'brasil',        url:'https://rss.uol.com.br/feed/noticias.xml' },
+  { id:'estadao',    nome:'Estadão',      editoria:'brasil',        url:'https://www.estadao.com.br/rss/ultimas.xml' },
+  { id:'poder360',   nome:'Poder360',     editoria:'brasil',        url:'https://www.poder360.com.br/feed/' },
+  { id:'bbcbrasil',  nome:'BBC Brasil',   editoria:'internacional', url:'https://feeds.bbci.co.uk/portuguese/rss.xml' },
+  { id:'infomoney',  nome:'InfoMoney',    editoria:'brasil',        url:'https://www.infomoney.com.br/feed/' },
+  { id:'valor',      nome:'Valor',        editoria:'brasil',        url:'https://valor.globo.com/rss/' },
+  { id:'canalrural', nome:'Canal Rural',  editoria:'regional',      url:'https://www.canalrural.com.br/feed/' },
+
   // buscas para cobrir quem não tem RSS aberto
   { id:'gn-brasil',  nome:'Brasil',        editoria:'brasil',        url:gnews('Brasil governo OR congresso OR economia') },
   { id:'gn-mundo',   nome:'Mundo',         editoria:'internacional', url:gnews('mundo internacional guerra OR acordo OR eleição') },
@@ -125,7 +135,7 @@ async function buscar(url, ms=20000, tentativas=2){
   throw ultimo;
 }
 
-const VAZIAS = new Set(('de da do das dos uma que se ao aos apos ate entre pelo pela como mais menos nao seu sua seus suas este esta isso ser tem ter vai vao foi sao estao diz contra durante ainda anos ano mil apenas onde quem qual para com sem sobre por nos nas seus after tras dois duas tres').split(' '));
+const VAZIAS = new Set(('de da do das dos uma que ao aos apos ate entre pelo pela como mais menos nao seu sua seus suas este esta isso para com sem sobre por nos nas apenas onde quem qual dois duas tres').split(' '));
 
 // Radical de 7 letras: faz "desembargador" casar com "desembargadores",
 // "eleicao" com "eleicoes", "contrato" com "contratos".
@@ -134,7 +144,7 @@ const VAZIAS = new Set(('de da do das dos uma que se ao aos apos ate entre pelo 
 const chavesDe = t => [...new Set(
   semAcento(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
     .filter(p => p.length >= 3 && !VAZIAS.has(p))
-    .map(p => p.slice(0,7))
+    .map(p => p.slice(0,5))
 )];
 
 function parecidas(a,b){
@@ -160,6 +170,8 @@ async function colher(lista, rotulo){
         if (RE_BLOQUEIO.test(semAcento(b.titulo+' '+b.resumo+' '+b.veiculo))) continue;
         let titulo = b.titulo;
         if (b.veiculo && titulo.endsWith(' - '+b.veiculo)) titulo = titulo.slice(0, -(b.veiculo.length+3)).trim();
+        // "Estado do agro" e nome de secao, nao manchete. Manchete e frase.
+        if (titulo.length < 30 || titulo.split(/\s+/).length < 5) continue;
         saida.push({ titulo, link:b.link, resumo:b.resumo, iso:new Date(ts).toISOString(),
                      veiculo: b.veiculo || f.nome, editoria: f.editoria, fonteId: f.id });
         ok++;
