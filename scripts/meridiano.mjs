@@ -10,6 +10,7 @@
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
+import { cacarDocumento } from './cacador.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
@@ -659,6 +660,7 @@ try {
 // circulando e nao achamos documento. Nao reproduz apuracao de ninguem,
 // nao nomeia veiculo, nao nomeia pessoa comum, nao diz que e falso.
 const circulando = [];
+let resgatadas = 0;
 if (temChave() && soPautaFiltrada.length) {
   // Antes o terremoto do Japao saiu cinco vezes: uma confirmada e quatro como
   // rumor. Tres travas resolvem — nao repetir o que ja foi publicado, nao
@@ -709,6 +711,43 @@ if (temChave() && soPautaFiltrada.length) {
       const FORA = /(japao|eua|estados unidos|china|russia|ucrania|israel|gaza|argentina|peru|papa|vaticano|onu|europa|franca|italia|alemanha|coreia|india|mexico|chile|venezuela|colombia|apple|google|microsoft)/;
       const edNota = FORA.test(semAcento(c.titulo)) ? 'internacional' : EDITORIA;
 
+      // ULTIMA CHANCE ANTES DO BALDE
+      // Antes de tratar como rumor, batemos na porta do orgao que teria o
+      // registro. Se o documento existe, isto nao e boato: e materia, escrita
+      // a partir da fonte oficial e com link para o original.
+      const caca = await cacarDocumento(c.titulo, GERAL ? null : UF, { orcamentoMs: 60000 });
+      if (caca.achado) {
+        try {
+          const texto = await textoCompleto(caca.link, 12000);
+          const m = await reescrever({ fonte: caca.fonte, titulo: caca.titulo, texto });
+          const arq = slug(m.titulo) + '.html';
+          const agora = new Date().toISOString();
+          await writeFile('materia/' + arq, pagina(
+            { chapeu: GERAL ? GERAL.nome : E.nome,
+              titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
+              origemNome: caca.fonte, radar: false, checar: [],
+              resgatada: { procuradoEm: caca.procuradoEm, orgao: caca.fonte } },
+            { link: caca.link, municipio: '' }, agora), 'utf8');
+          publicados.push({
+            id: 'ilm:' + slug(m.titulo), editoria: edNota, chapeu: 'Nosso texto',
+            titulo: m.titulo, resumo: m.linhaFina,
+            fonte: 'Meridiano, com informacoes de ' + caca.fonte,
+            origemLink: caca.link, origemNome: caca.fonte,
+            pautadoPor: c.tambemEm || [], quentura: c.quentura || 0,
+            uf: GERAL ? null : UF, corpo: m.corpo,
+            link: '/materia/' + arq, iso: agora, hora: horaBR(agora),
+            original: true, resgatada: true,
+            nivel: 'confirmado', selo: 'Confirmado oficialmente'
+          });
+          resgatadas++;
+          console.log(`     RESGATADA ${String(caca.nota).padEnd(5)} ${caca.fonte} - ${m.titulo.slice(0,42)}`);
+          await dormir(700);
+          continue;
+        } catch (e) {
+          console.log('     resgate falhou: ' + String(e.message).slice(0,44));
+        }
+      }
+
       const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: edNota });
       // pagina propria: quando a confirmacao chegar, esta mesma pagina e
       // atualizada — e o leitor ve o caminho da historia
@@ -716,9 +755,12 @@ if (temChave() && soPautaFiltrada.length) {
 
       // Provenencia: o leitor tem direito de saber o que foi procurado e onde.
       // Nao nomeamos veiculo — dizemos que circula e onde fomos checar.
-      const ondeBuscamos = GERAL
-        ? (GERAL.livres || []).map(f => f.nome)
-        : [...(E.assessorias || []).map(o => o.nome), ...(E.setoriais || []).map(o => o.nome)];
+      // A lista agora e a verdade do que o cacador bateu, nome por nome.
+      const ondeBuscamos = (caca.procuradoEm && caca.procuradoEm.length)
+        ? caca.procuradoEm
+        : (GERAL
+            ? (GERAL.livres || []).map(f => f.nome)
+            : [...(E.assessorias || []).map(o => o.nome), ...(E.setoriais || []).map(o => o.nome)]);
       const provenencia = {
         circulaEm: (c.quentura || 0) + 1,
         buscadoEm: [...new Set(ondeBuscamos)].slice(0, 8),
@@ -759,7 +801,7 @@ await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
   estado: E.nome,
   gerado: new Date().toISOString(),
   modelo: modeloUsado(),
-  numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, semFonte:soPautaFiltrada.length },
+  numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, resgatadas, semFonte:soPautaFiltrada.length },
   itens: publicados,
   circulando,
   pautas: soPautaFiltrada.slice(0,18).map(p=>({
@@ -770,4 +812,5 @@ await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
 
 console.log('\n  ' + '='.repeat(66));
 console.log(`  ${escritas} matérias próprias publicadas · modelo ${modeloUsado()}`);
+console.log(`  ${resgatadas} resgatadas do balde pelo cacador de documento`);
 console.log(`  ${soPautaFiltrada.length} pautas relevantes sem fonte livre\n`);

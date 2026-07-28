@@ -280,6 +280,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
+.resgate{border-left:3px solid var(--verde);background:#F4F8F5;padding:15px 19px;margin:26px 0;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.62}
+.resgate b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:8px}
+.resgate p{color:#33403A}
 .proc{border:1px solid var(--linha);padding:16px 20px;margin:26px 0;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.6;background:#FAFAF8}
 .proc summary{cursor:pointer;list-style:none;outline:none}
 .proc summary::-webkit-details-marker{display:none}
@@ -327,6 +330,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
   <div class="corpo">${corpoHtml}</div>
 
+  ${m.resgatada ? `<div class="resgate">
+    <b>Como esta matéria chegou aqui</b>
+    <p>Esta história começou circulando na imprensa sem registro oficial. Em vez de publicá-la como rumor, procuramos o documento em ${m.resgatada.procuradoEm.length} ${m.resgatada.procuradoEm.length === 1 ? 'órgão público' : 'órgãos públicos'} e encontramos em ${esc(m.resgatada.orgao)}. O texto acima foi escrito a partir desse registro — o endereço do original está no fim da página.</p>
+  </div>` : ''}
+
   ${m.provenencia ? `<details class="proc">
     <summary><b>O que procuramos antes de publicar</b></summary>
     <p>Esta informação apareceu em ${m.provenencia.circulaEm} ${m.provenencia.circulaEm === 1 ? 'veículo' : 'veículos'} da imprensa. Consultamos as fontes oficiais abaixo em ${esc(m.provenencia.quando)} e não localizamos registro sobre o caso.</p>
@@ -346,7 +354,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       : m.naoConfirmada
         ? 'Esta informação está circulando na imprensa e não localizamos registro em fonte oficial. Não afirmamos o fato: relatamos que ele circula e que a nossa checagem não encontrou o documento.'
         : `Reescrevemos com nossas palavras a partir do material publicado por ${esc(m.origemNome || 'fonte que autoriza reprodução')}. Nenhum número foi alterado: todos constam do original, cujo endereço está abaixo.`}
-    <br><br>Documento: <a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.link)}</a>
+    ${c.link ? `<br><br>Documento: <a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.link)}</a>` : ''}
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
   </details>
 

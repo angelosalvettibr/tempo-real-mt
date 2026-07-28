@@ -182,7 +182,30 @@ export const EDICOES_GERAIS = {
       { id:'inmet',       nome:'Inmet',   url:'https://portal.inmet.gov.br/rss', base:'https://portal.inmet.gov.br/noticias' },
       { id:'anp',         nome:'ANP',     url:'https://www.gov.br/anp/pt-br/noticias/RSS', base:'https://www.gov.br/anp/pt-br/noticias' },
       { id:'mapa',        nome:'Ministério da Agricultura', url:'https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/agricultura/pt-br/assuntos/noticias' },
-      { id:'saude',       nome:'Ministério da Saúde', url:'https://www.gov.br/saude/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/saude/pt-br/assuntos/noticias' }
+      { id:'saude',       nome:'Ministério da Saúde', url:'https://www.gov.br/saude/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/saude/pt-br/assuntos/noticias' },
+      { id:'pf',          nome:'Polícia Federal', url:'https://www.gov.br/pf/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/pf/pt-br/assuntos/noticias' },
+      { id:'prf',         nome:'Polícia Rodoviária Federal', url:'https://www.gov.br/prf/pt-br/noticias/RSS', base:'https://www.gov.br/prf/pt-br/noticias' },
+      { id:'cgu',         nome:'CGU', url:'https://www.gov.br/cgu/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/cgu/pt-br/assuntos/noticias' },
+      { id:'ibama',       nome:'Ibama', url:'https://www.gov.br/ibama/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/ibama/pt-br/assuntos/noticias' },
+      { id:'icmbio',      nome:'ICMBio', url:'https://www.gov.br/icmbio/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/icmbio/pt-br/assuntos/noticias' },
+      { id:'mma',         nome:'Ministério do Meio Ambiente', url:'https://www.gov.br/mma/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mma/pt-br/assuntos/noticias' },
+      { id:'mec',         nome:'Ministério da Educação', url:'https://www.gov.br/mec/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mec/pt-br/assuntos/noticias' },
+      { id:'mj',          nome:'Ministério da Justiça', url:'https://www.gov.br/mj/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mj/pt-br/assuntos/noticias' },
+      { id:'fazenda',     nome:'Ministério da Fazenda', url:'https://www.gov.br/fazenda/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/fazenda/pt-br/assuntos/noticias' },
+      { id:'mds',         nome:'Ministério do Desenvolvimento Social', url:'https://www.gov.br/mds/pt-br/noticias/RSS', base:'https://www.gov.br/mds/pt-br/noticias' },
+      { id:'cidades',     nome:'Ministério das Cidades', url:'https://www.gov.br/cidades/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/cidades/pt-br/assuntos/noticias' },
+      { id:'transportes', nome:'Ministério dos Transportes', url:'https://www.gov.br/transportes/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/transportes/pt-br/assuntos/noticias' },
+      { id:'mme',         nome:'Ministério de Minas e Energia', url:'https://www.gov.br/mme/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mme/pt-br/assuntos/noticias' },
+      { id:'trabalho',    nome:'Ministério do Trabalho', url:'https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/RSS', base:'https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo' },
+      { id:'inss',        nome:'INSS', url:'https://www.gov.br/inss/pt-br/noticias/RSS', base:'https://www.gov.br/inss/pt-br/noticias' },
+      { id:'anvisa',      nome:'Anvisa', url:'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/RSS', base:'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa' },
+      { id:'funai',       nome:'Funai', url:'https://www.gov.br/funai/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/funai/pt-br/assuntos/noticias' },
+      { id:'dnit',        nome:'Dnit', url:'https://www.gov.br/dnit/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/dnit/pt-br/assuntos/noticias' },
+      { id:'inpe',        nome:'Inpe', url:'https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/RSS', base:'https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias' },
+      { id:'fiocruz',     nome:'Fiocruz', url:'https://portal.fiocruz.br/rss.xml', base:'https://portal.fiocruz.br/noticias' },
+      { id:'tcu',         nome:'TCU', url:'https://portal.tcu.gov.br/imprensa/noticias/rss.xml', base:'https://portal.tcu.gov.br/imprensa/noticias' },
+      { id:'ipea',        nome:'Ipea', url:'https://www.ipea.gov.br/portal/rss', base:'https://www.ipea.gov.br/portal' },
+      { id:'fapesp',      nome:'Agência FAPESP', url:'https://agencia.fapesp.br/rss', base:'https://agencia.fapesp.br' }
     ]
   },
   mundo: {
@@ -217,7 +240,18 @@ export const NACIONAL = [
   { id:'conversation',nome:'The Conversation',editoria:'internacional',url:'https://theconversation.com/br/articles.atom' },
   { id:'vaticano',    nome:'Vatican News',   editoria:'internacional', url:'https://www.vaticannews.va/pt.rss.xml' },
   { id:'embrapa',     nome:'Embrapa',        editoria:'brasil',        url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss', base:'https://www.embrapa.br' },
-  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' }
+  { id:'conab',       nome:'Conab',          editoria:'brasil',        url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' },
+  { id:'pf', nome:'Polícia Federal', editoria:'brasil', url:'https://www.gov.br/pf/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/pf/pt-br/assuntos/noticias' },
+  { id:'cgu', nome:'CGU', editoria:'brasil', url:'https://www.gov.br/cgu/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/cgu/pt-br/assuntos/noticias' },
+  { id:'ibama', nome:'Ibama', editoria:'brasil', url:'https://www.gov.br/ibama/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/ibama/pt-br/assuntos/noticias' },
+  { id:'mec', nome:'Ministério da Educação', editoria:'brasil', url:'https://www.gov.br/mec/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mec/pt-br/assuntos/noticias' },
+  { id:'mj', nome:'Ministério da Justiça', editoria:'brasil', url:'https://www.gov.br/mj/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/mj/pt-br/assuntos/noticias' },
+  { id:'anvisa', nome:'Anvisa', editoria:'brasil', url:'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/RSS', base:'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa' },
+  { id:'inss', nome:'INSS', editoria:'brasil', url:'https://www.gov.br/inss/pt-br/noticias/RSS', base:'https://www.gov.br/inss/pt-br/noticias' },
+  { id:'inpe', nome:'Inpe', editoria:'brasil', url:'https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/RSS', base:'https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias' },
+  { id:'fiocruz', nome:'Fiocruz', editoria:'brasil', url:'https://portal.fiocruz.br/rss.xml', base:'https://portal.fiocruz.br/noticias' },
+  { id:'tcu', nome:'TCU', editoria:'brasil', url:'https://portal.tcu.gov.br/imprensa/noticias/rss.xml', base:'https://portal.tcu.gov.br/imprensa/noticias' },
+  { id:'fapesp', nome:'Agência FAPESP', editoria:'brasil', url:'https://agencia.fapesp.br/rss', base:'https://agencia.fapesp.br' }
 ];
 
 // Pauta nacional e internacional, igual para todos os estados.
