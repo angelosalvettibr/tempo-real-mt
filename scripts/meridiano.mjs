@@ -479,8 +479,18 @@ if (temChave()) {
   // As reescritas tambem iam em fila: cada uma esperava a anterior, e uma
   // pagina lenta segurava todas. Agora vao de tres em tres.
   // A memoria do jornal, para o bloco de contexto saber se ja houve caso igual
+  // memoria: mes corrente e o anterior, que cobre a maioria dos casos ligados
   let arquivoMemoria = { itens: [] };
-  try { arquivoMemoria = JSON.parse(await readFile(`dados/arquivo-${UF}.json`,'utf8')); } catch {}
+  const mesAtual = new Date().toISOString().slice(0,7);
+  const mesAnterior = new Date(Date.now() - 31*86400000).toISOString().slice(0,7);
+  for (const m of [mesAtual, mesAnterior]) {
+    for (const caminho of [`dados/arquivo/${UF}-${m}.json`, `dados/arquivo-${UF}.json`]) {
+      try {
+        const a = JSON.parse(await readFile(caminho,'utf8'));
+        arquivoMemoria.itens.push(...(a.itens || []));
+      } catch {}
+    }
+  }
 
   async function escreverUma(i){
     try {
@@ -575,8 +585,14 @@ if (temChave()) {
 // indice e a base do assistente: ele so podera responder citando materia
 // publicada aqui, com link. Sem arquivo, a IA nao tem o que citar e inventa.
 try {
-  const CAMINHO_ARQ = `dados/arquivo-${UF}.json`;
-  let arquivo = { uf: UF, criado: new Date().toISOString(), itens: [] };
+  // Um arquivo por mes: assim nenhum cresce sem limite e cada rodada
+  // reescreve so o mes corrente. Em um ano sao 12 arquivos leves em vez de
+  // um enorme que precisa ser lido e regravado inteiro toda vez.
+  const mes = new Date().toISOString().slice(0, 7);
+  const CAMINHO_ARQ = `dados/arquivo/${UF}-${mes}.json`;
+  await mkdir('dados/arquivo', { recursive: true });
+
+  let arquivo = { uf: UF, mes, criado: new Date().toISOString(), itens: [] };
   try { arquivo = JSON.parse(await readFile(CAMINHO_ARQ,'utf8')); } catch {}
 
   const jaTem = new Set((arquivo.itens || []).map(i => i.id));
@@ -587,8 +603,8 @@ try {
       id: p.id, titulo: p.titulo, resumo: p.resumo,
       editoria: p.editoria, uf: p.uf || null,
       fonte: p.fonte, origemLink: p.origemLink || '',
-      link: p.link, iso: p.iso,
-      dia: p.iso.slice(0,10)
+      nivel: p.nivel || null, orgao: p.orgao || null,
+      link: p.link, iso: p.iso, dia: p.iso.slice(0,10)
     });
     novas++;
   }
@@ -597,7 +613,16 @@ try {
   arquivo.total = arquivo.itens.length;
 
   await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
-  console.log(`  arquivo ${UF}: +${novas} novas · ${arquivo.total} materias guardadas`);
+
+  // indice: aponta quais meses existem, para quem for ler o historico
+  const IDX = 'dados/arquivo/indice.json';
+  let idx = { meses: {} };
+  try { idx = JSON.parse(await readFile(IDX,'utf8')); } catch {}
+  idx.meses[`${UF}-${mes}`] = { uf: UF, mes, total: arquivo.total, atualizado: arquivo.atualizado };
+  idx.atualizado = new Date().toISOString();
+  await writeFile(IDX, JSON.stringify(idx, null, 2), 'utf8');
+
+  console.log(`  arquivo ${UF}/${mes}: +${novas} novas · ${arquivo.total} no mes`);
 } catch (e) {
   console.log('  aviso arquivo: ' + e.message);
 }

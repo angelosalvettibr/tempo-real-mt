@@ -1,4 +1,4 @@
-// RADAR — o único conteúdo original do TEMPO REAL MT.
+// RADAR — o único conteúdo original do MERIDIANO.
 //
 // Lê as contratações públicas de Mato Grosso no PNCP, aplica regras de
 // interesse jornalístico e escreve a matéria a partir dos campos do documento.
@@ -42,7 +42,7 @@ async function buscar(url, ms = 20000, tentativas = 2){
     const c = new AbortController();
     const t = setTimeout(() => c.abort(), ms);
     try {
-      const r = await fetch(url, { signal:c.signal, headers:{ 'User-Agent':'TempoRealMT/1.0', Accept:'application/json' }});
+      const r = await fetch(url, { signal:c.signal, headers:{ 'User-Agent':'Meridiano/1.0', Accept:'application/json' }});
       if (!r.ok) throw new Error('HTTP '+r.status);
       return await r.json();
     } catch(e) {
@@ -241,27 +241,27 @@ export function pagina(m, c, iso){
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(m.titulo)} — TEMPO REAL MT</title>
+<title>${esc(m.titulo)} — MERIDIANO</title>
 <meta name="description" content="${esc(m.linhaFina).slice(0,155)}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(m.titulo)}">
 <meta property="og:description" content="${esc(m.linhaFina).slice(0,155)}">
 <meta property="article:published_time" content="${iso}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle",
 "headline":${JSON.stringify(m.titulo)},
 "description":${JSON.stringify(m.linhaFina)},
 "datePublished":"${iso}","inLanguage":"pt-BR",
 "articleSection":${JSON.stringify(m.chapeu)},
-"publisher":{"@type":"NewsMediaOrganization","name":"TEMPO REAL MT"},
+"publisher":{"@type":"NewsMediaOrganization","name":"MERIDIANO"},
 "isBasedOn":${JSON.stringify(c.link)}}
 </script>
 <style>
-:root{--tinta:#15191F;--papel:#FAF9F5;--linha:#E4E1D8;--fraco:#878C95;--sinal:#BF3320;--verde:#0A6B5B;--areia:#F1EFE8}
+:root{--tinta:#15191F;--papel:#FAF9F5;--linha:#E4E1D8;--fraco:#878C95;--sinal:#B34700;--verde:#1F6B4A;--areia:#F1EFE8}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--papel);color:var(--tinta);font-family:'Archivo',system-ui,sans-serif;line-height:1.5}
+body{background:var(--papel);color:var(--tinta);font-family:'Playfair Display',Georgia,serif;line-height:1.5}
 a{color:inherit}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 header{border-bottom:2px solid var(--tinta);margin-bottom:30px}
@@ -278,7 +278,15 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
-.fonte-box{background:var(--areia);border-left:3px solid var(--verde);padding:22px 24px;margin:32px 0;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.6}
+.contexto{border-left:3px solid var(--tinta);padding:18px 22px;margin:30px 0;background:#fff}
+.contexto b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:9px}
+.contexto p{font-family:'Source Serif 4',Georgia,serif;font-size:16.5px;line-height:1.6;color:#333A42;margin:0}
+.fonte-box{background:var(--areia);border-left:3px solid var(--verde);padding:18px 22px;margin:32px 0;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.6}
+.fonte-box summary{cursor:pointer;list-style:none;outline:none}
+.fonte-box summary::-webkit-details-marker{display:none}
+.fonte-box summary::after{content:" ▸ mostrar";font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco)}
+.fonte-box[open] summary::after{content:" ▾ ocultar"}
+.fonte-box summary b{display:inline}
 .fonte-box b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:9px}
 .fonte-box a{color:var(--verde);word-break:break-all}
 .fonte-box ul{margin:10px 0 0 18px}
@@ -289,7 +297,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 <body>
 <header><div class="wrap topo">
   <span class="barra"></span>
-  <a href="/" style="text-decoration:none"><span class="nome">TEMPO <span>REAL</span></span></a>
+  <a href="/" style="text-decoration:none"><span class="nome">MERI<span>DIANO</span></span></a>
 </div></header>
 
 <article class="wrap">
@@ -297,16 +305,21 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <span class="chapeu">${esc(m.chapeu)}</span>
   <h1>${esc(m.titulo)}</h1>
   <p class="linha-fina">${esc(m.linhaFina)}</p>
-  <div class="assina">Redação Tempo Real MT · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
+  <div class="assina">Redação Meridiano · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
 
   <div class="corpo">${corpoHtml}</div>
 
-  <div class="fonte-box">
-    <b>De onde vem esta informação</b>
+  ${m.contexto ? `<div class="contexto">
+    <b>O que isso quer dizer</b>
+    <p>${esc(m.contexto)}</p>
+  </div>` : ''}
+
+  <details class="fonte-box">
+    <summary><b>De onde vem esta informação</b></summary>
     Texto produzido a partir dos dados publicados pelo próprio órgão no Portal Nacional de Contratações Públicas (PNCP), sistema oficial onde toda compra pública é registrada. Nenhum número foi estimado: todos constam do documento original.
     <br><br>Documento: <a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.link)}</a>
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
-  </div>
+  </details>
 
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
