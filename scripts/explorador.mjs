@@ -10,7 +10,7 @@
 
 import { ESTADOS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias } from './assessorias.mjs';
-import { ler, gravar, anotar, agrupar, METODO, ESTADO_FONTE } from './catalogo.mjs';
+import { ler, gravar, anotar, agrupar, revisarQuarentena, corrigirPracas, REGRA_APROVACAO, METODO, ESTADO_FONTE } from './catalogo.mjs';
 
 const dormir = ms => new Promise(r => setTimeout(r, ms));
 const semAcento = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -268,6 +268,26 @@ for (const [k, f] of Object.entries(cat.fontes)) {
   if (!a) { mudou.push(`ENTROU  ${f.nome} (${k})`); continue; }
   if (a.estado !== f.estado) mudou.push(`${f.estado === ESTADO_FONTE.ATIVA ? 'VOLTOU ' : 'MUDOU  '} ${f.nome}: ${a.estado} -> ${f.estado}`);
 }
+
+// Limpeza da praca antes de decidir: nacional catalogado como estadual
+// atrapalha o corte e suja o painel.
+const arrumados = corrigirPracas(cat, NACIONAIS, PISTAS_UF);
+if (arrumados.length) {
+  console.log(`\n  PRACA CORRIGIDA (${arrumados.length}):`);
+  arrumados.slice(0,10).forEach(a => console.log(`    ${a.nome.padEnd(26)} ${a.de || '?'} -> ${a.para}`));
+}
+
+// Aprovacao automatica: nota alta e constancia entram sozinhas, como pauta.
+const rev = revisarQuarentena(cat);
+if (rev.aprovadas.length) {
+  console.log(`\n  APROVADAS AUTOMATICAMENTE (${rev.aprovadas.length}) — nota >= ${REGRA_APROVACAO.notaParaEntrar}:`);
+  rev.aprovadas.forEach(f => console.log(`    nota ${String(f.nota).padStart(3)} · ${f.nome.padEnd(28)} ${(f.dominio||'').padEnd(30)} ${(f.uf||'').toUpperCase()}`));
+}
+if (rev.descartadas.length) {
+  console.log(`\n  DESCARTADAS (${rev.descartadas.length}) — nota baixa ou nunca responderam:`);
+  rev.descartadas.slice(0,12).forEach(f => console.log(`    nota ${String(f.nota).padStart(3)} · ${f.nome.slice(0,30)}`));
+}
+if (rev.seguem.length) console.log(`\n  ${rev.seguem.length} seguem em quarentena, aguardando constancia ou sua decisao`);
 
 const g = agrupar(cat);
 console.log('\n  ' + '='.repeat(72));

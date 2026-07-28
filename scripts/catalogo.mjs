@@ -131,3 +131,70 @@ export function agrupar(cat){
     })
   };
 }
+
+
+/* ============== APROVACAO AUTOMATICA ==================================== */
+//
+// Com 70 fontes na fila, aprovar uma a uma nao escala. A nota ja mede o que
+// importa: confiabilidade, volume, licenca e facilidade de leitura. Entao o
+// corte e por nota, com uma trava importante — fonte aprovada sozinha entra
+// SO como pauta. Para o texto sair de algum lugar, o dominio precisa ser
+// oficial, e isso quem decide e o robo da edicao, nao esta lista.
+
+export const REGRA_APROVACAO = {
+  notaParaEntrar: 70,      // acima disso, entra sozinha
+  diasRespondendo: 2,      // mas so depois de provar constancia
+  notaParaDescartar: 35,   // abaixo disso, sai da fila de vez
+  diasParaDesistir: 7      // descoberta que nunca respondeu, some
+};
+
+export function revisarQuarentena(cat){
+  const r = { aprovadas: [], descartadas: [], seguem: [] };
+  const hoje = new Date().toISOString().slice(0,10);
+
+  for (const [k, f] of Object.entries(cat.fontes)) {
+    if (f.aprovada || f.estado === ESTADO_FONTE.BLOQUEADA) continue;
+
+    const diasVivos = (f.historico || []).filter(h => h.ok).length;
+    const nota = f.nota ?? 0;
+
+    if (nota >= REGRA_APROVACAO.notaParaEntrar && diasVivos >= REGRA_APROVACAO.diasRespondendo) {
+      f.aprovada = true;
+      f.aprovadaEm = hoje;
+      f.aprovadaPor = 'automatica';
+      f.licenca = 'pauta';          // trava: nunca fonte livre por aprovacao automatica
+      f.estado = ESTADO_FONTE.ATIVA;
+      r.aprovadas.push(f);
+      continue;
+    }
+
+    const idade = (f.historico || []).length;
+    if (nota < REGRA_APROVACAO.notaParaDescartar ||
+        (idade >= REGRA_APROVACAO.diasParaDesistir && diasVivos === 0)) {
+      f.descartada = true;
+      f.descartadaEm = hoje;
+      r.descartadas.push(f);
+      delete cat.fontes[k];
+      continue;
+    }
+
+    r.seguem.push(f);
+  }
+  return r;
+}
+
+// Limpeza: veiculo nacional catalogado como estadual, ou de outro estado.
+export function corrigirPracas(cat, nacionais, pistas){
+  const mudou = [];
+  for (const f of Object.values(cat.fontes)) {
+    if (!f.dominio) continue;
+    const alvo = (f.dominio + ' ' + (f.nome||'')).toLowerCase().replace(/[^a-z0-9]/g,'');
+    let novo = null;
+    if (nacionais.test(alvo)) novo = 'br';
+    else {
+      for (const [uf, re] of Object.entries(pistas)) if (re.test(alvo)) { novo = uf; break; }
+    }
+    if (novo && novo !== f.uf) { mudou.push({ nome:f.nome, de:f.uf, para:novo }); f.uf = novo; }
+  }
+  return mudou;
+}
