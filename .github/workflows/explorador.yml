@@ -28,6 +28,12 @@ jobs:
       - run: |
           git config user.name "Il Meridiano"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash || true
           git add dados/catalogo.json
-          git diff --staged --quiet || (git commit -m "catalogo de fontes" && git push)
+          if git diff --staged --quiet; then echo "Nada mudou."; exit 0; fi
+          git commit -m "catalogo de fontes"
+          for tentativa in 1 2 3; do
+            git push && exit 0
+            git pull --rebase --autostash origin main || git rebase --abort || true
+            sleep 4
+          done
+          exit 1

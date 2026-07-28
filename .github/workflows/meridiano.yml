@@ -60,7 +60,28 @@ jobs:
           mkdir -p dados/arquivo && cp -f recebido/dados/arquivo/*.json dados/arquivo/ 2>/dev/null || true
           cp -rf recebido/materia/* materia/ 2>/dev/null || true
           rm -rf recebido
-          git config user.name "Il Meridiano"
+          git config user.name "Meridiano"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dados materia
-          git diff --staged --quiet || (git commit -m "edicao: br, mundo, mt, rs, rj" && git push)
+          if git diff --staged --quiet; then
+            echo "Nada mudou nesta rodada."
+            exit 0
+          fi
+          git commit -m "edicao: br, mundo, mt, rs, rj"
+
+          # O robo baixa o repositorio, trabalha uns minutos e so entao grava.
+          # Se alguem subir arquivo pelo navegador nesse meio-tempo, o Git
+          # recusa o envio para nao sobrescrever. Aqui buscamos o que chegou,
+          # colocamos nosso commit por cima e tentamos de novo.
+          for tentativa in 1 2 3; do
+            if git push; then
+              echo "Publicado na tentativa $tentativa."
+              exit 0
+            fi
+            echo "Alguem gravou antes. Buscando e tentando de novo..."
+            git pull --rebase --autostash origin main || git rebase --abort || true
+            sleep 4
+          done
+
+          echo "Nao consegui publicar depois de 3 tentativas."
+          exit 1
