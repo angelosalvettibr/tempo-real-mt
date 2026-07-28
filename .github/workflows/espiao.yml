@@ -1,0 +1,30 @@
+name: Espiao
+
+on:
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: 'Estado'
+        required: false
+        default: 'mt'
+        type: choice
+        options: ['mt', 'rs', 'rj']
+      orgao:
+        description: 'Um orgao so (ex: tce-mt). Vazio = todos'
+        required: false
+        default: ''
+
+permissions: { contents: read }
+
+jobs:
+  espiar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node scripts/espiao.mjs
+        env:
+          ESTADO: ${{ inputs.estado }}
+          ORGAO: ${{ inputs.orgao }}
