@@ -106,7 +106,18 @@ async function buscar(url, ms=20000, tentativas=2){
         headers:{ 'User-Agent':'IlMeridiano/1.0 (+contato@ilmeridiano.com.br)',
                   Accept:'application/rss+xml, application/atom+xml, application/xml, text/xml, */*' }});
       if (!r.ok) throw new Error('HTTP '+r.status);
-      return await r.text();
+
+      // Folha e varios portais publicam RSS em ISO-8859-1. Ler tudo como UTF-8
+      // transforma acento em losango preto. Aqui detectamos o charset real.
+      const bytes = new Uint8Array(await r.arrayBuffer());
+      const cabecalho = r.headers.get('content-type') || '';
+      let charset = (cabecalho.match(/charset=([\w-]+)/i) || [])[1];
+      if (!charset) {
+        const inicio = new TextDecoder('latin1').decode(bytes.slice(0, 200));
+        charset = (inicio.match(/encoding=["']([\w-]+)["']/i) || [])[1] || 'utf-8';
+      }
+      try { return new TextDecoder(charset.toLowerCase()).decode(bytes); }
+      catch { return new TextDecoder('utf-8').decode(bytes); }
     } catch(e){ ultimo=e; if (i<tentativas-1) await dormir(2000); }
     finally { clearTimeout(t); }
   }
@@ -183,13 +194,28 @@ for (const l of F.itens) {
     confirmadas.push(l);
   }
 }
-const jaCasou = new Set(confirmadas.map(c=>semAcento(c.titulo).slice(0,40)));
 for (const p of P.itens) {
-  if (!confirmadas.some(c => parecidas(c.titulo, p.titulo) >= 0.30)) soPauta.push(p);
+  if (confirmadas.some(c => parecidas(c.titulo, p.titulo) >= 0.30)) continue;
+
+  // Quantos veiculos diferentes deram esta mesma historia?
+  const eco = P.itens.filter(o => o !== p && o.veiculo !== p.veiculo && parecidas(o.titulo, p.titulo) >= 0.35);
+  p.quentura = eco.length;
+  p.tambemEm = [...new Set(eco.map(e => e.veiculo))].slice(0, 3);
+  soPauta.push(p);
 }
+
+// A lista de pauta so vale se for sinal, nao ruido. Fica o que dois ou mais
+// veiculos deram, ou o que e de Mato Grosso. Concurso em Taubate e baleia em
+// Santa Catarina nao sao pauta para um jornal de Cuiaba.
+const EH_DAQUI = /(mato grosso|cuiaba|varzea grande|rondonopolis|sinop|sorriso|primavera do leste|tangara|caceres|barra do garcas|lucas do rio verde|nova mutum|alta floresta|pantanal|mt\b)/;
+const relevante = p => p.quentura >= 2 || p.editoria === 'regional' || EH_DAQUI.test(semAcento(p.titulo));
+
+const soPautaFiltrada = soPauta
+  .filter(relevante)
+  .sort((a,b) => (b.quentura - a.quentura) || (Date.parse(b.iso) - Date.parse(a.iso)));
 confirmadas.sort((a,b)=>b.quentura-a.quentura);
 console.log(`     ${confirmadas.length} histórias confirmadas em fonte livre`);
-console.log(`     ${soPauta.length} sem fonte livre — não serão publicadas`);
+console.log(`     ${soPauta.length} sem fonte livre, das quais ${soPautaFiltrada.length} relevantes`);
 
 console.log('\n  4. REESCRITA');
 await mkdir('materia',{recursive:true});
@@ -239,11 +265,14 @@ if (temChave()) {
 await writeFile('dados/edicao.json', JSON.stringify({
   gerado: new Date().toISOString(),
   modelo: modeloUsado(),
-  numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, semFonte:soPauta.length },
+  numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, semFonte:soPautaFiltrada.length },
   itens: publicados,
-  pautas: soPauta.slice(0,30).map(p=>({ titulo:p.titulo, veiculo:p.veiculo, editoria:p.editoria }))
+  pautas: soPautaFiltrada.slice(0,18).map(p=>({
+    titulo:p.titulo, veiculo:p.veiculo, editoria:p.editoria,
+    quentura:p.quentura||0, tambemEm:p.tambemEm||[]
+  }))
 }, null, 2), 'utf8');
 
 console.log('\n  ' + '='.repeat(66));
 console.log(`  ${escritas} matérias próprias publicadas · modelo ${modeloUsado()}`);
-console.log(`  ${soPauta.length} pautas sem fonte livre ficaram de fora\n`);
+console.log(`  ${soPautaFiltrada.length} pautas relevantes sem fonte livre\n`);
