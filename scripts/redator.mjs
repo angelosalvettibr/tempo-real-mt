@@ -88,9 +88,20 @@ export async function textoCompleto(url, ms = 12000){
       headers:{ 'User-Agent':'Meridiano/1.0' }});
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const html = await r.text();
-    const corpo = (html.match(/<article[\s\S]*?<\/article>/i)?.[0])
-      || (html.match(/<main[\s\S]*?<\/main>/i)?.[0])
-      || html;
+    let corpo = (html.match(/<article[\s\S]*?<\/article>/i)?.[0])
+      || (html.match(/<main[\s\S]*?<\/main>/i)?.[0]) || '';
+
+    // Muita pagina de orgao publico monta o miolo por JavaScript e vem vazia.
+    // Nesse caso juntamos os paragrafos soltos e a descricao do og.
+    const soTexto = x => x.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+    if (soTexto(corpo).length < 220) {
+      const paras = [...html.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+        .map(m => soTexto(m[1])).filter(t => t.length > 45);
+      const og = html.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["']/i)?.[1] || '';
+      const junto = [og, ...paras].filter(Boolean).join(' ');
+      if (junto.length > soTexto(corpo).length) corpo = junto;
+    }
+    if (!corpo) corpo = html;
     return corpo
       .replace(/<script[\s\S]*?<\/script>/gi,' ')
       .replace(/<style[\s\S]*?<\/style>/gi,' ')
@@ -128,7 +139,7 @@ ${texto}`;
 
 export async function reescrever({ fonte, titulo, texto }){
   if (!temChave()) throw new Error('sem GEMINI_API_KEY');
-  if (!texto || texto.length < 400) throw new Error('texto original curto demais');
+  if (!texto || texto.length < 220) throw new Error('texto original curto demais');
 
   const bruto = await chamar(PROMPT(fonte, titulo, texto));
 
@@ -209,7 +220,7 @@ REGRAS QUE NÃO PODEM SER QUEBRADAS:
 FORMATO — exatamente isto, sem markdown:
 TITULO: (uma linha até 85 caracteres, no condicional, SEM começar com "Circula")
 CORPO:
-(exatamente 2 parágrafos curtos. O primeiro relata o teor em uma ou duas frases. O segundo informa, de forma objetiva, que a checagem em fontes oficiais não localizou registro até o fechamento.)
+(exatamente 1 parágrafo, de uma ou duas frases. Ele deve ACRESCENTAR ao título: onde, quando, quantos, qual órgão. NUNCA repita o que já está no título com outras palavras. Se não houver nada a acrescentar, escreva apenas a informação de contexto disponível.)
 
 EDITORIA: ${editoria}
 INFORMAÇÃO: ${titulo}
@@ -229,6 +240,12 @@ export async function escreverCirculacao({ titulo, resumo, editoria }){
     if (b.length >= 2) { t = t || b[0].slice(0,120); corpo = corpo.length ? corpo : b.slice(1); }
   }
   if (!t || !corpo.length) throw new Error('nota fora do formato');
+  // se o primeiro paragrafo so repete o titulo, nao serve
+  const sa = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const pal = x => new Set(sa(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>=4));
+  const pt = pal(t), pc = pal(corpo[0]);
+  const iguais = [...pt].filter(w => pc.has(w)).length;
+  if (pt.size && iguais / pt.size > 0.75) throw new Error('nota repete o titulo');
   // o rotulo do bloco ja diz que circula; no titulo fica redundante
   t = t.replace(/^circula(-se)?\s+(que\s+)?/i, '').replace(/^informa[çc][ãa]o de que\s+/i, '');
   t = t.charAt(0).toUpperCase() + t.slice(1);

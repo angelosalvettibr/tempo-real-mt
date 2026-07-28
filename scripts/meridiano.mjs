@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
@@ -174,6 +174,9 @@ function parecidas(a,b){
 
 const horaBR = iso => new Date(iso).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',timeZone:'America/Cuiaba'}).replace(':','h');
 const corte = Date.now() - JANELA_HORAS*3600*1000;
+// Fonte livre tem janela maior: orgao publica menos vezes por dia, e um
+// release de ontem casa naturalmente com pauta de hoje.
+const corteLivre = Date.now() - 48*3600*1000;
 
 // Antes era um feed por vez: 30 feeds a 2s cada = 1 minuto so de espera.
 // Agora vao em lotes de 6 ao mesmo tempo. Mesma cortesia com cada servidor,
@@ -187,7 +190,7 @@ async function colher(lista, rotulo, tamanhoLote = 6){
       let ok = 0;
       for (const b of itens) {
         const ts = Date.parse(b.data);
-        if (Number.isNaN(ts) || ts < corte) continue;
+        if (Number.isNaN(ts) || ts < (rotulo === 'livre' ? corteLivre : corte)) continue;
         if (RE_BLOQUEIO.test(semAcento(b.titulo+' '+b.resumo+' '+b.veiculo))) continue;
         let titulo = b.titulo;
         if (b.veiculo && titulo.endsWith(' - '+b.veiculo)) titulo = titulo.slice(0, -(b.veiculo.length+3)).trim();
@@ -229,7 +232,13 @@ const listaPauta = GERAL
      { id:`gn-${UF}`, nome:E.nome, editoria:'regional',
        url:gnews(`"${E.nome}" ${E.excluir||''} when:1d`) },
      { id:`gn-${UF}-cap`, nome:E.capital, editoria:'regional',
-       url:gnews(`"${E.capital}" prefeitura OR camara OR policia when:1d`) }];
+       url:gnews(`"${E.capital}" prefeitura OR camara OR policia when:1d`) },
+     // uma busca por cidade: e ali que mora a noticia que ninguem cobre
+     ...((E.cidades_busca || E.cidades || []).slice(0, 12).map(c => ({
+       id: 'gn-' + UF + '-' + c.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z]/g,'').slice(0,10),
+       nome: c, editoria: 'regional',
+       url: gnews(`"${c}" prefeitura OR camara OR obras OR policia ${E.excluir||''} when:1d`)
+     })))];
 
 const P = await colher(listaPauta, 'pauta');
 P.rel.forEach(l=>console.log('  '+l));
@@ -353,7 +362,7 @@ if (bloq.length) {
         let n = 0;
         for (const it of itens) {
           const ts = Date.parse(it.data);
-          if (Number.isNaN(ts) || ts < corte) continue;
+          if (Number.isNaN(ts) || ts < (rotulo === 'livre' ? corteLivre : corte)) continue;
           let titulo = it.titulo;
           if (it.veiculo && titulo.endsWith(' - '+it.veiculo)) titulo = titulo.slice(0, -(it.veiculo.length+3)).trim();
           if (titulo.length < 30) continue;
@@ -372,6 +381,23 @@ if (bloq.length) {
 // livre. O Google indexa os releases das prefeituras e orgaos, e eles chegam
 // pela porta errada. Em vez de consertar raspagem site a site, reconhecemos
 // pelo endereco: .gov.br, .jus.br, .leg.br e .mp.br autorizam reproducao.
+// NIVEL DE EVIDENCIA — o que sustenta cada materia, dito na cara do leitor.
+//   apurado    lemos o documento oficial
+//   atribuido  veiculos independentes atribuem a mesma fonte oficial
+//   circulando nem documento, nem convergencia
+function nivelDe(item){
+  const oficial = item.link && PODE_REESCREVER.test(item.link);
+  if (oficial) return { nivel:'apurado', selo:'Apurado pela redação' };
+
+  const veiculos = [...new Set(item.pautadoPor || [])];
+  if (veiculos.length >= 2) {
+    return { nivel:'atribuido',
+             selo:'Atribuído a fonte oficial por ' + veiculos.slice(0,3).join(', '),
+             veiculos };
+  }
+  return { nivel:'circulando', selo:'Sem confirmação oficial' };
+}
+
 const promovidos = [];
 for (const p of P.itens) {
   if (!p.link || !PODE_REESCREVER.test(p.link)) continue;
@@ -412,7 +438,11 @@ for (const p of P.itens) {
 // veiculos deram, ou o que e de Mato Grosso. Concurso em Taubate e baleia em
 // Santa Catarina nao sao pauta para um jornal de Cuiaba.
 const EH_DAQUI = /(mato grosso|cuiaba|varzea grande|rondonopolis|sinop|sorriso|primavera do leste|tangara|caceres|barra do garcas|lucas do rio verde|nova mutum|alta floresta|pantanal|mt\b)/;
-const relevante = p => p.quentura >= 2 || p.editoria === 'regional' || EH_DAQUI.test(semAcento(p.titulo));
+// Nas edicoes br e mundo nao existe "e daqui": o criterio e o eco entre
+// veiculos. Antes, quase tudo era descartado e o Circulando ficava vazio.
+const relevante = GERAL
+  ? p => (p.quentura || 0) >= 1
+  : p => p.quentura >= 2 || p.editoria === 'regional' || EH_DAQUI.test(semAcento(p.titulo));
 
 const soPautaFiltrada = soPauta
   .filter(relevante)
@@ -442,14 +472,27 @@ if (temChave()) {
 
   // As reescritas tambem iam em fila: cada uma esperava a anterior, e uma
   // pagina lenta segurava todas. Agora vao de tres em tres.
+  // A memoria do jornal, para o bloco de contexto saber se ja houve caso igual
+  let arquivoMemoria = { itens: [] };
+  try { arquivoMemoria = JSON.parse(await readFile(`dados/arquivo-${UF}.json`,'utf8')); } catch {}
+
   async function escreverUma(i){
     try {
       const texto = await textoCompleto(i.link, 12000);
       const m = await reescrever({ fonte: i.veiculo, titulo: i.titulo, texto });
       const arq = slug(m.titulo)+'.html';
+
+      // contexto: so entra se houver caso parecido no arquivo ou numero no texto
+      const parecidos = acharParecidos(arquivoMemoria, m.titulo);
+      const contexto = await escreverContexto({
+        titulo: m.titulo,
+        corpo: m.corpo.join('\n\n'),
+        historico: parecidos.map(x => ({ dia: (x.iso||'').slice(0,10), titulo: x.titulo }))
+      });
+
       await writeFile('materia/'+arq, pagina(
         { chapeu: i.editoria==='regional'?E.nome:i.editoria==='internacional'?'Mundo':'Brasil',
-          titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, checar:[] },
+          titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto, checar:[] },
         { link:i.link, municipio:'' }, i.iso), 'utf8');
       publicados.push({
         id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
@@ -458,7 +501,8 @@ if (temChave()) {
         origemLink:i.link, origemNome:i.veiculo,
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
         uf: GERAL ? null : UF,
-        link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true
+        link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
+        ...nivelDe(i)
       });
       escritas++;
       console.log('     ok    '+m.titulo.slice(0,58));
@@ -468,7 +512,10 @@ if (temChave()) {
   // Sem teto, a unica assessoria que abre domina a edicao inteira — e cinco
   // materias da mesma prefeitura, duas sobre o mesmo evento, viram boletim
   // oficial em vez de jornal.
-  const TETO_POR_FONTE = 3;
+  // Com poucas fontes distintas, teto baixo mata a edicao. Com muitas, teto
+  // alto deixa uma so dominar. Entao o teto acompanha a diversidade.
+  const fontesDistintas = new Set(fila.map(i => i.veiculo)).size;
+  const TETO_POR_FONTE = fontesDistintas <= 3 ? 5 : fontesDistintas <= 6 ? 4 : 3;
 
   // Reveza entre as fontes antes de repetir: uma de cada, depois a segunda de
   // cada. Assim uma prefeitura falante nao ocupa a edicao inteira, e as fontes
@@ -556,7 +603,7 @@ try {
 const circulando = [];
 if (temChave() && soPautaFiltrada.length) {
   const candidatas = soPautaFiltrada
-    .filter(p => (p.quentura || 0) >= 1)   // duas fontes ja e circulacao
+    .filter(p => (p.quentura || 0) >= 0)   // uma fonte ja basta: o bloco diz que nao esta confirmado
     .slice(0, 6);
 
   for (const c of candidatas) {

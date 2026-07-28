@@ -89,8 +89,18 @@ export const ESTADOS = {
     marcadores: /(rio de janeiro|niteroi|sao goncalo|duque de caxias|petropolis|nova iguacu|campos dos goytacazes|baixada fluminense|fluminense|carioca|zona sul|zona norte|zona oeste)/,
     excluir: '-"Rio Grande"',
 
+    // cidades com prefeitura, camara e imprensa propria: cada uma traz
+    // fonte livre nova e engrossa a pauta regional
+    cidades_busca: ['Niterói','São Gonçalo','Duque de Caxias','Nova Iguaçu','Petrópolis',
+                    'Búzios','Cabo Frio','Angra dos Reis','Resende','Volta Redonda','Campos dos Goytacazes','Macaé'],
+
     veiculos: [
       { id:'g1rj',      nome:'g1 Rio',          url:'https://g1.globo.com/rss/g1/rio-de-janeiro/' },
+      { id:'saogoncalo',nome:'O São Gonçalo',   url:'https://www.osaogoncalo.com.br/feed' },
+      { id:'goncalense',nome:'O Gonçalense',    url:'https://jornalogoncalense.com.br/feed/' },
+      { id:'tribpetro', nome:'Tribuna de Petrópolis', url:'https://www.tribunadepetropolis.com.br/feed/' },
+      { id:'radio93',   nome:'Rádio 93',        url:'https://radio93.com.br/feed/' },
+      { id:'tupi',      nome:'Super Rádio Tupi',url:'https://tupi.fm/feed/' },
       { id:'odia',      nome:'O Dia',           url:'https://odia.ig.com.br/rss/noticias.xml' },
       { id:'extra',     nome:'Extra',           url:'https://extra.globo.com/rss.xml' },
       { id:'diariodorio',nome:'Diário do Rio',  url:'https://diariodorio.com/feed/' },
@@ -106,7 +116,14 @@ export const ESTADOS = {
       { id:'prefrio',  nome:'Prefeitura do Rio',    base:'https://prefeitura.rio' },
       { id:'camararj', nome:'Câmara do Rio',        base:'https://www.camara.rj.gov.br' },
       { id:'tre-rj',   nome:'TRE-RJ',               base:'https://www.tre-rj.jus.br' },
-      { id:'niteroi',  nome:'Prefeitura de Niterói',base:'https://www.niteroi.rj.gov.br' }
+      { id:'niteroi',   nome:'Prefeitura de Niterói',    base:'https://www.niteroi.rj.gov.br' },
+      { id:'saogoncalo-pref', nome:'Prefeitura de São Gonçalo', base:'https://www.saogoncalo.rj.gov.br' },
+      { id:'buzios',    nome:'Prefeitura de Búzios',     base:'https://www.buzios.rj.gov.br' },
+      { id:'petropolis',nome:'Prefeitura de Petrópolis', base:'https://www.petropolis.rj.gov.br' },
+      { id:'cabofrio',  nome:'Prefeitura de Cabo Frio',  base:'https://www.cabofrio.rj.gov.br' },
+      { id:'voltaredonda', nome:'Prefeitura de Volta Redonda', base:'https://www.voltaredonda.rj.gov.br' },
+      { id:'caxias',    nome:'Prefeitura de Duque de Caxias', base:'https://duquedecaxias.rj.gov.br' },
+      { id:'campos',    nome:'Prefeitura de Campos',     base:'https://www.campos.rj.gov.br' }
     ],
 
     setoriais: [
@@ -124,6 +141,17 @@ export const EDICOES_GERAIS = {
     nome: 'Brasil', uf: 'br',
     pauta: [
       { id:'g1',         nome:'g1',          url:'https://g1.globo.com/rss/g1/' },
+      { id:'oglobo',     nome:'O Globo',     url:'https://oglobo.globo.com/rss.xml' },
+      { id:'valor',      nome:'Valor',       url:'https://valor.globo.com/rss/' },
+      { id:'zh',         nome:'Zero Hora',   url:'https://gauchazh.clicrbs.com.br/rss/ultimas.xml' },
+      { id:'correiobraz',nome:'Correio Braziliense', url:'https://www.correiobraziliense.com.br/rss/noticia/ultimas/rss.xml' },
+      { id:'gazetapovo', nome:'Gazeta do Povo', url:'https://www.gazetadopovo.com.br/feed/rss2.xml' },
+      { id:'exame',      nome:'Exame',       url:'https://exame.com/feed/' },
+      { id:'cartacapital',nome:'CartaCapital',url:'https://www.cartacapital.com.br/feed/' },
+      { id:'r7',         nome:'R7',          url:'https://noticias.r7.com/feed.xml' },
+      { id:'bbcbr',      nome:'BBC Brasil',  url:'https://feeds.bbci.co.uk/portuguese/rss.xml' },
+      { id:'congresso',  nome:'Congresso em Foco', url:'https://www.congressoemfoco.com.br/feed/' },
+      { id:'migalhas',   nome:'Migalhas',    url:'https://www.migalhas.com.br/rss' },
       { id:'g1politica', nome:'g1 Política', url:'https://g1.globo.com/rss/g1/politica/' },
       { id:'g1economia', nome:'g1 Economia', url:'https://g1.globo.com/rss/g1/economia/' },
       { id:'folha',      nome:'Folha',       url:'https://feeds.folha.uol.com.br/emcimadahora/rss091.xml' },
@@ -144,7 +172,17 @@ export const EDICOES_GERAIS = {
       { id:'camara',      nome:'Agência Câmara Notícias', url:'https://www.camara.leg.br/noticias/rss/ultimas.xml', base:'https://www.camara.leg.br/noticias' },
       { id:'senado',      nome:'Agência Senado', url:'https://www12.senado.leg.br/noticias/rss/ultimas', base:'https://www12.senado.leg.br/noticias' },
       { id:'embrapa',     nome:'Embrapa', url:'https://www.embrapa.br/busca-de-noticias/-/asset_publisher/rss', base:'https://www.embrapa.br' },
-      { id:'conab',       nome:'Conab',   url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' }
+      { id:'conab',       nome:'Conab',   url:'https://www.conab.gov.br/ultimas-noticias?format=feed&type=rss', base:'https://www.conab.gov.br' },
+      { id:'gov-br',      nome:'gov.br',  url:'https://www.gov.br/pt-br/noticias/RSS', base:'https://www.gov.br/pt-br/noticias' },
+      { id:'stf',         nome:'STF',     url:'https://noticias.stf.jus.br/postsrss', base:'https://noticias.stf.jus.br' },
+      { id:'stj',         nome:'STJ',     url:'https://www.stj.jus.br/sites/portalp/rss', base:'https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias' },
+      { id:'tse',         nome:'TSE',     url:'https://www.tse.jus.br/rss/noticias.xml', base:'https://www.tse.jus.br/comunicacao/noticias' },
+      { id:'bc',          nome:'Banco Central', url:'https://www.bcb.gov.br/rss/noticias', base:'https://www.bcb.gov.br/detalhenoticia' },
+      { id:'ibge',        nome:'IBGE',    url:'https://agenciadenoticias.ibge.gov.br/agencia-noticias/2013-agencia-de-noticias/releases.rss', base:'https://agenciadenoticias.ibge.gov.br' },
+      { id:'inmet',       nome:'Inmet',   url:'https://portal.inmet.gov.br/rss', base:'https://portal.inmet.gov.br/noticias' },
+      { id:'anp',         nome:'ANP',     url:'https://www.gov.br/anp/pt-br/noticias/RSS', base:'https://www.gov.br/anp/pt-br/noticias' },
+      { id:'mapa',        nome:'Ministério da Agricultura', url:'https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/agricultura/pt-br/assuntos/noticias' },
+      { id:'saude',       nome:'Ministério da Saúde', url:'https://www.gov.br/saude/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/saude/pt-br/assuntos/noticias' }
     ]
   },
   mundo: {
