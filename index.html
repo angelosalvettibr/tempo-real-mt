@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IL MERIDIANO — Mundo, Brasil e Mato Grosso</title>
-<meta name="description" content="Jornal digital de Cuiabá. Mundo, Brasil e Mato Grosso, com texto próprio a partir de fontes que autorizam reprodução.">
+<title>MERIDIANO — Brasil, Mundo e o seu estado</title>
+<meta name="description" content="Jornal digital. Brasil, Mundo e edições estaduais, com texto próprio a partir de fontes que autorizam reprodução.">
 <meta name="theme-color" content="#FBF9F4">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="IL MERIDIANO">
+<meta property="og:site_name" content="MERIDIANO">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -110,7 +110,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 <div class="faixa">
   <div class="wrap">
     <span id="data">—</span>
-    <span>Cuiabá · 15°35′S 56°05′W</span>
+    <span id="praca">—</span>
     <span>atualizado <b id="quando">—</b></span>
     <span id="stats"></span>
   </div>
@@ -118,9 +118,9 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
 
 <header>
   <div class="wrap masthead">
-    <div class="lema">Il giornale di Cuiabá</div>
-    <h1>IL <em>MERIDIANO</em></h1>
-    <div class="sub">Mundo · Brasil · Mato Grosso</div>
+    <div class="lema">O jornal que mostra como apura</div>
+    <h1><em>MERIDIANO</em></h1>
+    <div class="sub">Brasil · Mundo · Estados</div>
   </div>
   <nav>
     <div class="wrap">
@@ -179,11 +179,12 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11.5px}
       </div>
       <div>
         <h5>Editorias</h5>
-        <ul><li>Mundo</li><li>Brasil</li><li>Mato Grosso</li><li>Cuiabá e Várzea Grande</li></ul>
+        <ul><li>Brasil</li><li>Mundo</li><li>Mato Grosso</li><li>Rio Grande do Sul</li><li>Rio de Janeiro</li></ul>
       </div>
     </div>
     <div class="selo-final">
-      <span>IL MERIDIANO · Cuiabá, Mato Grosso</span>
+      <span><a href="painel.html" style="border-bottom:1px solid var(--linha2)">Painel de fontes</a></span>
+      <span>MERIDIANO · jornalismo de fonte aberta</span>
       <span id="rodape">—</span>
     </div>
   </div>
@@ -321,6 +322,7 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
 
 function aplicarEstado(){
   $('#selEstado').value = estado;
+  const p = $('#praca'); if (p) p.textContent = 'edição ' + ESTADOS[estado];
   $('#btEstado').textContent = ESTADOS[estado];
   location.hash = estado;
   pintar();
