@@ -215,7 +215,7 @@ function nasceu(i){
 }
 
 function pintar(){
-  const doEstado = i => !i.uf || i.uf === estado;
+  const doEstado = i => i.uf === estado;
   const lista = filtro === 'capa'
     ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
     : filtro === 'regional'
