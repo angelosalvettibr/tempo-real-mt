@@ -517,6 +517,7 @@ if (temChave()) {
         origemLink:i.link, origemNome:i.veiculo,
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
         uf: GERAL ? null : UF,
+        corpo: m.corpo,
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
         ...nivelDe(i, texto)
       });
@@ -601,15 +602,40 @@ try {
     if (!p.original || jaTem.has(p.id)) continue;
     arquivo.itens.push({
       id: p.id, titulo: p.titulo, resumo: p.resumo,
+      // o texto inteiro fica guardado: sem ele o fio das historias e o
+      // assistente so teriam manchete para trabalhar
+      corpo: p.corpo || [],
+      contexto: p.contexto || null,
       editoria: p.editoria, uf: p.uf || null,
       fonte: p.fonte, origemLink: p.origemLink || '',
+      origemNome: p.origemNome || null,
       nivel: p.nivel || null, orgao: p.orgao || null,
-      link: p.link, iso: p.iso, dia: p.iso.slice(0,10)
+      pautadoPor: p.pautadoPor || [],
+      link: p.link, iso: p.iso, dia: p.iso.slice(0,10),
+      palavras: (p.corpo || []).join(' ').split(/\s+/).length
     });
     novas++;
   }
   arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
   arquivo.atualizado = new Date().toISOString();
+  arquivo.total = arquivo.itens.length;
+
+  // as nao confirmadas tambem ficam guardadas: e delas que nasce o fio da
+  // historia quando a confirmacao chegar depois
+  for (const c of circulando) {
+    if (jaTem.has(c.id)) continue;
+    arquivo.itens.push({
+      id: c.id, titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
+      corpo: c.corpo || [], contexto: null,
+      editoria: c.editoria, uf: c.uf || null,
+      fonte: 'Meridiano', origemLink: '', origemNome: null,
+      nivel: 'sem-confirmacao', orgao: null, pautadoPor: [],
+      link: c.link || '', iso: c.iso, dia: c.iso.slice(0,10),
+      palavras: (c.corpo || []).join(' ').split(/\s+/).length
+    });
+    novas++;
+  }
+  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
   arquivo.total = arquivo.itens.length;
 
   await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
@@ -640,7 +666,23 @@ if (temChave() && soPautaFiltrada.length) {
   for (const c of candidatas) {
     try {
       const n = await escreverCirculacao({ titulo: c.titulo, resumo: '', editoria: EDITORIA });
+      // pagina propria: quando a confirmacao chegar, esta mesma pagina e
+      // atualizada — e o leitor ve o caminho da historia
+      const arqC = 'nc-' + slug(n.titulo) + '.html';
+      await writeFile('materia/' + arqC, pagina({
+        chapeu: GERAL ? GERAL.nome : E.nome,
+        titulo: n.titulo,
+        linhaFina: n.aviso,
+        corpo: n.corpo,
+        naoConfirmada: true,
+        checar: ['Procurar o registro no órgão competente',
+                 'Confirmar data, local e envolvidos',
+                 'Ouvir o outro lado antes de publicar como confirmada']
+      }, { link: '', municipio: '' }, new Date().toISOString()), 'utf8');
+
       circulando.push({
+        link: '/materia/' + arqC,
+        corpo: n.corpo,
         id: 'circ:' + slug(n.titulo),
         editoria: EDITORIA, uf: GERAL ? null : UF,
         titulo: n.titulo, corpo: n.corpo, aviso: n.aviso,

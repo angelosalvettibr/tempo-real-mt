@@ -270,6 +270,8 @@ header{border-bottom:2px solid var(--tinta);margin-bottom:30px}
 .nome{font-size:21px;font-weight:900;letter-spacing:-.035em}
 .nome span{color:var(--sinal)}
 .selo{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--verde);padding:5px 9px;display:inline-block;margin-bottom:14px}
+.selo.nc{background:#8A8A8A}
+.nc-aviso{border:1px solid #E0D6BE;background:#FBF6EA;padding:16px 20px;margin:0 0 26px;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.6;color:#5C4A1E}
 .chapeu{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:9px}
 h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-height:1.06;margin-bottom:14px}
 .linha-fina{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.5;color:#414852;margin-bottom:22px}
@@ -301,10 +303,14 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 </div></header>
 
 <article class="wrap">
-  <span class="selo">Reportagem de dados · exclusivo</span>
+  ${m.naoConfirmada
+    ? '<span class="selo nc">Sem confirmação oficial</span>'
+    : '<span class="selo">Reportagem de dados · exclusivo</span>'}
   <span class="chapeu">${esc(m.chapeu)}</span>
   <h1>${esc(m.titulo)}</h1>
-  <p class="linha-fina">${esc(m.linhaFina)}</p>
+  ${m.naoConfirmada
+    ? `<div class="nc-aviso">${esc(m.linhaFina)}</div>`
+    : `<p class="linha-fina">${esc(m.linhaFina)}</p>`}
   <div class="assina">Redação Meridiano · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
 
   <div class="corpo">${corpoHtml}</div>
