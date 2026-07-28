@@ -60,6 +60,14 @@ nav button[aria-pressed="true"]{color:var(--rosso);border-bottom-color:var(--ros
 
 main{padding:30px 0 10px;min-height:40vh}
 .aviso{text-align:center;padding:60px 20px;color:var(--fraco);font-size:17px}
+.erro-box{max-width:680px;margin:50px auto;border:1px solid var(--linha);padding:26px 28px;background:var(--areia)}
+.erro-box b{font-family:var(--tit);font-size:21px;display:block;margin-bottom:10px}
+.erro-box p{font-size:15.5px;line-height:1.6;color:var(--tinta2);margin-bottom:18px}
+.erro-box code{font-family:var(--mono);font-size:13px;background:#fff;padding:2px 6px;border:1px solid var(--linha)}
+.erro-box table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
+.erro-box td{padding:7px 8px;border-bottom:1px solid var(--linha)}
+.erro-box td.sim{color:var(--verde);font-weight:600}
+.erro-box td.nao{color:var(--rosso);font-weight:600}
 
 /* abertura: a principal ocupa duas colunas, a segunda fica ao lado */
 .topo-edicao{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:2px solid var(--tinta);margin-bottom:0}
@@ -315,15 +323,38 @@ async function carregar(){
   try{
     // Cada estado grava o proprio arquivo. Buscamos os tres ao mesmo tempo:
     // se um faltar, os outros entram e o site nao fica vazio.
+    // Guarda o que aconteceu com cada arquivo, para a tela poder explicar
+    // em vez de só dizer que falhou.
+    const diagnostico = [];
     const puxa = async uf => {
+      const url = `dados/edicao-${uf}.json?t=${Date.now()}`;
       try {
-        const r = await fetch(`dados/edicao-${uf}.json?t=${Date.now()}`, { cache:'no-store' });
-        return r.ok ? await r.json() : null;
-      } catch { return null; }
+        const r = await fetch(url, { cache:'no-store' });
+        if (!r.ok) { diagnostico.push({ uf, ok:false, msg:`HTTP ${r.status}` }); return null; }
+        const j = await r.json();
+        const n = (j.itens || []).length;
+        diagnostico.push({ uf, ok:true, msg:`${n} ${n === 1 ? 'matéria' : 'matérias'}` });
+        return j;
+      } catch (e) {
+        diagnostico.push({ uf, ok:false, msg: String(e.message).slice(0,40) });
+        return null;
+      }
     };
-    const ARQUIVOS = ['br','mundo', ...Object.keys(ESTADOS)];
-    const partes = (await Promise.all(ARQUIVOS.map(puxa))).filter(Boolean);
-    if (!partes.length) throw new Error('nenhuma edicao encontrada');
+    if (!partes.length) {
+      const local = location.protocol === 'file:';
+      $('#conteudo').innerHTML = `<div class="erro-box">
+        <b>Não consegui carregar nenhuma edição.</b>
+        ${local
+          ? '<p>Você está abrindo o arquivo direto do computador, e o navegador bloqueia a leitura de arquivos locais por segurança. Publique o site ou rode <code>npx serve</code> na pasta.</p>'
+          : '<p>Os arquivos de edição não foram encontrados no servidor. Rode o robô <b>Il Meridiano</b> em Actions para gerá-los.</p>'}
+        <table>${diagnostico.map(d => `<tr>
+          <td>dados/edicao-${d.uf}.json</td>
+          <td class="${d.ok ? 'sim' : 'nao'}">${d.ok ? 'ok' : 'falhou'}</td>
+          <td>${esc(d.msg)}</td>
+        </tr>`).join('')}</table>
+      </div>`;
+      return;
+    }
 
     // Brasil e Mundo sao os mesmos nos tres: guardamos uma vez so.
     const vistos = new Set();
@@ -378,7 +409,11 @@ async function carregar(){
       itens, pautas
     };
   }catch(e){
-    $('#conteudo').innerHTML = '<p class="aviso">Não consegui ler <b>dados/edicao.json</b>.<br>Se estiver abrindo do computador, publique ou rode <b>npx serve</b> na pasta.</p>';
+    $('#conteudo').innerHTML = `<div class="erro-box">
+      <b>Erro ao montar a edição.</b>
+      <p>${esc(String(e.message))}</p>
+      <table>${(window.__diag || []).map(d => `<tr><td>dados/edicao-${d.uf}.json</td><td class="${d.ok?'sim':'nao'}">${d.ok?'ok':'falhou'}</td><td>${esc(d.msg)}</td></tr>`).join('')}</table>
+    </div>`;
     return;
   }
   pintar(); pintarDescarte();
