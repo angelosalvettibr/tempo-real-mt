@@ -271,7 +271,8 @@ async function carregar(){
         return r.ok ? await r.json() : null;
       } catch { return null; }
     };
-    const partes = (await Promise.all(Object.keys(ESTADOS).map(puxa))).filter(Boolean);
+    const ARQUIVOS = ['br','mundo', ...Object.keys(ESTADOS)];
+    const partes = (await Promise.all(ARQUIVOS.map(puxa))).filter(Boolean);
     if (!partes.length) throw new Error('nenhuma edicao encontrada');
 
     // Brasil e Mundo sao os mesmos nos tres: guardamos uma vez so.
