@@ -40,7 +40,9 @@ h1 span{color:var(--fraco);font-weight:400}
 .legenda{display:flex;gap:14px;flex-wrap:wrap;margin-top:7px;font-family:var(--mono);font-size:10px;color:var(--texto2)}
 .legenda i{width:9px;height:9px;display:inline-block;margin-right:5px}
 
-.filtros{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0 18px;align-items:center}
+.filtros{display:flex;gap:6px;flex-wrap:wrap;padding:7px 0;align-items:center}
+.filtros .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);min-width:74px}
+#filtros{padding:6px 0 16px;border-bottom:1px solid var(--borda);margin-bottom:16px}
 .filtros button{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid var(--borda);color:var(--texto2);padding:7px 12px;cursor:pointer;transition:.14s}
 .filtros button:hover{border-color:var(--texto2);color:var(--texto)}
 .filtros button[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:var(--fundo);font-weight:600}
@@ -82,16 +84,7 @@ tr:hover td{background:var(--painel)}
 <main class="wrap">
   <div class="barras" id="barras"></div>
 
-  <div class="filtros">
-    <button data-f="todas" aria-pressed="true">Todas</button>
-    <button data-f="ativa" aria-pressed="false">Ativas</button>
-    <button data-f="instavel" aria-pressed="false">Instáveis</button>
-    <button data-f="fora" aria-pressed="false">Fora do ar</button>
-    <button data-f="bloqueada" aria-pressed="false">Bloqueadas</button>
-    <button data-f="quarentena" aria-pressed="false">Quarentena</button>
-    <button data-f="livre" aria-pressed="false">Só fonte livre</button>
-    <input id="busca" placeholder="buscar nome ou domínio…">
-  </div>
+  <div id="filtros"></div>
 
   <div id="conteudo"><p class="vazio">Carregando catálogo…</p></div>
 </main>
@@ -99,7 +92,23 @@ tr:hover td{background:var(--painel)}
 <script>
 const CORES = { ativa:'#3FB950', instavel:'#D29922', fora:'#F85149', bloqueada:'#8B5CF6', quarentena:'#58A6FF' };
 const ROTULO = { ativa:'ativa', instavel:'instável', fora:'fora', bloqueada:'bloqueada', quarentena:'quarentena' };
-let CAT = { fontes:{} }, filtro = 'todas', busca = '', ordem = { campo:'nota', desc:true };
+let CAT = { fontes:{} }, busca = '', ordem = { campo:'nota', desc:true };
+
+// Cada linha de filtro e uma entrada aqui. Para criar um filtro novo — por
+// sistema, por nota minima, por ter foto — basta acrescentar um objeto.
+const DIMENSOES = [
+  { id:'estado',  rotulo:'Saúde',   campo:'estado',
+    opcoes:[['todas','Todas'],['ativa','Ativas'],['instavel','Instáveis'],['fora','Fora do ar'],['bloqueada','Bloqueadas'],['quarentena','Quarentena']] },
+  { id:'praca',   rotulo:'Praça',   campo:'uf',
+    opcoes:[['todas','Todas'],['br','Nacional e Mundo'],['mt','Mato Grosso'],['rs','Rio Grande do Sul'],['rj','Rio de Janeiro']] },
+  { id:'tipo',    rotulo:'Tipo',    campo:'tipo',
+    opcoes:[['todas','Todos'],['veiculo','Veículos'],['assessoria','Assessorias'],['setorial','Setoriais'],['agencia','Agências']] },
+  { id:'licenca', rotulo:'Licença', campo:'licenca',
+    opcoes:[['todas','Todas'],['livre','Fonte livre'],['pauta','Só pauta']] },
+  { id:'metodo',  rotulo:'Leitura', campo:'metodo',
+    opcoes:[['todas','Todas'],['rss','RSS'],['pagina','Página'],['sitemap','Sitemap'],['google','Google']] }
+];
+const escolha = Object.fromEntries(DIMENSOES.map(d => [d.id, 'todas']));
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -145,30 +154,62 @@ function sparkline(h){
   ).join('') + '</span>';
 }
 
-function tabela(){
+function filtrar(){
   let f = lista();
-  if (filtro === 'livre') f = f.filter(x => x.licenca === 'livre');
-  else if (filtro !== 'todas') f = f.filter(x => x.estado === filtro);
+  for (const d of DIMENSOES) {
+    const v = escolha[d.id];
+    if (v !== 'todas') f = f.filter(x => (x[d.campo] || '') === v);
+  }
   if (busca) {
     const b = busca.toLowerCase();
     f = f.filter(x => (x.nome||'').toLowerCase().includes(b) || (x.dominio||'').toLowerCase().includes(b));
   }
+  return f;
+}
+
+function pintarFiltros(){
+  const alvo = document.getElementById('filtros');
+  alvo.innerHTML = DIMENSOES.map(d => `
+    <div class="filtros">
+      <span class="rot">${d.rotulo}</span>
+      ${d.opcoes.map(([v,r]) => {
+        const n = v === 'todas' ? lista().length : lista().filter(x => (x[d.campo]||'') === v).length;
+        return `<button data-d="${d.id}" data-v="${v}" aria-pressed="${escolha[d.id]===v}" ${n===0&&v!=='todas'?'style="opacity:.35"':''}>${r}${v!=='todas'?` <span style="opacity:.6">${n}</span>`:''}</button>`;
+      }).join('')}
+      ${d.id === 'estado' ? '<input id="busca" placeholder="buscar nome ou domínio…">' : ''}
+    </div>`).join('');
+
+  alvo.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    escolha[b.dataset.d] = b.dataset.v;
+    pintar();
+  }));
+  const bu = document.getElementById('busca');
+  if (bu) {
+    bu.value = busca;
+    bu.addEventListener('input', e => { busca = e.target.value; pintar(); });
+    if (busca) setTimeout(() => { bu.focus(); bu.setSelectionRange(busca.length, busca.length); }, 0);
+  }
+}
+
+function tabela(){
+  let f = filtrar();
   f.sort((a,b) => {
     const x = a[ordem.campo] ?? '', y = b[ordem.campo] ?? '';
     const r = typeof x === 'number' ? x - y : String(x).localeCompare(String(y));
     return ordem.desc ? -r : r;
   });
 
-  if (!f.length) return '<p class="vazio">Nenhuma fonte com este filtro.</p>';
+  if (!f.length) return '<p class="vazio">Nenhuma fonte com estes filtros.</p>';
 
-  return `<table>
+  return `<p style="font-family:var(--mono);font-size:11px;color:var(--fraco);margin-bottom:10px">${f.length} de ${lista().length} fontes</p>
+  <table>
     <thead><tr>
       <th data-o="nome">Fonte</th>
       <th data-o="dominio" class="esconde">Domínio</th>
-      <th data-o="uf">UF</th>
+      <th data-o="uf">Praça</th>
       <th data-o="tipo" class="esconde">Tipo</th>
       <th data-o="licenca">Licença</th>
-      <th data-o="metodo">Método</th>
+      <th data-o="metodo">Leitura</th>
       <th data-o="estado">Estado</th>
       <th data-o="mediaItens" class="esconde">Itens</th>
       <th class="esconde">14 dias</th>
@@ -192,6 +233,7 @@ function tabela(){
 
 function pintar(){
   kpis();
+  pintarFiltros();
   $('#barras').innerHTML =
     barra('Por estado', 'estado', CORES) +
     barra('Por tipo', 'tipo') +
@@ -212,13 +254,6 @@ function pintar(){
     pintar();
   }));
 }
-
-document.querySelectorAll('.filtros button').forEach(b => b.addEventListener('click', () => {
-  filtro = b.dataset.f;
-  document.querySelectorAll('.filtros button').forEach(o => o.setAttribute('aria-pressed', o===b));
-  pintar();
-}));
-$('#busca').addEventListener('input', e => { busca = e.target.value; pintar(); });
 
 (async () => {
   try {
