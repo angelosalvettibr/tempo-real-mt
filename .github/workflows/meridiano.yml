@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
     inputs:
       estado:
-        description: 'Um estado so (deixe vazio para os tres)'
+        description: 'Qual edicao gerar'
         required: false
-        default: ''
+        default: 'todos'
         type: choice
-        options: ['', 'mt', 'rs', 'rj']
+        options: ['todos', 'mt', 'rs', 'rj']
 
 permissions: { contents: write }
 
@@ -31,7 +31,7 @@ jobs:
       - run: node scripts/meridiano.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ESTADO: ${{ inputs.estado || matrix.estado }}
+          ESTADO: ${{ (inputs.estado == 'todos' || inputs.estado == '') && matrix.estado || inputs.estado }}
       - uses: actions/upload-artifact@v4
         with:
           name: edicao-${{ matrix.estado }}
