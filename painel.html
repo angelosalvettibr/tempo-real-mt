@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel de fontes — Il Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fundo:#0E1116; --painel:#161B22; --painel2:#1C232C; --borda:#2A323D;
+  --texto:#E6E9ED; --texto2:#9AA4B0; --fraco:#6B7684;
+  --viva:#3FB950; --instavel:#D29922; --fora:#F85149; --bloq:#8B5CF6; --quar:#58A6FF;
+  --mono:'IBM Plex Mono',monospace; --sans:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font-family:var(--sans);line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1400px;margin:0 auto;padding:0 20px}
+a{color:inherit;text-decoration:none}
+
+header{border-bottom:1px solid var(--borda);background:var(--painel);padding:16px 0}
+header .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+h1{font-size:19px;font-weight:800;letter-spacing:-.02em}
+h1 span{color:var(--fraco);font-weight:400}
+.quando{font-family:var(--mono);font-size:11px;color:var(--fraco);margin-left:auto}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--borda);border-bottom:1px solid var(--borda)}
+.kpi{background:var(--painel);padding:16px 18px}
+.kpi b{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.kpi span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:6px}
+.kpi.v b{color:var(--viva)} .kpi.i b{color:var(--instavel)} .kpi.f b{color:var(--fora)}
+.kpi.b b{color:var(--bloq)} .kpi.q b{color:var(--quar)}
+
+.barras{padding:22px 0 6px}
+.grupo{margin-bottom:20px}
+.grupo h3{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco);margin-bottom:9px}
+.barra{display:flex;height:26px;background:var(--painel);border:1px solid var(--borda);overflow:hidden}
+.barra div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;font-weight:600;color:#0E1116;min-width:2px;transition:.2s}
+.barra div:hover{filter:brightness(1.15)}
+.legenda{display:flex;gap:14px;flex-wrap:wrap;margin-top:7px;font-family:var(--mono);font-size:10px;color:var(--texto2)}
+.legenda i{width:9px;height:9px;display:inline-block;margin-right:5px}
+
+.filtros{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0 18px;align-items:center}
+.filtros button{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid var(--borda);color:var(--texto2);padding:7px 12px;cursor:pointer;transition:.14s}
+.filtros button:hover{border-color:var(--texto2);color:var(--texto)}
+.filtros button[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:var(--fundo);font-weight:600}
+.filtros input{font-family:var(--mono);font-size:11px;background:var(--painel);border:1px solid var(--borda);color:var(--texto);padding:8px 11px;min-width:190px;margin-left:auto}
+.filtros input::placeholder{color:var(--fraco)}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:40px}
+th{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco);text-align:left;padding:9px 10px;border-bottom:1px solid var(--borda);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--texto)}
+td{padding:10px;border-bottom:1px solid var(--painel2);vertical-align:middle}
+tr:hover td{background:var(--painel)}
+.pt{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.pt::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pt.ativa{color:var(--viva)} .pt.instavel{color:var(--instavel)} .pt.fora{color:var(--fora)}
+.pt.bloqueada{color:var(--bloq)} .pt.quarentena{color:var(--quar)}
+.dom{font-family:var(--mono);font-size:11px;color:var(--texto2)}
+.tag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--borda);color:var(--texto2)}
+.tag.livre{color:var(--viva);border-color:#1F4E2A}
+.nota{font-family:var(--mono);font-size:12px;font-weight:600}
+.spark{display:inline-flex;gap:1.5px;align-items:flex-end;height:16px}
+.spark i{width:3px;background:var(--fora);display:block}
+.spark i.ok{background:var(--viva)}
+.vazio{text-align:center;padding:60px 20px;color:var(--fraco);font-family:var(--mono);font-size:12px}
+.aviso{background:#2A1F0B;border:1px solid #4A3A14;color:#E8C46A;padding:13px 16px;margin:16px 0;font-family:var(--mono);font-size:11.5px;line-height:1.6}
+@media (max-width:800px){ .esconde{display:none} .filtros input{margin-left:0;width:100%} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Painel de fontes <span>· Il Meridiano</span></h1>
+    <span class="quando" id="quando">—</span>
+  </div>
+</header>
+
+<div class="kpis" id="kpis"></div>
+
+<main class="wrap">
+  <div class="barras" id="barras"></div>
+
+  <div class="filtros">
+    <button data-f="todas" aria-pressed="true">Todas</button>
+    <button data-f="ativa" aria-pressed="false">Ativas</button>
+    <button data-f="instavel" aria-pressed="false">Instáveis</button>
+    <button data-f="fora" aria-pressed="false">Fora do ar</button>
+    <button data-f="bloqueada" aria-pressed="false">Bloqueadas</button>
+    <button data-f="quarentena" aria-pressed="false">Quarentena</button>
+    <button data-f="livre" aria-pressed="false">Só fonte livre</button>
+    <input id="busca" placeholder="buscar nome ou domínio…">
+  </div>
+
+  <div id="conteudo"><p class="vazio">Carregando catálogo…</p></div>
+</main>
+
+<script>
+const CORES = { ativa:'#3FB950', instavel:'#D29922', fora:'#F85149', bloqueada:'#8B5CF6', quarentena:'#58A6FF' };
+const ROTULO = { ativa:'ativa', instavel:'instável', fora:'fora', bloqueada:'bloqueada', quarentena:'quarentena' };
+let CAT = { fontes:{} }, filtro = 'todas', busca = '', ordem = { campo:'nota', desc:true };
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const lista = () => Object.values(CAT.fontes || {});
+
+function kpis(){
+  const f = lista();
+  const c = e => f.filter(x => x.estado === e).length;
+  const livre = f.filter(x => x.licenca === 'livre' && x.estado === 'ativa').length;
+  $('#kpis').innerHTML = `
+    <div class="kpi"><b>${f.length}</b><span>fontes no catálogo</span></div>
+    <div class="kpi v"><b>${c('ativa')}</b><span>ativas</span></div>
+    <div class="kpi i"><b>${c('instavel')}</b><span>instáveis</span></div>
+    <div class="kpi f"><b>${c('fora')}</b><span>fora do ar</span></div>
+    <div class="kpi b"><b>${c('bloqueada')}</b><span>bloqueadas</span></div>
+    <div class="kpi q"><b>${c('quarentena')}</b><span>aguardando você</span></div>
+    <div class="kpi v"><b>${livre}</b><span>fonte livre ativa</span></div>`;
+}
+
+function barra(titulo, campo, cores){
+  const f = lista();
+  const grupos = f.reduce((a,x) => { const k = x[campo] || 'outro'; a[k] = (a[k]||0)+1; return a; }, {});
+  const total = f.length || 1;
+  const ordenado = Object.entries(grupos).sort((a,b) => b[1]-a[1]);
+  const paleta = ['#58A6FF','#3FB950','#D29922','#F85149','#8B5CF6','#6B7684','#E6E9ED'];
+  return `<div class="grupo"><h3>${titulo}</h3><div class="barra">${
+    ordenado.map(([k,v],i) => {
+      const cor = (cores && cores[k]) || paleta[i % paleta.length];
+      return `<div style="width:${(v/total*100).toFixed(1)}%;background:${cor}" title="${esc(k)}: ${v}">${v/total > .07 ? v : ''}</div>`;
+    }).join('')
+  }</div><div class="legenda">${
+    ordenado.map(([k,v],i) => {
+      const cor = (cores && cores[k]) || paleta[i % paleta.length];
+      return `<span><i style="background:${cor}"></i>${esc(ROTULO[k]||k)} ${v}</span>`;
+    }).join('')
+  }</div></div>`;
+}
+
+function sparkline(h){
+  if (!h || !h.length) return '';
+  return '<span class="spark">' + h.slice(-14).map(d =>
+    `<i class="${d.ok?'ok':''}" style="height:${d.ok ? Math.max(4, Math.min(16, 4 + (d.itens||0))) : 3}px" title="${d.dia}: ${d.ok ? d.itens+' itens' : 'falhou'}"></i>`
+  ).join('') + '</span>';
+}
+
+function tabela(){
+  let f = lista();
+  if (filtro === 'livre') f = f.filter(x => x.licenca === 'livre');
+  else if (filtro !== 'todas') f = f.filter(x => x.estado === filtro);
+  if (busca) {
+    const b = busca.toLowerCase();
+    f = f.filter(x => (x.nome||'').toLowerCase().includes(b) || (x.dominio||'').toLowerCase().includes(b));
+  }
+  f.sort((a,b) => {
+    const x = a[ordem.campo] ?? '', y = b[ordem.campo] ?? '';
+    const r = typeof x === 'number' ? x - y : String(x).localeCompare(String(y));
+    return ordem.desc ? -r : r;
+  });
+
+  if (!f.length) return '<p class="vazio">Nenhuma fonte com este filtro.</p>';
+
+  return `<table>
+    <thead><tr>
+      <th data-o="nome">Fonte</th>
+      <th data-o="dominio" class="esconde">Domínio</th>
+      <th data-o="uf">UF</th>
+      <th data-o="tipo" class="esconde">Tipo</th>
+      <th data-o="licenca">Licença</th>
+      <th data-o="metodo">Método</th>
+      <th data-o="estado">Estado</th>
+      <th data-o="mediaItens" class="esconde">Itens</th>
+      <th class="esconde">14 dias</th>
+      <th data-o="nota">Nota</th>
+      <th data-o="ultimoVivo" class="esconde">Visto vivo</th>
+    </tr></thead>
+    <tbody>${f.map(x => `<tr>
+      <td><b>${esc(x.nome||x.chave)}</b>${x.motivo ? `<br><span class="dom" style="color:var(--fraco)">${esc(x.motivo).slice(0,44)}</span>` : ''}</td>
+      <td class="dom esconde">${esc(x.dominio||'')}</td>
+      <td class="dom">${esc((x.uf||'').toUpperCase())}</td>
+      <td class="esconde"><span class="tag">${esc(x.tipo||'')}</span></td>
+      <td><span class="tag ${x.licenca==='livre'?'livre':''}">${esc(x.licenca||'')}</span></td>
+      <td class="dom">${esc(x.metodo||'')}</td>
+      <td><span class="pt ${esc(x.estado)}">${esc(ROTULO[x.estado]||x.estado)}</span></td>
+      <td class="dom esconde">${x.mediaItens ?? 0}</td>
+      <td class="esconde">${sparkline(x.historico)}</td>
+      <td class="nota" style="color:${x.nota>=70?'var(--viva)':x.nota>=40?'var(--instavel)':'var(--fora)'}">${x.nota ?? 0}</td>
+      <td class="dom esconde">${esc(x.ultimoVivo||'—')}${x.diasFora ? ` <span style="color:var(--fora)">(${x.diasFora}d)</span>` : ''}</td>
+    </tr>`).join('')}</tbody></table>`;
+}
+
+function pintar(){
+  kpis();
+  $('#barras').innerHTML =
+    barra('Por estado', 'estado', CORES) +
+    barra('Por tipo', 'tipo') +
+    barra('Por método de leitura', 'metodo') +
+    barra('Por praça', 'uf');
+
+  const quar = lista().filter(x => x.estado === 'quarentena').length;
+  const fora = lista().filter(x => x.estado === 'fora').length;
+  const alerta = [];
+  if (quar) alerta.push(`${quar} fonte${quar>1?'s':''} descoberta${quar>1?'s':''} aguardando sua aprovação.`);
+  if (fora) alerta.push(`${fora} fonte${fora>1?'s':''} fora do ar há três dias ou mais.`);
+
+  $('#conteudo').innerHTML = (alerta.length ? `<div class="aviso">${alerta.join(' ')}</div>` : '') + tabela();
+
+  document.querySelectorAll('th[data-o]').forEach(th => th.addEventListener('click', () => {
+    const c = th.dataset.o;
+    ordem = { campo:c, desc: ordem.campo === c ? !ordem.desc : true };
+    pintar();
+  }));
+}
+
+document.querySelectorAll('.filtros button').forEach(b => b.addEventListener('click', () => {
+  filtro = b.dataset.f;
+  document.querySelectorAll('.filtros button').forEach(o => o.setAttribute('aria-pressed', o===b));
+  pintar();
+}));
+$('#busca').addEventListener('input', e => { busca = e.target.value; pintar(); });
+
+(async () => {
+  try {
+    const r = await fetch('dados/catalogo.json?t=' + Date.now(), { cache:'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    CAT = await r.json();
+    $('#quando').textContent = CAT.atualizado
+      ? 'atualizado em ' + new Date(CAT.atualizado).toLocaleString('pt-BR', { timeZone:'America/Cuiaba' })
+      : '';
+    pintar();
+  } catch (e) {
+    $('#conteudo').innerHTML = `<p class="vazio">Catálogo ainda não existe.<br><br>Rode o <b>Explorador</b> em Actions para criá-lo.</p>`;
+  }
+})();
+</script>
+</body>
+</html>
