@@ -1,4 +1,4 @@
-// IL MERIDIANO — pipeline completo.
+// MERIDIANO — pipeline completo.
 //
 //   1. PAUTA      lê os grandes veículos só para saber o que é notícia hoje.
 //                 Nada daqui vai ao ar. É termômetro.
@@ -76,7 +76,20 @@ const FONTE_LIVRE = [
 ];
 
 // Só destes domínios o texto pode ser lido e reescrito.
-const PODE_REESCREVER = /(agenciabrasil\.ebc\.com\.br|camara\.leg\.br|senado\.leg\.br|news\.un\.org|theconversation\.com|vaticannews\.va|\.gov\.br|\.jus\.br|\.mp\.br|\.leg\.br)/i;
+// Dominios de onde o texto pode ser lido e reescrito. Nem todo orgao usa
+// .gov.br: a Prefeitura do Rio e prefeitura.rio, e ha muitos com dominio
+// proprio. Por isso reconhecemos tambem pelo nome da instituicao.
+const PODE_REESCREVER = new RegExp([
+  // agencias e organismos que autorizam por escrito
+  'agenciabrasil\\.ebc\\.com\\.br', 'news\\.un\\.org', 'theconversation\\.com', 'vaticannews\\.va',
+  // sufixos oficiais brasileiros
+  '\\.gov\\.br', '\\.jus\\.br', '\\.leg\\.br', '\\.mp\\.br', '\\.tc\\.br', '\\.def\\.br',
+  // dominios proprios de instituicao publica
+  'prefeitura\\.rio', 'prefeitura\\.[a-z]{2,}\\.', 'camara[a-z]*\\.[a-z.]+\\.br',
+  '(alerj|alesp|almg|alba|alrs|almt)\\.', 'tribunal[a-z]*\\.', 'defensoria[a-z]*\\.',
+  // nome da instituicao no dominio
+  '//(www\\.)?(prefeitura|camaramunicipal|assembleia|tcm|tce|tj[a-z]{2}|mp[a-z]{2}|tre[a-z-]*)\\.'
+].join('|'), 'i');
 
 const BLOQUEIO = ['reuters','afp','associated press','efe','ansa','sputnik','xinhua','lusa','dpa'];
 const RE_BLOQUEIO = new RegExp('\\b(' + BLOQUEIO.map(b=>b.replace(/ /g,'\\s+')).join('|') + ')\\b','i');
@@ -119,7 +132,7 @@ async function buscar(url, ms=20000, tentativas=2){
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
         'Accept':'application/rss+xml, application/atom+xml, application/xml;q=0.9, text/html;q=0.8, */*;q=0.7',
         'Accept-Language':'pt-BR,pt;q=0.9,en;q=0.8',
-        'X-Contact':'contato@ilmeridiano.com.br'
+        'X-Contact':'contato@meridiano.com.br'
       }});
       if (!r.ok) throw new Error('HTTP '+r.status);
 
@@ -196,7 +209,7 @@ async function colher(lista, rotulo, tamanhoLote = 6){
 
 /* ============================== execução ================================== */
 
-console.log('\n  IL MERIDIANO · ' + new Date().toISOString());
+console.log('\n  MERIDIANO · ' + new Date().toISOString());
 console.log('  ' + '='.repeat(66));
 
 const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
@@ -355,6 +368,23 @@ if (bloq.length) {
   }
 }
 
+// PROMOCAO: item de pauta que veio de dominio oficial e, na verdade, fonte
+// livre. O Google indexa os releases das prefeituras e orgaos, e eles chegam
+// pela porta errada. Em vez de consertar raspagem site a site, reconhecemos
+// pelo endereco: .gov.br, .jus.br, .leg.br e .mp.br autorizam reproducao.
+const promovidos = [];
+for (const p of P.itens) {
+  if (!p.link || !PODE_REESCREVER.test(p.link)) continue;
+  if (F.itens.some(f => f.link === p.link)) continue;
+  promovidos.push({ ...p, editoria: EDITORIA, uf: GERAL ? null : UF });
+}
+if (promovidos.length) {
+  F.itens.push(...promovidos);
+  console.log(`\n  2d. PROMOVIDOS — ${promovidos.length} releases oficiais que vieram pela pauta`);
+  for (const x of promovidos.slice(0, 8)) console.log(`  ok    ${x.veiculo.slice(0,26).padEnd(28)} ${x.titulo.slice(0,44)}`);
+  console.log(`     ${F.itens.length} itens de fonte livre no total`);
+}
+
 console.log('\n  3. CRUZAMENTO');
 const confirmadas = [], soPauta = [];
 for (const l of F.itens) {
@@ -424,7 +454,7 @@ if (temChave()) {
       publicados.push({
         id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
         titulo:m.titulo, resumo:m.linhaFina,
-        fonte:'Il Meridiano, com informações de '+i.veiculo,
+        fonte:'Meridiano, com informações de '+i.veiculo,
         origemLink:i.link, origemNome:i.veiculo,
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
         uf: GERAL ? null : UF,
