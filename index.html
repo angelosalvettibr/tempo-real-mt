@@ -45,6 +45,13 @@ nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap
 nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 20px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
 nav button:hover{color:var(--tinta)}
 nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
+.cidades{display:none;border-bottom:1px solid var(--linha);background:var(--areia,#F1EFE8)}
+.cidades .wrap{display:flex;gap:8px;align-items:center;padding:9px 0;overflow-x:auto}
+.cidades button{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;background:none;border:1px solid var(--linha);border-radius:999px;padding:6px 13px;cursor:pointer;color:var(--tinta2);white-space:nowrap;transition:.14s}
+.cidades button:hover{border-color:var(--tinta)}
+.cidades button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.cidades button i{font-style:normal;opacity:.6;margin-left:5px}
+.cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
 nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--rosso)}
 .sel-estado{display:flex;align-items:center;gap:8px;padding-left:18px;margin-left:8px;border-left:1px solid var(--linha)}
 .sel-estado label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco)}
@@ -206,6 +213,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
       </span>
     </div>
   </nav>
+  <div class="cidades" id="cidades"><div class="wrap"></div></div>
 </header>
 
 <div class="metodo">
@@ -295,6 +303,16 @@ const chapeuDe = i => i.editoria === 'regional'
   ? (ESTADOS[i.uf] || NOMES.regional)
   : (NOMES[i.editoria] || i.editoria);
 let ED = { itens:[], pautas:[] }, filtro = 'capa';
+let cidade = null;
+// PARA ADICIONAR UMA CIDADE, NAO MEXA AQUI.
+// Abra scripts/municipios.mjs, ache a cidade (ou escreva uma nova) e ponha
+// destaque:true. O robo publica a lista dentro da edicao e a capa monta a aba
+// sozinha. Esta lista abaixo e so reserva, para a capa nao ficar sem aba caso
+// o robo ainda nao tenha rodado depois da mudanca.
+const CIDADES_RESERVA = { mt:[{id:'cuiaba',nome:'Cuiabá'},{id:'vg',nome:'Várzea Grande'},{id:'sinop',nome:'Sinop'}],
+                          rj:[{id:'rio',nome:'Rio de Janeiro'},{id:'niteroi',nome:'Niterói'},{id:'buzios',nome:'Búzios'}],
+                          rs:[{id:'poa',nome:'Porto Alegre'},{id:'caxias',nome:'Caxias do Sul'}] };
+const cidadesDe = uf => (ED.cidades && ED.cidades[uf]) || CIDADES_RESERVA[uf] || [];
 // o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
 // e o link pode ser compartilhado ja no estado certo
 let estado = (location.hash.replace('#','') || 'mt').toLowerCase();
@@ -316,18 +334,53 @@ function nasceu(i){
   </div>`;
 }
 
+// As abas de cidade so aparecem na aba do estado, e so mostram cidade que
+// tem materia hoje. Aba vazia e promessa quebrada.
+function montarCidades(doEstadoTodas){
+  const caixa = $('#cidades');
+  const linha = caixa.querySelector('.wrap');
+  const lista = cidadesDe(estado)
+    .map(c => ({ ...c, n: doEstadoTodas.filter(i => i.municipio === c.id).length }))
+    .filter(c => c.n > 0);
+
+  if (!lista.length) { caixa.style.display = 'none'; cidade = null; return; }
+
+  const total = doEstadoTodas.length;
+  linha.innerHTML = '<span class="rot">cidade</span>'
+    + `<button data-c="" aria-pressed="${cidade === null}">Todo o estado <i>${total}</i></button>`
+    + lista.map(c => `<button data-c="${c.id}" aria-pressed="${cidade === c.id}">${esc(c.nome)} <i>${c.n}</i></button>`).join('');
+  caixa.style.display = 'block';
+
+  linha.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    cidade = b.dataset.c || null;
+    pintar();
+  }));
+}
+
 function pintar(){
   const doEstado = i => i.uf === estado;
-  const lista = filtro === 'capa'
+  let lista = filtro === 'capa'
     ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
     : filtro === 'regional'
       ? ED.itens.filter(i => i.editoria === 'regional' && doEstado(i))
       : ED.itens.filter(i => i.editoria === filtro);
+
+  if (filtro === 'regional') {
+    montarCidades(lista);
+    if (cidade) lista = lista.filter(i => i.municipio === cidade);
+  } else {
+    $('#cidades').style.display = 'none';
+  }
+
   const alvo = $('#conteudo');
   if(!lista.length){
+    const nomeCidade = cidade && cidadesDe(estado).find(c => c.id === cidade)?.nome;
     alvo.innerHTML = filtro === 'regional'
-      ? `<div class="vazio-estado"><b>Ainda não temos edição de ${esc(ESTADOS[estado])}</b>
-         As fontes públicas deste estado estão sendo conectadas. A capa, com Brasil e Mundo, continua completa.</div>`
+      ? (nomeCidade
+        ? `<div class="vazio-estado"><b>Nada de ${esc(nomeCidade)} nas últimas 24 horas</b>
+           As fontes públicas da cidade não publicaram nada novo. Toque em "Todo o estado" para ver ${esc(ESTADOS[estado])} inteiro.</div>`
+        : `<div class="vazio-estado"><b>Ainda não temos edição de ${esc(ESTADOS[estado])}</b>
+         As fontes públicas deste estado estão sendo conectadas. A capa, com Brasil e Mundo, continua completa.</div>`)
       : '<p class="aviso">Nada nesta editoria nas últimas 24 horas.</p>';
     return;
   }
@@ -449,6 +502,7 @@ async function carregar(){
       itens.push({
         id: c.id, editoria: c.editoria, uf: c.uf,
         titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
+        municipio: c.municipio || null,
         fonte: 'Meridiano', link: c.link || '#', iso: c.iso, hora: c.hora,
         nivel: 'sem-confirmacao', selo: 'Sem confirmação'
       });
@@ -465,6 +519,8 @@ async function carregar(){
 
     ED = {
       circulando,
+      cidades: Object.fromEntries(
+        partes.filter(p => p.uf && (p.cidades || []).length).map(p => [p.uf, p.cidades])),
       gerado: partes.map(p => p.gerado).sort().pop(),
       numeros: partes.reduce((a,p) => {
         const n = p.numeros || {};
@@ -492,6 +548,7 @@ async function carregar(){
 
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   filtro = b.dataset.f;
+  cidade = null;
   document.querySelectorAll('nav button').forEach(o => o.setAttribute('aria-pressed', o===b));
   pintar();
 }));
@@ -505,6 +562,7 @@ function aplicarEstado(){
 }
 $('#selEstado').addEventListener('change', e => {
   estado = e.target.value;
+  cidade = null;
   // quem escolhe um estado quer ver aquele estado: leva junto para a aba
   filtro = 'regional';
   document.querySelectorAll('nav button').forEach(o =>
