@@ -280,6 +280,21 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
+.apura{border:1px solid var(--tinta);margin:30px 0;background:#fff}
+.apura>.cab{background:var(--tinta);color:var(--papel);padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.apura .miolo{padding:17px 19px}
+.apura .raciocinio{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.62;color:#3C3C3C;margin-bottom:15px}
+.apura .num{display:flex;gap:26px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);margin-bottom:14px}
+.apura .num div{font-family:'IBM Plex Mono',monospace}
+.apura .num b{display:block;font-size:21px;color:var(--tinta);line-height:1}
+.apura .num span{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:5px}
+.apura table{width:100%;border-collapse:collapse;font-family:'IBM Plex Mono',monospace;font-size:11.5px}
+.apura td{padding:7px 0;border-bottom:1px solid var(--linha);vertical-align:top;color:#4A4A4A}
+.apura td:first-child{color:var(--tinta)}
+.apura td:last-child{text-align:right;white-space:nowrap;color:var(--fraco)}
+.apura .pt{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--sinal);margin-left:7px}
+.apura .mudo{color:#B00}
+.apura .fim{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.55;color:var(--fraco);margin-top:14px}
 .relac{border-top:1px solid var(--tinta);padding-top:15px;margin:34px 0 4px}
 .relac b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:12px}
 .relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
@@ -373,12 +388,34 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <p>Esta história começou circulando na imprensa sem registro oficial. Em vez de publicá-la como rumor, procuramos o documento em ${m.resgatada.procuradoEm.length} ${m.resgatada.procuradoEm.length === 1 ? 'órgão público' : 'órgãos públicos'} e encontramos em ${esc(m.resgatada.orgao)}. O texto acima foi escrito a partir desse registro — o endereço do original está no fim da página.</p>
   </div>` : ''}
 
-  ${m.provenencia ? `<details class="proc">
-    <summary><b>O que procuramos antes de publicar</b></summary>
-    <p>Esta informação apareceu em ${m.provenencia.circulaEm} ${m.provenencia.circulaEm === 1 ? 'veículo' : 'veículos'} da imprensa. Consultamos as fontes oficiais abaixo em ${esc(m.provenencia.quando)} e não localizamos registro sobre o caso.</p>
-    <ul>${m.provenencia.buscadoEm.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-    <p class="obs">Se você souber de registro oficial que não encontramos, escreva para a redação. Corrigimos e transformamos em matéria confirmada.</p>
-  </details>` : ''}
+  ${m.provenencia ? (() => {
+    const p = m.provenencia, rel = p.relatorio || [];
+    const porTema = rel.filter(r => r.porTema).map(r => r.nome);
+    const respondeu = rel.filter(r => r.respondeu).length;
+    return `<div class="apura">
+    <div class="cab">O que procuramos antes de publicar</div>
+    <div class="miolo">
+      <p class="raciocinio">Esta informação apareceu em ${p.circulaEm} ${p.circulaEm === 1 ? 'veículo' : 'veículos'} da imprensa e não afirmamos que seja verdadeira.${p.assunto?.length ? ` O teor é de <b>${esc(p.assunto.join(' e '))}</b>, então o registro oficial, se existir, estaria ${porTema.length ? `em ${esc(porTema.slice(0,3).join(', '))}` : 'nos órgãos abaixo'} — foi por aí que começamos.` : ''} Varremos as publicações ${p.horas ? `das últimas ${p.horas} horas ` : ''}de cada órgão e comparamos uma a uma com o teor que circula. Nenhuma bateu.</p>
+
+      ${rel.length ? `<div class="num">
+        <div><b>${rel.length}</b><span>órgãos consultados</span></div>
+        <div><b>${p.lidas || 0}</b><span>publicações lidas</span></div>
+        <div><b>${respondeu}</b><span>responderam</span></div>
+      </div>` : ''}
+
+      ${rel.length ? `<table>${rel.map(r => `<tr>
+        <td>${esc(r.nome)}${r.porTema ? '<span class="pt">porta certa</span>' : ''}</td>
+        <td>${!r.respondeu ? '<span class="mudo">não respondeu</span>'
+              : r.lidas ? `${r.lidas} ${r.lidas === 1 ? 'publicação lida' : 'publicações lidas'}${r.melhor ? ` · maior semelhança ${Math.round(r.melhor*100)}%` : ''}`
+              : 'nada publicado no período'}</td>
+      </tr>`).join('')}</table>`
+      : `<ul>${(p.buscadoEm||[]).map(x => `<li>${esc(x)}</li>`).join('')}</ul>`}
+
+      ${p.mudos?.length ? `<p class="fim">Não conseguimos ler ${esc(p.mudos.slice(0,4).join(', '))}${p.mudos.length > 4 ? ' e outros' : ''} nesta checagem. Órgão público que não publica de forma legível é, por si só, um problema — e registramos isso aqui em vez de esconder.</p>` : ''}
+
+      <p class="fim">Checagem feita em ${esc(p.quando)}. Se você souber de registro oficial que não encontramos, escreva para a redação: corrigimos e transformamos em matéria confirmada, com o documento à vista.</p>
+    </div>
+  </div>`; })() : ''}
 
   ${m.contexto ? `<div class="contexto">
     <b>O que isso quer dizer</b>

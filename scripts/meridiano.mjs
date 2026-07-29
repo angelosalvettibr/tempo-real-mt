@@ -809,6 +809,12 @@ if (temChave() && soPautaFiltrada.length) {
       const provenencia = {
         circulaEm: (c.quentura || 0) + 1,
         buscadoEm: [...new Set(ondeBuscamos)].slice(0, 8),
+        // o extrato do que o cacador fez, orgao por orgao
+        relatorio: caca.relatorio || [],
+        assunto: caca.assunto || [],
+        horas: caca.horas || 96,
+        lidas: caca.lidas || 0,
+        mudos: caca.mudos || [],
         quando: new Date().toLocaleString('pt-BR', { timeZone:'America/Cuiaba' })
       };
       await writeFile('materia/' + arqC, pagina({

@@ -17,7 +17,7 @@
 // publicado.
 
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
-import { ondeProcurar } from './oficiais.mjs';
+import { ondeProcurar, temasDoTexto, TEMA_ROTULO } from './oficiais.mjs';
 
 const semAcento = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const dormir = ms => new Promise(r => setTimeout(r, ms));
@@ -70,9 +70,11 @@ async function pegar(url, ms = 11000){
 // data limpa e funciona em site feito por JavaScript). Cai para a página de
 // notícias se não houver.
 async function manchetesDe(orgao, horas){
+  let respondeu = false;
   // 1. sitemap
   for (const caminho of CAMINHOS_SITEMAP.slice(0, 3)) {
     const xml = await pegar(orgao.base + caminho, 9000);
+    if (xml) respondeu = true;
     if (!xml || !/<(urlset|sitemapindex)/i.test(xml)) continue;
 
     let entradas = lerSitemap(xml);
@@ -89,18 +91,19 @@ async function manchetesDe(orgao, horas){
     }
     const recentes = filtrarNoticias(entradas, horas);
     if (recentes.length) {
-      return recentes.map(e => ({ titulo: e.titulo, link: e.url, fonte: orgao.nome, via:'sitemap' }));
+      return { respondeu:true, via:'sitemap',
+        itens: recentes.map(e => ({ titulo: e.titulo, link: e.url, fonte: orgao.nome })) };
     }
   }
 
   // 2. página de notícias
   const html = await pegar(orgao.url, 11000);
-  if (!html) return [];
+  if (!html) return { respondeu, via:null, itens: [] };
   try {
-    return (lerListagem(html, orgao.base) || [])
-      .slice(0, 25)
-      .map(i => ({ titulo: i.titulo, link: i.link, fonte: orgao.nome, via:'listagem' }));
-  } catch { return []; }
+    return { respondeu:true, via:'listagem',
+      itens: (lerListagem(html, orgao.base) || []).slice(0, 25)
+        .map(i => ({ titulo: i.titulo, link: i.link, fonte: orgao.nome })) };
+  } catch { return { respondeu:true, via:'listagem', itens: [] }; }
 }
 
 // Alguns itens de sitemap vêm sem título. Só vale abrir a página quando o
@@ -136,8 +139,11 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
   const fila = ondeProcurar(titulo, uf).slice(0, maxOrgaos);
   const pistas = chaves(titulo);
   const procuradoEm = [];
+  const relatorio = [];
+  const temas = temasDoTexto(titulo);
+  const assunto = temas.map(t => TEMA_ROTULO[t]).filter(Boolean);
 
-  if (pistas.length < 3) return { achado:false, procuradoEm:[] };
+  if (pistas.length < 3) return { achado:false, procuradoEm:[], relatorio:[], assunto, horas };
 
   let melhor = null;
 
@@ -147,12 +153,16 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
 
     const lote = fila.slice(i, i + 2);
     const resultados = await Promise.all(lote.map(async o => {
-      try { return { orgao:o, itens: await manchetesDe(o, horas) }; }
-      catch { return { orgao:o, itens: [] }; }
+      try { return { orgao:o, ...(await manchetesDe(o, horas)) }; }
+      catch { return { orgao:o, respondeu:false, via:null, itens: [] }; }
     }));
 
-    for (const { orgao, itens } of resultados) {
+    for (const { orgao, itens, respondeu, via } of resultados) {
       procuradoEm.push(orgao.nome);
+      const linha = { nome: orgao.nome, respondeu: Boolean(respondeu), via,
+                      lidas: itens.length, melhor: 0,
+                      porTema: Boolean(orgao.temas?.some(t => temas.includes(t))) };
+      relatorio.push(linha);
 
       // primeiro os que já têm título; só completamos os promissores
       const candidatos = [];
@@ -166,6 +176,7 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
 
       for (const c of candidatos) {
         const nota = parecenca(titulo, c.titulo);
+        if (nota > linha.melhor) linha.melhor = Number(nota.toFixed(2));
         if (nota >= corte && (!melhor || nota > melhor.nota)) {
           melhor = { ...c, nota };
         }
@@ -177,10 +188,13 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
     await dormir(400);
   }
 
+  const lidas = relatorio.reduce((a,r) => a + r.lidas, 0);
+  const mudos = relatorio.filter(r => !r.respondeu).map(r => r.nome);
+
   return melhor
     ? { achado:true, link:melhor.link, titulo:melhor.titulo, fonte:melhor.fonte,
-        nota:Number(melhor.nota.toFixed(2)), procuradoEm }
-    : { achado:false, procuradoEm };
+        nota:Number(melhor.nota.toFixed(2)), procuradoEm, relatorio, assunto, horas, lidas, mudos }
+    : { achado:false, procuradoEm, relatorio, assunto, horas, lidas, mudos };
 }
 
 // exportado para teste
