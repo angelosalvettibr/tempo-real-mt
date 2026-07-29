@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Arquivo de notícias — Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fundo:#0E1116; --painel:#161B22; --painel2:#1C232C; --borda:#2A323D;
+  --texto:#E6E9ED; --texto2:#9AA4B0; --fraco:#6B7684;
+  --conf:#3FB950; --atrib:#D29922; --semc:#8B949E; --link:#58A6FF;
+  --mono:'IBM Plex Mono',monospace; --sans:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font-family:var(--sans);line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1400px;margin:0 auto;padding:0 20px}
+a{color:inherit;text-decoration:none}
+
+header{border-bottom:1px solid var(--borda);background:var(--painel);padding:16px 0}
+header .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+h1{font-size:19px;font-weight:800;letter-spacing:-.02em}
+h1 span{color:var(--fraco);font-weight:400}
+.volta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--texto2);border:1px solid var(--borda);padding:7px 11px}
+.volta:hover{border-color:var(--texto2);color:var(--texto)}
+.quando{font-family:var(--mono);font-size:11px;color:var(--fraco);margin-left:auto}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--borda);border-bottom:1px solid var(--borda)}
+.kpi{background:var(--painel);padding:15px 18px}
+.kpi b{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.kpi span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:6px}
+.kpi.c b{color:var(--conf)} .kpi.a b{color:var(--atrib)} .kpi.s b{color:var(--semc)}
+
+.filtros{display:flex;gap:6px;flex-wrap:wrap;padding:7px 0;align-items:center}
+.filtros .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);min-width:74px}
+.filtros button{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid var(--borda);color:var(--texto2);padding:7px 12px;cursor:pointer;transition:.14s}
+.filtros button:hover{border-color:var(--texto2);color:var(--texto)}
+.filtros button[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:var(--fundo);font-weight:600}
+.filtros input{font-family:var(--mono);font-size:11px;background:var(--painel);border:1px solid var(--borda);color:var(--texto);padding:8px 11px;min-width:230px;margin-left:auto}
+.filtros input::placeholder{color:var(--fraco)}
+#barra{padding:8px 0 16px;border-bottom:1px solid var(--borda);margin-bottom:16px}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);text-align:left;padding:9px 10px;border-bottom:1px solid var(--borda);font-weight:500;white-space:nowrap}
+tbody td{padding:11px 10px;border-bottom:1px solid var(--borda);vertical-align:top}
+tbody tr:hover{background:var(--painel)}
+.qd{font-family:var(--mono);font-size:11px;color:var(--fraco);white-space:nowrap}
+.tt{font-weight:500;line-height:1.35;display:block}
+.tt:hover{color:var(--link)}
+.rs{color:var(--texto2);font-size:12px;line-height:1.4;margin-top:3px;display:block}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;border:1px solid var(--borda);padding:3px 7px;display:inline-block;color:var(--texto2);white-space:nowrap}
+.n-confirmado{color:var(--conf);border-color:#1D4A2A}
+.n-atribuido{color:var(--atrib);border-color:#4A3A0E}
+.n-sem-confirmacao{color:var(--semc)}
+.fn{font-family:var(--mono);font-size:11px;color:var(--texto2);line-height:1.4}
+.vazio{color:var(--fraco);font-family:var(--mono);font-size:12px;padding:34px 0;text-align:center}
+.mais{display:block;width:100%;margin:16px 0 40px;padding:12px;background:transparent;border:1px solid var(--borda);color:var(--texto2);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.mais:hover{border-color:var(--texto2);color:var(--texto)}
+@media (max-width:900px){ .esconde{display:none} .filtros input{margin-left:0;width:100%} }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <h1>Arquivo <span>· Meridiano</span></h1>
+  <a class="volta" href="painel.html">Painel de fontes</a>
+  <a class="volta" href="/">Capa</a>
+  <span class="quando" id="quando">carregando…</span>
+</div></header>
+
+<div class="kpis" id="kpis"></div>
+<div class="wrap"><div id="barra"></div></div>
+<div class="wrap"><div id="tabela"><p class="vazio">Lendo o arquivo…</p></div></div>
+
+<script>
+const EDICOES = ['br','mundo','mt','rs','rj'];
+const NOMES = { br:'Brasil', mundo:'Mundo', mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let TUDO = [], mostrando = 60;
+const F = { edicao:'', nivel:'', periodo:'48', busca:'' };
+
+const DEFS = [
+  { id:'edicao',  rot:'edição',  ops:[['','todas'], ...EDICOES.map(u=>[u,NOMES[u]])] },
+  { id:'nivel',   rot:'evidência', ops:[['','todos'],['confirmado','confirmado'],['atribuido','atribuído'],['sem-confirmacao','sem confirmação']] },
+  { id:'periodo', rot:'período',  ops:[['24','24h'],['48','48h'],['168','7 dias'],['720','30 dias'],['','tudo']] }
+];
+
+async function json(u){
+  try { const r = await fetch(u + '?t=' + Date.now(), { cache:'no-store' }); return r.ok ? await r.json() : null; }
+  catch { return null; }
+}
+
+// Meses a tentar quando o índice não existir ou estiver incompleto.
+function ultimosMeses(n){
+  const out = [], d = new Date();
+  for (let i = 0; i < n; i++) { out.push(d.toISOString().slice(0,7)); d.setMonth(d.getMonth() - 1); }
+  return out;
+}
+
+async function carregar(){
+  const meses = ultimosMeses(4);
+  const pedidos = [];
+
+  for (const uf of EDICOES) {
+    // índice por edição, quando existir
+    pedidos.push((async () => {
+      const idx = await json(`dados/arquivo/indice-${uf}.json`);
+      const lista = idx?.meses?.length ? idx.meses : meses.map(m => `${uf}-${m}`);
+      const partes = await Promise.all(lista.map(k => json(`dados/arquivo/${k}.json`)));
+      return partes.filter(Boolean);
+    })());
+    // arquivo antigo, de antes da divisão por mês
+    pedidos.push(json(`dados/arquivo-${uf}.json`).then(x => x ? [x] : []));
+  }
+
+  const blocos = (await Promise.all(pedidos)).flat();
+
+  const vistos = new Set();
+  TUDO = blocos.flatMap(b => (b.itens || []).map(i => ({ ...i, uf: i.uf || b.uf })))
+    .filter(i => i.titulo && i.iso)
+    .filter(i => { const k = i.id || (i.uf + i.titulo); return !vistos.has(k) && vistos.add(k); })
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+
+  document.getElementById('quando').textContent =
+    TUDO.length ? `${TUDO.length} matérias no arquivo · mais antiga ${new Date(TUDO[TUDO.length-1].iso).toLocaleDateString('pt-BR')}`
+                : 'arquivo vazio';
+  montarFiltros();
+  pintar();
+}
+
+function montarFiltros(){
+  document.getElementById('barra').innerHTML = DEFS.map(d => `
+    <div class="filtros">
+      <span class="rot">${d.rot}</span>
+      ${d.ops.map(([v,l]) => `<button data-f="${d.id}" data-v="${v}" aria-pressed="${F[d.id]===v}">${esc(l)}</button>`).join('')}
+      ${d.id === 'periodo' ? '<input id="busca" placeholder="buscar título, órgão ou fonte…">' : ''}
+    </div>`).join('');
+
+  document.querySelectorAll('#barra button').forEach(b => b.addEventListener('click', () => {
+    F[b.dataset.f] = b.dataset.v; mostrando = 60; montarFiltros(); pintar();
+  }));
+  const bs = document.getElementById('busca');
+  if (bs) {
+    bs.value = F.busca;
+    bs.addEventListener('input', e => { F.busca = e.target.value; mostrando = 60; pintar(); });
+  }
+}
+
+function filtradas(){
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const q = sa(F.busca).trim();
+  const corte = F.periodo ? Date.now() - Number(F.periodo) * 3600 * 1000 : 0;
+
+  return TUDO.filter(i => {
+    if (F.edicao && i.uf !== F.edicao) return false;
+    if (F.nivel && (i.nivel || 'sem-confirmacao') !== F.nivel) return false;
+    if (corte && Date.parse(i.iso) < corte) return false;
+    if (q && !sa([i.titulo, i.resumo, i.fonte, i.orgao, i.municipioNome].join(' ')).includes(q)) return false;
+    return true;
+  });
+}
+
+function pintar(){
+  const f = filtradas();
+  const conta = n => f.filter(i => (i.nivel || 'sem-confirmacao') === n).length;
+
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi"><b>${f.length}</b><span>matérias no filtro</span></div>
+    <div class="kpi c"><b>${conta('confirmado')}</b><span>confirmadas</span></div>
+    <div class="kpi a"><b>${conta('atribuido')}</b><span>atribuídas</span></div>
+    <div class="kpi s"><b>${conta('sem-confirmacao')}</b><span>sem confirmação</span></div>
+    <div class="kpi"><b>${new Set(f.map(i => i.fonte || i.orgao).filter(Boolean)).size}</b><span>fontes distintas</span></div>`;
+
+  const alvo = document.getElementById('tabela');
+  if (!f.length) { alvo.innerHTML = '<p class="vazio">Nenhuma matéria com estes filtros.</p>'; return; }
+
+  const parte = f.slice(0, mostrando);
+  alvo.innerHTML = `<table>
+    <thead><tr>
+      <th>quando</th><th>matéria</th><th>edição</th><th>evidência</th><th class="esconde">fonte</th>
+    </tr></thead>
+    <tbody>${parte.map(i => {
+      const d = new Date(i.iso);
+      const nivel = i.nivel || 'sem-confirmacao';
+      const rotulo = { confirmado:'confirmado', atribuido:'atribuído', 'sem-confirmacao':'sem confirmação' }[nivel] || nivel;
+      return `<tr>
+        <td class="qd">${d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}<br>${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</td>
+        <td>
+          <a class="tt" href="${esc(i.link || '#')}">${esc(i.titulo)}</a>
+          ${i.resumo ? `<span class="rs">${esc(String(i.resumo).slice(0,190))}</span>` : ''}
+        </td>
+        <td><span class="tag">${esc(NOMES[i.uf] || i.uf || '—')}</span>${i.municipioNome ? `<br><span class="tag" style="margin-top:4px">${esc(i.municipioNome)}</span>` : ''}</td>
+        <td><span class="tag n-${nivel}">${rotulo}</span></td>
+        <td class="esconde fn">${esc(i.orgao || i.fonte || '—')}${i.origemLink ? `<br><a href="${esc(i.origemLink)}" target="_blank" rel="noopener" style="color:var(--link)">original ↗</a>` : ''}</td>
+      </tr>`;
+    }).join('')}</tbody></table>
+    ${f.length > mostrando ? `<button class="mais" id="mais">mostrar mais — faltam ${f.length - mostrando}</button>` : ''}`;
+
+  document.getElementById('mais')?.addEventListener('click', () => { mostrando += 60; pintar(); });
+}
+
+carregar();
+</script>
+</body>
+</html>
