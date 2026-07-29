@@ -68,6 +68,18 @@ tr:hover td{background:var(--painel)}
 .vazio{text-align:center;padding:60px 20px;color:var(--fraco);font-family:var(--mono);font-size:12px}
 .aviso{background:#2A1F0B;border:1px solid #4A3A14;color:#E8C46A;padding:13px 16px;margin:16px 0;font-family:var(--mono);font-size:11.5px;line-height:1.6}
 @media (max-width:800px){ .esconde{display:none} .filtros input{margin-left:0;width:100%} }
+.edicoes{margin:22px 0 8px}
+.edicoes h2{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--fraco);font-weight:500;margin:0 0 10px}
+.edicoes table{width:100%;border-collapse:collapse;font-size:13px}
+.edicoes th{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco);text-align:right;padding:8px 10px;border-bottom:1px solid var(--borda);font-weight:500;white-space:nowrap}
+.edicoes th:first-child{text-align:left}
+.edicoes td{padding:10px;border-bottom:1px solid var(--borda);text-align:right;font-family:var(--mono);font-size:12.5px}
+.edicoes td:first-child{text-align:left;font-family:var(--sans);font-weight:600;font-size:13px}
+.edicoes tr:hover{background:var(--painel)}
+.edicoes .pc{font-size:11px;color:var(--fraco);margin-left:5px}
+.edicoes .bom{color:#3FB950}.edicoes .meio{color:#D29922}.edicoes .ruim{color:#F85149}
+.edicoes tfoot td{border-top:2px solid var(--borda);border-bottom:0;font-weight:700}
+.edicoes .nota{font-family:var(--sans);font-size:12px;color:var(--fraco);margin-top:9px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -83,6 +95,7 @@ tr:hover td{background:var(--painel)}
 <div class="kpis" id="kpis"></div>
 
 <main class="wrap">
+  <div class="edicoes" id="edicoes"></div>
   <div class="barras" id="barras"></div>
 
   <div id="filtros"></div>
@@ -255,6 +268,51 @@ function pintar(){
     pintar();
   }));
 }
+
+// Quantas fontes o robo checou, quantas responderam, quantas entregaram
+// artigo aproveitavel, e o que sobrou no fim do funil. Sai da propria edicao,
+// nao do catalogo: e o retrato da ultima rodada de verdade.
+const EDS = [['br','Brasil'],['mundo','Mundo'],['mt','Mato Grosso'],['rs','Rio Grande do Sul'],['rj','Rio de Janeiro']];
+
+async function edicoes(){
+  const partes = await Promise.all(EDS.map(async ([uf,nome]) => {
+    try {
+      const r = await fetch(`dados/edicao-${uf}.json?t=` + Date.now(), { cache:'no-store' });
+      return r.ok ? { uf, nome, j: await r.json() } : null;
+    } catch { return null; }
+  }));
+  const vivas = partes.filter(Boolean);
+  if (!vivas.length) return;
+
+  const cor = p => p >= 60 ? 'bom' : p >= 30 ? 'meio' : 'ruim';
+  const L = vivas.map(({ nome, j }) => {
+    const f = j.fontes || {}, n = j.numeros || {};
+    const ch = f.checadas || 0, ent = f.entregando || 0;
+    return { nome, ch, resp:f.responderam||0, ent, pc: ch ? Math.round(ent/ch*100) : 0,
+             itens:f.itens||0, conf:n.confirmadas||0, pub:(n.publicadas||0)+(n.resgatadas||0) };
+  });
+  const soma = k => L.reduce((a,x) => a + x[k], 0);
+  const pcT = soma('ch') ? Math.round(soma('ent')/soma('ch')*100) : 0;
+  const semDados = soma('ch') === 0;
+
+  document.getElementById('edicoes').innerHTML = `
+    <h2>Fontes por edição · última rodada</h2>
+    <table>
+      <thead><tr><th>edição</th><th>checadas</th><th>responderam</th><th>entregando</th>
+      <th>itens colhidos</th><th>com documento</th><th>publicadas</th></tr></thead>
+      <tbody>${L.map(x => `<tr>
+        <td>${x.nome}</td><td>${x.ch || '—'}</td><td>${x.resp || '—'}</td>
+        <td class="${cor(x.pc)}">${x.ent || '—'}${x.ch ? `<span class="pc">${x.pc}%</span>` : ''}</td>
+        <td>${x.itens || '—'}</td><td>${x.conf}</td><td>${x.pub}</td></tr>`).join('')}</tbody>
+      <tfoot><tr><td>Total</td><td>${soma('ch') || '—'}</td><td>${soma('resp') || '—'}</td>
+        <td class="${cor(pcT)}">${soma('ent') || '—'}${soma('ch') ? `<span class="pc">${pcT}%</span>` : ''}</td>
+        <td>${soma('itens') || '—'}</td><td>${soma('conf')}</td><td>${soma('pub')}</td></tr></tfoot>
+    </table>
+    <p class="nota">${semDados
+      ? 'As colunas de fontes aparecem depois da próxima rodada do Meridiano — é ela que grava esses números.'
+      : '<b>Checadas</b> é toda fonte que o robô tentou ler. <b>Responderam</b> devolveram alguma coisa. <b>Entregando</b> devolveram artigo aproveitável — dessas sai o texto. <b>Com documento</b> são histórias da pauta confirmadas em fonte oficial; <b>publicadas</b> é o que virou matéria.'}</p>`;
+}
+edicoes();
 
 (async () => {
   try {
