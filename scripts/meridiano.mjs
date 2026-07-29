@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao, carteiraAcabou } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
@@ -517,6 +517,7 @@ if (temChave()) {
   }
 
   async function escreverUma(i){
+    if (carteiraAcabou()) return;
     try {
       const texto = await textoCompleto(i.link, 12000);
       const m = await reescrever({ fonte: i.veiculo, titulo: i.titulo, texto });
@@ -524,11 +525,15 @@ if (temChave()) {
 
       // contexto: so entra se houver caso parecido no arquivo ou numero no texto
       const parecidos = acharParecidos(arquivoMemoria, m.titulo);
-      const contexto = await escreverContexto({
+      // O contexto so tem o que dizer quando ha historico ou numero no texto.
+      // Pedir sempre dobrava o consumo do Gemini para receber "nada" na metade
+      // dos casos — e foi isso que ajudou a estourar a cota.
+      const valeContexto = parecidos.length > 0 || /\d/.test(m.corpo.join(' '));
+      const contexto = valeContexto ? await escreverContexto({
         titulo: m.titulo,
         corpo: m.corpo.join('\n\n'),
         historico: parecidos.map(x => ({ dia: (x.iso||'').slice(0,10), titulo: x.titulo }))
-      });
+      }) : null;
 
       const mun = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
       await writeFile('materia/'+arq, pagina(
@@ -609,84 +614,6 @@ if (temChave()) {
   console.log('     sem GEMINI_API_KEY — reescrita desligada');
 }
 
-// ===================== ARQUIVO — a memoria do jornal =======================
-// A edicao expira em 24h, mas o que NOS escrevemos fica para sempre. Este
-// indice e a base do assistente: ele so podera responder citando materia
-// publicada aqui, com link. Sem arquivo, a IA nao tem o que citar e inventa.
-try {
-  // Um arquivo por mes: assim nenhum cresce sem limite e cada rodada
-  // reescreve so o mes corrente. Em um ano sao 12 arquivos leves em vez de
-  // um enorme que precisa ser lido e regravado inteiro toda vez.
-  const mes = new Date().toISOString().slice(0, 7);
-  const CAMINHO_ARQ = `dados/arquivo/${UF}-${mes}.json`;
-  await mkdir('dados/arquivo', { recursive: true });
-
-  let arquivo = { uf: UF, mes, criado: new Date().toISOString(), itens: [] };
-  try { arquivo = JSON.parse(await readFile(CAMINHO_ARQ,'utf8')); } catch {}
-
-  const jaTem = new Set((arquivo.itens || []).map(i => i.id));
-  let novas = 0;
-  for (const p of publicados) {
-    if (!p.original || jaTem.has(p.id)) continue;
-    arquivo.itens.push({
-      id: p.id, titulo: p.titulo, resumo: p.resumo,
-      // o texto inteiro fica guardado: sem ele o fio das historias e o
-      // assistente so teriam manchete para trabalhar
-      corpo: p.corpo || [],
-      contexto: p.contexto || null,
-      editoria: p.editoria, uf: p.uf || null,
-      fonte: p.fonte, origemLink: p.origemLink || '',
-      origemNome: p.origemNome || null,
-      nivel: p.nivel || null, orgao: p.orgao || null,
-      municipio: p.municipio || null, municipioNome: p.municipioNome || null,
-      pautadoPor: p.pautadoPor || [],
-      link: p.link, iso: p.iso, dia: p.iso.slice(0,10),
-      palavras: (p.corpo || []).join(' ').split(/\s+/).length
-    });
-    novas++;
-  }
-  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
-  arquivo.atualizado = new Date().toISOString();
-  arquivo.total = arquivo.itens.length;
-
-  // as nao confirmadas tambem ficam guardadas: e delas que nasce o fio da
-  // historia quando a confirmacao chegar depois
-  for (const c of circulando) {
-    if (jaTem.has(c.id)) continue;
-    arquivo.itens.push({
-      id: c.id, titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
-      corpo: c.corpo || [], contexto: null,
-      editoria: c.editoria, uf: c.uf || null,
-      fonte: 'Meridiano', origemLink: '', origemNome: null,
-      nivel: 'sem-confirmacao', orgao: null, pautadoPor: [],
-      link: c.link || '', iso: c.iso, dia: c.iso.slice(0,10),
-      palavras: (c.corpo || []).join(' ').split(/\s+/).length
-    });
-    novas++;
-  }
-  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
-  arquivo.total = arquivo.itens.length;
-
-  await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
-
-  // indice: aponta quais meses existem, para quem for ler o historico
-  // Um indice POR EDICAO. O indice unico era escrito pelos cinco jobs em
-  // paralelo e o ultimo apagava os outros — por isso ele listava so um estado.
-  const IDX = `dados/arquivo/indice-${UF}.json`;
-  let idx = { uf: UF, meses: [] };
-  try { idx = JSON.parse(await readFile(IDX,'utf8')); } catch {}
-  if (!Array.isArray(idx.meses)) idx.meses = [];
-  const chaveMes = `${UF}-${mes}`;
-  if (!idx.meses.includes(chaveMes)) idx.meses.push(chaveMes);
-  idx.meses.sort().reverse();
-  idx.total = arquivo.total;
-  idx.atualizado = new Date().toISOString();
-  await writeFile(IDX, JSON.stringify(idx, null, 2), 'utf8');
-
-  console.log(`  arquivo ${UF}/${mes}: +${novas} novas · ${arquivo.total} no mes`);
-} catch (e) {
-  console.log('  aviso arquivo: ' + e.message);
-}
 
 // ============ CIRCULANDO — o que corre sem registro oficial ==============
 // Nota escrita por nos sobre um fato que e nosso: a informacao esta
@@ -738,6 +665,7 @@ if (temChave() && soPautaFiltrada.length) {
   if (cortadasCirc > 0) console.log(`     ${cortadasCirc} descartadas: ja publicadas, repetidas ou nao noticiosas`);
 
   for (const c of candidatas) {
+    if (carteiraAcabou()) break;
     try {
       // Terremoto no Japao caindo em BRASIL era efeito de herdar a editoria da
       // edicao. Agora o assunto decide.
@@ -748,7 +676,11 @@ if (temChave() && soPautaFiltrada.length) {
       // Antes de tratar como rumor, batemos na porta do orgao que teria o
       // registro. Se o documento existe, isto nao e boato: e materia, escrita
       // a partir da fonte oficial e com link para o original.
-      const caca = await cacarDocumento(c.titulo, GERAL ? null : UF, { orcamentoMs: 60000 });
+      // Sem credito nao ha como escrever a materia mesmo que o documento
+      // apareca — cacar aqui seria queimar o relogio do Actions a toa.
+      const caca = carteiraAcabou()
+        ? { achado:false, procuradoEm:[], relatorio:[], assunto:[], horas:96 }
+        : await cacarDocumento(c.titulo, GERAL ? null : UF, { orcamentoMs: 40000 });
       if (caca.achado) {
         try {
           const texto = await textoCompleto(caca.link, 12000);
@@ -756,10 +688,10 @@ if (temChave() && soPautaFiltrada.length) {
           const arq = slug(m.titulo) + '.html';
           const agora = new Date().toISOString();
           const pareR = acharParecidos(arquivoMemoria, m.titulo);
-          const ctxR = await escreverContexto({
+          const ctxR = (pareR.length || /\d/.test(m.corpo.join(' '))) ? await escreverContexto({
             titulo: m.titulo, corpo: m.corpo.join('\n\n'),
             historico: pareR.map(x => ({ dia:(x.iso||'').slice(0,10), titulo:x.titulo }))
-          });
+          }) : null;
           await writeFile('materia/' + arq, pagina(
             { chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
@@ -851,6 +783,89 @@ if (temChave() && soPautaFiltrada.length) {
     }
   }
   console.log(`\n  5. CIRCULANDO — ${candidatas.length} candidatas · ${circulando.length} notas escritas`);
+
+// O arquivo ficava AQUI EM CIMA, antes das notas de circulacao existirem.
+// Resultado: o laco lia `circulando` antes da declaracao e estourava com
+// "Cannot access before initialization" — o arquivo inteiro deixava de ser
+// gravado, toda rodada. Agora ele roda depois que os dois lados existem.
+// ===================== ARQUIVO — a memoria do jornal =======================
+// A edicao expira em 24h, mas o que NOS escrevemos fica para sempre. Este
+// indice e a base do assistente: ele so podera responder citando materia
+// publicada aqui, com link. Sem arquivo, a IA nao tem o que citar e inventa.
+try {
+  // Um arquivo por mes: assim nenhum cresce sem limite e cada rodada
+  // reescreve so o mes corrente. Em um ano sao 12 arquivos leves em vez de
+  // um enorme que precisa ser lido e regravado inteiro toda vez.
+  const mes = new Date().toISOString().slice(0, 7);
+  const CAMINHO_ARQ = `dados/arquivo/${UF}-${mes}.json`;
+  await mkdir('dados/arquivo', { recursive: true });
+
+  let arquivo = { uf: UF, mes, criado: new Date().toISOString(), itens: [] };
+  try { arquivo = JSON.parse(await readFile(CAMINHO_ARQ,'utf8')); } catch {}
+
+  const jaTem = new Set((arquivo.itens || []).map(i => i.id));
+  let novas = 0;
+  for (const p of publicados) {
+    if (!p.original || jaTem.has(p.id)) continue;
+    arquivo.itens.push({
+      id: p.id, titulo: p.titulo, resumo: p.resumo,
+      // o texto inteiro fica guardado: sem ele o fio das historias e o
+      // assistente so teriam manchete para trabalhar
+      corpo: p.corpo || [],
+      contexto: p.contexto || null,
+      editoria: p.editoria, uf: p.uf || null,
+      fonte: p.fonte, origemLink: p.origemLink || '',
+      origemNome: p.origemNome || null,
+      nivel: p.nivel || null, orgao: p.orgao || null,
+      municipio: p.municipio || null, municipioNome: p.municipioNome || null,
+      pautadoPor: p.pautadoPor || [],
+      link: p.link, iso: p.iso, dia: p.iso.slice(0,10),
+      palavras: (p.corpo || []).join(' ').split(/\s+/).length
+    });
+    novas++;
+  }
+  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+  arquivo.atualizado = new Date().toISOString();
+  arquivo.total = arquivo.itens.length;
+
+  // as nao confirmadas tambem ficam guardadas: e delas que nasce o fio da
+  // historia quando a confirmacao chegar depois
+  for (const c of circulando) {
+    if (jaTem.has(c.id)) continue;
+    arquivo.itens.push({
+      id: c.id, titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
+      corpo: c.corpo || [], contexto: null,
+      editoria: c.editoria, uf: c.uf || null,
+      fonte: 'Meridiano', origemLink: '', origemNome: null,
+      nivel: 'sem-confirmacao', orgao: null, pautadoPor: [],
+      link: c.link || '', iso: c.iso, dia: c.iso.slice(0,10),
+      palavras: (c.corpo || []).join(' ').split(/\s+/).length
+    });
+    novas++;
+  }
+  arquivo.itens.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+  arquivo.total = arquivo.itens.length;
+
+  await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
+
+  // indice: aponta quais meses existem, para quem for ler o historico
+  // Um indice POR EDICAO. O indice unico era escrito pelos cinco jobs em
+  // paralelo e o ultimo apagava os outros — por isso ele listava so um estado.
+  const IDX = `dados/arquivo/indice-${UF}.json`;
+  let idx = { uf: UF, meses: [] };
+  try { idx = JSON.parse(await readFile(IDX,'utf8')); } catch {}
+  if (!Array.isArray(idx.meses)) idx.meses = [];
+  const chaveMes = `${UF}-${mes}`;
+  if (!idx.meses.includes(chaveMes)) idx.meses.push(chaveMes);
+  idx.meses.sort().reverse();
+  idx.total = arquivo.total;
+  idx.atualizado = new Date().toISOString();
+  await writeFile(IDX, JSON.stringify(idx, null, 2), 'utf8');
+
+  console.log(`  arquivo ${UF}/${mes}: +${novas} novas · ${arquivo.total} no mes`);
+} catch (e) {
+  console.log('  aviso arquivo: ' + e.message);
+}
   if (!candidatas.length) console.log('     nenhuma historia com eco suficiente nesta rodada');
 }
 

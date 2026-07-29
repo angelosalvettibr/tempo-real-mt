@@ -22,6 +22,15 @@ import { ondeProcurar, temasDoTexto, TEMA_ROTULO } from './oficiais.mjs';
 const semAcento = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const dormir = ms => new Promise(r => setTimeout(r, ms));
 
+// Orcamento GLOBAL da rodada. O teto por historia nao bastava: seis historias
+// a 60s davam seis minutos so de caca, e o job do Actions morre aos 12.
+// Agora a cacada inteira tem um teto proprio, e quando ele acaba as historias
+// restantes seguem direto para nota nao confirmada — que e o destino delas de
+// qualquer forma quando nao ha documento.
+const ORCAMENTO_RODADA = 210000;   // 3min30 para toda a caca
+let gastoNaRodada = 0;
+export const sobrouTempoDeCaca = () => gastoNaRodada < ORCAMENTO_RODADA;
+
 // Palavras que não distinguem nada e só geram falso positivo.
 const VAZIAS = new Set(['para','pela','pelo','pelos','pelas','como','mais','menos','sobre','entre','apos','depois','antes','contra','durante','este','esta','esse','essa','aquele','aquela','seus','suas','pode','deve','ainda','ja','nao','sim','que','com','sem','por','dos','das','nos','nas','uma','uns','umas','teria','teriam','seria','seriam','estaria','estariam','havia','foi','sao','ter','ser','estar','fazer','dizer','apenas','tambem','muito','pouco','todo','toda','todos','todas','outro','outra','ano','anos','mes','meses','dia','dias','hoje','ontem','amanha','manha','tarde','noite']);
 
@@ -136,6 +145,7 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
   } = opcoes;
 
   const inicio = Date.now();
+  if (!sobrouTempoDeCaca()) return { achado:false, procuradoEm:[], relatorio:[], assunto:[], horas, semTempo:true };
   const fila = ondeProcurar(titulo, uf).slice(0, maxOrgaos);
   const pistas = chaves(titulo);
   const procuradoEm = [];
@@ -144,6 +154,7 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
   const assunto = temas.map(t => TEMA_ROTULO[t]).filter(Boolean);
 
   if (pistas.length < 3) return { achado:false, procuradoEm:[], relatorio:[], assunto, horas };
+  // (o gasto so conta quando houve caca de verdade)
 
   let melhor = null;
 
@@ -188,6 +199,7 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
     await dormir(400);
   }
 
+  gastoNaRodada += Date.now() - inicio;
   const lidas = relatorio.reduce((a,r) => a + r.lidas, 0);
   const mudos = relatorio.filter(r => !r.respondeu).map(r => r.nome);
 

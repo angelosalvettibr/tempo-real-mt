@@ -48,10 +48,12 @@ function escolher(nomes){
 export async function preparar(){
   const nomes = await listarModelos();
   modeloBom = escolher(nomes);
-  return { escolhido: modeloBom, disponiveis: nomes.filter(n=>/flash/i.test(n)).slice(0,8) };
+  definirReservas(nomes);
+  return { escolhido: modeloBom, reservas: reservas.slice(0,3),
+           disponiveis: nomes.filter(n=>/flash/i.test(n)).slice(0,8) };
 }
 
-async function chamar(prompt, ms = 35000){
+async function chamarUmaVez(prompt, ms = 35000){
   if (!modeloBom) await preparar();
   if (!modeloBom) throw new Error('nenhum modelo disponivel para esta chave');
 
@@ -110,6 +112,62 @@ export async function textoCompleto(url, ms = 12000){
       .replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')
       .replace(/\s+/g,' ').trim().slice(0, 6000);
   } finally { clearTimeout(t); }
+}
+
+// Casca com paciencia: espera e tenta de novo no 429, e se insistir troca
+// para o modelo de reserva pelo resto da rodada.
+// Existem dois 429 muito diferentes, e tratar os dois igual foi meu erro:
+//
+//   VELOCIDADE  — pedidos demais por minuto. Passa sozinho. Vale esperar.
+//   SEM CREDITO — a carteira zerou. NUNCA passa nesta rodada. Esperar aqui e
+//                 so queimar o relogio: com paciencia de 37s por materia, o
+//                 job do Actions estoura os 12 minutos antes de terminar.
+//
+// Entao: paciencia para o primeiro, desistencia imediata para o segundo. E um
+// disjuntor geral — depois de tres recusas seguidas por falta de credito, nem
+// tentamos mais, a rodada termina rapido e o log diz o porque.
+
+const semCredito = m => /prepayment credits|credits are depleted|billing|quota exceeded for quota metric/i.test(String(m));
+let carteiraVazia = false;
+let seguidas = 0;
+
+export const carteiraAcabou = () => carteiraVazia;
+
+async function chamar(prompt, ms = 35000){
+  if (carteiraVazia) throw new Error('sem credito na chave Gemini (rodada interrompida)');
+
+  const espera = t => new Promise(r => setTimeout(r, t));
+  let ultimo;
+
+  for (let tentativa = 0; tentativa < 3; tentativa++) {
+    try {
+      const r = await chamarUmaVez(prompt, ms);
+      seguidas = 0;
+      return r;
+    } catch (e) {
+      ultimo = e;
+      const msg = String(e.message);
+
+      if (!/HTTP 429/.test(msg)) throw e;
+
+      if (semCredito(msg)) {
+        if (++seguidas >= 3) {
+          carteiraVazia = true;
+          console.log('     SEM CREDITO na chave Gemini — interrompendo a rodada');
+        }
+        throw new Error('sem credito na chave Gemini');
+      }
+
+      // daqui pra baixo e limite de velocidade: vale esperar
+      if (tentativa === 0) { await espera(8000); continue; }
+      const proxima = reservas.shift();
+      if (!proxima) { await espera(15000); continue; }
+      console.log(`     limite de velocidade, trocando para ${proxima}`);
+      modeloBom = proxima;
+      await espera(2000);
+    }
+  }
+  throw ultimo;
 }
 
 const PROMPT = (fonte, titulo, texto) => `Você é redator de um veículo de notícias de Mato Grosso chamado MERIDIANO.
@@ -188,6 +246,14 @@ export async function reescrever({ fonte, titulo, texto }){
 }
 
 export const modeloUsado = () => modeloBom || '(nenhum)';
+
+// Cota estourada (HTTP 429) e o erro mais comum aqui: cinco edicoes rodam em
+// paralelo e cada materia gasta duas chamadas. Em vez de perder a rodada
+// inteira, esperamos e caimos para um modelo "lite", que tem cota bem maior.
+let reservas = [];
+export function definirReservas(nomes){
+  reservas = nomes.filter(n => /lite/i.test(n) && n !== modeloBom);
+}
 
 
 /* ================= NOTA DE CIRCULACAO ==================================== */
