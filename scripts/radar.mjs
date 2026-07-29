@@ -280,6 +280,16 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo p{margin-bottom:21px}
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
+.relac{border-top:1px solid var(--tinta);padding-top:15px;margin:34px 0 4px}
+.relac b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:12px}
+.relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
+.relac a:hover{color:var(--sinal)}
+.relac span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--fraco);margin-top:4px}
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
+.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
+.acoes button:hover{background:var(--tinta);color:var(--papel)}
+.acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.zap:hover{background:var(--verde);color:#fff}
 .saber{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:28px 0}
 .saber>div{padding:16px 19px}
 .saber>div+div{border-left:1px solid var(--linha)}
@@ -386,8 +396,52 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
   </details>
 
+  ${m.relacionadas?.length ? `<div class="relac">
+    <b>Já publicamos sobre isso</b>
+    ${m.relacionadas.map(r => `<a href="${esc(r.link)}">${esc(r.titulo)}${r.dia ? `<span>${esc(r.dia.split('-').reverse().join('/'))}</span>` : ''}</a>`).join('')}
+  </div>` : ''}
+
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+  </div>
+
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
+<script>
+(function(){
+  var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
+  var u = location.href;
+
+  var zap = document.getElementById('bt-zap');
+  if (zap) zap.addEventListener('click', function(){
+    window.open('https://wa.me/?text=' + encodeURIComponent(t + '\\n\\n' + u), '_blank', 'noopener');
+  });
+
+  var lk = document.getElementById('bt-link');
+  if (lk) lk.addEventListener('click', function(){
+    var pronto = function(){ var v = lk.textContent; lk.textContent = 'Link copiado'; setTimeout(function(){ lk.textContent = v; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(pronto, pronto);
+    else { var c = document.createElement('textarea'); c.value = u; document.body.appendChild(c); c.select();
+           try { document.execCommand('copy'); } catch(e){} document.body.removeChild(c); pronto(); }
+  });
+
+  var ov = document.getElementById('bt-ouvir');
+  if (ov && 'speechSynthesis' in window) {
+    var lendo = false;
+    ov.addEventListener('click', function(){
+      if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
+      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
 </body>
 </html>`;
 }

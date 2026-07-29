@@ -13,6 +13,10 @@ import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
 import { OFICIAIS } from './oficiais.mjs';
+
+// A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
+// Circulando e o resgate nao enxergavam nada e publicavam sem relacionadas.
+let arquivoMemoria = { itens: [] };
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
@@ -500,7 +504,7 @@ if (temChave()) {
   // pagina lenta segurava todas. Agora vao de tres em tres.
   // A memoria do jornal, para o bloco de contexto saber se ja houve caso igual
   // memoria: mes corrente e o anterior, que cobre a maioria dos casos ligados
-  let arquivoMemoria = { itens: [] };
+  arquivoMemoria = { itens: [] };
   const mesAtual = new Date().toISOString().slice(0,7);
   const mesAnterior = new Date(Date.now() - 31*86400000).toISOString().slice(0,7);
   for (const m of [mesAtual, mesAnterior]) {
@@ -530,7 +534,8 @@ if (temChave()) {
       await writeFile('materia/'+arq, pagina(
         { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
-          origemNome: i.veiculo, radar: false, checar:[] },
+          origemNome: i.veiculo, radar: false, checar:[],
+          relacionadas: parecidos.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })) },
         { link:i.link, municipio: mun ? mun.nome : '' }, i.iso), 'utf8');
       publicados.push({
         municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
@@ -750,10 +755,16 @@ if (temChave() && soPautaFiltrada.length) {
           const m = await reescrever({ fonte: caca.fonte, titulo: caca.titulo, texto });
           const arq = slug(m.titulo) + '.html';
           const agora = new Date().toISOString();
+          const pareR = acharParecidos(arquivoMemoria, m.titulo);
+          const ctxR = await escreverContexto({
+            titulo: m.titulo, corpo: m.corpo.join('\n\n'),
+            historico: pareR.map(x => ({ dia:(x.iso||'').slice(0,10), titulo:x.titulo }))
+          });
           await writeFile('materia/' + arq, pagina(
             { chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
-              origemNome: caca.fonte, radar: false, checar: [],
+              origemNome: caca.fonte, radar: false, checar: [], contexto: ctxR,
+              relacionadas: pareR.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })),
               resgatada: { procuradoEm: caca.procuradoEm, orgao: caca.fonte } },
             { link: caca.link, municipio: '' }, agora), 'utf8');
           const munR = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
@@ -807,6 +818,8 @@ if (temChave() && soPautaFiltrada.length) {
         corpo: n.corpo,
         naoConfirmada: true,
         seSabe: n.seSabe, falta: n.falta,
+        relacionadas: acharParecidos(arquivoMemoria, n.titulo).slice(0,3)
+          .map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })),
         ondeCirculou,
         provenencia,
         checar: ['Procurar o registro no órgão competente',
