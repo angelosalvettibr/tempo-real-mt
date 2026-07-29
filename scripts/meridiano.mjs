@@ -27,6 +27,8 @@ const anotarFonte = (tipo, id, nome, itens, erro) =>
                respondeu: !erro, erro: erro ? String(erro).slice(0, 60) : null });
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
+import { EDIZIONI, UFFICIALI, COMUNI, PAUTA_IT } from './italia.mjs';
+import { IDIOMA } from './idiomas.mjs';
 
 const JANELA_HORAS = 24;
 const QUANTAS_REESCREVER = 8;
@@ -234,13 +236,47 @@ async function colher(lista, rotulo, tamanhoLote = 6){
 console.log('\n  MERIDIANO · ' + new Date().toISOString());
 console.log('  ' + '='.repeat(66));
 
-const UF = (process.env.ESTADO || 'mt').trim().toLowerCase();
+// ===================== IDIOMA — qual jornal estamos fazendo ================
+//
+// Um motor so, dois jornais. O que muda entre eles nao e a logica: e a lista
+// de fontes, o mapa de orgaos, os municipios, os textos da pagina e a pasta
+// onde o resultado e gravado.
+//
+//   IDIOMA=pt  ESTADO=mt      -> Meridiano Brasil, edicao de Mato Grosso
+//   IDIOMA=it  ESTADO=sicilia -> Meridiano Italia, edicao da Sicilia
+//
+// Sem a variavel, tudo se comporta exatamente como antes deste refactor.
+
+const LING = (process.env.IDIOMA || 'pt').trim().toLowerCase();
+const T = IDIOMA(LING);
+const ITA = LING === 'it';
+
+// Onde este jornal grava. O brasileiro fica na raiz, como sempre esteve, para
+// nao quebrar os endereços ja publicados e indexados.
+const RAIZ_DADOS   = ITA ? 'dados/it'   : 'dados';
+const RAIZ_MATERIA = ITA ? 'it/materia' : 'materia';
+const URL_MATERIA  = ITA ? '/it/materia' : '/materia';
+
+const UF = (process.env.ESTADO || (ITA ? 'italia' : 'mt')).trim().toLowerCase();
 
 // Cinco edicoes: br, mundo, mt, rs, rj. As duas primeiras cuidam do que e
 // comum a todos; as tres estaduais cuidam so do regional. Assim o nacional
 // para de ocupar as vagas de reescrita das estaduais.
-const GERAL = EDICOES_GERAIS[UF] || null;
-const E = GERAL || ESTADOS[UF] || ESTADOS.mt;
+// As edicoes gerais (sem recorte regional) sao br/mundo no Brasil e
+// italia/mondo na Italia.
+const GERAIS_DA_LINGUA = ITA
+  ? { italia: EDIZIONI.italia, mondo: EDIZIONI.mondo }
+  : EDICOES_GERAIS;
+const REGIOES_DA_LINGUA = ITA
+  ? Object.fromEntries(Object.entries(EDIZIONI).filter(([k]) => !['italia','mondo'].includes(k)))
+  : ESTADOS;
+
+const GERAL = GERAIS_DA_LINGUA[UF] || null;
+const E = GERAL || REGIOES_DA_LINGUA[UF] || (ITA ? EDIZIONI.italia : ESTADOS.mt);
+
+// Mapas equivalentes nos dois idiomas
+const ORGAOS_MAPA   = ITA ? UFFICIALI : OFICIAIS;
+const MUNICIPIOS_MAPA = ITA ? COMUNI  : null;   // pt usa detectarMunicipio direto
 const EDITORIA = UF === 'br' ? 'brasil' : UF === 'mundo' ? 'internacional' : 'regional';
 
 console.log('\n  1. PAUTA — o que os veículos estão dando');
@@ -325,7 +361,7 @@ async function porSitemap(base){
 // nunca eram lidos na coleta normal. Agora a coleta e a uniao das duas listas,
 // sem repetir quem ja estava (a mesma prefeitura aparecia com dois nomes).
 const ORGAOS_DO_ESTADO = (() => {
-  const todos = [...E.assessorias, ...E.setoriais.filter(x=>x.base), ...(OFICIAIS[UF] || [])];
+  const todos = [...E.assessorias, ...E.setoriais.filter(x=>x.base), ...(ORGAOS_MAPA[UF] || [])];
   const chave = o => String(o.base || '').replace(/^https?:\/\/(www\d?\.)?/,'').replace(/\/+$/,'').toLowerCase();
   const vistos = new Set();
   return todos.filter(o => o.base && !vistos.has(chave(o)) && vistos.add(chave(o)));
@@ -521,7 +557,7 @@ if (temChave()) {
   const mesAtual = new Date().toISOString().slice(0,7);
   const mesAnterior = new Date(Date.now() - 31*86400000).toISOString().slice(0,7);
   for (const m of [mesAtual, mesAnterior]) {
-    for (const caminho of [`dados/arquivo/${UF}-${m}.json`, `dados/arquivo-${UF}.json`]) {
+    for (const caminho of [`${RAIZ_DADOS}/arquivo/${UF}-${m}.json`, `${RAIZ_DADOS}/arquivo-${UF}.json`]) {
       try {
         const a = JSON.parse(await readFile(caminho,'utf8'));
         arquivoMemoria.itens.push(...(a.itens || []));
@@ -549,7 +585,8 @@ if (temChave()) {
       }) : null;
 
       const mun = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
-      await writeFile('materia/'+arq, pagina(
+      await mkdir(RAIZ_MATERIA, { recursive: true });
+      await writeFile(`${RAIZ_MATERIA}/`+arq, pagina(
         { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
           origemNome: i.veiculo, radar: false, checar:[],
@@ -564,7 +601,7 @@ if (temChave()) {
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
         uf: GERAL ? null : UF,
         corpo: m.corpo,
-        link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
+        link:`${URL_MATERIA}/`+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
         ...nivelDe(i, texto)
       });
       escritas++;
@@ -721,7 +758,8 @@ if (temChave() && soPautaFiltrada.length) {
             titulo: m.titulo, corpo: m.corpo.join('\n\n'),
             historico: pareR.map(x => ({ dia:(x.iso||'').slice(0,10), titulo:x.titulo }))
           }) : null;
-          await writeFile('materia/' + arq, pagina(
+          await mkdir(RAIZ_MATERIA, { recursive: true });
+          await writeFile(`${RAIZ_MATERIA}/` + arq, pagina(
             { chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
               origemNome: caca.fonte, radar: false, checar: [], contexto: ctxR,
@@ -737,7 +775,7 @@ if (temChave() && soPautaFiltrada.length) {
             origemLink: caca.link, origemNome: caca.fonte,
             pautadoPor: c.tambemEm || [], quentura: c.quentura || 0,
             uf: GERAL ? null : UF, corpo: m.corpo,
-            link: '/materia/' + arq, iso: agora, hora: horaBR(agora),
+            link: `${URL_MATERIA}/` + arq, iso: agora, hora: horaBR(agora),
             original: true, resgatada: true,
             nivel: 'confirmado', selo: 'Confirmado oficialmente'
           });
@@ -778,7 +816,8 @@ if (temChave() && soPautaFiltrada.length) {
         mudos: caca.mudos || [],
         quando: new Date().toLocaleString('pt-BR', { timeZone:'America/Cuiaba' })
       };
-      await writeFile('materia/' + arqC, pagina({
+      await mkdir(RAIZ_MATERIA, { recursive: true });
+      await writeFile(`${RAIZ_MATERIA}/` + arqC, pagina({
         chapeu: GERAL ? GERAL.nome : E.nome,
         titulo: n.titulo,
         linhaFina: n.aviso,
@@ -798,7 +837,7 @@ if (temChave() && soPautaFiltrada.length) {
       circulando.push({
         municipio: munC ? munC.id : null, municipioNome: munC ? munC.nome : null,
         seSabe: n.seSabe, falta: n.falta, ondeCirculou,
-        link: '/materia/' + arqC,
+        link: `${URL_MATERIA}/` + arqC,
         corpo: n.corpo,
         id: 'circ:' + slug(n.titulo),
         editoria: edNota, uf: edNota === 'regional' ? UF : null,
@@ -826,8 +865,8 @@ try {
   // reescreve so o mes corrente. Em um ano sao 12 arquivos leves em vez de
   // um enorme que precisa ser lido e regravado inteiro toda vez.
   const mes = new Date().toISOString().slice(0, 7);
-  const CAMINHO_ARQ = `dados/arquivo/${UF}-${mes}.json`;
-  await mkdir('dados/arquivo', { recursive: true });
+  const CAMINHO_ARQ = `${RAIZ_DADOS}/arquivo/${UF}-${mes}.json`;
+  await mkdir(`${RAIZ_DADOS}/arquivo`, { recursive: true });
 
   let arquivo = { uf: UF, mes, criado: new Date().toISOString(), itens: [] };
   try { arquivo = JSON.parse(await readFile(CAMINHO_ARQ,'utf8')); } catch {}
@@ -880,7 +919,7 @@ try {
   // indice: aponta quais meses existem, para quem for ler o historico
   // Um indice POR EDICAO. O indice unico era escrito pelos cinco jobs em
   // paralelo e o ultimo apagava os outros — por isso ele listava so um estado.
-  const IDX = `dados/arquivo/indice-${UF}.json`;
+  const IDX = `${RAIZ_DADOS}/arquivo/indice-${UF}.json`;
   let idx = { uf: UF, meses: [] };
   try { idx = JSON.parse(await readFile(IDX,'utf8')); } catch {}
   if (!Array.isArray(idx.meses)) idx.meses = [];
@@ -898,7 +937,9 @@ try {
   if (!candidatas.length) console.log('     nenhuma historia com eco suficiente nesta rodada');
 }
 
-await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
+await mkdir(RAIZ_DADOS, { recursive: true });
+await writeFile(`${RAIZ_DADOS}/edicao-${UF}.json`, JSON.stringify({
+  idioma: LING,
   uf: UF,
   estado: E.nome,
   gerado: new Date().toISOString(),
