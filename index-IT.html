@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridiano Italia</title>
+<meta name="description" content="Il giornale che mostra come verifica. Italia, Mondo, Lazio, Lombardia, Sicilia.">
+<link rel="alternate" hreflang="pt-BR" href="https://meridiano.press/br">
+<link rel="alternate" hreflang="it"    href="https://meridiano.press/it">
+<link rel="canonical" href="https://meridiano.press/it">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FAF8F3;--tinta:#12100C;--tinta2:#3A362E;--linha:#DCD6C8;--fraco:#7A7264;--sinal:#8B2E20;
+      --serif:'Source Serif 4',Georgia,serif;--display:'Playfair Display',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--papel);color:var(--tinta);font-family:var(--serif);display:flex;flex-direction:column;
+     -webkit-font-smoothing:antialiased;
+     background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.025) 1px,transparent 0);background-size:22px 22px}
+a{color:inherit;text-decoration:none}
+.topo{padding:52px 22px 26px;text-align:center}
+.marca{font-family:var(--display);font-size:clamp(42px,10vw,74px);font-weight:900;letter-spacing:-.03em;line-height:.94}
+.marca span{display:block;font-size:.34em;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sinal);margin-top:14px}
+.regua{width:58px;height:2px;background:var(--sinal);margin:22px auto 0}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:10px 22px 40px}
+.caixa{max-width:620px;text-align:center}
+.caixa h2{font-family:var(--display);font-size:27px;font-weight:700;margin-bottom:16px;letter-spacing:-.01em}
+.caixa p{font-size:16.5px;line-height:1.68;color:var(--tinta2);margin-bottom:14px}
+.eds{border:1px solid var(--tinta);padding:20px 24px;margin:26px 0 22px;text-align:left}
+.eds b{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco);display:block;margin-bottom:12px}
+.eds ul{list-style:none;font-family:var(--mono);font-size:13px;line-height:2.1}
+.eds li::before{content:'· ';color:var(--sinal)}
+.volta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1.5px solid var(--tinta);padding-bottom:3px}
+.volta:hover{color:var(--sinal);border-color:var(--sinal)}
+.pe{padding:0 22px 40px;text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--fraco);line-height:2}
+</style>
+</head>
+<body>
+<div class="topo">
+  <h1 class="marca">Meridiano<span>Italia</span></h1>
+  <div class="regua"></div>
+</div>
+<main>
+  <div class="caixa">
+    <h2>Stiamo aprendo la redazione</h2>
+    <p>Il Meridiano pubblica solo ciò che riesce a verificare presso una fonte ufficiale, e mostra al lettore dove ha cercato quando non ha trovato nulla. L'edizione brasiliana è già online; quella italiana sta collegando le sue fonti.</p>
+    <div class="eds">
+      <b>Edizioni previste</b>
+      <ul>
+        <li>Italia &mdash; Governo, Camera, Senato, Quirinale, Istat, Protezione Civile</li>
+        <li>Mondo</li>
+        <li>Lazio &mdash; Regione, Roma Capitale, Arpa, Questura</li>
+        <li>Lombardia &mdash; Lombardia Notizie, Regione, Comune di Milano</li>
+        <li>Sicilia &mdash; Regione, ARS, INGV Osservatorio Etneo, Comuni</li>
+      </ul>
+    </div>
+    <p style="font-size:14.5px;color:var(--fraco)">Nessun testo viene copiato da altre testate. Ogni articolo nasce da una fonte che ne autorizza la ripubblicazione.</p>
+    <p style="margin-top:26px"><a class="volta" href="/br">Leggi l'edizione brasiliana &rarr;</a></p>
+  </div>
+</main>
+<div class="pe"><a href="/">Meridiano</a></div>
+</body>
+</html>

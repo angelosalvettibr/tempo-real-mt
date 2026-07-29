@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridiano</title>
+<meta name="description" content="Jornal que mostra como apura. Edições no Brasil e na Itália.">
+
+<!-- Diz ao buscador que sao o mesmo jornal em duas linguas, e nao conteudo
+     duplicado. Sem isto, o Google escolhe uma versao e ignora a outra. -->
+<link rel="alternate" hreflang="pt-BR" href="https://meridiano.press/br">
+<link rel="alternate" hreflang="it"    href="https://meridiano.press/it">
+<link rel="alternate" hreflang="x-default" href="https://meridiano.press/">
+<link rel="canonical" href="https://meridiano.press/">
+
+<meta property="og:title" content="Meridiano">
+<meta property="og:description" content="O jornal que mostra como apura.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://meridiano.press/">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#FAF8F3; --tinta:#12100C; --tinta2:#3A362E;
+  --linha:#DCD6C8; --fraco:#7A7264; --sinal:#8B2E20; --verde:#2F5D3A;
+  --serif:'Source Serif 4',Georgia,serif;
+  --display:'Playfair Display',Georgia,serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--papel); color:var(--tinta); font-family:var(--serif);
+  display:flex; flex-direction:column; -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(circle at 1px 1px, rgba(0,0,0,.025) 1px, transparent 0);
+  background-size:22px 22px;
+}
+a{color:inherit;text-decoration:none}
+
+.topo{padding:52px 22px 30px;text-align:center}
+.marca{font-family:var(--display);font-size:clamp(46px,11vw,86px);font-weight:900;letter-spacing:-.03em;line-height:.92}
+.regua{width:58px;height:2px;background:var(--sinal);margin:20px auto 0}
+.lema{font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--fraco);margin-top:20px}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px 22px 40px}
+.portas{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:860px;width:100%;
+        border:1px solid var(--tinta);background:#fff}
+.porta{padding:40px 34px;display:block;transition:background .16s}
+.porta+.porta{border-left:1px solid var(--tinta)}
+.porta:hover{background:#F6F3EC}
+.porta .lugar{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:14px}
+.porta h2{font-family:var(--display);font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:12px}
+.porta p{font-size:15.5px;line-height:1.6;color:var(--tinta2)}
+.porta .eds{font-family:var(--mono);font-size:11px;color:var(--fraco);margin-top:18px;line-height:1.8}
+.porta .ir{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:22px;display:inline-block;border-bottom:1.5px solid var(--tinta);padding-bottom:3px}
+.porta:hover .ir{color:var(--sinal);border-color:var(--sinal)}
+
+.sugerido{position:relative}
+.sugerido::before{content:attr(data-nota);position:absolute;top:0;right:0;
+  background:var(--verde);color:#fff;font-family:var(--mono);font-size:9px;
+  letter-spacing:.16em;text-transform:uppercase;padding:5px 10px}
+
+.pe{padding:0 22px 40px;text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--fraco);letter-spacing:.05em;line-height:2}
+.pe a{border-bottom:1px solid var(--linha)}
+.pe a:hover{color:var(--tinta);border-color:var(--tinta)}
+
+@media(max-width:680px){
+  .topo{padding:38px 20px 22px}
+  .portas{grid-template-columns:1fr}
+  .porta+.porta{border-left:0;border-top:1px solid var(--tinta)}
+  .porta{padding:30px 26px}
+  .porta h2{font-size:29px}
+}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1 class="marca">Meridiano</h1>
+  <div class="regua"></div>
+  <p class="lema">o jornal que mostra como apura</p>
+</div>
+
+<main>
+  <div class="portas">
+    <a class="porta" id="p-br" href="/br">
+      <span class="lugar">Brasil</span>
+      <h2>Meridiano Brasil</h2>
+      <p>Notícia checada em fonte oficial, com o documento à vista — e a lista do que procuramos quando não achamos.</p>
+      <div class="eds">Brasil · Mundo<br>Mato Grosso · Rio Grande do Sul · Rio de Janeiro</div>
+      <span class="ir">Ler em português &rarr;</span>
+    </a>
+
+    <a class="porta" id="p-it" href="/it">
+      <span class="lugar">Italia</span>
+      <h2>Meridiano Italia</h2>
+      <p>Notizie verificate su fonti ufficiali, con il documento in vista &mdash; e l'elenco di dove abbiamo cercato quando non l'abbiamo trovato.</p>
+      <div class="eds">Italia · Mondo<br>Lazio · Lombardia · Sicilia</div>
+      <span class="ir">Leggi in italiano &rarr;</span>
+    </a>
+  </div>
+</main>
+
+<div class="pe">
+  Nenhum texto é copiado de outro veículo. Cada matéria nasce de fonte que autoriza republicação.<br>
+  <a href="/painel.html">Painel</a> · <a href="/arquivo.html">Arquivo</a>
+</div>
+
+<script>
+(function(){
+  // Marca a porta provavel pela lingua do navegador, sem redirecionar
+  // sozinho: pagina que redireciona esconde a outra edicao do buscador e
+  // irrita quem quer a outra lingua de proposito.
+  var l = (navigator.language || 'pt').toLowerCase();
+  var ita = l.indexOf('it') === 0;
+  var alvo = document.getElementById(ita ? 'p-it' : 'p-br');
+  if (alvo) {
+    alvo.classList.add('sugerido');
+    alvo.setAttribute('data-nota', ita ? 'consigliato' : 'sugerido');
+  }
+  document.documentElement.lang = ita ? 'it' : 'pt-BR';
+})();
+</script>
+</body>
+</html>
