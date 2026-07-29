@@ -100,4 +100,81 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
 </body>
+</html>/header>
+
+<article class="wrap">
+  <span class="selo">Com informações de Prefeitura de Volta Redonda</span>
+  <span class="chapeu">Volta Redonda</span>
+  <h1>Inscrições para cursos gratuitos da FBG terminam nesta sexta-feira em Volta Redonda</h1>
+  <p class="linha-fina">As vagas estão distribuídas em 11 áreas de qualificação profissional com turmas de 20 alunos e duração de quatro meses.</p>
+  <div class="assina">Redação Meridiano · 28/07/2026, 20:56:19</div>
+
+  <div class="corpo"><p>As inscrições para os cursos profissionalizantes gratuitos ofertados pela Fundação Beatriz Gama, da Prefeitura de Volta Redonda, encerram nesta sexta-feira, dia 31. O prazo é voltado para as turmas do segundo semestre de 2026 do programa Volta Redonda Formando Profissionais.</p>
+<p>Há vagas em 11 áreas de qualificação nos setores de beleza, estética, moda, gastronomia e mecânica. As opções envolvem Cabeleireiro, Depilação com banho dourado, Estética integrativa básica e avançada, Maquiagem, Mecânica de automóveis, Manicure com alongamento de unhas, Trança, Embelezamento do olhar e Ornamentação com bolas avançado. Para Corte e costura e Confeitaria, restam vagas somente para o módulo avançado, exclusivo a quem realizou a primeira etapa.</p>
+<p>Cada turma conta com 20 vagas e as aulas duram quatro meses. Alunos que concluírem o curso com registro de frequência</p></div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <details class="fonte-box">
+    <summary><b>De onde vem esta informação</b></summary>
+    Reescrevemos com nossas palavras a partir do material publicado por Prefeitura de Volta Redonda. Nenhum número foi alterado: todos constam do original, cujo endereço está abaixo.
+    <br><br>Documento: <a href="https://www.voltaredonda.rj.gov.br/comunicacao/noticias/39-fbg/12284-inscrições-para-cursos-profissionalizantes-gratuitos-da-fbg-encerram-na-sexta-feira-31-em-volta-redonda" target="_blank" rel="noopener">https://www.voltaredonda.rj.gov.br/comunicacao/noticias/39-fbg/12284-inscrições-para-cursos-profissionalizantes-gratuitos-da-fbg-encerram-na-sexta-feira-31-em-volta-redonda</a>
+    
+  </details>
+
+  <div class="relac">
+    <b>Já publicamos sobre isso</b>
+    <a href="/materia/inscricoes-para-cursos-gratuitos-da-fbg-em-volta-redonda-terminam-nest.html">Inscrições para cursos gratuitos da FBG em Volta Redonda terminam nesta sexta-feira<span>28/07/2026</span></a><a href="/materia/inscricoes-para-cursos-gratuitos-da-fbg-em-volta-redonda-terminam-nest.html">Inscrições para cursos gratuitos da FBG em Volta Redonda terminam nesta sexta-feira<span>28/07/2026</span></a><a href="/materia/inscricoes-para-cursos-gratuitos-da-fbg-em-volta-redonda-terminam-nest.html">Inscrições para cursos gratuitos da FBG em Volta Redonda terminam nesta sexta-feira<span>28/07/2026</span></a>
+  </div>
+
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+  </div>
+
+  <a class="voltar" href="/">← Voltar para a capa</a>
+</article>
+<script>
+(function(){
+  var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
+  var u = location.href;
+
+  var zap = document.getElementById('bt-zap');
+  if (zap) zap.addEventListener('click', function(){
+    window.open('https://wa.me/?text=' + encodeURIComponent(t + '\n\n' + u), '_blank', 'noopener');
+  });
+
+  var lk = document.getElementById('bt-link');
+  if (lk) lk.addEventListener('click', function(){
+    var pronto = function(){ var v = lk.textContent; lk.textContent = 'Link copiado'; setTimeout(function(){ lk.textContent = v; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(pronto, pronto);
+    else { var c = document.createElement('textarea'); c.value = u; document.body.appendChild(c); c.select();
+           try { document.execCommand('copy'); } catch(e){} document.body.removeChild(c); pronto(); }
+  });
+
+  var ov = document.getElementById('bt-ouvir');
+  if (ov && 'speechSynthesis' in window) {
+    var lendo = false;
+    ov.addEventListener('click', function(){
+      if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
+      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
+</body>
 </html>
