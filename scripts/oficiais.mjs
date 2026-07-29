@@ -19,7 +19,7 @@
 // Assuntos que cada tipo de órgão costuma registrar. Serve para o caçador
 // escolher onde procurar primeiro em vez de varrer tudo.
 export const TEMAS = {
-  policia:   /(pres[oa]|pris[ãa]o|prend|apreens|apreend|roub|furt|homic|assassin|traf|drog|opera[çc][ãa]o policial|foragid|mandado|delegacia|investiga[çc])/i,
+  policia:   /(pres[oa]|pris[ãa]o|prend|apreens|apreend|roub|furt|homic|assassin|traf|drog|opera[çc][ãa]o policial|foragid|mandado|delegacia|investiga[çc]|pol[íi]cia federal|\\bpf\\b|depoiment|inqu[ée]rito|oitiva|indiciad|busca e apreens)/i,
   ministerio:/(propina|corrup[çc]|desvi|improbidade|fraude|licita[çc][ãa]o|superfatur|denunci|gaeco|for[çc]a-tarefa|inqu[ée]rito civil|a[çc][ãa]o civil)/i,
   justica:   /(condenad|senten[çc]|liminar|habeas|julgament|recurso|decis[ãa]o judicial|juiz|desembargador|tribunal|proces)/i,
   contas:    /(tribunal de contas|tce|auditoria|presta[çc][ãa]o de contas|irregularidade|obra parad|contrato)/i,
@@ -28,7 +28,11 @@ export const TEMAS = {
   educacao:  /(escola|aluno|professor|matr[íi]cula|enem|universidade|creche|merenda)/i,
   obras:     /(obra|ponte|rodovia|asfalt|pavimenta|viaduto|saneament|licen[çc]a ambiental)/i,
   ambiente:  /(desmatament|queimada|ibama|licenciament|ambiental|pantanal|amaz[ôo]nia|rio |nascente)/i,
-  agro:      /(safra|colheita|soja|milho|algod[ãa]o|boi|rebanho|gado|plantio|produtividade)/i
+  agro:      /(safra|colheita|soja|milho|algod[ãa]o|boi|rebanho|gado|plantio|produtividade)/,
+  eleicao:   /(elei[çc][ãa]o|eleitoral|eleitor|candidat|urna|\btse\b|\btre\b|coliga[çc]|partido|propaganda eleitoral|registro de candidatura|pesquisa eleitoral|campanha de|pr[ée]-candidat|voto)/i,
+  legislativo:/(c[âa]mara dos deputados|senado|congresso|projeto de lei|\bpec\b|deputad|senador|plen[áa]rio|relator|medida provis[óo]ria|comiss[ãa]o parlamentar|\bcpi\b)/i,
+  economia:  /(infla[çc][ãa]o|\bpib\b|juros|selic|d[óo]lar|desemprego|\bipca\b|balan[çc]a comercial|banco central|imposto|tribut|or[çc]amento|d[íi]vida p[úu]blica|sal[áa]rio m[íi]nimo)/i,
+  internacional:/(\bonu\b|na[çc][õo]es unidas|vaticano|papa\b|uni[ãa]o europeia|mercosul|\bomc\b|itamaraty|embaixad|tratado|ac[oó]rdo internacional|tarifa)/i
 };
 
 // { id, nome, url (página de notícias), base (raiz do site), temas: [] }
@@ -122,8 +126,36 @@ export const OFICIAIS = {
     { id:'antt',      nome:'ANTT',                           url:'https://www.gov.br/antt/pt-br/assuntos/noticias', base:'https://www.gov.br/antt',     temas:['obras'] },
     { id:'funai',     nome:'Funai',                          url:'https://www.gov.br/funai/pt-br/assuntos/noticias', base:'https://www.gov.br/funai',   temas:['ambiente'] },
     { id:'ipea',      nome:'Ipea',                           url:'https://www.ipea.gov.br/portal/imprensa',  base:'https://www.ipea.gov.br',          temas:[] },
-    { id:'mte',       nome:'Ministério do Trabalho',         url:'https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo', base:'https://www.gov.br/trabalho-e-emprego', temas:[] }
+    { id:'mte',       nome:'Ministério do Trabalho',         url:'https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo', base:'https://www.gov.br/trabalho-e-emprego', temas:[] },
+    { id:'tse',       nome:'TSE',                            url:'https://www.tse.jus.br/comunicacao/noticias', base:'https://www.tse.jus.br',      temas:['eleicao','justica'] },
+    { id:'stf',       nome:'STF',                            url:'https://noticias.stf.jus.br',              base:'https://noticias.stf.jus.br',      temas:['justica'] },
+    { id:'stj',       nome:'STJ',                            url:'https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx', base:'https://www.stj.jus.br', temas:['justica'] },
+    { id:'camara',    nome:'Agência Câmara',                 url:'https://www.camara.leg.br/noticias',       base:'https://www.camara.leg.br',        temas:['legislativo'] },
+    { id:'senado',    nome:'Agência Senado',                 url:'https://www12.senado.leg.br/noticias',     base:'https://www12.senado.leg.br',      temas:['legislativo'] },
+    { id:'bc',        nome:'Banco Central',                  url:'https://www.bcb.gov.br/detalhenoticia',    base:'https://www.bcb.gov.br',           temas:['economia'] },
+    { id:'ibge',      nome:'IBGE',                           url:'https://agenciadenoticias.ibge.gov.br',    base:'https://agenciadenoticias.ibge.gov.br', temas:['economia'] },
+    { id:'mre',       nome:'Itamaraty',                      url:'https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa', base:'https://www.gov.br/mre', temas:['internacional'] },
+    { id:'agenciabrasil', nome:'Agência Brasil',             url:'https://agenciabrasil.ebc.com.br/ultimas',  base:'https://agenciabrasil.ebc.com.br', temas:[] },
+    { id:'govbr',     nome:'gov.br',                         url:'https://www.gov.br/pt-br/noticias',        base:'https://www.gov.br/pt-br/noticias', temas:[] }
   ]
+};
+
+// Como explicar ao leitor por que fomos bater naquela porta.
+export const TEMA_ROTULO = {
+  policia:   'ocorrência policial',
+  ministerio:'apuração do Ministério Público',
+  justica:   'decisão judicial',
+  contas:    'fiscalização de contas públicas',
+  defesa:    'evento climático ou desastre',
+  saude:     'saúde pública',
+  educacao:  'educação',
+  obras:     'obra pública',
+  ambiente:  'meio ambiente',
+  agro:      'produção agrícola',
+  eleicao:   'matéria eleitoral',
+  legislativo:'tramitação no Legislativo',
+  economia:  'economia e contas públicas',
+  internacional:'relações internacionais'
 };
 
 // Dado um título, quais temas ele toca. Sem tema reconhecido, devolve vazio —
@@ -135,17 +167,28 @@ export function temasDoTexto(texto){
 
 // A fila de onde procurar, na ordem certa: primeiro quem tem o tema, depois
 // os gerais do estado, depois o federal.
+// Quando o assunto nao cai em tema nenhum, nao adianta cair no balde dos
+// orgaos sem tema — eram INSS, Ipea e Trabalho, e uma materia sobre o TSE
+// terminava consultando os tres. Sem tema, valem os generalistas de verdade:
+// Agencia Brasil, gov.br, Camara, Senado, STF. Eles cobrem qualquer assunto.
+const CURINGAS = ['agenciabrasil','govbr','camara','senado'];
+
 export function ondeProcurar(titulo, uf){
   const temas = temasDoTexto(titulo);
   const doEstado = OFICIAIS[uf] || [];
   const casa = o => o.temas?.some(t => temas.includes(t));
+  const curinga = o => CURINGAS.includes(o.id);
 
-  const fila = [
-    ...doEstado.filter(casa),
-    ...OFICIAIS.federal.filter(casa),
-    ...doEstado.filter(o => !o.temas?.length),
-    ...OFICIAIS.federal.filter(o => !o.temas?.length)
-  ];
+  const fila = temas.length
+    ? [ ...doEstado.filter(casa),
+        ...OFICIAIS.federal.filter(casa),
+        ...OFICIAIS.federal.filter(curinga),
+        ...doEstado.filter(o => !o.temas?.length),
+        ...OFICIAIS.federal.filter(o => !o.temas?.length) ]
+    // sem tema: generalistas primeiro, depois tudo o que houver no estado
+    : [ ...OFICIAIS.federal.filter(curinga),
+        ...doEstado,
+        ...OFICIAIS.federal.filter(o => !curinga(o)) ];
 
   // sem repetir
   const vistos = new Set();
