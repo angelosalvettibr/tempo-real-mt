@@ -2,7 +2,11 @@ name: Il Meridiano
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    # Tres rodadas por dia, em UTC. No Rio: 6h, 12h e 18h.
+    # De 3 em 3 horas eram 8 rodadas diarias, e assessoria publica nao
+    # publica oito vezes por dia — a maioria das rodadas gastava Gemini
+    # para nao achar nada novo.
+    - cron: '0 9,15,21 * * *'
   workflow_dispatch:
     inputs:
       edicao:
@@ -19,7 +23,7 @@ jobs:
   # estaduais cuidam so do regional e nao disputam vaga com Brasilia.
   edicao:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
