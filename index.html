@@ -232,8 +232,10 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
     <b>Escolha um apelido</b>
     <p>Serve para o Meridiano abrir direto na sua praça, marcar o que você já leu e deixar de repetir o que não te interessa. Quanto mais você lê, melhor o jornal fica para você.</p>
     <p class="anon"><b>Não pedimos e-mail, nome nem telefone.</b> Você inventa um apelido qualquer — só você sabe que é você. Para nós é uma etiqueta sem dono. Ele fica guardado neste navegador, e você pode apagar tudo quando quiser.</p>
+    <p>O <b>PIN de 6 dígitos</b> é o que te reconhece em outro computador ou no celular: basta digitar o mesmo apelido e o mesmo PIN. Guardamos só uma impressão embaralhada dele, nunca o número. <b>Não há como recuperá-lo</b> — se esquecer, é só começar com outro apelido.</p>
     <div class="linha-campo">
       <input id="campo-apelido" placeholder="njeletto" maxlength="24" autocomplete="off" spellcheck="false">
+      <input id="campo-pin" placeholder="PIN de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" style="width:150px">
       <button class="bt-salvar" data-ap="salvar">usar este</button>
       <button class="bt-mini" data-ap="fechar">agora não</button>
     </div>
@@ -611,15 +613,16 @@ async function api(acao, dados = {}){
   } catch { return null; }
 }
 
-async function checarApelido(nome){
+async function checarApelido(nome, pin){
   const limpo = String(nome).toLowerCase().trim()
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9_-]/g,'');
   if (limpo.length < 3)  return { ok:false, msg:'Use pelo menos 3 caracteres.' };
   if (limpo.length > 24) return { ok:false, msg:'Use no máximo 24 caracteres.' };
 
-  const r = await api('apelido', { apelido: limpo });
+  const r = await api('apelido', { apelido: limpo, pin });
   if (!r) return { ok:true, apelido:limpo };
-  return r.ok ? { ok:true, apelido:r.apelido } : { ok:false, msg:r.msg, sugestoes:r.sugestoes || [] };
+  return r.ok ? { ok:true, apelido:r.apelido, novo:r.novo, entrou:r.entrou }
+              : { ok:false, msg:r.msg, precisaPin:r.precisaPin };
 }
 
 function registrarLeitura(i){
@@ -666,18 +669,20 @@ document.addEventListener('click', e => {
 
 async function salvarApelido(){
   const campo = document.getElementById('campo-apelido');
+  const cPin  = document.getElementById('campo-pin');
   const aviso = document.getElementById('aviso-apelido');
-  const r = await checarApelido(campo.value);
+  const r = await checarApelido(campo.value, (cPin?.value || '').replace(/\D/g,''));
 
   if (r.ok) {
     leitor.apelido = r.apelido;
+    if (cPin) cPin.value = '';
     document.getElementById('caixa-apelido').classList.remove('aberta');
     montarApelido();
+    if (r.entrou) aviso.textContent = '';
     return;
   }
-  aviso.innerHTML = esc(r.msg) + (r.sugestoes?.length
-    ? ' Livres: ' + r.sugestoes.map(x => `<button class="sug" data-ap="sugestao">${esc(x)}</button>`).join(' ')
-    : '');
+  aviso.textContent = r.msg || '';
+  if (r.precisaPin) cPin?.focus();
 }
 
 $('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
@@ -685,8 +690,13 @@ setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30
 setInterval(carregar, 5*60*1000);
 // A area do leitor nao pode depender de nada que venha antes. Se o carregamento
 // da edicao falhar, o apelido continua funcionando.
-document.getElementById('campo-apelido')?.addEventListener('keydown', e => {
-  if (e.key === 'Enter') salvarApelido();
+for (const id of ['campo-apelido','campo-pin']) {
+  document.getElementById(id)?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') salvarApelido();
+  });
+}
+document.getElementById('campo-pin')?.addEventListener('input', e => {
+  e.target.value = e.target.value.replace(/\D/g,'').slice(0,6);
 });
 montarApelido();
 
