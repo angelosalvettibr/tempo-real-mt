@@ -17,6 +17,14 @@ import { OFICIAIS } from './oficiais.mjs';
 // A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
 // Circulando e o resgate nao enxergavam nada e publicavam sem relacionadas.
 let arquivoMemoria = { itens: [] };
+
+// Saude das fontes desta rodada. O robo ja sabia disso — imprimia no log e
+// jogava fora. Agora vai para a edicao, e o painel mostra sem ninguem
+// precisar abrir o Actions.
+const SAUDE = [];
+const anotarFonte = (tipo, id, nome, itens, erro) =>
+  SAUDE.push({ tipo, id, nome: nome || id, itens: itens || 0, ok: !erro && itens > 0,
+               respondeu: !erro, erro: erro ? String(erro).slice(0, 60) : null });
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
@@ -207,7 +215,11 @@ async function colher(lista, rotulo, tamanhoLote = 6){
         ok++;
       }
       rel.push(`ok    ${rotulo}:${f.id.padEnd(14)} ${String(ok).padStart(3)}`);
-    } catch(e){ rel.push(`aviso ${rotulo}:${f.id.padEnd(14)} ${String(e.message).slice(0,34)}`); }
+      anotarFonte(rotulo, f.id, f.nome, ok, null);
+    } catch(e){
+      rel.push(`aviso ${rotulo}:${f.id.padEnd(14)} ${String(e.message).slice(0,34)}`);
+      anotarFonte(rotulo, f.id, f.nome, 0, e.message);
+    }
   }
 
   for (let i = 0; i < lista.length; i += tamanhoLote) {
@@ -333,6 +345,7 @@ async function tratarOrgao(o){
       for (const x of m) F.itens.push({ titulo:x.titulo, link:x.link, resumo:'',
         iso:new Date().toISOString(), veiculo:o.nome, editoria:'regional', uf:UF, fonteId:o.id });
       console.log(`  ok    ${o.id.padEnd(12)} ${String(m.length).padStart(2)} · pagina ${caminho}`);
+      anotarFonte('assessoria', o.id, o.nome, m.length, null);
       entrou = m.length; }
   } catch {}
 
@@ -351,10 +364,10 @@ async function tratarOrgao(o){
       entrou++;
       await dormir(300);
     }
-    if (entrou) console.log(`  ok    ${o.id.padEnd(12)} ${String(entrou).padStart(2)} · sitemap`);
+    if (entrou) { console.log(`  ok    ${o.id.padEnd(12)} ${String(entrou).padStart(2)} · sitemap`); anotarFonte('assessoria', o.id, o.nome, entrou, null); }
   }
 
-  if (!entrou) console.log(`  aviso ${o.id.padEnd(12)} sem pagina nem sitemap`);
+  if (!entrou) { console.log(`  aviso ${o.id.padEnd(12)} sem pagina nem sitemap`); anotarFonte('assessoria', o.id, o.nome, 0, 'sem pagina nem sitemap'); }
 }
 
 for (let k = 0; k < ORGAOS_DO_ESTADO.length; k += 4) {
@@ -893,6 +906,14 @@ await writeFile(`dados/edicao-${UF}.json`, JSON.stringify({
   numeros: { pauta:P.itens.length, fonteLivre:F.itens.length, confirmadas:confirmadas.length, publicadas:escritas, resgatadas, semFonte:soPautaFiltrada.length },
   // a capa le esta lista para montar as abas de cidade: quem manda e o
   // municipios.mjs, e mais nada precisa ser editado a mao
+  // Extrato de saude das fontes, para o painel
+  fontes: {
+    checadas:   SAUDE.length,
+    responderam: SAUDE.filter(f => f.respondeu).length,
+    entregando: SAUDE.filter(f => f.ok).length,
+    itens:      SAUDE.reduce((a, f) => a + f.itens, 0),
+    lista: SAUDE.sort((a,b) => b.itens - a.itens)
+  },
   cidades: destaques(UF),
   itens: publicados,
   circulando,

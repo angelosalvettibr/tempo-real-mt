@@ -136,6 +136,65 @@ export const ESTADOS = {
 // BR e MUNDO agora sao edicoes proprias, nao mais carona das estaduais.
 // Antes as tres maquinas dos estados buscavam as mesmas fontes nacionais e
 // gastavam as vagas de reescrita com Brasilia — o regional ficava de fora.
+/* ==================================================================== 
+   JORNALISMO EM LICENCA ABERTA
+   ====================================================================
+   Ate aqui o jornal so tinha dois tipos de fonte: assessoria publica
+   (release oficial) e veiculo comercial (so pauta, nunca texto).
+
+   Falta o meio-termo, que no Brasil e forte: agencia de jornalismo sem
+   fins lucrativos que publica em Creative Commons e QUER ser republicada.
+   E reportagem de verdade — investigacao, campo, meses de apuracao —
+   entrando de graca e com autorizacao expressa.
+
+   ATENCAO A LICENCA. Elas nao sao todas iguais, e confundir da processo:
+
+     editavel  = permite adaptar o texto (a Publica autoriza edicao leve
+                 e ate mudanca de titulo). Pode passar pelo redator.
+     integral  = ND, sem derivacao. NAO pode ser reescrito. Ou publica
+                 identico com credito, ou nao publica. Enquanto o caminho
+                 de republicacao integral nao existir, entra so como pauta.
+
+   Na duvida sobre uma licenca, marque 'integral'. O erro barato e deixar
+   de publicar; o caro e reescrever quem proibiu reescrita.                */
+
+export const ABERTAS = [
+  { id:'publica',      nome:'Agência Pública',     url:'https://apublica.org/feed/',
+    base:'https://apublica.org',            licenca:'editavel', editoria:'brasil',
+    credito:'Agência Pública' },
+
+  { id:'amazoniareal', nome:'Amazônia Real',       url:'https://amazoniareal.com.br/feed/',
+    base:'https://amazoniareal.com.br',     licenca:'integral', editoria:'brasil',
+    credito:'Amazônia Real', uf:'mt' },
+
+  { id:'reporterbr',   nome:'Repórter Brasil',     url:'https://reporterbrasil.org.br/feed/',
+    base:'https://reporterbrasil.org.br',   licenca:'integral', editoria:'brasil',
+    credito:'Repórter Brasil' },
+
+  { id:'ponte',        nome:'Ponte Jornalismo',    url:'https://ponte.org/feed/',
+    base:'https://ponte.org',               licenca:'integral', editoria:'brasil',
+    credito:'Ponte Jornalismo' },
+
+  { id:'azmina',       nome:'AzMina',              url:'https://azmina.com.br/feed/',
+    base:'https://azmina.com.br',           licenca:'integral', editoria:'brasil',
+    credito:'Revista AzMina' },
+
+  { id:'marcozero',    nome:'Marco Zero',          url:'https://marcozero.org/feed/',
+    base:'https://marcozero.org',           licenca:'integral', editoria:'brasil',
+    credito:'Marco Zero Conteúdo' },
+
+  { id:'catarinas',    nome:'Portal Catarinas',    url:'https://catarinas.info/feed/',
+    base:'https://catarinas.info',          licenca:'integral', editoria:'brasil',
+    credito:'Portal Catarinas' },
+
+  { id:'colabora',     nome:'#Colabora',           url:'https://projetocolabora.com.br/feed/',
+    base:'https://projetocolabora.com.br',  licenca:'integral', editoria:'brasil',
+    credito:'#Colabora' }
+];
+
+export const ABERTAS_EDITAVEIS = ABERTAS.filter(f => f.licenca === 'editavel');
+export const ABERTAS_INTEGRAIS = ABERTAS.filter(f => f.licenca === 'integral');
+
 export const EDICOES_GERAIS = {
   br: {
     nome: 'Brasil', uf: 'br',
@@ -182,6 +241,7 @@ export const EDICOES_GERAIS = {
       { id:'inmet',       nome:'Inmet',   url:'https://portal.inmet.gov.br/rss', base:'https://portal.inmet.gov.br/noticias' },
       { id:'anp',         nome:'ANP',     url:'https://www.gov.br/anp/pt-br/noticias/RSS', base:'https://www.gov.br/anp/pt-br/noticias' },
       { id:'mapa',        nome:'Ministério da Agricultura', url:'https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/agricultura/pt-br/assuntos/noticias' },
+      ...ABERTAS_EDITAVEIS.map(f => ({ id:f.id, nome:f.nome, url:f.url, base:f.base })),
       { id:'saude',       nome:'Ministério da Saúde', url:'https://www.gov.br/saude/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/saude/pt-br/assuntos/noticias' },
       { id:'pf',          nome:'Polícia Federal', url:'https://www.gov.br/pf/pt-br/assuntos/noticias/RSS', base:'https://www.gov.br/pf/pt-br/assuntos/noticias' },
       { id:'prf',         nome:'Polícia Rodoviária Federal', url:'https://www.gov.br/prf/pt-br/noticias/RSS', base:'https://www.gov.br/prf/pt-br/noticias' },
@@ -228,6 +288,9 @@ export const EDICOES_GERAIS = {
 };
 
 // Compartilhado por todos os estados.
+
+
+
 export const NACIONAL = [
   { id:'ab-politica', nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/politica/feed.xml' },
   { id:'ab-economia', nome:'Agência Brasil', editoria:'brasil',        url:'https://agenciabrasil.ebc.com.br/rss/economia/feed.xml' },
