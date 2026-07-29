@@ -256,6 +256,7 @@ const ITA = LING === 'it';
 const RAIZ_DADOS   = ITA ? 'dados/it'   : 'dados';
 const RAIZ_MATERIA = ITA ? 'it/materia' : 'materia';
 const URL_MATERIA  = ITA ? '/it/materia' : '/materia';
+const RAIZ_CAPA    = ITA ? '/it' : '/br';
 
 const UF = (process.env.ESTADO || (ITA ? 'italia' : 'mt')).trim().toLowerCase();
 
@@ -587,7 +588,7 @@ if (temChave()) {
       const mun = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
       await mkdir(RAIZ_MATERIA, { recursive: true });
       await writeFile(`${RAIZ_MATERIA}/`+arq, pagina(
-        { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
+        { raizCapa: RAIZ_CAPA, voltarTexto: T.ui.voltar, chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
           origemNome: i.veiculo, radar: false, checar:[],
           relacionadas: parecidos.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })) },
@@ -760,7 +761,7 @@ if (temChave() && soPautaFiltrada.length) {
           }) : null;
           await mkdir(RAIZ_MATERIA, { recursive: true });
           await writeFile(`${RAIZ_MATERIA}/` + arq, pagina(
-            { chapeu: GERAL ? GERAL.nome : E.nome,
+            { raizCapa: RAIZ_CAPA, voltarTexto: T.ui.voltar, chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
               origemNome: caca.fonte, radar: false, checar: [], contexto: ctxR,
               relacionadas: pareR.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })),
@@ -818,6 +819,7 @@ if (temChave() && soPautaFiltrada.length) {
       };
       await mkdir(RAIZ_MATERIA, { recursive: true });
       await writeFile(`${RAIZ_MATERIA}/` + arqC, pagina({
+        raizCapa: RAIZ_CAPA, voltarTexto: T.ui.voltar,
         chapeu: GERAL ? GERAL.nome : E.nome,
         titulo: n.titulo,
         linhaFina: n.aviso,

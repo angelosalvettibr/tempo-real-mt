@@ -444,7 +444,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <button id="bt-ouvir">Ouvir a matéria</button>
   </div>
 
-  <a class="voltar" href="/">← Voltar para a capa</a>
+  <a class="voltar" href="${m.raizCapa || '/br'}">${m.voltarTexto || '← Voltar para a capa'}</a>
 </article>
 <script>
 (function(){
