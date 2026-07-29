@@ -83,6 +83,22 @@ async function chamarUmaVez(prompt, ms = 35000){
 }
 
 export async function textoCompleto(url, ms = 12000){
+  // "fetch failed" e queda de rede, nao pagina inexistente: uma segunda
+  // tentativa resolve na maioria das vezes, e cada falha aqui custa uma
+  // materia inteira que ja tinha documento oficial confirmado.
+  let ultimo;
+  for (let tentativa = 0; tentativa < 2; tentativa++) {
+    try { return await textoCompletoUmaVez(url, ms); }
+    catch (e) {
+      ultimo = e;
+      if (!/fetch failed|network|ECONN|socket|timeout|aborted/i.test(String(e.message))) throw e;
+      await new Promise(r => setTimeout(r, 2500));
+    }
+  }
+  throw ultimo;
+}
+
+async function textoCompletoUmaVez(url, ms = 12000){
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), ms);
   try {
@@ -148,9 +164,12 @@ async function chamar(prompt, ms = 35000){
       ultimo = e;
       const msg = String(e.message);
 
-      if (!/HTTP 429/.test(msg)) throw e;
+      // 503 e o Gemini sobrecarregado do lado deles: passa em segundos.
+      // 500 idem. Ambos merecem a mesma paciencia do limite de velocidade.
+      const passageiro = /HTTP (429|500|503)/.test(msg);
+      if (!passageiro) throw e;
 
-      if (semCredito(msg)) {
+      if (/HTTP 429/.test(msg) && semCredito(msg)) {
         if (++seguidas >= 3) {
           carteiraVazia = true;
           console.log('     SEM CREDITO na chave Gemini — interrompendo a rodada');
@@ -158,8 +177,8 @@ async function chamar(prompt, ms = 35000){
         throw new Error('sem credito na chave Gemini');
       }
 
-      // daqui pra baixo e limite de velocidade: vale esperar
-      if (tentativa === 0) { await espera(8000); continue; }
+      // daqui pra baixo e sobrecarga ou limite de velocidade: vale esperar
+      if (tentativa === 0) { await espera(/503|500/.test(msg) ? 4000 : 8000); continue; }
       const proxima = reservas.shift();
       if (!proxima) { await espera(15000); continue; }
       console.log(`     limite de velocidade, trocando para ${proxima}`);

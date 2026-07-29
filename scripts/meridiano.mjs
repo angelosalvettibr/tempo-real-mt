@@ -589,12 +589,28 @@ if (temChave()) {
     return saida;
   }
 
+  // Teto por CIDADE, alem do teto por fonte. Sem ele, a edicao do Rio virou
+  // boletim de Volta Redonda: quatro materias da mesma prefeitura, porque
+  // vieram de veiculos de pauta diferentes e o teto por fonte nao viu. Nenhum
+  // municipio pode ocupar mais que a metade de uma edicao pequena.
+  const TETO_POR_CIDADE = Math.max(2, Math.ceil(fila.length / 4));
+
   const usos = new Map();
+  const usosCidade = new Map();
   const titulosJaFeitos = [];
 
   const filaLimpa = revezar(fila).filter(i => {
     const n = (usos.get(i.veiculo) || 0);
     if (n >= TETO_POR_FONTE) return false;
+
+    if (!GERAL) {
+      const mn = detectarMunicipio((i.titulo || '') + ' ' + (i.resumo || ''), UF);
+      if (mn) {
+        const c = usosCidade.get(mn.id) || 0;
+        if (c >= TETO_POR_CIDADE) return false;
+        usosCidade.set(mn.id, c + 1);
+      }
+    }
     // mesma historia com titulo diferente: "MT AgroFestival lanca programacao"
     // e "Prefeitura lanca programacao do AgroFestival" sao a mesma coisa
     if (titulosJaFeitos.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
@@ -604,7 +620,7 @@ if (temChave()) {
   });
 
   const cortadas = fila.length - filaLimpa.length;
-  if (cortadas) console.log(`     ${cortadas} descartadas por repeticao ou teto de ${TETO_POR_FONTE} por fonte`);
+  if (cortadas) console.log(`     ${cortadas} descartadas por repeticao, teto de ${TETO_POR_FONTE} por fonte ou ${TETO_POR_CIDADE} por cidade`);
 
   for (let k = 0; k < filaLimpa.length; k += 3) {
     await Promise.all(filaLimpa.slice(k, k+3).map(escreverUma));
