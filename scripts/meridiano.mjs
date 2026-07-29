@@ -12,6 +12,7 @@ import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCir
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
+import { OFICIAIS } from './oficiais.mjs';
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
@@ -302,7 +303,17 @@ async function porSitemap(base){
   try { return await Promise.any(tentativas); } catch { return []; }
 }
 
-const ORGAOS_DO_ESTADO = [...E.assessorias, ...E.setoriais.filter(x=>x.base)];
+// O registro de orgaos do oficiais.mjs existia so para o cacador bater na
+// porta quando um rumor precisava de documento. Era desperdicio: Prefeitura de
+// Caxias, MPMT, Defesa Civil e Corpo de Bombeiros publicam release todo dia e
+// nunca eram lidos na coleta normal. Agora a coleta e a uniao das duas listas,
+// sem repetir quem ja estava (a mesma prefeitura aparecia com dois nomes).
+const ORGAOS_DO_ESTADO = (() => {
+  const todos = [...E.assessorias, ...E.setoriais.filter(x=>x.base), ...(OFICIAIS[UF] || [])];
+  const chave = o => String(o.base || '').replace(/^https?:\/\/(www\d?\.)?/,'').replace(/\/+$/,'').toLowerCase();
+  const vistos = new Set();
+  return todos.filter(o => o.base && !vistos.has(chave(o)) && vistos.add(chave(o)));
+})();
 async function tratarOrgao(o){
   let entrou = 0;
 
@@ -346,7 +357,7 @@ for (let k = 0; k < ORGAOS_DO_ESTADO.length; k += 4) {
   await Promise.all(ORGAOS_DO_ESTADO.slice(k, k+4).map(tratarOrgao));
   if (k + 4 < ORGAOS_DO_ESTADO.length) await dormir(400);
 }
-console.log(`     ${F.itens.length} itens de fonte livre no total`);
+console.log(`     ${F.itens.length} itens de fonte livre, de ${ORGAOS_DO_ESTADO.length} orgaos`);
 }
 
 // Orgaos que recusam nosso robo mas o Google indexa. Entram como PAUTA
@@ -622,6 +633,7 @@ try {
       fonte: p.fonte, origemLink: p.origemLink || '',
       origemNome: p.origemNome || null,
       nivel: p.nivel || null, orgao: p.orgao || null,
+      municipio: p.municipio || null, municipioNome: p.municipioNome || null,
       pautadoPor: p.pautadoPor || [],
       link: p.link, iso: p.iso, dia: p.iso.slice(0,10),
       palavras: (p.corpo || []).join(' ').split(/\s+/).length
@@ -653,10 +665,16 @@ try {
   await writeFile(CAMINHO_ARQ, JSON.stringify(arquivo, null, 2), 'utf8');
 
   // indice: aponta quais meses existem, para quem for ler o historico
-  const IDX = 'dados/arquivo/indice.json';
-  let idx = { meses: {} };
+  // Um indice POR EDICAO. O indice unico era escrito pelos cinco jobs em
+  // paralelo e o ultimo apagava os outros — por isso ele listava so um estado.
+  const IDX = `dados/arquivo/indice-${UF}.json`;
+  let idx = { uf: UF, meses: [] };
   try { idx = JSON.parse(await readFile(IDX,'utf8')); } catch {}
-  idx.meses[`${UF}-${mes}`] = { uf: UF, mes, total: arquivo.total, atualizado: arquivo.atualizado };
+  if (!Array.isArray(idx.meses)) idx.meses = [];
+  const chaveMes = `${UF}-${mes}`;
+  if (!idx.meses.includes(chaveMes)) idx.meses.push(chaveMes);
+  idx.meses.sort().reverse();
+  idx.total = arquivo.total;
   idx.atualizado = new Date().toISOString();
   await writeFile(IDX, JSON.stringify(idx, null, 2), 'utf8');
 
