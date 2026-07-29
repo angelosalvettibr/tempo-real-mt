@@ -9,6 +9,8 @@
 // Enquanto o armazenamento não estiver ligado, tudo continua funcionando —
 // a função responde ok e o navegador segue guardando localmente.
 
+import { scryptSync, randomBytes, timingSafeEqual } from 'node:crypto';
+
 const URL_KV   = process.env.KV_REST_API_URL   || '';
 const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
 // Booleano de verdade. Antes devolvia o proprio token, que vazava na resposta.
@@ -33,6 +35,47 @@ const limpar = s => String(s || '').toLowerCase().trim()
 
 const hoje = () => new Date().toISOString().slice(0, 10);
 
+/* ---------------------------------------------------------- PIN ---------
+   O apelido sozinho nao prova nada: qualquer pessoa digitaria o seu. O PIN
+   de 6 digitos e o segredo que voce carrega, e substitui a senha sem virar
+   cadastro — continua sem e-mail, sem nome, sem telefone.
+
+   Nunca guardamos o numero. Guardamos scrypt(pin, sal), que e lento de
+   proposito: mesmo se o banco vazar, testar um milhao de PINs custa caro.   */
+
+const pinValido = p => /^[0-9]{6}$/.test(String(p || ''));
+
+// PIN obvio protege tanto quanto porta destrancada.
+const PIN_FRACO = new Set(['000000','111111','222222','333333','444444','555555',
+  '666666','777777','888888','999999','123456','654321','012345','543210',
+  '123123','121212','112233','101010','696969','159753','147258','789456']);
+
+const hashPin = (pin, sal) => scryptSync(String(pin), sal, 32).toString('hex');
+
+function pinConfere(pin, sal, esperado){
+  const a = Buffer.from(hashPin(pin, sal), 'hex');
+  const b = Buffer.from(String(esperado || ''), 'hex');
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+
+// Limite de tentativas: 5 a cada 15 minutos, por apelido. Sem isto, um PIN de
+// 6 digitos cai em minutos na forca bruta.
+const LIMITE = 5, JANELA = 900;
+async function tentativas(nome){
+  if (!ligado()) return 0;
+  const n = Number(await redis('INCR', `tent:${nome}`) || 0);
+  if (n === 1) await redis('EXPIRE', `tent:${nome}`, JANELA);
+  return n;
+}
+const zerarTentativas = nome => ligado() ? redis('DEL', `tent:${nome}`) : null;
+
+const lerRegistro = async nome => {
+  const cru = await redis('GET', `apelido:${nome}`);
+  if (!cru) return null;
+  try { const j = JSON.parse(cru); return j && j.h ? j : { legado:true }; }
+  catch { return { legado:true }; }   // reserva antiga, gravada antes do PIN
+};
+
 export default async function handler(req, res){
   res.setHeader('Cache-Control', 'no-store');
 
@@ -55,29 +98,51 @@ export default async function handler(req, res){
   if (typeof corpo === 'string') { try { corpo = JSON.parse(corpo); } catch { corpo = {}; } }
   const { acao } = corpo || {};
 
-  /* ---------------------------------------------- reservar apelido ------- */
+  /* ------------------------------------------- apelido: criar ou entrar --- */
   if (acao === 'apelido') {
     const nome = limpar(corpo.apelido);
+    const pin  = String(corpo.pin || '').trim();
     if (nome.length < 3) return res.status(200).json({ ok:false, msg:'Use pelo menos 3 caracteres.' });
 
     if (!ligado()) return res.status(200).json({ ok:true, apelido:nome, local:true });
 
-    // SET com NX: só grava se ainda não existir. É isso que garante que dois
-    // leitores não fiquem com o mesmo apelido.
-    const gravou = await redis('SET', `apelido:${nome}`, hoje(), 'NX');
-    if (gravou === 'OK') return res.status(200).json({ ok:true, apelido:nome });
+    const reg = await lerRegistro(nome);
 
-    // já em uso: procura variações livres
-    const sugestoes = [];
-    for (let i = 1; i <= 40 && sugestoes.length < 3; i++) {
-      const cand = `${nome}${i}`;
-      const livre = await redis('SET', `apelido:${cand}`, hoje(), 'NX');
-      if (livre === 'OK') {
-        await redis('DEL', `apelido:${cand}`);   // só checando, não reserva ainda
-        sugestoes.push(cand);
-      }
+    // --- apelido livre, ou reserva antiga sem PIN: e uma criacao ---
+    if (!reg || reg.legado) {
+      if (!pinValido(pin))
+        return res.status(200).json({ ok:false, precisaPin:'novo',
+          msg:'Escolha um PIN de 6 dígitos. É ele que vai te reconhecer em outro aparelho.' });
+      if (PIN_FRACO.has(pin))
+        return res.status(200).json({ ok:false, precisaPin:'novo',
+          msg:'Esse PIN é fácil demais de adivinhar. Escolha outro.' });
+
+      const sal = randomBytes(16).toString('hex');
+      await redis('SET', `apelido:${nome}`,
+        JSON.stringify({ s:sal, h:hashPin(pin, sal), d:hoje() }));
+      await zerarTentativas(nome);
+      return res.status(200).json({ ok:true, apelido:nome, novo:true });
     }
-    return res.status(200).json({ ok:false, msg:'Este apelido já está em uso.', sugestoes });
+
+    // --- apelido existe: precisa provar que e seu ---
+    if (!pinValido(pin))
+      return res.status(200).json({ ok:false, precisaPin:'entrar',
+        msg:'Este apelido já tem dono. Se for seu, digite o PIN de 6 dígitos.' });
+
+    const n = await tentativas(nome);
+    if (n > LIMITE)
+      return res.status(200).json({ ok:false, bloqueado:true,
+        msg:'Muitas tentativas. Espere 15 minutos e tente de novo.' });
+
+    if (!pinConfere(pin, reg.s, reg.h)) {
+      const restam = Math.max(0, LIMITE - n);
+      return res.status(200).json({ ok:false, precisaPin:'entrar',
+        msg: restam ? `PIN incorreto. Restam ${restam} ${restam === 1 ? 'tentativa' : 'tentativas'}.`
+                    : 'PIN incorreto. Espere 15 minutos.' });
+    }
+
+    await zerarTentativas(nome);
+    return res.status(200).json({ ok:true, apelido:nome, entrou:true });
   }
 
   /* ------------------------------------------------ registrar leitura ---- */
@@ -116,6 +181,7 @@ export default async function handler(req, res){
       await redis('DEL', `leitor:${nome}`);
       await redis('DEL', `apelido:${nome}`);
       await redis('DEL', `visto:${nome}`);
+      await redis('DEL', `tent:${nome}`);
     }
     return res.status(200).json({ ok:true });
   }
