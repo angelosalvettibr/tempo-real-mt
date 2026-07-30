@@ -40,6 +40,26 @@ header{border-bottom:1px solid var(--tinta)}
 .masthead h1 em{font-style:normal;font-weight:900;color:var(--rosso);letter-spacing:-.01em}
 .masthead .sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--fraco);margin-top:12px}
 
+.ultimas{border-bottom:1px solid var(--linha);background:var(--areia)}
+.ultimas .caixa{padding:13px 0 15px}
+.ultimas .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fraco);display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.ultimas .rot .regua{flex:1;height:1px;background:var(--linha2)}
+.ultimas .rot button{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;background:none;border:1px solid var(--linha2);color:var(--fraco);padding:4px 10px;cursor:pointer;flex:none;transition:.14s}
+.ultimas .rot button:hover{border-color:var(--tinta);color:var(--tinta)}
+.ultimas .rot button:disabled{opacity:.45;cursor:default}
+.ultimas .rot button.girando{color:var(--rosso);border-color:var(--rosso)}
+.ultimas .quando{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none;letter-spacing:.08em}
+.ultimas .pulso{width:6px;height:6px;border-radius:50%;background:var(--rosso);flex:none;animation:bat 2.4s ease-in-out infinite}
+@keyframes bat{0%,100%{opacity:1}50%{opacity:.25}}
+.ultimas ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 26px}
+.ultimas li{border-top:1px solid var(--linha)}
+.ultimas a{display:flex;gap:10px;padding:8px 0;text-decoration:none;color:var(--tinta);align-items:baseline}
+.ultimas a:hover{color:var(--rosso)}
+.ultimas time{font-family:var(--mono);font-size:10.5px;color:var(--fraco);flex:none;width:38px}
+.ultimas span{font-size:14px;line-height:1.34;font-weight:500}
+.ultimas em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:2px}
+@media(max-width:900px){.ultimas ol{grid-template-columns:repeat(2,1fr);gap:0 20px}}
+@media(max-width:600px){.ultimas ol{grid-template-columns:1fr}.ultimas span{font-size:14.5px}}
 nav{border-bottom:1px solid var(--tinta);background:var(--papel);position:sticky;top:0;z-index:30}
 nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;padding:0}
 nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 20px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
@@ -243,6 +263,8 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
   </div>
 </div>
 
+<div class="ultimas" id="ultimas" hidden><div class="wrap caixa"></div></div>
+
 <main class="wrap" id="conteudo">
   <p class="aviso">Carregando a edição…</p>
 </main>
@@ -357,6 +379,55 @@ function montarCidades(doEstadoTodas){
     cidade = b.dataset.c || null;
     pintar();
   }));
+}
+
+let carregadoEm = 0;
+
+const desdeQuando = () => {
+  if (!carregadoEm) return '';
+  const min = Math.round((Date.now() - carregadoEm) / 60000);
+  return min < 1 ? 'agora' : min === 1 ? 'há 1 min' : min < 60 ? `há ${min} min` : `há ${Math.round(min/60)}h`;
+};
+
+// Busca os JSON de novo na fonte, sem cache. Sem isto o botao so remontaria
+// o que ja estava na memoria — pareceria funcionar e nao traria nada novo.
+async function atualizar(){
+  const bt = document.getElementById('bt-atualizar');
+  if (bt) { bt.disabled = true; bt.classList.add('girando'); bt.textContent = 'buscando…'; }
+  try {
+    await carregar();
+  } catch {
+    if (bt) bt.textContent = 'falhou';
+  }
+  // carregar() redesenha tudo, inclusive este botao
+}
+
+// ULTIMAS — as mais recentes de TODAS as edicoes, nao so da aba aberta.
+// Fica fixa no topo: quem entra ve o que acabou de sair sem precisar
+// procurar em qual editoria caiu.
+function ultimas(){
+  const caixa = $('#ultimas');
+  const lista = [...ED.itens, ...(ED.circulando || [])]
+    .filter(i => i.titulo && i.iso && i.link)
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso))
+    .filter((i,n,a) => a.findIndex(x => x.titulo === i.titulo) === n)
+    .slice(0, 6);
+
+  if (lista.length < 3) { caixa.hidden = true; return; }
+
+  const onde = i => i.municipioNome || (i.uf && ESTADOS[i.uf]) ||
+                    (i.editoria === 'internacional' ? 'Mundo' : 'Brasil');
+
+  caixa.querySelector('.caixa').innerHTML =
+    '<div class="rot"><span class="pulso"></span>últimas<span class="regua"></span>' +
+      `<span class="quando">${esc(desdeQuando())}</span>` +
+      '<button id="bt-atualizar">atualizar</button></div>' +
+    '<ol>' + lista.map(i => `<li><a href="${esc(i.link)}">
+        <time>${esc(i.hora || '')}</time>
+        <span>${esc(i.titulo)}<em>${esc(onde(i))}</em></span>
+      </a></li>`).join('') + '</ol>';
+  caixa.hidden = false;
+  document.getElementById('bt-atualizar')?.addEventListener('click', atualizar);
 }
 
 function pintar(){
@@ -539,6 +610,8 @@ async function carregar(){
     </div>`;
     return;
   }
+  carregadoEm = Date.now();
+  ultimas();
   pintar(); pintarDescarte();
   if(ED.gerado){
     $('#quando').textContent = faz(ED.gerado);
