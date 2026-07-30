@@ -428,6 +428,9 @@ export const PAUTA_GERAL = [
   { id:'g1politica', nome:'g1 Política', editoria:'brasil',        url:'https://g1.globo.com/rss/g1/politica/' },
   { id:'g1economia', nome:'g1 Economia', editoria:'brasil',        url:'https://g1.globo.com/rss/g1/economia/' },
   { id:'g1mundo',    nome:'g1 Mundo',    editoria:'internacional', url:'https://g1.globo.com/rss/g1/mundo/' },
+  // Agencia italiana publicando em portugues, com pauta que cruza Brasil e
+  // Italia. SO PAUTA: a ANSA proibe expressamente republicacao dos feeds.
+  { id:'ansabr',     nome:'ANSA Brasil', editoria:'brasil',        url:'https://www.ansa.it/brasil/rss.xml' },
   { id:'folha',      nome:'Folha',       editoria:'brasil',        url:'https://feeds.folha.uol.com.br/emcimadahora/rss091.xml' },
   { id:'folhamundo', nome:'Folha Mundo', editoria:'internacional', url:'https://feeds.folha.uol.com.br/mundo/rss091.xml' },
   { id:'cnn',        nome:'CNN Brasil',  editoria:'brasil',        url:'https://www.cnnbrasil.com.br/feed/' },

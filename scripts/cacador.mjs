@@ -27,7 +27,7 @@ const dormir = ms => new Promise(r => setTimeout(r, ms));
 // Agora a cacada inteira tem um teto proprio, e quando ele acaba as historias
 // restantes seguem direto para nota nao confirmada — que e o destino delas de
 // qualquer forma quando nao ha documento.
-const ORCAMENTO_RODADA = 210000;   // 3min30 para toda a caca
+const ORCAMENTO_RODADA = 330000;   // 5min30 para toda a caca da rodada
 let gastoNaRodada = 0;
 export const sobrouTempoDeCaca = () => gastoNaRodada < ORCAMENTO_RODADA;
 
@@ -141,7 +141,7 @@ export async function cacarDocumento(titulo, uf, opcoes = {}){
     orcamentoMs = 75000,   // teto de tempo por história, para não travar a rodada
     horas       = 96,      // o release costuma ser anterior ao burburinho
     corte       = 0.50,    // abaixo disso não é a mesma história
-    maxOrgaos   = 8
+    maxOrgaos   = 6
   } = opcoes;
 
   const inicio = Date.now();

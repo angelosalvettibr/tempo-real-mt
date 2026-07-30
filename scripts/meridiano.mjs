@@ -666,9 +666,28 @@ if (temChave() && soPautaFiltrada.length) {
     'opiniao','analise','editorial','artigo','coluna'
   ].join('|'), 'i');
 
+  // A INVERSAO
+  //
+  // Ate aqui, so as 6 historias mais quentes tinham chance: as outras eram
+  // descartadas em silencio, sem que ninguem procurasse o documento delas.
+  // Numa rodada de MT isso significou 166 pautas relevantes mortas sem uma
+  // unica busca. Era o oposto do que o jornal promete na capa.
+  //
+  // Agora a cacada vem primeiro e alcanca muito mais: TETO_CACA historias
+  // passam pelo cacador de documento, das mais quentes para as mais frias.
+  //   achou documento  -> vira materia confirmada, com o registro a vista
+  //   nao achou        -> vira nota nao confirmada, ate TETO_NOTAS
+  //   sobrou           -> so entao e descartada
+  //
+  // Os dois tetos existem por motivos diferentes: TETO_CACA e limite de
+  // RELOGIO (o job do Actions morre aos 15 min), TETO_NOTAS e limite de
+  // DINHEIRO (cada nota custa uma chamada de Gemini).
+  const TETO_CACA  = Number(process.env.TETO_CACA  || 18);
+  const TETO_NOTAS = Number(process.env.TETO_NOTAS || 6);
+
   const escolhidas = [];
-  for (const p of soPautaFiltrada) {
-    if (escolhidas.length >= 6) break;
+  for (const p of [...soPautaFiltrada].sort((a,b) => (b.quentura||0) - (a.quentura||0))) {
+    if (escolhidas.length >= TETO_CACA) break;
     // Mesmo assunto: alem da semelhanca geral, comparamos os nomes proprios e
     // termos fortes. "Terremoto no Japao teria provocado desabamento" e a
     // mesma historia de "Terremoto atinge o sul do Japao" — o limiar geral
@@ -691,6 +710,7 @@ if (temChave() && soPautaFiltrada.length) {
   }
   const candidatas = escolhidas;
   const cortadasCirc = soPautaFiltrada.length - candidatas.length;
+  let notasEscritas = 0;
   if (cortadasCirc > 0) console.log(`     ${cortadasCirc} descartadas: ja publicadas, repetidas ou nao noticiosas`);
 
   for (const c of candidatas) {
@@ -709,7 +729,7 @@ if (temChave() && soPautaFiltrada.length) {
       // apareca — cacar aqui seria queimar o relogio do Actions a toa.
       const caca = carteiraAcabou()
         ? { achado:false, procuradoEm:[], relatorio:[], assunto:[], horas:96 }
-        : await cacarDocumento(c.titulo, GERAL ? null : UF, { orcamentoMs: 40000 });
+        : await cacarDocumento(c.titulo, GERAL ? null : UF, { orcamentoMs: 24000 });
       if (caca.achado) {
         try {
           const texto = await textoCompleto(caca.link, 12000);
@@ -749,6 +769,11 @@ if (temChave() && soPautaFiltrada.length) {
           console.log('     resgate falhou: ' + String(e.message).slice(0,44));
         }
       }
+
+      // Nao achou documento. Vira nota so enquanto houver cota — o resto
+      // sai da rodada sem custo, e volta a ser candidato na proxima.
+      if (notasEscritas >= TETO_NOTAS) continue;
+      notasEscritas++;
 
       const ondeCirculou = c.ondeCirculou || [{ veiculo:c.veiculo, titulo:c.titulo, link:c.link }];
       const n = await escreverCirculacao({
@@ -811,7 +836,7 @@ if (temChave() && soPautaFiltrada.length) {
       console.log('     circ pulou: ' + String(e.message).slice(0,52));
     }
   }
-  console.log(`\n  5. CIRCULANDO — ${candidatas.length} candidatas · ${circulando.length} notas escritas`);
+  console.log(`\n  5. CIRCULANDO — ${candidatas.length} cacadas de ${soPautaFiltrada.length} pautas · ${circulando.length} notas escritas`);
 
 // O arquivo ficava AQUI EM CIMA, antes das notas de circulacao existirem.
 // Resultado: o laco lia `circulando` antes da declaracao e estourava com
