@@ -158,42 +158,147 @@ export const ESTADOS = {
    Na duvida sobre uma licenca, marque 'integral'. O erro barato e deixar
    de publicar; o caro e reescrever quem proibiu reescrita.                */
 
+// Cada fonte carrega tres informacoes que decidem o que pode ser feito com ela:
+//
+//   esteira 1 = licenca permite adaptar. Passa pelo redator, pode ser
+//               traduzida, serve as duas linguas do jornal.
+//   esteira 2 = ND, sem derivacao. Republicacao identica, com credito.
+//               NAO pode ser traduzida — tradução é obra derivada.
+//               Portanto esteira 2 nunca alimenta o Meridiano Italia.
+//
+//   comercial: false = clausula NC. Hoje o jornal nao tem anuncio, entao
+//              tudo bem. No dia em que entrar publicidade, patrocinio ou
+//              assinatura, TODAS as fontes com comercial:false viram
+//              violacao de licenca de uma vez — inclusive o que ja esta
+//              publicado. Por isso o campo existe desde agora: para saber
+//              exatamente o que desligar naquele dia.
+
 export const ABERTAS = [
-  { id:'publica',      nome:'Agência Pública',     url:'https://apublica.org/feed/',
-    base:'https://apublica.org',            licenca:'editavel', editoria:'brasil',
-    credito:'Agência Pública' },
 
-  { id:'amazoniareal', nome:'Amazônia Real',       url:'https://amazoniareal.com.br/feed/',
-    base:'https://amazoniareal.com.br',     licenca:'integral', editoria:'brasil',
-    credito:'Amazônia Real', uf:'mt' },
+  /* ---------------- ESTEIRA 1 — pode reescrever e traduzir --------------- */
 
-  { id:'reporterbr',   nome:'Repórter Brasil',     url:'https://reporterbrasil.org.br/feed/',
-    base:'https://reporterbrasil.org.br',   licenca:'integral', editoria:'brasil',
-    credito:'Repórter Brasil' },
+  { id:'fapesp',    nome:'Agência FAPESP',   url:'https://agencia.fapesp.br/rss',
+    base:'https://agencia.fapesp.br',        esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'brasil', credito:'Agência FAPESP' },
 
-  { id:'ponte',        nome:'Ponte Jornalismo',    url:'https://ponte.org/feed/',
-    base:'https://ponte.org',               licenca:'integral', editoria:'brasil',
-    credito:'Ponte Jornalismo' },
+  // A Global Voices tem edicao em portugues propria — nao e traducao
+  // automatica, e redacao lusofona. Melhor porta de entrada da lista.
+  { id:'globalvoices-pt', nome:'Global Voices',  url:'https://pt.globalvoices.org/feed/',
+    base:'https://pt.globalvoices.org',      esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'internacional', credito:'Global Voices' },
 
-  { id:'azmina',       nome:'AzMina',              url:'https://azmina.com.br/feed/',
-    base:'https://azmina.com.br',           licenca:'integral', editoria:'brasil',
-    credito:'Revista AzMina' },
+  { id:'globalvoices-en', nome:'Global Voices (EN)', url:'https://globalvoices.org/feed/',
+    base:'https://globalvoices.org',         esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'internacional', credito:'Global Voices' },
 
-  { id:'marcozero',    nome:'Marco Zero',          url:'https://marcozero.org/feed/',
-    base:'https://marcozero.org',           licenca:'integral', editoria:'brasil',
-    credito:'Marco Zero Conteúdo' },
+  { id:'scidev',    nome:'SciDev.Net',       url:'https://www.scidev.net/global/feed/',
+    base:'https://www.scidev.net',           esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'internacional', credito:'SciDev.Net' },
 
-  { id:'catarinas',    nome:'Portal Catarinas',    url:'https://catarinas.info/feed/',
-    base:'https://catarinas.info',          licenca:'integral', editoria:'brasil',
-    credito:'Portal Catarinas' },
+  { id:'usp',       nome:'Jornal da USP',    url:'https://jornal.usp.br/feed/',
+    base:'https://jornal.usp.br',            esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'brasil', credito:'Jornal da USP' },
 
-  { id:'colabora',     nome:'#Colabora',           url:'https://projetocolabora.com.br/feed/',
-    base:'https://projetocolabora.com.br',  licenca:'integral', editoria:'brasil',
-    credito:'#Colabora' }
+  { id:'unicamp',   nome:'Unicamp',          url:'https://www.unicamp.br/unicamp/rss.xml',
+    base:'https://www.unicamp.br',           esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'brasil', credito:'Unicamp' },
+
+  { id:'unesp',     nome:'Jornal da Unesp',  url:'https://jornal.unesp.br/feed/',
+    base:'https://jornal.unesp.br',          esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY', editoria:'brasil', credito:'Jornal da Unesp' },
+
+  // Governo dos EUA: dominio publico, sem restricao. Nao e noticia pronta —
+  // e dado bruto de clima, satelite e safra, que rende pauta propria.
+  { id:'nasa',      nome:'NASA',             url:'https://www.nasa.gov/rss/dyn/breaking_news.rss',
+    base:'https://www.nasa.gov',             esteira:1, comercial:true,
+    licenca:'editavel', cc:'domínio público', editoria:'internacional', credito:'NASA' },
+
+  { id:'usgs',      nome:'USGS',             url:'https://www.usgs.gov/news/rss',
+    base:'https://www.usgs.gov',             esteira:1, comercial:true,
+    licenca:'editavel', cc:'domínio público', editoria:'internacional', credito:'USGS' },
+
+  // Volume alto, qualidade irregular: vale mais como pauta que como texto.
+  { id:'wikinews-es', nome:'Wikinoticias',   url:'https://es.wikinews.org/w/index.php?title=Especial:CanalDeNoticias&feed=rss',
+    base:'https://es.wikinews.org',          esteira:1, comercial:true,
+    licenca:'editavel', cc:'CC BY 2.5', editoria:'internacional', credito:'Wikinotícias' },
+
+  /* ---------------- ESTEIRA 2 — republicacao integral ------------------- */
+  /* Aguardam o caminho de republicacao. Nenhuma pode ser traduzida.        */
+
+  { id:'mongabay',  nome:'Mongabay',         url:'https://news.mongabay.com/feed/',
+    base:'https://news.mongabay.com',        esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-ND 4.0', editoria:'brasil', credito:'Mongabay', uf:'mt' },
+
+  { id:'bori',      nome:'Agência Bori',     url:'https://abori.com.br/feed/',
+    base:'https://abori.com.br',             esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-ND', editoria:'brasil', credito:'Agência Bori' },
+
+  { id:'groundup',  nome:'GroundUp',         url:'https://groundup.org.za/feed/',
+    base:'https://groundup.org.za',          esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-ND 4.0', editoria:'internacional', credito:'GroundUp' },
+
+  // Marcada como editavel ate hoje pelas normas de republicacao da propria
+  // Publica, que autorizam edicao leve. Se a licenca formal for ND, isso e
+  // concessao do veiculo e nao da licenca — o seguro e tratar como integral.
+  { id:'publica',   nome:'Agência Pública',  url:'https://apublica.org/feed/',
+    base:'https://apublica.org',             esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-ND 4.0', editoria:'brasil', credito:'Agência Pública' },
+
+  { id:'amazoniareal', nome:'Amazônia Real', url:'https://amazoniareal.com.br/feed/',
+    base:'https://amazoniareal.com.br',      esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-ND 4.0', editoria:'brasil', credito:'Amazônia Real', uf:'mt' },
+
+  { id:'reporterbr', nome:'Repórter Brasil', url:'https://reporterbrasil.org.br/feed/',
+    base:'https://reporterbrasil.org.br',    esteira:2, comercial:true,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'Repórter Brasil' },
+
+  /* --- NC: proibido uso comercial. Desligar se o jornal monetizar. ------ */
+
+  { id:'propublica',nome:'ProPublica',       url:'https://www.propublica.org/feeds/propublica/main',
+    base:'https://www.propublica.org',       esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND 4.0', editoria:'internacional', credito:'ProPublica' },
+
+  { id:'marshall',  nome:'The Marshall Project', url:'https://www.themarshallproject.org/rss/recent.rss',
+    base:'https://www.themarshallproject.org', esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND 4.0', editoria:'internacional', credito:'The Marshall Project' },
+
+  { id:'kff',       nome:'KFF Health News',  url:'https://kffhealthnews.org/feed/',
+    base:'https://kffhealthnews.org',        esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND 4.0', editoria:'internacional', credito:'KFF Health News' },
+
+  { id:'e360',      nome:'Yale Environment 360', url:'https://e360.yale.edu/feed.rss',
+    base:'https://e360.yale.edu',            esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'internacional', credito:'Yale Environment 360' },
+
+  { id:'restofworld', nome:'Rest of World',  url:'https://restofworld.org/feed/latest',
+    base:'https://restofworld.org',          esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'internacional', credito:'Rest of World' },
+
+  { id:'ponte',     nome:'Ponte Jornalismo', url:'https://ponte.org/feed/',
+    base:'https://ponte.org',                esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'Ponte Jornalismo' },
+
+  { id:'azmina',    nome:'AzMina',           url:'https://azmina.com.br/feed/',
+    base:'https://azmina.com.br',            esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'Revista AzMina' },
+
+  { id:'marcozero', nome:'Marco Zero',       url:'https://marcozero.org/feed/',
+    base:'https://marcozero.org',            esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'Marco Zero Conteúdo' },
+
+  { id:'catarinas', nome:'Portal Catarinas', url:'https://catarinas.info/feed/',
+    base:'https://catarinas.info',           esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'Portal Catarinas' },
+
+  { id:'colabora',  nome:'#Colabora',        url:'https://projetocolabora.com.br/feed/',
+    base:'https://projetocolabora.com.br',   esteira:2, comercial:false,
+    licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'#Colabora' }
 ];
 
-export const ABERTAS_EDITAVEIS = ABERTAS.filter(f => f.licenca === 'editavel');
-export const ABERTAS_INTEGRAIS = ABERTAS.filter(f => f.licenca === 'integral');
+export const ABERTAS_EDITAVEIS = ABERTAS.filter(f => f.esteira === 1);
+export const ABERTAS_INTEGRAIS = ABERTAS.filter(f => f.esteira === 2);
+// As que morrem no dia em que o jornal tiver anuncio.
+export const ABERTAS_SO_SEM_ANUNCIO = ABERTAS.filter(f => !f.comercial);
 
 export const EDICOES_GERAIS = {
   br: {
