@@ -1,27 +1,45 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-07-30T13:11:26.120Z",
+  "gerado": "2026-07-30T16:09:51.034Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 188,
-    "fonteLivre": 29,
-    "confirmadas": 5,
-    "publicadas": 5,
-    "resgatadas": 0,
-    "semFonte": 164
+    "pauta": 193,
+    "fonteLivre": 36,
+    "confirmadas": 8,
+    "publicadas": 4,
+    "resgatadas": 1,
+    "semFonte": 167
   },
   "fontes": {
     "checadas": 51,
     "responderam": 23,
     "entregando": 21,
-    "itens": 217,
+    "itens": 229,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
         "itens": 14,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
+        "itens": 13,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "estadaomt",
+        "nome": "Estadão MT",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -73,6 +91,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-mt-varzeagran",
+        "nome": "Várzea Grande",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-mt-cuiaba",
         "nome": "Cuiabá",
         "itens": 12,
@@ -82,8 +109,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-varzeagran",
-        "nome": "Várzea Grande",
+        "id": "gn-mt-sinop",
+        "nome": "Sinop",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -109,15 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-sinop",
-        "nome": "Sinop",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-mt-rondonopol",
         "nome": "Rondonópolis",
         "itens": 11,
@@ -127,8 +145,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "estadaomt",
-        "nome": "Estadão MT",
+        "id": "olivre",
+        "nome": "O Livre",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -163,27 +181,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "sonoticias",
         "nome": "Só Notícias",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 6,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -289,8 +289,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sesp-mt",
-        "nome": "Sesp-MT",
+        "id": "pjc-mt",
+        "nome": "Polícia Judiciária Civil de MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +298,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pjc-mt",
-        "nome": "Polícia Judiciária Civil de MT",
+        "id": "sesp-mt",
+        "nome": "Sesp-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -424,15 +424,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "rondonopolis",
-        "nome": "Prefeitura de Rondonópolis",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "sorriso",
         "nome": "Prefeitura de Sorriso",
         "itens": 0,
@@ -442,8 +433,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-cba",
-        "nome": "Câmara de Cuiabá",
+        "id": "rondonopolis",
+        "nome": "Prefeitura de Rondonópolis",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -453,6 +444,15 @@
         "tipo": "assessoria",
         "id": "camara-vg",
         "nome": "Câmara de Várzea Grande",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-cba",
+        "nome": "Câmara de Cuiabá",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,58 +496,31 @@
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-e-corpo-de-bombeiros-lancam-campanha-de-combate-a-queimadas",
+      "id": "ilm:cuiaba-e-corpo-de-bombeiros-iniciam-operacao-de-combate-a-queimadas",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Cuiabá e Corpo de Bombeiros lançam campanha de combate a queimadas",
-      "resumo": "Ação integrada iniciou a fase operacional com reforço de efetivo e caminhões-pipa para conter incêndios urbanos e rurais no período de seca.",
+      "titulo": "Cuiabá e Corpo de Bombeiros iniciam operação de combate a queimadas",
+      "resumo": "A iniciativa prevê o dobramento do efetivo com atividade delegada e o uso de caminhões pipa no combate a incêndios urbanos e rurais no município.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-e-corpo-de-bombeiros-lancam-operacao-integrada-de-combate-as-queimadas",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
+        "Agora MT",
+        "CenárioMT",
         "Prefeitura de Cuiabá",
-        "LOCAL MT",
-        "olivre.com.br"
+        "MINUTO MT"
       ],
-      "quentura": 12,
+      "quentura": 13,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá e o Corpo de Bombeiros Militar de Mato Grosso lançaram nesta quarta-feira (29), na Praça Alencastro, a campanha \"Juntos por uma Cuiabá Sem Queimadas\". A iniciativa marca o início da fase operacional da ação integrada de prevenção e combate às queimadas urbanas e aos incêndios florestais no município.",
-        "A mobilização reúne a Defesa Civil Municipal, o Corpo de Bombeiros, a Secretaria Municipal de Obras Públicas, a Limpurb e a Secretaria Municipal de Ordem Pública (Sorp). O prefeito Abilio Brunini afirmou que a Prefeitura vai dobrar o efetivo por meio da atividade delegada e orientou a população a denunciar focos de incêndio pelos canais da Prefeitura, Defesa Civil, Polícia Militar e Corpo de Bombeiros.",
-        "De acordo com o secretário municipal de Defesa Civil, coronel Alessandro Borges Ferreira, a campanha é desenvolvida durante todo o ano e entra na fase de combate direto devido ao período mais crítico da seca. A estrutura conta com reforço de pessoal, caminhões-pipa e equipamentos para auxílio em ocorrências urbanas e rurais.",
-        "O comandante-geral do Corpo de Bombeiros Militar de Mato Grosso, coronel Glêdson Vieira Bezerra, reforçou que o uso do fogo está proibido nesta época. O descumprimento da norma pode gerar multa e responsabilização por crime ambiental."
+        "A Prefeitura de Cuiabá e o Corpo de Bombeiros Militar de Mato Grosso lançaram, nesta quarta-feira (29), na Praça Alencastro, a campanha \"Juntos por uma Cuiabá Sem Queimadas\". A ação marca o início da fase operacional do trabalho integrado de prevenção e combate a queimadas urbanas e incêndios florestais no município.",
+        "A iniciativa reúne a Defesa Civil Municipal, o Corpo de Bombeiros, a Secretaria Municipal de Obras Públicas, a Limpurb e a Secretaria Municipal de Ordem Pública (Sorp). Durante o lançamento, o prefeito Abilio Brunini informou que o município vai dobrar o efetivo por meio da atividade delegada e ressaltou a necessidade de a população denunciar os focos de incêndio.",
+        "O secretário municipal de Defesa Civil, coronel Alessandro Borges Ferreira, explicou que a campanha é desenvolvida ao longo de todo o ano e atinge agora a etapa de combate direto no período mais crítico da seca. A estrutura mobilizada inclui reforço de pessoal, caminhões pipa e equipamentos para atendimento a ocorrências urbanas e rurais.",
+        "O comandante-geral do Corpo de Bombeiros Militar de Mato Grosso, coronel Glêdson Vieira Bezerra, afirmou que o uso do fogo está proibido no período. Quem descumprir a regra poderá responder por crime ambiental e ser multado."
       ],
-      "link": "/materia/cuiaba-e-corpo-de-bombeiros-lancam-campanha-de-combate-a-queimadas.html",
-      "iso": "2026-07-30T13:01:44.830Z",
-      "hora": "09h01",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governo-de-mato-grosso-suspende-veiculacao-de-noticias-institucionais",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Governo de Mato Grosso suspende veiculação de notícias institucionais",
-      "resumo": "A medida cumpre restrições da Lei das Eleições e abrange fotografias, conteúdos audiovisuais e redes sociais do Estado.",
-      "fonte": "Meridiano, com informações de Sema-MT",
-      "origemLink": "https://www.sema.mt.gov.br/site/index.php/component/banners/click/1955",
-      "origemNome": "Sema-MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "O Governo de Mato Grosso suspendeu, desde sábado (4.7), a exibição de notícias institucionais no Portal do Governo, além de todo o conteúdo de fotografias e produções audiovisuais. A restrição aplica-se também às redes sociais do Estado.",
-        "A medida cumpre as determinações do artigo 73 da Lei Federal nº 9.504/1997 (Lei das Eleições), norma que disciplina a publicidade institucional nos três meses que antecedem o pleito.",
-        "Durante este período, serão veiculados apenas conteúdos de relevância ou de utilidade pública. A Secretaria de Estado de Meio Ambiente (Sema) seguirá com seu papel de atender à imprensa e fornecer informações."
-      ],
-      "link": "/materia/governo-de-mato-grosso-suspende-veiculacao-de-noticias-institucionais.html",
-      "iso": "2026-07-30T13:01:38.493Z",
-      "hora": "09h01",
+      "link": "/materia/cuiaba-e-corpo-de-bombeiros-iniciam-operacao-de-combate-a-queimadas.html",
+      "iso": "2026-07-30T16:00:08.118Z",
+      "hora": "12h00",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -556,92 +529,129 @@
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:abilio-brunini-afirma-que-incendio-em-placas-solares-no-pedra-90-foi-c",
+      "id": "ilm:abilio-brunini-afirma-que-incendio-perto-de-policlinica-foi-criminoso",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Abilio Brunini afirma que incêndio em placas solares no Pedra 90 foi criminoso",
-      "resumo": "A Polícia Civil foi acionada para identificar o responsável pelas chamas que atingiram a área ao lado da unidade de saúde na terça-feira (21).",
+      "titulo": "Abilio Brunini afirma que incêndio perto de policlínica foi criminoso",
+      "resumo": "A Polícia Civil foi acionada para identificar o responsável pelo fogo que atingiu área de placas solares desativadas na noite da última terça-feira (21).",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeito-pede-identificacao-de-autor-de-incendio-que-atingiu-placas-solares-e-reforca-combate-as-queimadas",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
+        "Agora MT",
         "Canal Solar",
-        "Prefeitura de Cuiabá",
-        "LOCAL MT"
+        "MINUTO MT",
+        "MOMENTO MT"
       ],
-      "quentura": 10,
+      "quentura": 11,
       "uf": "mt",
       "corpo": [
-        "O prefeito de Cuiabá, Abilio Brunini, afirmou nesta quarta-feira (29) que o incêndio registrado na área onde estão instaladas placas de energia solar desativadas, ao lado da Policlínica do Pedra 90, foi provocado de forma criminosa. A investigação preliminar da Prefeitura aponta que uma pessoa entrou no local e ateou fogo propositalmente.",
-        "O episódio ocorreu na noite da última terça-feira (21) em uma área de aproximadamente 20 mil metros quadrados. As chamas foram controladas pelo Corpo de Bombeiros sem provocar vítimas, danos estruturais ou interrupção nos atendimentos da Policlínica do Pedra 90, que permaneceu em funcionamento e havia passado por limpeza preventiva semanas antes.",
-        "A declaração foi feita durante o lançamento da campanha “Juntos por uma Cuiabá Sem Queimadas”, na Praça Alencastro, realizada em parceria com o Corpo de Bombeiros Militar e a Defesa Civil. Imagens da ocorrência foram reunidas e encaminhadas para a Polícia Civil para a identificação do autor.",
-        "Abilio solicitou que um vereador que registrou imagens do local compareça à delegacia para prestar esclarecimentos como testemunha. O prefeito reforçou ainda que a atuação integrada entre a Prefeitura, o Corpo de Bombeiros e a Defesa Civil tem reduzido os impactos das queimadas urbanas na Capital."
+        "O prefeito de Cuiabá, Abilio Brunini, afirmou nesta quarta-feira (29) que o incêndio ocorrido em uma área de placas de energia solar desativadas, ao lado da Policlínica do Pedra 90, foi provocado intencionalmente. A declaração foi feita durante o lançamento da campanha “Juntos por uma Cuiabá Sem Queimadas”, na Praça Alencastro, em parceria com o Corpo de Bombeiros Militar e a Defesa Civil.",
+        "Segundo a investigação preliminar da Prefeitura, uma pessoa entrou no local, ateou fogo de forma proposital e espalhou as chamas. O prefeito informou que as informações foram encaminhadas para a Polícia Civil e pediu a colaboração da população para identificar o autor do ato. Imagens do episódio foram reunidas para auxiliar na apuração.",
+        "Abilio Brunini também solicitou que um vereador, que esteve no local e gravou imagens da ocorrência, compareça à delegacia para prestar esclarecimentos como testemunha caso tenha identificado o responsável.",
+        "O incêndio ocorreu na noite da última terça-feira (21), em uma área de aproximadamente 20 mil metros quadrados. As chamas foram controladas pelo Corpo de Bombeiros sem deixar vítimas, causar danos estruturais ou interromper os atendimentos na unidade de saúde, que havia passado por limpeza preventiva semanas antes."
       ],
-      "link": "/materia/abilio-brunini-afirma-que-incendio-em-placas-solares-no-pedra-90-foi-c.html",
-      "iso": "2026-07-30T13:01:44.830Z",
-      "hora": "09h01",
+      "link": "/materia/abilio-brunini-afirma-que-incendio-perto-de-policlinica-foi-criminoso.html",
+      "iso": "2026-07-30T16:00:08.118Z",
+      "hora": "12h00",
       "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:sistemas-siga-sisflora-e-simcar-estao-fora-do-ar-por-problemas-tecnico",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Sistemas SIGA, SISFLORA e SIMCAR estão fora do ar por problemas técnicos",
-      "resumo": "A Sema-MT informou que ainda não há previsão para o retorno dos serviços e que atua para solucionar a falha.",
-      "fonte": "Meridiano, com informações de Sema-MT",
-      "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
-      "origemNome": "Sema-MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "O sistema SIGA está fora do ar em razão de problemas técnicos, o que causa impacto direto no funcionamento dos sistemas SISFLORA e SIMCAR. A informação foi confirmada pela Secretaria de Estado de Meio Ambiente (Sema-MT).",
-        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema técnico.",
-        "Até o momento, não há previsão para o retorno dos serviços afetados.",
-        "A Sema-MT informou que fará nova divulgação em seus canais oficiais assim que a situação voltar à normalidade."
-      ],
-      "link": "/materia/sistemas-siga-sisflora-e-simcar-estao-fora-do-ar-por-problemas-tecnico.html",
-      "iso": "2026-07-30T13:01:38.493Z",
-      "hora": "09h01",
-      "original": true,
-      "contexto": null,
+      "contexto": "O incêndio atingiu uma área de 20 mil metros quadrados ao lado da Policlínica do Pedra 90. A ocorrência não deixou vítimas, não provocou danos estruturais e não interrompeu os atendimentos na unidade de saúde.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-em-172-unidades-d",
+      "id": "ilm:prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-em-172-unidades-e",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Cuiabá lança programa Beabá do Sorriso em 172 unidades de ensino",
-      "resumo": "A iniciativa prevê escovação supervisionada, aplicação de flúor e atendimento odontológico para estudantes de Centros Municipais de Educação Infantil e Escolas Municipais de Educação Básica.",
+      "titulo": "Prefeitura de Cuiabá lança programa Beabá do Sorriso em 172 unidades escolares",
+      "resumo": "A iniciativa levará ações permanentes de prevenção e acompanhamento odontológico executadas pelas Equipes de Saúde Bucal da Estratégia Saúde da Família a CMEIs e EMEBs.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-para-fortalecer-a-saude-bucal-nas-escolas-municipais",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
         "Prefeitura de Cuiabá",
+        "MINUTO MT",
+        "MOMENTO MT",
         "LOCAL MT"
       ],
-      "quentura": 7,
+      "quentura": 9,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá, por meio das secretarias municipais de Saúde e de Educação, lançou na quarta-feira (29) o programa Beabá do Sorriso. A iniciativa é voltada ao fortalecimento de ações de promoção, prevenção e cuidado com a saúde bucal dos estudantes da rede municipal de ensino.",
-        "A execução do programa será realizada pelas Equipes de Saúde Bucal da Estratégia Saúde da Família (ESF) nas 172 unidades da rede, compostas por Centros Municipais de Educação Infantil (CMEIs) e Escolas Municipais de Educação Básica (EMEBs). As atividades incluem orientação educativa, escovação supervisionada, aplicação tópica de flúor, avaliação odontológica e encaminhamento para Unidades Básicas de Saúde (UBSs). As unidades escolares terão espaço exclusivo para armazenamento dos kits de higiene bucal.",
-        "O projeto contou com o acompanhamento da primeira-dama Samantha Iris e é coordenado pela secretária adjunta de Saúde Bucal, Cristhiane Leite. Os profissionais envolvidos nas atividades passaram por capacitação específica e receberão treinamentos periódicos para a continuidade das ações ao longo do ano letivo.",
-        "O lançamento contou com a presença do prefeito Abilio Brunini, da secretária municipal de Saúde, Deisi Bocalon, e do secretário municipal de Educação, Reginaldo Teixeira. Também estiveram presentes os secretários adjuntos Odair Mendonça, Najla Brito e Érika Carvalho, além de cirurgiões-dentistas da Atenção Primária à Saúde, gestores, diretores e representantes das unidades escolares."
+        "A Prefeitura de Cuiabá lançou oficialmente, na quarta-feira (29), o programa Beabá do Sorriso. Desenvolvida pelas secretarias municipais de Saúde e Educação, a iniciativa visa fortalecer a promoção, a prevenção e o cuidado com a saúde bucal dos estudantes da rede municipal de ensino.",
+        "O programa será executado pelas Equipes de Saúde Bucal da Estratégia Saúde da Família (ESF) e atenderá 172 unidades educacionais, entre Centros Municipais de Educação Infantil (CMEIs) e Escolas Municipais de Educação Básica (EMEBs), com acompanhamento contínuo ao longo do ano letivo.",
+        "Entre as medidas previstas estão escovação supervisionada, aplicação tópica de flúor, avaliação odontológica e encaminhamento para atendimento nas Unidades Básicas de Saúde (UBSs), quando necessário. As unidades de ensino disporão de espaço exclusivo para o armazenamento dos kits de higiene bucal, e os profissionais envolvidos passarão por treinamentos periódicos.",
+        "O evento de lançamento teve a participação do prefeito Abilio Brunini, da primeira-dama Samantha Iris, da secretária de Saúde, Deisi Bocalon, do secretário de Educação, Reginaldo Teixeira, e da secretária adjunta de Saúde Bucal, Cristhiane Leite. Também estiveram presentes os secretários adjuntos Odair Mendonça, Najla Brito e Érika Carvalho."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-em-172-unidades-d.html",
-      "iso": "2026-07-30T13:01:44.830Z",
-      "hora": "09h01",
+      "link": "/materia/prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-em-172-unidades-e.html",
+      "iso": "2026-07-30T16:00:08.118Z",
+      "hora": "12h00",
       "original": true,
       "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:cuiaba-tera-onibus-gratuitos-para-o-agrofestival-e-preve-linha-permane",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Cuiabá terá ônibus gratuitos para o AgroFestival e prevê linha permanente",
+      "resumo": "Os ônibus partirão do Shopping Pantanal entre os dias 7 e 9 de agosto, e o município trabalha para implantar uma rota fixa aos sábados e domingos para o Parque Novo Mato Grosso.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-garante-transporte-gratuito-para-o-mato-grosso-agrofestival-e-anuncia-linha-permanente-para-o-parque-novo-mato-grosso",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "O Documento",
+        "Muvuca Popular",
+        "O Bom da Notícia",
+        "Notícia Max"
+      ],
+      "quentura": 5,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá disponibilizará transporte coletivo gratuito para o público do Mato Grosso AgroFestival, realizado entre os dias 7 e 9 de agosto no Parque Novo Mato Grosso. Os ônibus partirão do Shopping Pantanal com partidas a cada 30 minutos nos horários de maior movimento e a cada uma hora nos demais períodos.",
+        "Segundo o prefeito Abilio Brunini, o município também trabalha para implantar uma linha gratuita permanente aos sábados e domingos com destino ao Parque Novo Mato Grosso, dependendo da conclusão de obras de infraestrutura no entorno. A secretária municipal de Mobilidade Urbana, Francyanne Siqueira, afirmou que a medida atende trabalhadores e visitantes que buscam acessar o complexo.",
+        "O evento terá entrada gratuita na pista e shows de Cezar & Paulinho, João Bosco & Vinícius, George Henrique & Rodrigo, Di Paullo & Paulino e Bison & Comasseto. A programação contempla uma etapa internacional da Professional Bull Riders (PBR), atrações da cultura popular, gastronomia regional, ações do agronegócio e espaço inclusivo para pessoas com deficiência e neurodivergentes.",
+        "O encerramento do festival terá uma edição da Festa de São Cristóvão, com procissão motorizada, bênção dos veículos e missa campal. O Mato Grosso AgroFestival é promovido pela Prefeitura de Cuiabá, por meio da Secretaria Municipal de Cultura, em parceria com o Governo de Mato Grosso, pela Secretaria de Estado de Cultura, Esporte e Lazer (Secel), Instituto Cordemato e Ministério do Esporte, com recursos de emendas parlamentares."
+      ],
+      "link": "/materia/cuiaba-tera-onibus-gratuitos-para-o-agrofestival-e-preve-linha-permane.html",
+      "iso": "2026-07-30T16:00:08.118Z",
+      "hora": "12h00",
+      "original": true,
+      "contexto": "A medida atende os trabalhadores e visitantes que buscam acessar o Parque Novo Mato Grosso. O Mato Grosso AgroFestival ocorre entre os dias 7 e 9 de agosto, e a implantação da linha de ônibus permanente aos fins de semana depende da conclusão de obras de infraestrutura no entorno.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:policia-federal-deflagra-operacao-contra-abuso-sexual-infantojuvenil",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Polícia Federal deflagra operação contra abuso sexual infantojuvenil",
+      "resumo": "A Operação Purus Servatus Fase VII cumpriu seis mandados de busca e apreensão em cinco municípios do Rio Grande do Sul e apreendeu celulares e HDs.",
+      "fonte": "Meridiano, com informacoes de Polícia Federal",
+      "origemLink": "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/07/pf-deflagra-operacao-de-combate-ao-abuso-sexual-infantojuvenil",
+      "origemNome": "Polícia Federal",
+      "pautadoPor": [
+        "O Documento",
+        "CenárioMT"
+      ],
+      "quentura": 2,
+      "uf": "mt",
+      "corpo": [
+        "A Polícia Federal deflagrou, nesta quinta-feira (30/7), a Operação Purus Servatus Fase VII para combater o armazenamento e a distribuição de imagens e vídeos contendo cenas de abuso sexual infantojuvenil. A ação cumpriu seis mandados de busca e apreensão nos municípios sul-rio-grandenses de Porto Alegre, Canoas, Cachoeirinha, Gravataí e Osório.",
+        "As investigações buscam apurar o possível envolvimento dos investigados em atividades criminosas ligadas à exploração sexual de crianças e adolescentes. Durante a operação, foram apreendidos dispositivos eletrônicos, incluindo HDs e aparelhos celulares, que serão submetidos à análise pericial.",
+        "A Polícia Federal informou que a comunidade internacional adota preferencialmente os termos abuso ou violência sexual contra crianças e adolescentes em vez da expressão pornografia, que consta no Estatuto da Criança e do Adolescente. A instituição orientou pais e responsáveis a acompanhar o uso da internet pelos menores e manter diálogo sobre segurança digital para comunicação de situações suspeitas."
+      ],
+      "link": "/materia/policia-federal-deflagra-operacao-contra-abuso-sexual-infantojuvenil.html",
+      "iso": "2026-07-30T16:03:31.484Z",
+      "hora": "12h03",
+      "original": true,
+      "resgatada": true,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -651,301 +661,360 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto é noticiado por seis veículos de imprensa.",
-        "Que os textos divergem entre si sobre valores e número de estados atingidos.",
-        "Que a sigla GCCO é citada nas matérias como órgão envolvido."
+        "Que o assunto está sendo publicado por dois veículos da imprensa.",
+        "Que as matérias tratam da convenção do União Brasil.",
+        "Que os políticos Júlio e Jayme Campos são mencionados."
       ],
       "falta": [
-        "Pronunciamento oficial das forças de segurança confirmando a operação.",
-        "Identificação formal do número de mandados e de pessoas detidas.",
-        "Balanço consolidado dos bens e valores efetivamente bloqueados.",
-        "Informação sobre o número dos autos ou nome oficial da investigação."
+        "Posicionamento ou nota oficial do partido União Brasil sobre os fatos.",
+        "Identificação e manifestação oficial do assessor de senador citado.",
+        "Confirmação em fonte oficial sobre o resultado da convenção.",
+        "Registro formal sobre as alegadas filmagens e constrangimentos."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "VG Notícias",
-          "titulo": "Operação mira patrimônio de R$ 17,2 milhões de facção com atuação em MT",
-          "link": "https://www.vgnoticias.com.br/policia/operacao-mira-patrimonio-de-r-172-milhoes-de-faccao-com-atuacao-em-mt/149710"
+          "veiculo": "O Documento",
+          "titulo": "Júlio prevê vitória apertada de Jayme Campos e convenção \"tumultuada\" no União Brasil",
+          "link": "https://odocumento.com.br/julio-projeta-vitoria-apertada-de-jayme-e-preve-convencao-tumultuada-no-uniao-brasil/"
         },
         {
-          "veiculo": "Estadão MT",
-          "titulo": "GCCO mira núcleo financeiro de facção criminosa que movimentou mais de R$ 17 milhões",
-          "link": "https://www.estadaomatogrosso.com.br/policia/gcco-mira-nucleo-financeiro-de-faccao-criminosa-que-movimentou-mais-de-r-17-milhoes/142986"
-        },
+          "veiculo": "O Livre",
+          "titulo": "Assessor de senador filma e constrange convencionais do União Brasil",
+          "link": "https://olivre.com.br/assessor-de-senador-filma-e-constrange-convencionais-do-uniao-brasil/"
+        }
+      ],
+      "link": "/materia/nc-convencao-do-uniao-brasil-teria-tensao-e-constrangimento-de-convencion.html",
+      "corpo": [
+        "Relatos veiculados pela imprensa indicam que a convenção do União Brasil estaria marcada por disputas internas. Segundo as publicações, Júlio teria previsto uma vitória apertada de Jayme Campos e uma convenção tumultuada.",
+        "Outra alegação aponta que um assessor de senador teria filmado e constrangido convencionais da agremiação. O episódio estaria associado às movimentações ocorridas dentro do partido.",
+        "As publicações tratam de ângulos diferentes sobre o ambiente na sigla. Enquanto uma aborda a previsão de resultado do evento, a outra relata condutas ocorridas entre os participantes."
+      ],
+      "id": "circ:convencao-do-uniao-brasil-teria-tensao-e-constrangimento-de-convencion",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Convenção do União Brasil teria tensão e constrangimento de convencionais",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-30T16:04:35.785Z",
+      "hora": "12h04"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que três veículos de imprensa veicularam informações sobre uma operação policial em Mato Grosso.",
+        "Que as publicações atribuem a realização da ação à Polícia Civil e à Draco.",
+        "Que as notícias apontam como foco investigativo o núcleo financeiro de uma facção."
+      ],
+      "falta": [
+        "Confirmação oficial da Polícia Civil ou da Draco sobre a deflagração da operação.",
+        "Balanço oficial que confirme o número exato de presos e de alvos.",
+        "Identificação oficial das pessoas citadas pelas publicações.",
+        "Manifestação formal das defesas dos alvos mencionados."
+      ],
+      "ondeCirculou": [
         {
-          "veiculo": "Muvuca Popular",
-          "titulo": "Polícia mira comando de facção e patrimônio de R$ 17 milhões em cinco cidades",
-          "link": "https://www.muvucapopular.com.br/2026/07/30/policia-mira-comando-de-faccao-e-patrimonio-de-r-17-milhoes-em-cinco-cidades/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=policia-mira-comando-de-faccao-e-patrimonio-de-r-17-milhoes-em-cinco-cidades"
+          "veiculo": "g1 MT",
+          "titulo": "Advogada e 2 jogadores de futebol são presos em operação contra núcleo financeiro do Comando Vermelho em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/30/advogada-e-2-jogadores-de-futebol-sao-presos-em-operacao-contra-nucleo-financeiro-de-faccao-em-mt.ghtml"
         },
         {
           "veiculo": "O Documento",
-          "titulo": "Operação prende 10 e mira R$ 32,6 milhões de facção atuante em Mato Grosso e mais dois estados",
-          "link": "https://odocumento.com.br/operacao-prende-10-e-mira-r-32-6-milhoes-de-faccao-atuante-em-mato-grosso-e-mais-dois-estados/"
+          "titulo": "Advogada e assessor de vereador estão entre os alvos da PC contra núcleo financeiro do CV",
+          "link": "https://odocumento.com.br/advogada-e-assessor-de-vereador-estao-entre-os-alvos-da-pc-contra-financeiro-do-cv/"
         },
         {
-          "veiculo": "g1 MT",
-          "titulo": "Operação contra facção bloqueia R$ 32 milhões e cumpre prisões em MT e outros 2 estados",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/30/operacao-contra-faccao-bloqueia-r-32-milhoes-e-cumpre-prisoes-em-mt-e-outros-2-estados.ghtml"
-        },
-        {
-          "veiculo": "Primeira Página",
-          "titulo": "Operação prende 10 e mira R$ 32,6 milhões de grupo criminoso",
-          "link": "https://primeirapagina.com.br/seguranca/operacao-prende-10-e-mira-r-326-milhoes-de-grupo-criminoso/"
+          "veiculo": "CenárioMT",
+          "titulo": "Operação Replay: apontado como tesoureiro do Comando Vermelho e advogada são alvos de nova fase da Draco em MT",
+          "link": "https://cenariomt.com.br/mato-grosso/cuiaba/operacao-replay-apontado-como-tesoureiro-do-comando-vermelho-e-advogada-sao-alvos-de-nova-fase-da-draco-em-mt/"
         }
       ],
-      "link": "/materia/nc-policia-realizaria-operacao-contra-faccao-e-patrimonio-milionario-em-m.html",
+      "link": "/materia/nc-operacao-em-mt-teria-alvos-ligados-ao-nucleo-financeiro-do-comando-ver.html",
       "corpo": [
-        "Uma operação policial estaria em andamento para atingir o núcleo financeiro e a liderança de uma facção criminosa. As ações visariam o bloqueio de ativos financeiros e o cumprimento de mandados de prisão.",
-        "As notícias publicadas divergem quanto aos valores envolvidos e à abrangência territorial das medidas. Parte das publicações menciona o bloqueio de R$ 17 milhões a R$ 17,2 milhões em cinco cidades de Mato Grosso, citando atuação do GCCO. Outros veículos relatam a prisão de 10 pessoas e alvo de R$ 32 milhões a R$ 32,6 milhões em Mato Grosso e mais dois estados.",
-        "As ordens judiciais abrangeriam o sequestro de bens e o combate à estrutura patrimonial do grupo. O foco das apurações estaria em desarticular a movimentação financeira de organizações com atuação regional."
+        "Uma operação policial em Mato Grosso teria como alvo o núcleo financeiro da facção Comando Vermelho. Entre os investigados estariam uma advogada e um suspeito apontado como tesoureiro do grupo.",
+        "A ação, denominada Operação Replay, estaria sendo conduzida pela Polícia Civil de Mato Grosso por meio da Draco. As publicações apresentam variações sobre os alvos citados, incluindo também dois jogadores de futebol e um assessor de vereador.",
+        "Um dos veículos teria noticiado a prisão efetiva de investigados, enquanto outros citaram os suspeitos apenas como alvos da apuração. A apuração abordaria a estrutura financeira mantida pela organização criminosa no estado."
       ],
-      "id": "circ:policia-realizaria-operacao-contra-faccao-e-patrimonio-milionario-em-m",
+      "id": "circ:operacao-em-mt-teria-alvos-ligados-ao-nucleo-financeiro-do-comando-ver",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Polícia realizaria operação contra facção e patrimônio milionário em MT",
+      "titulo": "Operação em MT teria alvos ligados ao núcleo financeiro do Comando Vermelho",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-30T13:04:18.142Z",
-      "hora": "09h04"
+      "iso": "2026-07-30T16:05:03.527Z",
+      "hora": "12h05"
     },
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
       "seSabe": [
-        "Tres veiculos publicaram informacoes sobre decisoes das prefeituras de Rondonopolis e Cuiaba.",
-        "Os relatos tratam de cursos, selecao de professores e aquisicao de insumo municipal."
+        "O assunto está sendo publicado por três veículos de imprensa.",
+        "As matérias tratam de auxílio para aquisição do primeiro imóvel.",
+        "O município de Cuiabá é citado em parte das publicações.",
+        "O montante de R$ 17 milhões aparece em uma das matérias."
       ],
       "falta": [
-        "Confirmacao oficial das prefeituras de Rondonopolis e Cuiaba sobre os procedimentos.",
-        "Publicacao de editais com prazos, vagas e valores dos atos administrativos.",
-        "Documentacao oficial referente a dispensa de licitacao e abertura de inscricoes."
+        "Manifestação oficial do órgão responsável pelo suposto programa.",
+        "Detalhamento sobre critérios de seleção e regras do benefício.",
+        "Confirmação oficial sobre o valor do orçamento previsto.",
+        "Cronograma contendo as datas de lançamento e atendimento."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Ache Concursos",
-          "titulo": "Prefeitura de Rondonópolis-MT abre seleção para professores",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZ3R2Q2hzUHFQRTJ4RmFsVjFPd3JMcmp0eUdGc0hkSmtycGFvU0pIck5UZ05HQTZqdW0wRl8tN2FZOWtzTVlzaFpoRHNQUDlxSjZ6S2pUeGFBdGowWXgtSTBiUmRPdkZxc2RBYUFrbGxybEZJU1pSTmpOQmswWFdOUERaRmRFWVo1bzJfbDBfRDItZjBVcUlyMmhPdUU2c1NWTE5OWUpjTXFwOXNvLS1kX2tGV1ZsbUVaSVVkaGwtZ9IBxAFBVV95cUxPTjY3ZFl5M2xxVk5tLXpEbHhNM1hRY2ZNR21jZmJ6V3U5SUtxUG9MYlFVUGhZM2oyc1ZzNEkwc0ZtSlNiSXF3RllKUnpDa0dZbUJLRGpuWE1CMjA3Rkh3S0J6MVZuVkhQaS1zWl9BRjUtMl9iQ0oyUExzS0tTRC11Q3Fub09iT3VoZTdIV1FodG0wQUFBQWRRQVBhc01ybERPQ0xuWkVVWGMtVEM2VVlWUlFVaWZkRjNRVkpYRGZkTzdHZWpV?oc=5"
+          "veiculo": "Primeira Página",
+          "titulo": "Programa vai usar R$ 17 milhões para ajudar famílias a financiar o primeiro imóvel",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNnFyd1NFLWlyN2xDNWF6QjhSYXZuTHA5dmpNVGR0eDZtb1NVa1VrdEhUN0ttSVY2WWdTdEV0RV9NWGpJM1N1TWNFNDl5TGVkZkZOeDFoOHhqTVRUR2g5S1BTYmRGY3lvd1dpMDhLZ0IzQ3Zvc1ZtNThyMVN5N0U4VmsxQndLWmJEQ2l5Nk55MXAybUlBMU00V09KVHdQbVBreXV3b1lMLVlCcnBBb1ZUeW9BTDRWSnc?oc=5"
         },
         {
-          "veiculo": "portalmt.com.br",
-          "titulo": "Prefeitura de Rondonópolis abre dispensa de licitação para aquisição de boneco fantasia de iguana",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTjVYc1dzUFZFWXN6WTZsS2V5Yi1Pc0steXNYTTZkeXlYSGsxVkU4QWU0d3oyU2NJZ290T3YtSmw5ZzJ4R3BKaFNiVlhCeFJXTDNBeVJ6VW5DYURVVzZPUF9tMGMydlAzb2Z3bGF0U0t6Ny1wX0JsZGhTTzBpVmhVR2pXYmxkWGJZcGw4N20tVU13Vm5GMUptR3o0Rk94UTBqNEpweEFCOUhzcVdleDhBcDIydzVMM2dKQTJDb09sNA?oc=5"
+          "veiculo": "g1 MT",
+          "titulo": "Novo programa vai ajudar famílias a pagar entrada da casa própria em Cuiabá; entenda",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/30/prefeitura-de-cuiaba-cria-programa-para-ajudar-familias-a-pagar-entrada-da-casa-propria.ghtml"
         },
         {
-          "veiculo": "O Bom da Notícia",
-          "titulo": "Prefeitura de Cuiabá abre inscrições para cursos gratuitos de confeitaria, panificação e design de sobrancelhas",
-          "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQalRpWUFfZ0Q5X2U4TFozVFNNV3YyWno4U1JvWmJyZ3Q0dklUVEZvandDMWRQNVBjUkE4VjBEa2dvU2dRQU9JZ3Bma2d4dlJ0Y2UzSjdjSHk5X0hfN1A0OHUxcHhsODJwdnRkYjVjV08yeXdkaGlqUVZ0NzJWZ1YySzhXY05CNjVxSV9PU3FwTGZOdzVNMVp2T19PUHMzbjRyRVV1b0FjTVdwckNvemptcHN5cGxTMExaQkdycGRaNTJqaXlSV3pVcWplRVdEUlFkcVNmUGdnZ2lVQWU3VWkzR3BQOGtRYjFkT0phSlJvMA?oc=5"
+          "veiculo": "G1",
+          "titulo": "Novo programa vai ajudar famílias a pagar entrada da casa própria em Cuiabá; entenda",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQRWFUSU1CaUFOVS11NkZMMy14N3RzSEwxVU41VHJXM0tXckhPNXhIeUFibXBTZTROM2RRZENmSjhDaEFiRGlZMXFOa3RDRi1UbWJ5aG1nSnduUktwR283MHRTbVcxVDRHLW5XWFVjX0tuZ05RRXo5b3htOUJXNDgzRUxmZnRSUDUzM2tscVB6RHRuWXc5OVZaY3hpeU9UQWE5aVFLdHhTcEtPV0lMcXZPQ3htWTRCYUVqVi15SGlMcUg5UjlNLTVrVVdIUW9BSDA2cGdBN1c5RjhzbWt2RzlMWFhn0gHwAUFVX3lxTE1OOFl6M1BDVWs5M3p6VkhjRXpjM29ubGdzMlFXM1VpUkhlN2JxdWNONUZ4dmd2YmhwT1ZYTXNIelV0RXpkWDV0THJSMjJISDRMLXo5cWxpc2hHS0JZaFRKc1NCNlljNGx4NmdXcWhYZ3V5OGJEbGNTTC1MTDlWeEgtQzlhQk83R1FZWElFeTl0WGVlSG1hWVVQSGlPbzV1UFp2eHY3SjVDRkdfbUhsWXFzVTlkQ1ZfNHZkVnoxR01Fak5qVS1RQ1YyOXg0WTF1SHdVTmlaRmFlMVNqaXNSV1g5WG96OUxXNVhUaDZwbEhsLQ?oc=5"
         }
       ],
-      "link": "/materia/nc-prefeituras-em-mato-grosso-teriam-aberto-selecoes-cursos-e-dispensa-de.html",
+      "link": "/materia/nc-novo-programa-destinaria-r-17-milhoes-para-compra-da-casa-propria-em-c.html",
       "corpo": [
-        "As prefeituras de Rondonópolis e Cuiabá teriam iniciado processos administrativos e de capacitação profissional em Mato Grosso. Publicações veiculam a abertura de processo seletivo para docentes e de cursos de qualificação. Também estaria em andamento um procedimento de aquisição por dispensa de licitação.",
-        "As matérias divulgadas apresentam divergências quanto aos municípios citados e aos objetos das ações. Em Rondonópolis, estaria prevista uma seleção para professores e a compra de um boneco fantasia de iguana. Já em Cuiabá, seriam oferecidas inscrições para cursos gratuitos de confeitaria, panificação e design de sobrancelhas.",
-        "Não há detalhes adicionais sobre prazos, número de vagas ou valores nas informações veiculadas. A efetivação das medidas dependeria de confirmação e publicação nos diários oficiais dos municípios."
+        "Um novo programa auxiliaria famílias a custear o financiamento do primeiro imóvel. A iniciativa visaria apoiar a população no pagamento do valor de entrada da casa própria.",
+        "As matérias veiculadas pela imprensa indicam que as ações estariam centradas no município de Cuiabá. Uma das publicações acrescenta que o orçamento previsto para a medida seria de R$ 17 milhões.",
+        "Os textos apresentam variações nas informações divulgadas por cada veículo, sem detalhar a origem dos recursos. A validação dos dados apontados depende de confirmação por parte dos órgãos públicos."
       ],
-      "id": "circ:prefeituras-em-mato-grosso-teriam-aberto-selecoes-cursos-e-dispensa-de",
+      "id": "circ:novo-programa-destinaria-r-17-milhoes-para-compra-da-casa-propria-em-c",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Prefeituras em Mato Grosso teriam aberto seleções, cursos e dispensa de licitação",
+      "titulo": "Novo programa destinaria R$ 17 milhões para compra da casa própria em Cuiabá",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-30T13:06:59.090Z",
-      "hora": "09h06"
+      "iso": "2026-07-30T16:06:02.011Z",
+      "hora": "12h06"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que o assunto está sendo publicado por dois veículos da imprensa.",
+        "Que as duas manchetes veiculadas trazem conteúdo idêntico."
+      ],
+      "falta": [
+        "Confirmação do dado por órgão oficial de estatística.",
+        "Especificação do ano a que se refere o trimestre.",
+        "Identificação da abrangência geográfica da taxa mencionada."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Estadão MT",
+          "titulo": "Desemprego no 2º trimestre é 5,4%, o menor já registrado no período",
+          "link": "https://www.estadaomatogrosso.com.br/geral/desemprego-no-2-trimestre-e-54-o-menor-ja-registrado-no-periodo/143012"
+        },
+        {
+          "veiculo": "Isso É Notícia",
+          "titulo": "Desemprego no 2º trimestre é 5,4%, o menor já registrado no período",
+          "link": "https://issoenoticia.com.br/desemprego-no-2o-trimestre-e-54-o-menor-ja-registrado-no-periodo/"
+        }
+      ],
+      "link": "/materia/nc-desemprego-no-2-trimestre-seria-de-5-4-menor-ja-registrado-no-periodo.html",
+      "corpo": [
+        "A taxa de desemprego relativa ao segundo trimestre teria alcançado o patamar de 5,4%. O índice representaria o menor valor já registrado para o período citado.",
+        "As publicações sobre o tema reproduzem o mesmo dado numérico sem divergências. Os textos divulgados não especificam o órgão de pesquisa responsável pelo levantamento.",
+        "A alegação apontaria para um registro mínimo histórico no indicador de desocupação. A consolidação do fato exigiria a apresentação de dados por fonte oficial."
+      ],
+      "id": "circ:desemprego-no-2-trimestre-seria-de-5-4-menor-ja-registrado-no-periodo",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Desemprego no 2º trimestre seria de 5,4%, menor já registrado no período",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-30T16:07:48.317Z",
+      "hora": "12h07"
     }
   ],
   "pautas": [
     {
-      "titulo": "Mortes de cães levam MP a cobrar R$ 15 milhões da Prefeitura de Cuiabá",
-      "veiculo": "Notícia Max",
+      "titulo": "Novo programa vai ajudar famílias a pagar entrada da casa própria em Cuiabá; entenda",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "G1",
+        "Primeira Página",
+        "olhardireto.com.br"
+      ]
+    },
+    {
+      "titulo": "Novo programa vai ajudar famílias a pagar entrada da casa própria em Cuiabá; entenda",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "g1 MT",
+        "Primeira Página",
+        "olhardireto.com.br"
+      ]
+    },
+    {
+      "titulo": "Com R$ 17 milhões garantidos, Prefeitura de Cuiabá prepara programa para ajudar população a conquistar a casa própria",
+      "veiculo": "olhardireto.com.br",
       "editoria": "regional",
       "quentura": 6,
       "tambemEm": [
         "g1 MT",
         "G1",
-        "Primeira Página"
+        "MINUTO MT"
       ]
     },
     {
-      "titulo": "Mortes de cães levam MP a cobrar R$ 15 milhões da Prefeitura de Cuiabá",
-      "veiculo": "Notícia Max",
+      "titulo": "Com R$ 17 milhões garantidos, Prefeitura de Cuiabá prepara programa para ajudar população a conquistar a casa própria",
+      "veiculo": "olhardireto.com.br",
       "editoria": "regional",
       "quentura": 6,
       "tambemEm": [
         "g1 MT",
         "G1",
-        "Primeira Página"
+        "MINUTO MT"
       ]
     },
     {
-      "titulo": "Operação mira patrimônio de R$ 17,2 milhões de facção com atuação em MT",
-      "veiculo": "VG Notícias",
+      "titulo": "Vagas de emprego em Cuiabá e Várzea Grande oferecem salários de até R$ 5 mil",
+      "veiculo": "Primeira Página",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "Muvuca Popular",
-        "O Documento"
+        "Estação Livre MT",
+        "O Bom da Notícia",
+        "Prefeitura Municipal de Várzea Grande"
       ]
     },
     {
-      "titulo": "Operação prende 10 e mira R$ 32,6 milhões de facção atuante em Mato Grosso e mais dois estados",
-      "veiculo": "O Documento",
+      "titulo": "Prefeitura amplia prazo de inscrições e aumenta número de vagas para Pontos de Cultura em Várzea Grande",
+      "veiculo": "Estação Livre MT",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "Muvuca Popular",
-        "g1 MT"
+        "Primeira Página",
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "LOCAL MT",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estação Livre MT",
+        "Prefeitura Municipal de Várzea Grande",
+        "EXCLUSIVO NEWS"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "EXCLUSIVO NEWS",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estação Livre MT",
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "Prefeitura Municipal de Várzea Grande",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estação Livre MT",
+        "LOCAL MT",
+        "EXCLUSIVO NEWS"
       ]
     },
     {
       "titulo": "“Se não houver solução, entrego a chave da Prefeitura para o TCE e o Tribunal de Justiça”, desabafa Flávia Moretti sobre rombo bilionário dos precatórios em Várzea Grande",
-      "veiculo": "jbnews.com.br",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "varzeagrande.mt.gov.br",
-        "localmt.com.br",
-        "exclusivonews.com.br"
-      ]
-    },
-    {
-      "titulo": "GCCO mira núcleo financeiro de facção criminosa que movimentou mais de R$ 17 milhões",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Muvuca Popular",
-        "O Documento",
-        "VG Notícias"
-      ]
-    },
-    {
-      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
-      "veiculo": "localmt.com.br",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "varzeagrande.mt.gov.br",
-        "exclusivonews.com.br",
-        "jbnews.com.br"
-      ]
-    },
-    {
-      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
-      "veiculo": "exclusivonews.com.br",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "varzeagrande.mt.gov.br",
-        "localmt.com.br",
-        "jbnews.com.br"
-      ]
-    },
-    {
-      "titulo": "Motorista morre preso às ferragens após carreta tombar na rodovia MT-235",
-      "veiculo": "O Livre",
+      "veiculo": "JBNEWS",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Muvuca Popular",
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT",
+        "EXCLUSIVO NEWS"
+      ]
+    },
+    {
+      "titulo": "Empresário é preso suspeito de estuprar irmã e armazenar imagens de abuso sexual infantil em MT",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
         "O Documento",
         "CenárioMT"
       ]
     },
     {
-      "titulo": "Motorista morre preso às ferragens após carreta tombar em rodovia",
-      "veiculo": "Muvuca Popular",
+      "titulo": "Júlio prevê vitória apertada de Jayme Campos e convenção \"tumultuada\" no União Brasil",
+      "veiculo": "O Documento",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "O Documento",
-        "O Livre",
-        "CenárioMT"
-      ]
-    },
-    {
-      "titulo": "Caminhoneiro perde controle da direção, carreta tomba e ele morre preso às ferragens na MT-235",
-      "veiculo": "CenárioMT",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Muvuca Popular",
-        "O Documento",
         "O Livre"
       ]
     },
     {
-      "titulo": "Polícia mira comando de facção e patrimônio de R$ 17 milhões em cinco cidades",
-      "veiculo": "Muvuca Popular",
+      "titulo": "Advogada e 2 jogadores de futebol são presos em operação contra núcleo financeiro do Comando Vermelho em MT",
+      "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Estadão MT",
         "O Documento",
-        "VG Notícias"
+        "CenárioMT"
       ]
     },
     {
-      "titulo": "Mato Grosso lidera comércio no Centro-Oeste e movimenta quase R$ 354 bilhões em receita",
+      "titulo": "Empresário é preso em Nova Mutum por suspeita de estupro de vulnerável e armazenamento de pornografia infantil",
       "veiculo": "CenárioMT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Muvuca Popular",
         "O Documento",
-        "Sapicuá"
+        "g1 MT"
       ]
     },
     {
-      "titulo": "Operação prende 10 e mira R$ 32,6 milhões de grupo criminoso",
+      "titulo": "Programa vai usar R$ 17 milhões para ajudar famílias a financiar o primeiro imóvel",
       "veiculo": "Primeira Página",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "VG Notícias"
+        "g1 MT",
+        "G1"
       ]
     },
     {
-      "titulo": "Mato Grosso movimenta R$ 354 bilhões no comércio em 2024 e mantém liderança no Centro-Oeste",
-      "veiculo": "Sapicuá",
+      "titulo": "Helicóptero, aeronaves e bombeiros atuam contra incêndio na Chapada",
+      "veiculo": "VG Notícias",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Muvuca Popular",
-        "O Documento",
-        "CenárioMT"
+        "g1 MT",
+        "G1"
       ]
     },
     {
-      "titulo": "Motorista morre preso às ferragens após carreta tombar em rodovia estadual",
+      "titulo": "Empresário investigado por estupro contra irmã menor e pornografia infantil é preso",
       "veiculo": "O Documento",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Muvuca Popular",
-        "O Livre",
+        "g1 MT",
         "CenárioMT"
       ]
     },
     {
-      "titulo": "MPMT volta a pedir bloqueio de R$ 15 mi da Prefeitura de Cuiabá por bem-estar animal",
-      "veiculo": "pnbonline.com.br",
+      "titulo": "Incêndio florestal mobiliza bombeiros, helicóptero e aviões em Chapada dos Guimarães (MT)",
+      "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Primeira Página",
-        "Fatos de Mato Grosso"
-      ]
-    },
-    {
-      "titulo": "MPMT volta a pedir bloqueio de R$ 15 mi da Prefeitura de Cuiabá por bem-estar animal",
-      "veiculo": "pnbonline.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Primeira Página",
-        "Fatos de Mato Grosso"
+        "VG Notícias",
+        "G1"
       ]
     }
   ]
