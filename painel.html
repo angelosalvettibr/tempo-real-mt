@@ -80,6 +80,25 @@ tr:hover td{background:var(--painel)}
 .edicoes .bom{color:#3FB950}.edicoes .meio{color:#D29922}.edicoes .ruim{color:#F85149}
 .edicoes tfoot td{border-top:2px solid var(--borda);border-bottom:0;font-weight:700}
 .edicoes .nota{font-family:var(--sans);font-size:12px;color:var(--fraco);margin-top:9px;line-height:1.5}
+.desemp{margin:26px 0 8px}
+.desemp h2{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--fraco);font-weight:500;margin:0 0 14px}
+.desemp .quadro{display:flex;gap:4px;align-items:flex-end;height:150px;border-bottom:1px solid var(--borda);padding-bottom:0}
+.desemp .col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;position:relative;min-width:0}
+.desemp .pilha{display:flex;flex-direction:column-reverse;gap:1px}
+.desemp .fatia{width:100%;min-height:2px}
+.desemp .f-conf{background:#3FB950}
+.desemp .f-atrib{background:#D29922}
+.desemp .f-sem{background:#4A5560}
+.desemp .col .tot{font-family:var(--mono);font-size:10px;color:var(--texto2);text-align:center;margin-bottom:4px}
+.desemp .col:hover .pilha{opacity:.75}
+.desemp .eixo{display:flex;gap:4px;margin-top:7px}
+.desemp .eixo span{flex:1;font-family:var(--mono);font-size:9px;color:var(--fraco);text-align:center;min-width:0;overflow:hidden}
+.desemp .legenda{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-family:var(--mono);font-size:10px;color:var(--fraco);letter-spacing:.06em}
+.desemp .legenda i{width:9px;height:9px;display:inline-block;margin-right:6px;vertical-align:-1px}
+.desemp .resumo{display:flex;gap:30px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--borda)}
+.desemp .resumo div b{display:block;font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1;font-family:var(--sans)}
+.desemp .resumo div span{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:6px}
+.desemp .vazio{font-family:var(--mono);font-size:12px;color:var(--fraco);padding:26px 0;text-align:center}
 </style>
 </head>
 <body>
@@ -96,6 +115,7 @@ tr:hover td{background:var(--painel)}
 
 <main class="wrap">
   <div class="edicoes" id="edicoes"></div>
+  <div class="desemp" id="desemp"></div>
   <div class="barras" id="barras"></div>
 
   <div id="filtros"></div>
@@ -273,6 +293,77 @@ function pintar(){
 // artigo aproveitavel, e o que sobrou no fim do funil. Sai da propria edicao,
 // nao do catalogo: e o retrato da ultima rodada de verdade.
 const EDS = [['br','Brasil'],['mundo','Mundo'],['mt','Mato Grosso'],['rs','Rio Grande do Sul'],['rj','Rio de Janeiro']];
+
+// Producao diaria, lida do arquivo — que e a memoria de verdade do jornal,
+// nao da edicao do momento. Barra empilhada por nivel de evidencia: o que
+// importa nao e quantas materias sairam, e quantas tinham documento.
+async function desempenho(){
+  const alvo = document.getElementById('desemp');
+  const meses = (() => { const o=[], d=new Date();
+    for (let i=0;i<2;i++){ o.push(d.toISOString().slice(0,7)); d.setMonth(d.getMonth()-1); } return o; })();
+
+  const pedidos = [];
+  for (const [uf] of EDS) for (const m of meses)
+    pedidos.push(fetch(`dados/arquivo/${uf}-${m}.json?t=`+Date.now(),{cache:'no-store'})
+      .then(r => r.ok ? r.json() : null).catch(() => null));
+
+  const itens = (await Promise.all(pedidos)).filter(Boolean).flatMap(b => b.itens || []);
+  if (!itens.length) {
+    alvo.innerHTML = '<h2>Produção diária</h2><p class="vazio">O arquivo ainda não tem histórico suficiente. O gráfico se forma sozinho a cada rodada.</p>';
+    return;
+  }
+
+  // ultimos 14 dias, inclusive os vazios — dia sem materia e informacao
+  const dias = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(); d.setDate(d.getDate() - i);
+    dias.push(d.toISOString().slice(0,10));
+  }
+  const vistos = new Set();
+  const porDia = Object.fromEntries(dias.map(d => [d, { conf:0, atrib:0, sem:0 }]));
+
+  for (const i of itens) {
+    const d = (i.iso || '').slice(0,10);
+    if (!porDia[d]) continue;
+    const k = i.id || i.titulo;
+    if (vistos.has(k)) continue; vistos.add(k);
+    const n = i.nivel || 'sem-confirmacao';
+    porDia[d][n === 'confirmado' ? 'conf' : n === 'atribuido' ? 'atrib' : 'sem']++;
+  }
+
+  const total = d => porDia[d].conf + porDia[d].atrib + porDia[d].sem;
+  const pico = Math.max(1, ...dias.map(total));
+  const soma = k => dias.reduce((a,d) => a + porDia[d][k], 0);
+  const tudo = soma('conf') + soma('atrib') + soma('sem');
+  const comDado = dias.filter(d => total(d) > 0).length;
+  const alt = n => Math.round(n / pico * 118);
+
+  alvo.innerHTML = `
+    <h2>Produção diária · últimos 14 dias</h2>
+    <div class="quadro">${dias.map(d => {
+      const p = porDia[d], t = total(d);
+      return `<div class="col" title="${d.split('-').reverse().join('/')} — ${t} matérias">
+        ${t ? `<div class="tot">${t}</div>` : ''}
+        <div class="pilha">
+          ${p.sem   ? `<div class="fatia f-sem"   style="height:${alt(p.sem)}px"></div>`   : ''}
+          ${p.atrib ? `<div class="fatia f-atrib" style="height:${alt(p.atrib)}px"></div>` : ''}
+          ${p.conf  ? `<div class="fatia f-conf"  style="height:${alt(p.conf)}px"></div>`  : ''}
+        </div></div>`;
+    }).join('')}</div>
+    <div class="eixo">${dias.map(d => `<span>${d.slice(8)}/${d.slice(5,7)}</span>`).join('')}</div>
+    <div class="legenda">
+      <span><i style="background:#3FB950"></i>confirmado</span>
+      <span><i style="background:#D29922"></i>atribuído</span>
+      <span><i style="background:#4A5560"></i>sem confirmação</span>
+    </div>
+    <div class="resumo">
+      <div><b>${tudo}</b><span>matérias no período</span></div>
+      <div><b>${comDado ? (tudo/comDado).toFixed(1) : '0'}</b><span>média por dia ativo</span></div>
+      <div><b>${tudo ? Math.round(soma('conf')/tudo*100) : 0}%</b><span>com documento oficial</span></div>
+      <div><b>${comDado}</b><span>dias com produção</span></div>
+    </div>`;
+}
+desempenho();
 
 async function edicoes(){
   const partes = await Promise.all(EDS.map(async ([uf,nome]) => {
