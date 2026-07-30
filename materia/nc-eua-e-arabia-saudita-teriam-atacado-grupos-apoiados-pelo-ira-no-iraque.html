@@ -8,14 +8,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="EUA e Arábia Saudita teriam atacado grupos apoiados pelo Irã no Iraque">
 <meta property="og:description" content="Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa">
-<meta property="article:published_time" content="2026-07-29T16:06:50.961Z">
+<meta property="article:published_time" content="2026-07-30T01:13:47.716Z">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle",
 "headline":"EUA e Arábia Saudita teriam atacado grupos apoiados pelo Irã no Iraque",
 "description":"Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-"datePublished":"2026-07-29T16:06:50.961Z","inLanguage":"pt-BR",
+"datePublished":"2026-07-30T01:13:47.716Z","inLanguage":"pt-BR",
 "articleSection":"Mundo",
 "publisher":{"@type":"NewsMediaOrganization","name":"MERIDIANO"},
 "isBasedOn":""}
@@ -124,9 +124,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <span class="chapeu">Mundo</span>
   <h1>EUA e Arábia Saudita teriam atacado grupos apoiados pelo Irã no Iraque</h1>
   <div class="nc-aviso">Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.</div>
-  <div class="assina">Redação Meridiano · 29/07/2026, 12:06:50</div>
+  <div class="assina">Redação Meridiano · 29/07/2026, 21:13:47</div>
 
-  <div class="corpo"><p>Estados Unidos e Arábia Saudita teriam realizado uma ação militar conjunta contra grupos apoiados pelo Irã em território iraquiano. A alegação circula na imprensa, mas até o momento não possui validação por meio de fontes oficiais dos países envolvidos.</p>
+  <div class="corpo"><p>Os EstadUnidos e Arábia Saudita teriam realizado uma ação militar conjunta contra grupos apoiados pelo Irã em território iraquiano. A alegação circula na imprensa, mas até o momento não possui validação por meio de fontes oficiais dos países envolvidos.</p>
 <p>De acordo com as publicações, a investida armada contra milícias pró-Irã no Iraque teria deixado mortos. Os relatos apontam que a participação saudita nos ataques marcaria a entrada do país nessas operações na região.</p>
 <p>As matérias sustentam que a inclusão da Arábia Saudita nas ações no Iraque reforçaria a tese de uma guerra ampliada no Oriente Médio. Não há, contudo, comunicados emitidos pelos governos citados que atestem o combate.</p></div>
 
@@ -217,6 +217,17 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ov.addEventListener('click', function(){
       if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
       var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
+</body>
+</html>p.textContent; });
       var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
       f.lang = 'pt-BR'; f.rate = 1;
       f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };

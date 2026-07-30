@@ -129,4 +129,73 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
 </body>
+</html>ela Divisão de Elite da GM-Rio – Força Municipal. O levantamento compara os crimes de roubos e furtos de telefones celulares e a pedestres ocorridos nos mesmos períodos dos anos de 2025 e 2026, com dados parciais do mês de julho de 2026.</p>
+<p>O perímetro entre o Metrô Botafogo, a Rua São Clemente e a Rua Voluntários da Pátria teve queda de 67,4%. No trecho da Rua Lauro Müller com Rua General Severiano e Avenida Venceslau Brás, a diminuição foi de 51,4%, e na área da Praia de Botafogo com a Rua Marquês de Abrantes, de 51,3%. O perímetro da Rodoviária do Rio, Terminal Gentileza e Estação Leopoldina registrou queda de 44,6%. Na Tijuca, entre as estações São Francisco Xavier e Afonso Pena, a diminuição foi de 32,9%, enquanto o trecho da Avenida Presidente Vargas até a Cinelândia teve queda de 16,8% e Campo Grande registrou redução de 15,2%.</p>
+<p>O prefeito Eduardo Cavaliere afirmou que a atuação pautada em dados técnicos, planejamento e gestão permite um trabalho eficiente na segurança e que a área de atuação será ampliada. O secretário de Segurança Urbana, Brenno Carnevale, declarou que os resultados apontam que a metodologia está surtindo efeito e que a atuação continuará com foco no combate a roubos e furtos nas áreas com incidência desses crimes.</p>
+<p>O secretário de Segurança Urbana também apresentou o balanço operacional da unidade desde o início do policiamento ostensivo e preventivo, em 15 de março. No período, foram realizadas mais de 9.200 abordagens e contabilizadas mais de 900 prisões e conduções às delegacias. Os agentes apreenderam e recuperaram 188 aparelhos celulares, 183 motocicletas, 15 cordões, uma pistola, 14 réplicas de arma de fogo e 54 armas brancas.</p></div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <details class="fonte-box">
+    <summary><b>De onde vem esta informação</b></summary>
+    Reescrevemos com nossas palavras a partir do material publicado por Prefeitura do Rio. Nenhum número foi alterado: todos constam do original, cujo endereço está abaixo.
+    <br><br>Documento: <a href="https://prefeitura.rio/forca-municipal/prefeitura-do-rio-apresenta-reducao-de-indices-de-roubos-e-furtos-em-perimetros-atendidos-pela-forca-municipal/" target="_blank" rel="noopener">https://prefeitura.rio/forca-municipal/prefeitura-do-rio-apresenta-reducao-de-indices-de-roubos-e-furtos-em-perimetros-atendidos-pela-forca-municipal/</a>
+    
+  </details>
+
+  <div class="relac">
+    <b>Já publicamos sobre isso</b>
+    <a href="/materia/prefeitura-do-rio-apresenta-queda-de-roubos-e-furtos-em-areas-da-forca.html">Prefeitura do Rio apresenta queda de roubos e furtos em áreas da Força Municipal<span>29/07/2026</span></a><a href="/materia/prefeitura-do-rio-apresenta-reducao-de-roubos-e-furtos-em-areas-da-for.html">Prefeitura do Rio apresenta redução de roubos e furtos em áreas da Força Municipal<span>28/07/2026</span></a><a href="/materia/prefeitura-do-rio-apresenta-reducao-de-roubos-e-furtos-em-areas-da-for.html">Prefeitura do Rio apresenta redução de roubos e furtos em áreas da Força Municipal<span>28/07/2026</span></a>
+  </div>
+
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+  </div>
+
+  <a class="voltar" href="/">← Voltar para a capa</a>
+</article>
+<script>
+(function(){
+  var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
+  var u = location.href;
+
+  var zap = document.getElementById('bt-zap');
+  if (zap) zap.addEventListener('click', function(){
+    window.open('https://wa.me/?text=' + encodeURIComponent(t + '\n\n' + u), '_blank', 'noopener');
+  });
+
+  var lk = document.getElementById('bt-link');
+  if (lk) lk.addEventListener('click', function(){
+    var pronto = function(){ var v = lk.textContent; lk.textContent = 'Link copiado'; setTimeout(function(){ lk.textContent = v; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(pronto, pronto);
+    else { var c = document.createElement('textarea'); c.value = u; document.body.appendChild(c); c.select();
+           try { document.execCommand('copy'); } catch(e){} document.body.removeChild(c); pronto(); }
+  });
+
+  var ov = document.getElementById('bt-ouvir');
+  if (ov && 'speechSynthesis' in window) {
+    var lendo = false;
+    ov.addEventListener('click', function(){
+      if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
+      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
+</body>
 </html>
