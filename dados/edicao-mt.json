@@ -2,27 +2,36 @@
   "idioma": "pt",
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-07-29T18:11:41.372Z",
+  "gerado": "2026-07-30T00:23:17.600Z",
   "modelo": "gemini-2.0-flash-lite-001",
   "numeros": {
-    "pauta": 192,
-    "fonteLivre": 26,
-    "confirmadas": 13,
-    "publicadas": 3,
+    "pauta": 194,
+    "fonteLivre": 33,
+    "confirmadas": 9,
+    "publicadas": 4,
     "resgatadas": 0,
-    "semFonte": 164
+    "semFonte": 157
   },
   "fontes": {
     "checadas": 51,
     "responderam": 22,
     "entregando": 20,
-    "itens": 218,
+    "itens": 227,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
+        "itens": 13,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -83,6 +92,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-mt-rondonopol",
+        "nome": "Rondonópolis",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-cap",
+        "nome": "Cuiabá",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-mt-varzeagran",
         "nome": "Várzea Grande",
         "itens": 12,
@@ -92,8 +119,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-rondonopol",
-        "nome": "Rondonópolis",
+        "id": "gn-mt-cuiaba",
+        "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -119,18 +146,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-cuiaba",
-        "nome": "Cuiabá",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-cap",
-        "nome": "Cuiabá",
-        "itens": 11,
+        "id": "muvuca",
+        "nome": "Muvuca Popular",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -139,15 +157,6 @@
         "tipo": "pauta",
         "id": "olivre",
         "nome": "O Livre",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "muvuca",
-        "nome": "Muvuca Popular",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -182,18 +191,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-mt",
-        "nome": "Sema-MT",
-        "itens": 4,
+        "id": "almt",
+        "nome": "Assembleia de MT",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -245,8 +245,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "almt",
-        "nome": "Assembleia de MT",
+        "id": "sema-mt",
+        "nome": "Sema-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -335,15 +335,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tjmt",
-        "nome": "TJMT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "mpmt",
         "nome": "MPMT",
         "itens": 0,
@@ -353,8 +344,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "seduc-mt",
-        "nome": "Seduc-MT",
+        "id": "tjmt",
+        "nome": "TJMT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -362,8 +353,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sinfra-mt",
-        "nome": "Sinfra-MT",
+        "id": "seduc-mt",
+        "nome": "Seduc-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -382,6 +373,15 @@
         "tipo": "assessoria",
         "id": "ses-mt",
         "nome": "Secretaria de Saúde de MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "sinfra-mt",
+        "nome": "Sinfra-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -497,62 +497,31 @@
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-identifica-falhas-na-estrutura-da-casa-da-mulher-",
+      "id": "ilm:cuiaba-e-corpo-de-bombeiros-iniciam-operacao-de-combate-a-queimadas",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Cuiabá identifica falhas na estrutura da Casa da Mulher Brasileira",
-      "resumo": "Visita técnica no bairro Consil apontou infiltrações e ausência de sanitários em prédio cuja empresa responsável teve processo de rescisão contratual instaurado.",
+      "titulo": "Cuiabá e Corpo de Bombeiros iniciam operação de combate a queimadas",
+      "resumo": "A iniciativa prevê dobrar o efetivo municipal, utilizar caminhões pipa e punir com multa e processo por crime ambiental quem fizer uso do fogo.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/secretarios-realizam-visita-tecnica-a-casa-da-mulher-brasileira-para-avaliar-pendencias-e-definir-plano-de-recuperacao-do-imovel",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-e-corpo-de-bombeiros-lancam-operacao-integrada-de-combate-as-queimadas",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Estadão MT",
-        "mtagora.com.br"
-      ],
-      "quentura": 4,
-      "uf": "mt",
-      "corpo": [
-        "O secretário municipal de Infraestrutura e Obras, Reginaldo Teixeira, e a secretária municipal da Mulher, tenente coronel Hadassah Suzannah, realizaram uma vistoria técnica na Casa da Mulher Brasileira, localizada no bairro Consil, em Cuiabá, na terça-feira (28). A ação visou avaliar as condições do imóvel, mapear pendências e planejar a conclusão dos reparos para o funcionamento do local.",
-        "A vistoria constatou problemas decorrentes da execução da obra, feita por empresa contratada na gestão anterior por meio de convênio com a prefeitura. Entre as irregularidades estão falhas nos acabamentos, infiltrações em paredes, luminárias danificadas e falta de instalação de pias, vasos sanitários e chuveiros. A empresa foi notificada ao longo do último ano e, por não atender às determinações, teve instaurados processos de rescisão de contrato e de responsabilização.",
-        "Conforme a administração municipal, também ocorreram entraves no repasse de recursos do convênio financiador das obras, o que contribuiu para os atrasos. As secretarias de Infraestrutura e Obras e da Mulher vão elaborar juntas um plano de ação para a execução dos consertos necessários no imóvel.",
-        "Quando aberto, o espaço atuará como extensão da Secretaria da Mulher, sediada na Avenida Getúlio Vargas, na região central de Cuiabá. A unidade no bairro Consil vai oferecer atendimentos psicológico, jurídico e de assistência social, além de cursos de qualificação profissional e o Projeto Lutadoras."
-      ],
-      "link": "/materia/prefeitura-de-cuiaba-identifica-falhas-na-estrutura-da-casa-da-mulher-.html",
-      "iso": "2026-07-29T18:07:28.307Z",
-      "hora": "14h07",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-lanca-programacao-oficial-do-mato-grosso-agrofest",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Cuiabá lança programação oficial do Mato Grosso AgroFestival",
-      "resumo": "Evento gratuito ocorre de 7 a 9 de agosto no Parque Novo Mato Grosso com rodeio internacional, shows nacionais e feira de negócios.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cultura",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
+        "O Documento",
+        "O Livre",
         "Isso É Notícia",
-        "Radio Quarteto",
-        "UNEMAT - Universidade do Estado de Mato Grosso",
-        "O Bom da Notícia"
+        "CenárioMT"
       ],
-      "quentura": 6,
+      "quentura": 14,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá lançou, na noite de segunda-feira (27), a programação oficial do Mato Grosso AgroFestival. O evento será realizado entre os dias 7 e 9 de agosto no Parque Novo Mato Grosso, com entrada gratuita.",
-        "A programação inclui a etapa da Professional Bull Riders (PBR) integrada ao Rodeio de São Cristóvão, feira de negócios, praça gastronômica e apresentações culturais. Os shows nacionais confirmados são de César & Paulinho, João Bosco & Vinícius, Jorge Henrique & Rodrigo, Di Paullo & Paulino, e Bison & Comassetto.",
-        "No dia 9 de agosto, as atividades começam com a Cavalgada do AgroFestival, que terá concentração às 6h no Aeroporto Bom Futuro e saída às 7h, em um percurso de aproximadamente 10 quilômetros. Na mesma data ocorrem a Procissão Motorizada e o Costelão de São Cristóvão.",
-        "O festival é promovido pela Secretaria Municipal de Cultura em parceria com o Instituto Cordemato, o Ministério do Esporte e o Governo de Mato Grosso. A solenidade de lançamento reuniu o prefeito Abilio Brunini, o ex-governador Mauro Mendes e a presidente da Câmara Municipal Paula Calil, além de secretários, parlamentares e lideranças do setor produtivo."
+        "A Prefeitura de Cuiabá e o Corpo de Bombeiros Militar de Mato Grosso lançaram, na quarta-feira (29), na Praça Alencastro, a campanha \"Juntos por uma Cuiabá Sem Queimadas\". A ação marca o início da fase operacional de prevenção e combate às queimadas urbanas e aos incêndios florestais no município.",
+        "A iniciativa reúne a Defesa Civil Municipal, o Corpo de Bombeiros, a Secretaria Municipal de Obras Públicas, a Limpurb e a Secretaria Municipal de Ordem Pública (Sorp). Durante o evento, o prefeito Abilio Brunini afirmou que o município vai dobrar o efetivo com a atividade delegada e solicitou que os moradores denunciem focos de incêndio pelos canais oficiais da Prefeitura, da Defesa Civil, da Polícia Militar e do Corpo de Bombeiros.",
+        "Segundo o secretário municipal de Defesa Civil, coronel Alessandro Borges Ferreira, a fase operacional faz parte de um trabalho desenvolvido ao longo do ano e inclui reforço de pessoal, caminhões pipa e equipamentos para apoiar o atendimento de ocorrências na zona urbana e rural durante a seca.",
+        "O comandante-geral do Corpo de Bombeiros Militar de Mato Grosso, coronel Glêdson Vieira Bezerra, ressaltou que o uso do fogo está proibido neste período. As pessoas que descumprirem a determinação podem ser multadas e responder por crime ambiental."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-lanca-programacao-oficial-do-mato-grosso-agrofest.html",
-      "iso": "2026-07-29T18:07:28.307Z",
-      "hora": "14h07",
+      "link": "/materia/cuiaba-e-corpo-de-bombeiros-iniciam-operacao-de-combate-a-queimadas.html",
+      "iso": "2026-07-30T00:16:06.595Z",
+      "hora": "20h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -561,31 +530,96 @@
     {
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:pbr-retorna-a-cuiaba-apos-nove-anos-com-etapa-do-campeonato-brasileiro",
+      "id": "ilm:tjmt-restabelece-penhora-de-r-68-9-milhoes-em-acao-da-prefeitura-de-cu",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "PBR retorna a Cuiabá após nove anos com etapa do Campeonato Brasileiro",
-      "resumo": "A competição será realizada de 7 a 9 de agosto no Parque Novo Mato Grosso, reunindo 25 competidores e premiação de R$ 100 mil para o vencedor da etapa.",
+      "titulo": "TJMT restabelece penhora de R$ 68,9 milhões em ação da Prefeitura de Cuiabá",
+      "resumo": "A decisão suspendeu a liberação de imóveis, fazendas e créditos determinada pela primeira instância, mantendo os bens bloqueados até o julgamento definitivo.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/pbr-retorna-a-cuiaba-apos-nove-anos-com-etapa-internacional-durante-o-mato-grosso-agrofestival",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/tjmt-restabelece-penhora-de-bens-em-acao-que-busca-recuperar-r-68-9-milhoes-em-tributos-para-cuiaba",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
         "O Livre",
-        "Isso É Notícia",
-        "Radio Quarteto",
-        "UNEMAT - Universidade do Estado de Mato Grosso"
+        "g1 MT",
+        "VG Notícias",
+        "G1"
       ],
-      "quentura": 8,
+      "quentura": 10,
       "uf": "mt",
       "corpo": [
-        "A Professional Bull Riders (PBR) realiza uma etapa oficial do Campeonato Brasileiro de montaria em touros em Cuiabá, após nove anos. O evento ocorre de 7 a 9 de agosto no Parque Novo Mato Grosso, como parte da programação do Mato Grosso AgroFestival. A promoção é da Prefeitura de Cuiabá em parceria com o Governo de Mato Grosso, Instituto Cordemato e Ministério do Esporte, com transmissão ao vivo pelo BandSports.",
-        "A disputa reunirá 25 competidores, incluindo atletas internacionais como os australianos Zane Hall e Colby Edgard, e o norte-americano Chase Wimer. Entre os representantes de Mato Grosso estão o líder do campeonato, João Paulo Velasco, de Paranaíta, além de Jhon Carlos Moreira, Mário de Negri, João Victor Garcia e Hidelvan Ribeiro. Também competem Warley de Oliveira e Cléber Henrique Marques.",
-        "Durante os três dias de evento, cada atleta fará uma montaria por noite nos rounds classificatórios, e os oito melhores classificados avançam para o Round Final no domingo. O vencedor da etapa receberá R$ 100 mil. A prova pontua para os rankings nacional e internacional, definindo classificados para a Final Nacional na Festa do Peão de Barretos. O campeão da temporada receberá premiação equivalente a R$ 500 mil, que inclui uma caminhonete Mitsubishi Triton Katana zero quilômetro e R$ 200 mil em dinheiro.",
-        "Segundo Adriano Moraes, tricampeão mundial de montaria em touros e presidente da PBR no Brasil, a etapa insere o Mato Grosso AgroFestival no calendário internacional da liga. A estrutura montada no Parque Novo Mato Grosso também receberá shows nacionais, atrações culturais, gastronomia e atividades religiosas."
+        "O Tribunal de Justiça de Mato Grosso (TJMT) restabeleceu a penhora de bens e créditos em uma ação de cobrança movida pela Prefeitura de Cuiabá. A medida suspendeu uma decisão de primeira instância que havia determinado a liberação dos valores bloqueados, mantendo-os vinculados ao processo até a análise definitiva do caso.",
+        "A decisão atinge imóveis, fazendas e créditos provenientes de contratos de arrendamento, com a penhora limitada ao valor cobrado pelo Município, de R$ 68.919.632,20 em tributos. Segundo a Procuradoria Geral do Município, trata-se da maior penhora já realizada pela Prefeitura de Cuiabá contra um único devedor em cobrança de tributos municipais.",
+        "O procurador-geral do Município, Luiz Antônio Araújo Júnior, afirmou que a decisão fortalece a possibilidade de reaver os cerca de R$ 68,9 milhões devidos. O desembargador do caso entendeu que a liberação dos bens antes da conclusão do julgamento poderia dificultar a recuperação da dívida.",
+        "O procurador-chefe Fiscal, Ricardo Alves, declarou que a manutenção do bloqueio protege o interesse público e aumenta as chances de recuperar os recursos para o município."
       ],
-      "link": "/materia/pbr-retorna-a-cuiaba-apos-nove-anos-com-etapa-do-campeonato-brasileiro.html",
-      "iso": "2026-07-29T18:07:28.307Z",
-      "hora": "14h07",
+      "link": "/materia/tjmt-restabelece-penhora-de-r-68-9-milhoes-em-acao-da-prefeitura-de-cu.html",
+      "iso": "2026-07-30T00:16:06.595Z",
+      "hora": "20h16",
+      "original": true,
+      "contexto": "A medida atinge imóveis, fazendas e créditos de contratos de arrendamento de um devedor cobrado pela Prefeitura de Cuiabá. A penhora é limitada ao valor de R$ 68.919.632,20 em tributos municipais.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeito-de-cuiaba-afirma-que-incendio-em-area-de-placas-solares-foi-c",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeito de Cuiabá afirma que incêndio em área de placas solares foi criminoso",
+      "resumo": "A Polícia Civil foi acionada para identificar o responsável pelo fogo ateado em uma área desativada ao lado da Policlínica do Pedra 90.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeito-pede-identificacao-de-autor-de-incendio-que-atingiu-placas-solares-e-reforca-combate-as-queimadas",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "O Documento",
+        "Muvuca Popular",
+        "O Livre",
+        "Isso É Notícia"
+      ],
+      "quentura": 11,
+      "uf": "mt",
+      "corpo": [
+        "O prefeito de Cuiabá, Abilio Brunini, declarou nesta quarta-feira (29) que o incêndio em uma área com placas de energia solar desativadas, ao lado da Policlínica do Pedra 90, foi provocado de forma criminosa. A investigação preliminar do município indica que uma pessoa entrou no local, ateou fogo de maneira proposital e espalhou as chamas.",
+        "O episódio ocorreu na noite da última terça-feira (21), em uma área de aproximadamente 20 mil metros quadrados. O Corpo de Bombeiros controlou o fogo sem que fossem registradas vítimas, danos estruturais ou paralisação dos atendimentos na unidade de saúde, que havia passado por limpeza preventiva semanas antes.",
+        "A Polícia Civil foi acionada e reuniu imagens do fato para a investigação. Brunini solicitou o auxílio da população para localizar o autor do crime e pediu que um vereador que fez registros no local compareça à delegacia como testemunha, caso tenha identificado o responsável.",
+        "A declaração foi feita durante o lançamento da campanha \"Juntos por uma Cuiabá Sem Queimadas\", realizado na Praça Alencastro em parceria da Prefeitura com o Corpo de Bombeiros Militar e a Defesa Civil."
+      ],
+      "link": "/materia/prefeito-de-cuiaba-afirma-que-incendio-em-area-de-placas-solares-foi-c.html",
+      "iso": "2026-07-30T00:16:06.595Z",
+      "hora": "20h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeitura-de-cuiaba-transferira-centro-de-zoonoses-apos-surto-de-cino",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeitura de Cuiabá transferirá Centro de Zoonoses após surto de cinomose",
+      "resumo": "A decisão anunciada pelo prefeito Abilio Brunini prevê a transformação do espaço atual no Complexo de Bem Estar Animal, ampliando a estrutura de atendimento do município.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-transferira-centro-de-zoonoses-e-transformara-atual-area-em-complexo-de-bem-estar-animal",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "Isso É Notícia",
+        "pnbonline.com.br",
+        "Só Notícias"
+      ],
+      "quentura": 5,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá vai transferir a sede do Centro de Controle de Zoonoses (CCZ) para uma nova área, afastada da estrutura do Bem Estar Animal (BEA). O local atual da Zoonoses passará por reformas e adequações para se transformar no Complexo de Bem Estar Animal, ampliando a capacidade de acolhimento e proteção animal no município.",
+        "O anúncio foi feito pelo prefeito Abilio Brunini na noite de segunda-feira (27), em reunião no Palácio Alencastro com representantes da causa animal. A alteração foi decidida após o registro de um surto de cinomose na unidade e busca adequar o atendimento aos protocolos de doenças infectocontagiosas em um espaço exclusivo.",
+        "Dos 13 cães isolados emergencialmente por causa da infecção, três morreram. Os 11 cães que permanecem vivos, sendo dois adultos e os demais filhotes, foram encaminhados para clínicas veterinárias credenciadas para tratamento especializado. Os casos são considerados graves.",
+        "O galpão onde os animais ficaram temporariamente teve a energia elétrica restabelecida e não abriga mais nenhum cão. O caso continua sob investigação das autoridades competentes, e um boletim sobre a saúde dos animais será divulgado no início da tarde desta terça-feira (28)."
+      ],
+      "link": "/materia/prefeitura-de-cuiaba-transferira-centro-de-zoonoses-apos-surto-de-cino.html",
+      "iso": "2026-07-30T00:16:06.595Z",
+      "hora": "20h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -595,54 +629,151 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "Prefeitura de Várzea Grande discute soluções para dívida de mais de R$ 1 bilhão",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT",
+        "EXCLUSIVO NEWS"
+      ]
+    },
+    {
       "titulo": "TCE é acionado para apoiar soluções às dívida de precatórios de Várzea Grande",
       "veiculo": "MT Econômico",
       "editoria": "regional",
-      "quentura": 8,
+      "quentura": 5,
       "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
         "O Bom da Notícia",
-        "G1"
+        "G1",
+        "rdmonline.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "LOCAL MT",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Livre",
+        "Prefeitura Municipal de Várzea Grande",
+        "EXCLUSIVO NEWS"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "EXCLUSIVO NEWS",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Livre",
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Sinop lança na sexta (31) a 5ª edição da campanha Tchau Sufoco",
+      "veiculo": "gcnoticias.com.br",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "REDE BRASIL DE TELEVISÃO",
+        "mtagora.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Sinop lança na sexta (31) a 5ª edição da campanha Tchau Sufoco",
+      "veiculo": "REDE BRASIL DE TELEVISÃO",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "mtagora.com.br",
+        "gcnoticias.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura distribui mudas gratuitas e incentiva arborização em Várzea Grande",
+      "veiculo": "Prefeitura Municipal de Várzea Grande",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Livre",
+        "LOCAL MT",
+        "EXCLUSIVO NEWS"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Rondonópolis-MT abre seleção para professores",
+      "veiculo": "Ache Concursos",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Muvuca Popular",
+        "portalmt.com.br",
+        "Olhar Direto"
       ]
     },
     {
       "titulo": "TCE apoia criação de mesa técnica para enfrentar dívida de mais de R$ 1 bilhão em precatórios de Várzea Grande",
       "veiculo": "rdmonline.com.br",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 4,
       "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
         "MT Econômico",
-        "G1"
+        "G1",
+        "Estadão MT"
       ]
     },
     {
-      "titulo": "Operação Mãos à Obra: Gaeco investiga suspeita de propina para liberação de obras em Sinop",
-      "veiculo": "Canaã Notícias",
+      "titulo": "Justiça condena fazendeiro a prisão e determina pagamento de R$ 3,3 milhões por crimes ambientais",
+      "veiculo": "O Documento",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 3,
+      "tambemEm": [
+        "O Livre",
+        "g1 MT",
+        "Isso É Notícia"
+      ]
+    },
+    {
+      "titulo": "Servidor investigado por propina paga fiança e vai responder em liberdade em Sinop",
+      "veiculo": "RepórterMT",
+      "editoria": "regional",
+      "quentura": 3,
       "tambemEm": [
         "Juína News",
-        "Jornal Folha do Progresso",
-        "Nativa News"
+        "Olhar Direto",
+        "Canaã Notícias"
       ]
     },
     {
-      "titulo": "Dívida de precatórios de Várzea Grande supera R$ 1 bilhão e leva Prefeitura a buscar apoio do TCE",
-      "veiculo": "HiperNotícias - Você bem informado",
+      "titulo": "Várzea Grande distribui mudas gratuitas de ipê; saiba onde buscar até cinco plantas por morador",
+      "veiculo": "O Livre",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 3,
       "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
-        "MT Econômico",
-        "G1"
+        "Prefeitura Municipal de Várzea Grande",
+        "LOCAL MT",
+        "EXCLUSIVO NEWS"
       ]
     },
     {
-      "titulo": "Gestão Flávia Moretti garante apoio do TCE para enfrentar dívida de precatórios e avançar em soluções para Várzea Grande",
-      "veiculo": "Prefeitura Municipal de Várzea Grande - Página Inicial",
+      "titulo": "'Várzea Grande hoje é uma cidade inviabilizada', diz presidente do TCE sobre crise financeira",
+      "veiculo": "O Bom da Notícia",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 3,
+      "tambemEm": [
+        "MT Econômico",
+        "MOMENTO MT",
+        "Estadão MT"
+      ]
+    },
+    {
+      "titulo": "Com contas bloqueadas, Várzea Grande busca saída para dívida de R$ 1 bilhão em precatórios",
+      "veiculo": "CircuitoMT",
+      "editoria": "regional",
+      "quentura": 3,
       "tambemEm": [
         "MT Econômico",
         "G1",
@@ -650,143 +781,44 @@
       ]
     },
     {
-      "titulo": "Prefeitura de Rondonópolis-MT abre seleção para professores",
-      "veiculo": "Ache Concursos",
+      "titulo": "VÍDEO: TCE diz que Várzea Grande está “inviabilizada” e cobra Câmara por lei dos precatórios",
+      "veiculo": "Estadão MT",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 3,
       "tambemEm": [
-        "O Livre",
-        "Só Notícias",
-        "Olhar Direto"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Várzea Grande discute soluções para dívida de mais de R$ 1 bilhão",
-      "veiculo": "G1",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
+        "O Bom da Notícia",
         "MT Econômico",
         "rdmonline.com.br"
       ]
     },
     {
-      "titulo": "Com contas bloqueadas, Várzea Grande busca saída para dívida de R$ 1 bilhão em precatórios",
-      "veiculo": "circuitomt.com.br",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
-        "MT Econômico",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Com dívidas de R$ 1 bilhão, TCE instala mesa técnica para viabilizar gestão pública em Várzea Grande",
-      "veiculo": "plantaonews.com.br",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
-        "MT Econômico",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Gaeco desmonta suposto esquema de propina na Prefeitura de Sinop e mira fiscais suspeitos de vender aprovação de obras",
-      "veiculo": "pagina12.com.br",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Juína News",
-        "Canaã Notícias",
-        "Jornal Folha do Progresso"
-      ]
-    },
-    {
-      "titulo": "Gaeco aponta suspeita de corrupção em aprovação de obras em Sinop",
-      "veiculo": "Nativa News",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Juína News",
-        "Canaã Notícias",
-        "Jornal Folha do Progresso"
-      ]
-    },
-    {
-      "titulo": "Gaeco mira servidores suspeitos de cobrar propina para liberar obras em Sinop | HiperNotícias - Você bem informado",
-      "veiculo": "HiperNotícias - Você bem informado",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Juína News",
-        "Canaã Notícias",
-        "Jornal Folha do Progresso"
-      ]
-    },
-    {
-      "titulo": "Gaeco investiga cobrança de propina para aprovação de projetos em Sinop",
-      "veiculo": "Juína News",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Canaã Notícias",
-        "Nativa News",
-        "pagina12.com.br"
-      ]
-    },
-    {
-      "titulo": "VÍDEO: TCE diz que Várzea Grande está “inviabilizada” e cobra Câmara por lei dos precatórios",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
-        "O Bom da Notícia",
-        "MT Econômico"
-      ]
-    },
-    {
-      "titulo": "Operação mira servidores da Prefeitura de Sinop (MT) por suspeita de corrupção na aprovação de obras",
-      "veiculo": "Jornal Folha do Progresso",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Canaã Notícias",
-        "Nativa News",
-        "GC Notícias"
-      ]
-    },
-    {
-      "titulo": "Operação do Gaeco apura conduta de servidores da área de obras em Sinop",
-      "veiculo": "GC Notícias",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Canaã Notícias",
-        "Jornal Folha do Progresso",
-        "Nativa News"
-      ]
-    },
-    {
-      "titulo": "Colheita do algodão alcança 13,1% em Mato grosso e Imea indica atraso em relação à média histórica",
-      "veiculo": "Notícias Agrícolas",
+      "titulo": "Operação Mãos à Obra: Gaeco investiga suspeita de propina para liberação de obras em Sinop",
+      "veiculo": "Canaã Notícias",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Só Notícias",
-        "UNEMAT - Universidade do Estado de Mato Grosso"
+        "Juína News",
+        "RepórterMT",
+        "A Tribuna MT"
       ]
     },
     {
       "titulo": "Secretaria Municipal da Mulher abre novas turmas de qualificação para mulheres em Cuiabá",
-      "veiculo": "mtagora.com.br",
+      "veiculo": "O Mato Grosso",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "O Livre"
+        "Prefeitura de Cuiabá"
+      ]
+    },
+    {
+      "titulo": "Exposul 2026: Rondonópolis altera trânsito e cria rota exclusiva para ônibus, táxis e apps",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Muvuca Popular",
+        "A Tribuna MT"
       ]
     }
   ]
