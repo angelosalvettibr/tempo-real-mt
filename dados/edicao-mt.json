@@ -1,21 +1,21 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-07-31T18:43:34.706Z",
-  "modelo": "gemini-2.0-flash-lite-001",
+  "gerado": "2026-07-31T19:10:18.352Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 190,
-    "fonteLivre": 25,
-    "confirmadas": 8,
-    "publicadas": 2,
+    "pauta": 194,
+    "fonteLivre": 30,
+    "confirmadas": 7,
+    "publicadas": 17,
     "resgatadas": 0,
-    "semFonte": 161
+    "semFonte": 144
   },
   "fontes": {
-    "checadas": 51,
-    "responderam": 22,
-    "entregando": 20,
-    "itens": 215,
+    "checadas": 54,
+    "responderam": 23,
+    "entregando": 21,
+    "itens": 224,
     "lista": [
       {
         "tipo": "assessoria",
@@ -82,8 +82,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-varzeagran",
-        "nome": "Várzea Grande",
+        "id": "gn-mt-cap",
+        "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,8 +91,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-cap",
-        "nome": "Cuiabá",
+        "id": "gn-mt-varzeagran",
+        "nome": "Várzea Grande",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -126,28 +126,28 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "muvuca",
         "nome": "Muvuca Popular",
-        "itens": 10,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "olivre",
         "nome": "O Livre",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "issoenoticia",
         "nome": "Isso É Notícia",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,12 +190,48 @@
       },
       {
         "tipo": "assessoria",
+        "id": "almt",
+        "nome": "Assembleia de MT",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
         "id": "sema-mt",
         "nome": "Sema-MT",
         "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "issoenoticia",
+        "nome": "Isso É Notícia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 415"
+      },
+      {
+        "tipo": "pauta",
+        "id": "olivre",
+        "nome": "O Livre",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "pauta",
+        "id": "muvuca",
+        "nome": "Muvuca Popular",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -253,15 +289,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "almt",
-        "nome": "Assembleia de MT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "acrimat",
         "nome": "Acrimat",
         "itens": 0,
@@ -289,8 +316,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pjc-mt",
-        "nome": "Polícia Judiciária Civil de MT",
+        "id": "sesp-mt",
+        "nome": "Sesp-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sesp-mt",
-        "nome": "Sesp-MT",
+        "id": "pjc-mt",
+        "nome": "Polícia Judiciária Civil de MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -424,15 +451,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sorriso",
-        "nome": "Prefeitura de Sorriso",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "rondonopolis",
         "nome": "Prefeitura de Rondonópolis",
         "itens": 0,
@@ -442,8 +460,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-vg",
-        "nome": "Câmara de Várzea Grande",
+        "id": "sorriso",
+        "nome": "Prefeitura de Sorriso",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -453,6 +471,15 @@
         "tipo": "assessoria",
         "id": "camara-cba",
         "nome": "Câmara de Cuiabá",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-vg",
+        "nome": "Câmara de Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -498,11 +525,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governo-de-mato-grosso-suspende-noticias-institucionais-para-cumprir-l",
+      "id": "ilm:governo-de-mt-suspende-noticias-institucionais-em-portal-e-redes-socia",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Governo de Mato Grosso suspende notícias institucionais para cumprir lei eleitoral",
-      "resumo": "A medida vigora desde sábado (4.7) e abrange fotos, vídeos e redes sociais, mantendo apenas publicações de utilidade pública e o atendimento da Sema à imprensa.",
+      "titulo": "Governo de MT suspende notícias institucionais em portal e redes sociais",
+      "resumo": "A medida atende a restrições da Lei das Eleições nos três meses que antecedem o pleito e vigora desde sábado (4.7).",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/component/banners/click/1955",
       "origemNome": "Sema-MT",
@@ -510,13 +537,13 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Governo de Mato Grosso suspendeu, desde sábado (4.7), a exibição de notícias institucionais publicadas no Portal do Governo. A decisão abrange também todo o acervo de fotografias e produções audiovisuais do Estado.",
-        "A suspensão atende às restrições do artigo 73 da Lei Federal nº 9.504/1997 (Lei das Eleições), que disciplina a publicidade institucional nos três meses que antecedem o pleito. A determinação também é aplicável às redes sociais estaduais.",
-        "Durante esse período, serão veiculados apenas conteúdos de relevância ou de utilidade pública. A Secretaria de Estado de Meio Ambiente (Sema) continuará com o atendimento à imprensa e o fornecimento de informações."
+        "O Governo de Mato Grosso suspendeu, desde sábado (4.7), a exibição de notícias institucionais no Portal do Governo, assim como conteúdos de fotografias e produções audiovisuais. A medida também se aplica às redes sociais do Estado.",
+        "A suspensão atende às restrições do artigo 73 da Lei Federal nº 9.504/1997 (Lei das Eleições), que disciplina a publicidade institucional nos três meses que antecedem o pleito.",
+        "Durante esse período, serão veiculados exclusivamente conteúdos de relevância ou de utilidade pública. A Secretaria de Estado de Meio Ambiente (Sema) seguirá com seu papel institucional de atender a imprensa e fornecer informações."
       ],
-      "link": "/materia/governo-de-mato-grosso-suspende-noticias-institucionais-para-cumprir-l.html",
-      "iso": "2026-07-31T18:37:10.379Z",
-      "hora": "14h37",
+      "link": "/materia/governo-de-mt-suspende-noticias-institucionais-em-portal-e-redes-socia.html",
+      "iso": "2026-07-31T18:57:02.531Z",
+      "hora": "14h57",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -527,47 +554,763 @@
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-paga-folha-salarial-de-julho-nesta-sexta-feira",
+      "id": "ilm:prefeitura-de-cuiaba-realiza-pagamento-dos-servidores-nesta-sexta-feir",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Cuiabá paga folha salarial de julho nesta sexta-feira",
-      "resumo": "O montante total bruto movimentado é de R$ 146.362.610,30, com valor líquido de R$ 106.761.989,43 creditado na conta dos servidores.",
+      "titulo": "Prefeitura de Cuiabá realiza pagamento dos servidores nesta sexta-feira",
+      "resumo": "Foram movimentados R$ 146.362.610,30 em valores brutos, com R$ 106.761.989,43 em montante líquido creditado aos servidores.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-realiza-pagamento-dos-servidores-do-municipio-nesta-sexta-feira-31",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
-        "mtdefato.com.br",
-        "MINUTO MT",
-        "Expressão Notícias"
+        "MT de Fato",
+        "cuiaba.mt.gov.br",
+        "circuitomt.com.br",
+        "Notícia Max"
       ],
       "quentura": 14,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá realizou, nesta sexta-feira (31), o pagamento da folha salarial dos servidores municipais referente ao mês de julho. Os créditos nas contas começaram às 8h e a conclusão do processamento bancário está prevista para até as 23h59 do mesmo dia.",
-        "Junto aos vencimentos mensais, o pagamento inclui verbas indenizatórias, prêmio saúde, adicional de insalubridade, férias e horas extras. No total, foram movimentados R$ 146.362.610,30 em valores brutos e R$ 106.761.989,43 em valores líquidos.",
-        "O secretário municipal de Economia, Marcelo Bussiki, afirmou que a manutenção da folha salarial em dia é uma prioridade da administração municipal. Segundo o secretário, a medida demonstra o compromisso com os servidores e com o equilíbrio das contas, além de contribuir para movimentar a economia local."
+        "A Prefeitura de Cuiabá efetuou, nesta sexta-feira (31), o pagamento da folha salarial dos servidores municipais referente ao mês de julho. Os créditos são feitos de acordo com o processamento bancário, com início às 8h e previsão de conclusão até as 23h59 do mesmo dia.",
+        "Além dos vencimentos mensais, o pagamento inclui benefícios como verbas indenizatórias, prêmio saúde, adicional de insalubridade, férias e horas extras. Ao todo, os valores brutos somam R$ 146.362.610,30, enquanto o total líquido atinge R$ 106.761.989,43.",
+        "O secretário municipal de Economia, Marcelo Bussiki, declarou que a manutenção da folha salarial em dia é prioridade da gestão. Segundo ele, o compromisso fortalece a confiança do funcionalismo público e ajuda a movimentar a economia do município."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-paga-folha-salarial-de-julho-nesta-sexta-feira.html",
-      "iso": "2026-07-31T18:37:28.233Z",
-      "hora": "14h37",
+      "link": "/materia/prefeitura-de-cuiaba-realiza-pagamento-dos-servidores-nesta-sexta-feir.html",
+      "iso": "2026-07-31T18:57:12.187Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": "O pagamento atinge os servidores públicos municipais de Cuiabá com os vencimentos referentes ao mês de julho. Do total bruto de R$ 146.362.610,30 da folha salarial, o montante líquido depositado aos trabalhadores é de R$ 106.761.989,43. O processamento bancário dos créditos tem previsão de conclusão até as 23h59 desta sexta-feira (31).",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/753037?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:por-dentro-do-parlamento-da-almt-atendeu-mil-pessoas-no-primeiro-semes",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Por Dentro do Parlamento da ALMT atendeu mil pessoas no primeiro semestre de 2026",
+      "resumo": "A iniciativa oferece aulas de cidadania e visitas guiadas à Assembleia Legislativa de Mato Grosso para estudantes e grupos comunitários.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/programa-por-dentro-do-parlamento-aproxima-populacao-da-almt-e-fortalece-formacao-cidada/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "Aproximadamente mil pessoas participaram do programa Aula de Cidadania - Por Dentro do Parlamento, da Assembleia Legislativa de Mato Grosso (ALMT), no primeiro semestre de 2026. A iniciativa promove visitas guiadas, aulas sobre a história do Poder Legislativo e atividades voltadas à formação cidadã, com emissão de certificado aos participantes.",
+        "Idealizado em 1997 e instituído pela Resolução 4867/2017, o programa é desenvolvido pela Secretaria-Geral, por meio da Superintendência de Planejamento Estratégico, em parceria com o Instituto Memória do Poder Legislativo. As visitas acontecem preferencialmente às quartas-feiras, permitindo o acompanhamento das sessões plenárias.",
+        "Em entrevista à Rádio Assembleia na última quinta-feira (16), o historiador do Instituto Memória, professor Edevamilton de Lima Oliveira, explicou que o roteiro foi ampliado para incluir uma aula sobre cidadania. A programação abrange visitas aos gabinetes parlamentares, Rádio Assembleia, TV Assembleia, Teatro do Cerrado Zulmira Canavarros e ao acervo do Instituto Memória, que preserva documentos históricos a partir de 1835.",
+        "O programa atende estudantes dos ensinos fundamental e médio, universitários e grupos comunitários. O agendamento para o segundo semestre de 2026 pode ser realizado por meio da Superintendência de Planejamento Estratégico ou diretamente com o Instituto Memória, pelo e-mail pordent"
+      ],
+      "link": "/materia/por-dentro-do-parlamento-da-almt-atendeu-mil-pessoas-no-primeiro-semes.html",
+      "iso": "2026-07-31T18:57:04.228Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:sistemas-siga-sisflora-e-simcar-da-sema-mt-ficam-fora-do-ar-por-falha-",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Sistemas SIGA, SISFLORA e SIMCAR da Sema-MT ficam fora do ar por falha técnica",
+      "resumo": "A Superintendência de Tecnologia da Informação trabalha para solucionar o problema, mas ainda não há previsão para o retorno dos serviços.",
+      "fonte": "Meridiano, com informações de Sema-MT",
+      "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
+      "origemNome": "Sema-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Secretaria de Estado de Meio Ambiente (Sema-MT) informou que o sistema SIGA está fora do ar devido à ocorrência de problemas técnicos. A indisponibilidade do sistema impacta diretamente o funcionamento do SISFLORA e do SIMCAR.",
+        "A Superintendência de Tecnologia da Informação do órgão ambiental atua para solucionar a falha técnica. Até o momento, não existe previsão para o restabelecimento dos serviços.",
+        "A Sema-MT comunicou que divulgará o retorno da normalidade dos sistemas em seus canais oficiais assim que a situação for regularizada."
+      ],
+      "link": "/materia/sistemas-siga-sisflora-e-simcar-da-sema-mt-ficam-fora-do-ar-por-falha-.html",
+      "iso": "2026-07-31T18:57:02.531Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.cuiaba.mt.gov.br/site/assets/img/prefeitura-cuiaba.png",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeitura-de-cuiaba-lanca-o-programa-beaba-do-sorriso-na-rede-municip",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeitura de Cuiabá lança o programa Beabá do Sorriso na rede municipal de ensino",
+      "resumo": "A iniciativa atenderá 172 unidades educacionais com ações educativas, escovação supervisionada, aplicação de flúor e encaminhamentos para Unidades Básicas de Saúde.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-lanca-programa-beaba-do-sorriso-para-fortalecer-a-saude-bucal-nas-escolas-municipais",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "cuiaba.mt.gov.br",
+        "Notícia Max",
+        "O Mato Grosso",
+        "HiperNotícias - Você bem informado"
+      ],
+      "quentura": 9,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá lançou na quarta-feira (29) o programa Beabá do Sorriso, desenvolvido por meio das secretarias municipais de Saúde e Educação. A iniciativa visa fortalecer as ações de promoção, prevenção e cuidado com a saúde bucal dos estudantes da rede pública municipal.",
+        "Executado pelas Equipes de Saúde Bucal da Estratégia Saúde da Família (ESF), o programa alcançará 172 unidades educacionais, entre Centros Municipais de Educação Infantil (CMEIs) e Escolas Municipais de Educação Básica (EMEBs). As atividades incluem escovação supervisionada, aplicação tópica de flúor, avaliação odontológica e encaminhamento para Unidades Básicas de Saúde (UBSs), além de espaços exclusivos para armazenamento de kits de higiene bucal.",
+        "O prefeito Abilio Brunini e a primeira-dama Samantha Iris participaram do evento de lançamento, juntamente com os secretários Deisi Bocalon (Saúde) e Reginaldo Teixeira (Educação). A coordenação da iniciativa é da secretária adjunta de Saúde Bucal, Cristhiane Leite. Os profissionais envolvidos passaram por capacitação específica e receberão treinamentos periódicos ao longo do projeto.",
+        "A meta é ampliar a cobertura das ações de saúde bucal na rede municipal por meio de acompanhamento contínuo durante o ano letivo. O evento contou também com a presença dos secretários adjuntos Odair Mendonça, Najla Brito e Érika Carvalho, além de cirurgiões-dentistas da Atenção Primária à Saúde, gestores e diretores escolares."
+      ],
+      "link": "/materia/prefeitura-de-cuiaba-lanca-o-programa-beaba-do-sorriso-na-rede-municip.html",
+      "iso": "2026-07-31T18:57:12.187Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:corregedoria-do-tre-mt-fiscaliza-servicos-e-orienta-rotinas-das-zonas-",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Corregedoria do TRE-MT fiscaliza serviços e orienta rotinas das Zonas Eleitorais",
+      "resumo": "O setor tem a titularidade exercida por Vice-Presidente e Corregedor Regional Eleitoral, eleito entre os membros do Tribunal.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em todo o Estado de Mato Grosso. O setor também responde pela expedição de orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais estaduais.",
+        "A titularidade do órgão é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral, escolhido por eleição entre os membros do Tribunal. A unidade disponibiliza acesso à composição do pleno, ao regulamento interno da Corregedoria Regional Eleitoral de Mato Grosso e ao Protocolo para Julgamento com Perspectiva Racial.",
+        "Entre os sistemas e atividades vinculados estão o Processo Judicial Eletrônico da Corregedoria - PjeCor, o Sistema de Informações de Óbitos e Direitos Políticos - Infodip e o Sistema de Informações Eleitorais - SIEL. A estrutura reúne ainda inspeções, o Informativo da Corregedoria Regional Eleitoral e o 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil."
+      ],
+      "link": "/materia/corregedoria-do-tre-mt-fiscaliza-servicos-e-orienta-rotinas-das-zonas-.html",
+      "iso": "2026-07-31T18:57:12.006Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/1049290?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:almt-aprova-ldo-de-2027-em-primeira-votacao-e-convoca-dois-plebiscitos",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "ALMT aprova LDO de 2027 em primeira votação e convoca dois plebiscitos",
+      "resumo": "A proposta prevê um orçamento estadual de R$ 42,1 bilhões e fixação da RGA em 4,2%, em conjunto de sessões que antecede o recesso parlamentar.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/almt-aprova-pldo-em-primeira-votacao-e-plebiscitos-para-duas-regioes-de-mato-grosso/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Assembleia Legislativa de Mato Grosso (ALMT) aprovou, nesta quarta-feira (15), em primeira votação, o Projeto de Lei 692/2026, referente à Lei de Diretrizes Orçamentárias (LDO) para 2027. A matéria estabelece um orçamento de R$ 42,1 bilhões para o estado e prevê a Revisão Geral Anual (RGA) de 4,2%.",
+        "A proposta orienta a elaboração da Lei Orçamentária Anual (LOA) e define parâmetros para os Poderes, Ministério Público, Tribunal de Contas e Defensoria Pública. O projeto retornará ao plenário em agosto para a segunda votação, podendo receber emendas que devem priorizar a revitalização do Centro Histórico de Cuiabá. A realização de concursos em 2027 consta no texto condicionada ao cumprimento da Lei de Responsabilidade Fiscal.",
+        "Durante os trabalhos, os parlamentares aprovaram decretos para consultas populares. O Projeto de Decreto Legislativo 6/2026 trata do plebiscito entre moradores de Primavera do Leste e Poxoréu sobre o desmembramento e incorporação do distrito de Nova Poxoréu. O Projeto de Decreto Legislativo 7/2026 convoca moradores de Cotriguaçu e Colniza para deliberar sobre o desmembramento de áreas do Projeto de Assentamento Nova Cotriguaçu.",
+        "Ao todo, a Assembleia aprovou 46 matérias em três sessões ordinárias antes do recesso. Entre os textos aprovados estão o Projeto de Lei Complementar nº 53/2026, do Tribunal de Justiça, e o Projeto de Lei nº 846/2026, referente à alienação de imóvel para a Famato. A Mensagem nº 91/2026 teve pedido de vista, e a próxima sessão foi convocada para 12 de agosto, às 9h."
+      ],
+      "link": "/materia/almt-aprova-ldo-de-2027-em-primeira-votacao-e-convoca-dois-plebiscitos.html",
+      "iso": "2026-07-31T18:57:04.228Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.cuiaba.mt.gov.br/site/assets/img/prefeitura-cuiaba.png",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:praca-alencastro-recebe-a-14-feira-cultura-sabor-e-arte-nesta-sexta-fe",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Praça Alencastro recebe a 14ª Feira Cultura, Sabor e Arte nesta sexta-feira",
+      "resumo": "Organizado pela Prefeitura de Cuiabá com entrada gratuita das 9h às 16h, o evento reúne gastronomia e artesanato, com cerca de 85% dos expositores compostos por mulheres.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/feira-cultura-sabor-e-arte-reune-gastronomia-artesanato-e-atracoes-culturais-na-praca-alencastro-nesta-sexta-feira",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "CenárioMT",
+        "cuiaba.mt.gov.br",
+        "quartetoradioweb.com.br",
+        "Prefeitura Municipal de Várzea Grande"
+      ],
+      "quentura": 6,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá realiza nesta sexta-feira (31), das 9h às 16h, a 14ª edição da Feira Cultura, Sabor e Arte na Praça Alencastro, no Centro da cidade. O evento tem programação gratuita aberta a moradores e visitantes.",
+        "Promovida pela Secretaria Municipal de Cultura, a fe"
+      ],
+      "link": "/materia/praca-alencastro-recebe-a-14-feira-cultura-sabor-e-arte-nesta-sexta-fe.html",
+      "iso": "2026-07-31T18:57:12.187Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": "A feira é voltada para moradores e visitantes. A programação está marcada para esta sexta-feira (31), das 9h às 16h, na Praça Alencastro.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/1048420?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:ccjr-da-almt-aprova-parecer-ao-pldo-de-2027-e-analisa-mais-33-materias",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "CCJR da ALMT aprova parecer ao PLDO de 2027 e analisa mais 33 matérias",
+      "resumo": "A proposta orçamentária vai à primeira votação em plenário nesta quarta-feira (15), enquanto o colegiado recomendou a derrubada de oito vetos do Poder Executivo.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/ccjr-aprova-ldo-de-2027-e-analisa-mais-de-30-materias/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Comissão de Constituição, Justiça e Redação (CCJR) da Assembleia Legislativa de Mato Grosso (ALMT) aprovou parecer favorável ao Projeto de Lei nº 692/2026 (PLDO 2027), que trata das diretrizes orçamentárias para o orçamento de 2027. A decisão ocorreu em reunião ordinária realizada na tarde desta terça-feira (14). A proposta deve ser votada em primeiro turno no plenário nesta quarta-feira (15) e depois receberá emendas parlamentares.",
+        "O colegiado analisou outras 33 matérias na mesma reunião, registrando parecer favorável a nove proposições e contrário a cinco. Foi aprovada a redação final do PL nº 743/2026, que altera a Lei nº 12.431/2024 para ampliar o Fundo Estadual de Apoio à Melhoria das Condições de Oferta da Educação Infantil e do Ensino Fundamental. A alteração libera recursos para reformas, ampliações e adequações em escolas estaduais de ensino médio.",
+        "Entre as pautas apreciadas estavam dez vetos do Poder Executivo, dos quais a comissão orientou a derrubada de oito e a manutenção de dois. Uma das recomendações de derrubada foi dada ao Veto Total nº 64/2026, referente ao PL nº 1.033/2025, que inclui pessoas com deficiência no Programa CNH Social. Outra orientação para derrubar veto recaiu sobre o Veto Total nº 61/2026 ao PL nº 1.871/2024, que amplia de dez para 30 dias o prazo para empresas prestadoras de serviços com agrotóxicos informarem suas atividades ao Indea-MT.",
+        "Os pareceres sobre os vetos seguirão para deliberação do plenário. Nos projetos relativos a declarações de utilidade pública, o parecer da CCJR possui caráter terminativo e as matérias vão para publicação, enquanto as demais seguem em tramitação na ALMT. A consultoria da comissão prevê a retomada das reuniões ordinárias em agosto, com quatro encontros previstos no mês, e informou que reuniões extraordinárias podem ocorrer até 4 de agosto para analisar pautas urgentes."
+      ],
+      "link": "/materia/ccjr-da-almt-aprova-parecer-ao-pldo-de-2027-e-analisa-mais-33-materias.html",
+      "iso": "2026-07-31T18:57:04.228Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/barra-do-garcas-recebera-audiencia-publica-sobre-eleicoes-gerais-de-2026/@@images/image-0-8032f2295ca10de8f9dd1f8c4fc881cb.jpeg",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-eleicoes-de-2026-em-barra-do-ga",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "TRE-MT realiza audiência pública sobre Eleições de 2026 em Barra do Garças",
+      "resumo": "O encontro ocorre no Fórum da cidade nesta sexta-feira (31.07) para debater propaganda eleitoral, desinformação e segurança das urnas.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/barra-do-garcas-recebera-audiencia-publica-sobre-eleicoes-gerais-de-2026",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realiza nesta sexta-feira (31.07), a partir das 9h15 (horário de Brasília), uma audiência pública sobre as Eleições Gerais de 2026 na cidade de Barra do Garças (511 km de Cuiabá). O evento será no Tribunal do Júri, situado no Fórum da Comarca, na Rua Francisco Lira, nº 1.051, bairro Sena Marques.",
+        "A audiência pública será conduzida pelo juiz-membro substituto do TRE-MT na categoria Juiz Federal, Flavio Fraga e Silva, que abordará aspectos gerais do pleito, Propaganda Eleitoral, Poder de Polícia, Desinformação e segurança das urnas. O magistrado terá o suporte do assessor jurídico, Hernandésio de Lima, e do coordenador de Sistemas Eleitorais e Logística de Eleições, Salomão Fortaleza. Ao final, haverá espaço para manifestações, debates e questionamentos.",
+        "O encontro faz parte de um ciclo que contempla os polos regionais do estado para ampliar a transparência, a participação cidadã e o controle social. A presidente do TRE-MT, desembargadora Serly Marcondes Alves, avalia que as audiências públicas demonstram a preocupação da instituição com a defesa dos direitos dos cidadãos e o fortalecimento da democracia por meio do voto responsável.",
+        "As reuniões anteriores ocorreram em Tangará da Serra (240 km de Cuiabá) no dia 03 de julho, em Sinop (481 km da Capital) no dia 17 de julho e em Rondonópolis (215 km de Cuiabá) no dia 24 de julho. Realizado em paralelo com as reuniões preparatórias do pleito, o evento é voltado para eleitores e autoridades de Barra do Garças e dos municípios que integram o polo regional, além de representantes de entidades, instituições de ensino e imprensa."
+      ],
+      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-eleicoes-de-2026-em-barra-do-ga.html",
+      "iso": "2026-07-31T18:57:12.006Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/1047994?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:comissao-da-almt-aprova-projeto-contra-vicio-em-apostas-e-mais-15-mate",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Comissão da ALMT aprova projeto contra vício em apostas e mais 15 matérias",
+      "resumo": "O pacote apreciado pelo colegiado inclui também a reorganização do Conselho Estadual de Saúde e propostas voltadas à saúde mental e ao tratamento da hanseníase.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/comissao-aprova-projeto-de-combate-ao-vicio-em-apostas-e-a-reorganizacao-do-conselho-estadual-de-saude/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Comissão de Saúde, Previdência e Assistência Social da Assembleia Legislativa de Mato Grosso (ALMT) aprovou parecer favorável a 16 matérias em reunião ordinária realizada na manhã desta terça-feira (14). Entre os projetos está o PL nº 106/2024, que cria o Programa Estadual de Combate ao Vício em Apostas Esportivas, Cassino e Jogos de Azar, nos termos do Substitutivo Integral nº 1.",
+        "O grupo aprovou o PLC nº 58/2025, no Substitutivo Integral nº 2, que altera a composição, organização e funcionamento do Conselho Estadual de Saúde (CES-MT). Na área de saúde mental, receberam parecer favorável o PL nº 594/2026, focado no acompanhamento de abandono de tratamento, e o PL nº 595/2026, sobre a atuação de terapeutas ocupacionais nos Centros de Atenção Psicossocial (CAPS).",
+        "Para o combate à hanseníase, foram aprovados o PL nº 654/2026 e o PL nº 633/2026, este último com previsão de auxílio-alimentação aos pacientes. Também tiveram parecer favorável o PL nº 789/2025, sobre fornecimento de medicamentos como tirzepatida e semaglutida pelo SUS, o PL nº 576/2026, referente à enfermagem na urgência e emergência, e o PL nº 591/2026, que autoriza Wi-Fi em unidades públicas de saúde.",
+        "A lista de matérias aprovadas abrange ainda propostas sobre dependência alcoólica em mulheres (PL nº 977/2024), doenças tropicais negligenciadas (PL nº 2141/2023), uso indevido de anabolizantes (PL nº 671/2026), hantavírus (PL nº 626/2026), estatuto de doenças raras (PL nº 412/2026), visualização de atendimentos a crianças com deficiência (PL nº 352/2026) e dados sobre Síndrome de Down (PL nº 416/2025)."
+      ],
+      "link": "/materia/comissao-da-almt-aprova-projeto-contra-vicio-em-apostas-e-mais-15-mate.html",
+      "iso": "2026-07-31T18:57:04.228Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.cuiaba.mt.gov.br/site/assets/img/prefeitura-cuiaba.png",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeitura-de-cuiaba-preve-programa-habitacional-com-r-17-milhoes-de-e",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeitura de Cuiabá prevê programa habitacional com R$ 17 milhões de emenda",
+      "resumo": "O projeto de lei que institui o Minha Entrada está na Procuradoria Geral do Município e depois seguirá para votação na Câmara Municipal.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-assegura-r-17-milhoes-para-subsidiar-entrada-de-financiamentos-habitacionais",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "issoenoticia.com.br",
+        "rdmonline.com.br",
+        "JBNEWS"
+      ],
+      "quentura": 6,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá planeja ampliar o acesso à casa própria para famílias de baixa renda com a criação do programa Minha Entrada, que vai oferecer subsídio financeiro para o pagamento da entrada de financiamentos habitacionais. A medida será viabilizada por uma emenda parlamentar de R$ 17 milhões, articulada pelo senador Wellington Fagundes.",
+        "O projeto de lei que estabelece o programa está em análise na Procuradoria Geral do Município (PGM). Após a conclusão dos pareceres jurídicos, o texto será enviado para apreciação dos vereadores na Câmara Municipal. Se for aprovado, o Minha Entrada integrará o Programa Casa Cuiabana, gerido pela Secretaria Municipal de Habitação e Regularização Fundiária.",
+        "A secretária da pasta, Michelle Dreher, declarou que a emenda da bancada federal, articulada por Wellington Fagundes, é de aproximadamente R$ 18 milhões. De acordo com a secretária, o município não tem capacidade financeira própria para atender toda a demanda habitacional da cidade.",
+        "O Programa Casa Cuiabana inclui ainda outras iniciativas em etapa de viabilização de recursos, como o Loteamento Popular, o programa de Reforma Habitacional para idosos, a construção de quatro mil moradias para famílias em áreas de risco, o Periferia Viva e o Programa Moradia Digna, destinado à construção de 50 habitações para catadores de materiais recicláveis."
+      ],
+      "link": "/materia/prefeitura-de-cuiaba-preve-programa-habitacional-com-r-17-milhoes-de-e.html",
+      "iso": "2026-07-31T18:57:12.187Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:sema-mt-detalha-funcoes-da-unidade-de-programas-e-projetos-internacion",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Sema-MT detalha funções da Unidade de Programas e Projetos Internacionais",
+      "resumo": "Setor atua na articulação com organismos internacionais e na gestão de recursos externos para a preservação ambiental e redução de emissões em Mato Grosso.",
+      "fonte": "Meridiano, com informações de Sema-MT",
+      "origemLink": "https://www.sema.mt.gov.br/site/index.php/unidades-administrativas/unidade-de-programas-e-projetos-internacionais",
+      "origemNome": "Sema-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Unidade de Programas e Projetos Internacionais (UPPI) atua como ponto central de articulação entre a Secretaria, organismos internacionais, governos parceiros, fundos climáticos, instituições financeiras e iniciativas multilaterais. O setor atua para assegurar a governança, a transparência, a eficiência e o alinhamento técnico das ações financiadas com recursos externos.",
+        "A UPPI é responsável por coordenar o planejamento, a execução, o monitoramento e o reporte dos programas e projetos internacionais. Entre as atribuições da unidade estão garantir o cumprimento das salvaguardas socioambientais, a conformidade financeira e a integridade dos processos.",
+        "As ações do setor buscam fortalecer a gestão ambiental em Mato Grosso, promover a proteção das florestas, a redução das emissões de gases de efeito estufa e a valorização de povos e comunidades tradicionais. A unidade também atua na mitigação e adaptação às mudanças climáticas, contribuindo para uma economia mais sustentável e resiliente, além de ampliar a capacidade institucional do Estado.",
+        "Além de liderar a articulação entre executores e subexecutores, a UPPI fiscaliza contratos e gerencia riscos sociais, ambientais, financeiros e políticos. A estrutura também coordena a comunicação institucional dos programas, garantindo o acesso da sociedade à informação e aos canais de ouvidoria."
+      ],
+      "link": "/materia/sema-mt-detalha-funcoes-da-unidade-de-programas-e-projetos-internacion.html",
+      "iso": "2026-07-31T18:57:02.531Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/1047880?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "municipio": "primavera",
+      "municipioNome": "Primavera do Leste",
+      "id": "ilm:comissao-da-almt-define-visita-tecnica-a-regiao-de-poxoreu-e-primavera",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Comissão da ALMT define visita técnica à região de Poxoréu e Primavera do Leste",
+      "resumo": "A ação busca esclarecer a proposta de desmembramento territorial, cuja decisão dependerá de um plebiscito único previsto para ocorrer nas eleições gerais de 2026.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/comissao-da-almt-agenda-visita-tecnica-em-area-entre-poxoreu-e-primavera-do-leste/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Comissão de Revisão Territorial dos Municípios e das Cidades da Assembleia Legislativa de Mato Grosso definiu, nesta terça-feira (14), a realização de uma visita técnica à região de Poxoréu e Primavera do Leste na próxima quinta-feira (16). A atividade visa apresentar os limites utilizados no Estudo de Viabilidade Municipal e esclarecer dúvidas da população sobre a proposta de desmembramento de parte do território.",
+        "Elaborado pela empresa Cidades Sustentáveis, o estudo concluiu que a mudança é fiscalmente sustentável, administrativamente viável e socialmente legítima. O advogado Zaid Arbid, representante da empresa, afirmou que a maior parte dos serviços públicos essenciais já é prestada por Primavera do Leste e ressaltou que a decisão final caberá exclusivamente aos eleitores dos dois municípios por meio de um plebiscito.",
+        "Conforme o levantamento, a região conta com uma população entre 16 mil e 24 mil habitantes, distribuídos em cerca de 5,3 mil a 8,6 mil domicílios. O perfil do local é marcado por ocupações informais, renda predominante de um a dois salários mínimos, intensa migração populacional desde 2011, aproximadamente 43% dos lotes sem documentação regular e cerca de 70% dos moradores votando em Primavera do Leste."
+      ],
+      "link": "/materia/comissao-da-almt-define-visita-tecnica-a-regiao-de-poxoreu-e-primavera.html",
+      "iso": "2026-07-31T18:57:04.228Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba/@@images/image-0-1c1e1c20af74575b9013a0147b97c8bb.jpeg",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:quatro-secoes-eleitorais-do-liceu-cuiabano-sao-transferidas-para-a-cdl",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Quatro seções eleitorais do Liceu Cuiabano são transferidas para a CDL em Cuiabá",
+      "resumo": "A mudança envolve as seções 0841, 0843, 0844 e 1170 e ocorre devido a obras de reforma na infraestrutura do prédio escolar.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "Eleitores de quatro seções eleitorais da Escola Estadual Liceu Cuiabano, localizada na Av. Presidente Marques, no bairro quilombo, em Cuiabá, foram transferidos para a Câmara de Dirigentes Lojistas de Cuiabá (CDL), situada na mesma avenida. A alteração abrange as seções 0841, 0843, 0844 e 1170.",
+        "A mudança foi determinada pela Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz da 01ª ZE, Moacir Rogério Tortato. A medida foi motivada por obras de reforma na infraestrutura da unidade escolar, que impossibilitam o funcionamento de todas as seções no prédio.",
+        "O chefe de cartório da 01ª ZE, Antônio Henrique Ricci Boaventura, explicou que a redistribuição inicial buscou garantir local adequado aos eleitores. Com o avanço das obras e uma nova avaliação da estrutura, parte das seções permaneceu na escola.",
+        "A consulta ao local de votação pode ser feita no Portal do TSE, na opção Autoatendimento Eleitoral, clicando em Título Eleitoral e depois em 7: Onde votar, informando CPF, nome completo e data de nascimento. As informações também constam no aplicativo e-Título e no site tre-mt.gov.br."
+      ],
+      "link": "/materia/quatro-secoes-eleitorais-do-liceu-cuiabano-sao-transferidas-para-a-cdl.html",
+      "iso": "2026-07-31T18:57:12.006Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.cuiaba.mt.gov.br/site/assets/img/prefeitura-cuiaba.png",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeito-de-cuiaba-e-primeira-dama-lamentam-morte-do-coronel-jorge-par",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeito de Cuiabá e primeira-dama lamentam morte do coronel Jorge Paredes",
+      "resumo": "O oficial da reserva da Polícia Militar faleceu na quinta-feira (30) e seu velório foi marcado para esta sexta-feira (31) na Funerária Santa Rita.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeito-e-primeira-dama-lamentam-falecimento-do-coronel-da-reserva-jorge-antonio-de-oliveira-paredes",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "O Livre",
+        "muvucapopular.com.br"
+      ],
+      "quentura": 2,
+      "uf": "mt",
+      "corpo": [
+        "O prefeito de Cuiabá, Abilio Brunini, e a primeira-dama, Samantha Íris, lamentaram a morte do coronel da Reserva Remunerada da Polícia Militar de Mato Grosso, Jorge Antônio de Oliveira Paredes. O falecimento ocorreu na quinta-feira (30).",
+        "Na corporação, o coronel comandou o Comando Regional II (CR II), o Comando de Policiamento Especializado (CESP) e o Centro de Formação e Aperfeiçoamento de Praças (CFAP). Ele também exerceu a função de diretor da Diretoria de Ensino, Instrução e Pesquisa (DEIP).",
+        "Jorge Antônio de Oliveira Paredes era mestre em Educação pela Universidade Federal de Mato Grosso (UFMT), com pesquisas e publicações em segurança pública e pedagogia militar. Pela atuação prestada, recebeu a Medalha Imperador Dom Pedro II.",
+        "O velório foi programado para ser realizado nesta sexta-feira (31), das 7h às 13h, na Sala 2 da Funerária Santa Rita."
+      ],
+      "link": "/materia/prefeito-de-cuiaba-e-primeira-dama-lamentam-morte-do-coronel-jorge-par.html",
+      "iso": "2026-07-31T18:57:12.187Z",
+      "hora": "14h57",
+      "original": true,
+      "contexto": "A próxima etapa informada é o velório do coronel Jorge Antônio de Oliveira Paredes, programado para esta sexta-feira (31), das 7h às 13h. A cerimônia será realizada na Sala 2 da Funerária Santa Rita.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-inicia-vistorias-em-locais-de-votacao-de-mato-grosso/@@images/image-0-d533fe56e4ccf821975f6ba6b1d6182e.jpeg",
+      "fotoAlt": null,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:justica-eleitoral-inicia-vistorias-em-locais-de-votacao-em-mato-grosso",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Justiça Eleitoral inicia vistorias em locais de votação em Mato Grosso",
+      "resumo": "A 51ª Zona Eleitoral inspecionou quatro escolas em Cuiabá para verificar a estrutura e a acessibilidade dos prédios para as Eleições Gerais de 2026.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-inicia-vistorias-em-locais-de-votacao-de-mato-grosso",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Justiça Eleitoral iniciou vistorias em unidades escolares de Mato Grosso para preparar os locais de votação para as Eleições Gerais de 2026. Na terça-feira (21.07), a 51ª Zona Eleitoral, sob coordenação do juiz eleitoral Jurandir Florêncio de Castilho Júnior, inspecionou quatro escolas que abrangem parte de Cuiabá.",
+        "O magistrado explicou que o cronograma foi antecipado por causa de alterações recentes em locais de votação, com o objetivo de verificar a acessibilidade e a estrutura dos espaços transferidos para receber as urnas. De acordo com o juiz, as unidades observadas apresentaram condições dentro do parâmetro, com braille, rampas de acesso, salas com refrigeração e estrutura adequada para uso pelo Tribunal Regional Eleitoral de Mato Grosso (TRE-MT).",
+        "Todos os Cartórios Eleitorais do estado farão vistorias em suas respectivas Zonas Eleitorais. A ação avalia a parte elétrica, a qualidade da internet, a acessibilidade e a integridade dos telhados para evitar goteiras em caso de chuva.",
+        "Conforme a presidente do TRE-MT, desembargadora Serly Marcondes Alves, as vistorias integram o planejamento das Eleições Gerais de 2026 e visam identificar necessidades e planejar melhorias antecipadamente nos locais de votação."
+      ],
+      "link": "/materia/justica-eleitoral-inicia-vistorias-em-locais-de-votacao-em-mato-grosso.html",
+      "iso": "2026-07-31T18:57:12.006Z",
+      "hora": "14h57",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [],
+  "circulando": [
+    {
+      "municipio": "vg",
+      "municipioNome": "Várzea Grande",
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/31/prefeitura-de-varzea-grande-mt-decreta-situacao-de-emergencia-por-causa-da-estiagem.ghtml"
+        },
+        {
+          "veiculo": "O Bom da Notícia",
+          "titulo": "TCE dá 30 dias para Prefeitura de Várzea Grande explicar obra de escola com sobrepreço",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQTU9JcXQ2VlJpUC1vNDQxMW9XZHpLclBLMzFxcE9lQ0FLUW40c05GTEFaSWFZM0pORnM3MHRDaVhwa3dfc0xZNHZ1al9wdUhnOVFodXRralpiVzZkSVZKektfOEZ3NWZYSU1fQm91ekVMcTZwa0ZQNkxfcDZOYWZUVFh2Y3NvSWNxQ1R1Y3FUU1U5ckNPYV8zMEtuWDcyWllEbmdOd19sQ3Z3VVBBT0FDMFVYaTdoOG5mWFdhSFNOaGpWU3RYc2VCVERINzVLUHl5?oc=5"
+        },
+        {
+          "veiculo": "O Livre",
+          "titulo": "Jayme prefeito de novo? Bastidores apontam retorno à disputa por Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRTYtSWluMDJia2VId0ZITE9ZdlUwUVVOY3BvdmRhcDNUNzRDMXM5ZWNaSGFlM244SFhmWEZ5aTNTT2IyOG9qUXYwbmN4Q3Y0cGJiUTVHUGU3dzVzVm5LU2ZRVVdQWVFiNl96d092aGlzRXdCb2hYcWJydG4xR1E2eWRDZC1lVDZ5dTR0aHJoUHJlNE5UenlTSlBpbTYxcDB1aGc?oc=5"
+        },
+        {
+          "veiculo": "MINUTO MT",
+          "titulo": "Prefeitura de Várzea Grande antecipa pagamento dos servidores; salários já estão nas contas",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMDBPX0Jkb2FrRUlKV1Z5T3ZtejF1Z2IxcEx1SF9IRnF6WVZrclhvME9kNUdMX2p4Ym04NG1KLXRqS0tVU3BFMTdISUxicjE1UHc5Ul9Dc3VQU05hb2o2TV85REgteFlla0VRcEJGOTRGci1xazh4dWJfTVZRaDlhWWdtQ2FDc2RDNnZBM0lkRS03OFdsLVNybGdqODJPMlQ5d1VTR0lTZWNRaHhrcU5WendKa3FFeHZJbFlxeThGd0VEUGxUaVZabw?oc=5"
+        },
+        {
+          "veiculo": "Expressão Notícias",
+          "titulo": "Prefeitura de Várzea Grande antecipa pagamento dos servidores; salários já estão nas contas",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSlhBRk15M2t0SjNLZFBwMHFYekxQV0lOVHNkOE9MR2lsLTRMLVN0SEFtZ2Y1QllyZllZZmdJd0RiSXJDODF3c2JTeFlVejE3ZTk2bl92a1k5TlBIY1JmWTRRc3R3YWcwenI0Yk53OHpUVVlDY1dhWWc5REc2ZFpoOHczVW0yanlPNWR4QWdZaWk3QkJFcU5kZ2FsZGRaN0Y5dF81S2tnckJDNEZLbEdIRF9oalhPTVJoSkRrX2RtTURWNWIyU3RF?oc=5"
+        },
+        {
+          "veiculo": "rdmonline.com.br",
+          "titulo": "Prefeitura amplia prazo de inscrições e aumenta número de vagas para Pontos de Cultura em Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQR0xDZzhkUTFET1dGQ0ZsdWk4NThJUFoyUWtsaWJHWnJPT0NqNlRBa2pVNmFuT1hvRzA2ZzBoX3B6SXhvU0lNQ21LSFJyS2trMU5VYWJjbnM1VHo5c08yMG4zbmtaOVhfdUw1dHdsUFYwYVNYeUY2ZWN1Rkw0NmsxRzVJaE5WRV92eUFvcllFdmtJRG1nTjZZTkYtYW9FcVp6ZlBMNkF6eVhCbnFoRk02XzV0TVY3RkVnRzhYVnRvN19CRjVDb2ZyVw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-publicacoes-apontariam-medidas-da-prefeitura-e-bastidores-em-varzea-gr.html",
+      "corpo": [
+        "Veículos de imprensa estariam noticiando uma série de atos administrativos e movimentos políticos em Várzea Grande (MT). Segundo as publicações, a prefeitura teria decretado situação de emergência por causa da estiagem. Paralelamente, haveria a antecipação do pagamento dos salários dos servidores e o aumento de prazos e vagas para Pontos de Cultura. As matérias indicariam também que o Tribunal de "
+      ],
+      "id": "circ:publicacoes-apontariam-medidas-da-prefeitura-e-bastidores-em-varzea-gr",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Publicações apontariam medidas da prefeitura e bastidores em Várzea Grande",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:03:26.721Z",
+      "hora": "15h03"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "seSabe": [
+        "Que o assunto está sendo publicado por seis veículos de imprensa.",
+        "Que o Corpo de Bombeiros é citado nas publicações como órgão prestador do socorro."
+      ],
+      "falta": [
+        "Confirmação oficial do Corpo de Bombeiros sobre o registro dos atendimentos.",
+        "Identificação oficial e boletim médico atualizado sobre o estado de saúde das vítimas.",
+        "Informação oficial que esclareça as datas e horários exatos dos acontecimentos."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Estadão MT",
+          "titulo": "Bombeiros resgatam motorista após capotamento na MT-251",
+          "link": "https://www.estadaomatogrosso.com.br/cidades/bombeiros-resgatam-motorista-apos-capotamento-na-mt-251/143102"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Motorista fica preso nas ferragens após capotar veículo na rodovia Cuiabá-Chapada",
+          "link": "https://odocumento.com.br/motorista-fica-preso-nas-ferragens-apos-capotar-veiculo-na-rodovia-cuiaba-chapada/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Mulher é resgatada pelos bombeiros após cair durante trilha em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/31/mulher-e-resgatada-pelos-bombeiros-apos-cair-durante-trilha-em-mt.ghtml"
+        },
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Motorista fica preso às ferragens após capotamento na MT-251",
+          "link": "https://www.vgnoticias.com.br/cidades/motorista-fica-preso-as-ferragens-apos-capotamento-na-mt-251/149804"
+        },
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Corpo de Bombeiros resgata mulher com fraturas após queda em trilha em Barra do Garças",
+          "link": "https://cenariomt.com.br/mato-grosso/barra-do-garcas/corpo-de-bombeiros-resgata-mulher-com-fraturas-apos-queda-em-trilha-em-barra-do-garcas/"
+        },
+        {
+          "veiculo": "Só Notícias",
+          "titulo": "Motorista perde o controle e picape capota em rodovia de Mato Grosso",
+          "link": "https://www.sonoticias.com.br/geral/motorista-perde-o-controle-e-picape-capota-em-rodovia-de-mato-grosso/"
+        }
+      ],
+      "link": "/materia/nc-bombeiros-teriam-realizado-resgates-em-acidentes-e-queda-de-trilha-em-.html",
+      "corpo": [
+        "Publicações teriam relatado atendimentos do Corpo de Bombeiros em ocorrências no estado de Mato Grosso. As alegações envolveriam o resgate de um motorista encarcerado e o socorro a uma mulher ferida. As ações teriam ocorrido em diferentes localidades da região.",
+        "As informações veiculadas divergiriam entre si ao descrever a natureza e o local dos fatos. Parte dos relatos indicaria o capotamento de uma picape na rodovia MT-251, no trecho Cuiabá-Chapada, após o condutor perder o controle. Outras notícias apontariam a queda de uma mulher durante uma trilha em Barra do Garças.",
+        "Segundo as publicações, o motorista teria ficado preso às ferragens do veículo após o capotamento. Na ocorrência em ambiente natural, a vítima teria sofrido fraturas decorrentes da queda."
+      ],
+      "id": "circ:bombeiros-teriam-realizado-resgates-em-acidentes-e-queda-de-trilha-em-",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Bombeiros teriam realizado resgates em acidentes e queda de trilha em Mato Grosso",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:03:57.702Z",
+      "hora": "15h03"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que o caso é noticiado por ao menos três veículos de imprensa.",
+        "Que as publicações abordam a investigação das mortes de duas pessoas."
+      ],
+      "falta": [
+        "Confirmação oficial do teor do depoimento do investigado pelas autoridades.",
+        "Manifestação oficial do órgão policial sobre a declaração atribuída à investigadora.",
+        "Número do procedimento policial e dados oficiais do processo."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Investigadora diz que Carlinhos Bezerra contratou cigana antes do crime",
+          "link": "https://www.vgnoticias.com.br/vgnjur/investigadora-diz-que-carlinhos-bezerra-contratou-cigana-antes-do-crime/149807"
+        },
+        {
+          "veiculo": "Estadão MT",
+          "titulo": "Carlinhos Bezerra afirma que primeiro tiro foi contra namorado da ex: \"Legítima defesa\"",
+          "link": "https://www.estadaomatogrosso.com.br/judiciario/carlinhos-bezerra-afirma-que-primeiro-tiro-foi-contra-namorado-da-ex-legitima-defesa/143101"
+        },
+        {
+          "veiculo": "Primeira Página",
+          "titulo": "&#8216;Perdi o controle&#8217;, diz Carlinhos Bezerra em depoimento sobre mortes da ex e do namorado dela",
+          "link": "https://primeirapagina.com.br/justica/perdi-o-controle-diz-carlinhos-bezerra-em-depoimento-sobre-mortes-da-ex-e-do-namorado-dela/"
+        }
+      ],
+      "link": "/materia/nc-homem-investigado-teria-alegado-legitima-defesa-em-depoimento-sobre-mo.html",
+      "corpo": [
+        "Um homem investigado teria declarado em depoimento ter perdido o controle durante o ocorrido que resultou nas mortes de sua ex-companheira e do namorado dela. O suspeito teria sustentado que o primeiro disparo teria atingido o namorado da mulher em uma suposta legítima defesa. As declarações teriam sido prestadas no âmbito das apurações sobre os crimes.",
+        "Uma investigadora teria relatado que o homem teria contratado uma cigana antes do evento citado. As publicações abordam recortes distintos do caso, alternando entre as alegações atribuídas ao suspeito e as falas da investigação."
+      ],
+      "id": "circ:homem-investigado-teria-alegado-legitima-defesa-em-depoimento-sobre-mo",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Homem investigado teria alegado legítima defesa em depoimento sobre mortes",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:05:27.500Z",
+      "hora": "15h05"
+    },
+    {
+      "municipio": "barradogarcas",
+      "municipioNome": "Barra do Garças",
+      "seSabe": [
+        "Que o assunto é veiculado por cinco publicações da imprensa.",
+        "Que o Corpo de Bombeiros é citado como responsável pelo resgate.",
+        "Que há divergências entre os relatos sobre os fatos ocorridos na trilha."
+      ],
+      "falta": [
+        "Registros oficiais do Corpo de Bombeiros sobre a ocorrência.",
+        "Data e horário exatos em que os fatos teriam ocorrido.",
+        "Identificação oficial e estado de saúde da vítima resgatada.",
+        "Confirmação sobre eventual relação entre o resgate e o avistamento do animal."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Mulher fratura perna após queda durante trilha em cachoeira de MT",
+          "link": "https://www.vgnoticias.com.br/cidades/mulher-fratura-perna-apos-queda-durante-trilha-em-cachoeira-de-mt/149800"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Corpo de Bombeiros resgata mulher ferida durante trilha em área de difícil acesso",
+          "link": "https://odocumento.com.br/corpo-de-bombeiros-resgata-mulher-ferida-durante-trilha-em-area-de-dificil-acesso/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Mulher é resgatada pelos bombeiros após cair durante trilha em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/31/mulher-e-resgatada-pelos-bombeiros-apos-cair-durante-trilha-em-mt.ghtml"
+        },
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Corpo de Bombeiros resgata mulher com fraturas após queda em trilha em Barra do Garças",
+          "link": "https://cenariomt.com.br/mato-grosso/barra-do-garcas/corpo-de-bombeiros-resgata-mulher-com-fraturas-apos-queda-em-trilha-em-barra-do-garcas/"
+        },
+        {
+          "veiculo": "issoenoticia.com.br",
+          "titulo": "Homem se depara com onça-pintada durante trilha em cachoeira de MT",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaURNUjRucWlxa1QtTEIyRVV0Nmx5MnVYcjBrNXltQmFCbTFwRmR2akQ4Qy1qVGdxNXgxeDRubUNObjRXUGw2dlJTcGxocHFQMkU0VzdFQnBkZWNZVWRERTl1ZVQ5OXl6dkdiejNGNl9oTGpaRnE1bUJoV0t1ZEZQRVV5MGp3NmFVRHNjMDIzWUtiUG5OMDd5Z2hhWQ?oc=5"
+        }
+      ],
+      "link": "/materia/nc-mulher-teria-sido-resgatada-por-bombeiros-apos-queda-em-trilha-em-mt.html",
+      "corpo": [
+        "Uma mulher teria sofrido uma queda e ficado ferida durante uma trilha em Mato Grosso. O resgate teria sido realizado pelo Corpo de Bombeiros em uma área considerada de difícil acesso. A vítima teria sofrido fratura na perna ou fraturas diversas em decorrência do acidente.",
+        "As publicações situam o local como uma cachoeira no município de Barra do Garças. Um dos veículos divulga, de forma divergente, que um homem teria se deparado com uma onça-pintada durante caminhada em uma cachoeira no Estado. Os textos apresentam variações sobre a natureza dos ferimentos e o evento principal relatado."
+      ],
+      "id": "circ:mulher-teria-sido-resgatada-por-bombeiros-apos-queda-em-trilha-em-mt",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Mulher teria sido resgatada por bombeiros após queda em trilha em MT",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:05:59.348Z",
+      "hora": "15h05"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "seSabe": [
+        "O assunto está sendo veiculado por quatro publicações da imprensa.",
+        "As matérias apresentam divergências quanto aos locais e às categorias envolvidas.",
+        "Não existe registro oficial confirmado por órgãos públicos sobre o evento."
+      ],
+      "falta": [
+        "Manifestação oficial das autoridades de trânsito ou de segurança pública locais.",
+        "Posicionamento das empresas iFood, Uber e 99 sobre as reivindicações citadas.",
+        "Confirmação oficial da data, do horário e da quantidade de participantes.",
+        "Identificação oficial dos organizadores do movimento relatado nas matérias."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Entregadores por aplicativo fazem paralisação em Cuiabá e cobram aumento da taxa mínima",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/31/entregadores-por-aplicativo-fazem-paralisacao-em-cuiaba-e-cobram-aumento-da-taxa-minima.ghtml"
+        },
+        {
+          "veiculo": "Fatos de Mato Grosso",
+          "titulo": "Motoristas e entregadores paralisam Cuiabá e VG contra iFood, Uber e 99",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNX3p5N0M5LURpQ2NRR3V6UFgwS3ZuSktRalJ5SWpabVJzalU3anl5cFhpVWEzZkRzYWR4a3h1WUlwbUUyNEZuQzNXU19IMVJIMEFDWDVaajVzN2NqMUdPZWt0eXk5eGl6c3pPd3VjWVBhV0pmWjlGSmxlX1hZbjI2b2U4VUlVd0pxMzkwZ2o3eVRXOHczdHd2cDRHQ1ZYMms1NWJ6bXJHMVNMeW9qcEUxS1lCQ0ticXNDYmxZcWV3?oc=5"
+        },
+        {
+          "veiculo": "G1",
+          "titulo": "Entregadores por aplicativo fazem paralisação em Cuiabá e cobram aumento da taxa mínima",
+          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPMkZQbGxqX1R3YUtwNC1yNElqTDFuNXFKdmprWmpFZUY2bzRKZ2dwcXk0b2RJQm56QlJ6X1FrU0JCckRHY2Q5R25JQmR2UzByZkc1QjRyMmJHZlRLR0p2TVZ1LVN0ejlmRGo5ZnE3SmhyR2k4b1p0T2hzLTYwYlVzV29laHNhWHo1SzA0MjEzU0diOEZpM0QzVm9UME1odzNJejFiMC1sMWREcG1NTUhRTmlZVVhocEVBajgzWWY5dDVLQ2lNUVZmamNHbU8yeTJhUFZHVWI3b0MxOVR3WFYtcjBBelVJZkE3aUpQNW5rVHnSAfABQVVfeXFMTzJGUGxsal9Ud2FLcDQtcjRJakwxbjVxSnZqa1pqRWVGNm80SmdncHF5NG9kSUJuekJSel9Ra1NCQnJER2NkOUduSUJkdlMwcmZHNUI0cjJiR2ZUS0dKdk1WdS1TdHo5ZkRqOWZxN0pockdpOG9adE9ocy02MGJVc1dvZWhzYVh6NUswNDIxM1NHYjhGaTNEM1ZvVDBNaHczSXoxYjAtbDFkRHBtTU1IUU5pWVVYaHBFQWo4M1lmOXQ1S0NpTVFWZmpjR21PMnkyYVBWR1ViN29DMTlUd1hWLXIwQXpVSWZBN2lKUDVua1R5?oc=5"
+        },
+        {
+          "veiculo": "muvucapopular.com.br",
+          "titulo": "Entregadores fazem buzinaço e cobram reajuste nas taxas dos aplicativos",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ3psSHVKUlhXSnA2Y0U5S0xlUGRIWHhxVmgxQVR6Njh5Q0JGVi1vN2pjM2cwTGNfZ0hhSGxpN0JfR2UwQWFyZXhnNWU4WU4ySmpIa1lwb19kT3ZsUnNncWFXQXpRU3BGNWxUTld4LWVvWlBxQVRJa0lqdkFCVl9EWjM2UThEYjdMcWpzYXZjZnBNdnYwMGdJaGIzcHdPTk0xdUtwWE5qUFkyMmw3bkdhV1hhakZPcXM?oc=5"
+        }
+      ],
+      "link": "/materia/nc-entregadores-e-motoristas-teriam-feito-paralisacao-e-buzinaco-em-cuiab.html",
+      "corpo": [
+        "Trabalhadores de aplicativos teriam realizado uma paralisação com buzinaço na região de Cuiabá. A mobilização estaria associada à cobrança pelo aumento e reajuste das taxas mínimas praticadas pelas plataformas.",
+        "As publicações que divulgaram os relatos divergem sobre o alcance dos protestos e as categorias envolvidas. Enquanto parte dos veículos menciona apenas entregadores em Cuiabá, outra publicação inclui motoristas e estende os atos à cidade de VG.",
+        "As manifestações estariam direcionadas contra as empresas iFood, Uber e 99. Até o momento, não foram encontrados registros em fontes oficiais que confirmem a ocorrência da paralisação."
+      ],
+      "id": "circ:entregadores-e-motoristas-teriam-feito-paralisacao-e-buzinaco-em-cuiab",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Entregadores e motoristas teriam feito paralisação e buzinaço em Cuiabá e VG",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:06:53.236Z",
+      "hora": "15h06"
+    }
+  ],
   "pautas": [
     {
       "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
       "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 10,
+      "quentura": 8,
       "tambemEm": [
+        "O Bom da Notícia",
         "O Livre",
-        "Isso É Notícia",
-        "obomdanoticia.com.br"
+        "MINUTO MT"
       ]
     },
     {
@@ -582,13 +1325,14 @@
       ]
     },
     {
-      "titulo": "Investigadora diz que Carlinhos Bezerra contratou cigana antes do crime",
-      "veiculo": "VG Notícias",
+      "titulo": "Fies convoca mais de 1,4 mil estudantes de Mato Grosso para inscrição até 2ª",
+      "veiculo": "Só Notícias",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "Primeira Página"
+        "O Documento",
+        "Primeira Página",
+        "MT Esporte"
       ]
     },
     {
@@ -600,6 +1344,38 @@
         "Estadão MT",
         "O Documento",
         "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Investigadora diz que Carlinhos Bezerra contratou cigana antes do crime",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estadão MT",
+        "Primeira Página"
+      ]
+    },
+    {
+      "titulo": "Mulher fratura perna após queda durante trilha em cachoeira de MT",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Documento",
+        "g1 MT",
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Motorista perde o controle e picape capota em rodovia de Mato Grosso",
+      "veiculo": "Só Notícias",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estadão MT",
+        "O Documento",
+        "VG Notícias"
       ]
     },
     {
@@ -636,25 +1412,24 @@
       ]
     },
     {
-      "titulo": "Motoristas e entregadores paralisam Cuiabá e VG contra iFood, Uber e 99",
-      "veiculo": "Fatos de Mato Grosso",
+      "titulo": "IFMT abre maior seleção da história com 3.815 vagas gratuitas em MT; veja como se inscrever",
+      "veiculo": "g1 MT",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "g1 MT",
-        "VG Notícias",
-        "G1"
+        "Primeira Página",
+        "Só Notícias",
+        "muvucapopular.com.br"
       ]
     },
     {
-      "titulo": "Mulher fratura perna após queda durante trilha em cachoeira de MT",
-      "veiculo": "VG Notícias",
+      "titulo": "Prefeitura de Sinop lança 5ª edição da campanha Tchau Sufoco e reforça apoio à população na renegociação de dívidas",
+      "veiculo": "MT de Fato",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "CenárioMT"
+        "mtagora.com.br",
+        "rdmonline.com.br"
       ]
     },
     {
@@ -663,9 +1438,9 @@
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "VG Notícias",
         "Fatos de Mato Grosso",
-        "G1"
+        "G1",
+        "muvucapopular.com.br"
       ]
     },
     {
@@ -675,8 +1450,8 @@
       "quentura": 3,
       "tambemEm": [
         "g1 MT",
-        "VG Notícias",
-        "Fatos de Mato Grosso"
+        "Fatos de Mato Grosso",
+        "muvucapopular.com.br"
       ]
     },
     {
@@ -691,64 +1466,33 @@
       ]
     },
     {
-      "titulo": "Mais de 5 mil entregadores de Cuiabá e VG aderem a paralisação nacional",
-      "veiculo": "VG Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 MT",
-        "Fatos de Mato Grosso",
-        "G1"
-      ]
-    },
-    {
       "titulo": "Sinop lança campanha para renegociação de dívidas e educação financeira",
       "veiculo": "rdmonline.com.br",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
         "mtagora.com.br",
-        "mtdefato.com.br"
+        "MT de Fato"
       ]
     },
     {
-      "titulo": "Prefeitura de Sinop lança 5ª edição da campanha Tchau Sufoco e reforça apoio à população na renegociação de dívidas",
-      "veiculo": "mtdefato.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "mtagora.com.br",
-        "rdmonline.com.br"
-      ]
-    },
-    {
-      "titulo": "Capivaras invadem Assembleia Legislativa de MT e passeiam por recepção",
-      "veiculo": "Isso É Notícia",
+      "titulo": "Trânsito no novo viaduto da avenida Miguel Sutil é liberado em duas pistas; confira vídeo",
+      "veiculo": "O Documento",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
         "Estadão MT",
-        "g1 MT"
+        "Fatos de Mato Grosso"
       ]
     },
     {
-      "titulo": "&#8216;Perdi o controle&#8217;, diz Carlinhos Bezerra em depoimento sobre mortes da ex e do namorado dela",
-      "veiculo": "Primeira Página",
+      "titulo": "Mato Grosso perde espaço no setor de cachaça, aponta anuário do Mapa",
+      "veiculo": "VG Notícias",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Estadão MT",
-        "VG Notícias"
-      ]
-    },
-    {
-      "titulo": "Carlinhos Bezerra afirma que primeiro tiro foi contra namorado da ex: \"Legítima defesa\"",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "VG Notícias",
-        "Primeira Página"
+        "Só Notícias",
+        "vgnoticias.com.br"
       ]
     }
   ]

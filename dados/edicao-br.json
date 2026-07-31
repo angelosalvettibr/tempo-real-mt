@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-07-31T18:47:27.408Z",
+  "gerado": "2026-07-31T19:07:44.071Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
     "pauta": 221,
-    "fonteLivre": 63,
+    "fonteLivre": 62,
     "confirmadas": 13,
     "publicadas": 6,
     "resgatadas": 0,
-    "semFonte": 64
+    "semFonte": 62
   },
   "fontes": {
     "checadas": 81,
-    "responderam": 50,
+    "responderam": 38,
     "entregando": 30,
-    "itens": 284,
+    "itens": 283,
     "lista": [
       {
         "tipo": "pauta",
@@ -73,8 +73,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -82,8 +82,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -112,15 +112,6 @@
         "id": "usp",
         "nome": "Jornal da USP",
         "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "congresso",
-        "nome": "Congresso em Foco",
-        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -172,6 +163,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "congresso",
+        "nome": "Congresso em Foco",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "poder360",
         "nome": "Poder360",
         "itens": 10,
@@ -184,15 +193,6 @@
         "id": "ab-geral",
         "nome": "Agência Brasil",
         "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -226,15 +226,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
         "itens": 6,
@@ -247,6 +238,15 @@
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -388,17 +388,8 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
+        "id": "embrapa",
+        "nome": "Embrapa",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -412,6 +403,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -430,15 +439,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "embrapa",
-        "nome": "Embrapa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -474,7 +474,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -483,7 +483,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -492,7 +492,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -500,8 +500,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 415"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -514,15 +514,6 @@
       },
       {
         "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -532,12 +523,30 @@
       },
       {
         "tipo": "livre",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "pf",
+        "nome": "Polícia Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -550,12 +559,12 @@
       },
       {
         "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
+        "id": "cgu",
+        "nome": "CGU",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -563,44 +572,8 @@
         "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "cgu",
-        "nome": "CGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -609,16 +582,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -627,7 +618,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -636,25 +627,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -663,25 +636,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -689,26 +671,17 @@
         "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "anvisa",
+        "nome": "Anvisa",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -717,7 +690,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -744,7 +744,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       }
     ]
   },
@@ -755,31 +755,32 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:receita-paga-r-4-61-bilhoes-no-terceiro-lote-de-restituicao-do-imposto",
+      "id": "ilm:pcdob-oficializa-apoio-a-candidatura-de-lula-a-presidencia",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Receita paga R$ 4,61 bilhões no terceiro lote de restituição do Imposto de Renda 2026",
-      "resumo": "O pagamento contempla 2.743.200 contribuintes e marca a primeira liberação para declarantes sem prioridade legal.",
+      "titulo": "PCdoB oficializa apoio à candidatura de Lula à Presidência",
+      "resumo": "A decisão foi formalizada em convenção nacional digital na quinta-feira, enquanto a oficialização do nome do petista deve ocorrer na convenção do PT no próximo domingo.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/receita-paga-nesta-sexta-terceiro-lote-de-restituicao-do-ir-2026",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/pcdob-oficializa-apoio-candidatura-de-lula",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "g1",
-        "UOL"
+        "g1 Política",
+        "Metrópoles",
+        "Correio Braziliense"
       ],
-      "quentura": 4,
+      "quentura": 3,
       "uf": null,
       "corpo": [
-        "A Receita Federal libera nesta sexta-feira (31) o terceiro lote de restituição do Imposto de Renda 2026. O órgão repassa R$ 4,61 bilhões a 2.743.200 declarantes. O lote realiza a primeira restituição deste ano para pessoas sem prioridade legal, somando 1.396.474 contribuintes nessa condição.",
-        "O pagamento também contempla 839.464 contribuintes que utilizaram a declaração pré-preenchida ou optaram pelo Pix, 309.441 que usaram a pré-preenchida e optaram pelo Pix simultaneamente, e 197.821 pessoas com prioridade legal. As prioridades incluem idosos a partir de 60 anos, pessoas com deficiência ou doença grave e contribuintes cuja maior fonte de renda seja o magistério.",
-        "A Receita reduziu este ano o número de lotes regulares de cinco para quatro. O lote de julho encerra a fila de restituições do IRPF 2026, enquanto o lote de agosto concentrará apenas casos retidos em malha fiscal ou com inconsistências em dados bancários.",
-        "O crédito é depositado na conta ou chave Pix do tipo CPF informada na declaração. Cerca de 165 mil restituições não foram creditadas por ausência de conta bancária vinculada à chave Pix informada. Se o valor não for depositado, ele fica disponível para resgate no Banco do Brasil por até um ano."
+        "O PCdoB oficializou o apoio à candidatura de Luiz Inácio Lula da Silva, do PT, à Presidência da República. A convenção nacional do partido ocorreu na noite de quinta-feira (30), de forma digital e com transmissão pela internet.",
+        "Em manifesto sobre a decisão, o partido destacou a necessidade do país de ampliar a inclusão social, fortalecer a indústria e defender a democracia e sua soberania.",
+        "Apesar da confirmação do apoio do PCdoB, o petista ainda é pré-candidato. A oficialização do seu nome deve ocorrer no próximo domingo (2), na convenção nacional do PT.",
+        "As próximas convenções nacionais partidárias com datas divulgadas são as do PSTU e do PV, no dia 31 de julho, do PCO, no dia 1º de agosto, e do PT, no dia 2 de agosto."
       ],
-      "link": "/materia/receita-paga-r-4-61-bilhoes-no-terceiro-lote-de-restituicao-do-imposto.html",
-      "iso": "2026-07-31T10:52:00.000Z",
-      "hora": "06h52",
+      "link": "/materia/pcdob-oficializa-apoio-a-candidatura-de-lula-a-presidencia.html",
+      "iso": "2026-07-30T23:09:00.000Z",
+      "hora": "19h09",
       "original": true,
-      "contexto": "O pagamento contempla 2.743.200 declarantes, incluindo idosos, professores, pessoas com deficiência e contribuintes sem prioridade legal. O lote encerra a fila regular de restituições deste ano, após a Receita Federal reduzir o número total de lotes de cinco para quatro. A próxima etapa ocorre em agosto e será destinada apenas a casos retidos na malha fiscal ou com inconsistências nos dados bancários.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -788,11 +789,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:caixa-inicia-deposito-de-r-13-04-bilhoes-do-lucro-do-fgts",
+      "id": "ilm:caixa-comeca-a-depositar-r-13-04-bilhoes-do-lucro-do-fgts-para-trabalh",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Caixa inicia depósito de R$ 13,04 bilhões do lucro do FGTS",
-      "resumo": "O repasse atende 138,2 milhões de trabalhadores que tinham saldo no fundo em 31 de dezembro de 2025 e equivale a 89% do lucro obtido no período.",
+      "titulo": "Caixa começa a depositar R$ 13,04 bilhões do lucro do FGTS para trabalhadores",
+      "resumo": "O montante beneficia 138,2 milhões de pessoas que possuíam saldo em contas ativas ou inativas no dia 31 de dezembro de 2025.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/saiba-quanto-o-trabalhador-recebera-de-lucro-do-fgts",
       "origemNome": "Agência Brasil",
@@ -804,16 +805,16 @@
       "quentura": 3,
       "uf": null,
       "corpo": [
-        "A Caixa Econômica Federal começou a depositar R$ 13,04 bilhões referentes à distribuição dos lucros do Fundo de Garantia do Tempo de Serviço (FGTS). O pagamento teve início na quinta-feira (30) e atende 138,2 milhões de pessoas que possuíam saldo na conta do fundo em 31 de dezembro de 2025.",
-        "O valor distribuído corresponde a 89% do lucro de R$ 14,7 bilhões registrado pelo FGTS em 2025. A quantia individual é calculada multiplicando o saldo do final de 2025 pelo fator 0,01868341, o que resulta em cerca de R$ 1,87 para cada R$ 100 depositados na conta do trabalhador.",
-        "Com o crédito da distribuição, a rentabilidade total das contas do FGTS em 2025 chegou a 6,9%, valor acima do índice de inflação do ano, medido em 4,26% pelo IPCA. Os valores são incorporados ao saldo do FGTS e seguem as regras de saque da legislação, como nos casos de aposentadoria, demissão sem justa causa e compra da casa própria.",
-        "Os trabalhadores podem verificar os valores creditados pelo aplicativo do FGTS, pelo Internet Banking da Caixa ou diretamente nas agências do banco. No extrato, o lançamento consta sob a descrição \"AC CRED DIST RESULTADO ANO BASE 12/2025\"."
+        "A Caixa Econômica Federal iniciou o crédito de R$ 13,04 bilhões referentes à distribuição de lucros do Fundo de Garantia do Tempo de Serviço (FGTS) a 138,2 milhões de trabalhadores. Os depósitos começaram na quinta-feira (30) e são direcionados a quem possuía saldo nas contas do fundo em 31 de dezembro de 2025.",
+        "O valor distribuído equivale a 89% do lucro total de R$ 14,7 bilhões obtido pelo FGTS em 2025. A quantia é creditada automaticamente nas contas vinculadas do fundo e varia conforme o saldo de cada trabalhador no fim de 2025, sendo calculada por meio da multiplicação do saldo pelo índice de 0,01868341.",
+        "Com o repasse, a rentabilidade total das contas do FGTS em 2025 ficou em 6,9%, resultado acima da inflação do período medida pelo IPCA, que encerrou o ano em 4,26%. A consulta ao valor creditado pode ser feita pelo aplicativo FGTS, pelo Internet Banking da Caixa ou nas agências do banco.",
+        "Os recursos não são depositados em conta-corrente bancária e passam a integrar o saldo da conta vinculada do FGTS. A movimentação do dinheiro permanece sujeita às hipóteses de saque previstas em lei, como demissão sem justa causa, aposentadoria, saque-aniversário, compra da casa própria e doenças graves."
       ],
-      "link": "/materia/caixa-inicia-deposito-de-r-13-04-bilhoes-do-lucro-do-fgts.html",
+      "link": "/materia/caixa-comeca-a-depositar-r-13-04-bilhoes-do-lucro-do-fgts-para-trabalh.html",
       "iso": "2026-07-31T11:50:00.000Z",
       "hora": "07h50",
       "original": true,
-      "contexto": null,
+      "contexto": "Os repasses são direcionados a 138,2 milhões de trabalhadores que possuíam saldo no fundo em 31 de dezembro de 2025. O valor distribuído de R$ 13,04 bilhões equivale a 89% do lucro total de R$ 14,7 bilhões obtido no período. Com o crédito, a rentabilidade total do FGTS em 2025 alcançou 6,9%, frente a uma inflação de 4,26% medida pelo IPCA.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -822,44 +823,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:deficit-do-setor-publico-consolidado-chega-a-r-55-3-bilhoes-em-junho",
+      "id": "ilm:lula-sanciona-leis-sobre-pagamento-de-pensao-por-pix-e-divulgacao-do-l",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Déficit do setor público consolidado chega a R$ 55,3 bilhões em junho",
-      "resumo": "No acumulado em 12 meses, o saldo negativo atingiu R$ 157,2 bilhões, valor equivalente a 1,19% do Produto Interno Bruto, segundo o Banco Central.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/deficit-do-setor-publico-sobe-para-r-553-bilhoes-em-junho",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "g1 Economia"
-      ],
-      "quentura": 3,
-      "uf": null,
-      "corpo": [
-        "O setor público consolidado, formado por União, estados, municípios e empresas estatais, registrou déficit primário de R$ 55,3 bilhões em junho de 2026. O dado foi divulgado nesta sexta-feira (31) pelo Banco Central no relatório Estatísticas Fiscais. Em junho de 2025, o déficit havia sido de R$ 47,1 bilhões.",
-        "No mês de junho de 2026, o Governo Central registrou déficit de R$ 47,2 bilhões, os governos regionais tiveram saldo negativo de R$ 6,6 bilhões e as empresas estatais apresentaram R$ 1,5 bilhão. Com despesas de R$ 110,7 bilhões em juros nominais, o déficit nominal do setor público somou R$ 166 bilhões no mês.",
-        "No período acumulado em 12 meses até junho de 2026, os gastos com juros nominais alcançaram R$ 1,16 trilhão, o equivalente a 8,80% do Produto Interno Bruto. O déficit nominal acumulado em 12 meses somou R$ 1,31 trilhão, o que corresponde a 9,99% do PIB.",
-        "A Dívida Líquida do Setor Público atingiu R$ 9 trilhões em junho, representando 68,5% do PIB. Já a Dívida Bruta do Governo Geral, que abrange governo federal, INSS e governos estaduais e municipais, chegou a R$ 10,8 trilhões, o equivalente a 81,9% do PIB."
-      ],
-      "link": "/materia/deficit-do-setor-publico-consolidado-chega-a-r-55-3-bilhoes-em-junho.html",
-      "iso": "2026-07-31T13:09:00.000Z",
-      "hora": "09h09",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:lula-sanciona-leis-do-pix-pensao-e-de-divulgacao-do-ligue-180",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Lula sanciona leis do Pix Pensão e de divulgação do Ligue 180",
-      "resumo": "A regra para pensão alimentícia permite a transferência bancária automática entre devedor e credor caso não seja possível fazer o desconto em folha.",
+      "titulo": "Lula sanciona leis sobre pagamento de pensão por Pix e divulgação do Ligue 180",
+      "resumo": "As medidas preveem a transferência automática de valores entre contas e a obrigatoriedade de divulgar o serviço de denúncias em locais de grande circulação.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/pensao-alimenticia-sera-recebida-de-forma-automatica-pix",
       "origemNome": "Agência Brasil",
@@ -869,16 +837,16 @@
       "quentura": 2,
       "uf": null,
       "corpo": [
-        "O presidente Luiz Inácio Lula da Silva sancionou, nesta quarta-feira (29), duas leis de proteção e apoio às mulheres. A primeira medida estabelece o pagamento automático de pensão alimentícia via Pix, enquanto a segunda determina a divulgação em larga escala do serviço telefônico de denúncias Ligue 180.",
-        "A lei do Pix Pensão determina que o pagamento mensal seja depositado na conta da pessoa beneficiária quando o desconto em folha não for possível. Pelo texto, a instituição bancária pode transferir o valor da pensão automaticamente da conta do devedor para a conta do credor.",
-        "A regra sobre o Ligue 180 estabelece que o serviço seja divulgado pelo governo federal em meios de comunicação de massa e em locais públicos e privados com grande circulação de pessoas. A divulgação abrange escolas, hospitais, meios de transporte de massa, órgãos públicos e locais de diversão, como casas de espetáculos.",
-        "Durante a cerimônia, o presidente assinou dois decretos vinculados ao Projeto Mulher Segura para regulamentar a monitoração eletrônica de agressores. O evento contou com a presença das relatoras dos projetos na Câmara, as deputadas Tábata Amaral (PSB-SP) e Camila Jara (PT-MS)."
+        "O presidente Luiz Inácio Lula da Silva sancionou duas leis direcionadas à proteção e apoio às mulheres. A primeira legislação estabelece o pagamento automático de pensão alimentícia via Pix, enquanto a segunda determina a divulgação em larga escala do serviço telefônico de denúncias Ligue 180.",
+        "A lei do Pix Pensão determina que, nos casos em que não for possível realizar o desconto em folha de pagamento, o valor mensal da pensão alimentícia pode ser transferido de forma automática pelo banco da conta do devedor para a do credor. A cerimônia de sanção teve a presença da relatora do projeto na Câmara, deputada Tábata Amaral (PSB-SP).",
+        "A norma relativa ao Ligue 180 obriga o governo federal a promover o serviço em meios de comunicação de massa e em locais públicos e privados com grande circulação de pessoas. Entre os espaços citados estão escolas, hospitais, órgãos públicos, casas de espetáculos e meios de transporte de massa. A relatora do projeto foi a deputada Camila Jara (PT-MS).",
+        "Durante o evento, Lula também assinou dois decretos vinculados ao Projeto Mulher Segura. As medidas visam reforçar a prevenção e o combate à violência contra a mulher, regulamentando alterações na Lei Maria da Penha que incluem a possibilidade de monitoração eletrônica de agressores."
       ],
-      "link": "/materia/lula-sanciona-leis-do-pix-pensao-e-de-divulgacao-do-ligue-180.html",
+      "link": "/materia/lula-sanciona-leis-sobre-pagamento-de-pensao-por-pix-e-divulgacao-do-l.html",
       "iso": "2026-07-29T21:40:00.000Z",
       "hora": "17h40",
       "original": true,
-      "contexto": "A lei do Pix Pensão afeta pessoas beneficiárias de pensão alimentícia e devedores nos casos em que o desconto em folha não for possível. A regra do Ligue 180 alcança frequentadores de locais públicos e privados com grande circulação, como escolas, hospitais, meios de transporte de massa, órgãos públicos e locais de diversão.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -887,11 +855,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:receita-federal-e-cgibs-adiam-cronograma-de-destaque-de-impostos-da-re",
+      "id": "ilm:receita-federal-adia-e-escalona-prazos-do-destaque-de-tributos-em-docu",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Receita Federal e CGIBS adiam cronograma de destaque de impostos da reforma tributária",
-      "resumo": "A obrigatoriedade foi mantida para 3 de agosto na NF-e e NFC-e, mas outros documentos fiscais foram adiados para datas entre outubro deste ano e janeiro de 2027.",
+      "titulo": "Receita Federal adia e escalona prazos do destaque de tributos em documentos fiscais",
+      "resumo": "Prazos para exigência da CBS e do IBS foram divididos em etapas que se estendem até janeiro de 2027, mantendo o início para NF-e e NFC-e em 3 de agosto.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/receita-adia-cronograma-de-destaque-de-impostos-da-reforma-tributaria",
       "origemNome": "Agência Brasil",
@@ -901,16 +869,16 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "A Receita Federal e o Comitê Gestor do Imposto sobre Bens e Serviços (CGIBS) publicaram nesta sexta-feira (31) um ato conjunto no Diário Oficial da União alterando o cronograma de obrigatoriedade do destaque dos tributos da reforma tributária em documentos fiscais eletrônicos. A implementação do novo sistema será feita de forma escalonada.",
-        "A exigência do destaque da Contribuição de Bens e Serviços (CBS) e do Imposto sobre Bens e Serviços (IBS) permanece para 3 de agosto no caso da Nota Fiscal Eletrônica (NF-e) e Nota Fiscal de Consumidor Eletrônica (NFC-e), além de outros documentos. Demais comprovantes terão o prazo estendido para 1º de outubro, 15 de novembro, 1º de dezembro deste ano e 1º de janeiro de 2027.",
-        "De acordo com os órgãos responsáveis, a alteração atende a dificuldades na implementação dos novos campos por empresas e desenvolvedores. Um levantamento do Fisco apontou que, no período de 28 de junho a 29 de julho, 21% dos documentos fiscais emitidos por empresas não optantes do Simples Nacional foram transmitidos sem o preenchimento dos campos referentes à CBS.",
-        "Durante o ano de 2026, a CBS e o IBS constam nos documentos fiscais em caráter de teste, com alíquota de 0,9% para a CBS e de 0,1% para o IBS. A Receita Federal e o CGIBS informaram que os leiautes técnicos dos documentos ainda pendentes serão divulgados com antecedência mínima de 60 dias do início da obrigatoriedade, sempre que possível."
+        "A Receita Federal e o Comitê Gestor do Imposto sobre Bens e Serviços (CGIBS) publicaram um ato conjunto no Diário Oficial da União com um novo cronograma para a obrigatoriedade do destaque dos tributos da reforma tributária nos documentos fiscais eletrônicos. A medida estabeleceu o escalonamento dos prazos de implementação, que antes estavam concentrados na próxima segunda-feira, 3 de agosto.",
+        "Com o novo ato, a obrigatoriedade de destacar a Contribuição de Bens e Serviços (CBS) e o Imposto sobre Bens e Serviços (IBS) permanece mantida para 3 de agosto na Nota Fiscal Eletrônica (NF-e) e na Nota Fiscal de Consumidor Eletrônica (NFC-e). Para outros documentos, o início da exigência foi transferido para etapas em 1º de outubro, 15 de novembro, 1º de dezembro de 2026 e 1º de janeiro de 2027.",
+        "A alteração visa permitir a adaptação gradual dos sistemas das empresas e desenvolvedores. Um levantamento do Fisco apontou que, entre 28 de junho e 29 de julho, 21% dos documentos fiscais emitidos por empresas não optantes do Simples Nacional foram transmitidos sem o preenchimento do campo da CBS. Em 2026, a cobrança ocorre com alíquotas-teste de 0,9% para a CBS e 0,1% para o IBS, valores que são deduzidos dos tributos atuais.",
+        "Os órgãos informaram que os leiautes técnicos dos documentos ainda pendentes serão divulgados, quando possível, com antecedência mínima de 60 dias antes da data de obrigatoriedade."
       ],
-      "link": "/materia/receita-federal-e-cgibs-adiam-cronograma-de-destaque-de-impostos-da-re.html",
+      "link": "/materia/receita-federal-adia-e-escalona-prazos-do-destaque-de-tributos-em-docu.html",
       "iso": "2026-07-31T15:52:00.000Z",
       "hora": "11h52",
       "original": true,
-      "contexto": "A mudança no cronograma afeta empresas e desenvolvedores que emitem documentos fiscais eletrônicos. A exigência para a Nota Fiscal Eletrônica e a Nota Fiscal de Consumidor Eletrônica está mantida para 3 de agosto. Os prazos para os demais comprovantes foram prorrogados de forma escalonada até 1º de janeiro de 2027, com testes previstos para o ano de 2026.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -919,11 +887,43 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:cmn-aprova-regras-para-fundos-de-inovacao-do-programa-eco-invest-brasi",
+      "id": "ilm:deficit-do-setor-publico-consolidado-sobe-para-r-55-3-bilhoes-em-junho",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "CMN aprova regras para fundos de inovação do programa Eco Invest Brasil",
-      "resumo": "A medida define prazos de até cinco anos para investimento dos recursos e estabelece teto de remuneração de 3% ao ano para operações financeiras.",
+      "titulo": "Déficit do setor público consolidado sobe para R$ 55,3 bilhões em junho",
+      "resumo": "No acumulado de 12 meses, o saldo negativo atingiu R$ 157,2 bilhões, o que equivale a 1,19% do Produto Interno Bruto, de acordo com dados do Banco Central.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/deficit-do-setor-publico-sobe-para-r-553-bilhoes-em-junho",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1 Economia"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "O setor público consolidado, composto por União, estados, municípios e empresas estatais, registrou um déficit primário de R$ 55,3 bilhões em junho de 2026. Os dados foram publicados nesta sexta-feira (31) pelo Banco Central no relatório Estatísticas Fiscais. Em junho de 2025, o resultado havia sido deficitário em R$ 47,1 bilhões.",
+        "No mês, o Governo Central registrou déficit de R$ 47,2 bilhões, os governos regionais tiveram resultado negativo de R$ 6,6 bilhões e as empresas estatais somaram déficit de R$ 1,5 bilhão. As despesas do setor público com juros nominais ficaram em R$ 110,7 bilhões no período, ante R$ 61,0 bilhões em junho de 2025, com impacto da perda de R$ 9,3 bilhões em operações de swap cambial.",
+        "O acumulado em 12 meses do déficit primário chegou a R$ 157,2 bilhões, valor 0,06 ponto percentual acima do registrado em maio. No mesmo período de 12 meses, os juros nominais acumulados atingiram R$ 1,16 trilhões, correspondendo a 8,80% do PIB, enquanto o déficit nominal alcançou R$ 1,31 trilhões, equivalente a 9,99% do PIB.",
+        "A Dívida Líquida do Setor Público chegou a R$ 9 trilhões em junho, alcançando 68,5% do PIB, com avanço mensal de 0,6 ponto percentual do PIB. A Dívida Bruta do Governo Geral, que engloba governo federal, INSS e governos estaduais e municipais, encerrou o mês em R$ 10,8 trilhões, o que representa 81,9% do PIB."
+      ],
+      "link": "/materia/deficit-do-setor-publico-consolidado-sobe-para-r-55-3-bilhoes-em-junho.html",
+      "iso": "2026-07-31T13:09:00.000Z",
+      "hora": "09h09",
+      "original": true,
+      "contexto": "O déficit primário de R$ 55,3 bilhões registrado em junho de 2026 é maior do que o de junho de 2025, quando o saldo negativo foi de R$ 47,1 bilhões. No mesmo período, as despesas com juros nominais subiram de R$ 61,0 bilhões para R$ 110,7 bilhões. O resultado afeta as contas do Governo Central, dos governos regionais e das empresas estatais.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:cmn-estabelece-regras-para-fundos-de-inovacao-do-programa-eco-invest",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "CMN estabelece regras para fundos de inovação do programa Eco Invest",
+      "resumo": "A medida viabiliza o quinto leilão do programa e fixa prazos para a aplicação dos recursos captados em até cinco anos.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/cmn-institui-regime-especial-para-fundos-de-inovacao-no-eco-invest",
       "origemNome": "Agência Brasil",
@@ -933,12 +933,12 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Conselho Monetário Nacional (CMN) aprovou alterações nas regras do programa Eco Invest Brasil para instituir um regime específico direcionado aos fundos de inovação. A decisão viabiliza a realização do quinto leilão do programa, que prevê o financiamento de projetos de modernização em setores vinculados à economia verde.",
-        "As novas regras estabelecem que 25% dos recursos captados devem ser aplicados em até 24 meses, mais 25% em até 36 meses e os 50% restantes em até 60 meses. A regulamentação define limite de remuneração de até 2% ao ano para instituições financeiras que disponibilizarem recursos aos fundos, com teto de 3% ao ano para operações com a Linha Eco Invest Brasil e para o retorno da cota de capital catalítico.",
-        "Nos casos em que os fundos utilizarem instrumentos conversíveis em participação societária, a remuneração mínima será equivalente ao IPCA mais 1% ao ano, podendo haver rendimento adicional dependendo do desempenho do projeto. Os investimentos serão destinados a segmentos como fertilizantes verdes, combustíveis verdes avançados, automação e inteligência artificial na produção, beneficiamento de minerais críticos, baterias, química verde, biomateriais e reaproveitamento de resíduos.",
-        "O programa faz parte do Fundo Nacional sobre Mudança do Clima e oferece proteção cambial e divisão de riscos para atrair capital privado. Atualmente, o CMN é composto pelo presidente do colegiado e ministro da Fazenda, Dario Durigan, pelo presidente do Banco Central, Gabriel Galípolo, e pelo ministro do Planejamento e Orçamento, Bruno Moretti."
+        "O Conselho Monetário Nacional (CMN) aprovou alterações nas regras do programa Eco Invest Brasil para instituir um regime específico voltado a fundos de inovação. A mudança viabiliza a realização do quinto leilão do programa, direcionado ao financiamento de projetos de modernização em seis setores da economia verde.",
+        "As novas normas estabelecem um cronograma para a aplicação dos recursos captados pelos fundos de inovação. As instituições deverão aplicar 25% dos recursos em até 24 meses, mais 25% em até 36 meses e os 50% restantes no prazo de até 60 meses.",
+        "O CMN também fixou que a soma da remuneração das instituições financeiras e do retorno da cota de capital catalítico deve dar até 3% ao ano. Nas operações com instrumentos conversíveis em participação societária, a remuneração mínima corresponderá à inflação medida pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), acrescida de 1% ao ano.",
+        "Os fundos atenderão aos setores de fertilizantes verdes, combustíveis verdes avançados, automação industrial e inteligência artificial aplicada à produção, beneficiamento de minerais críticos, sistemas de baterias e armazenamento de energia, além de química verde, biomateriais e reaproveitamento de resíduos minerais. O conselho é formado pelo ministro da Fazenda, Dario Durigan, pelo presidente do Banco Central, Gabriel Galípolo, e pelo ministro do Planejamento e Orçamento, Bruno Moretti."
       ],
-      "link": "/materia/cmn-aprova-regras-para-fundos-de-inovacao-do-programa-eco-invest-brasi.html",
+      "link": "/materia/cmn-estabelece-regras-para-fundos-de-inovacao-do-programa-eco-invest.html",
       "iso": "2026-07-30T22:43:00.000Z",
       "hora": "18h43",
       "original": true,
@@ -952,14 +952,14 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a indicação de vice está sendo noticiada por quatro veículos de imprensa.",
-        "Que as matérias citam Flávio Bolsonaro, Tereza Cristina, Ciro Nogueira e o Progressistas.",
-        "Que os relatos veiculados contêm contradições sobre a confirmação do nome."
+        "Que o assunto é veiculado por cinco veículos da imprensa.",
+        "Que o nome de Tereza Cristina e o prazo de 5 de agosto são citados.",
+        "Que o partido Progressistas e o senador Ciro Nogueira figuram nos relatos."
       ],
       "falta": [
-        "Anúncio oficial formalizado por Flávio Bolsonaro ou por sua assessoria.",
-        "Manifestação oficial do Progressistas ou de Ciro Nogueira sobre a vaga.",
-        "Declaração pública direta de Tereza Cristina confirmando a aceitação do convite."
+        "Anúncio oficial de confirmação por parte de Flávio Bolsonaro ou Tereza Cristina.",
+        "Manifestação formal da direção do partido Progressistas sobre a aliança.",
+        "Documento oficial de homologação da chapa junto à Justiça Eleitoral."
       ],
       "ondeCirculou": [
         {
@@ -968,9 +968,14 @@
           "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-agradece-tereza-cristina-e-busca-vice-ate-5-de-agosto/"
         },
         {
+          "veiculo": "g1",
+          "titulo": "Quem é Tereza Cristina, e por que Flávio Bolsonaro a chamou de 'sonho de consumo' para vice em sua chapa",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/31/quem-e-tereza-cristina-e-por-que-flavio-bolsonaro-a-chamou-de-sonho-de-consumo-para-vice-em-sua-chapa.ghtml"
+        },
+        {
           "veiculo": "g1 Política",
-          "titulo": "Flávio Bolsonaro diz que respeita decisão do PP sobre Tereza Cristina e que seguirá buscando vice: 'Até dia 5 tudo pode acontecer'",
-          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/31/flavio-agradece-tereza-cristina-diz-que-respeita-decisao-do-pp-e-afirma-que-seguira-buscando-vice-ate-o-dia-5.ghtml"
+          "titulo": "Quem é Tereza Cristina, e por que Flávio Bolsonaro a chamou de 'sonho de consumo' para vice em sua chapa",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/31/quem-e-tereza-cristina-e-por-que-flavio-bolsonaro-a-chamou-de-sonho-de-consumo-para-vice-em-sua-chapa.ghtml"
         },
         {
           "veiculo": "Correio Braziliense",
@@ -983,32 +988,199 @@
           "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPcWdtYU5aTUhqcUNXRmx2ZUgyd1lGQ2d6ZjUzSGFQVnB6RkFHeHlfcU9zR1JvLVVfdWl3WDF6bEc1SUwyU2JoM2p5RWMyblBGM1pvcUw2OHFOSjZLZXg3dmM1YkVocnZWQUMyZEwyeks3a1RqWmJ0a3VSM1FHZ2x6QlNueHdXT243TDlEN1I3WGNXYmVrV0hNQy1vX0xmVnBlVmx0bUpKd203SlNRLWU1VEZMRERNYnMtOWd6SlR4N2JfU0NRc1hnRnN3VdIB0AFBVV95cUxNa0VIVVpzaXpmV2hIODRrbkF5YWpVdEU0eWRHQmxxbXZ5Z1BPd0JRaW9YR0QxRDREeDFjbDUzNzh4MHpUWTN6TnhFSFkya0g2UkwxQ0JpVXVXRm14d2dDWmFMU0FmR1hKaUo5OFdRRUhqRk9qdGdVOHRzc2Z2QzR4eHlCdFV1RGNSMjJmVVRRdmNKN2drQkh1d0tzeHd5aDEtc1VEdXVfTzNNSF9HcTV5MGF3V1NHUGNSZ0xCblc2aHQ2aFZ1MHRNQkdmY29sRFJD?oc=5"
         }
       ],
-      "link": "/materia/nc-flavio-bolsonaro-teria-definido-tereza-cristina-como-vice-mas-relatos-.html",
+      "link": "/materia/nc-flavio-bolsonaro-teria-tereza-cristina-como-opcao-para-vice-em-chapa.html",
       "corpo": [
-        "O senador Flávio Bolsonaro estaria em tratativas para a definição de seu candidato a vice-presidente. Segundo matérias jornalísticas, Tereza Cristina teria aceitado compor a chapa após diálogo entre os parlamentares. Contudo, haveria resistência interna no partido Progressistas quanto ao apoio formal ao nome da ex-ministra.",
-        "As informações veiculadas pelas publicações apresentam contradições sobre o desfecho da indicação. Um dos relatos aponta que a candidatura teria sido confirmada mesmo sem o aval da sigla. Por outro lado, outros textos afirmam que o senador respeitaria a decisão partidária e seguiria buscando opções até 5 de agosto.",
-        "A oposição ao nome estaria associada ao dirigente partidário Ciro Nogueira. Tereza Cristina já teria informado aliados sobre a decisão de aceitar o posto na chapa. As negociações seguiriam em andamento até a data limite mencionada."
+        "O senador Flávio Bolsonaro estaria em busca de um nome para a vaga de vice em sua chapa até o dia 5 de agosto. A senadora Tereza Cristina teria sido chamada pelo parlamentar de \"sonho de consumo\" para integrar a candidatura.",
+        "As publicações que veiculam a notícia divergem sobre o atual estágio da negociação. Enquanto textos indicam que o parlamentar ainda estaria buscando o nome e teria apenas agradecido à aliada, outro relato afirma que a escolha já estaria confirmada.",
+        "A definição da vaga envolveria articulações partidárias e resistências internas. O acerto ocorreria mesmo sem o aval do Progressistas e sob oposição do senador Ciro Nogueira, enquanto Tereza Cristina teria avisado a aliados que teria aceitado o convite."
       ],
-      "id": "circ:flavio-bolsonaro-teria-definido-tereza-cristina-como-vice-mas-relatos-",
+      "id": "circ:flavio-bolsonaro-teria-tereza-cristina-como-opcao-para-vice-em-chapa",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Flávio Bolsonaro teria definido Tereza Cristina como vice, mas relatos divergem",
+      "titulo": "Flávio Bolsonaro teria Tereza Cristina como opção para vice em chapa",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T18:41:49.006Z",
-      "hora": "14h41"
+      "iso": "2026-07-31T19:01:15.349Z",
+      "hora": "15h01"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que cinco veículos publicaram declarações atribuídas aos políticos sobre a disputa eleitoral.",
-        "Que a indicação do vice e a mudança na comunicação são relatadas pela imprensa.",
-        "Que declarações sobre possível interferência dos Estados Unidos foram veiculadas."
+        "Seis veículos de imprensa publicaram informações sobre a apuração envolvendo Jaques Wagner.",
+        "O parlamentar se posicionou publicamente dizendo estar tranquilo e que provará inocência."
       ],
       "falta": [
-        "Confirmação oficial das alterações na equipe de comunicação e marketing da pré-campanha.",
-        "Posicionamento oficial dos Estados Unidos referente à acusação de tentativa de interferência.",
-        "Registro formal ou pronunciamento conclusivo dos partidos sobre a composição da chapa."
+        "Confirmação oficial da Polícia Federal ou do Supremo Tribunal Federal sobre os autos.",
+        "Acesso ao teor da decisão do ministro Mendonça referente à derrubada do sigilo.",
+        "Cópia ou validação oficial do organograma citado pelas publicações."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Poder360",
+          "titulo": "Veja o organograma feito pela PF sobre Jaques Wagner",
+          "link": "https://www.poder360.com.br/poder-justica/veja-o-organograma-feito-pela-pf-sobre-jaques-wagner/"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Jaques Wagner diz que provará sua inocência: \"estou muito tranquilo\"",
+          "link": "https://www.congressoemfoco.com.br/noticia/120931/jaques-wagner-diz-que-provara-sua-inocencia--estou-muito-tranquilo"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Caso Master: PF identificou 74 chamadas entre Jaques Wagner e ex-sócio de Vorcaro em 18 meses",
+          "link": "https://g1.globo.com/politica/noticia/2026/07/31/caso-master-de-vinho-caro-a-encontros-entenda-novos-pontos-da-investigacao-da-pf-sobre-jaques-wagner.ghtml"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "PT teme perder o controle da agenda da campanha com casos de Lulinha e Jaques Wagner",
+          "link": "https://www.infomoney.com.br/politica/pt-teme-perder-o-controle-da-agenda-da-campanha-com-casos-de-lulinha-e-jaques-wagner/"
+        },
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "Mendonça derruba sigilo de investigação contra Jaques Wagner",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaWVqU3BQckZMdUEtSThVQjlXcWEwanVNYWZHTXhlWG84c2FtQXFvQ1ZuaE90RjAtNjdnZ21vT2Z3aV95X3J4WmppMjdGbVBNd1JIQWVqaWxPRnVhNjNFQW96R2lQUE5JT1dXUHB2Nnd0bURoU0dqOTNNa0FWTjdQSzVGOF81SndaNVg5THZyREdKdzJ3ZXotMTQ0UkxQNTJw?oc=5"
+        },
+        {
+          "veiculo": "Correio Braziliense",
+          "titulo": "Jaques Wagner diz que provará inocência em investigação sobre o Master",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQlRoNW5ab2xQUVF2bEdsMEYxYXl6TnhsU1UyemJmT2I0U0I4U2lpTmJwWXBsazlBajE3WkRPMnAxUkxQdFptRWRMd1czTFhEY255SlFlRXJ1M0dicmIyYTByZnEzaUZ6aGFqVHpwRWJiWUlXM1dqX0VpRVhvMU1jTmpkVmdVWDVPY1J6Szlza08zWjZZNl9QYWg4aTRobXZSMDVJRFFRQ2ZZNjc0dlV6aHdWb1hpa0cxai16S0pIZWlxQkZ4dlJ1dXhOdG1qNDYyUDFZN9IB2gFBVV95cUxOc3l4dno0YnlobWdVUUlvd3ByN0tkZEpsUWpsY2hnNmIzaXBYeV9fWVVkYm51a0Roemx2WEZRY2VwT0wyQzQ3REJrcVVrZ0syLS1PU0tIXzJkS0pQTDFNQkR4OWNVeGMzVFc4ZFp6eG15ckExTDZiVEF6XzVCazBHaVBpdXNmdlBfdDlxLXZoRFhVT0twRzhIUVJGY0xaNXkyakpxVmIzdmI4R2FvR3U1cWlVTDR2bXlvSi1HWTdaeEJJV0RGbGo2OUZCTjVxR1Z5TW03UEdNblRXZw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-investigacao-sobre-jaques-wagner-teria-sigilo-derrubado-em-caso-do-mas.html",
+      "corpo": [
+        "O parlamentar Jaques Wagner estaria sendo investigado no âmbito do chamado Caso Master, no qual a Polícia Federal teria elaborado um organograma sobre sua suposta atuação. A corporação teria identificado 74 chamadas telefônicas entre ele e um ex-sócio de Vorcaro em um período de 18 meses. O ministro Mendonça teria derrubado o sigilo do procedimento investigativo.",
+        "Diante das acusações, Jaques Wagner teria afirmado estar muito tranquilo e declarado que provará sua inocência. Paralelamente, o Partido dos Trabalhadores temeria perder o controle da agenda da campanha diante dos episódios citados e do caso de Lulinha."
+      ],
+      "id": "circ:investigacao-sobre-jaques-wagner-teria-sigilo-derrubado-em-caso-do-mas",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Investigação sobre Jaques Wagner teria sigilo derrubado em caso do Master",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:02:06.866Z",
+      "hora": "15h02"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que cinco veículos de imprensa publicaram relatos sobre a crise migratória em Ceuta.",
+        "Que as notícias citam a entrada de 60 mil migrantes no enclave espanhol.",
+        "Que publicações apontam a mobilização do Exército espanhol e reações da Itália."
+      ],
+      "falta": [
+        "Confirmação oficial do Governo da Espanha ou de autoridades de saúde.",
+        "Registro em fontes oficiais sobre o total de 57 mortes relatadas.",
+        "Data exata em que o suposto fluxo migratório de 24 horas teria ocorrido.",
+        "Posicionamento oficial do governo do Marrocos ou da União Europeia."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "Entrada de 60 mil migrantes no enclave espanhol de Ceuta desata crise europeia",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNHpuNWpKbDFoT0piYzI0bTVZRlNSU1M2QWMwcVNaTGk2Q0tTQmZFSGtDbWJTVG5oSEVEdlpZRXdDQ0tmUmFqRGVLeEhhM085OEpqc0ZuS2l6ODJEYVF6TWtlOEt2OHZOaFhiY3VkSnJtNjNEbmV3RHEwczdNT0dHY3laNEVsT05iNzY0TW1leWdxLVljSHdSNE1GczhOeDVPRHhyckl4WGhpOTk5MFhsOS1BRnp0N2xy?oc=5"
+        },
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "Governo espanhol denuncia 'violação da integridade territorial' e mobiliza Exército em Ceuta após entrada de 60 mil imigrantes em 24h; 57 pessoas morreram",
+          "link": "https://www.bbc.com/portuguese/articles/c20dprqwdj1o?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
+          "veiculo": "Valor Econômico",
+          "titulo": "Itália suspende regime de livre circulação com a Espanha após crise migratória em Ceuta",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZG1DRmMtSmY1OWoxS3RzUF9rTHRyQ0pQOGYyeXdNZ1B3M1B3THZ6QzFuclFDd1RYdXVjS2RNcnZUMWFmT3IwX3JFdHNHOGVrU184V0pGT2t0aTRFT1haU0wyd29EaWFTTHU1cFdGNlZvaUZqUnJhck00OHdENUowNldRWk1LQUN3UjFSTktFc0NCLXZuSjIxbks2YTJoa1pPOWhRbFg4aE5JVlRNUTVIbUV3WjdEREplbjQwNV9NOE16WVBkeXhTeDI5bFBIOHlwaUtDX1dQUlh2d9IB6AFBVV95cUxOcGFYenY0MnliTEdfODJHWWo2SjlVYkE0Tm1FSkRQc3F1dTYyaGRNTG1qbW1tTmlFWXBMQWRFWkJEeUtIVkxDOExGdFZmNnFydFotSlIxSmQtb2hpMTF2OFdCaFNKOWY5ZTFOZ0ZBR0cwdXNjUFRiRlZnekVjMTROYUNpa2lnakY4aGtVUDdJcFg2QTNfNm05bDE5cnVTd1JjVGh6Wk45bThzaGg1b0YwZGU3UVFhY3hrcWh0LWVwbVRRZnc3elZOVGhjOEdtZUZHbW9qcmtqWjNpMlRmZlRvWVlrLUFLc2J2?oc=5"
+        },
+        {
+          "veiculo": "GZH",
+          "titulo": "Onda de migrantes do Marrocos invade Ceuta, na Espanha",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbExBOGlHaUlydElDSXRTTjFBZTlyMTNvZkdwLUdlOU1fcktsZVAwSDR6Zi1sRGNsNjNWVUY1cjhzVWU5XzcweVp6akx0V3plbmNRTXZoOVRPSTF0UjREcGMzcDRhaDhTQ1V2eE9tRTZFR2hBZUwyU3Y0eVFaNWE3Z0Q1bFkwQ29Wa21mOVN6RjJQS1ltd3FyVlBGTUZJQUstbzlHTEZ3b25yNnZoS0JBbk5oTlhfdDNJRm00MnZBSQ?oc=5"
+        },
+        {
+          "veiculo": "Estadão",
+          "titulo": "Por que a crise em Ceuta se tornou um problema generalizado para a Europa? Entenda",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQM19mUWVxZG82d1pvY1lhc2VGOUsxVTJVQ2xDMTlzeVFqYUZ2NTJpWHBxWUJoS21VeHJtNGRWejdBcFB3d1VWU0lwYUZrSWlFa1MyODZnNF8zYjdyZEV6MEdEMEFveFZZbDZvNlN2ejFUb3dfUDYxYVo0STNEZllFaTZXNDhISFF4a1JBYWFiVmJxMEl2RVZnY3p3MDhmdlh0WUdnel9iYTNpMWJrMkpPaUkwV2lqalREb25OZm43WFbSAcYBQVVfeXFMTm1SZTNrVUY4T2dmczNmLW1nQkJ1aEJXNnlEa0dXOEFmNW1Uemptc0ZxOTdtdGFlNkpqM3F1Q19obEZ3SU5wSlRaaE5rNnpremcxMFNMc0VWcm5GVXh2aW5KdW9kR3QzQnZEYm9hWmFmYk1JZm9tVTJQamJTdWtMSWtaYkdoZzQ4YURackh0TDFrYXJjcy1MWkt0YUVIWGRQcXJtMEN2TjV6ZHRULVJpRmt5WkhLWUw2UUh2cVhYVXZoaVNyT0tR?oc=5"
+        }
+      ],
+      "link": "/materia/nc-entrada-de-60-mil-migrantes-em-enclave-espanhol-teria-gerado-crise-na-.html",
+      "corpo": [
+        "Uma onda de cerca de 60 mil migrantes vindos do Marrocos teria entrado no enclave espanhol de Ceuta. O episódio teria gerado uma crise migratória de proporções europeias.",
+        "Segundo as publicações, o fluxo teria ocorrido em um intervalo de 24 horas e teria resultado na morte de 57 pessoas. O Governo espanhol teria denunciado violação da integridade territorial e mobilizado o Exército na região.",
+        "A Itália teria suspendido o regime de livre circulação com a Espanha em decorrência do evento. A situação estaria sendo tratada como um problema generalizado para o continente europeu."
+      ],
+      "id": "circ:entrada-de-60-mil-migrantes-em-enclave-espanhol-teria-gerado-crise-na-",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Entrada de 60 mil migrantes em enclave espanhol teria gerado crise na Europa",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:03:01.843Z",
+      "hora": "15h03"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que ao menos cinco veículos de imprensa publicaram matérias sobre o assunto.",
+        "Que as alegações citam atuações da Polícia Federal e menções ao INSS.",
+        "Que nomes de autoridades públicas e políticos foram associados aos relatos."
+      ],
+      "falta": [
+        "Confirmação oficial do STF ou do ministro Mendonça sobre as decisões citadas.",
+        "Manifestação formal da Polícia Federal ou dos envolvidos mencionados.",
+        "Acesso público a documentos judiciais ou número oficial do procedimento."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Migalhas",
+          "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSWxRZEZiREp6cmlxX182TzZiMzNDc0RlU3I3RkxrZzRKelZGU2J2MlBCNXlaS1RKWmVrVW93dG9OdHlCYkphZlViZ0xRQlkySTQxcVJCaEhsek9vQWNuS1hkaWRuZHhhdk1VSjFLTHBqeWt3dV9PZGhMdW4xSGxQb1ZTYk0ydzdZYjBHUmEySTBMUVJ3OTE3NUk2VE9rOHhGUlkyWTBrbWxvX0xXVEJB?oc=5"
+        },
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "Lulinha investigado por tráfico de influência e corrupção: do INSS à Lava Jato, o que pesa contra o filho de Lula",
+          "link": "https://www.bbc.com/portuguese/articles/c4g8wvvjdgjo?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "Mendonça derruba sigilo de investigação contra Jaques Wagner",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaWVqU3BQckZMdUEtSThVQjlXcWEwanVNYWZHTXhlWG84c2FtQXFvQ1ZuaE90RjAtNjdnZ21vT2Z3aV95X3J4WmppMjdGbVBNd1JIQWVqaWxPRnVhNjNFQW96R2lQUE5JT1dXUHB2Nnd0bURoU0dqOTNNa0FWTjdQSzVGOF81SndaNVg5THZyREdKdzJ3ZXotMTQ0UkxQNTJw?oc=5"
+        },
+        {
+          "veiculo": "Correio Braziliense",
+          "titulo": "Caiado critica Lula após investigação da PF contra Lulinha: 'O rei protege o príncipe'",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQc0dPWnczT1lKTnRzSVJCU2p0XzhxWndRNFJPY0h2TVJqSk9aWi0tLUVxZ3pXVlNfa3VpZERBVWlvZ21wYW5RSDJvTVk4Q1g4ZFBMWkpoUWJWeC1EbGZPMnlhTXhmX2tZTmtSdHpwRFFWcXVOWkllV21iUzFvU2dWSzBQSV90NURsTjRzM0s4Z2R6bDhCcHk1Z0twSXNpZGZFV282RWxKVjFEM1lmaUJVXzdpSVlqakVtX3pWSGNZWG42V1lH0gHKAUFVX3lxTE9IUllDNEdNWXhJWEhyN2dQVV9KWGtRY2FTUWFSQV85UkhFZ1hKMzFCTzU1UTZ6Y19xZWZwVXdsa2lIcFgyeWU5Xy1mVDhpMzd5b3BHcjR5RHVyXzk3WnJReE5sbWNnTl9NRUljU1I2WlVDWGtlMnc4dDRmQXo0OXFLVkxoOUJlZWQ5NzhVZTlqZTE4dWNzTU4ta2ZOSmFibC1DOHFuNWRsVHZGUnRMdHU0RFROaGFocTlhLU9rdEtzd09jS3lqOWw2c0E?oc=5"
+        },
+        {
+          "veiculo": "Estadão",
+          "titulo": "PF tentou driblar Mendonça no caso Lulinha",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaFM5S2szMllOdzZtMlFlLXNKSXhKLU02Z0RfSUZTVnVlLTc5SnpMM3JuSkJ5d1Zhd2QzSDZFOWVIWW9senFXSjJGMHE1bHVpNlI2WmdNOFdTR25wRVVpckh4VFlVNTVYcG12Y2FlY084bFlJNzdMM0tsRHVWN2Z3NDdKOFV3dXJyS3VoS0dVTlJ1YXJTTlFSMdIBngFBVV95cUxQWjRHRS1VRGJGS3ZfcWgtYTZZRVowd1B5TUdkNDd2NWNPS3JWUnVzLURPM09xdGlrdlVzX1dsekFCS2MxbkVSZWpVZGxoTW14WlBTeXhjME5ycFZfVmZQaDdDYmxuanB0SjFaNmtlbWl1Sy11SHl3aEpFRlgxbjVSZkd6a1dsUllhaXJMUFZIa0p3UjhyRldiMkZ6WVBiZw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-ministro-teria-autorizado-investigacao-envolvendo-filho-do-presidente-.html",
+      "corpo": [
+        "Veículos de imprensa relatam que o ministro Mendonça teria autorizado uma investigação da Polícia Federal contra o filho do presidente Lula. A apuração envolveria suspeitas de tráfico de influência e corrupção, citando assuntos desde o INSS até a Lava Jato.",
+        "As publicações indicam ainda que o ministro teria derrubado o sigilo de uma investigação referente a Jaques Wagner. Segundo os relatos veiculados, a Polícia Federal teria tentado contornar a atuação do ministro na condução do caso.",
+        "No âmbito político, o governador Caiado teria feito críticas ao presidente Lula em razão do episódio. As alegações permanecem restritas aos relatos veiculados pela imprensa."
+      ],
+      "id": "circ:ministro-teria-autorizado-investigacao-envolvendo-filho-do-presidente-",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Ministro teria autorizado investigação envolvendo filho do presidente Lula",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T19:03:57.628Z",
+      "hora": "15h03"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que as alegações estão sendo veiculadas por quatro veículos de imprensa.",
+        "Que declarações atribuídas a Flávio Bolsonaro tratam da estruturação da campanha e da vice.",
+        "Que falas creditadas a Lula citam suposta tentativa de interferência dos Estados Unidos."
+      ],
+      "falta": [
+        "Confirmação oficial do comando da pré-campanha sobre as trocas na equipe de comunicação.",
+        "Manifestação oficial do partido PP quanto à decisão envolvendo Tereza Cristina.",
+        "Registros oficiais ou gravações na íntegra das declarações atribuídas aos políticos citados.",
+        "Posicionamento oficial do governo dos Estados Unidos referente às acusações de interferência."
       ],
       "ondeCirculou": [
         {
@@ -1022,11 +1194,6 @@
           "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/31/flavio-agradece-tereza-cristina-diz-que-respeita-decisao-do-pp-e-afirma-que-seguira-buscando-vice-ate-o-dia-5.ghtml"
         },
         {
-          "veiculo": "CartaCapital",
-          "titulo": "Flávio Bolsonaro faz nova troca de marqueteiro e Duda Lima assumirá campanha",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOT0NUQlduTDk0bXBnOVl0cnhHYzRfcExOaHBEYUtFcTh1OGJUS3RKYXJVcndWdWYzSWNYRV8yakh1bTl5UVlsS1dzT0oxd2VmYWY4cERJS1ZjSm1oSjA4MDQ0T1hEUXh6ZnBwX0VIZENvWHkzMjE1Sk9fbEZkQlFFT3VOdlNaeFowRkFxdU1HYThVZWtGSXYtT3FUdlpYR1dzeTJBLTJLSURrOGRnTUFoUkIwUHpQOFVfcnc?oc=5"
-        },
-        {
           "veiculo": "Valor Econômico",
           "titulo": "Flávio Bolsonaro troca comando da comunicação da campanha",
           "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOekdHQ21BaUJpU2ZZMGhDWnJ0YzRIT0UxQWQ5dXA1cHkwbXdoUmJhVHFGUlkwVi1WNnZ0QU1XQjQ4UHhubUY0Q3hxeGsydVJCdUZHbk5TN3JPdEJEWDRaSHJKU3JrOEVVTkpGRGQwMG1mNWdYaEUzaTNHaXdxRDlRbmtSRzlGTFNRaG02TnIwY1puS1E2bmNjQXFMUU5SeGN1ODRaVmJsMEJaZzBPdl9KcUZUaVFCelVKS3kxZXgyRHBMQWdQUDhhNNIB1wFBVV95cUxOX2FWTWtPODc3WlFfVGtCYjlpanRFSGctUU1NTUt6dHJhSUxROWVBTEhKb2J5dWJSM0hudUd4b3FaTDlnWF9kbkYwRXo4bVYxN25TMDAzUlJLVXdfSWVMVXVzWWZjQWlKbDdPOHl5VzZPVHZzbV9sLVduZVBqYWRYSnhDLWpCUTB1aHpzU09XTnNCa255S04wbS1DQkFnbDFDRXVPaE1IYkZMUDJ5dTE1am9HeXRUcm5oVFE0Vi1JZV9MNEhhRHVHRGhJQ29wVmI3REpaUE1aRQ?oc=5"
@@ -1037,170 +1204,103 @@
           "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcjJhWjMwLWd4SjBxOHU1R3pMbDlqLUNYejM1dVcxQUU2RXdzOTlUNzl1T0hRNV9YTHZKZDVhSVoxSGN1TVBud1ZnRzJuOEJKaXlxRElBVjJzcHg0ZTUyVHIzSXotWmk5R0wzTGVYUDI3X3hUV29PYlpRN3VaaG1VNmtUbHpuWTVVcDd6aXNnLWJmMUVtRHZBUXVKUnlfV05jQjJRUG9hcUo4NTRQemkyZUIzM2F2NGpZMko3emhnMG16WTRS?oc=5"
         }
       ],
-      "link": "/materia/nc-flavio-bolsonaro-estaria-alterando-comunicacao-e-buscando-vice-para-ca.html",
+      "link": "/materia/nc-flavio-bolsonaro-montaria-equipe-de-campanha-e-lula-citaria-ingerencia.html",
       "corpo": [
-        "O senador Flávio Bolsonaro estaria promovendo mudanças na estrutura de sua campanha e buscando definição para a vaga de vice. O parlamentar teria declarado que respeita a posição do PP em relação a Tereza Cristina e que manteria as articulações até o dia 5. Ao mesmo tempo, o presidente Lula teria dito que os Estados Unidos tentariam interferir no pleito para beneficiar o senador.",
-        "De acordo com os veículos que publicaram as informações, o comando do marketing da campanha passaria a ser assumido por um novo profissional do setor. As matérias também indicam que o pré-candidato estaria afirmando a formação de um grupo amplo de trabalho para o período eleitoral."
+        "O senador Flávio Bolsonaro estaria reestruturando a equipe de sua campanha eleitoral e buscando a definição de um candidato a vice. O parlamentar teria afirmado a intenção de montar um grande time e teria trocado o comando da comunicação de sua articulação.",
+        "Segundo as publicações, as negociações para a vaga de vice respeitariam a decisão do PP referente à senadora Tereza Cristina. Os relatos indicam que a busca por uma definição prosseguiria até o dia 5.",
+        "Paralelamente, o presidente Lula teria declarado que os Estados Unidos tentariam interferir nas eleições brasileiras. A suposta atuação estrangeira visaria favorecer a candidatura de Flávio Bolsonaro."
       ],
-      "id": "circ:flavio-bolsonaro-estaria-alterando-comunicacao-e-buscando-vice-para-ca",
+      "id": "circ:flavio-bolsonaro-montaria-equipe-de-campanha-e-lula-citaria-ingerencia",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Flávio Bolsonaro estaria alterando comunicação e buscando vice para campanha",
+      "titulo": "Flávio Bolsonaro montaria equipe de campanha e Lula citaria ingerência dos EUA",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T18:42:47.225Z",
-      "hora": "14h42"
+      "iso": "2026-07-31T19:04:50.135Z",
+      "hora": "15h04"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [
-        "Que a história está sendo publicada por cinco veículos da imprensa.",
-        "Que a decisão é atribuída ao ministro André Mendonça, do STF.",
-        "Que o pedido de abertura de inquérito teria partido da Polícia Federal."
-      ],
-      "falta": [
-        "Número de registro oficial do procedimento no Supremo Tribunal Federal.",
-        "Manifestação pública ou nota oficial da Polícia Federal ou do STF.",
-        "Declaração oficial da defesa do citado nas publicações.",
-        "Data exata em que a decisão teria sido proferida."
-      ],
+      "seSabe": [],
+      "falta": [],
       "ondeCirculou": [
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "STF autoriza inquérito contra Lulinha por suposto tráfico de influência",
-          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPYkw3NHoxZkQzZFhjX2g2bEhvRHYyWFhSN1d5UDZuVlJ2VFgwQXVuYzhiQThBN2RsSzZKUVFXeFFLcVU5Nzl0T1FWTzc4QmJBMjNoa0RkQ0luRFdiNVRVOG1wLUYzWmlac2VMbkVJVkhuS0QwcmZSaG9CQnhIWmFndnZKcVhzSXhnUW9SenRFRXh1TW5QRVBocGs0ekVVNHlKaTBlenE4UzhmOWlheVQyUmNSZVU5dGtiWjFhdVZXc0R2czZnaV81YTA4VjRXbXIxcVdmQ0JB0gHbAUFVX3lxTE5kNE9IM0xQWjZ1dWlVNVd6MEVfV2F4Y1hKenJXNkVkVmtpMmplWlBGamRBZExLWE1VTkhKQVpOM0ZPTExBWE1WeUpubUZvWnBpUkVqSk9lZ3lqUUcxWDRUUHpRUDdteXZRSnpOVjFsUnlhTWw5dUVMNEtmMUQyclZqdzBfbVNxT0k5QW5LeWxVLTVqTWs4VlEtRlJsWV8xUzE4TDVjR0ZJQ09KT2RwMnRPM3BnS2lhOHg2WmJ3bEhvblVfcWlBbU9qNnZjTGRSUEhHRHNLZW4wOHM3bw?oc=5"
-        },
         {
           "veiculo": "BBC Brasil",
-          "titulo": "Lulinha investigado por tráfico de influência e corrupção: do INSS à Lava Jato, o que pesa contra o filho de Lula",
-          "link": "https://www.bbc.com/portuguese/articles/c4g8wvvjdgjo?at_medium=RSS&amp;at_campaign=rss"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Encontro fortuito: Inquérito contra Lulinha tem origem em fraude do INSS",
-          "link": "https://www.cnnbrasil.com.br/politica/encontro-fortuito-inquerito-contra-lulinha-tem-origem-em-fraude-do-inss/"
-        },
-        {
-          "veiculo": "Estadão",
-          "titulo": "Pedido da PF para abrir inquérito contra Lulinha gera estranhamento no STF; veja bastidores",
-          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOc2otRzZTdGVoRFpSTms4V0szMlhjdXBOMHFpUmJZZEhzVC1tTmduTENEOExqOFRrZTNLVFNzRXlSQm1McTVlcGxqQ2lKd0ZIVUgwZ2s3bk1Pa0FmaUhOeVlMQUluTWk1WkRjT280TDdsS0FHSGdqbGVpYXVfX1BLYlM5dDJ4UG4tMHFmemRaZjZLc2xrRndkSjhsQ3FCd3FVNnFqQV9CS3c3WHN4a3FPamd3LXdKM0V5Rko0b3VKWGJueTlUdWRwUUpXeUZLeDhrbm00N0JPc2JWYXJ5SXfSAeMBQVVfeXFMTnhGd090cTl2Qy12WW42MkZvYWhwX2x4Zi1OSHQxY0FKWmx0ZVJBSldmSjdfMldXVkJRQS1FdUk3QTllaVNfZl83N1FHbmlxdWk1OXRhWFRtNjVYV2dzUHJ1VUlsZjNlU1FSMjBHMG1pbV9oSGltTGhjREtZZ1hiLVU3SDBhdmtWcm5ZRTlCR20tWXpHZklDTmVLOGtpU2c1aTdUNXF3MW9lUS1GM0Jic1Jwd1NyX3pFQjR3c3RmYy1BWFJoWk1FSGpJMHdBYnhjeVpCQnljMU91ZU5pRjlZeVQ0VkE?oc=5"
-        },
-        {
-          "veiculo": "Migalhas",
-          "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSWxRZEZiREp6cmlxX182TzZiMzNDc0RlU3I3RkxrZzRKelZGU2J2MlBCNXlaS1RKWmVrVW93dG9OdHlCYkphZlViZ0xRQlkySTQxcVJCaEhsek9vQWNuS1hkaWRuZHhhdk1VSjFLTHBqeWt3dV9PZGhMdW4xSGxQb1ZTYk0ydzdZYjBHUmEySTBMUVJ3OTE3NUk2VE9rOHhGUlkyWTBrbWxvX0xXVEJB?oc=5"
-        }
-      ],
-      "link": "/materia/nc-stf-teria-autorizado-investigacao-sobre-filho-de-lula-por-trafico-de-i.html",
-      "corpo": [
-        "O Supremo Tribunal Federal teria autorizado a abertura de um inquérito para investigar um dos filhos do presidente Luiz Inácio Lula da Silva. A decisão teria sido proferida pelo ministro André Mendonça e visaria apurar a suposta prática de tráfico de influência.",
-        "A apuração teria surgido a partir de dados sobre fraudes no Instituto Nacional do Seguro Social, identificados por meio do mecanismo conhecido como encontro fortuito. Segundo as publicações, a Polícia Federal teria encaminhado a solicitação ao tribunal, citando também desdobramentos relacionados a suspeitas de corrupção e à Operação Lava Jato.",
-        "O pedido formulado pela Polícia Federal teria provocado reações de estranhamento nos bastidores da corte. Até o momento, o trâmite não consta formalmente em registros públicos consultáveis."
-      ],
-      "id": "circ:stf-teria-autorizado-investigacao-sobre-filho-de-lula-por-trafico-de-i",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "STF teria autorizado investigação sobre filho de Lula por tráfico de influência",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T18:43:45.064Z",
-      "hora": "14h43"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a informação está sendo veiculada por quatro publicações da imprensa.",
-        "Que Ceuta é uma cidade espanhola localizada no continente africano.",
-        "Que a onda migratória relatada no local teria origem no Marrocos.",
-        "Que há divergência entre os relatos sobre ser suspensão de acordo ou de regime."
-      ],
-      "falta": [
-        "Confirmação oficial por parte do governo da Itália sobre a suspensão alegada.",
-        "Posicionamento oficial das autoridades da Espanha e do Marrocos sobre o ocorrido.",
-        "Documento oficial ou data precisa do início da vigência da suposta medida.",
-        "Dados oficiais do contingente de migrantes que teriam entrado no território."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Valor Econômico",
-          "titulo": "Itália suspende regime de livre circulação com a Espanha após crise migratória em Ceuta",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZG1DRmMtSmY1OWoxS3RzUF9rTHRyQ0pQOGYyeXdNZ1B3M1B3THZ6QzFuclFDd1RYdXVjS2RNcnZUMWFmT3IwX3JFdHNHOGVrU184V0pGT2t0aTRFT1haU0wyd29EaWFTTHU1cFdGNlZvaUZqUnJhck00OHdENUowNldRWk1LQUN3UjFSTktFc0NCLXZuSjIxbks2YTJoa1pPOWhRbFg4aE5JVlRNUTVIbUV3WjdEREplbjQwNV9NOE16WVBkeXhTeDI5bFBIOHlwaUtDX1dQUlh2d9IB6AFBVV95cUxOcGFYenY0MnliTEdfODJHWWo2SjlVYkE0Tm1FSkRQc3F1dTYyaGRNTG1qbW1tTmlFWXBMQWRFWkJEeUtIVkxDOExGdFZmNnFydFotSlIxSmQtb2hpMTF2OFdCaFNKOWY5ZTFOZ0ZBR0cwdXNjUFRiRlZnekVjMTROYUNpa2lnakY4aGtVUDdJcFg2QTNfNm05bDE5cnVTd1JjVGh6Wk45bThzaGg1b0YwZGU3UVFhY3hrcWh0LWVwbVRRZnc3elZOVGhjOEdtZUZHbW9qcmtqWjNpMlRmZlRvWVlrLUFLc2J2?oc=5"
-        },
-        {
-          "veiculo": "Exame",
-          "titulo": "Itália suspende acordo de livre circulação com Espanha após crise migratória em Ceuta",
-          "link": "https://exame.com/mundo/italia-suspende-acordo-de-livre-circulacao-com-espanha-apos-crise-migratoria-em-ceuta/"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "Por que a africana Ceuta é uma cidade espanhola",
-          "link": "https://www.bbc.com/portuguese/articles/clye3rzer8mo?at_medium=RSS&amp;at_campaign=rss"
-        },
-        {
-          "veiculo": "GZH",
-          "titulo": "Onda de migrantes do Marrocos invade Ceuta, na Espanha",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbExBOGlHaUlydElDSXRTTjFBZTlyMTNvZkdwLUdlOU1fcktsZVAwSDR6Zi1sRGNsNjNWVUY1cjhzVWU5XzcweVp6akx0V3plbmNRTXZoOVRPSTF0UjREcGMzcDRhaDhTQ1V2eE9tRTZFR2hBZUwyU3Y0eVFaNWE3Z0Q1bFkwQ29Wa21mOVN6RjJQS1ltd3FyVlBGTUZJQUstbzlHTEZ3b25yNnZoS0JBbk5oTlhfdDNJRm00MnZBSQ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-italia-teria-suspendido-livre-circulacao-com-a-espanha-apos-crise-em-c.html",
-      "corpo": [
-        "A Itália teria suspendido o regime de livre circulação com a Espanha. A decisão teria ocorrido em decorrência de uma crise migratória registrada na cidade de Ceuta.",
-        "Segundo os veículos que publicaram a informação, a localidade espanhola em território africano teria sido alvo de uma onda de migrantes vindos do Marrocos. As publicações divergem pontualmente quanto à natureza da medida adotada pela Itália, citando a suspensão de um regime de livre circulação em alguns casos e de um acordo em outros.",
-        "O cenário colocaria em debate as políticas migratórias e o controle de fronteiras entre os países europeus. A situação também envolveria o contexto geopolítico da localidade de Ceuta, identificada como uma cidade espanhola no continente africano."
-      ],
-      "id": "circ:italia-teria-suspendido-livre-circulacao-com-a-espanha-apos-crise-em-c",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Itália teria suspendido livre circulação com a Espanha após crise em Ceuta",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T18:44:37.484Z",
-      "hora": "14h44"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que os relatos convergem quanto ao valor e ao motivo alegado."
-      ],
-      "falta": [
-        "Confirmação ou manifestação oficial por parte do órgão do Poder Judiciário.",
-        "Número do processo e identificação da vara ou tribunal responsável.",
-        "Data em que a decisão teria sido proferida.",
-        "Posicionamento oficial das partes quanto ao recebimento da intimação."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "UOL",
-          "titulo": "Nikolas terá de pagar R$ 20 mil por chamar PT de 'Partido dos Traficantes'",
-          "link": "<![CDATA[https://noticias.uol.com.br/politica/ultimas-noticias/2026/07/31/partido-dos-traficantes-justica-condena-nikolas-ferreira-a-indenizar-pt.ghtm]]>"
+          "titulo": "Guerra do Paraguai: como fala de Lula reacendeu crise diplomática — e o que historiadores contestam sobre o conflito",
+          "link": "https://www.bbc.com/portuguese/articles/cgmkwrllrm4o?at_medium=RSS&amp;at_campaign=rss"
         },
         {
           "veiculo": "Congresso em Foco",
-          "titulo": "Nikolas pagará R$ 20 mil por chamar PT de \"Partido dos Traficantes\"",
-          "link": "https://www.congressoemfoco.com.br/noticia/120935/nikolas-pagara-r-20-mil-por-chamar-pt-de-partido-dos-traficantes"
+          "titulo": "Paraguai entrega nota de repúdio ao Brasil por fala de Lula",
+          "link": "https://www.congressoemfoco.com.br/noticia/120938/paraguai-entrega-nota-de-repudio-ao-brasil-por-fala-de-lula"
         },
         {
-          "veiculo": "g1 Política",
-          "titulo": "Justiça condena Nikolas Ferreira a pagar indenização de R$ 20 mil por chamar PT de ‘Partido dos Traficantes’",
-          "link": "https://g1.globo.com/politica/noticia/2026/07/31/justica-condena-nikolas-ferreira-a-pagar-indenizacao-ao-pt.ghtml"
+          "veiculo": "UOL",
+          "titulo": "Paraguai manifesta rejeição a declarações de Lula sobre guerra no século XIX",
+          "link": "<![CDATA[https://noticias.uol.com.br/ultimas-noticias/afp/2026/07/31/paraguai-manifesta-rejeicao-a-declaracoes-de-lula-sobre-guerra-no-seculo-xix.htm]]>"
+        },
+        {
+          "veiculo": "blogs.correiobraziliense.com.br",
+          "titulo": "Falar sobre a Guerra do Paraguai é um dos pecados capitais da nosssa diplomacia",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYmtOWnlweFowc180QndwY0lscEVWMjRtTWdxcHZvaFItYmdDQWlwbWNiempsVmdqMDdfMGprVmFsODdYa2ttQTFFMlJPX2FOQTQtSDlfbmdNd1h2dlJMNW55Ui1maGd4RjU4T2NtdGlCemRObkxOeUlrRTNiSE5JMC1HR2tENWgwYUhndWxXSXV6X2hsSHZRSk5jUGEtMWU4TEdQd0hoV2Q4aGx3emxBUDlyVkpJU3gyWmRrcHZWdGZZMHPSAcgBQVVfeXFMTm1Mb2xwSHNwNUg2ZUpGdzM4dnNKNlFIb0cwb3R2eHNEQmNZSm5seUFWMWY2NDR1b1RlQklDcERUZ19sZ1ZOaHo0aTBEdkJoWHdEOEItaEZPQnNScDNEY09WRmszekU3NklBcTVvdzNtY2VRN1FxeFp0TUR5TDdIeGRDNFI0VjZYQlBjaDhfeDBkRHpsUnAwM0RwYnFLMmRoWUZFYXNNQzJaYzRUekhhTHo3NnJacFdxNUVTV3B3YWhsbWVPS0FWMXk?oc=5"
         }
       ],
-      "link": "/materia/nc-nikolas-ferreira-teria-sido-condenado-a-pagar-r-20-mil-por-declaracao-.html",
+      "link": "/materia/nc-paraguai-teria-entregue-nota-de-repudio-ao-brasil-apos-fala-de-lula-so.html",
       "corpo": [
-        "O parlamentar Nikolas Ferreira teria sido condenado pela Justiça ao pagamento de uma indenização no valor de R$ 20 mil ao PT. A sanção estaria associada ao fato de o deputado ter se referido à legenda como 'Partido dos Traficantes'.",
-        "As publicações que veiculam o relato tratam a quantia e a motivação da penalidade de maneira convergente. Uma das matérias aponta a atuação direta do Poder Judiciário na condenação, enquanto as demais destacam a obrigação financeira atribuída ao congressista."
+        "Declarações do presidente Lula sobre a Guerra do Paraguai teriam reacendido uma crise diplomática entre o Brasil e o país vizinho. Segundo os veículos que divulgaram a notícia, a fala de Lula sobre o conflito no século XIX teria gerado manifestação de rejeição por parte do governo paraguaio. As publicações divergem sobre o formato da resposta diplomática, citando a entrega formal de uma nota de re"
       ],
-      "id": "circ:nikolas-ferreira-teria-sido-condenado-a-pagar-r-20-mil-por-declaracao-",
+      "id": "circ:paraguai-teria-entregue-nota-de-repudio-ao-brasil-apos-fala-de-lula-so",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Nikolas Ferreira teria sido condenado a pagar R$ 20 mil por declaração sobre o PT",
+      "titulo": "Paraguai teria entregue nota de repúdio ao Brasil após fala de Lula sobre guerra",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T18:45:32.876Z",
-      "hora": "14h45"
+      "iso": "2026-07-31T19:05:48.544Z",
+      "hora": "15h05"
     }
   ],
   "pautas": [
+    {
+      "titulo": "Flávio agradece Tereza Cristina e busca vice até 5 de agosto",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "g1",
+        "g1 Política",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Flávio confirma Tereza Cristina como vice, mesmo sem aval do Progressistas",
+      "veiculo": "Correio Braziliense",
+      "quentura": 9,
+      "tambemEm": [
+        "g1",
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Quem é Tereza Cristina, e por que Flávio Bolsonaro a chamou de 'sonho de consumo' para vice em sua chapa",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "g1 Política",
+        "Poder360",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Tereza Cristina avisa a aliados que aceitou ser vice de Flávio; Ciro Nogueira resiste",
+      "veiculo": "Estadão",
+      "quentura": 8,
+      "tambemEm": [
+        "g1",
+        "g1 Política",
+        "Poder360"
+      ]
+    },
     {
       "titulo": "Veja o organograma feito pela PF sobre Jaques Wagner",
       "veiculo": "Poder360",
@@ -1213,24 +1313,13 @@
       ]
     },
     {
-      "titulo": "Flávio agradece Tereza Cristina e busca vice até 5 de agosto",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 7,
-      "tambemEm": [
-        "g1 Política",
-        "Correio Braziliense",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Flávio confirma Tereza Cristina como vice, mesmo sem aval do Progressistas",
+      "titulo": "Jaques Wagner diz que provará inocência em investigação sobre o Master",
       "veiculo": "Correio Braziliense",
       "quentura": 7,
       "tambemEm": [
+        "Congresso em Foco",
         "g1 Política",
-        "Poder360",
-        "Estadão"
+        "Poder360"
       ]
     },
     {
@@ -1244,34 +1333,13 @@
       ]
     },
     {
-      "titulo": "Jaques Wagner diz que provará inocência em investigação sobre o Master",
-      "veiculo": "Correio Braziliense",
+      "titulo": "Entrada de 60 mil migrantes no enclave espanhol de Ceuta desata crise europeia",
+      "veiculo": "CartaCapital",
       "quentura": 6,
       "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Tereza Cristina avisa a aliados que aceitou ser vice de Flávio; Ciro Nogueira resiste",
-      "veiculo": "Estadão",
-      "quentura": 6,
-      "tambemEm": [
-        "g1 Política",
-        "Poder360",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro diz que está montando “grande time” para campanha",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "g1 Política",
-        "CartaCapital",
-        "Valor Econômico"
+        "BBC Brasil",
+        "Valor Econômico",
+        "GZH"
       ]
     },
     {
@@ -1280,8 +1348,83 @@
       "editoria": "brasil",
       "quentura": 5,
       "tambemEm": [
+        "g1",
         "Poder360",
-        "Metrópoles",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro diz que Tereza Cristina aceitou convite para vice, mesmo com o partido da senadora descartando chapa",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "g1",
+        "Poder360",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
+      "veiculo": "Migalhas",
+      "quentura": 5,
+      "tambemEm": [
+        "BBC Brasil",
+        "CartaCapital",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "4 perguntas para entender a nova crise migratória em Ceuta, enclave espanhol na África",
+      "veiculo": "BBC Brasil",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "CartaCapital",
+        "Valor Econômico",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Quem é Tereza Cristina, e por que Flávio Bolsonaro a chamou de 'sonho de consumo' para vice em sua chapa",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1",
+        "Poder360",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro diz que está montando “grande time” para campanha",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 Política",
+        "Valor Econômico",
+        "noticias.r7.com"
+      ]
+    },
+    {
+      "titulo": "Itália suspende regime de livre circulação com a Espanha após crise migratória em Ceuta",
+      "veiculo": "Valor Econômico",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "CartaCapital",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Cúpula do PP avalia que Tereza Cristina aceitou convite de Flávio porque sabia que partido barraria chapa",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1",
+        "Poder360",
         "Correio Braziliense"
       ]
     },
@@ -1297,96 +1440,12 @@
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro diz que Tereza Cristina aceitou convite para vice, mesmo com o partido da senadora descartando chapa",
+      "titulo": "Progressistas adota neutralidade, e Tereza Cristina não será vice de Flávio Bolsonaro",
       "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "Poder360",
-        "Correio Braziliense",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "STF autoriza inquérito contra Lulinha por suposto tráfico de influência",
-      "veiculo": "Correio Braziliense",
-      "quentura": 4,
-      "tambemEm": [
-        "BBC Brasil",
-        "CNN Brasil",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
-      "veiculo": "Migalhas",
-      "quentura": 4,
-      "tambemEm": [
-        "BBC Brasil",
-        "CartaCapital",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "PF indica que Jaques Wagner tinha dinheiro investido no Master",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Política",
-        "CartaCapital",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Por que a africana Ceuta é uma cidade espanhola",
-      "veiculo": "BBC Brasil",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "GZH",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Itália suspende regime de livre circulação com a Espanha após crise migratória em Ceuta",
-      "veiculo": "Valor Econômico",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "BBC Brasil",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Cúpula do PP avalia que Tereza Cristina aceitou convite de Flávio porque sabia que partido barraria chapa",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Poder360",
-        "Correio Braziliense",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Caso Master: PF identificou 74 chamadas entre Jaques Wagner e ex-sócio de Vorcaro em 18 meses",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Poder360",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Jaques Wagner diz que provará sua inocência: \"estou muito tranquilo\"",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Política",
+        "g1",
         "Poder360",
         "Correio Braziliense"
       ]
