@@ -12,6 +12,7 @@ import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCir
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
+import { lerDiario, ASSOCIACOES } from './diario.mjs';
 import { OFICIAIS } from './oficiais.mjs';
 
 // A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
@@ -445,6 +446,39 @@ if (promovidos.length) {
   console.log(`\n  2d. PROMOVIDOS — ${promovidos.length} releases oficiais que vieram pela pauta`);
   for (const x of promovidos.slice(0, 8)) console.log(`  ok    ${x.veiculo.slice(0,26).padEnd(28)} ${x.titulo.slice(0,44)}`);
   console.log(`     ${F.itens.length} itens de fonte livre no total`);
+}
+
+/* ===================== 2e. DIARIO OFICIAL DOS MUNICIPIOS ==================
+   A unica fonte local que nao depende de assessoria funcionar. A prefeitura
+   pode ter o site quebrado — e a de Varzea Grande tem — mas e obrigada por lei
+   a publicar aqui, e publica todo dia util.
+
+   Ato oficial esta fora da protecao autoral (Lei 9.610/98, art. 8, IV), entao
+   entra direto como fonte livre, sem as travas de licenca das outras.        */
+if (!GERAL && ASSOCIACOES[UF]) {
+  console.log(`\n  2e. DIARIO OFICIAL DOS MUNICIPIOS — ${ASSOCIACOES[UF].entidade}`);
+  try {
+    const d = await lerDiario(UF, { max: 14, orcamentoMs: 70000 });
+    if (d.erro) {
+      console.log(`  aviso ${d.erro}`);
+    } else {
+      console.log(`  ok    ${d.lidas} atos no indice · ${d.descartadas} de rotina descartados · ${d.itens.length} abertos`);
+      for (const i of d.itens) {
+        F.itens.push({
+          ...i,
+          editoria: 'regional',
+          uf: UF,
+          resumo: i.titulo,
+          origemLink: i.link,
+          origemNome: i.orgao
+        });
+        console.log(`        ${String(i.peso).padStart(2)} ${i.tema.padEnd(11)} ${(i.municipioBruto||'?').slice(0,16).padEnd(18)} ${i.titulo.slice(0,40)}`);
+      }
+      if (d.itens.length) console.log(`     ${F.itens.length} itens de fonte livre no total`);
+    }
+  } catch (e) {
+    console.log('  aviso diario: ' + String(e.message).slice(0, 50));
+  }
 }
 
 console.log('\n  3. CRUZAMENTO');
