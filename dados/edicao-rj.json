@@ -1,27 +1,36 @@
 {
   "uf": "rj",
   "estado": "Rio de Janeiro",
-  "gerado": "2026-07-31T14:05:32.492Z",
-  "modelo": "gemini-flash-latest",
+  "gerado": "2026-07-31T18:48:19.581Z",
+  "modelo": "gemini-2.0-flash-lite-001",
   "numeros": {
-    "pauta": 207,
-    "fonteLivre": 29,
-    "confirmadas": 17,
-    "publicadas": 19,
+    "pauta": 209,
+    "fonteLivre": 35,
+    "confirmadas": 10,
+    "publicadas": 11,
     "resgatadas": 0,
     "semFonte": 191
   },
   "fontes": {
-    "checadas": 49,
+    "checadas": 50,
     "responderam": 27,
     "entregando": 22,
-    "itens": 236,
+    "itens": 244,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "voltaredonda",
         "nome": "Prefeitura de Volta Redonda",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-rj",
+        "nome": "TRE-RJ",
+        "itens": 14,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -64,8 +73,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rj-novaiguacu",
-        "nome": "Nova Iguaçu",
+        "id": "gn-rj-duquedecax",
+        "nome": "Duque de Caxias",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,8 +82,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rj-duquedecax",
-        "nome": "Duque de Caxias",
+        "id": "gn-rj-novaiguacu",
+        "nome": "Nova Iguaçu",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,18 +100,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rj",
-        "nome": "Rio de Janeiro",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-rj-petropolis",
         "nome": "Petrópolis",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +111,7 @@
         "tipo": "pauta",
         "id": "gn-rj-angradosre",
         "nome": "Angra dos Reis",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,15 +120,15 @@
         "tipo": "pauta",
         "id": "gn-rj-macae",
         "nome": "Macaé",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "gn-rj-cabofrio",
-        "nome": "Cabo Frio",
+        "id": "gn-rj-resende",
+        "nome": "Resende",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -154,8 +154,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "goncalense",
-        "nome": "O Gonçalense",
+        "id": "tribpetro",
+        "nome": "Tribuna de Petrópolis",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -172,35 +172,35 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-rj",
+        "nome": "Rio de Janeiro",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rj-cabofrio",
+        "nome": "Cabo Frio",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-rj-buzios",
         "nome": "Búzios",
-        "itens": 9,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rj-resende",
-        "nome": "Resende",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "tre-rj",
-        "nome": "TRE-RJ",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "tribpetro",
-        "nome": "Tribuna de Petrópolis",
+        "tipo": "resgate",
+        "id": "goncalense",
+        "nome": "O Gonçalense",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -210,7 +210,7 @@
         "tipo": "assessoria",
         "id": "prefrio",
         "nome": "Prefeitura do Rio",
-        "itens": 5,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -235,8 +235,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "odia",
-        "nome": "O Dia",
+        "id": "goncalense",
+        "nome": "O Gonçalense",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "pauta",
+        "id": "extra",
+        "nome": "Extra",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "extra",
-        "nome": "Extra",
+        "id": "odia",
+        "nome": "O Dia",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +298,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tjrj",
-        "nome": "TJRJ",
+        "id": "tce-rj",
+        "nome": "TCE-RJ",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +307,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tce-rj",
-        "nome": "TCE-RJ",
+        "id": "tjrj",
+        "nome": "TJRJ",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -343,8 +352,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "petropolis",
-        "nome": "Prefeitura de Petrópolis",
+        "id": "buzios",
+        "nome": "Prefeitura de Búzios",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -352,8 +361,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "buzios",
-        "nome": "Prefeitura de Búzios",
+        "id": "petropolis",
+        "nome": "Prefeitura de Petrópolis",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "cabofrio",
-        "nome": "Prefeitura de Cabo Frio",
+        "id": "campos",
+        "nome": "Prefeitura de Campos",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +388,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "campos",
-        "nome": "Prefeitura de Campos",
+        "id": "cabofrio",
+        "nome": "Prefeitura de Cabo Frio",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -433,8 +442,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "saude-rj",
-        "nome": "Secretaria de Saúde do RJ",
+        "id": "camara-buzios",
+        "nome": "Câmara de Búzios",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -442,8 +451,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-buzios",
-        "nome": "Câmara de Búzios",
+        "id": "saude-rj",
+        "nome": "Secretaria de Saúde do RJ",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -476,196 +485,15 @@
   ],
   "itens": [
     {
-      "municipio": "voltaredonda",
-      "municipioNome": "Volta Redonda",
-      "id": "ilm:espetaculo-o-ceu-de-bibi-ferreira-e-apresentado-em-volta-redonda",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Espetáculo O Céu de Bibi Ferreira é apresentado em Volta Redonda",
-      "resumo": "Com texto de Gabriel Chalita, a montagem sobre a trajetória da artista reuniu público no Teatro Maestro Franklin de Carvalho Jr.",
-      "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/14-smc/12296-volta-redonda-celebra-a-cultura-com-espetáculo-em-homenagem-a-bibi-ferreira",
-      "origemNome": "Prefeitura de Volta Redonda",
-      "pautadoPor": [
-        "Prefeitura de Volta Redonda",
-        "O Dia"
-      ],
-      "quentura": 3,
-      "uf": "rj",
-      "corpo": [
-        "O Teatro Maestro Franklin de Carvalho Jr., localizado no bairro Laranjal, em Volta Redonda, recebeu na noite de quarta-feira (29) a apresentação do espetáculo \"O Céu de Bibi Ferreira\". A montagem homenageia a trajetória e o legado da artista brasileira nas artes cênicas.",
-        "A peça tem texto escrito por Gabriel Chalita, direção de Gustavo Barchilon e direção musical de Carlos Bauzys. No palco, as atrizes Giulia Nadruz, Bárbara Sut, Carol Botelho e Fernanda Biancamano encenam a história da artista, reencenando interpretações de personagens como Piaf, Joana, Eliza e Amália por meio de música, teatro e poesia.",
-        "A realização do evento ocorreu por meio da Secretaria Municipal de Cultura (SMC) da Prefeitura de Volta Redonda. O secretário de Cultura, Anderson de Souza, afirmou que a proposta da pasta é trazer montagens para a cidade e fortalecer o teatro local como espaço para a formação cultural e entretenimento.",
-        "Espectadores presentes se manifestaram sobre a apresentação. Érica Fraga Rodrigues declarou que a montagem recordou momentos de sua infância e de seus pais. Alder Vitor elogiou a estrutura do teatro, citando a acústica e o som da produção, além da iniciativa da prefeitura."
-      ],
-      "link": "/materia/espetaculo-o-ceu-de-bibi-ferreira-e-apresentado-em-volta-redonda.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
+      "foto": null,
+      "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-rj-inicia-convocacao-de-cerca-de-150-mil-mesarios-para-as-eleicoes",
+      "id": "ilm:tse-disponibiliza-a-17-edicao-do-codigo-eleitoral-anotado-e-legislacao",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "TRE-RJ inicia convocação de cerca de 150 mil mesários para as eleições de outubro",
-      "resumo": "Aviso é enviado por WhatsApp e orienta os eleitores a acessarem o site do tribunal para obterem a carta convocatória e confirmarem presença.",
-      "fonte": "Meridiano, com informações de TRE-RJ",
-      "origemLink": "https://www.tre-rj.jus.br/comunicacao/noticias/2026/Julho/tre-rj-inicia-convocacao-de-mesarias-os-para-as-eleicoes-2026",
-      "origemNome": "TRE-RJ",
-      "pautadoPor": [
-        "Tribuna de Petrópolis"
-      ],
-      "quentura": 1,
-      "uf": "rj",
-      "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) iniciou, na terça-feira (7), a convocação de cerca de 150 mil mesários para trabalhar nas eleições gerais de outubro. As notificações estão sendo enviadas pelo número oficial de WhatsApp (21) 3436-9000 e também por contatos diretos das Zonas Eleitorais, sem o envio de links nas mensagens.",
-        "Os convocados devem acessar o Sistema de Convocação Eletrônico no site do tribunal para conferir a carta convocatória e confirmar a participação. O comparecimento é obrigatório, independentemente de o eleitor ter visualizado a carta, e a dispensa só ocorre se houver justificativa aceita pela juíza ou juiz eleitoral.",
-        "O documento convocatório informa a função a ser ocupada, como presidente de mesa, secretário, primeiro ou segundo mesário, além da Zona Eleitoral, seção, endereço do local e instruções sobre o treinamento obrigatório. Os eleitores escalados para locais diferentes de onde votam podem pedir a transferência temporária de 20 de julho a 28 de agosto.",
-        "O serviço garante folga em dobro por dia trabalhado, auxílio-alimentação de R$ 65 por turno, horas de atividades complementares para faculdade e isenção de taxa em concursos públicos estaduais, prevista na Lei 9.421/21. A ausência no dia do pleito exige justificativa em até 30 dias, sob pena de multa, sendo aplicada suspensão de até 15 dias para servidores públicos faltosos."
-      ],
-      "link": "/materia/tre-rj-inicia-convocacao-de-cerca-de-150-mil-mesarios-para-as-eleicoes.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "rio",
-      "municipioNome": "Rio de Janeiro",
-      "id": "ilm:prefeitura-do-rio-apresenta-queda-de-roubos-e-furtos-em-areas-da-forca",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Prefeitura do Rio apresenta queda de roubos e furtos em áreas da Força Municipal",
-      "resumo": "Os dados do Instituto de Segurança Pública indicam reduções de até 67,4% nos registros de ocorrências na comparação entre 2025 e 2026.",
-      "fonte": "Meridiano, com informações de Prefeitura do Rio",
-      "origemLink": "https://prefeitura.rio/forca-municipal/prefeitura-do-rio-apresenta-reducao-de-indices-de-roubos-e-furtos-em-perimetros-atendidos-pela-forca-municipal/",
-      "origemNome": "Prefeitura do Rio",
-      "pautadoPor": [
-        "PSD - Partido Social Democrático",
-        "TV Prefeito",
-        "saogoncalo.rj.gov.br"
-      ],
-      "quentura": 3,
-      "uf": "rj",
-      "corpo": [
-        "A Prefeitura do Rio apresentou, nesta terça-feira (28/07), os indicadores de redução de roubos e furtos em sete perímetros de atuação da Força Municipal. A divulgação ocorreu na reunião do CompStat Rio e traz dados do Instituto de Segurança Pública que comparam os mesmos períodos dos anos de 2025 e 2026.",
-        "A maior queda ocorreu no perímetro do Metrô Botafogo com a Rua São Clemente e a Rua Voluntários da Pátria, que registrou 67,4%. Na área da Praia de Botafogo com a Rua Marquês de Abrantes, a redução foi de 51,3%, enquanto o eixo entre a Rua Lauro Müller, Rua General Severiano e Avenida Venceslau Brás teve diminuição de 51,4%. No perímetro da Rodoviária do Rio, Terminal Gentileza e Estação Leopoldina, a redução alcançou 44,6%.",
-        "Outros pontos com queda foram a Tijuca, com 32,9% entre as estações São Francisco Xavier e Afonso Pena; a Avenida Presidente Vargas com Campo de Santana, Central do Brasil e Cinelândia, com 16,8%; e Campo Grande, entre a Estação de Trem e o Calçadão, com 15,2%. Os dados referentes a julho de 2026 são parciais.",
-        "O secretário de Segurança Urbana, Brenno Carnevale, apresentou também o balanço das ações iniciadas em 15 de março. O levantamento aponta mais de 9.200 abordagens e mais de 900 prisões e conduções. Além disso, foram apreendidos e recuperados 188 celulares, 183 motocicletas, 15 cordões, uma pistola, 14 réplicas de arma de fogo e 54 armas brancas."
-      ],
-      "link": "/materia/prefeitura-do-rio-apresenta-queda-de-roubos-e-furtos-em-areas-da-forca.html",
-      "iso": "2026-07-31T13:54:27.025Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:presidente-do-tre-rj-acompanha-treinamento-de-4-5-mil-militares-no-rio",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Presidente do TRE-RJ acompanha treinamento de 4,5 mil militares no Rio",
-      "resumo": "O Exercício Membeca apresentou a capacidade operacional do Exército para atuar na segurança das eleições de outubro por meio da Garantia da Votação e Apuração.",
-      "fonte": "Meridiano, com informações de TRE-RJ",
-      "origemLink": "https://www.tre-rj.jus.br/comunicacao/noticias/2026/Julho/presidente-do-tre-rj-acompanha-exercicio-operacional-promovido-pelo-comando-militar-do-leste",
-      "origemNome": "TRE-RJ",
-      "pautadoPor": [
-        "O Gonçalense"
-      ],
-      "quentura": 1,
-      "uf": "rj",
-      "corpo": [
-        "O presidente do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), desembargador Claudio de Mello Tavares, acompanhou na quarta-feira (29) o Exercício Membeca, promovido pelo Comando Militar do Leste (CML) no Campo de Instrução de Gericinó, na Zona Oeste do Rio. A atividade reuniu cerca de 4,5 mil militares do Exército Brasileiro vindos do Rio de Janeiro, de Minas Gerais e do Espírito Santo.",
-        "Durante a demonstração, os militares apresentaram capacidades operacionais com o emprego de blindados e sistemas de defesa antidrone. O comandante militar do Leste, general de Exército Pedro Celso Montenegro, destacou que o exercício demonstra a capacidade da Força Federal para reforçar a segurança das eleições de outubro por meio do mecanismo da Garantia da Votação e Apuração (GVA).",
-        "O CML atua em parceria com a Justiça Eleitoral fluminense em duas frentes para o pleito de outubro: o Grupo de Trabalho Unificado de Defesa da Integridade Eleitoral, voltado à transferência de locais de votação em áreas de alto risco e ao compartilhamento de inteligência, e o Gabinete Extraordinário de Segurança Institucional (Gaesi), destinado à prevenção e repressão de ilícitos.",
-        "No dia 10 de julho, o Plenário do TRE-RJ aprovou por unanimidade o pedido de apoio da Força Federal para atuar nas eleições de outubro, com parecer favorável do governador do Estado do Rio de Janeiro, desembargador Ricardo Couto. O processo foi encaminhado ao Tribunal Superior Eleitoral (TSE), que analisará o pedido em sessão plenária para posterior alinhamento com o Ministério da Defesa, caso seja aprovado."
-      ],
-      "link": "/materia/presidente-do-tre-rj-acompanha-treinamento-de-4-5-mil-militares-no-rio.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "rio",
-      "municipioNome": "Rio de Janeiro",
-      "id": "ilm:procon-carioca-faz-acao-de-renegociacao-de-dividas-na-zona-oeste-do-ri",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Procon Carioca faz ação de renegociação de dívidas na Zona Oeste do Rio",
-      "resumo": "O atendimento gratuito ocorre nos dias 30 e 31 de julho, das 10h às 17h, reunindo mais de 20 empresas sem necessidade de agendamento prévio.",
-      "fonte": "Meridiano, com informações de Prefeitura do Rio",
-      "origemLink": "https://prefeitura.rio/procon-carioca/procon-carioca-faz-mega-acao-de-renegociacao-de-dividas-e-atendimento-ao-consumidor-no-bangu-shopping/",
-      "origemNome": "Prefeitura do Rio",
-      "pautadoPor": [
-        "Diário do Comércio"
-      ],
-      "quentura": 1,
-      "uf": "rj",
-      "corpo": [
-        "A Secretaria Municipal de Proteção e Defesa do Consumidor (Sedecon), por meio do Procon Carioca, realiza nos dias 30 e 31 de julho a Mega Ação de Renegociação de Dívidas e Atendimento ao Consumidor. O atendimento presencial ocorre no estacionamento do Bangu Shopping, na Zona Oeste do Rio, das 10h às 17h.",
-        "Mais de 20 empresas prestam atendimento gratuito para negociação de débitos, orientação de direitos e registro de reclamações. Entre as participantes estão Bradesco, Itaú, Santander, Banco do Brasil, Caixa Econômica Federal, Banco BMG, Banco Crefisa, Claro, TIM, Vivo, Light, Naturgy, CEDAE, Águas do Rio, Iguá, Rio+ Saneamento (Zona Oeste Mais), Magazine Luiza, Via Varejo, Jaé e SCPC (CDL Rio). A Secretaria Municipal de Assistência Social também atua no local com a distribuição de senhas para o Cadastro Único (CadÚnico).",
-        "Para receber atendimento, o consumidor precisa apresentar documento de identidade, CPF, comprovante de residência e a documentação ligada ao débito, como contratos, boletos e faturas.",
-        "No atendimento especial anterior, realizado em outubro do ano passado, o órgão registrou 3.715 atendimentos, com R$ 7.690.534,36 em dívidas analisadas e R$ 1.973.879,18 renegociados. Segundo a Pesquisa de Endividamento e Inadimplência do Consumidor (Peic), da Confederação Nacional do Comércio de Bens, Serviços e Turismo (CNC), 80,9% das famílias brasileiras têm algum tipo de dívida."
-      ],
-      "link": "/materia/procon-carioca-faz-acao-de-renegociacao-de-dividas-na-zona-oeste-do-ri.html",
-      "iso": "2026-07-31T13:54:27.025Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "voltaredonda",
-      "municipioNome": "Volta Redonda",
-      "id": "ilm:volta-redonda-completa-72-anos-com-inauguracoes-e-programa-novas-obras",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Volta Redonda completa 72 anos com inaugurações e programa novas obras para agosto",
-      "resumo": "O município realizou entregas nas áreas de saúde, esporte, segurança e infraestrutura em julho, além de programar novas inaugurações e eventos culturais para o mês seguinte.",
-      "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/25-secom/12302-eventos-culturais-e-inaugurações-marcam-mês-de-aniversário-de-volta-redonda-e-município-planeja-mais-investimentos-para-a-população",
-      "origemNome": "Prefeitura de Volta Redonda",
-      "pautadoPor": [
-        "Prefeitura de Volta Redonda"
-      ],
-      "quentura": 2,
-      "uf": "rj",
-      "corpo": [
-        "O município de Volta Redonda completou 72 anos de emancipação político-administrativa no dia 17 de julho com uma programação de eventos culturais e a entrega de obras nas áreas de saúde, esporte, mobilidade urbana, assistência social e segurança pública.",
-        "Durante o mês, foram reformados o Serviço de Pronto Atendimento (SPA) Conforto Jornalista Dicler Simões de Souza e a Unidade Básica de Saúde da Família (USBF) Volta Grande. A prefeitura também entregou as reformas da Arena Esportiva do Aterrado e do Ginásio Poliesportivo do Siderlândia, a iluminação do Trevo da Rodovia do Contorno, a base do programa Segurança Presente no bairro Retiro e uma unidade do Programa de Inclusão Produtiva.",
-        "Para agosto, a prefeitura programou a inauguração da rotatória de acesso ao bairro Belmonte na Avenida Almirante Adalberto de Barros Nunes, com investimento de R$ 450 mil em recursos próprios. Estão previstas ainda a revitalização da Avenida Alimo Antônio Francisco, a implantação de consultório odontológico na USBF Roma II e a conclusão da sede do Batalhão de Ações com Cães (BAC) da Polícia Militar no bairro Roma.",
-        "A programação comemorativa incluiu shows na Praça Brasil, apresentações do Projeto Volta Redonda Cidade da Música, o espetáculo O Céu de Bibi Ferreira, o Arraiá da Cidadania — com previsão de repassar mais de R$ 600 mil a entidades beneficentes — e o XXXV Festival de Dança da Secretaria Municipal de Esporte e Lazer, que reuniu cerca de 3 mil bailarinos."
-      ],
-      "link": "/materia/volta-redonda-completa-72-anos-com-inauguracoes-e-programa-novas-obras.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": "As obras e entregas impactam os moradores de Volta Redonda em bairros como Belmonte, Roma, Retiro, Siderlândia, Conforto, Aterrado e Volta Grande. A próxima etapa das inaugurações está prevista para agosto, com a entrega da rotatória de acesso ao bairro Belmonte, que recebeu investimento de R$ 450 mil em recursos próprios. Também para o mês de agosto estão programadas a revitalização da Avenida Alimo Antônio.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:tse-disponibiliza-a-17-edicao-do-codigo-eleitoral-anotado",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "TSE disponibiliza a 17ª edição do Código Eleitoral Anotado",
-      "resumo": "O documento reúne as alterações legislativas até o dia 2/6/2026 e está disponível em formato PDF na página do Tribunal Superior Eleitoral.",
+      "titulo": "TSE disponibiliza a 17ª edição do Código Eleitoral Anotado e Legislação Complementar",
+      "resumo": "A publicação reúne as alterações legislativas registradas até 2/6/2026 e tem versão em PDF disponível no portal do tribunal.",
       "fonte": "Meridiano, com informações de TRE-RJ",
       "origemLink": "https://www.tre-rj.jus.br/legislacao/codigo-eleitoral-anotado-e-legislacao-complementar/codigo-eleitoral-anotado-e-legislacao-complementar",
       "origemNome": "TRE-RJ",
@@ -673,86 +501,95 @@
       "quentura": 0,
       "uf": "rj",
       "corpo": [
-        "A Secretaria de Gestão da Informação e do Conhecimento do Tribunal Superior Eleitoral disponibilizou a 17ª edição do Código Eleitoral Anotado e Legislação Complementar. O documento reúne as alterações na legislação até o dia 2/6/2026 e possui versão em PDF disponível no catálogo de publicações da instituição.",
-        "A edição impressa do material é revisada e publicada a cada biênio, nos anos eleitorais. A versão eletrônica, por sua vez, é atualizada regularmente pela Coordenadoria de Jurisprudência e Legislação.",
-        "O conteúdo do texto toma por base as publicações do Diário Oficial da União, do Diário da Justiça e do Diário da Justiça Eletrônico. O material traz notas explicativas e remissivas atualizadas com decisões do Tribunal Superior Eleitoral e do Supremo Tribunal Federal.",
-        "A ordenação das notas utiliza o marcador \"ticado\" para referências a sentidos específicos de termos grifados no texto e o marcador \"quadrado\" para o sentido geral do artigo, parágrafo, alínea ou inciso."
+        "A 17ª edição do Código Eleitoral Anotado e Legislação Complementar reúne as alterações legislativas efetuadas até o dia 2/6/2026. A publicação é elaborada pela Secretaria de Gestão da Informação e do Conhecimento do Tribunal Superior Eleitoral e possui versão em PDF no endereço do tribunal.",
+        "A cada biênio, nos anos eleitorais, uma edição impressa da obra é revisada e publicada. O conteúdo da versão eletrônica é atualizado regularmente pela Coordenadoria de Jurisprudência e Legislação.",
+        "O material tem por base os textos publicados no Diário Oficial da União, no Diário da Justiça e no Diário da Justiça Eletrônico. A obra conta com a atualização de notas explicativas e remissivas contendo posicionamentos da jurisprudência do Tribunal Superior Eleitoral e do Supremo Tribunal Federal.",
+        "As notas indicam alteração ou acréscimo no texto legal. Os marcadores \"ticado\" indicam o sentido específico do termo grifado no trecho antecedente, enquanto os marcadores \"quadrado\" referem-se ao sentido geral de artigo, parágrafo, alínea ou inciso."
       ],
-      "link": "/materia/tse-disponibiliza-a-17-edicao-do-codigo-eleitoral-anotado.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
+      "link": "/materia/tse-disponibiliza-a-17-edicao-do-codigo-eleitoral-anotado-e-legislacao.html",
+      "iso": "2026-07-31T18:37:35.135Z",
+      "hora": "14h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
+      "foto": "https://www.voltaredonda.rj.gov.br/images/responsabilidadesocial.jpg",
+      "fotoAlt": null,
       "municipio": "voltaredonda",
       "municipioNome": "Volta Redonda",
-      "id": "ilm:smdh-de-volta-redonda-promove-evento-celebrando-mulheres-negras",
+      "id": "ilm:volta-redonda-lidera-ranking-de-responsabilidade-social-no-estado-do-r",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "SMDH de Volta Redonda promove evento Celebrando Mulheres Negras",
-      "resumo": "Ação na sede da secretaria reuniu rodas de conversa, capoeira e serviços de beleza em homenagem ao Dia da Mulher Negra Latino-Americana e Caribenha e de Tereza de Benguela.",
+      "titulo": "Volta Redonda lidera ranking de Responsabilidade Social no estado do Rio de Janeiro",
+      "resumo": "O município também se destacou nacionalmente em Saúde, Acesso Digital ao Conhecimento e Indicadores Digitais no estudo As Melhores Cidades do Brasil 2026.",
       "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/32-smdh/12298-volta-redonda-celebra-o-dia-internacional-da-mulher-negra-latino-americana-e-caribenha,-e-de-tereza-de-benguela",
+      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/25-secom/12304-volta-redonda-conquista-primeiro-lugar-do-estado-do-rio-em-responsabilidade-social-no-ranking-veja-negócios-2026",
       "origemNome": "Prefeitura de Volta Redonda",
       "pautadoPor": [
-        "Prefeitura de Volta Redonda",
-        "O Dia"
+        "Prefeitura de Volta Redonda"
       ],
-      "quentura": 2,
+      "quentura": 3,
       "uf": "rj",
       "corpo": [
-        "A Secretaria Municipal de Políticas para Mulheres e Direitos Humanos (SMDH) de Volta Redonda promoveu, na quarta-feira (29), o evento \"Celebrando Mulheres Negras\". A atividade ocorreu na sede da secretaria, no bairro Nossa Senhora das Graças, em homenagem ao Dia Internacional da Mulher Negra Latino-Americana e Caribenha, e de Tereza de Benguela, comemorados em 25 de julho.",
-        "A programação contou com roda de conversa, atividades culturais, serviços de beleza e apresentação de capoeira com as alunas da Mestre Marciana (Márcia Regina dos Santos), profissional que também atua na Secretaria Municipal de Esporte e Lazer (Smel). O evento reuniu crianças, adolescentes e integrantes da Melhor Idade, com a participação do Programa Curumim, da Casa da Criança e Adolescente e do Instituto Dagaz.",
-        "A Roda de Conversa foi aberta por Mãe Célia, do Centro Nossa Senhora da Guia, e teve a participação de Almir Gonçalves Fernandes, do Quilombo São José da Serra, e da trancista Luana Domicio dos Santos, autora do Projeto Além das Tranças. Durante as intervenções, os convidados abordaram temas como a luta contra o preconceito e o racismo, a presença feminina na política, os ensinamentos dos quilombos e o reconhecimento profissional da categoria de trancistas pelo Ministério do Trabalho.",
-        "Também participaram da atividade a subsecretária da SMDH, Juliana Rodrigues, e a assessora técnica Kátia Teobaldo, além de citação à secretária Gloria Borges Amorim. O capoeirista Mestre Mineiro (Everson Francisco da Silva) esteve presente acompanhado de alunas da academia Candência de Bamba, localizada no bairro Limoeiro."
+        "O município de Volta Redonda ficou em primeiro lugar no estado do Rio de Janeiro em Responsabilidade Social no Ranking Veja Negócios 2026, publicado no mês de julho. O levantamento nacional \"As Melhores Cidades do Brasil\", elaborado pela Austin Rating, avaliou todos os 5.570 municípios brasileiros por meio do Índice de Inclusão Social e Digital.",
+        "Na área de Saúde, a cidade ficou em 8º lugar entre os municípios de grande porte — aqueles com mais de 200 mil habitantes — e na 19ª posição na classificação geral. O município também registrou a 15ª colocação em Acesso Digital ao Conhecimento e a 18ª em Indicadores Digitais, ambas na categoria de cidades de grande porte.",
+        "O prefeito Antonio Francisco Neto atribuiu o resultado às ações da administração municipal em Saúde, Educação, Assistência Social e na habitação popular por meio do programa \"Minha Casa, Minha Vida\". O prefeito declarou que o desempenho decorre dos trabalhos realizados desde 2021, ano em que retornou à gestão do município.",
+        "O estudo considerou dados públicos oficiais e a evolução dos indicadores ao longo de uma década. A métrica do levantamento reúne 253 indicadores distribuídos nos pilares Fiscal, Econômico, Social e Digital, segmentando os municípios por porte populacional para comparação."
       ],
-      "link": "/materia/smdh-de-volta-redonda-promove-evento-celebrando-mulheres-negras.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
+      "link": "/materia/volta-redonda-lidera-ranking-de-responsabilidade-social-no-estado-do-r.html",
+      "iso": "2026-07-31T18:38:06.964Z",
+      "hora": "14h38",
       "original": true,
-      "contexto": null,
+      "contexto": "O levantamento avaliou todos os 5.570 municípios brasileiros e afeta a população de Volta Redonda, enquadrada na categoria de grande porte por possuir mais de 200 mil habitantes. Na área da Saúde, o município registrou a 8ª posição no grupo de cidades do seu porte e a 19ª colocação na classificação geral do país.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "municipio": "rio",
-      "municipioNome": "Rio de Janeiro",
-      "id": "ilm:turismo-no-rio-de-janeiro-movimenta-r-17-2-bilhoes-no-primeiro-semestr",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Turismo no Rio de Janeiro movimenta R$ 17,2 bilhões no primeiro semestre de 2026",
-      "resumo": "A cidade recebeu 6,4 milhões de visitantes entre janeiro e junho de 2026, com a maioria formada por turistas nacionais.",
-      "fonte": "Meridiano, com informações de Prefeitura do Rio",
-      "origemLink": "https://prefeitura.rio/cidade/impacto-do-turismo-na-economia-da-cidade-atinge-r-172-bilhoes-no-primeiro-semestre-de-2026/",
-      "origemNome": "Prefeitura do Rio",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rj",
-      "corpo": [
-        "O impacto do turismo na economia do município do Rio de Janeiro atingiu a estimativa de R$ 17,2 bilhões nos seis primeiros meses de 2026. Desse total, R$ 11,3 bilhões (65,6%) foram gerados por turistas nacionais e R$ 5,9 bilhões (34,4%) por turistas internacionais.",
-        "Projeções da Prefeitura do Rio, por meio da SMDE, da SMTUR-Rio e da Riotur, apontam que a cidade recebeu 6,4 milhões de visitantes no primeiro semestre de 2026. Os turistas nacionais somaram 80,0% do total, equivalentes a 5,1 milhões, enquanto os internacionais responderam por 20,0%, ou 1,3 milhão, segundo dados do Observatório do Turismo Carioca.",
-        "O cálculo da movimentação econômica baseou-se no estudo “Panorama Turístico – Turismo doméstico e internacional 2025”, do Instituto Fecomércio de Pesquisas e Análises (IFec RJ). O gasto médio do turista brasileiro foi de R$ 2.212, atualizado para junho de 2026 pelo IPCA, e o do turista estrangeiro foi de 4.624, valor convertido em dólar do período do estudo e atualizado pela taxa de câmbio de junho de 2026.",
-        "A Prefeitura do Rio, por meio da SMDE, mantém um Acordo de Cooperação Técnica com o IFec RJ para a realização de estudos econômicos sobre o setor."
-      ],
-      "link": "/materia/turismo-no-rio-de-janeiro-movimenta-r-17-2-bilhoes-no-primeiro-semestr.html",
-      "iso": "2026-07-31T13:54:27.025Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
+      "foto": "https://prefeitura.rio/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-31-at-12.28.40.jpeg",
+      "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-rj-disponibiliza-servicos-on-line-e-mantem-atendimento-presencial-",
+      "id": "ilm:prefeitura-do-rio-apresenta-esquema-de-mobilidade-para-o-rock-in-rio-2",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "TRE-RJ disponibiliza serviços on-line e mantém atendimento presencial das 11h às 19h",
-      "resumo": "A coleta de dados biométricos exige comparecimento presencial nas unidades do estado e o suporte telefônico atende pelo número (21) 3436-9000.",
+      "titulo": "Prefeitura do Rio apresenta esquema de mobilidade para o Rock in Rio 2026",
+      "resumo": "A operação inclui o serviço BRT Expresso por R$ 29 pelo aplicativo Jaé e funcionamento 24 horas da estação Jardim Oceânico do MetrôRio.",
+      "fonte": "Meridiano, com informações de Prefeitura do Rio",
+      "origemLink": "https://prefeitura.rio/mobi/prefeitura-apresenta-operacao-especial-de-mobilidade-para-o-rock-in-rio-2026/",
+      "origemNome": "Prefeitura do Rio",
+      "pautadoPor": [
+        "diariodotransporte.com.br",
+        "Estadão",
+        "O São Gonçalo"
+      ],
+      "quentura": 3,
+      "uf": "rj",
+      "corpo": [
+        "A Prefeitura do Rio, por meio da Secretaria Municipal de Transportes e da MOBI-Rio, publicou o plano de operação especial de mobilidade para o Rock in Rio 2026. O esquema funcionará nos sete dias do festival, datas marcadas para 4, 5, 6, 7, 11, 12 e 13 de setembro de 2026.",
+        "A operação contará com o BRT Expresso Rock in Rio, cujos bilhetes custam R$ 29 e são vendidos exclusivamente pelo aplicativo Jaé, com limite de compra de até 10 passagens por conta para cada dia. O serviço utilizará ônibus articulados em três linhas: SE008 (Terminal Jardim Oceânico x Terminal Centro Olímpico), SE009 (Terminal Alvorada x Estação Morro do Outeiro) e SE010 (Terminal Paulo da Portela x Estação Morro do Outeiro, com paradas na Praça Seca, Tanque e Taquara).",
+        "Para o embarque no BRT Expresso, o passageiro deverá apresentar o QR Code gerado pelo aplicativo Jaé. Ao desembarcar no Terminal Centro Olímpico ou na Estação Morro do Outeiro, o código será validado para a entrega de uma pulseira individual que garantirá o embarque no serviço de volta. As gratuidades do sistema Jaé não se aplicam aos serviços especiais do BRT. Entre as estações do entorno, a Estação Rede Sarah funcionará 24 horas nos dias do evento, enquanto Rio 2, Parque Olímpico e Pedro Corrêa terão horários específicos.",
+        "O MetrôRio fará a integração com o BRT na estação Jardim Oceânico, que ficará aberta 24 horas para embarque durante os dias do festival. A tarifa regular do metrô é de R$ 7,90 por trecho, totalizando R$ 44,80 para a viagem de ida e volta integrada ao BRT Expresso. O benefício da Tarifa Social e as gratuidades previstas no metrô continuam válidos."
+      ],
+      "link": "/materia/prefeitura-do-rio-apresenta-esquema-de-mobilidade-para-o-rock-in-rio-2.html",
+      "iso": "2026-07-31T18:37:35.337Z",
+      "hora": "14h37",
+      "original": true,
+      "contexto": "A medida afeta os passageiros que utilizarão o BRT Expresso para ir ao evento. A operação especial está confirmada para os dias 4, 5, 6, 7, 11, 12 e 13 de setembro de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:tre-rj-fixa-horario-de-atendimento-presencial-das-11h-as-19h",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "TRE-RJ fixa horário de atendimento presencial das 11h às 19h",
+      "resumo": "Todos os serviços da Justiça Eleitoral do Rio de Janeiro estão disponíveis on-line, mas a coleta biométrica exige comparecimento presencial.",
       "fonte": "Meridiano, com informações de TRE-RJ",
       "origemLink": "https://www.tre-rj.jus.br/institucional/enderecos-e-telefones/enderecos-da-sede-cartorios-zonas-eleitorais-e-centrais-de-atendimento",
       "origemNome": "TRE-RJ",
@@ -760,143 +597,94 @@
       "quentura": 0,
       "uf": "rj",
       "corpo": [
-        "A Justiça Eleitoral do Rio de Janeiro realiza o atendimento ao público externo das 11h às 19h e disponibiliza todos os seus serviços em formato on-line.",
-        "Os eleitores sem dados de biometria cadastrados precisam realizar a coleta presencial de digitais, foto e assinatura. O procedimento pode ser feito em qualquer Zona Eleitoral ou Central de Atendimento ao Eleitor do estado.",
-        "Para solicitar certidões que não estejam disponíveis na internet, o cidadão deve enviar um e-mail ao cartório eleitoral acompanhado de cópia do documento de identificação e de uma foto no estilo selfie com o documento voltado para a câmera.",
-        "Caso o problema não seja resolvido on-line, a Central de Atendimento Telefônico e o assistente virtual no WhatsApp atendem pelo número (21) 3436-9000."
+        "A Justiça Eleitoral do Rio de Janeiro definiu o horário de atendimento ao público externo das 11h às 19h. Todos os serviços prestados pelo órgão funcionam 100% no formato on-line.",
+        "Pessoas que ainda não possuem a biometria cadastrada precisam realizar presencialmente a coleta das digitais, da foto e da assinatura. Esse procedimento pode ser feito em qualquer Zona Eleitoral ou Central de Atendimento ao Eleitor do estado.",
+        "A solicitação de certidões que não estejam disponíveis na internet deve ser enviada por e-mail ao cartório eleitoral com a cópia do documento de identificação de frente e verso e uma foto estilo selfie segurando o documento com o lado da foto voltado para a câmera.",
+        "Caso o usuário não consiga resolver o problema on-line, a Central de Atendimento Telefônico e o assistente virtual no WhatsApp atendem pelo número (21) 3436-9000."
       ],
-      "link": "/materia/tre-rj-disponibiliza-servicos-on-line-e-mantem-atendimento-presencial-.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
+      "link": "/materia/tre-rj-fixa-horario-de-atendimento-presencial-das-11h-as-19h.html",
+      "iso": "2026-07-31T18:37:35.135Z",
+      "hora": "14h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "municipio": "voltaredonda",
-      "municipioNome": "Volta Redonda",
-      "id": "ilm:guarda-municipal-de-volta-redonda-recupera-moto-furtada-no-rio-de-jane",
+      "foto": "https://prefeitura.rio/wp-content/uploads/2026/07/turistas-mp.jpg",
+      "fotoAlt": null,
+      "municipio": "rio",
+      "municipioNome": "Rio de Janeiro",
+      "id": "ilm:turismo-no-rio-atinge-impacto-economico-de-r-17-2-bilhoes-no-1-semestr",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Guarda Municipal de Volta Redonda recupera moto furtada no Rio de Janeiro",
-      "resumo": "O condutor foi levado à 93ª DP e responderá por receptação após agentes constatarem a restrição do veículo e irregularidades no chassi",
-      "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/85-semop/12293-guarda-municipal-de-volta-redonda-recupera,-no-aterrado,-moto-furtada-no-rio-de-janeiro",
-      "origemNome": "Prefeitura de Volta Redonda",
+      "titulo": "Turismo no Rio atinge impacto econômico de R$ 17,2 bilhões no 1º semestre de 2026",
+      "resumo": "A cidade recebeu 6,4 milhões de visitantes entre janeiro e junho de 2026, sendo a maior parte formada por turistas nacionais.",
+      "fonte": "Meridiano, com informações de Prefeitura do Rio",
+      "origemLink": "https://prefeitura.rio/cidade/impacto-do-turismo-na-economia-da-cidade-atinge-r-172-bilhoes-no-primeiro-semestre-de-2026/",
+      "origemNome": "Prefeitura do Rio",
       "pautadoPor": [
-        "Monitor Mercantil",
         "Prefeitura de Volta Redonda"
       ],
-      "quentura": 2,
+      "quentura": 1,
       "uf": "rj",
       "corpo": [
-        "Agentes da Guarda Municipal de Volta Redonda recuperaram, na manhã de quarta-feira (29), uma motocicleta Honda XR Tornado 250cc azul com restrição por furto registrada no Rio de Janeiro. O veículo foi localizado no bairro Aterrado, estacionado no cruzamento entre as avenidas Paulo Leopoldo Marçal e Paulo de Frontin.",
-        "A equipe foi alertada sobre a circulação do veículo pelo setor de Inteligência da Guarda Municipal. O condutor apresentou-se no local minutos depois e relatou ter comprado a moto em Nova Iguaçu, na Baixada Fluminense, por meio de um anúncio veiculado em rede social.",
-        "O homem e a motocicleta foram encaminhados à 93ª DP, localizada no Aterrado. No local, confirmou-se que a restrição por furto consta na 16ª Delegacia de Polícia, na Barra da Tijuca, e que o condutor possui passagens por ameaça, violação de domicílio, injúria e lesão corporal dolosa.",
-        "A numeração do chassi do veículo estava em difícil visualização e aparentava estar em desacordo com os padrões normais de marcação. Um inquérito foi instaurado, o condutor responderá pelo crime de receptação e a moto ficou apreendida na 93ª DP."
+        "O impacto do turismo na economia da cidade do Rio de Janeiro atingiu a estimativa de R$ 17,2 bilhões no primeiro semestre de 2026. Do total, R$ 11,3 bilhões (65,6%) foram movimentados por turistas nacionais e R$ 5,9 bilhões (34,4%) por turistas internacionais.",
+        "A cidade recebeu 6,4 milhões de visitantes no período, dos quais 80,0% (5,1 milhões) eram nacionais e 20,0% (1,3 milhão) internacionais. A projeção foi realizada pela Prefeitura do Rio, por meio das secretarias de Desenvolvimento Econômico (SMDE) e de Turismo (SMTUR-Rio) e pela Riotur. Os dados de quantidade de visitantes são do Observatório do Turismo Carioca, da SMTUR-Rio.",
+        "O cálculo da movimentação econômica baseou-se no estudo “Panorama Turístico – Turismo doméstico e internacional 2025”, do Instituto Fecomércio de Pesquisas e Análises (IFec RJ). Para o turista brasileiro, o gasto médio foi de R$ 2.212, valor atualizado para junho de 2026 e deflacionado pelo IPCA. Para o turista estrangeiro, o gasto médio foi de 4.624, convertido em dólar do período do estudo e atualizado pela taxa de câmbio de junho de 2026.",
+        "A Prefeitura do Rio possui um Acordo de Cooperação Técnica com o IFec RJ, por meio da SMDE, para a realização de estudos econômicos sobre o setor."
       ],
-      "link": "/materia/guarda-municipal-de-volta-redonda-recupera-moto-furtada-no-rio-de-jane.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
+      "link": "/materia/turismo-no-rio-atinge-impacto-economico-de-r-17-2-bilhoes-no-1-semestr.html",
+      "iso": "2026-07-31T18:37:35.337Z",
+      "hora": "14h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "municipio": "rio",
-      "municipioNome": "Rio de Janeiro",
-      "id": "ilm:livraria-do-ipp-realiza-debate-sobre-a-avenida-brasil-no-rio-de-janeir",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Livraria do IPP realiza debate sobre a Avenida Brasil no Rio de Janeiro",
-      "resumo": "O evento teve palestra do arquiteto Pedro Barreto de Moraes e presença de Flávia Gomes, da Secretaria Municipal de Integração Metropolitana.",
-      "fonte": "Meridiano, com informações de Prefeitura do Rio",
-      "origemLink": "https://prefeitura.rio/ipp/encontros-com-autores-livraria-do-ipp-promove-debates-e-estimula-o-conhecimento-sobre-a-cidade/",
-      "origemNome": "Prefeitura do Rio",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rj",
-      "corpo": [
-        "A Livraria do Instituto Pereira Passos (IPP) realizou, na última terça-feira (29), mais uma edição do projeto Encontros com Autores. O evento reuniu pesquisadores e o público para debater a Avenida Brasil e seus impactos na capital fluminense.",
-        "A conversa foi conduzida pelo arquiteto e pesquisador Pedro Barreto de Moraes, autor do livro \"Avenida Brasil: Rodovia Metropolitana\", publicado pelo IPP. A obra é fruto de uma pesquisa acadêmica premiada pela instituição.",
-        "Durante o encontro, foram apresentadas análises sobre a formação da via, sua evolução, ocupação do território e influência na mobilidade e no planejamento urbano contemporâneo do Rio de Janeiro.",
-        "O evento contou também com a participação de Flávia Gomes, coordenadora de Projetos da Secretaria Municipal de Integração Metropolitana. O projeto Encontros com Autores é realizado mensalmente na Livraria do IPP."
-      ],
-      "link": "/materia/livraria-do-ipp-realiza-debate-sobre-a-avenida-brasil-no-rio-de-janeir.html",
-      "iso": "2026-07-31T13:54:27.025Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": "O debate reuniu pesquisadores e o público para tratar da Avenida Brasil e de seus impactos no Rio de Janeiro. O projeto Encontros com Autores é realizado mensalmente na Livraria do Instituto Pereira Passos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "rio",
-      "municipioNome": "Rio de Janeiro",
-      "id": "ilm:rioluz-conclui-modernizacao-da-iluminacao-no-aterro-do-cocota",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "RioLuz conclui modernização da iluminação no Aterro do Cocotá",
-      "resumo": "Intervenção no Parque Poeta Manuel Bandeira incluiu cerca de 460 luminárias LED, 190 projetores e mais de dois quilômetros de cabos subterrâneos.",
-      "fonte": "Meridiano, com informações de Prefeitura do Rio",
-      "origemLink": "https://prefeitura.rio/cidade/aterro-do-cocota-ganha-nova-iluminacao-em-led/",
-      "origemNome": "Prefeitura do Rio",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rj",
-      "corpo": [
-        "A RioLuz concluiu a modernização da iluminação pública do Parque Poeta Manuel Bandeira, conhecido como Aterro do Cocotá, situado na Ilha do Governador. A medida visa proporcionar melhor distribuição da luz e ampliar a segurança e o uso do espaço no período noturno.",
-        "A obra contou com a instalação de cerca de 460 luminárias LED, 190 projetores voltados para as quadras esportivas e a pista de skate, além da implantação de mais de dois quilômetros de cabos subterrâneos. O local possui quadras poliesportivas, pistas de skate e patins, áreas de convivência, estacionamento e a Areninha Carioca Renato Russo, voltada a atividades culturais, esportivas e de entretenimento.",
-        "De acordo com o presidente da RioLuz, Rodolpho Maldonado, o serviço integra os investimentos da Prefeitura na valorização dos espaços públicos. A modernização integra o programa Luz Maravilha, focado na substituição da iluminação pública do Rio pela tecnologia LED."
-      ],
-      "link": "/materia/rioluz-conclui-modernizacao-da-iluminacao-no-aterro-do-cocota.html",
-      "iso": "2026-07-31T13:54:27.025Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": "A medida afeta os frequentadores do Parque Poeta Manuel Bandeira, na Ilha do Governador, espaço que reúne quadras poliesportivas, pistas de skate, áreas de convivência e a Areninha Carioca Renato Russo. Não há registro no histórico de intervenção semelhante anterior no local.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
+      "foto": "https://www.voltaredonda.rj.gov.br/images/aniversariopoliclinica.jpg",
+      "fotoAlt": null,
       "municipio": "voltaredonda",
       "municipioNome": "Volta Redonda",
-      "id": "ilm:prefeitura-de-volta-redonda-amplia-acoes-e-capacitacoes-para-cooperati",
+      "id": "ilm:policlinica-da-melhor-idade-de-volta-redonda-completa-20-anos-de-atend",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Volta Redonda amplia ações e capacitações para cooperativas de reciclagem",
-      "resumo": "Cronograma da Assistência Social segue até dezembro e inclui orientações sobre Cadastro Único, combate ao trabalho infantil, atendimento jurídico e novas parcerias.",
+      "titulo": "Policlínica da Melhor Idade de Volta Redonda completa 20 anos de atendimento",
+      "resumo": "Unidade localizada no bairro Jardim Paraíba atende em média mais de mil idosos por mês e celebrou a data com café da manhã e atividades físicas.",
       "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/15-smac/12292-prefeitura-de-volta-redonda-fortalece-cooperativas-de-reciclagem-com-capacitações-e-garantia-de-direitos",
+      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/29-sms/12299-policlínica-da-melhor-idade-completa-20-anos-atendendo-mais-de-mil-pessoas-por-mês-em-volta-redonda",
       "origemNome": "Prefeitura de Volta Redonda",
       "pautadoPor": [
-        "TV Prefeito"
+        "A Voz da Cidade",
+        "odia.ig.com.br"
       ],
-      "quentura": 2,
+      "quentura": 3,
       "uf": "rj",
       "corpo": [
-        "A Prefeitura de Volta Redonda, por meio da Secretaria Municipal de Assistência Social (Smas), está ampliando as ações direcionadas aos trabalhadores das cooperativas de reciclagem do município. O cronograma de atividades segue até dezembro com capacitações, orientações técnicas e atendimentos especializados elaborados a partir de um processo de escuta dos cooperados.",
-        "Em junho, a equipe do Departamento de Vigilância Socioassistencial (DVS) realizou ação sobre benefícios socioassistenciais. Em julho, os cooperados receberam orientações referentes ao Cadastro Único. O Programa de Erradicação do Trabalho Infantil (Peti) também promoveu atividade na Cooperativa Reciclar sobre a prevenção do trabalho infantil e os riscos no ambiente da reciclagem.",
-        "A Smas disponibiliza ainda o serviço de Advocacia Social aos cooperados, com orientações jurídicas na sede da secretaria toda primeira quinta-feira do mês, no período da tarde, ou via Centro de Referência de Assistência Social (Cras) mediante agendamento.",
-        "Para agosto, está prevista uma ação em parceria com a Secretaria Municipal de Educação (SME) sobre a Educação de Jovens, Adultos e Idosos (EJA). De setembro a dezembro, atividades com a Secretaria Municipal de Políticas para Mulheres e Direitos Humanos (SMDH) abordarão violência de gênero, enfrentamento ao racismo e direitos humanos. Uma parceria com o Sebrae para capacitações em empreendedorismo e gestão também está em articulação."
+        "A Policlínica da Melhor Idade, localizada no bairro Jardim Paraíba, em Volta Redonda, completou 20 anos de funcionamento nesta quinta-feira (30). Para celebrar a data, a unidade promoveu um café da manhã, atividades físicas e uma conversa com o público idoso presente.",
+        "Em funcionamento desde 2006, a unidade abre de segunda a sexta-feira, das 7h às 17h, registrando média superior a mil pacientes por mês. A geriatria está entre as especialidades mais procuradas no local.",
+        "A estrutura conta com uma equipe de 14 servidores, composta por cinco médicos geriatras, uma psicóloga, um nutricionista, uma enfermeira, uma técnica de enfermagem, uma coordenadora, duas recepcionistas, uma auxiliar administrativa e um auxiliar de serviços gerais. A coordenadora Giuliana Ferreira Oliveira Silva atua na unidade há 18 anos, sendo 11 deles na coordenação.",
+        "Entre os pacientes está Maria Soares de Souza, de 84 anos, moradora do bairro Belo Horizonte, que também já frequentou a Clínica da Memória. A comemoração dos 20 anos de funcionamento do serviço municipal foi registrada pela secretária de Saúde, Márcia Cury, e pelo prefeito Antonio Francisco Neto."
       ],
-      "link": "/materia/prefeitura-de-volta-redonda-amplia-acoes-e-capacitacoes-para-cooperati.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
+      "link": "/materia/policlinica-da-melhor-idade-de-volta-redonda-completa-20-anos-de-atend.html",
+      "iso": "2026-07-31T18:38:06.964Z",
+      "hora": "14h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
+      "foto": null,
+      "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-rj-institui-nucleo-de-monitoramento-do-sistema-interamericano",
+      "id": "ilm:tre-rj-atua-com-nucleo-de-monitoramento-de-decisoes-de-direitos-humano",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "TRE-RJ institui Núcleo de Monitoramento do Sistema Interamericano",
-      "resumo": "A unidade visa orientar magistrados e servidores sobre deliberações internacionais com impacto em processos eleitorais e criminais.",
+      "titulo": "TRE-RJ atua com Núcleo de Monitoramento de Decisões de Direitos Humanos",
+      "resumo": "A estrutura atende a normativos do CNJ para divulgar julgados internacionais que impactem processos eleitorais e criminais.",
       "fonte": "Meridiano, com informações de TRE-RJ",
       "origemLink": "https://www.tre-rj.jus.br/institucional/nudh",
       "origemNome": "TRE-RJ",
@@ -904,474 +692,239 @@
       "quentura": 0,
       "uf": "rj",
       "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) criou o Núcleo de Monitoramento e Fiscalização de Decisões do Sistema Interamericano de Direitos Humanos (NUDH). O objetivo da unidade é monitorar e divulgar a magistrados e servidores as decisões do sistema internacional que impactem processos eleitorais e criminais sob a competência da Justiça Eleitoral.",
-        "A criação ocorreu por meio da Resolução TRE-RJ nº 1.335/2024, alterada pela Resolução TRE-RJ nº 1.377/2025, e foi regulamentada pelo Ato PR nº 264/2024. A medida atende ao disposto na Resolução CNJ nº 544/2024.",
-        "O NUDH é vinculado à Assessoria Jurídica da Secretaria-Geral da Presidência (ASJUPR). A chefia do núcleo é ocupada por Maria Tereza Oliveira dos Santos Mussoi.",
-        "O Sistema Interamericano de Direitos Humanos é composto pela Corte Interamericana de Direitos Humanos e pela Comissão Interamericana de Direitos Humanos. O canal de comunicação com o núcleo é feito pelo e-mail nudh@tre-rj.jus.br, pelo telefone (21) 2038-8013 ou pelo ramal 3214."
+        "O Tribunal Regional Eleitoral do Rio de Janeiro atua com o Núcleo de Monitoramento e Fiscalização de Decisões do Sistema Interamericano de Direitos Humanos (NUDH). A unidade foi criada pela Resolução TRE-RJ nº 1.335/2024, alterada pela Resolução TRE-RJ nº 1.377/2025, e regulamentada pelo Ato PR nº 264/2024, em atendimento à Resolução CNJ nº 544/2024.",
+        "O objetivo principal do NUDH é monitorar e divulgar, para magistrados e servidores, as decisões do Sistema Interamericano de Direitos Humanos que impactem no processo eleitoral e nos processos criminais submetidos à competência da Justiça Eleitoral. A atuação visa auxiliar a análise de processos nos quais seja suscitada a violação aos Direitos Humanos.",
+        "O Sistema Interamericano de Direitos Humanos é composto por dois órgãos internacionais: a Corte Interamericana de Direitos Humanos e a Comissão Interamericana de Direitos Humanos. No âmbito do tribunal, o NUDH é vinculado à Assessoria Jurídica da Secretaria-Geral da Presidência (ASJUPR) e tem como chefe Maria Tereza Oliveira dos Santos Mussoi.",
+        "Os canais de comunicação com a unidade incluem o e-mail nudh@tre-rj.jus.br, o ramal 3214 e o telefone externo (21) 2038--8013."
       ],
-      "link": "/materia/tre-rj-institui-nucleo-de-monitoramento-do-sistema-interamericano.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": "Não há registro de medidas semelhantes no histórico anterior do tribunal. A iniciativa atinge magistrados e servidores do TRE-RJ, além de alcançar os processos eleitorais e criminais sob a competência da Justiça Eleitoral no estado.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pedidos-para-voto-em-transito-nas-eleicoes-podem-ser-feitos-ate-20-de-",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Pedidos para voto em trânsito nas eleições podem ser feitos até 20 de agosto",
-      "resumo": "Eleitores que estiverem fora do município no primeiro ou no segundo turno podem solicitar a alteração temporária pela internet ou presencialmente.",
-      "fonte": "Meridiano, com informações de TRE-RJ",
-      "origemLink": "https://www.tre-rj.jus.br/comunicacao/noticias/2026/Julho/eleitoras-es-ja-podem-solicitar-o-voto-em-transito-para-o-pleito-de-outubro",
-      "origemNome": "TRE-RJ",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rj",
-      "corpo": [
-        "Eleitores que estiverem viajando durante o primeiro turno, em 4 de outubro, no segundo turno, em 25 de outubro, ou em ambos, podem solicitar o voto em trânsito para as eleições gerais. O prazo para fazer o requerimento começou nesta segunda-feira (20) e segue aberto até o dia 20 de agosto.",
-        "Para quem tem biometria cadastrada, o serviço está disponível na internet pelo site do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), necessitando de validação facial no aplicativo e-Título. O pedido também pode ser feito presencialmente em qualquer Central de Atendimento ao Eleitor ou Zona Eleitoral, sem agendamento prévio, mediante apresentação de documento oficial com foto.",
-        "A modalidade é restrita à capital e a municípios com eleitorado igual ou superior a 100 mil pessoas aptas. Quem indicar uma cidade do mesmo estado vota para os cargos de deputado federal, deputado estadual, dois senadores, governador e presidente da República. Se a escolha for em outro estado, a votação fica restrita ao cargo de presidente da República.",
-        "A transferência de seção é temporária para as Eleições 2026 e não afeta o domicílio eleitoral de forma definitiva. A consulta ao local final de votação estará disponível a partir do dia 1° de setembro pelo aplicativo e-Título ou no site do TRE-RJ. Dúvidas podem ser tratadas pelo telefone ou WhatsApp no número (21) 3436-9000."
-      ],
-      "link": "/materia/pedidos-para-voto-em-transito-nas-eleicoes-podem-ser-feitos-ate-20-de-.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
-      "original": true,
-      "contexto": "A medida se aplica aos eleitores que estiverem fora de seu domicílio no primeiro turno, em 4 de outubro, ou no segundo turno, em 25 de outubro, em capitais ou municípios com 100 mil ou mais eleitores aptos. O prazo para solicitar a alteração temporária do local de votação vai até o dia 20 de agosto.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": "voltaredonda",
-      "municipioNome": "Volta Redonda",
-      "id": "ilm:prefeitura-de-volta-redonda-encerra-inscricoes-para-cursos-do-senai-ne",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Volta Redonda encerra inscrições para cursos do Senai nesta quinta-feira",
-      "resumo": "As capacitações gratuitas são para Assistente Administrativo, Administrador de Banco de Dados, Assistente de Controle da Qualidade e Almoxarife.",
-      "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/25-secom/12290-inscrições-para-cursos-gratuitos-da-prefeitura-de-volta-redonda-em-parceria-com-o-senai-encerram-nesta-quinta-feira-31",
-      "origemNome": "Prefeitura de Volta Redonda",
-      "pautadoPor": [
-        "Estadão",
-        "TV Prefeito"
-      ],
-      "quentura": 2,
-      "uf": "rj",
-      "corpo": [
-        "As inscrições para os cursos profissionalizantes gratuitos da Prefeitura de Volta Redonda, em parceria com o Serviço Nacional de Aprendizagem Industrial (Senai), encerram-se nesta quinta-feira (30). A instituição parceira é a responsável pela certificação das capacitações oferecidas.",
-        "O curso de Assistente Administrativo terá aulas ministradas nos Centros de Referência de Assistência Social (Cras) dos bairros Eucaliptal e Monte Castelo, locais onde também devem ser realizadas as inscrições. Já as aulas de Administrador de Banco de Dados ocorrerão no campus Volta Redonda do Centro Universitário Geraldo Di Biase (UGB), no bairro Aterrado.",
-        "As formações de Assistente de Controle da Qualidade e de Almoxarife serão no Campus UniFOA (Centro Universitário de Volta Redonda), localizado também no Aterrado. Para estas turmas e para a de Banco de Dados, as inscrições acontecem na Secretaria Municipal de Desenvolvimento Econômico e Turismo, no segundo andar da prefeitura.",
-        "Os candidatos precisam apresentar originais e cópias do RG e do CPF, além de comprovante de residência e comprovante de escolaridade. Menores de 18 anos devem estar acompanhados pelos pais ou responsáveis."
-      ],
-      "link": "/materia/prefeitura-de-volta-redonda-encerra-inscricoes-para-cursos-do-senai-ne.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
+      "link": "/materia/tre-rj-atua-com-nucleo-de-monitoramento-de-decisoes-de-direitos-humano.html",
+      "iso": "2026-07-31T18:37:35.135Z",
+      "hora": "14h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
+      "foto": "https://www.voltaredonda.rj.gov.br/images/semopgm.jpg",
+      "fotoAlt": null,
       "municipio": "voltaredonda",
       "municipioNome": "Volta Redonda",
-      "id": "ilm:volta-redonda-amplia-oferta-de-aulas-gratuitas-de-beach-tennis",
+      "id": "ilm:volta-redonda-reduz-roubos-de-rua-em-61-3-no-primeiro-semestre-de-2026",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Volta Redonda amplia oferta de aulas gratuitas de Beach Tennis",
-      "resumo": "A partir de agosto, o bairro Aterrado terá mais um professor e o município construirá novas quadras nos bairros Água Limpa, Santa Cruz, Vila Americana e Santo Agostinho.",
+      "titulo": "Volta Redonda reduz roubos de rua em 61,3% no primeiro semestre de 2026",
+      "resumo": "Dados do ISP-RJ mostram queda de 31 para 12 ocorrências no município, que também zerou roubos em coletivos e manteve o registro de latrocínios zerado no período.",
       "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
-      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/39-fbg/12291-prefeitura-de-volta-redonda-vai-ampliar-oferta-de-aulas-gratuitas-de-beach-tennis",
+      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/85-semop/12306-volta-redonda-reduz-em-mais-de-60-os-roubos-de-rua-no-primeiro-semestre-de-2026",
       "origemNome": "Prefeitura de Volta Redonda",
       "pautadoPor": [
-        "Estadão",
-        "TV Prefeito"
+        "Prefeitura de Volta Redonda"
       ],
       "quentura": 2,
       "uf": "rj",
       "corpo": [
-        "A Prefeitura de Volta Redonda, por meio da Fundação Beatriz Gama (FBG), vai ampliar a oferta de aulas gratuitas de Beach Tennis na Praça Independência e Luz, no bairro Aterrado. A partir de agosto, um novo instrutor se somará aos dois que já atuam no local, o que permitirá o aumento no número de alunos matriculados, atualmente em cerca de 200 pessoas.",
-        "As aulas ocorrem de segunda a sexta-feira, das 6h às 11h e das 17h às 21h, e atendem alunos a partir de oito anos de idade, sem limite máximo. O projeto da FBG disponibiliza raquetes e bolinhas para os treinos. Todas as vagas estão preenchidas, e as inscrições para o cadastro de reserva devem ser feitas com o instrutor no horário das aulas. Fora desse período, as quadras ficam abertas gratuitamente para a população.",
-        "O idealizador e coordenador do projeto e presidente da FBG, Vitor Hugo de Oliveira, informou que, com o aval do prefeito Antonio Francisco Neto (Neto), o bairro Água Limpa será o próximo a receber uma quadra e as aulas gratuitas do projeto. Posteriormente, serão construídas quadras nos bairros Santa Cruz, Vila Americana e Santo Agostinho.",
-        "Além da arena no Aterrado, Volta Redonda possui quadras de areia abertas ao público na Praça Pandiá Calógeras, no bairro Sessenta, e na Ilha São João, no Complexo Esportivo de Proximidade da Secretaria Municipal de Ordem Pública (Semop), locais que não contam com as aulas da FBG. Nos dias 17 e 18 de julho, o espaço do Aterrado sediou um torneio da modalidade com 24 duplas mistas e cerca de 150 espectadores por dia."
+        "Volta Redonda registrou redução de 61,3% nos roubos de rua no primeiro semestre de 2026, na comparação com o mesmo período de 2025. De acordo com o Instituto de Segurança Pública (ISP-RJ), o número de ocorrências caiu de 31 para 12 no município.",
+        "O levantamento também apontou queda de 66,7% nos roubos a estabelecimentos comerciais, que passaram de 12 para quatro registros, e de 42,9% nos roubos de celulares, reduzidos de sete para quatro casos. Os furtos de veículos diminuíram 18,9%, passando de 37 para 30 ocorrências, e os roubos em coletivo caíram de três para zero.",
+        "Os roubos de veículos mantiveram-se estáveis, com sete registros nos dois períodos analisados, enquanto o indicador de latrocínio permaneceu zerado. O município contabilizou investimentos em tecnologia, videomonitoramento, inteligência, planejamento operacional, viaturas, equipamentos e material humano.",
+        "As ações integradas envolvem a Prefeitura de Volta Redonda, por meio da Secretaria Municipal de Ordem Pública (Semop), a Guarda Municipal e as polícias Militar, Civil e Federal. O prefeito Antonio Francisco Neto declarou que a redução é resultado de trabalho em prevenção, investimentos e atuação integrada das forças de segurança."
       ],
-      "link": "/materia/volta-redonda-amplia-oferta-de-aulas-gratuitas-de-beach-tennis.html",
-      "iso": "2026-07-31T13:54:59.239Z",
-      "hora": "09h54",
+      "link": "/materia/volta-redonda-reduz-roubos-de-rua-em-61-3-no-primeiro-semestre-de-2026.html",
+      "iso": "2026-07-31T18:38:06.964Z",
+      "hora": "14h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
+      "foto": "https://prefeitura.rio/wp-content/uploads/2024/10/polio.jpg",
+      "fotoAlt": null,
       "municipio": "rio",
       "municipioNome": "Rio de Janeiro",
-      "id": "ilm:tre-rj-e-pmerj-definem-estrategias-de-seguranca-para-as-eleicoes-2026",
+      "id": "ilm:rio-realiza-campanha-para-atualizar-vacinacao-de-criancas-e-adolescent",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "TRE-RJ e PMERJ definem estratégias de segurança para as Eleições 2026",
-      "resumo": "Encontro alinhou combate ao crime organizado no pleito e a alteração de locais de votação localizados em áreas de vulnerabilidade.",
-      "fonte": "Meridiano, com informações de TRE-RJ",
-      "origemLink": "https://www.tre-rj.jus.br/comunicacao/noticias/2026/Julho/tre-rj-e-policia-militar-alinham-acoes-de-seguranca-para-as-eleicoes-2026",
-      "origemNome": "TRE-RJ",
+      "titulo": "Rio realiza campanha para atualizar vacinação de crianças e adolescentes",
+      "resumo": "Ação da Secretaria Municipal de Saúde ocorre entre 3 de agosto e 1º de setembro e prevê verificar aproximadamente 1,1 milhão de cadernetas.",
+      "fonte": "Meridiano, com informações de Prefeitura do Rio",
+      "origemLink": "https://prefeitura.rio/saude/rio-inicia-campanha-de-atualizacao-da-caderneta-de-vacinacao/",
+      "origemNome": "Prefeitura do Rio",
       "pautadoPor": [],
       "quentura": 0,
       "uf": "rj",
       "corpo": [
-        "O presidente do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), desembargador Claudio de Mello Tavares, reuniu-se nesta quarta-feira (22) com o comandante-geral da PMERJ, coronel Sylvio Guerra, no Centro do Rio. O encontro definiu estratégias de segurança para as Eleições 2026, com foco no combate à interferência de grupos ligados ao tráfico de drogas e às milícias.",
-        "Entre as ações planejadas estão o reforço do policiamento em áreas sensíveis, o compartilhamento de dados de inteligência e o relato imediato de indícios de fraude, violência ou coação. Além disso, locais de votação foram alterados no estado para afastar eleitores de áreas de vulnerabilidade.",
-        "A reunião também reforçou a proibição do uso de celulares e aparelhos eletrônicos na cabine de votação. Segundo a Justiça Eleitoral, fotografar a urna ou registrar o voto configura crime eleitoral.",
-        "Participaram do encontro os juízes Marcello Rubioli e Bruno Rulière, pelo TRE-RJ, e os coronéis Ranulfo Brandão Filho, Marco Andrade e Marcelo Teixeira, além de comandantes de batalhões da Polícia Militar."
+        "A Secretaria Municipal de Saúde (SMS) do Rio promove, entre 3 de agosto e 1º de setembro, a campanha de atualização da caderneta de vacinação de crianças e adolescentes menores de 15 anos. A ação integra uma mobilização nacional coordenada pelo Ministério da Saúde para recuperar as coberturas vacinais e ocorrerá em todas as unidades de Atenção Primária.",
+        "A imunização será realizada de forma seletiva, com avaliação das equipes de saúde para aplicação apenas das doses necessárias. A expectativa da SMS é verificar aproximadamente 1,1 milhão de cadernetas de vacinação de crianças e adolescentes de 0 a 14 anos. O dia D de mobilização será realizado em 22 de agosto, sábado, com pontos extras espalhados por toda a cidade.",
+        "As estratégias de vacinação incluem ações em unidades de saúde, creches, escolas, visitas domiciliares e parcerias com shoppings, igrejas, clubes e associações de moradores. Estarão disponíveis para crianças vacinas como BCG, hepatites A e B, pentavalente, poliomielite (VIP), rotavírus, pneumocócicas, meningocócica C, febre amarela, tríplice viral, varicela, DTP, influenza e covid-19. Para adolescentes, haverá vacinas contra HPV (9 a 19 anos), meningocócica ACWY (11 a 14 anos) e dengue (10 a 14 anos).",
+        "Para a vacinação, pais ou responsáveis devem apresentar documento de identificação da criança ou adolescente e, sempre que possível, a caderneta ou comprovantes de vacinação. As vacinas podem ser aplicadas no mesmo dia. Caso ocorra algum evento adverso após a aplicação, a orientação é procurar a unidade onde a dose foi administrada para avaliação e acompanhamento."
       ],
-      "link": "/materia/tre-rj-e-pmerj-definem-estrategias-de-seguranca-para-as-eleicoes-2026.html",
-      "iso": "2026-07-31T13:54:27.810Z",
-      "hora": "09h54",
+      "link": "/materia/rio-realiza-campanha-para-atualizar-vacinacao-de-criancas-e-adolescent.html",
+      "iso": "2026-07-31T18:37:35.337Z",
+      "hora": "14h37",
+      "original": true,
+      "contexto": "A ação atinge crianças e adolescentes de até 14 anos moradores do Rio de Janeiro. A campanha ocorre entre 3 de agosto e 1º de setembro, com o dia D marcado para 22 de agosto.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.voltaredonda.rj.gov.br/images/seminariosmas.jpg",
+      "fotoAlt": null,
+      "municipio": "voltaredonda",
+      "municipioNome": "Volta Redonda",
+      "id": "ilm:prefeitura-de-volta-redonda-promove-seminario-para-conselhos-de-assist",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeitura de Volta Redonda promove seminário para conselhos de assistência social",
+      "resumo": "O evento reuniu profissionais e representantes de cidades do estado do Rio de Janeiro no auditório do Centro Universitário Geraldo Di Biase para tratar de fiscalização e orçamento.",
+      "fonte": "Meridiano, com informações de Prefeitura de Volta Redonda",
+      "origemLink": "https://www.voltaredonda.rj.gov.br/comunicacao/noticias/15-smac/12305-prefeitura-de-volta-redonda-promove-seminário-para-fortalecer-o-controle-social-da-assistência-social",
+      "origemNome": "Prefeitura de Volta Redonda",
+      "pautadoPor": [
+        "Prefeitura de Volta Redonda"
+      ],
+      "quentura": 2,
+      "uf": "rj",
+      "corpo": [
+        "A Prefeitura de Volta Redonda, por meio da Secretaria Municipal de Assistência Social (Smas) e em parceria com a Cedro Assessoria, realizou o seminário \"Formação para os Conselhos Municipais de Assistência Social\". O evento ocorreu no auditório do Centro Universitário Geraldo Di Biase (UGB), no bairro Aterrado, reunindo conselheiros municipais, trabalhadores do Sistema Único de Assistência Social (Suas), representantes do poder público e da sociedade civil de cidades do estado do Rio de Janeiro.",
+        "A programação abordou o histórico da política de assistência social no Brasil, o papel dos conselhos municipais, o controle social, o financiamento do Suas, as transferências fundo a fundo, a prestação de contas da gestão, a execução orçamentária e a importância das conferências municipais. A assessora técnica da Smas, Fabiana Rosa, lembrou que a Resolução nº 100, do Conselho Nacional de Assistência Social, recomenda a formação continuada dos conselheiros.",
+        "A subsecretária municipal de Assistência Social, Larissa Garcez, declarou que a participação social é um dos pilares do Suas. A assistente social e pós-graduada em Direito da Criança e do Adolescente, Maria Aparecida Guerra, explicou que a assistência social passou a ser reconhecida como política pública na Constituição Federal de 1988, compondo o tripé da Seguridade Social ao lado da saúde e da previdência.",
+        "O seminário também contou com palestras de Alessandra Celita, assistente social em entidade socioassistencial privada no município do Rio de Janeiro e conselheira estadual de assistência social, e de Orlando Inácio Xavier, especialista em orçamento público com 41 anos de atuação na assistência social do município do Rio de Janeiro. Orlando Inácio Xavier tratou de execução orçamentária, transferências fundo a fundo, controle social e prestação de contas."
+      ],
+      "link": "/materia/prefeitura-de-volta-redonda-promove-seminario-para-conselhos-de-assist.html",
+      "iso": "2026-07-31T18:38:06.964Z",
+      "hora": "14h38",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://prefeitura.rio/wp-content/uploads/2026/07/27112025-digital-foto-instituto-pereira-passos-reabre-livraria-e-celebra-conhecimento-sobre-o-rio-fotos-rafael-catarcione-prefeitura-do-rio_54950052659_o.jpg-scaled.jpeg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:livraria-do-ipp-realiza-edicao-do-encontros-com-autores-sobre-a-avenid",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Livraria do IPP realiza edição do Encontros com Autores sobre a Avenida Brasil",
+      "resumo": "O debate foi conduzido pelo pesquisador Pedro Barreto de Moraes e contou com a participação de Flávia Gomes, da Secretaria Municipal de Integração Metropolitana.",
+      "fonte": "Meridiano, com informações de Prefeitura do Rio",
+      "origemLink": "https://prefeitura.rio/ipp/encontros-com-autores-livraria-do-ipp-promove-debates-e-estimula-o-conhecimento-sobre-a-cidade/",
+      "origemNome": "Prefeitura do Rio",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rj",
+      "corpo": [
+        "A Livraria do Instituto Pereira Passos (IPP) realizou, na última terça-feira (29), mais uma edição do projeto Encontros com Autores. O evento reuniu pesquisadores, especialistas e o público para debater a Avenida Brasil, apontada como um dos eixos de mobilidade e desenvolvimento urbano do Rio de Janeiro.",
+        "A conversa foi conduzida pelo arquiteto e pesquisador Pedro Barreto de Moraes, autor do livro Avenida Brasil: Rodovia Metropolitana, publicado pelo IPP. Durante o debate, Moraes apresentou uma análise sobre a formação, evolução e impactos da via na expansão da cidade, na mobilidade, na ocupação do território e no planejamento urbano contemporâneo. A obra é fruto de uma pesquisa acadêmica premiada pelo instituto.",
+        "O encontro contou também com a participação de Flávia Gomes, coordenadora de Projetos da Secretaria Municipal de Integração Metropolitana, com o objetivo de integrar pesquisa acadêmica, gestão pública e planejamento urbano.",
+        "Realizados mensalmente, os Encontros com Autores buscam incentivar a leitura, valorizar a produção editorial sobre o Rio de Janeiro e aproxima a produção científica da sociedade."
+      ],
+      "link": "/materia/livraria-do-ipp-realiza-edicao-do-encontros-com-autores-sobre-a-avenid.html",
+      "iso": "2026-07-31T18:37:35.337Z",
+      "hora": "14h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [
-    {
-      "municipio": "niteroi",
-      "municipioNome": "Niterói",
-      "seSabe": [
-        "Que o desabastecimento de energia no Rio é noticiado por seis veículos de imprensa.",
-        "Que as publicações divergentes citam impactos no Rio de Janeiro e em Niterói.",
-        "Que relatos da imprensa apontam vendaval recente com danos a estruturas e veículos."
-      ],
-      "falta": [
-        "Posicionamento oficial e dados confirmados da concessionária de energia elétrica responsável.",
-        "Confirmação do número exato de imóveis afetados por autoridade governamental.",
-        "Relatório oficial da Defesa Civil ou órgãos públicos sobre os estragos do vendaval."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Folha de S.Paulo",
-          "titulo": "Rio de Janeiro ainda tem 112 mil imóveis sem luz após vendaval",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNHB3UzNDNnFBTzczc0haODZ3UTRjWWk2azNsbTk2ZmFMbXFPalVwR25pRzZTRHhsc0toTkUwdGRscGpnT3hBbTJOSUdRM3VjZGVWQTNvNjdKYWkyRXlfeTNoS29sLTZDeEp5b05ZZW1OQkRRMERXYnV2d2lxM2x3ZTZnSi1pSmFQNHVSWTB3WDJMTkFMOXRFYTRRcjVGVW9pYXBSMWEwSUxCNHJkZ19JczZmMnVEU0U?oc=5"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Mais de 130 mil imóveis continuam sem energia após vendaval no Rio",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObVZWSy13MFQ5bzNBd3hBOG5SUTFoU3h6Um1xVkNVZ1lQNlN1c0VmU1ZKcHBmbWRsUk5vb2pnczk0YlZDbURCeS1vQU9YMlVRdHJuRDBHOTVtUVQwdWwtVVB3QWR3cDdwX0dZX25KZld2bzhOVzFTd1ptQzBjYmtSVExzOEhBbHdQVXd1bTBycV9qcEFEOHVWYUlwd3JlaEtKSlE?oc=5"
-        },
-        {
-          "veiculo": "VEJA",
-          "titulo": "Mais de 112 mil seguem sem luz no Rio após vendaval; veja bairros e municípios impactados",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNc0FJQzM5N1c5Q3NMWWZfdXpraVF1SHNxZDJRZXBKeEctR0ZNTEEwNHNqS3c0YkJBcmJuamhnYnZWNHh5bUQ0eWRzeW9ZcWhHRnJDeUo3NzJsc09DcEVpRFhtRlNzdXpNQnpkeWtKbnBqdkM3RDJrVnZKVjZ6eGpRTmRUM01mSWc3QkFhWVAtdUpwdTJKd1ZXWl8tZ1dZOTJOc1FsaUtzSGdVYkRwR0pQbEtLSXpXNHdKZkdfQ2dsWQ?oc=5"
-        },
-        {
-          "veiculo": "O GLOBO",
-          "titulo": "Quase 20 mil imóveis seguem sem luz em Niterói mais de 20 horas após vendaval; árvores caíram sobre carros e cobertura de posto desabou",
-          "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPOWtxdVB0YjJBbHpNZjBMWThSaFkzYW9wZDJ4dTFrRDdTNTNMUXAxdjA3QWdhNVdmeGFsMm1IZHhHamlNWXF1ZVhmRTZiY3UtWWVBX1o2dng4V2RSQTViTWZvbWxqSDI3M1hzLTl5MTRSbU9Gbl9zTmFqYmI0TnFvRlJVTkV5VkhOLTU2LWFSZ0FYYmhwLVVpeFpFelRJMmhmYlh3NTlpeUh6amhHY3hzVHJrVnl3bW1KNVFRc19GUGRWWWdoc1loR2I1Nm55eHlMWVhJQTZMMjZWVnlFbkxIYWo2Y2hPTjFFbGU3LVdqbWdPem9JZDM1cEpQSXhVUUxQZjdXb04xaXFsN3ZxX1A1cUtEM2VUMjNTcFBqX2NKbWZrSXpfVVlrYVRfTmHSAbsCQVVfeXFMTVctc2xmSWtGWVZ2QVFEWGpMWVlHaF9iUDE1NUZtbzFyVFUtY3hWYVlpclJYQ0JRTmVoZHhHdFo5Rk9FaXoxa3ItajVWNHdjeDh1UzJvTzhzMzBBc0NGTmVkbE5kMUZvaGRCUWRmN21EZkpLWXJabldYcGlCN25lbHVCLUtBMktDX29zRUZ4bkFSdm1GWkl3cklITXMySmExN0RUQkZjbFI3eWFfOEV6SFc4LW8zb2xTN2NKYWM5S0NvRlVyM25pVzdzYlREWGIzLWk2a1VZcVpSOVBJdHhfUTBXQi03aU5BNXJpNjNhc3JuYjdPeVk3RGI1RkdGWHpyWVpaMWZiWkF3TGxPeU0wdEU2anFMRnNuTHNQY0tmM3FibEZBTWdCTjBnWkhEdHViZEpSYmF1UUEtS1VV?oc=5"
-        },
-        {
-          "veiculo": "PÁGINA DE POLÍCIA",
-          "titulo": "Mais de 200 mil continuam sem energia no Rio após vendaval",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQUZfLXNCcXdVR242ZFB6YVJhWXlCSWVQbEN1OXdSNk5TcGEtdWgxUVR3QTlzd0JBWWUyeDlTejUtQnh5d2R6U2dZZFZYZUJjLUplNnc5RTk0TzE0ZmNfc1RkZXpIaUs2ZHNTdVdwWUhQd19EeVdTOVF3bzV0ZG9KbnFDSTlsbnN1UFR2NGw5UGMtb0U0Uml0cmFka3Aza1ZzUTVRbFBfRE1kTkdPN1lUblR3?oc=5"
-        },
-        {
-          "veiculo": "bra1.com.br",
-          "titulo": "Mais de 200 mil pessoas ainda estao sem luz no Rio apos tempestade",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMFlFcnlISGJGc0R2X2pVVFFqOHVIelZCaGdIblF6eEhVMnZLaHV2OGoyNmUzU2txejAyMmtUQVRudS1yQVJ2WUMzUzBlR2ZrSEpwRHczVkhuTDQ4N3JQcU44YnpfR1doRzNQbzVZcXVWMnJ5SDRqQmxGQzFpYmpQQmIzaFZtOGxwSVI2S1ctVTFZN0d2dV9PWWFudVdBLWc4QkJtS2wtR2dRdw?oc=5"
-        }
-      ],
-      "link": "/materia/nc-milhares-de-imoveis-estariam-sem-luz-apos-vendaval-no-rio-de-janeiro.html",
-      "corpo": [
-        "Um vendaval ou tempestade teria provocado a interrupção do fornecimento de energia elétrica em diversas localidades do Rio de Janeiro. O desabastecimento estaria afetando diferentes bairros e municípios do estado. Na cidade de Niterói, a falta de luz já duraria mais de 20 horas.",
-        "As publicações que divulgaram a informação divergem quanto ao número total de atingidos. As estimativas citadas variariam entre 112 mil, mais de 130 mil e mais de 200 mil imóveis ou pessoas sem energia. No município de Niterói, o total de imóveis afetados chegaria a quase 20 mil.",
-        "Além da falta de eletricidade, o vento forte teria causado estragos materiais na infraestrutura urbana. Árvores teriam caído sobre automóveis e a cobertura de um posto de combustíveis teria desabado."
-      ],
-      "id": "circ:milhares-de-imoveis-estariam-sem-luz-apos-vendaval-no-rio-de-janeiro",
-      "editoria": "regional",
-      "uf": "rj",
-      "titulo": "Milhares de imóveis estariam sem luz após vendaval no Rio de Janeiro",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T14:00:15.211Z",
-      "hora": "10h00"
-    },
-    {
-      "municipio": "petropolis",
-      "municipioNome": "Petrópolis",
-      "seSabe": [
-        "Que o assunto sobre as obras está sendo publicado por seis veículos de imprensa.",
-        "Que as notícias citam serviços de recuperação na BR-040, na Serra de Petrópolis.",
-        "Que as publicações preveem a continuidade das intervenções até o mês de novembro."
-      ],
-      "falta": [
-        "Confirmação oficial do órgão competente ou da concessionária responsável pela rodovia BR-040.",
-        "Cronograma oficial detalhando as datas exatas de início e término das intervenções.",
-        "Posicionamento formal da empresa Elovias a respeito dos serviços divulgados pela imprensa."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Portal iG",
-          "titulo": "Serra de Petrópolis recebe obras para recuperar pista da BR-040",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdFd1QjhmenRoNUJ1QllqUlFOTkVnX2owSGluMlA0SVR3S1NzcXd6bGtWU01hSDNGR2pDWmY0MWxSRFFCUDlQZzNycmxfU2VERFNsR0RubVZ1VHRobFV2dER0WFdxQTNhY21uS3hkb3JXUFdSMTNXdC15T203MklOeHJNQ1dWcktyckstTnlSWHpXR2tPOWwxczBtMUtqRDZqLVl2Zk5kc1dZZ0w0X1dUNEp0ZV9Ed9IBtgFBVV95cUxPdFd1QjhmenRoNUJ1QllqUlFOTkVnX2owSGluMlA0SVR3S1NzcXd6bGtWU01hSDNGR2pDWmY0MWxSRFFCUDlQZzNycmxfU2VERFNsR0RubVZ1VHRobFV2dER0WFdxQTNhY21uS3hkb3JXUFdSMTNXdC15T203MklOeHJNQ1dWcktyckstTnlSWHpXR2tPOWwxczBtMUtqRDZqLVl2Zk5kc1dZZ0w0X1dUNEp0ZV9Edw?oc=5"
-        },
-        {
-          "veiculo": "Folha JF",
-          "titulo": "Obras na descida da serra de Petrópolis devem continuar até novembro",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE81Unc0M0JLcV80dmljUVR3T3h6Z0dwckk0bDhNem9KWTRhcTg1bHQwdDROd3VRdXNEMk8zYVBjX25wcWxNbnNfN01BLUhXdEVoRGxUVklsWHNYSTFrbFNlRVBSQTdkZjMtLWt0aS1RZXY1Z3kwOHJLNjVrcS0?oc=5"
-        },
-        {
-          "veiculo": "Diário do Rio",
-          "titulo": "Obras na descida da Serra de Petrópolis avançam e seguem até novembro",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPY0tkaVRnUkw5NUVoZXVhbmpZV0N5cmZyWlJoSXk5RjBrNmNhbEtjdVMyZEtnVWRnRG92QnZXenoxU1Ryb3pzdmw3eDMtUk5rN1djUWpIblB0blBDcjhKbVUxTmtnU0ZRc290Z1BZV1pLM1cxX2FOTkgxbjF2UzJzdzlYOHRiUkJvTDJrN2JRTThTUGt4T2ZDaklR?oc=5"
-        },
-        {
-          "veiculo": "Diário de Petrópolis",
-          "titulo": "Obras da Elovias avançam na descida da Serra de Petrópolis para garantir mais segurança e conforto aos motoristas",
-          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNclo4WkJodGROYlhfcXJ4RGZOVHRzWVhraGRQb3hJVW1ZTjM4Y1ZVaHNPNF9XZ3BMdTRCRmphcFZfRUp1TEpQYThsazFmRExPWVhGTjAtOWhBd1B1V3RhRHhLZlN4TlhjNm16MVZSWlFESXl2VzdUUmg3d1c3Um1RRE1WQkVTa1d3WmMySzdsTWdIUmtVazd3S1RITzI5TDhIc1lmRWhLcERFU25CUTFrUmVMZldjdUgtTmNyYks2Y2FybHlNZEF1WkxLVUZNbUNZWXNsR1RoUkEzRGVEcVh3YzI1dU1BRTRSYTFGTVI0ZnpfLTQ?oc=5"
-        },
-        {
-          "veiculo": "Rádio Manchete Rio",
-          "titulo": "Obras na Serra de Petrópolis seguem até novembro e exigem atenção dos motoristas",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMW02QWFUcS02R0RyanBFVjJjYXRDUUc3UU1UWWsweXBSdnZUR3pBcmlQVjJrUDRSYk11UmZPMHdnU01COVl6ZG9qY3hhb0w1TVlWXzVpY0pCRWo5MGJkSVRiSkhXUG1qVG1yWmJja0t6dEFkYTBUS2dVT3FSODFtVWZQUmYweUNORzVzNzlwVnhmMkY5WHlVblRGSWgycXBYU0Zhcmhqekc3VUt5?oc=5"
-        },
-        {
-          "veiculo": "entreriosjornal.com",
-          "titulo": "Obras na descida da Serra de Petrópolis exigem atenção redobrada dos motoristas na BR-040",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSDdTYVVjdHVFeXE1RjdjYUVTS0dkV2ljNFpYZEh1Y28zcm5sMm9ZNHFGQnB1VmQyWnNIamNZZGM3N2lIYjlrWkZMWWtreUdqQkQ5a2o0UEhQRTNRdEVneEFza2c1UDZoZVJTaXZxakxzWkxSa3EwTnNyMnQ5ZUEzT0V4UE9SMHlYaTFGYg?oc=5"
-        }
-      ],
-      "link": "/materia/nc-obras-na-br-040-na-serra-de-petropolis-estariam-em-andamento-ate-novem.html",
-      "corpo": [
-        "Publicações estariam noticiando a realização de obras de recuperação de pista na BR-040, na Serra de Petrópolis. Os trabalhos estariam ocorrendo no trecho de descida e seriam atribuídos à empresa Elovias.",
-        "Segundo o que é alegado, as intervenções na pista deveriam se estender até o mês de novembro. As manchetes divergiriam ligeiramente entre si, pois parte especificaria o trecho de descida da serra, enquanto outras citariam a região de forma geral.",
-        "A execução das intervenções exigiria atenção redobrada dos motoristas que trafegam pelo local. A finalidade informada para a realização dos serviços seria garantir mais segurança e conforto aos condutores."
-      ],
-      "id": "circ:obras-na-br-040-na-serra-de-petropolis-estariam-em-andamento-ate-novem",
-      "editoria": "regional",
-      "uf": "rj",
-      "titulo": "Obras na BR-040 na Serra de Petrópolis estariam em andamento até novembro",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T14:01:09.463Z",
-      "hora": "10h01"
-    },
-    {
-      "municipio": "niteroi",
-      "municipioNome": "Niterói",
-      "seSabe": [
-        "Que três veículos de imprensa noticiaram a inauguração da Cidade da Polícia em Niterói.",
-        "Que as publicações citam a inclusão de delegacias especializadas no espaço.",
-        "Que o objetivo divulgado seria centralizar o combate ao crime na Região Metropolitana."
-      ],
-      "falta": [
-        "Confirmação do evento por parte de órgãos oficiais de segurança pública.",
-        "Esclarecimento se a inauguração já ocorreu ou ocorrerá na sexta-feira (31).",
-        "Endereço e dados oficiais sobre quais delegacias comporiam o complexo."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Rádio Manchete Rio",
-          "titulo": "Niterói inaugura nova Cidade da Polícia para centralizar o combate ao crime na Região Metropolitana",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVXh6czZmaE5qMGhSQ0VYWXl5SlZ3UmhodkdIblpQQk9aeVVNNUN4SnJmTU5ieThBN0xCazVuTW1vWlRjTmFUSUVTeEFXVklMNEhXZklocWVJa3JXYVlTZjZYVS1NZWxBVzRxR2hkWVk2Z1I2WGhBWHl1QkFhYXRxa1lCMHRVZEt4aUU3VXRIeHUxbWtNdnhZcXNaWlJvcUN5cXlnVmw0RzdaU3FkOEptNk01RTgzRHZPdFp3SmlfYmNpRU1kaVE?oc=5"
-        },
-        {
-          "veiculo": "Agenda do Poder",
-          "titulo": "Niterói inaugura Cidade da Polícia com delegacias especializadas",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTklXcUJKVXdwQllObFphNGJjM1ZOWGFKZ0pKTmdacy1LUDBNX0ZhNFF4aFJsckV0UXJKR0UxNmFMSjVzbWs1YlBvczFZZGVuZmlTa0t1ZHdnRXlMWHNTSC0tZDdrbmd5NEtwTmoyRFk0WXR0YWdVZlFHck8wSnY5NlBjRjF6N1pUeHZLbjhSSGpfWG5nOFBLLVR3?oc=5"
-        },
-        {
-          "veiculo": "atribunarj.com.br",
-          "titulo": "Cidade da Polícia será inaugurada em Niterói nesta sexta-feira (31)",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOX1hFWGp3SlJGYnlKa1g0OUhCMnpsNExIOElGdmRGYUREMXIySHJ0SnplZ2ZZRU5KOEFBbW5YM2ZjUzFxd3kydTFDcXM1Tk1fWEVfY1d0eV9SeWtlWkdyM0ZsR1l5X19TMC0ydGFFWVMtZXFhTkJfNU5TZ3pNTFZpMDhCNjhBZmw3NjV2VTlheHF1bVljRXNHZERIeGtVTGVxRUNRS0Nn?oc=5"
-        }
-      ],
-      "link": "/materia/nc-niteroi-teria-inauguracao-de-cidade-da-policia-com-delegacias-especial.html",
-      "corpo": [
-        "Uma Cidade da Polícia estaria sendo inaugurada no município de Niterói. O espaço contaria com delegacias especializadas reunidas no local.",
-        "As publicações teriam divergido sobre o momento do evento, indicando que a solenidade já teria ocorrido ou que estaria prevista para sexta-feira (31). Segundo os veículos que publicaram a informação, a unidade visaria centralizar o combate ao crime na Região Metropolitana.",
-        "A estrutura estaria associada ao fortalecimento da segurança pública na área regional. O ato não teria sido localizado em registros oficiais de órgãos estaduais ou municipais."
-      ],
-      "id": "circ:niteroi-teria-inauguracao-de-cidade-da-policia-com-delegacias-especial",
-      "editoria": "regional",
-      "uf": "rj",
-      "titulo": "Niterói teria inauguração de Cidade da Polícia com delegacias especializadas",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T14:02:23.140Z",
-      "hora": "10h02"
-    },
-    {
-      "municipio": "novaiguacu",
-      "municipioNome": "Nova Iguaçu",
-      "seSabe": [
-        "Que o assunto está sendo publicado por ao menos três veículos de imprensa.",
-        "Que as publicações citam ações de força-tarefa da Prefeitura de Nova Iguaçu.",
-        "Que não há confirmação dos dados divulgados em registros de fontes oficiais."
-      ],
-      "falta": [
-        "Confirmação oficial da Prefeitura de Nova Iguaçu sobre o total de escolas danificadas.",
-        "Boletim de órgão meteorológico que confirme a velocidade informada sobre os ventos.",
-        "Posicionamento da concessionária de energia referente aos bairros e ao tempo de desabastecimento.",
-        "Registro contendo a data e o horário exatos em que a ventania ocorreu."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Rádio Manchete Rio",
-          "titulo": "Ventania deixa 67 escolas danificadas e mantém força-tarefa em Nova Iguaçu",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOam5sOFlRYWtHNjFTLXFsTVZnLUN6M2ZpVHYwd1FvYmpXYXNkUl9JdFJrTE1DUl82bXJLSjdOaXM5VXRoTE5idkVtalAtWVRhdGwxYklfTXNFQWxDMmZhdk1mLTBZS3ZscVFTR3k2aDhVTmZiOExRbmpRMmczMEI0bXNUS3Y3cmZTRWQ1aHpJX0t5eUdXM1RkRFBSWGdrUmZPdWFZbA?oc=5"
-        },
-        {
-          "veiculo": "TV Prefeito",
-          "titulo": "Prefeitura de Nova Iguaçu mantém força-tarefa após ventania; 67 escolas da rede municipal foram afetadas",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWHBTRXRyUjlKeUx4ZF9PRUdWdzZEU181Y24xSkt3cXZGOTZETUd0amVOR1R6MDUzWTRrdmhxTDJuUldkRUpCaWRNTnFHMGdNd3lrNVR5NnB0cmdsN01YeHRHc2lWSVJqTFhKYll6b1VuWjdzdVJKZjh2M3N6LWNUQ2VvdlY0S0lkbWNHUlhRdTlHd3RrUU5lNldWbXBpVW9USTZuOFV6V1A0X0FOWnJZR0gyX0pRQ0dwMFRObkVYV2V3WDF6eVE?oc=5"
-        },
-        {
-          "veiculo": "ZM Notícias",
-          "titulo": "Ventania de quase 90 km/h provoca destruição em Nova Iguaçu e deixa bairros sem energia por mais de 24 horas",
-          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSmYtZk5na1VzemdwNWtUVkNpLVh5M2VOb09ZTENub1IzYVZ4SWpCYkhPM2RVeWd0XzY1NGdIV05vUUZFcVRSYmloXzVZWGJqRnV4cVBrSWJtaF8zYlZORk1laWZBUzRRN1RaZFZzNktzMEYyT0h5Tklmc1h5UUFjSlhPM1doNTdXcDlyRmZwQ0xjQ1lnVzRwckZxWXRpUm1WTnlpX2hYYUIwaTZ4aDJ6QjNad3NtbkZTOENQb0NTSWlxUVBTbk1URFk5dmZBdUhXc21pQ05B?oc=5"
-        }
-      ],
-      "link": "/materia/nc-ventania-em-nova-iguacu-teria-afetado-67-escolas-e-deixado-bairros-sem.html",
-      "corpo": [
-        "Uma ventania de quase 90 km/h teria provocado destruição no município de Nova Iguaçu. O fenômeno teria levado à mobilização de uma força-tarefa por parte da prefeitura da cidade.",
-        "De acordo com as publicações, 67 escolas da rede municipal teriam sido afetadas ou danificadas pelas rajadas. Além dos prejuízos nas unidades de ensino, bairros da região teriam ficado sem energia elétrica por um período superior a 24 horas.",
-        "A prefeitura local estaria mantendo equipes mobilizadas para lidar com os estragos provocados no município. Os relatos veiculados concentram-se nos impactos causados à infraestrutura pública e na interrupção do serviço de energia."
-      ],
-      "id": "circ:ventania-em-nova-iguacu-teria-afetado-67-escolas-e-deixado-bairros-sem",
-      "editoria": "regional",
-      "uf": "rj",
-      "titulo": "Ventania em Nova Iguaçu teria afetado 67 escolas e deixado bairros sem energia",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T14:02:50.998Z",
-      "hora": "10h02"
-    }
-  ],
+  "circulando": [],
   "pautas": [
     {
-      "titulo": "Rio de Janeiro ainda tem 112 mil imóveis sem luz após vendaval",
-      "veiculo": "Folha de S.Paulo",
+      "titulo": "São Gonçalo apresenta andamento do Plano Municipal de Redução de Riscos",
+      "veiculo": "A Tribuna RJ",
       "editoria": "regional",
       "quentura": 9,
       "tambemEm": [
-        "CNN Brasil",
-        "VEJA",
-        "O GLOBO"
-      ]
-    },
-    {
-      "titulo": "Guarda Municipal armada inicia patrulhamento em São Gonçalo",
-      "veiculo": "Super Rádio Tupi",
-      "editoria": "regional",
-      "quentura": 9,
-      "tambemEm": [
-        "Diário do Rio",
-        "G1",
-        "saogoncalo.rj.gov.br"
+        "g1.globo.com",
+        "saogoncalo.rj.gov.br",
+        "Diário do Rio"
       ]
     },
     {
       "titulo": "Guarda Municipal armada inicia patrulhamento em São Gonçalo",
       "veiculo": "Diário do Rio",
       "editoria": "regional",
-      "quentura": 9,
+      "quentura": 8,
       "tambemEm": [
-        "Super Rádio Tupi",
-        "G1",
-        "saogoncalo.rj.gov.br"
+        "g1.globo.com",
+        "A Tribuna RJ",
+        "TV Prefeito"
       ]
     },
     {
       "titulo": "Guarda Municipal armada começa a atuar em São Gonçalo",
       "veiculo": "Rádio Manchete Rio",
       "editoria": "regional",
-      "quentura": 9,
-      "tambemEm": [
-        "Super Rádio Tupi",
-        "Diário do Rio",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Mais de 112 mil seguem sem luz no Rio após vendaval; veja bairros e municípios impactados",
-      "veiculo": "VEJA",
-      "editoria": "regional",
-      "quentura": 9,
-      "tambemEm": [
-        "CNN Brasil",
-        "Folha de S.Paulo",
-        "O GLOBO"
-      ]
-    },
-    {
-      "titulo": "Mais de 130 mil imóveis continuam sem energia após vendaval no Rio",
-      "veiculo": "CNN Brasil",
-      "editoria": "regional",
       "quentura": 8,
       "tambemEm": [
-        "Folha de S.Paulo",
-        "VEJA",
-        "O GLOBO"
+        "g1.globo.com",
+        "A Tribuna RJ",
+        "Diário do Rio"
       ]
     },
     {
-      "titulo": "Vendaval deixa mais de 200 mil clientes sem energia no Rio de Janeiro",
-      "veiculo": "Portal Sertão da Paraíba",
+      "titulo": "Guarda Municipal armada começa a patrulhar e reforçar a segurança nas ruas de São Gonçalo",
+      "veiculo": "LSM Notícias",
       "editoria": "regional",
-      "quentura": 8,
+      "quentura": 7,
       "tambemEm": [
-        "CNN Brasil",
-        "Folha de S.Paulo",
-        "VEJA"
-      ]
-    },
-    {
-      "titulo": "Mais de 200 mil continuam sem energia no Rio de Janeiro após vendaval",
-      "veiculo": "PrimeiroJornal",
-      "editoria": "regional",
-      "quentura": 8,
-      "tambemEm": [
-        "CNN Brasil",
-        "Folha de S.Paulo",
-        "VEJA"
+        "g1.globo.com",
+        "A Tribuna RJ",
+        "Diário do Rio"
       ]
     },
     {
       "titulo": "Serra de Petrópolis recebe obras para recuperar pista da BR-040",
       "veiculo": "Portal iG",
       "editoria": "regional",
-      "quentura": 8,
+      "quentura": 7,
       "tambemEm": [
         "Folha JF",
         "Diário do Rio",
-        "Diário de Petrópolis"
+        "Rádio Manchete Rio"
       ]
     },
     {
-      "titulo": "Mais de 200 mil pessoas ainda estao sem luz no Rio apos tempestade",
-      "veiculo": "bra1.com.br",
+      "titulo": "São Gonçalo faz apresentação do desenvolvimento do Plano Municipal de Redução de Riscos",
+      "veiculo": "TV Prefeito",
       "editoria": "regional",
       "quentura": 7,
       "tambemEm": [
-        "Folha de S.Paulo",
-        "VEJA",
-        "PÁGINA DE POLÍCIA"
+        "g1.globo.com",
+        "A Tribuna RJ",
+        "Diário do Rio"
+      ]
+    },
+    {
+      "titulo": "Rio de Janeiro ainda tem 112 mil imóveis sem luz após vendaval",
+      "veiculo": "Folha de S.Paulo",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "CNN Brasil",
+        "Diário do Rio",
+        "Agenda do Poder"
       ]
     },
     {
       "titulo": "Obras na descida da serra de Petrópolis devem continuar até novembro",
       "veiculo": "Folha JF",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Diário do Rio",
-        "Diário de Petrópolis",
-        "Rádio Manchete Rio"
+        "Rádio Manchete Rio",
+        "Portal iG"
       ]
     },
     {
       "titulo": "Obras da Elovias avançam na descida da Serra de Petrópolis para garantir mais segurança e conforto aos motoristas",
       "veiculo": "Diário de Petrópolis",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Folha JF",
         "Diário do Rio",
@@ -1382,66 +935,99 @@
       "titulo": "Obras na Serra de Petrópolis seguem até novembro e exigem atenção dos motoristas",
       "veiculo": "Rádio Manchete Rio",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Folha JF",
         "Diário do Rio",
-        "Diário de Petrópolis"
+        "Portal iG"
       ]
     },
     {
       "titulo": "Obras de recuperação na pista de descida da serra de Petrópolis devem ser concluídas em novembro",
       "veiculo": "Tribuna de Petrópolis",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Folha JF",
         "Diário do Rio",
-        "Diário de Petrópolis"
+        "Rádio Manchete Rio"
       ]
     },
     {
       "titulo": "Obras na descida da Serra de Petrópolis exigem atenção redobrada dos motoristas na BR-040",
       "veiculo": "entreriosjornal.com",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Folha JF",
         "Diário do Rio",
-        "Diário de Petrópolis"
+        "Rádio Manchete Rio"
       ]
     },
     {
       "titulo": "Obras na descida da Serra de Petrópolis avançam e seguem até novembro",
       "veiculo": "Diário do Rio",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
         "Folha JF",
-        "Diário de Petrópolis",
-        "Rádio Manchete Rio"
+        "Rádio Manchete Rio",
+        "Portal iG"
       ]
     },
     {
-      "titulo": "São Gonçalo inicia patrulhamento com grupamento armado ROMU da Guarda Municipal",
-      "veiculo": "saogoncalo.rj.gov.br",
+      "titulo": "Autoridades inauguram 'Cidade da Polícia' em Niterói nesta sexta-feira (31)",
+      "veiculo": "O São Gonçalo",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 5,
       "tambemEm": [
-        "Super Rádio Tupi",
-        "Diário do Rio",
-        "G1"
+        "Agenda do Poder",
+        "Rádio Manchete Rio",
+        "radio93.com.br"
       ]
     },
     {
-      "titulo": "Alunos da rede municipal de São Gonçalo se formam no Proerd",
-      "veiculo": "saogoncalo.rj.gov.br",
+      "titulo": "Guarda Municipal armada começa a atuar em São Gonçalo",
+      "veiculo": "g1.globo.com",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 5,
       "tambemEm": [
-        "Super Rádio Tupi",
+        "A Tribuna RJ",
         "Diário do Rio",
-        "G1"
+        "TV Prefeito"
+      ]
+    },
+    {
+      "titulo": "Guarda Municipal armada começa a atuar em São Gonçalo",
+      "veiculo": "g1.globo.com",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "A Tribuna RJ",
+        "Diário do Rio",
+        "TV Prefeito"
+      ]
+    },
+    {
+      "titulo": "Guarda Municipal armada começa a atuar em São Gonçalo",
+      "veiculo": "g1.globo.com",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "A Tribuna RJ",
+        "Diário do Rio",
+        "TV Prefeito"
+      ]
+    },
+    {
+      "titulo": "Guarda Municipal armada começa a atuar em São Gonçalo",
+      "veiculo": "g1.globo.com",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "A Tribuna RJ",
+        "Diário do Rio",
+        "TV Prefeito"
       ]
     }
   ]
