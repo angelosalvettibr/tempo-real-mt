@@ -6,7 +6,17 @@ on:
     # De 3 em 3 horas eram 8 rodadas diarias, e assessoria publica nao
     # publica oito vezes por dia — a maioria das rodadas gastava Gemini
     # para nao achar nada novo.
-    - cron: '0 9,15,21 * * *'
+    # Cinco horarios para conseguir tres rodadas.
+    #
+    # Agendamento no GitHub Actions nao tem hora garantida: a fila e de baixa
+    # prioridade e, em periodo de carga, o proprio GitHub atrasa ou PULA a
+    # execucao. Quanto mais raro o agendamento, mais chance de ser descartado.
+    # Pedir cinco e aceitar que alguns falhem sai mais barato que o jornal
+    # aparecer com doze horas de atraso.
+    #
+    # O robo descarta o que ja publicou, entao rodada a mais nao duplica
+    # materia — no pior caso ela custa a coleta e nao escreve nada.
+    - cron: '0 8,11,14,18,22 * * *'
   workflow_dispatch:
     inputs:
       edicao:
