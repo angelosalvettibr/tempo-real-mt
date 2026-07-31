@@ -1,20 +1,20 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-07-31T13:15:15.560Z",
+  "gerado": "2026-07-31T14:05:38.232Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 215,
-    "fonteLivre": 63,
-    "confirmadas": 14,
-    "publicadas": 4,
+    "pauta": 223,
+    "fonteLivre": 55,
+    "confirmadas": 18,
+    "publicadas": 6,
     "resgatadas": 0,
-    "semFonte": 67
+    "semFonte": 68
   },
   "fontes": {
     "checadas": 81,
-    "responderam": 52,
-    "entregando": 30,
+    "responderam": 35,
+    "entregando": 29,
     "itens": 278,
     "lista": [
       {
@@ -39,6 +39,24 @@
         "tipo": "pauta",
         "id": "cnn",
         "nome": "CNN Brasil",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "uol",
+        "nome": "UOL",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,8 +109,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "estadao",
+        "nome": "Estadão",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -100,8 +118,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -127,17 +145,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "uol",
-        "nome": "UOL",
+        "id": "jota",
+        "nome": "JOTA",
         "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "jota",
-        "nome": "JOTA",
+        "tipo": "resgate",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -147,15 +165,6 @@
         "tipo": "pauta",
         "id": "bbcbr",
         "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -190,15 +199,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "migalhas",
         "nome": "Migalhas",
         "itens": 9,
@@ -217,18 +217,18 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
-        "itens": 7,
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -247,15 +247,6 @@
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -316,8 +307,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +316,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -384,25 +375,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -421,6 +394,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -469,21 +460,21 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "anp",
         "nome": "ANP",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -492,7 +483,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 500"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -500,8 +491,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -514,26 +505,44 @@
       },
       {
         "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
         "id": "saude",
         "nome": "Ministério da Saúde",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "pf",
+        "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -550,12 +559,12 @@
       },
       {
         "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
+        "id": "cgu",
+        "nome": "CGU",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -563,44 +572,8 @@
         "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "cgu",
-        "nome": "CGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -609,16 +582,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -627,16 +618,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -645,16 +627,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -663,25 +636,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -689,26 +671,17 @@
         "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
+        "id": "anvisa",
+        "nome": "Anvisa",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -717,16 +690,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
+        "id": "dnit",
+        "nome": "Dnit",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -739,12 +730,21 @@
       },
       {
         "tipo": "livre",
+        "id": "tcu",
+        "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "ipea",
         "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       }
     ]
   },
@@ -753,28 +753,29 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:caixa-comeca-a-depositar-r-13-04-bilhoes-do-lucro-do-fgts-para-trabalh",
+      "id": "ilm:caixa-inicia-distribuicao-de-r-13-04-bilhoes-de-lucros-do-fgts-a-traba",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Caixa começa a depositar R$ 13,04 bilhões do lucro do FGTS para trabalhadores",
-      "resumo": "O montante beneficia 138,2 milhões de pessoas que possuíam saldo no fundo em 31 de dezembro de 2025 e equivale a 89% do rendimento total do período.",
+      "titulo": "Caixa inicia distribuição de R$ 13,04 bilhões de lucros do FGTS a trabalhadores",
+      "resumo": "O montante beneficia 138,2 milhões de pessoas com saldo no fundo em 31 de dezembro de 2025 e corresponde a 89% do lucro total obtido no período.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/saiba-quanto-o-trabalhador-recebera-de-lucro-do-fgts",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
         "g1",
         "CNN Brasil",
+        "g1 Economia",
         "R7"
       ],
-      "quentura": 3,
+      "quentura": 4,
       "uf": null,
       "corpo": [
-        "A Caixa Econômica Federal começou a creditar R$ 13,04 bilhões referentes à distribuição de lucros do FGTS para 138,2 milhões de trabalhadores. Os depósitos iniciaram na quinta-feira (30) e são feitos de forma automática nas contas vinculadas de quem tinha saldo em 31 de dezembro de 2025, independentemente de a conta estar ativa ou inativa.",
-        "O valor distribuído corresponde a 89% do lucro total de R$ 14,7 bilhões obtido pelo FGTS em 2025. O montante a receber varia conforme o saldo do trabalhador no fim de 2025 e é calculado pela multiplicação do saldo pelo índice de 0,01868341. Para um saldo de R$ 1.000, por exemplo, o crédito é de R$ 18,68.",
-        "Com o repasse, a rentabilidade total do FGTS em 2025 alcançou 6,9%, resultado que engloba os 3% previstos em lei, a Taxa Referencial e a distribuição dos lucros. O índice superou a inflação de 4,26% registrada pelo IPCA no período, gerando um ganho real de cerca de 2,6 pontos percentuais.",
-        "A consulta aos valores pode ser feita pelo aplicativo FGTS, no Internet Banking da Caixa ou nas agências do banco, sob o lançamento \"AC CRED DIST RESULTADO ANO BASE 12/2025\". Os recursos não são depositados em conta-corrente e ficam retidos no fundo, podendo ser sacados apenas nas hipóteses previstas em lei, como demissão sem justa causa, aposentadoria, saque-aniversário ou compra da casa própria."
+        "A Caixa Econômica Federal iniciou, desde quinta-feira (30), o depósito de R$ 13,04 bilhões referentes à distribuição de lucros do FGTS em 2025. O crédito é feito diretamente nas contas vinculadas de 138,2 milhões de trabalhadores que apresentavam saldo em 31 de dezembro de 2025, em contas ativas ou inativas.",
+        "O valor distribuído equivale a 89% do lucro total de R$ 14,7 bilhões alcançado pelo fundo em 2025, resultado que é o segundo maior da série histórica iniciada em 2015. O cálculo da quantia individual é realizado multiplicando o saldo de 31 de dezembro de 2025 pelo índice 0,01868341, gerando cerca de R$ 1,87 a cada R$ 100 depositados.",
+        "Com o repasse dos ganhos, a rentabilidade final do FGTS em 2025 atingiu 6,9%, valor composto pelo rendimento anual de 3% previsto em lei, pela Taxa Referencial e pela distribuição de lucros. Esse índice superou a inflação oficial do período, medida pelo IPCA em 4,26%, garantindo um ganho real de cerca de 2,6 pontos percentuais.",
+        "Os recursos permanecem na conta vinculada do FGTS e seguem as regras de saque previstas na legislação. A consulta do valor creditado, identificado como \"AC CRED DIST RESULTADO ANO BASE 12/2025\", está disponível no aplicativo FGTS, no Internet Banking da Caixa e nas agências bancárias."
       ],
-      "link": "/materia/caixa-comeca-a-depositar-r-13-04-bilhoes-do-lucro-do-fgts-para-trabalh.html",
+      "link": "/materia/caixa-inicia-distribuicao-de-r-13-04-bilhoes-de-lucros-do-fgts-a-traba.html",
       "iso": "2026-07-31T11:50:00.000Z",
       "hora": "07h50",
       "original": true,
@@ -785,76 +786,77 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governo-desbloqueia-r-5-7-bilhoes-do-orcamento-de-2026",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Governo desbloqueia R$ 5,7 bilhões do Orçamento de 2026",
-      "resumo": "Os Ministérios das Cidades, dos Transportes e da Fazenda lideraram a liberação de recursos detalhada em decreto publicado no Diário Oficial da União.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/cidades-transportes-e-fazenda-lideram-desbloqueio-do-orcamento",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "g1 Economia",
-        "Poder360"
-      ],
-      "quentura": 3,
-      "uf": null,
-      "corpo": [
-        "O Ministério do Planejamento e Orçamento anunciou o desbloqueio de R$ 5,7 bilhões do Orçamento de 2026, com liderança dos ministérios das Cidades, dos Transportes e da Fazenda. Os novos limites de gastos constam de decreto publicado em edição extraordinária do Diário Oficial da União.",
-        "Do total de R$ 5,741 bilhões desbloqueados no último dia 24, R$ 3,332 bilhões são de gastos discricionários e R$ 1,204 bilhão de emendas parlamentares. Dentro das despesas discricionárias, R$ 2,523 bilhões foram liberados do Novo Programa de Aceleração do Crescimento (PAC). Com a medida, o total bloqueado no Orçamento de 2026 caiu de R$ 23,679 bilhões para R$ 17,937 bilhões.",
-        "Apesar da liberação, seguem bloqueados R$ 3,675 bilhões em emendas parlamentares de bancada, segundo as regras da Lei Complementar 210/2024. Os ministérios e órgãos federais têm até o dia 6 de agosto para detalhar os programas que terão mais recursos.",
-        "O governo também utiliza o faseamento de empenho, mecanismo de controle de fluxo de caixa que limita a velocidade de novos compromissos financeiros. Essa restrição alcança R$ 47,46 bilhões até setembro e R$ 29,498 bilhões até novembro, caindo para zero em dezembro. Não houve contingenciamento no Orçamento deste ano."
-      ],
-      "link": "/materia/governo-desbloqueia-r-5-7-bilhoes-do-orcamento-de-2026.html",
-      "iso": "2026-07-31T10:25:00.000Z",
-      "hora": "06h25",
-      "original": true,
-      "contexto": "Com o desbloqueio para os ministérios das Cidades, dos Transportes e da Fazenda, o valor retido no Orçamento de 2026 caiu de R$ 23,679 bilhões para R$ 17,937 bilhões. A liberação abrange despesas discricionárias, verbas do Novo PAC e emendas parlamentares. Os órgãos federais e ministérios têm até o dia 6 de agosto para detalhar quais programas receberão os recursos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
       "id": "ilm:governo-central-registra-deficit-primario-de-r-48-2-bilhoes-em-junho",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
       "titulo": "Governo Central registra déficit primário de R$ 48,2 bilhões em junho",
-      "resumo": "No acumulado do primeiro semestre, o saldo negativo das contas públicas federais chegou a R$ 92,2 bilhões, segundo dados divulgados pelo Tesouro Nacional.",
+      "resumo": "No acumulado do primeiro semestre do ano, o saldo negativo alcançou R$ 92,2 bilhões, impulsionado pelo crescimento dos gastos com saúde e Previdência Social.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/governo-central-tem-deficit-de-r-482-bilhoes-em-junho",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "g1",
         "g1 Política",
         "g1 Economia",
-        "Poder360"
+        "InfoMoney",
+        "Valor Econômico"
       ],
-      "quentura": 7,
+      "quentura": 4,
       "uf": null,
       "corpo": [
-        "O Governo Central registrou um déficit primário de R$ 48,2 bilhões em junho, impulsionado por gastos nas áreas de saúde e Previdência Social. O valor representa um aumento em relação a junho de 2025, quando o saldo negativo foi de R$ 44,2 bilhões, e é o maior déficit para o mês desde 2023, em valores corrigidos pela inflação.",
-        "No mês de junho, a Previdência Social teve déficit de R$ 50,47 bilhões, o Tesouro Nacional registrou resultado negativo de R$ 2,45 bilhões e o Banco Central apresentou déficit de R$ 155 milhões. No acumulado entre janeiro e junho, o resultado negativo chegou a R$ 92,2 bilhões, valor superior ao déficit de R$ 11,3 bilhões registrado no mesmo período de 2025.",
-        "A receita líquida em junho somou R$ 195,2 bilhões, alta real de 10,3% em comparação com o mesmo mês do ano anterior. Por sua vez, as despesas totais somaram R$ 243,4 bilhões no mês, com crescimento real de 9%, impulsionadas por benefícios previdenciários, ações na saúde, pessoal, abono salarial, seguro-desemprego e créditos extraordinários.",
-        "Os recursos provenientes de dividendos pagos por empresas estatais totalizaram R$ 2,39 bilhões em junho, caindo em relação aos R$ 2,75 bilhões registrados em junho de 2025. Já os investimentos federais somaram R$ 7,75 bilhões no mês, aumento real de 18%. Nos últimos 12 meses, o déficit acumulado somou R$ 144,1 bilhões, o equivalente a 1,08% do Produto Interno Bruto."
+        "O Governo Central registrou um déficit primário de R$ 48,2 bilhões em junho, segundo dados divulgados pelo Tesouro Nacional. O resultado representa um aumento em relação ao mesmo mês de 2025, quando o saldo negativo foi de R$ 44,2 bilhões, e é o maior déficit registrado para junho desde 2023, em valores corrigidos pela inflação.",
+        "O resultado do mês foi composto por déficits de R$ 2,45 bilhões no Tesouro Nacional, R$ 50,47 bilhões na Previdência Social e R$ 155 milhões no Banco Central. Nos últimos 12 meses, o déficit acumulado chegou a R$ 144,1 bilhões, o equivalente a 1,08% do Produto Interno Bruto (PIB). No acumulado de janeiro a junho, o déficit ficou em R$ 92,2 bilhões, contra R$ 11,3 bilhões no mesmo período de 2025.",
+        "A receita líquida em junho totalizou R$ 195,2 bilhões, alta real de 10,3% ante junho de 2025, impulsionada por aumentos na arrecadação da Cofins, do IPI, do Imposto de Importação e de recursos naturais. Já as despesas totais subiram 9% acima da inflação, chegando a R$ 243,4 bilhões, com crescimentos em benefícios previdenciários, saúde, abono salarial, seguro-desemprego, pessoal e créditos extraordinários.",
+        "No mês, os dividendos pagos por estatais somaram R$ 2,39 bilhões, abaixo dos R$ 2,75 bilhões de junho de 2025, enquanto os investimentos federais somaram R$ 7,75 bilhões, alta real de 18%. A meta fiscal para 2026 prevê superávit primário de R$ 34,3 bilhões, com margem de tolerância de 0,25 ponto percentual. Na última revisão orçamentária, a estimativa oficial projetou superávit de R$ 10,8 bilhões após descontos permitidos, ou déficit de R$ 52 bilhões sem os abatimentos."
       ],
       "link": "/materia/governo-central-registra-deficit-primario-de-r-48-2-bilhoes-em-junho.html",
       "iso": "2026-07-30T20:17:00.000Z",
       "hora": "16h17",
       "original": true,
-      "contexto": "O déficit de R$ 48,2 bilhões em junho supera o saldo negativo de R$ 44,2 bilhões registrado em junho de 2025 e é o maior para o mês desde 2023. No acumulado de janeiro a junho, o resultado negativo chegou a R$ 92,2 bilhões, comparado aos R$ 11,3 bilhões do mesmo período do ano anterior. As despesas do período envolveram pagamentos de benefícios previdenciários, saúde, pessoal, abono salarial e seguro-desemprego.",
+      "contexto": "O déficit primário de R$ 48,2 bilhões apurado em junho supera o saldo negativo de R$ 44,2 bilhões registrado no mesmo mês de 2025. No acumulado de janeiro a junho, o déficit subiu de R$ 11,3 bilhões no ano anterior para R$ 92,2 bilhões. Esse é o maior resultado negativo para o mês de junho desde 2023, em valores corrigidos pela inflação.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:trf-2-mantem-suspensao-da-licenca-para-obra-de-tirolesa-no-pao-de-acuc",
+      "id": "ilm:deficit-do-setor-publico-consolidado-atinge-r-55-3-bilhoes-em-junho",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "TRF-2 mantém suspensão da licença para obra de tirolesa no Pão de Açúcar",
-      "resumo": "O desembargador Luiz Norton Baptista de Mattos rejeitou recurso da Companhia Caminho Aéreo Pão de Açúcar contra decisão provocada pelo MPF.",
+      "titulo": "Déficit do setor público consolidado atinge R$ 55,3 bilhões em junho",
+      "resumo": "No acumulado de 12 meses, o resultado negativo chegou a R$ 157,2 bilhões, o equivalente a 1,19% do Produto Interno Bruto.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/deficit-do-setor-publico-sobe-para-r-553-bilhoes-em-junho",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1 Política",
+        "g1 Economia",
+        "InfoMoney",
+        "CartaCapital"
+      ],
+      "quentura": 6,
+      "uf": null,
+      "corpo": [
+        "O setor público consolidado registrou déficit primário de R$ 55,3 bilhões em junho de 2026, segundo dados do relatório Estatísticas Fiscais, divulgado pelo Banco Central nesta sexta-feira (31). Em junho de 2025, o resultado havia sido deficitário em R$ 47,1 bilhões.",
+        "O desempenho do mês foi composto por déficits de R$ 47,2 bilhões no Governo Central, R$ 6,6 bilhões nos governos regionais e R$ 1,5 bilhão nas empresas estatais. No acumulado em 12 meses, o déficit do setor público consolidado ficou em R$ 157,2 bilhões, o correspondente a 1,19% do Produto Interno Bruto (PIB).",
+        "Os gastos com juros nominais somaram R$ 110,7 bilhões em junho, ante R$ 61,0 bilhões registrados em junho de 2025. O resultado nominal do setor público consolidado apresentou déficit de R$ 166 bilhões no mês e acumulou R$ 1,31 trilhão em 12 meses, equivalente a 9,99% do PIB.",
+        "A Dívida Líquida do Setor Público alcançou R$ 9 trilhões em junho, o equivalente a 68,5% do PIB, com alta de 0,6 ponto percentual no mês. A Dívida Bruta do Governo Geral atingiu 81,9% do PIB, totalizando R$ 10,8 trilhões, após aumento de 0,9 ponto percentual em relação a maio."
+      ],
+      "link": "/materia/deficit-do-setor-publico-consolidado-atinge-r-55-3-bilhoes-em-junho.html",
+      "iso": "2026-07-31T13:09:00.000Z",
+      "hora": "09h09",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:trf-2-mantem-suspensao-de-licenca-para-obras-de-tirolesa-no-pao-de-acu",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "TRF-2 mantém suspensão de licença para obras de tirolesa no Pão de Açúcar",
+      "resumo": "O desembargador federal Luiz Norton Baptista de Mattos negou o recurso da Companhia Caminho Aéreo Pão de Açúcar contra a anulação obtida pelo Ministério Público Federal.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/justica-mantem-suspensao-de-obras-de-tirolesa-no-pao-de-acucar",
       "origemNome": "Agência Brasil",
@@ -864,15 +866,76 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Tribunal Regional Federal da 2ª Região (TRF-2) manteve a anulação da licença ambiental para a instalação de uma tirolesa no Pão de Açúcar, no alto do Morro do Corcovado. A decisão foi proferida pelo desembargador federal Luiz Norton Baptista de Mattos ao negar um pedido da Companhia Caminho Aéreo Pão de Açúcar (CCAPA).",
-        "A empresa recorreu contra uma determinação da 20ª Vara Federal do Rio, de 1º de abril deste ano, que acatou ação civil pública movida pelo Ministério Público Federal (MPF) contra a autorização emitida pelo Instituto do Patrimônio Histórico e Artístico Nacional (Iphan). A decisão de primeira instância determinou que a CCAPA apresente um plano de recuperação da área degradada em até 60 dias, incluindo a retirada de estruturas provisórias e resíduos, além do pagamento de R$ 30 milhões por danos morais.",
-        "Ao recorrer, a concessionária argumentou que a instalação é regular e que a interrupção provoca danos ao turismo. O desembargador Luiz Norton de Mattos declarou que danos econômicos são recuperáveis e que o atraso na inauguração apenas adia a obtenção de receitas que não existiam até então."
+        "O Tribunal Regional Federal da 2ª Região negou o pedido da Companhia Caminho Aéreo Pão de Açúcar para suspender a anulação da licença ambiental para instalação de uma tirolesa no Pão de Açúcar, no alto do Morro do Corcovado. A decisão é do desembargador federal Luiz Norton Baptista de Mattos.",
+        "A empresa recorreu de uma decisão da 20ª Vara Federal do Rio, de 1º de abril deste ano, que acatou ação civil pública do Ministério Público Federal contra a licença concedida pelo Instituto do Patrimônio Histórico e Artístico Nacional. O juiz determinou que a empresa apresente um plano de recuperação da área em até 60 dias, retire estruturas provisórias e resíduos, e pague indenização de R$ 30 milhões por danos morais.",
+        "Ao recorrer, o Caminho Aéreo do Pão de Açúcar alegou que a instalação é regular e que a suspensão causaria danos ao turismo.",
+        "Ao rejeitar o recurso, o desembargador escreveu que danos a interesses econômicos são recuperáveis e que o atraso na inauguração não causa dano irreparável, apenas adia a obtenção de renda."
       ],
-      "link": "/materia/trf-2-mantem-suspensao-da-licenca-para-obra-de-tirolesa-no-pao-de-acuc.html",
+      "link": "/materia/trf-2-mantem-suspensao-de-licenca-para-obras-de-tirolesa-no-pao-de-acu.html",
       "iso": "2026-07-31T01:01:00.000Z",
       "hora": "21h01",
       "original": true,
-      "contexto": "A decisão afeta a Companhia Caminho Aéreo Pão de Açúcar, responsável pelas obras no local. A concessionária tem o prazo de até 60 dias para apresentar um plano de recuperação da área degradada e retirar as estruturas provisórias. A determinação mantida envolve ainda o pagamento de R$ 30 milhões por danos morais.",
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:defesa-afirma-ao-stf-que-bolsonaro-nao-autorizou-video-com-inteligenci",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Defesa afirma ao STF que Bolsonaro não autorizou vídeo com inteligência artificial",
+      "resumo": "Advogados alegam falta de contato por suspensão de visitas e apontam que uso de imagem pelos filhos é prática antiga",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/defesa-diz-que-bolsonaro-nao-autorizou-uso-de-video-de-ia-em-convencao",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Congresso em Foco"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "A defesa de Jair Bolsonaro informou ao Supremo Tribunal Federal (STF) nesta quarta-feira (29) que o ex-presidente não autorizou o uso de sua imagem e voz em um vídeo produzido com inteligência artificial. O material foi apresentado no sábado (25) durante a convenção nacional do PL e simulava um pronunciamento em apoio à candidatura de seu filho, o senador Flávio Bolsonaro, à Presidência da República.",
+        "A manifestação atende a uma solicitação de explicações feita pelo relator do caso, ministro Alexandre de Moraes, que estipulou prazo de 48 horas para resposta. Moraes pontuou que Bolsonaro cumpre prisão domiciliar e está proibido de divulgar manifestações político-eleitorais, inclusive por meio de terceiros. O ministro observou ainda que o uso não autorizado da tecnologia pode configurar deep fake, prática vedada pelo Tribunal Superior Eleitoral (TSE).",
+        "Na petição enviada à Justiça, a defesa alegou que o ex-presidente está com o direito de visitas suspenso por 30 dias, enquanto o senador Flávio Nantes Bolsonaro está proibido de visitá-lo por 90 dias após ter divulgado uma carta nas redes sociais. Os advogados sustentam que a ausência de contato direto inviabilizou qualquer autorização específica para a produção do vídeo.",
+        "A defesa declarou também que os filhos de Bolsonaro sempre utilizaram a imagem pública do pai em atividades político-partidárias, reproduzindo discursos, fotos e entrevistas, sem que tenha havido qualquer oposição da parte dele."
+      ],
+      "link": "/materia/defesa-afirma-ao-stf-que-bolsonaro-nao-autorizou-video-com-inteligenci.html",
+      "iso": "2026-07-29T19:33:00.000Z",
+      "hora": "15h33",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:vendaval-no-rio-deixa-clientes-sem-luz-e-provoca-estragos-na-regiao-me",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Vendaval no Rio deixa clientes sem luz e provoca estragos na Região Metropolitana",
+      "resumo": "Cerca de 279 mil clientes da Light continuavam sem energia no início de quinta-feira, enquanto ventos de mais de 100 km/h causaram quedas de árvores e mortes.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-07/mais-de-200-mil-continuam-sem-energia-no-rio-apos-vendaval",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Folha"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "Cerca de 279 mil clientes da concessionária Light continuavam sem fornecimento de energia elétrica no início da quinta-feira (30), em decorrência do vendaval que atingiu a Região Metropolitana do Rio de Janeiro na última quarta-feira (29). No momento mais crítico, a falta de luz afetou 1,1 milhão de clientes. A Agência Nacional de Energia Elétrica (Aneel) monitora a situação.",
+        "A extensão dos danos exige a reconstrução de trechos da rede elétrica, incluindo a substituição de postes danificados, reparos em estruturas e remoção de árvores. A concessionária reforçou o plano operacional e atua com 800 equipes nas ruas e mais de 2 mil profissionais. A força dos ventos ultrapassou 100 km/h e derrubou 346 árvores, com a maior rajada registrada no Aeroporto Internacional do Galeão, atingindo 105,5 km/h.",
+        "Nos transportes, o ramal Japeri da Trens RJ está com circulação interrompida e a estação Saracuruna passa por vistoria. A circulação do VLT foi normalizada após a retirada de mais de uma tonelada de resíduos dos trilhos. A força do vento derrubou um muro que matou dois homens em Santa Teresa, e a Polícia Civil investiga se a morte de três pessoas por descarga elétrica na Cidade de Deus tem relação com o vendaval.",
+        "Em Angra dos Reis, rajadas de vento de até 104 km/h causaram a queda de árvores na BR-101 e o Serviço de Pronto Atendimento da Vila do Abraão, na Ilha Grande, registrou cinco atendimentos. Na capital, a previsão do Sistema Alerta Rio para a noite de quinta-feira é de céu nublado a parcialmente nublado, com chuva fraca isolada e ventos moderados."
+      ],
+      "link": "/materia/vendaval-no-rio-deixa-clientes-sem-luz-e-provoca-estragos-na-regiao-me.html",
+      "iso": "2026-07-30T22:53:00.000Z",
+      "hora": "18h53",
+      "original": true,
+      "contexto": "O número de clientes da Light sem energia na Região Metropolitana do Rio caiu de 1,1 milhão no momento mais crítico para 279 mil no início da quinta-feira (30). A interrupção dos serviços afeta os moradores da região e os passageiros do ramal Japeri da Trens RJ, que teve a circulação suspensa.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -882,99 +945,266 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Seis veículos de imprensa publicaram matérias sobre a negociação da vaga de vice.",
-        "As matérias trazem relatos divergentes sobre a decisão tomada pela senadora após o diálogo.",
-        "A federação União-PP e o partido PP são citados como condicionantes do acordo."
+        "Que cinco veículos de imprensa noticiaram a existência de investigação contra o filho de Lula.",
+        "Que o presidente Lula teria afirmado que não usará o cargo para proteger o filho.",
+        "Que o caso envolveria citações ao STF, à Polícia Federal e ao ministro Mendonça."
       ],
       "falta": [
-        "Anúncio oficial e conjunto formalizando a composição da chapa.",
-        "Manifestação conclusiva das direções do PP e da federação União-PP.",
-        "Registro ou decisão oficial referente à situação eleitoral do senador."
+        "Confirmação oficial do Supremo Tribunal Federal ou da Polícia Federal sobre o inquérito.",
+        "Número do processo oficial e data exata da abertura da investigação.",
+        "Detalhamento formal dos fatos específicos que estariam sob apuração."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Metrópoles",
-          "titulo": "Flávio Bolsonaro confirma que Tereza Cristina aceitou ser vice",
-          "link": "https://www.metropoles.com/sao-paulo/flavio-bolsonaro-confirma-que-tereza-cristina-aceitou-ser-vice"
+          "veiculo": "BBC Brasil",
+          "titulo": "Lulinha investigado por tráfico de influência e corrupção: do INSS à Lava Jato, o que pesa contra o filho de Lula",
+          "link": "https://www.bbc.com/portuguese/articles/c4g8wvvjdgjo?at_medium=RSS&amp;at_campaign=rss"
         },
         {
           "veiculo": "Congresso em Foco",
-          "titulo": "\"Nada foi decidido\", diz Tereza Cristina após conversa com Flávio",
-          "link": "https://www.congressoemfoco.com.br/noticia/120914/nada-foi-decidido--diz-tereza-cristina-apos-conversa-com-flavio"
+          "titulo": "Lula diz que não usará cargo para proteger Lulinha em investigação",
+          "link": "https://www.congressoemfoco.com.br/noticia/120917/lula-diz-que-nao-usara-cargo-para-proteger-lulinha-em-investigacao"
         },
         {
-          "veiculo": "UOL",
-          "titulo": "Flávio diz que Tereza Cristina aceitou ser vice, mas decisão cabe ao PP",
-          "link": "<![CDATA[https://noticias.uol.com.br/eleicoes/2026/07/31/flavio-bolsonaro-tereza-cristina-vice.ghtm]]>"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "Tereza Cristina indica aceitar ser vice de Flávio Bolsonaro, mas federação União-PP resiste",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVmZIMWwxdmY2MjFoYmdobHhFTEUwX0VmbmVXYWw2U3ZNNmI4QjhIeUtWajVFT3V3a2tmQmFzckUxZl9tZnV6YU9jakk1eXhxdnRQRlkyT1ZNeTlPdXdTaTA4eUJWUklMMVJzSVpTSkFWSWxZM2V6LVc0UlNyUGlnMkt3dGdieGlSYXhxcEczS0VrcmlNOWhzaGlaZmZDc1dyX29ybzVZd1F4aUhGX20zV1NCWDVQQldheGp6aTJybVRGSWNWb1ZzUUw5SFc?oc=5"
+          "veiculo": "g1 Política",
+          "titulo": "PF abre inquérito contra Lulinha: entenda o que está sendo investigado",
+          "link": "https://g1.globo.com/politica/noticia/2026/07/31/pf-abre-inquerito-contra-lulinha-entenda-o-que-esta-sendo-investigado.ghtml"
         },
         {
           "veiculo": "Correio Braziliense",
-          "titulo": "Tereza Cristina diz a aliados que aceitou convite para vice de Flávio Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOODl1aWZ1eUVLQTF3QVo3cG1mVlowenN0SDBpTUFkRm1tOHJKeUozUi03R1ltdEZLdTlpSnoyOUpQUzlDalU1ZmRQd2M0dmhnVVktMWhEWWxwWWhfUnQ2Y0l5TTJLYkpiU2VGZ1JiUnd2TjFQZjR2STlZYVVKbUE4ZXA2QzRaaUgwMHJtcE9KcGk3Y2drUEpueGE0azJNczgzczNVbUl2YjRLd0k5TzlMNU5xWE9kQjM4SWJrMlZuLTUwSWxDVkxqdDVjbWNwYzBhSnBZSzZSOUJiQ0VHUzVpZ9IB5gFBVV95cUxObXpTN2lTc1kyVWwwZExQSWp6eHFTRUdwSl94bEpidGNNZ3FZOHJFUk1qbm8zRXZCWlRISDNUekhvTG0yeGNNRTJZVC1pazR3cWd3bDFBYW54cHlFSVhzdWFCOEMwV2VmNmNCLUphU3N5LWQ5VkJmbjRld2NwcFFoWUtWUnh2SElRU3h1Wk5WbTNnczBqVFBhLWh1aGU3NXFJQVRNWENud1dpR0VHT2ZyOXRkaV9GY0NJSVZBRDcwMElocVpUYjQ3ZjFYcVN4VGF2dW1rSFFrUUFBa2M1VzNidnBpcERwUQ?oc=5"
+          "titulo": "STF autoriza inquérito contra Lulinha por suposto tráfico de influência",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPYkw3NHoxZkQzZFhjX2g2bEhvRHYyWFhSN1d5UDZuVlJ2VFgwQXVuYzhiQThBN2RsSzZKUVFXeFFLcVU5Nzl0T1FWTzc4QmJBMjNoa0RkQ0luRFdiNVRVOG1wLUYzWmlac2VMbkVJVkhuS0QwcmZSaG9CQnhIWmFndnZKcVhzSXhnUW9SenRFRXh1TW5QRVBocGs0ekVVNHlKaTBlenE4UzhmOWlheVQyUmNSZVU5dGtiWjFhdVZXc0R2czZnaV81YTA4VjRXbXIxcVdmQ0JB0gHbAUFVX3lxTE5kNE9IM0xQWjZ1dWlVNVd6MEVfV2F4Y1hKenJXNkVkVmtpMmplWlBGamRBZExLWE1VTkhKQVpOM0ZPTExBWE1WeUpubUZvWnBpUkVqSk9lZ3lqUUcxWDRUUHpRUDdteXZRSnpOVjFsUnlhTWw5dUVMNEtmMUQyclZqdzBfbVNxT0k5QW5LeWxVLTVqTWs4VlEtRlJsWV8xUzE4TDVjR0ZJQ09KT2RwMnRPM3BnS2lhOHg2WmJ3bEhvblVfcWlBbU9qNnZjTGRSUEhHRHNLZW4wOHM3bw?oc=5"
         },
         {
-          "veiculo": "Estadão",
-          "titulo": "Se Alexandre de Moraes tornar Flávio Bolsonaro inelegível, a direita pode ser salva?",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPci1rTjJxWUZCWVhtWlBRdlhlSWd6cENkLXhyQ0dlVzdrZDRoYXFhTlZtNHFNdjNvZkY3OXlOS3pfQmVJQUY0NXBKRnpEV2l5NFBjMGdwZlYzc0ZJM0RFZkFOOVhWaFcwOWV5RHUwNEJBWHdzV1F4SzJueDZwUkFJZG1KRWpTdDVmZ0VuSnA5aVhyMUg3S2N6dXRld2l0TFcyRWpLQkdkY0ZndWFrcGVQa2EyWnE1VEhGVVFILVIwOWMwbTNMOHdCcFI1RXjSAdIBQVVfeXFMT2M3bTd3ZFhvYUZ5eWNOXzVBTjVzbV9fMjRTYXJNSXRPRDBHMXk4QTdUNmtrc3VUZlI5YkdteTlVaURWcHV0Ym45bEphWWp5VlhUVW9BQVdMYWJ6NUtyQUU0UGJ1OTBtMDNOUDBqc3ByQVhXOHZvUFN6M3hmNFZNSW82SjJicDMtN3RCckZYNHIzZU9QNW1HSl9SbUZkMUFxNndUdjA4OUlnVWNTS2ZiZFJlWjJhdnVXZ0lnRV9IOG15aW5Qa3ZQLXlCTGhmVUM0c053?oc=5"
+          "veiculo": "Migalhas",
+          "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSWxRZEZiREp6cmlxX182TzZiMzNDc0RlU3I3RkxrZzRKelZGU2J2MlBCNXlaS1RKWmVrVW93dG9OdHlCYkphZlViZ0xRQlkySTQxcVJCaEhsek9vQWNuS1hkaWRuZHhhdk1VSjFLTHBqeWt3dV9PZGhMdW4xSGxQb1ZTYk0ydzdZYjBHUmEySTBMUVJ3OTE3NUk2VE9rOHhGUlkyWTBrbWxvX0xXVEJB?oc=5"
         }
       ],
-      "link": "/materia/nc-tereza-cristina-teria-aceitado-compor-chapa-como-vice-de-flavio-bolson.html",
+      "link": "/materia/nc-stf-e-pf-teriam-aberto-investigacao-contra-o-filho-do-presidente-lula.html",
       "corpo": [
-        "O senador Flávio Bolsonaro teria afirmado que a senadora Tereza Cristina teria aceitado o convite para vice. A parlamentar também teria indicado a aliados que teria aceito a composição da chapa.",
-        "As publicações divergiram quanto ao resultado das conversas entre os parlamentares. Enquanto o senador teria confirmado a aliança, a senadora teria declarado que nada estaria decidido e que a definição dependeria do PP, diante de resistência da federação União-PP.",
-        "O debate envolveria ainda a hipótese de o senador ser tornado inelegível pelo ministro Alexandre de Moraes. O cenário levantaria dúvidas sobre a reorganização do espectro político de direita."
+        "O filho do presidente Luiz Inácio Lula da Silva estaria sendo investigado por suposto tráfico de influência e corrupção. A apuração envolveria suspeitas ligadas ao INSS e citações relativas à Operação Lava Jato.",
+        "As publicações divergiam quanto à condução do procedimento. Enquanto relatos indicariam que a Polícia Federal teria aberto o inquérito, outras notícias apontariam que a investigação teria sido autorizada pelo Supremo Tribunal Federal, sob decisão do ministro Mendonça.",
+        "O presidente Lula teria declarado que não usará o seu cargo para proteger o filho na apuração. A declaração estaria vinculada às alegações sobre o caso publicadas pela imprensa."
       ],
-      "id": "circ:tereza-cristina-teria-aceitado-compor-chapa-como-vice-de-flavio-bolson",
+      "id": "circ:stf-e-pf-teriam-aberto-investigacao-contra-o-filho-do-presidente-lula",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Tereza Cristina teria aceitado compor chapa como vice de Flávio Bolsonaro",
+      "titulo": "STF e PF teriam aberto investigação contra o filho do presidente Lula",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-31T13:12:45.746Z",
-      "hora": "09h12"
+      "iso": "2026-07-31T13:59:45.248Z",
+      "hora": "09h59"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que dois veículos da imprensa publicaram dados de pesquisas em Pernambuco e no Rio.",
+        "Que a publicação sobre o Rio de Janeiro cita o instituto Paraná Pesquisas.",
+        "Que as matérias tratam das corridas para o Senado e para o governo estadual."
+      ],
+      "falta": [
+        "O número de registro dos levantamentos junto à Justiça Eleitoral.",
+        "As datas exatas em que as entrevistas teriam sido realizadas.",
+        "Os percentuais numéricos de intenção de voto citados em cada cenário.",
+        "A margem de erro e o contratante dos levantamentos."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Poder360",
+          "titulo": "Marília Arraes lidera disputa pelo Senado em PE, diz pesquisa",
+          "link": "https://www.poder360.com.br/poder-eleicoes-2026/marilia-arraes-lidera-disputa-pelo-senado-em-pe-diz-pesquisa/"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Paraná Pesquisas: Paes lidera disputa ao governo do RJ em 1º e 2º turno",
+          "link": "https://www.cnnbrasil.com.br/eleicoes/parana-pesquisas-paes-lidera-disputa-ao-governo-do-rj-em-1o-e-2o-turno/"
+        }
+      ],
+      "link": "/materia/nc-pesquisas-apontariam-liderancas-de-marilia-arraes-em-pe-e-paes-no-rj.html",
+      "corpo": [
+        "Dois veículos da imprensa estariam veiculando dados sobre intenções de voto em Pernambuco e no Rio de Janeiro. Segundo as publicações, novos levantamentos indicariam nomes na liderança das corridas eleitorais nos dois estados.",
+        "Uma das notícias apontaria que Marília Arraes lideraria a disputa pelo Senado em Pernambuco. Já a outra publicação citaria levantamento do instituto Paraná Pesquisas indicando que Paes lideraria a disputa ao governo do Rio de Janeiro em primeiro e segundo turnos.",
+        "As informações divulgadas referem-se a cargos e cenários estaduais distintos. As matérias veiculadas não apresentam os percentuais completos ou os registros das pesquisas."
+      ],
+      "id": "circ:pesquisas-apontariam-liderancas-de-marilia-arraes-em-pe-e-paes-no-rj",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Pesquisas apontariam lideranças de Marília Arraes em PE e Paes no RJ",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T14:02:43.277Z",
+      "hora": "10h02"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que o assunto está sendo publicado por três veículos de imprensa.",
+        "Que Flávio Bolsonaro e Tereza Cristina são os políticos citados nas publicações.",
+        "Que o PP é o partido apontado nas matérias veiculadas."
+      ],
+      "falta": [
+        "Confirmação oficial do PP sobre a decisão de neutralidade.",
+        "Manifestação direta da senadora Tereza Cristina sobre a aceitação do convite.",
+        "Prazos ou registros formais das reuniões em que o aviso teria ocorrido.",
+        "Manifestação oficial de Flávio Bolsonaro emitida por meio de assessoria."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "PP avisa a Tereza que ficará neutro em disputa presidencial",
+          "link": "https://www.cnnbrasil.com.br/eleicoes/pp-avisa-a-tereza-que-ficara-neutro-em-disputa-presidencial/"
+        },
+        {
+          "veiculo": "g1",
+          "titulo": "Flávio Bolsonaro diz que Tereza Cristina aceitou convite para vice mas depende de decisão do PP; partido da senadora afirma que ficará neutro nas eleições",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/31/flavio-bolsonaro-tereza-cristina-pp.ghtml"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "PP decide ficar neutro nas eleições e esfria tentativa de Flávio por Tereza Cristina",
+          "link": "https://www.infomoney.com.br/politica/pp-decide-ficar-neutro-nas-eleicoes-e-esfria-tentativa-de-flavio-por-tereza-cristina/"
+        }
+      ],
+      "link": "/materia/nc-pp-teria-avisado-que-ficaria-neutro-em-disputa-presidencial-dizem-rela.html",
+      "corpo": [
+        "O PP teria comunicado à senadora Tereza Cristina que a sigla ficaria neutra na disputa presidencial. A decisão atribuída ao partido teria esfriado articulações para a formação de uma chapa.",
+        "Segundo o que vem sendo divulgado, Flávio Bolsonaro teria declarado que a senadora teria aceito um convite para o cargo de vice. Essa aceitação estaria condicionada ao posicionamento final do PP.",
+        "Os veículos que publicaram a alegação indicam que a definição partidária inviabilizaria a tentativa de composição. Não foram apresentados registros institucionais sobre o teor das conversas relatadas."
+      ],
+      "id": "circ:pp-teria-avisado-que-ficaria-neutro-em-disputa-presidencial-dizem-rela",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "PP teria avisado que ficaria neutro em disputa presidencial, dizem relatos",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-07-31T14:03:40.811Z",
+      "hora": "10h03"
     }
   ],
   "pautas": [
     {
-      "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
-      "veiculo": "Migalhas",
-      "quentura": 7,
+      "titulo": "Flávio Bolsonaro diz que Tereza Cristina aceitou convite para vice mas depende de decisão do PP; partido da senadora afirma que ficará neutro nas eleições",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 12,
       "tambemEm": [
-        "BBC Brasil",
         "Congresso em Foco",
-        "CNN Brasil"
+        "CNN Brasil",
+        "UOL"
       ]
     },
     {
-      "titulo": "Entenda a investigação da PF envolvendo Lulinha",
-      "veiculo": "CNN Brasil",
+      "titulo": "\"Nada foi decidido\", diz Tereza Cristina após conversa com Flávio",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 10,
+      "tambemEm": [
+        "g1",
+        "UOL",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "PP anuncia neutralidade e frustra plano de Tereza Cristina assumir vice de Flávio Bolsonaro",
+      "veiculo": "UOL",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "PP decide por neutralidade, após Tereza ser cotada a vice de Flávio",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "Tereza Cristina diz a aliados que aceitou convite para vice de Flávio Bolsonaro",
+      "veiculo": "Correio Braziliense",
+      "quentura": 9,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro diz que Tereza Cristina aceitou convite para vice, mas aguarda decisão do PP",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "PP confirma rejeição a aliança com Flávio Bolsonaro e elimina chance de Tereza Cristina como vice",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "Progressistas adota neutralidade, e Tereza Cristina não será vice de Flávio Bolsonaro",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "Tereza Cristina indica aceitar ser vice de Flávio Bolsonaro, mas federação União-PP resiste",
+      "veiculo": "CartaCapital",
+      "quentura": 8,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "PP decide ficar neutro nas eleições e esfria tentativa de Flávio por Tereza Cristina",
+      "veiculo": "InfoMoney",
       "editoria": "brasil",
       "quentura": 6,
       "tambemEm": [
-        "BBC Brasil",
+        "g1",
         "Congresso em Foco",
-        "g1 Política"
+        "CNN Brasil"
       ]
     },
     {
       "titulo": "Lulinha investigado por tráfico de influência e corrupção: do INSS à Lava Jato, o que pesa contra o filho de Lula",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
         "Congresso em Foco",
-        "CNN Brasil",
-        "g1 Política"
+        "g1 Política",
+        "Correio Braziliense"
       ]
     },
     {
       "titulo": "STF autoriza inquérito contra Lulinha por suposto tráfico de influência",
       "veiculo": "Correio Braziliense",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
         "BBC Brasil",
         "Congresso em Foco",
@@ -982,47 +1212,35 @@
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro confirma que Tereza Cristina aceitou ser vice",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
+      "titulo": "Mendonça autoriza investigação contra Lulinha por tráfico de influência",
+      "veiculo": "Migalhas",
       "quentura": 5,
       "tambemEm": [
+        "BBC Brasil",
         "Congresso em Foco",
-        "UOL",
-        "CartaCapital"
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "\"Decisão foi comunicada e acatada por Tereza Cristina\", diz nota do PP",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "g1 Política"
       ]
     },
     {
       "titulo": "PF abre inquérito contra Lulinha: entenda o que está sendo investigado",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "BBC Brasil",
-        "CNN Brasil",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Mendonça autorizou monitoramento de celular do senador Jaques Wagner em investigação sobre Banco Master",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "UOL",
-        "Folha",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Flávio diz que Tereza Cristina aceitou ser vice, mas decisão cabe ao PP",
-      "veiculo": "UOL",
-      "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "Congresso em Foco",
-        "Metrópoles",
-        "CartaCapital"
+        "BBC Brasil",
+        "Correio Braziliense",
+        "Estadão"
       ]
     },
     {
@@ -1031,83 +1249,19 @@
       "quentura": 4,
       "tambemEm": [
         "g1 Política",
-        "Correio Braziliense",
-        "Migalhas"
+        "Poder360",
+        "Correio Braziliense"
       ]
     },
     {
-      "titulo": "Tereza Cristina indica aceitar ser vice de Flávio Bolsonaro, mas federação União-PP resiste",
-      "veiculo": "CartaCapital",
-      "quentura": 4,
+      "titulo": "Leia a íntegra do inquérito que investiga Jaques Wagner e Master",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 3,
       "tambemEm": [
         "Congresso em Foco",
-        "UOL",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "\"Nada foi decidido\", diz Tereza Cristina após conversa com Flávio",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "UOL",
-        "Metrópoles",
+        "g1 Política",
         "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Tereza Cristina diz a aliados que aceitou convite para vice de Flávio Bolsonaro",
-      "veiculo": "Correio Braziliense",
-      "quentura": 4,
-      "tambemEm": [
-        "Congresso em Foco",
-        "UOL",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Confederação Asiática se junta à Uefa e Concacaf contra projeto da Fifa",
-      "veiculo": "UOL",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Confederação Asiática se junta à Uefa e Concacaf contra projeto da Fifa",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "UOL",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "PF aponta presentes de ex-sócio do Master a políticos e 74 ligações com Jaques Wagner",
-      "veiculo": "UOL",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Folha",
-        "g1 Política",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "PF aponta presentes de ex-sócio do Master a políticos e 74 ligações com Jaques Wagner",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "UOL",
-        "g1 Política",
-        "Metrópoles"
       ]
     },
     {
@@ -1119,17 +1273,6 @@
         "BBC Brasil",
         "Correio Braziliense",
         "Migalhas"
-      ]
-    },
-    {
-      "titulo": "Hamas aceita acordo para encerrar guerra em Gaza e prevê desarmamento",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "CartaCapital",
-        "Valor Econômico"
       ]
     }
   ]
