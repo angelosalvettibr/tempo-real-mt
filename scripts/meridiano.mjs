@@ -8,7 +8,7 @@
 //   5. SOBRA      pauta sem fonte livre não é publicada. Vira sugestão interna.
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
-import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao, carteiraAcabou } from './redator.mjs';
+import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao, carteiraAcabou, fotoDaUltima } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
@@ -575,6 +575,9 @@ if (temChave()) {
     if (carteiraAcabou()) return;
     try {
       const texto = await textoCompleto(i.link, 12000);
+      // Foto so de fonte que autoriza reproducao. E a mesma regra do texto:
+      // release oficial existe para ser republicado, veiculo comercial nao.
+      const foto = PODE_REESCREVER.test(i.link) ? fotoDaUltima() : null;
       const m = await reescrever({ fonte: i.veiculo, titulo: i.titulo, texto });
       const arq = slug(m.titulo)+'.html';
 
@@ -595,9 +598,11 @@ if (temChave()) {
         { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
           origemNome: i.veiculo, radar: false, checar:[],
+          foto, creditoFoto: i.veiculo,
           relacionadas: parecidos.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })) },
         { link:i.link, municipio: mun ? mun.nome : '' }, i.iso), 'utf8');
       publicados.push({
+        foto: foto ? foto.src : null, fotoAlt: foto ? foto.alt : null,
         municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
         id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
         titulo:m.titulo, resumo:m.linhaFina,
@@ -781,6 +786,7 @@ if (temChave() && soPautaFiltrada.length) {
       if (caca.achado) {
         try {
           const texto = await textoCompleto(caca.link, 12000);
+          const fotoR = fotoDaUltima();
           const m = await reescrever({ fonte: caca.fonte, titulo: caca.titulo, texto });
           const arq = slug(m.titulo) + '.html';
           const agora = new Date().toISOString();
@@ -793,11 +799,13 @@ if (temChave() && soPautaFiltrada.length) {
             { chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
               origemNome: caca.fonte, radar: false, checar: [], contexto: ctxR,
+              foto: fotoR, creditoFoto: caca.fonte,
               relacionadas: pareR.slice(0,3).map(x => ({ titulo:x.titulo, link:x.link, dia:(x.iso||'').slice(0,10) })),
               resgatada: { procuradoEm: caca.procuradoEm, orgao: caca.fonte } },
             { link: caca.link, municipio: '' }, agora), 'utf8');
           const munR = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
           publicados.push({
+            foto: fotoR ? fotoR.src : null, fotoAlt: fotoR ? fotoR.alt : null,
             municipio: munR ? munR.id : null, municipioNome: munR ? munR.nome : null,
             id: 'ilm:' + slug(m.titulo), editoria: edNota, chapeu: 'Nosso texto',
             titulo: m.titulo, resumo: m.linhaFina,
