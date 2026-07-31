@@ -240,6 +240,11 @@ export function pagina(m, c, iso){
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="${esc(m.titulo)}">
+<meta property="og:description" content="${esc((m.linhaFina || '').slice(0,180))}">
+${m.foto ? `<meta property="og:image" content="${esc(m.foto.src)}">` : ''}
+<meta name="twitter:card" content="${m.foto ? 'summary_large_image' : 'summary'}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(m.titulo)} — MERIDIANO</title>
 <meta name="description" content="${esc(m.linhaFina).slice(0,155)}">
@@ -295,6 +300,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .apura .pt{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--sinal);margin-left:7px}
 .apura .mudo{color:#B00}
 .apura .fim{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.55;color:var(--fraco);margin-top:14px}
+.foto{margin:26px 0 8px}
+.foto img{width:100%;height:auto;display:block;border:1px solid var(--linha)}
+.foto figcaption{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--fraco);margin-top:8px;text-transform:uppercase}
 .relac{border-top:1px solid var(--tinta);padding-top:15px;margin:34px 0 4px}
 .relac b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:12px}
 .relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
@@ -369,6 +377,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ? `<div class="nc-aviso">${esc(m.linhaFina)}</div>`
     : `<p class="linha-fina">${esc(m.linhaFina)}</p>`}
   <div class="assina">Redação Meridiano · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
+
+  ${m.foto ? `<figure class="foto">
+    <img src="${esc(m.foto.src)}" alt="${esc(m.foto.alt || m.titulo)}" loading="lazy">
+    <figcaption>Foto: ${esc(m.creditoFoto || m.origemNome || 'divulgação')}</figcaption>
+  </figure>` : ''}
 
   <div class="corpo">${corpoHtml}</div>
 

@@ -98,6 +98,59 @@ export async function textoCompleto(url, ms = 12000){
   throw ultimo;
 }
 
+/* ------------------------------------------------------------- FOTO -----
+   A foto sai da mesma pagina de onde ja tiramos o texto, entao nao custa
+   requisicao nenhuma. Regra de disciplina, igual a do texto: so aproveitamos
+   imagem de fonte que autoriza reproducao — release de orgao publico existe
+   para ser republicado. De veiculo comercial nao pegamos nada.
+
+   O cuidado que evita capa feia: muito orgao declara o LOGOTIPO do site como
+   og:image, e nao a foto da materia. Descartamos o que tem cara de marca.  */
+
+let ultimaFoto = null;
+// A foto da ultima pagina lida. Guardada aqui para nao precisar mudar a
+// assinatura de textoCompleto, que e chamada em varios lugares.
+export const fotoDaUltima = () => ultimaFoto;
+
+const CARA_DE_LOGO = /(logo|logotipo|marca|brasao|brasão|banner|favicon|icone|icon|selo|placeholder|default|padrao|sem-imagem|no-image|share|thumb-padrao)/i;
+
+export function acharFoto(html, urlBase){
+  const meta = (prop) =>
+    html.match(new RegExp('<meta[^>]+(?:property|name)=["\']' + prop + '["\'][^>]+content=["\']([^"\']+)["\']', 'i'))?.[1]
+    || html.match(new RegExp('<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']' + prop + '["\']', 'i'))?.[1]
+    || '';
+
+  let src = meta('og:image') || meta('twitter:image') || '';
+
+  // sem og: tenta a maior imagem dentro do corpo da materia
+  if (!src) {
+    const dentro = (html.match(/<article[\s\S]*?<\/article>/i)?.[0])
+                || (html.match(/<main[\s\S]*?<\/main>/i)?.[0]) || '';
+    src = [...dentro.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi)]
+      .map(m => m[1]).find(u => !CARA_DE_LOGO.test(u)) || '';
+  }
+  if (!src) return null;
+
+  // endereco relativo vira absoluto
+  try { src = new URL(src, urlBase).href; } catch { return null; }
+
+  if (CARA_DE_LOGO.test(src)) return null;
+  if (/\.svg(\?|$)/i.test(src)) return null;   // svg costuma ser marca
+
+  // dimensao declarada, quando existe, ajuda a barrar icone
+  const larg = Number(meta('og:image:width') || 0);
+  const alt  = Number(meta('og:image:height') || 0);
+  if (larg && larg < 400) return null;
+  if (alt && alt < 220) return null;
+
+  return {
+    src,
+    alt: (meta('og:image:alt') || '').slice(0, 180) || null,
+    largura: larg || null,
+    altura: alt || null
+  };
+}
+
 async function textoCompletoUmaVez(url, ms = 12000){
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), ms);
@@ -120,6 +173,7 @@ async function textoCompletoUmaVez(url, ms = 12000){
       if (junto.length > soTexto(corpo).length) corpo = junto;
     }
     if (!corpo) corpo = html;
+    ultimaFoto = acharFoto(html, url);
     return corpo
       .replace(/<script[\s\S]*?<\/script>/gi,' ')
       .replace(/<style[\s\S]*?<\/style>/gi,' ')
@@ -347,6 +401,20 @@ export async function escreverCirculacao({ titulo, editoria, manchetes }){
   const falta  = emLista(secao('FALTA', null));
 
   t = limparVazamento(t);
+
+  // Antes eu exigia o formato inteiro e recusava a nota se faltasse qualquer
+  // parte. Numa rodada real isso derrubou 4 de 6 — o modelo entregava titulo
+  // e corpo bons e falhava so nas listas. Agora as listas sao opcionais: a
+  // pagina simplesmente nao mostra o quadro quando elas nao vierem.
+  if (!t && corpo.length) {
+    // titulo perdido mas corpo bom: usa a primeira frase do corpo
+    t = corpo[0].split(/(?<=[.!?])\s/)[0].slice(0, 90);
+  }
+  if (!corpo.length) {
+    // corpo perdido: aproveita o que sobrou do texto limpo, se houver
+    const solto = limparVazamento(limpo.replace(/T[IÍ]TULO\s*:.*/i,''));
+    if (solto.length > 60) corpo = [solto.slice(0, 400)];
+  }
   if (!t || !corpo.length) throw new Error('nota fora do formato');
 
   // se o primeiro paragrafo so repete o titulo, nao serve
@@ -354,7 +422,13 @@ export async function escreverCirculacao({ titulo, editoria, manchetes }){
   const pal = x => new Set(sa(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>=4));
   const pt = pal(t), pc = pal(corpo[0]);
   const iguais = [...pt].filter(w => pc.has(w)).length;
-  if (pt.size && iguais / pt.size > 0.85) throw new Error('nota repete o titulo');
+  // 0.85 recusava nota legitima: em texto curto e no condicional, titulo e
+  // primeira frase compartilham muita palavra por natureza. Se houver um
+  // segundo paragrafo com conteudo proprio, basta descartar o primeiro.
+  if (pt.size && iguais / pt.size > 0.9) {
+    if (corpo.length > 1) corpo = corpo.slice(1);
+    else throw new Error('nota repete o titulo');
+  }
 
   t = t.replace(/^circula(-se)?\s+(que\s+)?/i, '').replace(/^informa[çc][ãa]o de que\s+/i, '');
   t = t.charAt(0).toUpperCase() + t.slice(1);
