@@ -383,6 +383,20 @@ function montarCidades(doEstadoTodas){
 
 let carregadoEm = 0;
 
+// Idade do JORNAL, nao a do carregamento da pagina. Sao coisas diferentes:
+// voce pode ter acabado de abrir uma edicao feita ha dez horas. Quem promete
+// mostrar como apura tem que mostrar tambem quando apurou.
+const idadeDoJornal = () => {
+  if (!ED.gerado) return '';
+  const min = Math.round((Date.now() - Date.parse(ED.gerado)) / 60000);
+  if (min < 2)  return 'agora';
+  if (min < 60) return `há ${min} min`;
+  const h = Math.round(min / 60);
+  if (h < 24) return h === 1 ? 'há 1 hora' : `há ${h} horas`;
+  const d = Math.round(h / 24);
+  return d === 1 ? 'ontem' : `há ${d} dias`;
+};
+
 const desdeQuando = () => {
   if (!carregadoEm) return '';
   const min = Math.round((Date.now() - carregadoEm) / 60000);
@@ -420,7 +434,7 @@ function ultimas(){
 
   caixa.querySelector('.caixa').innerHTML =
     '<div class="rot"><span class="pulso"></span>últimas<span class="regua"></span>' +
-      `<span class="quando">${esc(desdeQuando())}</span>` +
+      `<span class="quando">${esc(idadeDoJornal())}</span>` +
       '<button id="bt-atualizar">atualizar</button></div>' +
     '<ol>' + lista.map(i => `<li><a href="${esc(i.link)}">
         <time>${esc(i.hora || '')}</time>
