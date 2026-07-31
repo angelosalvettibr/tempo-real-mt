@@ -30,7 +30,15 @@ import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, t
 import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
 
 const JANELA_HORAS = 24;
-const QUANTAS_REESCREVER = 8;
+// Teto de seguranca, nao de selecao. Ele existia em 8 e cortava a fila ANTES
+// de qualquer analise de merito — por posicao, nao por qualidade. No RS isso
+// significou 43 releases oficiais virarem 3 materias: 35 sairam sem nem serem
+// olhados, e os limites finos (por fonte, por cidade) derrubaram 5 dos 8 que
+// sobraram. Quatro limitadores em serie, e o primeiro era cego.
+//
+// Agora ele so evita rodada absurda. Quem seleciona sao os tetos por fonte e
+// por cidade, que e para isso que existem.
+const QUANTAS_REESCREVER = Number(process.env.QUANTAS_REESCREVER || 40);
 
 /* ===================== 1. PAUTA — termômetro, não publica ================= */
 
@@ -612,7 +620,11 @@ if (temChave()) {
   // Com poucas fontes distintas, teto baixo mata a edicao. Com muitas, teto
   // alto deixa uma so dominar. Entao o teto acompanha a diversidade.
   const fontesDistintas = new Set(fila.map(i => i.veiculo)).size;
-  const TETO_POR_FONTE = fontesDistintas <= 3 ? 5 : fontesDistintas <= 6 ? 4 : 3;
+  // Com poucas fontes vivas, apertar aqui e apertar duas vezes: o estado ja
+  // sofre por so ter 4 ou 7 orgaos respondendo. O teto protege contra a edicao
+  // virar boletim de um orgao so, mas nao pode ser o motivo de a edicao ficar
+  // vazia.
+  const TETO_POR_FONTE = fontesDistintas <= 3 ? 7 : fontesDistintas <= 6 ? 5 : 4;
 
   // Reveza entre as fontes antes de repetir: uma de cada, depois a segunda de
   // cada. Assim uma prefeitura falante nao ocupa a edicao inteira, e as fontes
@@ -640,7 +652,9 @@ if (temChave()) {
   // boletim de Volta Redonda: quatro materias da mesma prefeitura, porque
   // vieram de veiculos de pauta diferentes e o teto por fonte nao viu. Nenhum
   // municipio pode ocupar mais que a metade de uma edicao pequena.
-  const TETO_POR_CIDADE = Math.max(2, Math.ceil(fila.length / 4));
+  // Um terco da edicao, nunca menos de 3. Antes era um quarto com piso 2, e
+  // numa fila curta isso derrubava materia boa so por ser da mesma cidade.
+  const TETO_POR_CIDADE = Math.max(3, Math.ceil(fila.length / 3));
 
   const usos = new Map();
   const usosCidade = new Map();

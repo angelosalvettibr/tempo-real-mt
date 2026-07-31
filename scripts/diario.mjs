@@ -36,10 +36,17 @@ const semAcento = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g
 
 /* ------------------------------------------------------- ASSOCIACOES ----- */
 // Adicionar um estado novo e uma linha: o codigo da associacao no SIGPub.
+// Existem DUAS plataformas com nome parecido, e confundi-las foi meu erro na
+// primeira versao: o SIGPub em diariomunicipal.com.br/{assoc} e o outro
+// sistema em diariomunicipal.org/{uf}/{assoc}. Cada estado pode estar num ou
+// no outro — entao tentamos os dois e ficamos com o que responder.
 export const ASSOCIACOES = {
-  mt: { id:'amm-mt', nome:'Diário Oficial dos Municípios de MT', entidade:'AMM' },
-  rs: { id:'famurs', nome:'Diário Oficial dos Municípios do RS', entidade:'FAMURS' },
-  rj: { id:'aemerj', nome:'Diário Oficial dos Municípios do RJ', entidade:'AEMERJ' }
+  mt: { id:'amm-mt', nome:'Diário Oficial dos Municípios de MT', entidade:'AMM',
+        bases:['https://www.diariomunicipal.com.br/amm-mt', 'https://diariomunicipal.org/mt/amm'] },
+  rs: { id:'famurs', nome:'Diário Oficial dos Municípios do RS', entidade:'FAMURS',
+        bases:['https://www.diariomunicipal.com.br/famurs', 'https://diariomunicipal.org/rs/famurs'] },
+  rj: { id:'aemerj', nome:'Diário Oficial dos Municípios do RJ', entidade:'AEMERJ',
+        bases:['https://www.diariomunicipal.com.br/aemerj', 'https://diariomunicipal.org/rj/aemerj'] }
   // pr: { id:'amp',    nome:'...', entidade:'AMP' }
   // sc: { id:'amsc',   nome:'...', entidade:'FECAM' }
 };
@@ -124,11 +131,12 @@ const limpar = h => String(h)
 // O SIGPub muda de layout entre instalacoes, entao procuramos as materias por
 // varios padroes em vez de depender de um so. O que nao varia e o formato do
 // endereco de cada ato: /{associacao}/materia/{id}
-function acharMaterias(html, assoc){
-  const raiz = BASE(assoc);
+function acharMaterias(html, raiz){
   const achados = new Map();
 
-  const re = /<a[^>]+href=["']([^"']*\/materia\/[^"']+)["'][^>]*>([\s\S]{0,400}?)<\/a>/gi;
+  // Cada plataforma nomeia o ato de um jeito. Em vez de apostar num, aceitamos
+  // todos os que ja vimos e guardamos o que aparecer.
+  const re = /<a[^>]+href=["']([^"']*\/(?:materia|materias|publicacoes|publicacao|ato|atos|edicao)\/[^"']+)["'][^>]*>([\s\S]{0,400}?)<\/a>/gi;
   let m;
   while ((m = re.exec(html))) {
     let href = m[1];
@@ -166,19 +174,30 @@ export async function lerDiario(uf, opcoes = {}){
   if (!cfg) return { itens:[], lidas:0, descartadas:0, erro:'estado sem diario cadastrado' };
 
   const inicio = Date.now();
-  const raiz = BASE(cfg.id);
 
-  // 1. achar o indice do dia
-  let html = null, erro = null;
-  for (const caminho of ['', '/pesquisar', '/materia']) {
-    try { html = await pegar(raiz + caminho); if (html && /\/materia\//.test(html)) break; html = null; }
-    catch (e) { erro = e.message; }
+  // 1. achar o indice do dia, em qualquer uma das plataformas
+  let html = null, raiz = null, erro = null;
+  const tentativas = [];
+  for (const base of (cfg.bases || [BASE(cfg.id)])) {
+    for (const caminho of ['', '/publicacoes', '/pesquisar', '/materia']) {
+      try {
+        const h = await pegar(base + caminho);
+        const achou = acharMaterias(h, base).length;
+        tentativas.push(`${base}${caminho} → ${achou} links`);
+        if (achou) { html = h; raiz = base; break; }
+      } catch (e) { tentativas.push(`${base}${caminho} → ${String(e.message).slice(0,20)}`); }
+    }
+    if (html) break;
   }
-  if (!html) return { itens:[], lidas:0, descartadas:0, erro: erro || 'indice do dia nao encontrado' };
+
+  // Quando nada funciona, o valor esta no diagnostico: dizer o que cada
+  // endereco devolveu poupa uma rodada inteira de adivinhacao.
+  if (!html) return { itens:[], lidas:0, descartadas:0,
+                      erro:'nenhum indice respondeu', tentativas };
 
   // 2. listar os atos publicados
-  const brutas = acharMaterias(html, cfg.id);
-  if (!brutas.length) return { itens:[], lidas:0, descartadas:0, erro:'nenhuma materia no indice' };
+  const brutas = acharMaterias(html, raiz);
+  if (!brutas.length) return { itens:[], lidas:0, descartadas:0, erro:'indice sem atos', tentativas };
 
   // 3. filtrar pelo titulo ANTES de abrir. Abrir tudo estouraria o relogio e,
   //    pior, mandaria centenas de portarias de ferias para o Gemini.
@@ -220,7 +239,7 @@ export async function lerDiario(uf, opcoes = {}){
     } catch { /* uma pagina que falha nao derruba a rodada */ }
   }
 
-  return { itens, lidas: brutas.length, descartadas, erro:null };
+  return { itens, lidas: brutas.length, descartadas, erro:null, raiz, tentativas };
 }
 
 // exportado para teste
