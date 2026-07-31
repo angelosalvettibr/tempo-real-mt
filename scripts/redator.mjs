@@ -137,11 +137,19 @@ export function acharFoto(html, urlBase){
   if (CARA_DE_LOGO.test(src)) return null;
   if (/\.svg(\?|$)/i.test(src)) return null;   // svg costuma ser marca
 
-  // dimensao declarada, quando existe, ajuda a barrar icone
+  // Onde a imagem MORA entrega muita coisa: brasao fica na estrutura do site,
+  // foto de materia fica na pasta de conteudo enviado.
+  const caminho = (() => { try { return new URL(src).pathname.toLowerCase(); } catch { return ''; } })();
+  if (/\/(tema|temas|assets|layout|template|estatico|static|skin|css|design|institucional|identidade)\//.test(caminho)) return null;
+
+  // Proporcao e o criterio mais confiavel: brasao e selo sao quadrados ou
+  // verticais; foto de noticia e larga. Quando as dimensoes vem declaradas,
+  // exigimos que seja mais larga que alta.
   const larg = Number(meta('og:image:width') || 0);
   const alt  = Number(meta('og:image:height') || 0);
   if (larg && larg < 400) return null;
   if (alt && alt < 220) return null;
+  if (larg && alt && larg / alt < 1.15) return null;
 
   return {
     src,

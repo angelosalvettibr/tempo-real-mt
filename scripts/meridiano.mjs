@@ -892,7 +892,39 @@ if (temChave() && soPautaFiltrada.length) {
       console.log('     circ pulou: ' + String(e.message).slice(0,52));
     }
   }
-  console.log(`\n  5. CIRCULANDO — ${candidatas.length} cacadas de ${soPautaFiltrada.length} pautas · ${circulando.length} notas escritas`);
+  /* ------------------------------- FOTO REPETIDA ---------------------------
+   O filtro mais forte contra brasao so pode rodar AGORA, com todas as
+   materias na mao: se a mesma imagem aparece em varias, ela nao e foto de
+   noticia — e a arte padrao do orgao, declarada igual no site inteiro.
+   Por isso a foto e escolhida durante a escrita mas so CONFIRMADA aqui.     */
+try {
+  const conta = new Map();
+  for (const p of publicados) if (p.foto) conta.set(p.foto, (conta.get(p.foto) || 0) + 1);
+
+  // Duas ocorrencias ja bastam: foto de materia nunca se repete.
+  const repetidas = new Set([...conta].filter(([, n]) => n >= 2).map(([src]) => src));
+
+  if (repetidas.size) {
+    let tiradas = 0;
+    for (const p of publicados) {
+      if (!p.foto || !repetidas.has(p.foto)) continue;
+      p.foto = null; p.fotoAlt = null; tiradas++;
+
+      // tirar tambem da pagina ja gravada, que e markup nosso e conhecido
+      const arq = 'materia/' + String(p.link).split('/').pop();
+      try {
+        let h = await readFile(arq, 'utf8');
+        h = h.replace(/<figure class="foto">[\s\S]*?<\/figure>/, '')
+             .replace(/<meta property="og:image"[^>]*>\s*/, '')
+             .replace('content="summary_large_image"', 'content="summary"');
+        await writeFile(arq, h, 'utf8');
+      } catch {}
+    }
+    console.log(`     ${tiradas} fotos removidas: mesma imagem repetida em varias materias (arte do orgao)`);
+  }
+} catch (e) { console.log('     aviso foto repetida: ' + String(e.message).slice(0,40)); }
+
+console.log(`\n  5. CIRCULANDO — ${candidatas.length} cacadas de ${soPautaFiltrada.length} pautas · ${circulando.length} notas escritas`);
 
 // O arquivo ficava AQUI EM CIMA, antes das notas de circulacao existirem.
 // Resultado: o laco lia `circulando` antes da declaracao e estourava com
