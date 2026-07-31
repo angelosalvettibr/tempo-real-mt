@@ -33,7 +33,11 @@ jobs:
   # estaduais cuidam so do regional e nao disputam vaga com Brasilia.
   edicao:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 15 min era folgado quando a edicao saia com 4 materias. Com os tetos
+    # destravados o RS publicou 19, e cada materia custa duas chamadas ao
+    # Gemini — as rodadas passaram a encostar no limite. Job que estoura e
+    # cancelado no meio e perde a edicao inteira.
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
