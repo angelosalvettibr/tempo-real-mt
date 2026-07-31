@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-07-30T16:02:24.427Z",
+  "gerado": "2026-07-31T08:13:51.912Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 35,
+    "pauta": 43,
+    "fonteLivre": 34,
     "confirmadas": 5,
     "publicadas": 8,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 6
   },
   "fontes": {
-    "checadas": 10,
+    "checadas": 11,
     "responderam": 10,
     "entregando": 9,
     "itens": 76,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "euronews",
@@ -37,18 +28,9 @@
       },
       {
         "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,16 +39,34 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 8,
+        "id": "vaticano",
+        "nome": "Vatican News",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,6 +75,15 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -84,15 +93,6 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -100,6 +100,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -114,39 +123,132 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:redes-criminosas-expandem-trafico-humano-para-operar-fraudes-online",
+      "id": "ilm:brasil-aciona-a-omc-e-afirma-que-tarifas-dos-eua-violam-regras-comerci",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Redes criminosas expandem tráfico humano para operar fraudes online",
-      "resumo": "Segundo dados divulgados pela ONU, mais de 300 mil pessoas estão presas em centros e a exploração para criminalidade forçada subiu de 1% para 8% das vítimas mundiais.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853882",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "Brasil aciona a OMC e afirma que tarifas dos EUA violam regras comerciais",
+      "resumo": "O pedido de consultas contestando as taxas adicionais de 25% e 12,5% foi enviado pelo governo brasileiro na segunda-feira e divulgado nesta quinta-feira.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/tarifas-dos-eua-sao-inconsistentes-com-regras-da-omc-diz-brasil",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Folha Mundo"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "Redes criminosas internacionais estão utilizando o tráfico de pessoas para forçar centenas de milhares de vítimas a integrar esquemas de fraudes na internet e outras atividades ilegais. O alerta foi emitido pela Organização Internacional para as Migrações, OIM, no contexto do Dia Mundial contra o Tráfico de Pessoas, em 30 de julho.",
-        "Dados do Escritório das Nações Unidas contra a Droga e o Crime, Unodc, indicam que o tráfico para fins criminais subiu de 1% das vítimas registradas no mundo em 2016 para 8% em 2022, ano em que pessoas de 162 nacionalidades foram traficadas para 128 países. A Agência da ONU para os Refugiados, Acnur, calcula que mais de 300 mil pessoas estão atualmente presas em centros controlados por essas organizações.",
-        "As vítimas sofrem coerção para praticar fraudes financeiras, bürlas online, furtos e tráfico de drogas, além de relatarem casos de tortura, abuso sexual, fome e isolamento. O recrutamento costuma ocorrer na internet por meio de anúncios falsos de emprego direcionados a pessoas com habilidades digitais. Os africanos representam 31% dos fluxos transfronteiriços de tráfico e cerca de 70% dos investigados, acusados e condenados pelo crime eram homens.",
-        "O secretário-geral da ONU, António Guterres, pediu uma resposta coletiva para identificar as redes criminosas e cortar seus meios de financiamento. Para combater o problema, a OIM lançou este ano a Estratégia Regional de Resposta ao Tráfico de Pessoas para Criminalidade Forçada na Ásia e no Pacífico 2026 – 2030, focada na proteção às vítimas e na cooperação transfronteiriça."
+        "O governo brasileiro solicitou à Organização Mundial do Comércio (OMC) um pedido de consultas contra os Estados Unidos, alegando que as tarifas impostas pelos norte-americanos são inconsistentes com as regras multilaterais. O documento foi enviado na segunda-feira (27) e divulgado nesta quinta-feira (30), constituindo a primeira etapa formal no sistema de solução de controvérsias da entidade.",
+        "Segundo o Brasil, as ações ferem o Acordo Geral de Tarifas e Comércio 1994. O governo alega ter sido preterido em relação a outros integrantes da OMC ao sofrer cobranças com base na Seção 301. O documento apresentado também expõe o cenário geral da disputa, incluindo alegações dos EUA de que seriam tratados de forma discriminatória pelo Brasil.",
+        "Uma das medidas questionadas refere-se a uma investigação específica sobre o país que resultou na aplicação de tarifa adicional de 25% sobre produtos brasileiros. A apuração norte-americana abordou temas como comércio digital, serviços de pagamentos eletrônicos, tarifas preferenciais, legislação anticorrupção, propriedade intelectual, mercado de etanol e combate ao desmatamento ilegal.",
+        "A segunda medida contestada decorre de uma investigação conduzida com 60 economias, que fixou tarifa adicional de 12,5% para itens brasileiros sob o foco de restrições a bens produzidos com trabalho forçado. Na etapa atual de consultas, os países tentam negociar um acordo antes de uma eventual instalação de painel na OMC."
       ],
-      "link": "/materia/redes-criminosas-expandem-trafico-humano-para-operar-fraudes-online.html",
-      "iso": "2026-07-30T12:00:00.000Z",
-      "hora": "08h00",
+      "link": "/materia/brasil-aciona-a-omc-e-afirma-que-tarifas-dos-eua-violam-regras-comerci.html",
+      "iso": "2026-07-30T23:20:00.000Z",
+      "hora": "19h20",
       "original": true,
-      "contexto": "O percentual de vítimas de tráfico humano destinadas a atividades criminosas subiu de 1% em 2016 para 8% em 2022, afetando mais de 300 mil pessoas. As vítimas afetadas são recrutadas por falsos anúncios de emprego na internet e forçadas a praticar fraudes financeiras e outros crimes. O histórico do MERIDIANO registra um caso parecido em 30 de julho de 2026.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:eua-realizam-novos-ataques-contra-o-ira-e-deixam-tres-mortos-em-qeshm",
+      "id": "ilm:brasil-aciona-omc-contra-tarifas-dos-estados-unidos-em-meio-a-paralisi",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "EUA realizam novos ataques contra o Irã e deixam três mortos em Qeshm",
-      "resumo": "A ação de Washington ocorreu em resposta a ataques de Teerã e coincidiu com reunião entre Donald Trump e Benjamin Netanyahu na Casa Branca.",
+      "titulo": "Brasil aciona OMC contra tarifas dos Estados Unidos em meio a paralisia do tribunal",
+      "resumo": "Pedido de consultas questiona taxas de até 37,5%, mas Órgão de Apelação do organismo está sem quórum de juízes desde 2019.",
+      "fonte": "Meridiano, com informações de Folha Mundo",
+      "origemLink": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/07/queixa-do-brasil-contra-o-tarifaco-na-omc-expoe-paralisia-do-tribunal.shtml",
+      "origemNome": "Folha Mundo",
+      "pautadoPor": [
+        "Folha Mundo"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O governo Lula pediu consultas formais na Organização Mundial do Comércio, em Genebra, contra duas tarifas dos Estados Unidos valendo desde julho que somam até 37,5% sobre parte das exportações brasileiras. Em agosto de 2025, o Brasil já tinha acionado o organismo por causa de uma sobretaxa americana de 50% sobre produtos do país.",
+        "O acionamento ocorre com o Órgão de Apelação da OMC paralisado desde dezembro de 2019 por falta do quórum mínimo de juízes. Se as consultas não solucionarem a disputa, o Brasil pode pedir a abertura de um painel com três árbitros, cujo relatório pode levar de um a cinco anos na prática.",
+        "A falta de juízes começou no primeiro mandato de Donald Trump, quando Washington bloqueou a nomeação de novos integrantes. Atualmente, cerca de 70% do comércio global opera sob as regras da organização, que nasceu no acordo de Marraquexe em 1994 para suceder ao GATT de 1947.",
+        "Em março de 2026, a 14ª Conferência Ministerial da OMC, realizada em Yaoundé, nos Camarões, terminou sem acordo e sem declaração final. Na ocasião, Brasil e Turquia bloquearam a extensão da moratória de tarifas sobre comércio eletrônico, que estava em vigor desde 1998 e era defendida pelos Estados Unidos."
+      ],
+      "link": "/materia/brasil-aciona-omc-contra-tarifas-dos-estados-unidos-em-meio-a-paralisi.html",
+      "iso": "2026-07-30T17:44:00.000Z",
+      "hora": "13h44",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:migrantes-chegam-a-ceuta-a-nado-e-guarda-civil-recupera-18-corpos-no-m",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Migrantes chegam a Ceuta a nado e Guarda Civil recupera 18 corpos no mar",
+      "resumo": "Entre 1.500 e 2.000 pessoas entraram no enclave espanhol em poucos dias, levando o primeiro-ministro Pedro Sánchez a mobilizar o Exército e anunciar repatriamentos com o Marrocos.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/mundo/news/2026-07/migrantes-continuam-chegar-ceuta-vindos-nado-marrocos.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "O enclave espanhol de Ceuta, na costa norte do Marrocos, registra uma nova onda migratória, com a entrada de centenas de pessoas na quinta-feira (30/07), somando-se aos cerca de 1.500 a 2.000 migrantes que chegaram nos dias anteriores. Trata-se do maior fluxo na cidade autônoma desde maio de 2021, quando mais de 10.000 pessoas cruzaram a fronteira em dois dias. A Guarda Civil informou que subiu para 18 o número de corpos recuperados no mar de pessoas que tentavam fazer a travessia a nado.",
+        "Muitos migrantes chegaram a Ceuta a nado, em colchões infláveis ou por terra na zona industrial do Tarajal. O presidente da cidade autônoma, Juan Vivas, declarou situação de absoluta emergência humanitária e social, afirmando que os centros de acolhimento estão superlotados. Centenas de pessoas, incluindo menores de idade, passaram a noite em parques e estacionamentos públicos. Na cidade marroquina vizinha de Fnideq, outros grupos se reuniram após a difusão de boatos sobre a abertura da fronteira.",
+        "O primeiro-ministro espanhol, Pedro Sánchez, mobilizou unidades do Exército e visita a cidade autônoma nesta sexta-feira (31/07), junto com o ministro do Interior, Fernando Grande-Marlaska. O governo de Madri anunciou um acordo com as autoridades do Marrocos para realizar o repatriamento rápido de quem entrou irregularmente. O Ministério do Interior atribuiu a movimentação em massa à ação de redes de traficantes de pessoas.",
+        "Junto com Melilla, Ceuta representa a única fronteira terrestre entre a União Europeia e o continente africano. A crise migratória anterior registrada na região ocorreu em 2021, durante um período de tensões diplomáticas entre Espanha e Marrocos relacionadas ao Saara Ocidental."
+      ],
+      "link": "/materia/migrantes-chegam-a-ceuta-a-nado-e-guarda-civil-recupera-18-corpos-no-m.html",
+      "iso": "2026-07-31T07:43:00.000Z",
+      "hora": "03h43",
+      "original": true,
+      "contexto": "Os cerca de 1.500 a 2.000 migrantes que chegaram a Ceuta nos últimos dias representam o maior fluxo na região desde maio de 2021, quando mais de 10.000 pessoas cruzaram a fronteira em dois dias. A superlotação dos centros de acolhimento afeta centenas de pessoas, incluindo menores de idade, que estão passando a noite em parques e estacionamentos públicos. O primeiro-ministro espanhol, Pedro Sánchez, visita a cidade.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:governo-do-paraguai-convoca-embaixador-do-brasil-apos-declaracoes-de-l",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Governo do Paraguai convoca embaixador do Brasil após declarações de Lula",
+      "resumo": "O ministro Rubén Ramírez Lezcano citou fala do presidente brasileiro sobre a Guerra do Paraguai para justificar a conversa agendada para sexta-feira (31).",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/apos-fala-de-lula-governo-paraguaio-convoca-embaixador-do-brasil",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Folha Mundo"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O ministro das Relações Exteriores do Paraguai, Rubén Ramírez Lezcano, informou nesta quinta-feira (30) que convocou o embaixador do Brasil no país, José Antonio Marcondes, para uma conversa nesta sexta-feira (31). O motivo foram declarações do presidente Luiz Inácio Lula da Silva sobre a Guerra do Paraguai em um evento na semana passada.",
+        "A fala de Lula ocorreu em Jacareí, São Paulo, em agenda da empresa Avibras Aeroco. Para ilustrar a importância do investimento em defesa, o presidente citou o conflito ocorrido entre 1864 e 1870, declarando que o Paraguai resolveu invadir o Brasil, o Uruguai e a Argentina em uma guerra que durou cinco anos.",
+        "Segundo o ministério paraguaio, os ministros das Relações Exteriores do Paraguai e do Brasil, Mauro Vieira, conversaram sobre o caso em Lima, no Peru. O governo do Paraguai também informou que o presidente Santiago Peña e Lula falaram por telefone sobre o assunto, considerado delicado.",
+        "No Paraguai, o conflito é conhecido como Guerra da Tríplice Aliança e classificado pelo governo local como um episódio sensível da história nacional. O ministro Rubén Lezcano afirmou que a dignidade do país não se negocia e que o tema tem sido tratado no mais alto nível."
+      ],
+      "link": "/materia/governo-do-paraguai-convoca-embaixador-do-brasil-apos-declaracoes-de-l.html",
+      "iso": "2026-07-30T21:32:00.000Z",
+      "hora": "17h32",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:eua-lancam-novos-ataques-contra-o-ira-e-deixam-mortos-em-qeshm",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "EUA lançam novos ataques contra o Irã e deixam mortos em Qeshm",
+      "resumo": "Três pessoas morreram e duas ficaram feridas em ação de Washington realizada em resposta a ataques de Teerã contra bases no Oriente Médio.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/mundo/news/2026-07/atualidade-noite-ataques-violentos-eua-contra-ira-estreito-ormuz.html",
       "origemNome": "Vatican News",
@@ -156,12 +258,11 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "Os Estados Unidos realizaram uma nova onda de ataques contra o Irã na noite entre quarta e quinta-feira. A ação deixou três mortos e dois feridos em Qeshm, onde uma família foi morta.",
-        "A ofensiva foi realizada como resposta de Washington aos ataques promovidos por Teerã contra bases norte-americanas localizadas no Oriente Médio.",
-        "Os EUA definiram a operação militar como um sucesso no objetivo de reduzir a capacidade míssil do Irã.",
+        "Uma nova onda de ataques dos Estados Unidos contra o Irã foi registrada na noite entre quarta e quinta-feira. A operação deixou três mortos e dois feridos em Qeshm.",
+        "A ação foi uma resposta de Washington aos ataques de Teerã contra bases norte-americanas no Oriente Médio. Os Estados Unidos definiram a operação como um sucesso no objetivo de reduzir a capacidade míssil do país.",
         "A escalada coincidiu com o primeiro encontro na Casa Branca entre Donald Trump e Benjamin Netanyahu desde o início da guerra, em 28 de fevereiro."
       ],
-      "link": "/materia/eua-realizam-novos-ataques-contra-o-ira-e-deixam-tres-mortos-em-qeshm.html",
+      "link": "/materia/eua-lancam-novos-ataques-contra-o-ira-e-deixam-mortos-em-qeshm.html",
       "iso": "2026-07-30T10:43:00.000Z",
       "hora": "06h43",
       "original": true,
@@ -172,175 +273,84 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:uso-da-fe-como-recurso-politico-avanca-no-brasil-e-nos-estados-unidos",
+      "id": "ilm:relatorio-da-oms-indica-que-mundo-esta-longe-de-erradicar-hiv-e-hepati",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Uso da fé como recurso político avança no Brasil e nos Estados Unidos",
-      "resumo": "A ascensão de Donald Trump e Jair Bolsonaro consolidou alianças com evangélicos, ampliando a atuação de guerras culturais sobre a laicidade e o pluralismo.",
-      "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/a-fe-virou-forca-politica-no-brasil-e-nos-eua-por-que-isso-ameaca-pluralismo-democratico-288035",
-      "origemNome": "The Conversation",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
+      "titulo": "Relatório da OMS indica que mundo está longe de erradicar HIV e hepatites até 2030",
+      "resumo": "Apesar da queda de 42% nas novas infecções por HIV, cortes de recursos e a alta de 17% nas mortes por hepatite B ameaçam as metas globais.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853885",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "A conversão da religião em recurso político e linguagem pública de mobilização consolidou alianças entre lideranças políticas e setores religiosos organizados, em especial evangélicos, no Brasil e nos Estados Unidos. O movimento ganhou visibilidade com a atuação de Donald Trump e Jair Bolsonaro.",
-        "Nos Estados Unidos, estudos da revista Politics and Religion, da Cambridge University Press, indicam que o apoio de evangélicos brancos a Donald Trump ocorreu por fatores identitários, culturais e estratégicos. Pautas como imigração, raça, educação sexual e direitos LGBTQIA+ tornaram-se centrais na mobilização conservadora do país.",
-        "No Brasil, a relação entre religião e política tornou-se mais institucionalizada no governo de Jair Bolsonaro. Pesquisas de Magali Cunha, Ronaldo de Almeida, Christina Vital e Paulo Victor Leite Lopes abordam a articulação entre igrejas, mídia e bancadas parlamentares com o Estado, além dos impactos na neutralidade estatal.",
-        "As chamadas guerras culturais transformaram temas como família, sexualidade, gênero, educação e religião em marcadores simbólicos de pertencimento e exclusão. Esse processo redefiniu percepções de ameaça moral e afetou a convivência democrática nos dois países."
+        "A Organização Mundial da Saúde, OMS, divulgou no Rio de Janeiro um relatório sobre o progresso das estratégias globais para HIV, hepatite viral e infecções sexualmente transmissíveis, ISTs. O levantamento aponta que o mundo não está no caminho certo para erradicar essas enfermidades como ameaças à saúde pública até 2030.",
+        "No ano passado, o número de novas infecções por HIV caiu 42% em relação a 2010, e as mortes relacionadas à Aids recuaram 57%, totalizando 570 mil óbitos em 2025. O Brasil atingiu a meta de eliminação da transmissão vertical do HIV em 2025. Por outro lado, as mortes por hepatite B subiram 17% desde 2015, somando 1,1 milhão de óbitos em 2024, enquanto os casos de ISTs seguem crescendo e apresentam resistência a antibióticos como a ceftriaxone na Ásia.",
+        "O relatório registra reduções no financiamento internacional em 2025, com cortes efetuados por doadores como Estados Unidos e países europeus. O Fundo Global arrecadou US$ 12,6 bilhões para o período de 2026-2028, valor abaixo da meta de US$ 18 bilhões. De acordo com o diretor-geral da OMS, Tedros Ghebreyesus, o estudo demonstra tanto os resultados dos investimentos em saúde quanto as consequências das interrupções de verbas.",
+        "Para o período de 2026 a 2030, a OMS orienta a integração dos serviços de HIV, hepatites e ISTs na atenção primária de saúde. A estratégia inclui a adoção de novas tecnologias até 2030, como o medicamento lenacapavir e a profilaxia pós-exposição com doxiciclina, doxy-PEP, além da participação de comunidades e da sociedade civil."
       ],
-      "link": "/materia/uso-da-fe-como-recurso-politico-avanca-no-brasil-e-nos-estados-unidos.html",
-      "iso": "2026-07-30T13:51:39.000Z",
-      "hora": "09h51",
+      "link": "/materia/relatorio-da-oms-indica-que-mundo-esta-longe-de-erradicar-hiv-e-hepati.html",
+      "iso": "2026-07-31T12:00:00.000Z",
+      "hora": "08h00",
       "original": true,
-      "contexto": null,
+      "contexto": "A meta para a erradicação do HIV, das hepatites virais e das ISTs como ameaças à saúde pública está fixada para 2030. Em relação a 2010, as infecções por HIV caíram 42%, enquanto as mortes por hepatite B subiram 17% desde 2015. Para o período entre 2026 e 2028, a arrecadação de US$ 12,6 bilhões ficou abaixo da meta de US$ 18 bilhões.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:inteligencia-artificial-avanca-nos-processos-eleitorais-de-paises-lati",
+      "id": "ilm:cimeira-da-icao-em-angola-debate-lideranca-e-presenca-feminina-na-avia",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Inteligência artificial avança nos processos eleitorais de países latino-americanos",
-      "resumo": "Ferramentas tecnológicas são aplicadas no Brasil, México, Chile e Panamá para triagem de processos judiciais, combate à desinformação e fiscalização de contas.",
+      "titulo": "Cimeira da Icao em Angola debate liderança e presença feminina na aviação",
+      "resumo": "Atualmente, as mulheres representam 4% dos pilotos, 3% dos engenheiros de manutenção e 20,6% dos controladores de tráfego aéreo no transporte aéreo global.",
       "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853875",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853889",
       "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Órgãos e tribunais eleitorais da América Latina estão utilizando inteligência artificial para combater a desinformação, fiscalizar contas e realizar triagens de processos judiciais. A aplicação dessas ferramentas em países como Brasil, México, Chile e Panamá foi tema de um diálogo regional promovido pelo Programa das Nações Unidas para o Desenvolvimento, Pnud.",
-        "No Brasil, o Supremo Tribunal Federal usa sistemas de inteligência artificial na triagem preliminar do volume de recursos e processos. No México, o Instituto Nacional Eleitoral exige que decisões geradas por algoritmos sejam validadas por uma pessoa, segundo a representante Norma de la Cruz. Já o Tribunal Eleitoral do Panamá e o Serviço Eleitoral do Chile empregam ferramentas para escuta ativa em redes sociais e detecção de ameaças institucionais.",
-        "A presidente da entidade chilena, Pamela Figueroa, afirmou que a violência política digital afeta desproporcionalmente as mulheres candidatas. Além disso, a implementação dessas tecnologias na região enfrenta barreiras como restrições orçamentárias, escassez de profissionais e potenciais preconceitos culturais e linguísticos em ferramentas desenvolvidas fora da América Latina.",
-        "Um relatório em colaboração com o Departamento de Assuntos Políticos e de Consolidação da Paz das Nações Unidas destaca que a inteligência artificial integra desde o reconhecimento biométrico até atendimentos por chatbots. O documento aponta que as boas práticas envolvem testes rigorosos, equipes multidisciplinares, códigos abertos e proteção de dados para resguardar a transparência e a confiança pública."
+        "Luanda, capital de Angola, recebeu na semana passada a Cimeira Global sobre Género na Aviação 2026, promovida pela Organização da Aviação Civil Internacional das Nações Unidas, Icao. O evento reuniu mais de 950 participantes entre governos, indústria, organizações internacionais e a academia.",
+        "O encontro buscou promover a adoção de práticas para diminuir as assimetrias de gênero e reforçar a participação e a liderança das mulheres. Segundo a Icao, globalmente as mulheres representam cerca de 4% dos pilotos, 3% dos engenheiros e técnicos de manutenção de aeronaves e 20,6% dos controladores de tráfego aéreo.",
+        "O secretário-geral da Icao, Juan Carlos Salazar, destacou o papel essencial das mulheres na aviação e afirmou que o futuro do setor depende do aproveitamento do potencial de todos os profissionais. Os participantes defenderam o reforço na coleta e no uso de dados desagregados por sexo para embasar políticas e apoiar tomadas de decisão.",
+        "Em Angola, as entidades reforçaram que a promoção da emancipação feminina no setor é um imperativo estratégico para a inovação. A atual sub-representação das mulheres em profissões do transporte aéreo prejudica as trabalhadoras e limita a capacidade da indústria de mobilizar talentos e competências."
       ],
-      "link": "/materia/inteligencia-artificial-avanca-nos-processos-eleitorais-de-paises-lati.html",
+      "link": "/materia/cimeira-da-icao-em-angola-debate-lideranca-e-presenca-feminina-na-avia.html",
+      "iso": "2026-07-31T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": "O público afetado é composto por mulheres que trabalham na aviação civil, englobando pilotas, engenheiras, técnicas de manutenção e controladoras de tráfego aéreo. Não existem registros de eventos anteriores semelhantes no histórico arquivado.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:surto-de-ebola-e-crise-de-fome-atingem-o-leste-da-rd-congo",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Surto de ebola e crise de fome atingem o leste da RD Congo",
+      "resumo": "A epidemia provocou mais de 1,5 mil mortes e 3.442 infecções confirmadas, enquanto 2,65 milhões de pessoas enfrentam fome aguda no país africano.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853897",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A República Democrática do Congo enfrenta uma epidemia de ebola causada pela estirpe bundibugyo combinada com uma crise de fome. O vírus atingiu 48 zonas de saúde nas áreas orientais de Ituri, Kivu do Norte, Kivu do Sul, Tshopo e Alto Uele, somando 3.442 infectados confirmados e mais de 1,5 mil mortos. Na última semana, o número de vítimas fatais cresceu 50%.",
+        "Com taxa de letalidade de 40%, a epidemia coincide com um cenário de escassez alimentar em que pelo menos 2,65 milhões de pessoas sofrem de fome aguda. Do total, 628 mil estão em situação de emergência e 1,9 milhão enfrenta insegurança alimentar grave na província de Ituri, epicentro da crise.",
+        "Para conter o avanço do vírus, foram mobilizadas equipes da OMS e da Base Uele nas regiões de Viadana, Poko e Ganga. Um grupo de 12 peritos e suprimentos médicos chegaram ao local para reforçar o controle e o tratamento de infecções. A diretora de Gestão de Epidemias e Pandemias da OMS, Maria Van Kerkhove, desembarcou em Kinshasa e segue para Bunia.",
+        "O Programa Mundial de Alimentos fez um apelo urgente para arrecadar US$ 293,6 milhões para os próximos seis meses. Por meio de uma ponte aérea com 495 voos, a agência transportou 3.395 profissionais de saúde e 56 toneladas de carga, além de servir mais de 160 mil refeições quentes em centros de tratamento. As ações contam com a parceria do Unicef e do Governo da RD Congo."
+      ],
+      "link": "/materia/surto-de-ebola-e-crise-de-fome-atingem-o-leste-da-rd-congo.html",
       "iso": "2026-07-30T12:00:00.000Z",
       "hora": "08h00",
       "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:brasil-aciona-organizacao-mundial-do-comercio-contra-tarifas-dos-estad",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Brasil aciona Organização Mundial do Comércio contra tarifas dos Estados Unidos",
-      "resumo": "As novas taxas norte-americanas afetam 23% das exportações brasileiras e chegam a somar 37,5% de imposto sobre determinados produtos.",
-      "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/guerra-de-tarifas-brasil-teria-mais-a-perder-que-os-estados-unidos-288592",
-      "origemNome": "The Conversation",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O governo brasileiro formalizou um pedido de consultas contra os Estados Unidos na Organização Mundial do Comércio devido ao aumento de tarifas sobre produtos do país. Desde 22 de julho, uma taxa extra de 25% passou a ser cobrada sobre parte das mercadorias enviadas ao mercado norte-americano, deixando de fora itens como café, carne bovina, suco de laranja, petróleo, aviões, couros, produtos de madeira e remédios.",
-        "Uma segunda sobretaxa aplicada por Washington a 60 países, com base em alegações sobre trabalho forçado, fez a tributação somada atingir 37,5% sobre um mesmo produto. As medidas afetam em torno de 23% das exportações do Brasil para os Estados Unidos, atingindo setores como madeira, móveis, calçados, máquinas, equipamentos elétricos, cerâmica e açúcar.",
-        "O vice-presidente Geraldo Alckmin afirmou que aplicar reciprocidade comercial faria o Brasil perder mais do que os Estados Unidos. O presidente Lula da Silva prometeu resposta, chamou as tarifas de erro estratégico em artigo e o governo ampliou o crédito para empresas afetadas, mantendo a lei de reciprocidade sem previsão de uso antes das eleições de outubro.",
-        "A China segue como o principal comprador das exportações brasileiras há anos. O governo brasileiro mantém fora de cogitação alterações no sistema de pagamentos instantâneos, alvo de irritação dos Estados Unidos, enquanto mais da metade dos brasileiros associa o aumento das tarifas à visita do senador Flávio Bolsonaro a Washington."
-      ],
-      "link": "/materia/brasil-aciona-organizacao-mundial-do-comercio-contra-tarifas-dos-estad.html",
-      "iso": "2026-07-29T05:48:54.000Z",
-      "hora": "01h48",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:ataques-russos-na-ucrania-deixam-mortos-e-levam-polonia-a-mobilizar-ca",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Ataques russos na Ucrânia deixam mortos e levam Polônia a mobilizar caças",
-      "resumo": "A ação de Moscou deixou ao menos 13 mortos e mais de 30 feridos em várias regiões ucranianas, após o lançamento de 74 mísseis e 284 drones durante a noite.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/mundo/news/2026-07/ucrania-ataques-russia-criancas-polonia-tusk-zelensky.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "Uma onda de bombardeios promovida pela Rússia contra a Ucrânia deixou pelo menos 13 mortos e mais de 30 feridos em várias regiões do país. Durante a noite, Moscou disparou 74 mísseis e 284 drones. As defesas aéreas ucranianas interceptaram 55 mísseis e 265 drones, mas diversos artefatos atingiram os alvos.",
-        "Em Kryvyi Rih, um míssil balístico Iskander-M atingiu uma residência e causou a morte de duas meninas, de 5 e 12 anos. O ataque na localidade deixou pelo menos seis mortos. Em Kiev, um homem de 31 anos morreu, e prédios residenciais, um mercado e armazéns foram danificados. Em Lviv, pelo menos 30 pessoas ficaram feridas após impactos em dois prédios residenciais, uma escola e dois jardins de infância. Houve registros de explosões também em Ivano-Frankivsk, Poltava e Dnipropetrovsk.",
-        "Os novos ataques em grande escala haviam sido anunciados no dia anterior pelo presidente ucraniano Volodymyr Zelensky, ao retornar de Washington. Moscou assumiu a autoria das ações e alegou ter como alvos aeródromos militares, instalações industriais e centros logísticos das forças armadas da Ucrânia.",
-        "Um míssil de cruzeiro russo violou o espaço aéreo da Polônia e entrou em território da OTAN. Diante do incidente, o primeiro-ministro Donald Tusk mobilizou caças, colocou os sistemas de defesa aérea em alerta máximo e reuniu líderes governamentais e militares para acompanhar a situação."
-      ],
-      "link": "/materia/ataques-russos-na-ucrania-deixam-mortos-e-levam-polonia-a-mobilizar-ca.html",
-      "iso": "2026-07-30T07:26:00.000Z",
-      "hora": "03h26",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:debate-sobre-o-sus-indica-necessidade-de-reorganizar-gestao-e-financia",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Debate sobre o SUS indica necessidade de reorganizar gestão e financiamento",
-      "resumo": "O modelo pautado no pagamento de procedimentos e na divisão municipal não atende à demanda de uma população que envelhece e necessita de cuidados integrados.",
-      "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/eleicoes-e-saude-quais-as-questoes-sobre-o-futuro-do-sus-que-precisam-ser-debatidas-pelos-candidatos-287965",
-      "origemNome": "The Conversation",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O debate eleitoral sobre o Sistema Único de Saúde (SUS) costuma se concentrar na falta de verbas, embora a discussão exija mudanças na gestão da rede. O modelo atual, focado no pagamento de procedimentos e internações, auxiliou na expansão do sistema, mas não atende mais às demandas de uma população que envelheceu e convive com doenças crônicas.",
-        "Atualmente, verbas permanecem vinculadas a estruturas municipais, como hospitais de pequeno porte que consomem recursos mesmo sem realizar procedimentos de alta complexidade, a exemplo de cirurgias cardíacas e tratamento de câncer. Embora o cidadão utilize uma rede regional — realizando exames, consultas com especialistas e tratamentos em diferentes cidades —, a gestão do financiamento segue pulverizada entre milhares de municípios.",
-        "A falta de comunicação entre redes municipais e estaduais gera filas duplicadas, cenário exemplificado na região metropolitana de São Paulo, onde as duas esferas operam de forma autônoma. Em relação ao déficit de médicos, a atração de profissionais para o sistema depende da infraestrutura hospitalar, vagas de residência, equipes estruturadas e carreira, indo além da ampliação da capacidade de formação."
-      ],
-      "link": "/materia/debate-sobre-o-sus-indica-necessidade-de-reorganizar-gestao-e-financia.html",
-      "iso": "2026-07-29T05:42:04.000Z",
-      "hora": "01h42",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:infectologista-brasileiro-assume-direcao-de-programa-de-doencas-tropic",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Infectologista brasileiro assume direção de programa de doenças tropicais da OMS",
-      "resumo": "Marcus Lacerda definiu os países de língua portuguesa como prioridade do programa sediado em Genebra.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853879",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O infectologista brasileiro Marcus Lacerda assumiu a direção do Programa Especial para Pesquisa e Treinamento em Doenças Tropicais, o TDR, da Organização Mundial da Saúde, em Genebra, na Suíça. Ele completou os primeiros cinco meses no cargo e detalhou as prioridades da gestão em entrevista à ONU News.",
-        "Criado há 52 anos, o TDR busca treinar pesquisadores em países de baixa e média renda e viabilizar a implementação de vacinas e medicamentos. Com a nova direção, os países de língua portuguesa passaram a ser prioridade do programa, visando ampliar a troca de experiências entre nações como Brasil, Portugal, Moçambique e Angola.",
-        "O diretor mencionou o crescimento do Brasil na produção de ferramentas de combate a essas enfermidades, citando a Fiocruz e o Instituto Butantan. Ele afirmou que entraves em agências regulatórias, processos de aprovação ética e avaliações de economia em saúde dificultam o alcance dessas ferramentas, que precisam considerar as especificidades de populações rurais, indígenas, gestantes e crianças.",
-        "O programa prevê o uso de inteligência artificial e modelos preditivos sobre mudanças climáticas para auxiliar cientistas a antecipar surtos locais e grandes epidemias. Nos últimos 10 anos, foram registrados progressos contra as doenças tropicais negligenciadas."
-      ],
-      "link": "/materia/infectologista-brasileiro-assume-direcao-de-programa-de-doencas-tropic.html",
-      "iso": "2026-07-29T12:00:00.000Z",
-      "hora": "08h00",
-      "original": true,
-      "contexto": null,
+      "contexto": "Não há registros de casos parecidos no histórico arquivado. A crise afeta moradores de 48 zonas de saúde no leste da República Democrática do Congo, com 2,65 milhões de pessoas em situação de fome aguda e um aumento de 50% nas mortes por ebola na última semana. O apelo financeiro do Programa Mundial de Alimentos estabelece o prazo de atendimento para os próximos seis meses.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -350,67 +360,106 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto está sendo publicado por dois veículos de comunicação da imprensa.",
-        "Autoridades dos Estados Unidos, Donald Trump e a Guarda Revolucionária são citados."
+        "Que a informação está sendo veiculada por três veículos de imprensa.",
+        "Que Donald Trump teria anunciado a conclusão do acordo de desarmamento.",
+        "Que o plano envolveria o desarmamento do Hamas e a retirada de Israel."
       ],
       "falta": [
-        "Confirmação oficial de órgãos dos Estados Unidos sobre os ataques ou sanções.",
-        "Manifestação oficial do governo do Irã ou da Guarda Revolucionária.",
-        "Detalhamento de datas, locais exatos e lista das empresas supostamente sancionadas."
+        "Registro ou documento em fonte oficial que confirme o acordo.",
+        "Manifestação do governo de Israel sobre a suposta retirada de Gaza.",
+        "Detalhamento sobre prazos e termos de execução do tratado."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "© AP Photo/Julia Demaree Nikhinson",
-          "titulo": "Trump promete 'surra' no Irã e EUA anunciam novas sanções a empresas ligadas à Guarda Revolucionária",
-          "link": "https://www.rfi.fr/br/mundo/20260729-trump-promete-surra-no-ir%C3%A3-e-eua-anunciam-novas-san%C3%A7%C3%B5es-a-empresas-ligadas-%C3%A0-guarda-revolucion%C3%A1ria"
+          "veiculo": "Euronews",
+          "titulo": "Hamas aceita acordo de desarmamento “histórico” que inclui a retirada israelita de Gaza",
+          "link": "http://pt.euronews.com/2026/07/31/trump-anuncia-acordo-historico-para-desarmamento-total-do-hamas-e-retirada-israelita-de-ga"
+        },
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "O que se sabe sobre acordo para 'desarmamento total' do Hamas em Gaza anunciado por Trump e confirmado por grupo palestino",
+          "link": "https://www.bbc.com/portuguese/articles/c934950jglko?at_medium=RSS&amp;at_campaign=rss"
         },
         {
           "veiculo": "Folha Mundo",
-          "titulo": "EUA retomam ataques ao Irã após pausa de Trump",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/07/eua-retomam-ataques-ao-ira-apos-pausa-de-trump.shtml"
+          "titulo": "Trump anuncia conclusão de acordo para desarmamento do Hamas em Gaza",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/07/trump-anuncia-conclusao-de-acordo-para-desarmamento-do-hamas-em-gaza.shtml"
         }
       ],
-      "link": "/materia/nc-eua-teriam-retomado-ataques-ao-ira-e-anunciado-novas-sancoes-apos-fala.html",
+      "link": "/materia/nc-hamas-teria-aceito-acordo-de-desarmamento-em-gaza-anunciado-por-trump.html",
       "corpo": [
-        "Os Estados Unidos teriam retomado ataques militares contra o Irã após uma suposta pausa atribuída a Donald Trump. Paralelamente, o político norte-americano teria prometido uma ofensiva severa contra o país iraniano.",
-        "As publicações indicam ainda o anúncio de novas sanções econômicas por parte das autoridades norte-americanas. As medidas teriam como alvo empresas que manteriam ligações com a Guarda Revolucionária do Irã.",
-        "Os relatos veiculados apresentam abordagens distintas sobre os fatos recentes. Enquanto uma publicação destaca o anúncio de sanções e declarações políticas, a outra afirma a ocorrência de ações militares diretas."
+        "O grupo Hamas teria aceito um acordo para seu desarmamento total na Faixa de Gaza. A medida também preveria a retirada das forças de Israel do território.",
+        "A conclusão das tratativas teria sido anunciada por Donald Trump e confirmada pela organização palestina. As publicações tratam o pacto como uma etapa concluída entre as partes.",
+        "Os relatos convergem sobre o envolvimento de Trump no anúncio e a aceitação do grupo. A negociação envolveria o encerramento da presença militar israelense na região."
       ],
-      "id": "circ:eua-teriam-retomado-ataques-ao-ira-e-anunciado-novas-sancoes-apos-fala",
+      "id": "circ:hamas-teria-aceito-acordo-de-desarmamento-em-gaza-anunciado-por-trump",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "EUA teriam retomado ataques ao Irã e anunciado novas sanções após fala de Trump",
+      "titulo": "Hamas teria aceito acordo de desarmamento em Gaza anunciado por Trump",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-07-30T16:02:23.522Z",
-      "hora": "12h02"
+      "iso": "2026-07-31T08:13:51.009Z",
+      "hora": "04h13"
     }
   ],
   "pautas": [
     {
-      "titulo": "Promotoria na Bolívia ordena a prisão de Evo Morales: quais acusações ele enfrenta e por que o ex-presidente denuncia uma 'brutal guerra judicial'",
+      "titulo": "FIFA insiste com plano de investidores privados apesar de ameaça de boicote da UEFA",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "AP - Darko Vojinovic"
+      ]
+    },
+    {
+      "titulo": "Hamas aceita acordo de desarmamento “histórico” que inclui a retirada israelita de Gaza",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "O que se sabe sobre acordo para 'desarmamento total' do Hamas em Gaza anunciado por Trump e confirmado por grupo palestino",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
+        "Euronews",
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Ministério Público da Bolívia ordena prisão de Evo Morales por protestos que paralisaram o país",
+      "titulo": "Trump anuncia conclusão de acordo para desarmamento do Hamas em Gaza",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil"
+        "BBC Brasil",
+        "Euronews"
       ]
     },
     {
-      "titulo": "Trump promete 'surra' no Irã e EUA anunciam novas sanções a empresas ligadas à Guarda Revolucionária",
-      "veiculo": "© AP Photo/Julia Demaree Nikhinson",
+      "titulo": "O boicote à Copa do Mundo anunciado pela Uefa contra plano da Fifa para 'vender o Mundial'",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Folha Mundo"
+        "AP - Darko Vojinovic",
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "De forma 'unânime', Uefa formaliza ameaça de boicote à ​​Copa, em protesto contra plano da Fifa",
+      "veiculo": "AP - Darko Vojinovic",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "Euronews"
       ]
     }
   ]
