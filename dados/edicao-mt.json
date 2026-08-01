@@ -1,27 +1,36 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-08-01T17:58:07.057Z",
+  "gerado": "2026-08-01T20:53:46.704Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
     "pauta": 187,
-    "fonteLivre": 30,
+    "fonteLivre": 37,
     "confirmadas": 11,
-    "publicadas": 16,
-    "resgatadas": 1,
-    "semFonte": 164
+    "publicadas": 17,
+    "resgatadas": 0,
+    "semFonte": 169
   },
   "fontes": {
-    "checadas": 52,
+    "checadas": 51,
     "responderam": 23,
     "entregando": 21,
-    "itens": 217,
+    "itens": 224,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
+        "itens": 13,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -39,15 +48,6 @@
         "tipo": "pauta",
         "id": "odocumento",
         "nome": "O Documento",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mt",
-        "nome": "g1 MT",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,7 +73,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-cap",
+        "id": "gn-mt-cuiaba",
         "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
@@ -82,7 +82,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-cuiaba",
+        "id": "gn-mt-cap",
         "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
@@ -117,10 +117,10 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 12,
+        "tipo": "pauta",
+        "id": "g1mt",
+        "nome": "g1 MT",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,6 +129,15 @@
         "tipo": "pauta",
         "id": "muvuca",
         "nome": "Muvuca Popular",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "olivre",
+        "nome": "O Livre",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -165,7 +174,7 @@
         "tipo": "pauta",
         "id": "gn-mt-sinop",
         "nome": "Sinop",
-        "itens": 8,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -174,16 +183,7 @@
         "tipo": "pauta",
         "id": "gn-mt-rondonopol",
         "nome": "Rondonópolis",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 6,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -208,15 +208,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "pauta",
         "id": "reportermt",
         "nome": "Repórter MT",
         "itens": 0,
@@ -235,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "reportermt",
-        "nome": "Repórter MT",
+        "id": "hipernoticias",
+        "nome": "Hipernotícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "hipernoticias",
-        "nome": "Hipernotícias",
+        "id": "reportermt",
+        "nome": "Repórter MT",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -343,15 +334,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tjmt",
-        "nome": "TJMT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "mpmt",
         "nome": "MPMT",
         "itens": 0,
@@ -361,17 +343,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "seduc-mt",
-        "nome": "Seduc-MT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sinfra-mt",
-        "nome": "Sinfra-MT",
+        "id": "tjmt",
+        "nome": "TJMT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -397,8 +370,17 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sinop",
-        "nome": "Prefeitura de Sinop",
+        "id": "seduc-mt",
+        "nome": "Seduc-MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "sinfra-mt",
+        "nome": "Sinfra-MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -424,8 +406,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-sinop",
-        "nome": "Câmara de Sinop",
+        "id": "sinop",
+        "nome": "Prefeitura de Sinop",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -433,8 +415,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sorriso",
-        "nome": "Prefeitura de Sorriso",
+        "id": "camara-sinop",
+        "nome": "Câmara de Sinop",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -451,8 +433,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-vg",
-        "nome": "Câmara de Várzea Grande",
+        "id": "sorriso",
+        "nome": "Prefeitura de Sorriso",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -462,6 +444,15 @@
         "tipo": "assessoria",
         "id": "camara-cba",
         "nome": "Câmara de Cuiabá",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-vg",
+        "nome": "Câmara de Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -503,97 +494,65 @@
   ],
   "itens": [
     {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba/@@images/image-0-1c1e1c20af74575b9013a0147b97c8bb.jpeg",
-      "fotoAlt": null,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:justica-eleitoral-transfere-quatro-secoes-do-liceu-cuiabano-para-a-cdl",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Justiça Eleitoral transfere quatro seções do Liceu Cuiabano para a CDL",
-      "resumo": "A mudança determinada pela Portaria nº 15/2026/01ª ZE/MT ocorreu devido a obras de reforma na escola e atinge as seções 0841, 0843, 0844 e 1170.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [
-        "O Mato Grosso"
-      ],
-      "quentura": 1,
-      "uf": "mt",
-      "corpo": [
-        "A Justiça Eleitoral transferiu quatro seções eleitorais que funcionavam na Escola Estadual Liceu Cuiabano para a Câmara de Dirigentes Lojistas de Cuiabá (CDL). A medida altera o local de votação das seções 0841, 0843, 0844 e 1170, na Avenida Presidente Marques, no bairro quilombo, em Cuiabá.",
-        "A alteração foi formalizada pela Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz da 01ª ZE, Moacir Rogério Tortato. A mudança ocorreu devido a obras de reforma na infraestrutura do prédio da escola, o que inviabilizou a recepção de todas as seções no local. O objetivo da decisão é garantir conforto e acessibilidade aos eleitores.",
-        "O chefe de cartório da 01ª ZE, Antônio Henrique Ricci Boaventura, explicou que a evolução das obras e uma nova avaliação do prédio permitiram manter parte das seções no Liceu Cuiabano. Segundo ele, a medida reduz deslocamentos, visto que a CDL fica localizada na mesma avenida da escola.",
-        "A consulta ao local de votação pode ser feita no Portal do TSE, na opção \"Autoatendimento Eleitoral\", acessando \"Título Eleitoral\" e selecionando \"7: Onde votar\", mediante informacão de CPF, nome completo e data de nascimento. As informações também estão disponíveis no aplicativo e-Título e no site tre-mt.gov.br."
-      ],
-      "link": "/materia/justica-eleitoral-transfere-quatro-secoes-do-liceu-cuiabano-para-a-cdl.html",
-      "iso": "2026-08-01T17:48:20.555Z",
-      "hora": "13h48",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": null,
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-paga-folha-salarial-de-julho-nesta-sexta-feira",
+      "id": "ilm:prefeitura-de-cuiaba-efetua-pagamento-da-folha-salarial-de-julho",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Cuiabá paga folha salarial de julho nesta sexta-feira",
-      "resumo": "O montante movimentado soma R$ 146.362.610,30 em valores brutos, com um total líquido de R$ 106.761.989,43 creditado aos servidores municipais.",
+      "titulo": "Prefeitura de Cuiabá efetua pagamento da folha salarial de julho",
+      "resumo": "O montante líquido creditado aos servidores soma R$ 106.761.989,43, com liberação entre 8h e 23h59 nesta sexta-feira.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-realiza-pagamento-dos-servidores-do-municipio-nesta-sexta-feira-31",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
         "hnt.com.br",
-        "O Mato Grosso",
-        "O Livre"
+        "omatogrosso.com"
       ],
       "quentura": 4,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá efetuou, nesta sexta-feira (31), o pagamento da folha salarial dos servidores municipais referente ao mês de julho.",
-        "Além dos vencimentos mensais, também são pagos benefícios como verbas indenizatórias, prêmio saúde, adicional de insalubridade, férias e horas extras. Os créditos são realizados de acordo com o processamento bancário, com início às 8h e previsão de conclusão até as 23h59 desta sexta-feira.",
-        "O secretário municipal de Economia, Marcelo Bussiki, destacou que a regularidade no pagamento demonstra compromisso com os servidores e com o equilíbrio das contas municipais. Ele afirmou que manter a folha salarial em dia é uma prioridade da administração municipal, fortalece a confiança dos servidores e contribui para movimentar a economia da cidade."
+        "A Prefeitura de Cuiabá realizou, nesta sexta-feira (31), o pagamento da folha salarial dos servidores municipais referente ao mês de julho.",
+        "Ao todo, foram movimentados R$ 146.362.610,30 em valores brutos e R$ 106.761.989,43 em valores líquidos. Além dos vencimentos mensais, também são pagos benefícios como verbas indenizatórias, prêmio saúde, adicional de insalubridade, férias e horas extras.",
+        "Os créditos são realizados de acordo com o processamento bancário, com início às 8h e conclusão prevista até as 23h59 desta sexta-feira.",
+        "O secretário municipal de Economia, Marcelo Bussiki, afirmou que manter a folha salarial em dia é uma prioridade da administração municipal, fortalece a confiança dos servidores e contribui para movimentar a economia da cidade."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-paga-folha-salarial-de-julho-nesta-sexta-feira.html",
-      "iso": "2026-08-01T17:48:21.426Z",
-      "hora": "13h48",
+      "link": "/materia/prefeitura-de-cuiaba-efetua-pagamento-da-folha-salarial-de-julho.html",
+      "iso": "2026-08-01T20:42:52.085Z",
+      "hora": "16h42",
       "original": true,
-      "contexto": "A medida abrange os servidores públicos municipais de Cuiabá, com a quitação do salário de julho e de benefícios como férias, adicional de insalubridade e horas extras. O processamento bancário dos depósitos tem previsão de conclusão até as 23h59 desta sexta-feira (31).",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba/@@images/image-0-1c1e1c20af74575b9013a0147b97c8bb.jpeg",
       "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:unidade-de-programas-e-projetos-internacionais-articula-acoes-da-sema",
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:quatro-secoes-eleitorais-do-liceu-cuiabano-sao-transferidas-para-a-cdl",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Unidade de Programas e Projetos Internacionais articula ações da Sema",
-      "resumo": "A estrutura gerencia riscos sociais, ambientais, financeiros e políticos, além de fiscalizar contratos de iniciativas com financiamento externo.",
-      "fonte": "Meridiano, com informações de Sema-MT",
-      "origemLink": "https://www.sema.mt.gov.br/site/index.php/unidades-administrativas/unidade-de-programas-e-projetos-internacionais",
-      "origemNome": "Sema-MT",
+      "titulo": "Quatro seções eleitorais do Liceu Cuiabano são transferidas para a CDL",
+      "resumo": "A mudança atinge as seções 0841, 0843, 0844 e 1170 devido a obras na escola e consta na Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz Moacir Rogério Tortato.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba",
+      "origemNome": "TRE-MT",
       "pautadoPor": [
-        "Arena de Notícias"
+        "Estadão MT"
       ],
       "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Unidade de Programas e Projetos Internacionais (UPPI) atua como ponto central de articulação entre a Secretaria, organismos internacionais, governos parceiros, fundos climáticos, instituições financeiras e iniciativas multilaterais. O setor atua para assegurar a governança, a transparência, a eficiência e o alinhamento técnico das ações financiadas por recursos externos.",
-        "A unidade é responsável pelo planejamento, execução, monitoramento e reporte de programas e projetos internacionais. Entre seus objetivos estão o fortalecimento da gestão ambiental em Mato Grosso, a proteção florestal, a redução das emissões de gases de efeito estufa e a valorização de povos e comunidades tradicionais.",
-        "A UPPI atua na mitigação e adaptação às mudanças climáticas, buscando ampliar a capacidade institucional do Estado e contribuir para uma economia sustentável e resiliente. O trabalho inclui garantir a conformidade financeira, a integridade dos processos e o cumprimento das salvaguardas socioambientais.",
-        "A estrutura lidera a articulação entre executores e subexecutores, fiscaliza contratos e gerencia riscos sociais, ambientais, financeiros e políticos. A coordenação da comunicação institucional dos programas também fica sob responsabilidade da unidade, garantindo acesso da sociedade à informação e aos canais de ouvidoria."
+        "A Justiça Eleitoral transferiu quatro seções eleitorais que funcionavam na Escola Estadual Liceu Cuiabano para a Câmara de Dirigentes Lojistas de Cuiabá (CDL). As seções alteradas são a 0841, 0843, 0844 e 1170. Ambos os locais estão situados na Avenida Presidente Marques, no bairro Quilombo, em Cuiabá.",
+        "A alteração foi determinada pela Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz da 01ª ZE, Moacir Rogério Tortato. A mudança ocorreu devido a obras de reforma na infraestrutura do prédio escolar, o que impossibilitou o recebimento de todas as seções no local. A medida busca garantir conforto e acessibilidade aos eleitores.",
+        "Segundo o chefe de cartório da 01ª ZE, Antônio Henrique Ricci Boaventura, a prioridade inicial foi garantir um local adequado durante as reformas. Ele informou que, com a evolução das obras e uma nova avaliação da estrutura, foi possível manter parte das seções no próprio Liceu Cuiabano, reduzindo a necessidade de deslocamentos.",
+        "A consulta ao local de votação pode ser feita no Portal do TSE ou pelo aplicativo e-Título. No site, o eleitor deve acessar a opção Autoatendimento Eleitoral, selecionar Título Eleitoral e clicar na opção \"7: Onde votar\", informando CPF, nome completo e data de nascimento."
       ],
-      "link": "/materia/unidade-de-programas-e-projetos-internacionais-articula-acoes-da-sema.html",
-      "iso": "2026-08-01T17:48:15.970Z",
-      "hora": "13h48",
+      "link": "/materia/quatro-secoes-eleitorais-do-liceu-cuiabano-sao-transferidas-para-a-cdl.html",
+      "iso": "2026-08-01T20:42:50.478Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -604,31 +563,31 @@
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:mutirao-no-viveiro-municipal-de-cuiaba-produz-cerca-de-3-mil-mudas",
+      "id": "ilm:cuiaba-registra-queda-de-88-39-nos-casos-de-covid-19-e-alta-na-influen",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Mutirão no viveiro municipal de Cuiabá produz cerca de 3 mil mudas",
-      "resumo": "A ação da Secretaria Municipal de Planejamento e Desenvolvimento Urbano visa abastecer o programa de doação e as ações de arborização da cidade no próximo ano.",
+      "titulo": "Cuiabá registra queda de 88,39% nos casos de Covid-19 e alta na influenza",
+      "resumo": "Segundo o Boletim Epidemiológico da Secretaria Municipal de Saúde, as notificações de influenza A e B subiram 74,95% e somaram 2.386 registros entre 4 de janeiro e 25 de julho de 2026.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/mutirao-produz-3-mil-mudas-para-reforcar-arborizacao-e-doacao-em-cuiaba",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-registra-queda-de-88-39-nos-casos-de-covid-19-enquanto-influenza-segue-em-alta",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Muvuca Popular",
-        "MidiaNews"
+        "Estadão MT",
+        "Prefeitura de Cuiabá"
       ],
       "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, produziu cerca de 3 mil mudas de espécies frutíferas e nativas em um mutirão no viveiro municipal, realizado na sexta-feira (31). As mudas vão abastecer o programa de doação à população e as ações de arborização do município no próximo ano.",
-        "Durante o mutirão, foram produzidas mudas de caju, ata, jacarandá e ipê amarelo. As sementes das plantas frutíferas são obtidas principalmente por meio de doações da população, enquanto as nativas são recolhidas por equipes da Prefeitura em diferentes pontos da cidade.",
-        "O diretor de Planejamento Ambiental da secretaria, Fábio Moura, informou que a produção é contínua para garantir a disponibilidade de mudas ao longo do ano. De acordo com ele, o ipê amarelo está entre as espécies mais procuradas pelos moradores, assim como plantas frutíferas, a exemplo de limão e ata.",
-        "A moradora Marlene Moura Silva retirou mudas de limão e acerola para cultivo no quintal familiar. A iniciativa integra o conjunto de ações da Prefeitura para ampliar a arborização urbana e incentivar o plantio em áreas públicas e privadas."
+        "A Secretaria Municipal de Saúde de Cuiabá publicou o Boletim Epidemiológico de Vigilância dos Vírus Respiratórios com dados referentes às semanas epidemiológicas 1 a 29 de 2026, entre 4 de janeiro e 25 de julho. O levantamento aponta redução de 88,39% nos casos de Covid-19 e aumento de 74,95% nas notificações de influenza A e B em comparação com o mesmo período de 2025.",
+        "No período analisado, Cuiabá registrou 121 casos de Covid-19, sendo 96 em moradores da capital e 25 em residentes de outros municípios, além de cinco óbitos confirmados. Já para a influenza, foram contabilizados 2.386 casos, sendo 1.858 entre moradores de Cuiabá e 528 em pacientes de outras cidades, com 21 mortes confirmadas, das quais 16 ocorreram em residentes da capital.",
+        "O levantamento também aponta 1.463 hospitalizações por Síndrome Respiratória Aguda Grave (SRAG), com 970 altas, 373 casos em investigação e 120 óbitos. Em relação aos casos de influenza, as crianças de até 6 anos foram o grupo mais atingido, somando 966 registros, seguidas pela faixa de 15 a 59 anos, com 673 casos, de 7 a 14 anos, com 572, e idosos com 60 anos ou mais, com 175 notificações.",
+        "De acordo com a Vigilância Epidemiológica, o cenário da influenza decorre da maior circulação viral, da baixa cobertura vacinal e do aumento na oferta de exames em 2026. A vacina contra a doença está disponível nas 72 Unidades de Saúde da Família (USFs) de Cuiabá para os grupos prioritários."
       ],
-      "link": "/materia/mutirao-no-viveiro-municipal-de-cuiaba-produz-cerca-de-3-mil-mudas.html",
-      "iso": "2026-08-01T17:48:21.426Z",
-      "hora": "13h48",
+      "link": "/materia/cuiaba-registra-queda-de-88-39-nos-casos-de-covid-19-e-alta-na-influen.html",
+      "iso": "2026-08-01T20:42:52.085Z",
+      "hora": "16h42",
       "original": true,
-      "contexto": "As plantas produzidas serão destinadas ao programa de doação à população e às ações de arborização de Cuiabá. A utilização das mudas está prevista para o próximo ano. Não há registro de mutirão similar no histórico do viveiro municipal.",
+      "contexto": "Os dados do levantamento comparam o período de 4 de janeiro a 25 de julho de 2026 com o mesmo intervalo de 2025. As crianças de até 6 anos foram a faixa etária mais atingida pela influenza, somando 966 registros no município. O histórico do arquivo registra um caso parecido em 1º de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -637,11 +596,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:programa-por-dentro-do-parlamento-atendeu-mil-pessoas-na-almt-em-2026",
+      "id": "ilm:programa-por-dentro-do-parlamento-da-almt-atinge-mil-participantes-em-",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Programa Por Dentro do Parlamento atendeu mil pessoas na ALMT em 2026",
-      "resumo": "Criada em 1997, a iniciativa da Assembleia Legislativa de Mato Grosso oferece visitas guiadas e aulas de cidadania para estudantes e grupos comunitarios.",
+      "titulo": "Programa Por Dentro do Parlamento da ALMT atinge mil participantes em 2026",
+      "resumo": "Idealizada em 1997, a iniciativa da Assembleia Legislativa de Mato Grosso oferece visitas guiadas e aulas de cidadania para estudantes e comunidade.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/programa-por-dentro-do-parlamento-aproxima-populacao-da-almt-e-fortalece-formacao-cidada/visualizar",
       "origemNome": "Assembleia de MT",
@@ -649,14 +608,14 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O programa Aula de Cidadania - Por Dentro do Parlamento, promovido pela Assembleia Legislativa de Mato Grosso (ALMT), recebeu aproximadamente mil pessoas no primeiro semestre de 2026. A ação realiza visitas guiadas e atividades sobre o funcionamento do Poder Legislativo estadual.",
-        "A iniciativa atende estudantes do ensino fundamental, médio, universitários e grupos organizados da comunidade, preferencialmente às quartas-feiras, em dias de sessão plenária. Os participantes percorrem gabinetes parlamentares, Rádio Assembleia, TV Assembleia, Teatro do Cerrado Zulmira Canavarros e Instituto Memória, recebendo certificado ao final.",
-        "O historiador do Instituto Memória, professor Edevamilton de Lima Oliveira, informou em entrevista à Rádio Assembleia na última quinta-feira (16) que o programa incluiu recentemente uma aula específica sobre cidadania. O Instituto guarda acervos históricos e legislativos de Mato Grosso com documentos a partir de 1835.",
-        "Idealizado em 1997 e instituído pela Resolução 4867/2017, o programa é organizado pela Secretaria-Geral, por meio da Superintendência de Planejamento Estratégico, em parceria com o Instituto Memória. Os agendamentos podem ser feitos pelo e-mail pordentrodoparlamento@al.mt.gov.br ou pelos telefones 3313-6282 e 3313-6288."
+        "O programa Aula de Cidadania - Por Dentro do Parlamento, da Assembleia Legislativa de Mato Grosso (ALMT), registrou a participação de aproximadamente mil pessoas no primeiro semestre de 2026. Desenvolvida pela Secretaria-Geral, por meio da Superintendência de Planejamento Estratégico, em parceria com o Instituto Memória do Poder Legislativo, a iniciativa oferece visitas guiadas, aulas de história e certificados aos participantes.",
+        "Idealizado em 1997 e instituído pela Resolução 4867/2017, o programa incluiu recentemente uma aula específica sobre cidadania. Em entrevista à Rádio Assembleia na última quinta-feira (16), o historiador do Instituto Memória, professor Edevamilton de Lima Oliveira, explicou que a mudança visou abordar a construção dos direitos civis, políticos e sociais a partir da evolução histórica e legislativa do Estado.",
+        "As atividades acontecem preferencialmente às quartas-feiras, dias de realização das sessões plenárias. O público-alvo atende principalmente estudantes do ensino médio, além de alunos do ensino fundamental, universitários e grupos organizados da comunidade. O roteiro abrange gabinetes parlamentares, Rádio Assembleia, TV Assembleia, Teatro do Cerrado Zulmira Canavarros e o Instituto Memória, que guarda documentos históricos desde 1835.",
+        "As instituições interessadas podem agendar visitas por meio da Superintendência de Planejamento Estratégico ou diretamente com o Instituto Memória. Os contatos disponíveis são o e-mail pordentrodoparlamento@al.mt.gov.br e os telefones 3313-6282 e 3313-6288. A expectativa é ampliar o número de atendidos no segundo semestre de 2026."
       ],
-      "link": "/materia/programa-por-dentro-do-parlamento-atendeu-mil-pessoas-na-almt-em-2026.html",
-      "iso": "2026-08-01T17:48:17.422Z",
-      "hora": "13h48",
+      "link": "/materia/programa-por-dentro-do-parlamento-da-almt-atinge-mil-participantes-em-.html",
+      "iso": "2026-08-01T20:42:48.013Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -667,11 +626,43 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:corregedoria-regional-eleitoral-atua-na-fiscalizacao-de-servicos-em-ma",
+      "id": "ilm:unidade-de-programas-e-projetos-internacionais-coordena-projetos-exter",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Corregedoria Regional Eleitoral atua na fiscalização de serviços em Mato Grosso",
-      "resumo": "Unidade do Tribunal Regional Eleitoral também orienta rotinas das Zonas Eleitorais do estado.",
+      "titulo": "Unidade de Programas e Projetos Internacionais coordena projetos externos na Sema",
+      "resumo": "A estrutura é responsável pela gestão de recursos externos e pelo cumprimento de salvaguardas socioambientais em ações voltadas à proteção florestal e mudanças climáticas no estado.",
+      "fonte": "Meridiano, com informações de Sema-MT",
+      "origemLink": "https://www.sema.mt.gov.br/site/index.php/unidades-administrativas/unidade-de-programas-e-projetos-internacionais",
+      "origemNome": "Sema-MT",
+      "pautadoPor": [
+        "Prefeitura de Cuiabá"
+      ],
+      "quentura": 2,
+      "uf": "mt",
+      "corpo": [
+        "A Unidade de Programas e Projetos Internacionais (UPPI) atua como ponto central de articulação entre a Secretaria, organismos internacionais, governos parceiros, fundos climáticos, instituições financeiras e iniciativas multilaterais. O setor busca assegurar a governança, a transparência e o alinhamento técnico das ações financiadas com recursos externos.",
+        "A UPPI coordena o planejamento, a execução, o monitoramento e o reporte dos projetos internacionais, além de garantir a conformidade financeira e o cumprimento de salvaguardas socioambientais. As ações visam fortalecer a gestão ambiental em Mato Grosso, proteger florestas, reduzir emissões de gases de efeito estufa e valorizar povos e comunidades tradicionais.",
+        "A unidade também atua na mitigação e adaptação às mudanças climáticas, de forma a contribuir para a sustentabilidade econômica e ampliar a capacidade institucional do Estado.",
+        "Além dessas funções, o setor articula executores e subexecutores, fiscaliza contratos e gerencia riscos sociais, ambientais, financeiros e políticos. A UPPI coordena a comunicação institucional dos programas para garantir o acesso público à informação e aos canais de ouvidoria."
+      ],
+      "link": "/materia/unidade-de-programas-e-projetos-internacionais-coordena-projetos-exter.html",
+      "iso": "2026-08-01T20:42:46.754Z",
+      "hora": "16h42",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:corregedoria-regional-eleitoral-atua-na-fiscalizacao-dos-servicos-em-m",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Corregedoria Regional Eleitoral atua na fiscalização dos serviços em Mato Grosso",
+      "resumo": "Unidade é responsável por orientar procedimentos das Zonas Eleitorais e tem titular eleito entre os membros do Tribunal Regional Eleitoral.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
       "origemNome": "TRE-MT",
@@ -679,14 +670,13 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em todo o Estado de Mato Grosso.",
-        "A unidade também responde pela expedição de orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais do estado. A titularidade é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral, eleito entre os membros do Tribunal.",
-        "A estrutura disponibiliza acesso a sistemas como o Processo Judicial Eletrônico da Corregedoria (PjeCor), o Sistema de Informações de Óbitos e Direitos Políticos (Infodip) e o Sistema de Informações Eleitorais (SIEL). Entre os conteúdos reunidos estão o Informativo da Corregedoria Regional Eleitoral, registros de inspeções e o 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil.",
-        "O acervo do setor inclui o regulamento interno da Corregedoria Regional Eleitoral de Mato Grosso e o Protocolo para Julgamento com Perspectiva Racial, além das definições de missão, visão e valores da unidade."
+        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em Mato Grosso. O setor também emite orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais do estado.",
+        "A titularidade do órgão é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral. O ocupante da função é escolhido por meio de eleição realizada entre os membros do Tribunal.",
+        "A estrutura engloba o Processo Judicial Eletrônico da Corregedoria (PjeCor), o Sistema de Informações de Óbitos e Direitos Políticos (Infodip) e o Sistema de Informações Eleitorais (SIEL). A instituição disponibiliza o regulamento interno do setor e o Protocolo para Julgamento com Perspectiva Racial."
       ],
-      "link": "/materia/corregedoria-regional-eleitoral-atua-na-fiscalizacao-de-servicos-em-ma.html",
-      "iso": "2026-08-01T17:48:20.555Z",
-      "hora": "13h48",
+      "link": "/materia/corregedoria-regional-eleitoral-atua-na-fiscalizacao-dos-servicos-em-m.html",
+      "iso": "2026-08-01T20:42:50.478Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -697,31 +687,31 @@
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-registra-queda-de-88-39-na-covid-19-e-alta-de-74-95-na-influenz",
+      "id": "ilm:prefeitura-envia-a-camara-projeto-de-concessao-do-shopping-popular-por",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Cuiabá registra queda de 88,39% na Covid-19 e alta de 74,95% na influenza",
-      "resumo": "O boletim da Secretaria Municipal de Saúde aponta que as notificações de influenza A e B chegaram a 2.386 casos nas primeiras 29 semanas epidemiológicas de 2026.",
+      "titulo": "Prefeitura envia à Câmara projeto de concessão do Shopping Popular por 30 anos",
+      "resumo": "A proposta estabelece o direito real de superfície para a reconstrução do local e a manutenção do Complexo Dom Aquino, além de revogar lei de 2023.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-registra-queda-de-88-39-nos-casos-de-covid-19-enquanto-influenza-segue-em-alta",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-envia-a-camara-projeto-que-cede-terreno-ao-shopping-popular-por-30-anos",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Documento",
-        "Prefeitura de Cuiabá"
+        "Muvuca Popular",
+        "Diario de Cuiabá"
       ],
       "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "A Secretaria Municipal de Saúde de Cuiabá publicou o Boletim Epidemiológico de Vigilância dos Vírus Respiratórios, referente às semanas epidemiológicas 1 a 29 de 2026, apontando queda de 88,39% nos casos de Covid-19 e aumento das notificações de influenza.",
-        "No período de 4 de janeiro a 25 de julho, foram registrados 121 casos de Covid-19 e cinco óbitos na cidade. Em contrapartida, a influenza A e B somou 2.386 ocorrências, das quais 1.858 foram em moradores da capital, representando um crescimento de 74,95% em relação ao mesmo período de 2025. Ao todo, 21 mortes por influenza foram confirmadas.",
-        "A Vigilância Epidemiológica atribui o cenário à maior circulação viral, à baixa cobertura vacinal e à ampliação na oferta de exames. O levantamento indica que as crianças de até 6 anos formam o grupo mais atingido pela influenza, com 966 notificações. Além disso, foram contabilizadas 1.463 hospitalizações por Síndrome Respiratória Aguda Grave e 120 mortes no geral.",
-        "A vacina contra a influenza está disponível para os grupos prioritários nas 72 Unidades de Saúde da Família de Cuiabá. A pasta orienta higienização frequente das mãos, proteção ao tossir ou espirrar e busca por atendimento médico diante de sintomas como falta de ar, febre persistente e dificuldade respiratória."
+        "O prefeito Abilio Brunini apresentou a representantes da Associação do Shopping Popular o projeto de lei encaminhado à Câmara Municipal que concede à entidade o direito real de superfície da área do centro comercial. O texto prevê prazo de concessão de 30 anos, com possibilidade de renovação conforme o interesse público.",
+        "A proposta abrange a administração do empreendimento e a manutenção de toda a área do Complexo Esportivo Manoel Soares de Campos (Dom Aquino). O projeto deixa de fora a área do Centro de Convivência de Idosos (CCI) Padre Firmo. A matéria estabelece a reserva mínima de 100 m² para um Centro de Educação Profissional do Senai ou outro equipamento social, determina fiscalização permanente da Prefeitura e revoga a Lei Municipal nº 6.900/2023.",
+        "O Shopping Popular está em fase final de reconstrução após o incêndio de 15 de julho de 2024, que destruiu a estrutura do centro comercial. O presidente da associação, Misael Galvão, afirmou que o momento exige parceria com o poder público. O prefeito declarou que a iniciativa garante segurança jurídica aos comerciantes e fortalece o polo econômico municipal.",
+        "A reunião no Palácio Alencastro contou com a presença da presidente da Câmara Municipal, vereadora Paula Calil, dos vereadores Rafael Ranalli, Macrean Santos, Coronel Dias, Samantha Íris, Cássio Coelho, Wilson Kero Kero e Antônio Lemes, além de diretores da entidade. A presidente da Casa informou que reunirá os 27 vereadores na segunda-feira para apresentar o projeto antes da votação, prevista para a próxima semana."
       ],
-      "link": "/materia/cuiaba-registra-queda-de-88-39-na-covid-19-e-alta-de-74-95-na-influenz.html",
-      "iso": "2026-08-01T17:48:21.426Z",
-      "hora": "13h48",
+      "link": "/materia/prefeitura-envia-a-camara-projeto-de-concessao-do-shopping-popular-por.html",
+      "iso": "2026-08-01T20:42:52.085Z",
+      "hora": "16h42",
       "original": true,
-      "contexto": "Os dados comparam o período de 4 de janeiro a 25 de julho de 2026 com o mesmo intervalo de 2025, registrando alta de 74,95% nos casos de influenza e queda de 88,39% na Covid-19. As crianças de até 6 anos representam o grupo mais atingido pela influenza, com 966 notificações. A vacina contra a doença está disponível para os grupos prioritários nas 72 Unidades de Saúde da Família de Cuiabá.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -730,11 +720,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governo-de-mt-suspende-noticias-institucionais-em-cumprimento-a-legisl",
+      "id": "ilm:governo-de-mt-suspende-noticias-institucionais-no-portal-e-redes-socia",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Governo de MT suspende notícias institucionais em cumprimento à legislação eleitoral",
-      "resumo": "A medida vale desde sábado (4.7) no portal e nas redes sociais do Estado, período em que serão veiculados apenas conteúdos de relevância ou utilidade pública.",
+      "titulo": "Governo de MT suspende notícias institucionais no portal e redes sociais",
+      "resumo": "A medida cumpre a Lei das Eleições nos três meses anteriores ao pleito e restringe as publicações a conteúdos de relevância ou utilidade pública.",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/component/banners/click/1955",
       "origemNome": "Sema-MT",
@@ -742,15 +732,45 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Governo de Mato Grosso suspendeu, desde sábado (4.7), a exibição de notícias institucionais publicadas no Portal do Governo. A restrição alcança também todo o acervo de fotografias e produções audiovisuais do Estado.",
-        "A medida atende ao artigo 73 da Lei Federal nº 9.504/1997, conhecida como Lei das Eleições, que disciplina a publicidade institucional nos três meses que antecedem o pleito. A determinação estende-se às redes sociais estaduais.",
-        "Durante esse período, o Estado veiculará apenas materiais de relevância ou de utilidade pública. A Secretaria de Estado de Meio Ambiente (Sema) seguirá com o atendimento à imprensa e o fornecimento de informações institucionais."
+        "O Governo de Mato Grosso suspendeu, desde sábado (4.7), a exibição de notícias institucionais publicadas no Portal do Governo. A medida abrange também todo o conteúdo de fotografias e produções audiovisuais.",
+        "A ação cumpre as restrições do artigo 73 da Lei Federal nº 9.504/1997, a Lei das Eleições, que disciplina a publicidade institucional nos três meses anteriores ao pleito. A regra se aplica também às redes sociais do Estado.",
+        "No período, serão veiculados exclusivamente conteúdos de relevância ou utilidade pública. A Secretaria de Estado de Meio Ambiente (Sema) seguirá atendendo a imprensa e fornecendo informações."
       ],
-      "link": "/materia/governo-de-mt-suspende-noticias-institucionais-em-cumprimento-a-legisl.html",
-      "iso": "2026-08-01T17:48:15.970Z",
-      "hora": "13h48",
+      "link": "/materia/governo-de-mt-suspende-noticias-institucionais-no-portal-e-redes-socia.html",
+      "iso": "2026-08-01T20:42:46.754Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas-1/@@images/image-0-1bf6b017b56940cc1148595b4b5c2380.jpeg",
+      "fotoAlt": null,
+      "municipio": "barradogarcas",
+      "municipioNome": "Barra do Garças",
+      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-eleicoes-em-barra-do-garcas",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "TRE-MT realiza audiência pública sobre eleições em Barra do Garças",
+      "resumo": "Encontro reuniu cerca de 100 pessoas de nove municípios do Vale do Araguaia para debater o pleito de 2026 e o funcionamento da Justiça Eleitoral.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou nesta sexta-feira (31) uma audiência pública sobre as Eleições Gerais de 2026 no Tribunal do Júri do Fórum da Comarca de Barra do Garças, município a 521 km de Cuiabá. O evento reuniu cerca de 100 pessoas de nove municípios do Vale do Araguaia e foi o quarto polo mato-grossense a receber o ciclo de debates.",
+        "A abertura foi conduzida pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. A audiência teve a presença de representantes do Ministério Público Estadual (MPE-MT), do Poder Judiciário, de gestões municipais, candidatos, líderes religiosos, representantes de partidos políticos, movimentos comunitários, voluntários de projetos sociais, indígenas e alunos da Escola Estadual Militar Tiradentes \"Cabo PM Vanilson Silva Carvalho\".",
+        "A mesa foi coordenada pelo juiz-membro substituto do TRE-MT, Flávio Fraga e Silva. Também participaram da mesa o assessor jurídico Hernandésio de Lima e o coordenador de Sistemas Eleitorais e Logística, Salomão Fortaleza. O público presente fez perguntas sobre acessibilidade, canais para denúncias de assédio eleitoral no trabalho, uso das redes sociais por candidatos, treinamento de mesários e o aplicativo Pardal, que estará disponível a partir do dia 16 de agosto.",
+        "O evento em Barra do Garças teve apoio do cartório eleitoral da 9ª Zona Eleitoral e coordenação da Assessoria de Gestão Estratégica (AGE). A Justiça Eleitoral programou ciclos de audiências públicas em seis polos regionais do estado, sendo as próximas edições agendadas para Cáceres, no dia 7 de agosto, e Cuiabá, no dia 14 de agosto."
+      ],
+      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-eleicoes-em-barra-do-garcas.html",
+      "iso": "2026-08-01T20:42:50.478Z",
+      "hora": "16h42",
+      "original": true,
+      "contexto": "O histórico do arquivo registra quatro notícias anteriores sobre esta audiência pública do TRE-MT em Barra do Garças, veiculadas entre 31 de julho e 1º de agosto de 2026. O evento atinge representantes de órgãos públicos, candidatos, líderes comunitários e estudantes de nove municípios do Vale do Araguaia.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -759,11 +779,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:ccjr-da-assembleia-de-mato-grosso-aprova-parecer-ao-pldo-2027",
+      "id": "ilm:ccjr-da-almt-aprova-parecer-do-pldo-de-2027-e-analisa-vetos-do-executi",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "CCJR da Assembleia de Mato Grosso aprova parecer ao PLDO 2027",
-      "resumo": "Proposta segue para primeira votação nesta quarta-feira (15); comissão analisou vetos do Poder Executivo e mais 33 matérias.",
+      "titulo": "CCJR da ALMT aprova parecer do PLDO de 2027 e analisa vetos do Executivo",
+      "resumo": "O colegiado apreciou outras 33 matérias em reunião ordinária nesta terça-feira e recomendou a derrubada de oito vetos do Poder Executivo.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/ccjr-aprova-ldo-de-2027-e-analisa-mais-de-30-materias/visualizar",
       "origemNome": "Assembleia de MT",
@@ -771,14 +791,14 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Comissão de Constituição, Justiça e Redação (CCJR) da Assembleia Legislativa de Mato Grosso aprovou parecer favorável ao Projeto de Lei nº 692/2026, referente ao PLDO 2027. O encontro ocorreu na tarde desta terça-feira (14). A proposta, que estabelece metas e prioridades da administração pública, deve ser votada em primeiro turno no plenário nesta quarta-feira (15).",
-        "O colegiado também analisou outras 33 matérias, sendo nove pareceres favoráveis e cinco contrários. Entre as aprovações esteve a redação final do PL nº 743/2026, que altera a Lei nº 12.431/2024 para permitir o financiamento de obras e melhorias em escolas estaduais de ensino médio por meio do Fundo Estadual de Apoio à Melhoria das Condições de Oferta da Educação Infantil e do Ensino Fundamental.",
-        "Sobre os dez vetos do Poder Executivo analisados, a CCJR recomendou derrubar oito e manter dois. As recomendações de derrubada incluem o Veto Total nº 64/2026 ao PL nº 1.033/2025, referente à inclusão de pessoas com deficiência no Programa CNH Social, e o Veto Total nº 61/2026 ao PL nº 1.871/2024, que amplia de dez para 30 dias o prazo para empresas de agrotóxicos comunicarem suas atividades ao Indea-MT.",
-        "Projetos sobre declaração de utilidade pública receberam parecer terminativo e vão para publicação. As demais propostas seguem em tramitação. As reuniões ordinárias devem retornar em agosto, com previsão de quatro encontros no mês, sem descartar reuniões extraordinárias até 4 de agosto para matérias urgentes."
+        "A Comissão de Constituição, Justiça e Redação (CCJR) da Assembleia Legislativa de Mato Grosso (ALMT) aprovou parecer favorável ao Projeto de Lei nº 692/2026, que trata das diretrizes para o orçamento de 2027 (PLDO 2027). A aprovação ocorreu em reunião ordinária na tarde desta terça-feira (14). A matéria deve ser votada em primeiro turno no plenário nesta quarta-feira (15) e depois receberá emendas parlamentares.",
+        "O colegiado também analisou outras 33 matérias, com parecer favorável para nove e contrário para cinco. Entre os dez vetos do Poder Executivo examinados, a CCJR recomendou a derrubada de oito e a manutenção de dois. As recomendações de derrubada incluem o Veto Total nº 64/2026, ao Projeto de Lei nº 1.033/2025 sobre a CNH Social para pessoas com deficiência, e o Veto Total nº 61/2026, ao Projeto de Lei nº 1.871/2024, que amplia de dez para 30 dias o prazo para empresas informarem ao Indea-MT sobre serviços com agrotóxicos.",
+        "Na mesma sessão, foi aprovada a redação final do PL nº 743/2026, que altera a Lei nº 12.431/2024 para permitir o financiamento de reformas, ampliações e adequações em escolas estaduais de ensino médio. Os projetos de declaração de utilidade pública tiveram parecer terminativo da comissão e seguem para publicação, enquanto as demais matérias continuam tramitando na ALMT.",
+        "A expectativa é que as reuniões ordinárias da comissão sejam retomadas em agosto, com previsão de quatro encontros no mês e análise média de 20 a 30 matérias por reunião. Segundo a Consultoria da CCJR, reuniões extraordinárias poderão ocorrer até 4 de agosto para a apreciação de matérias urgentes."
       ],
-      "link": "/materia/ccjr-da-assembleia-de-mato-grosso-aprova-parecer-ao-pldo-2027.html",
-      "iso": "2026-08-01T17:48:17.422Z",
-      "hora": "13h48",
+      "link": "/materia/ccjr-da-almt-aprova-parecer-do-pldo-de-2027-e-analisa-vetos-do-executi.html",
+      "iso": "2026-08-01T20:42:48.013Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -789,11 +809,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:problemas-tecnicos-deixam-sistemas-siga-sisflora-e-simcar-fora-do-ar-n",
+      "id": "ilm:sistemas-siga-sisflora-e-simcar-ficam-fora-do-ar-devido-a-problemas-te",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Problemas técnicos deixam sistemas SIGA, SISFLORA e SIMCAR fora do ar na Sema-MT",
-      "resumo": "A Superintendência de Tecnologia da Informação trabalha na solução da falha, mas ainda não há previsão para o retorno dos serviços da Secretaria de Estado de Meio Ambiente.",
+      "titulo": "Sistemas SIGA, SISFLORA e SIMCAR ficam fora do ar devido a problemas técnicos",
+      "resumo": "Segundo a Sema-MT, a Superintendência de Tecnologia da Informação atua na solução da falha, mas não há previsão para o restabelecimento dos serviços.",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
       "origemNome": "Sema-MT",
@@ -801,13 +821,13 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Secretaria de Estado de Meio Ambiente (Sema-MT) informou que o sistema SIGA está fora do ar em razão da ocorrência de problemas técnicos. A indisponibilidade causa impacto direto no funcionamento do SISFLORA e do SIMCAR.",
-        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No momento, não há previsão de retorno dos serviços.",
-        "O comunicado foi publicado na terça-feira, 06 de janeiro de 2026. A Sema-MT informou que divulgará o retorno à normalidade em seus canais oficiais assim que a situação for regularizada."
+        "O sistema SIGA ficou fora do ar devido à ocorrência de problemas técnicos, afetando diretamente a operação dos sistemas SISFLORA e SIMCAR. A informação foi divulgada pela Secretaria de Estado de Meio Ambiente (Sema-MT).",
+        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No entanto, ainda não existe previsão para o retorno das atividades.",
+        "A Sema-MT informou que fará a divulgação nos seus canais oficiais assim que a situação voltar à normalidade."
       ],
-      "link": "/materia/problemas-tecnicos-deixam-sistemas-siga-sisflora-e-simcar-fora-do-ar-n.html",
-      "iso": "2026-08-01T17:48:15.970Z",
-      "hora": "13h48",
+      "link": "/materia/sistemas-siga-sisflora-e-simcar-ficam-fora-do-ar-devido-a-problemas-te.html",
+      "iso": "2026-08-01T20:42:46.754Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -818,90 +838,57 @@
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-envia-a-camara-projeto-que-cede-terreno-ao-shopping-popular",
+      "id": "ilm:mutirao-da-prefeitura-de-cuiaba-produz-cerca-de-3-mil-mudas-no-viveiro",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Prefeitura envia à Câmara projeto que cede terreno ao Shopping Popular por 30 anos",
-      "resumo": "A proposta prevê a manutenção do Complexo Dom Aquino pela associação, a revogação de lei municipal e a reserva de área de 100 m² para equipamento social.",
+      "titulo": "Mutirão da Prefeitura de Cuiabá produz cerca de 3 mil mudas no viveiro municipal",
+      "resumo": "As plantas frutíferas e nativas vão abastecer o programa de doação à população e as ações de arborização da cidade no próximo ano.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-envia-a-camara-projeto-que-cede-terreno-ao-shopping-popular-por-30-anos",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/mutirao-produz-3-mil-mudas-para-reforcar-arborizacao-e-doacao-em-cuiaba",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Muvuca Popular",
-        "hnt.com.br",
-        "Diario de Cuiabá"
+        "Prefeitura de Cuiabá"
       ],
-      "quentura": 3,
+      "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "O prefeito de Cuiabá, Abilio Brunini, apresentou nesta quinta-feira (30) o projeto de lei encaminhado à Câmara Municipal que concede à Associação do Shopping Popular o direito real de superfície da área onde o centro comercial funciona, por um prazo de 30 anos. A medida visa garantir a reconstrução e a administração do empreendimento, além da manutenção do Complexo Esportivo Manoel Soares de Campos (Dom Aquino).",
-        "O texto estabelece a possibilidade de renovação da concessão, fiscalização permanente do cumprimento das obrigações pela Prefeitura e a revogação da Lei Municipal nº 6.900/2023. O projeto prevê ainda a reserva de uma área mínima de 100 m² para a implantação de um Centro de Educação Profissional do Senai ou outro equipamento público de interesse social. A área do Centro de Convivência de Idosos (CCI) Padre Firmo não foi incluída na proposta.",
-        "A iniciativa ocorre durante a etapa final de reconstrução do empreendimento após o incêndio ocorrido em 15 de julho de 2024, que destruiu a estrutura do centro comercial. A reunião no gabinete do Palácio Alencastro contou com a presença do presidente da associação, Misael Galvão, da presidente da Câmara Municipal, vereadora Paula Calil, e dos vereadores Rafael Ranalli, Macrean Santos, Coronel Dias, Samantha Íris, Cássio Coelho, Wilson Kero Kero e Antônio Lemes.",
-        "A presidente da Câmara Municipal, Paula Calil, afirmou que reunirá os 27 vereadores na próxima segunda-feira para apresentar o conteúdo da proposta antes da votação na Casa de Leis, prevista para a próxima semana."
+        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, realizou na sexta-feira (31) um mutirão de produção de mudas no viveiro municipal. A ação resultou na produção de cerca de 3 mil mudas de espécies frutíferas e nativas, incluindo caju, ata, jacarandá e ipê amarelo.",
+        "As sementes das espécies frutíferas são obtidas em grande parte por doações da população, enquanto as nativas são coletadas por equipes da Prefeitura em diferentes pontos da cidade. O diretor de Planejamento Ambiental da secretaria, Fábio Moura, afirmou que a produção é contínua para abastecer os plantios do município e as doações no próximo ano. Segundo ele, o ipê amarelo, o limão e a ata estão entre as plantas mais procuradas.",
+        "A moradora Marlene Moura Silva retirou mudas de limão e acerola para plantar no quintal da família. Ela afirmou que a intenção é aproveitar o espaço e permitir que as crianças acompanhem o crescimento e conheçam as frutas. A iniciativa integra as ações da Prefeitura para ampliar a arborização urbana e incentivar o plantio em áreas públicas e particulares."
       ],
-      "link": "/materia/prefeitura-envia-a-camara-projeto-que-cede-terreno-ao-shopping-popular.html",
-      "iso": "2026-08-01T17:48:21.426Z",
-      "hora": "13h48",
+      "link": "/materia/mutirao-da-prefeitura-de-cuiaba-produz-cerca-de-3-mil-mudas-no-viveiro.html",
+      "iso": "2026-08-01T20:42:52.085Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/barra-do-garcas-recebera-audiencia-publica-sobre-eleicoes-gerais-de-2026/@@images/image-0-8032f2295ca10de8f9dd1f8c4fc881cb.jpeg",
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/regiao-de-barra-do-garcas-mobiliza-planejamento-para-eleicoes-de-2026-1/@@images/image-0-285b2c8ea50543599fd4dcd89869ed92.jpeg",
       "fotoAlt": null,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-eleicoes-2026-em-barra-do-garca",
+      "municipio": "barradogarcas",
+      "municipioNome": "Barra do Garças",
+      "id": "ilm:tre-mt-realiza-reuniao-preparatoria-em-barra-do-garcas-para-eleicoes-d",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "TRE-MT realiza audiência pública sobre Eleições 2026 em Barra do Garças nesta sexta",
-      "resumo": "Evento no Fórum da Comarca abordará propaganda eleitoral, desinformação e segurança das urnas, reunindo moradores e autoridades de municípios do polo regional.",
+      "titulo": "TRE-MT realiza reunião preparatória em Barra do Garças para Eleições de 2026",
+      "resumo": "O polo regional abrange nove Zonas Eleitorais e soma 287.233 eleitores aptos a votar em 193 locais, incluindo seis estruturas em aldeias indígenas.",
       "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/barra-do-garcas-recebera-audiencia-publica-sobre-eleicoes-gerais-de-2026",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/regiao-de-barra-do-garcas-mobiliza-planejamento-para-eleicoes-de-2026",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realiza nesta sexta-feira (31.07), a partir das 9h15 (horário de Brasília), uma audiência pública sobre as Eleições Gerais de 2026 no município de Barra do Garças, situado a 511 km de Cuiabá. O evento será no Tribunal do Júri, localizado no Fórum da Comarca, na Rua Francisco Lira, nº 1.051, bairro Sena Marques.",
-        "A audiência pública será conduzida pelo juiz-membro substituto do TRE-MT na categoria Juiz Federal, Flavio Fraga e Silva. O magistrado terá o suporte do assessor jurídico, Hernandésio de Lima, e do coordenador de Sistemas Eleitorais e Logística de Eleições, Salomão Fortaleza. Serão abordados assuntos como aspectos gerais do pleito de 2026, propaganda eleitoral, poder de polícia, desinformação e segurança das urnas, com abertura de espaço final para manifestações e debates do público.",
-        "O encontro em Barra do Garças dá sequência ao ciclo promovido pelo TRE-MT nos polos regionais do estado, em paralelo às reuniões preparatórias das Eleições Gerais de 2026. A primeira audiência ocorreu em Tangará da Serra (240 km de Cuiabá) no dia 03 de julho, seguida por Sinop (481 km da Capital) no dia 17 de julho e Rondonópolis (215 km de Cuiabá) no dia 24 de julho.",
-        "Conforme a presidente do TRE-MT, desembargadora Serly Marcondes Alves, a iniciativa busca incentivar o controle social, a participação ativa e o voto responsável. As discussões são abertas a toda a sociedade e a eleitores dos municípios do polo regional, com convites estendidos a prefeitos, presidentes de Câmaras de Vereadores, OAB-MT, Ministério Público local, Polícia Militar, Corpo de Bombeiros Militar, Instituto Braudel, secretários municipais, diretores e alunos de escolas e faculdades, líderes religiosos, imprensa e representações comunitárias."
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou, nesta sexta-feira (31.07), uma reunião preparatória para as Eleições de 2026 em Barra do Garças, município a 521 km de Cuiabá. O evento reuniu membros da Justiça Eleitoral, do Tribunal Regional do Trabalho de Mato Grosso (TRT-MT) – 23ª Região e da Polícia Federal (PF).",
+        "O polo regional congrega nove Zonas Eleitorais com sedes em Barra do Garças, Alto Araguaia, São Félix do Araguaia, Vila Rica, Nova Xavantina, Porto Alegre do Norte, Água Boa, Canarana e Querência. Ao todo, a área possui 287.233 pessoas aptas ao voto, 1.103 seções eleitorais e 193 locais de votação, sendo seis instalados em aldeias indígenas, que somam 3.042 eleitores.",
+        "A programação foi aberta pela presidente do TRE-MT, desembargadora Serly Marcondes Alves, e teve apresentações da juíza auxiliar Edna Coutinho, sobre o Gabinete de Gestão Integrada (GGI), do juiz auxiliar Marcelo Sebastião Prado de Moraes, do delegado da Polícia Federal Ricardo Santos de Souza, do juiz Emerson Cajango e do juiz do TRT-MT Hamilton Siqueira Júnior.",
+        "Também expuseram temas o diretor-geral Mauro Sérgio Rodrigues Diogo, o titular da Secretaria de Tecnologia da Informação, Leon Manoel Campos dos Santos Filho, a jornalista Nara Assis dos Santos e a ouvidora eleitoral, juíza Glenda Borges. O encontro em Barra do Garças integra um ciclo promovido pelo TRE-MT, que já passou por Tangará da Serra (03/07), Sinop (17/07) e Rondonópolis (24/07)."
       ],
-      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-eleicoes-2026-em-barra-do-garca.html",
-      "iso": "2026-08-01T17:48:20.555Z",
-      "hora": "13h48",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-inicia-vistorias-em-locais-de-votacao-de-mato-grosso/@@images/image-0-d533fe56e4ccf821975f6ba6b1d6182e.jpeg",
-      "fotoAlt": null,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:justica-eleitoral-vistoria-locais-de-votacao-em-mato-grosso-para-as-el",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Justiça Eleitoral vistoria locais de votação em Mato Grosso para as eleições de 2026",
-      "resumo": "A 51ª Zona Eleitoral inspecionou quatro unidades escolares em Cuiabá nesta terça-feira (21.07), sob coordenação do juiz Jurandir Florêncio de Castilho Júnior.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-inicia-vistorias-em-locais-de-votacao-de-mato-grosso",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "A Justiça Eleitoral iniciou vistorias nas escolas de Mato Grosso com o objetivo de preparar os locais de votação para as Eleições Gerais de 2026. As inspeções focam na infraestrutura dos prédios e na acessibilidade para receber os eleitores.",
-        "Nesta terça-feira (21.07), a 51ª Zona Eleitoral inspecionou quatro unidades escolares que abrangem parte de Cuiabá. O juiz eleitoral Jurandir Florêncio de Castilho Júnior explicou que o cronograma foi antecipado após alterações recentes de locais de votação, para verificar se os novos espaços possuem estrutura e acessibilidade para receber as urnas.",
-        "De acordo com o magistrado, as unidades observadas apresentaram salas com sistema de refrigeração, rampas e escrita em braille, sem registros de problemas até o momento. Todos os Cartórios Eleitorais do estado também realizarão vistorias em suas zonas para checar a parte elétrica, a qualidade da internet, a acessibilidade e a integridade dos telhados.",
-        "Conforme a presidente do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT), desembargadora Serly Marcondes Alves, o trabalho preventivo integra o planejamento do pleito de 2026 para identificar necessidades e planejar melhorias antecipadamente nos locais de votação."
-      ],
-      "link": "/materia/justica-eleitoral-vistoria-locais-de-votacao-em-mato-grosso-para-as-el.html",
-      "iso": "2026-08-01T17:48:20.555Z",
-      "hora": "13h48",
+      "link": "/materia/tre-mt-realiza-reuniao-preparatoria-em-barra-do-garcas-para-eleicoes-d.html",
+      "iso": "2026-08-01T20:42:50.478Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -912,11 +899,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:comissao-da-almt-aprova-16-projetos-sobre-saude-e-combate-ao-vicio-em-",
+      "id": "ilm:comissao-da-almt-aprova-16-projetos-sobre-vicio-em-apostas-e-saude",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Comissão da ALMT aprova 16 projetos sobre saúde e combate ao vício em apostas",
-      "resumo": "As propostas abrangem a reorganização do Conselho Estadual de Saúde, novas diretrizes contra a hanseníase e matérias voltadas à saúde mental no estado.",
+      "titulo": "Comissão da ALMT aprova 16 projetos sobre vício em apostas e saúde",
+      "resumo": "Entre as propostas aceitas está a criação do programa de combate à ludopatia e a reorganização do Conselho Estadual de Saúde.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/comissao-aprova-projeto-de-combate-ao-vicio-em-apostas-e-a-reorganizacao-do-conselho-estadual-de-saude/visualizar",
       "origemNome": "Assembleia de MT",
@@ -924,14 +911,14 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Comissão de Saúde, Previdência e Assistência Social da Assembleia Legislativa de Mato Grosso (ALMT) aprovou parecer favorável a 16 matérias na manhã desta terça-feira (14), durante reunião ordinária.",
-        "Entre os textos analisados está o Projeto de Lei nº 106/2024, que institui o Programa Estadual de Combate ao Vício em Apostas Esportivas, Cassino e Jogos de Azar, aprovado nos termos do Substitutivo Integral nº 1. Também recebeu parecer favorável o Projeto de Lei Complementar nº 58/2025, referente à composição, organização e funcionamento do Conselho Estadual de Saúde (CES-MT), nos termos do Substitutivo Integral nº 2.",
-        "O grupo aprovou pareceres aos Projetos de Lei nº 594/2026 e nº 595/2026, voltados à saúde mental e à atuação de terapeutas ocupacionais nos Centros de Atenção Psicossocial (CAPS). Na área de enfrentamento à hanseníase, foram acatados o Projeto de Lei nº 654/2026 e o Projeto de Lei nº 633/2026, que prevê diretrizes de controle da doença e autoriza a concessão de auxílio-alimentação a pacientes em tratamento.",
-        "A reunião contemplou ainda propostas sobre dimensionamento de enfermagem em serviços de urgência e emergência, fornecimento gratuito de medicamentos no SUS, conscientização sobre uso indevido de hormônios e anabolizantes, combate ao hantavírus, doenças tropicais negligenciadas e contratação de internet sem fio gratuita para unidades públicas de saúde."
+        "A Comissão de Saúde, Previdência e Assistência Social da Assembleia Legislativa de Mato Grosso (ALMT) deu parecer favorável a 16 matérias durante reunião ordinária realizada na manhã desta terça-feira (14). Todas as propostas constantes na pauta da reunião foram aprovadas pelo colegiado.",
+        "Entre os textos analisados está o Projeto de Lei nº 106/2024, que institui o Programa Estadual de Combate ao Vício em Apostas Esportivas, Cassino e Jogos de Azar (ludopatia), aprovado nos termos do Substitutivo Integral nº 1. A comissão também deu parecer favorável ao Projeto de Lei Complementar nº 58/2025, que altera a organização e o funcionamento do Conselho Estadual de Saúde (CES-MT), nos termos do Substitutivo Integral nº 2.",
+        "No setor de saúde mental e no enfrentamento à hanseníase, a comissão aprovou os projetos de lei nº 594/2026, nº 595/2026, nº 654/2026 e nº 633/2026. As medidas envolvem o monitoramento de abandono de tratamento, a atuação de terapeutas ocupacionais nos CAPS, ações psicossociais e a concessão de auxílio-alimentação a pacientes em tratamento contra a hanseníase.",
+        "As demais matérias apreciadas tratam do dimensionamento de profissionais de enfermagem em serviços de urgência, fornecimento de medicamentos à base de tirzepatida e semaglutida no SUS, prevenção ao hantavírus e ao uso indevido de anabolizantes, além de diretrizes para doenças raras, saúde da mulher, atendimento a pessoas com deficiência e acesso a Wi-Fi em unidades de saúde."
       ],
-      "link": "/materia/comissao-da-almt-aprova-16-projetos-sobre-saude-e-combate-ao-vicio-em-.html",
-      "iso": "2026-08-01T17:48:17.422Z",
-      "hora": "13h48",
+      "link": "/materia/comissao-da-almt-aprova-16-projetos-sobre-vicio-em-apostas-e-saude.html",
+      "iso": "2026-08-01T20:42:48.013Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -942,28 +929,27 @@
       "fotoAlt": null,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:programa-casa-cuiabana-preve-mais-de-8-mil-moradias-e-1-200-lotes-em-c",
+      "id": "ilm:prefeitura-de-cuiaba-preve-mais-de-8-mil-moradias-pelo-programa-casa-c",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Programa Casa Cuiabana prevê mais de 8 mil moradias e 1.200 lotes em Cuiabá",
-      "resumo": "As ações incluem parcerias com os governos federal e estadual para construção de unidades, reformas, loteamentos populares e subsídios financeiros a famílias de baixa renda.",
+      "titulo": "Prefeitura de Cuiabá prevê mais de 8 mil moradias pelo Programa Casa Cuiabana",
+      "resumo": "As ações incluem a oferta de 1.200 lotes urbanizados, reformas de residências e subsídios para o pagamento da entrada na aquisição da casa própria por famílias de baixa renda.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-fortalece-programa-habitacional-com-projetos-para-ampliar-o-acesso-a-moradia",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Arena de Notícias"
+        "Prefeitura de Cuiabá"
       ],
       "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá mantém em andamento um conjunto de projetos habitacionais por meio do Programa Casa Cuiabana, que prevê mais de 8 mil moradias em diferentes fases de execução e planejamento, além de 1.200 lotes urbanizados. As iniciativas beneficiam famílias de baixa renda, moradores de áreas de risco e catadores de materiais recicláveis.",
-        "No âmbito do programa Minha Casa, Minha Vida, em parceria com o Governo Federal, 692 unidades habitacionais estão em execução. Outras 1.200 unidades estão em fase final para a assinatura de contrato entre o Município, a Caixa Econômica Federal e a construtora, integrando um pedido para a construção de 2 mil moradias nos bairros Pascoal Ramos e Pedra 90. Há ainda a previsão de contratação de 800 unidades até o fim deste ano ou início do próximo.",
-        "Em articulação com o Governo do Estado e a Secretaria de Estado de Infraestrutura de Mato Grosso (Sinfra MT), a Prefeitura protocolou projeto para construir 4 mil moradias na região do Barreiro Branco, voltadas a famílias em áreas de risco, grupo que soma cerca de 4,5 mil inscritos. Além disso, o Projeto de Loteamento Popular prevê 1.200 lotes urbanizados, com oferta de terreno e redes de água e esgoto pelo Município, enquanto o Estado atuará na pavimentação, drenagem e apoio para material de construção.",
-        "A programação inclui ainda o projeto Periferia Viva, que aguarda aprovação federal para reformas e regularização fundiária, e o projeto de Reforma Habitacional voltado a idosos, que aguarda liberação de recursos. Para catadores de materiais recicláveis, estão previstas 50 moradias e o Programa Moradia Digna, em captação de recursos. O programa Minha Entrada oferecerá subsídio para o pagamento da entrada do financiamento habitacional, utilizando cerca de R$ 18 milhões em emenda articulada pelo senador Wellington Fagundes."
+        "A Prefeitura de Cuiabá mantém em andamento o Programa Casa Cuiabana, com projetos que preveem mais de 8 mil moradias e 1.200 lotes urbanizados. As iniciativas beneficiam famílias de baixa renda, moradores de áreas de risco e catadores de materiais recicláveis.",
+        "Pelo programa Minha Casa, Minha Vida, em parceria com o Governo Federal, 692 unidades habitacionais estão em execução e 1.200 estão na fase final para assinatura de contrato com a Caixa Econômica Federal e a construtora. Outras 800 unidades têm previsão de contratação até o fim deste ano ou início do próximo. Em articulação com o Governo do Estado e a Sinfra MT, há também um projeto para construir 4 mil moradias no Barreiro Branco.",
+        "A programação abrange a oferta de 1.200 lotes urbanizados, a proposta Periferia Viva para reforma e construção de casas, projetos de reforma residencial voltados a idosos e a edificação de 50 unidades para catadores. O município atua ainda no programa Minha Entrada, com subsídio financiado por emenda de cerca de R$ 18 milhões articulada pelo senador Wellington Fagundes."
       ],
-      "link": "/materia/programa-casa-cuiabana-preve-mais-de-8-mil-moradias-e-1-200-lotes-em-c.html",
-      "iso": "2026-08-01T17:48:21.426Z",
-      "hora": "13h48",
+      "link": "/materia/prefeitura-de-cuiaba-preve-mais-de-8-mil-moradias-pelo-programa-casa-c.html",
+      "iso": "2026-08-01T20:42:52.085Z",
+      "hora": "16h42",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -974,11 +960,11 @@
       "fotoAlt": null,
       "municipio": "primavera",
       "municipioNome": "Primavera do Leste",
-      "id": "ilm:comissao-da-almt-agenda-visita-a-area-entre-poxoreu-e-primavera-do-les",
+      "id": "ilm:comissao-da-almt-agendou-visita-tecnica-entre-poxoreu-e-primavera-do-l",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Comissão da ALMT agenda visita a área entre Poxoréu e Primavera do Leste",
-      "resumo": "A ação visa apresentar limites do estudo de viabilidade sobre o desmembramento territorial, proposta que depende de um plebiscito previsto para as eleições gerais de 2026.",
+      "titulo": "Comissão da ALMT agendou visita técnica entre Poxoréu e Primavera do Leste",
+      "resumo": "A atividade apresentará o Estudo de Viabilidade Municipal sobre o desmembramento de parte do território, processo que dependerá de plebiscito nas eleições de 2026.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/comissao-da-almt-agenda-visita-tecnica-em-area-entre-poxoreu-e-primavera-do-leste/visualizar",
       "origemNome": "Assembleia de MT",
@@ -986,230 +972,242 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Comissão de Revisão Territorial dos Municípios e das Cidades da Assembleia Legislativa de Mato Grosso definiu, nesta terça-feira (14), uma visita técnica à região de Poxoréu e Primavera do Leste para a próxima quinta-feira (16). A atividade visa apresentar os limites do Estudo de Viabilidade Municipal e esclarecer dúvidas da população sobre a proposta de desmembramento de parte do território.",
-        "Elaborado pela empresa Cidades Sustentáveis, o levantamento aponta que a alteração é fiscalmente sustentável, administrativamente viável e socialmente legítima. A efetivação da mudança dependerá da aprovação dos eleitores de ambos os municípios em um plebiscito único, previsto para as eleições gerais de 2026.",
-        "O advogado Zaid Arbid, representante da Cidades Sustentáveis, afirmou que Primavera do Leste já presta a maioria dos serviços públicos essenciais no local, como educação e infraestrutura, e que os moradores possuem identificação com o município vizinho. Ele explicou que o parecer técnico apenas atesta a viabilidade para a realização da consulta popular, cabendo a decisão final aos votantes.",
-        "Segundo Arbid, a área registrou intensa migração populacional desde 2011 e reúne entre 16 mil e 24 mil habitantes, distribuídos em aproximadamente 5,3 mil a 8,6 mil domicílios. O perfil do local conta com ocupações informais, renda média de um a dois salários mínimos e cerca de 43% dos lotes sem documentação regular, sendo que cerca de 70% dos moradores votam em Primavera do Leste."
+        "A Comissão de Revisão Territorial dos Municípios e das Cidades da Assembleia Legislativa de Mato Grosso definiu, nesta terça-feira (14), a realização de uma visita técnica à região de Poxoréu e Primavera do Leste na próxima quinta-feira (16). O objetivo é apresentar os limites do Estudo de Viabilidade Municipal e esclarecer dúvidas da população sobre a proposta de desmembramento de parte do território.",
+        "O levantamento, feito pela empresa Cidades Sustentáveis, concluiu que a mudança é fiscalmente sustentável, administrativamente viável e socialmente legítima. A incorporação da área dependerá de um plebiscito único entre os eleitores de ambos os municípios, previsto para ocorrer nas eleições gerais de 2026.",
+        "O advogado Zaid Arbid, representante da empresa responsável pelo estudo, destacou que a maior parte dos serviços públicos essenciais já é prestada por Primavera do Leste e que os moradores se identificam com o município vizinho. Ele ressaltou que o estudo não decide sobre o desmembramento, cabendo a decisão exclusivamente à população por meio da consulta popular.",
+        "De acordo com Arbid, a região registrou migração populacional desde 2011 e possui entre 16 mil e 24 mil habitantes em 5,3 mil a 8,6 mil domicílios. O local apresenta renda predominante de um a dois salários mínimos, cerca de 43% dos lotes sem documentação regular e aproximadamente 70% da população votando em Primavera do Leste."
       ],
-      "link": "/materia/comissao-da-almt-agenda-visita-a-area-entre-poxoreu-e-primavera-do-les.html",
-      "iso": "2026-08-01T17:48:17.422Z",
-      "hora": "13h48",
+      "link": "/materia/comissao-da-almt-agendou-visita-tecnica-entre-poxoreu-e-primavera-do-l.html",
+      "iso": "2026-08-01T20:42:48.013Z",
+      "hora": "16h42",
       "original": true,
-      "contexto": null,
+      "contexto": "Este é o quinto registro no histórico sobre agendamento de visita técnica da comissão à região, após quatro casos parecidos entre julho e agosto de 2026. A medida afeta entre 16 mil e 24 mil moradores da área entre Poxoréu e Primavera do Leste. A visita está marcada para quinta-feira (16) e a votação por plebiscito está prevista para as eleições gerais de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-promove-campanha-de-conscientizacao-para-fortalecer-a-cultura-de-respeito-e-prevenir-o-assedio-e-a-discriminacao/@@images/image-0-33c5e538dcbb9ed9841aee9c17e93587.jpeg",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:mega-sena-acumula-e-pode-pagar-r-100-milhoes-neste-domingo",
+      "id": "ilm:tre-mt-realiza-campanha-contra-assedio-e-discriminacao-entre-29-e-31-d",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Mega-Sena acumula e pode pagar R$ 100 milhões neste domingo",
-      "resumo": "O estado do Rio de Janeiro registrou ventanias com mais de 200 mil imóveis sem energia e investiga a morte de três pessoas por eletrocussão.",
-      "fonte": "Meridiano, com informacoes de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "VG Notícias",
-        "Primeira Página"
-      ],
-      "quentura": 2,
+      "titulo": "TRE-MT realiza campanha contra assédio e discriminação entre 29 e 31 de julho",
+      "resumo": "A iniciativa \"Respeito transforma ambientes\" busca conscientizar magistrados, servidores, colaboradores e estagiários do tribunal.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/tre-mt-promove-campanha-de-conscientizacao-para-fortalecer-a-cultura-de-respeito-e-prevenir-o-assedio-e-a-discriminacao",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Mega-Sena acumulou e tem prêmio estimado em R$ 100 milhões para o sorteio deste domingo. No mesmo período, um vendaval atingiu o estado do Rio de Janeiro, onde a polícia investiga a morte de três pessoas por eletrocussão após as ventanias.",
-        "A interrupção de energia no estado do Rio de Janeiro afetou mais de 200 mil pessoas,"
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realiza, entre os dias 29 e 31 de julho, a campanha institucional \"Respeito transforma ambientes\". A ação é voltada à prevenção e ao enfrentamento do assédio moral, do assédio sexual e da discriminação no ambiente de trabalho.",
+        "A iniciativa integra a Política de Prevenção e Enfrentamento do Assédio Moral, do Assédio Sexual e da Discriminação no âmbito da Justiça Eleitoral de Mato Grosso. Coordenada pela Assessoria de Comunicação Social (ASCOM), sob a gestão da Presidência do órgão, a programação inclui a publicação de matéria no portal, divulgação de três cards nas redes sociais, envio de e-mails ao público interno e conteúdo na intranet.",
+        "Ao longo do período, são abordados conceitos de assédio e discriminação, os impactos das condutas, formas de prevenção e os canais de apoio. A presidente do TRE-MT, desembargadora Serly Marcondes Alves, declarou que o assédio e a discriminação afetam a saúde emocional e a dignidade humana. O tribunal disponibiliza o e-mail cre.escuta@tre-mt.jus.br, da Comissão de Prevenção e Enfrentamento (CRE), para orientação e recebimento de denúncias."
       ],
-      "link": "/materia/mega-sena-acumula-e-pode-pagar-r-100-milhoes-neste-domingo.html",
-      "iso": "2026-08-01T17:55:58.009Z",
-      "hora": "13h55",
+      "link": "/materia/tre-mt-realiza-campanha-contra-assedio-e-discriminacao-entre-29-e-31-d.html",
+      "iso": "2026-08-01T20:42:50.478Z",
+      "hora": "16h42",
       "original": true,
-      "resgatada": true,
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
   "circulando": [
     {
-      "municipio": null,
-      "municipioNome": null,
+      "municipio": "lucas",
+      "municipioNome": "Lucas do Rio Verde",
       "seSabe": [
-        "Que quatro veículos da imprensa publicaram informações sobre a suposta denúncia do MPE",
-        "Que as matérias atribuem ao MPE o pedido de R$ 1 milhão",
-        "Que os relatos mencionam a existência de vídeos do condutor ingerindo bebida",
-        "Que as publicações situam o caso no estado de Mato Grosso"
+        "O assunto é publicado por seis veículos da imprensa.",
+        "O Corpo de Bombeiros é citado como o órgão envolvido no combate.",
+        "Há divergência nas publicações sobre as cidades registradas na ocorrência."
       ],
       "falta": [
-        "Confirmação oficial do MPE sobre o protocolo da denúncia e os valores pedidos",
-        "Laudo pericial ou validação judicial das imagens de vídeo mencionadas",
-        "Divulgação do número do processo ou procedimento policial correspondente",
-        "Registro oficial da data exata e da cidade onde teria ocorrido o acidente"
+        "Manifestação ou nota oficial emitida pelo Corpo de Bombeiros.",
+        "Confirmação da localização exata ou indicação de múltiplos incêndios simultâneos.",
+        "Informações oficiais sobre data, horário, causas ou existência de vítimas."
       ],
       "ondeCirculou": [
-        {
-          "veiculo": "VG Notícias",
-          "titulo": "Motorista que matou criança de 4 anos é denunciado; MPE pede R$ 1 milhão",
-          "link": "https://www.vgnoticias.com.br/penal/motorista-que-matou-crianca-de-4-anos-e-denunciado-mpe-pede-r-1-milhao/149860"
-        },
-        {
-          "veiculo": "O Documento",
-          "titulo": "Vídeos flagram motorista bebendo antes de causar acidente que matou menino de 4 anos em MT",
-          "link": "https://odocumento.com.br/videos-flagram-motorista-bebendo-antes-de-causar-acidente-que-matou-menino-de-4-anos-em-mt/"
-        },
-        {
-          "veiculo": "g1 MT",
-          "titulo": "Vídeo mostra motorista que matou menino de 4 anos bebendo antes de acidente em MT",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/video-mostra-motorista-que-matou-menino-de-4-anos-bebendo-antes-de-acidente-em-mt.ghtml"
-        },
-        {
-          "veiculo": "GC Notícias",
-          "titulo": "MPE denuncia motorista que matou criança e pede R$ 1 milhão",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTTdGRk1iVjNWcmt1NS1RN00zR0thOVZlbEdTS0VTUUFTSHBKV1FUcFdGRU1jMmVpMG4tSVFQZGp0MzI3OFpjSUhLVjhWc21UV3ZOcDRfUjdsNVczem9TVThIV1hiNUdJSktlUDNNTVNwNXktZjVpenpkWk0tMmFlQ0NQOHg5UzdjTWVLVEhKR21tSUhmeS1mZmlsVUREMTQwY3I2cWRxZDJVdw?oc=5"
-        }
-      ],
-      "link": "/materia/nc-motorista-teria-sido-denunciado-pelo-mpe-apos-acidente-com-crianca-em-.html",
-      "corpo": [
-        "As publicações que veiculam a alegação indicam que o fato teria ocorrido no estado de Mato Grosso. Segundo os relatos, existiriam vídeos que registrariam o condutor ingerindo bebida alcoólica antes da colisão.",
-        "As matérias veiculadas não apresentam divergências sobre os valores pedidos ou sobre a idade da vítima. No entanto, o conteúdo publicado até o momento não traz a validação formal das autoridades competentes."
-      ],
-      "id": "circ:motorista-teria-sido-denunciado-pelo-mpe-apos-acidente-com-crianca-em-",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Motorista teria sido denunciado pelo MPE após acidente com criança em MT",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:53:38.168Z",
-      "hora": "13h53"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a ocorrência está sendo veiculada por seis veículos de imprensa.",
-        "Que a ação envolveria uma chácara no estado de Mato Grosso.",
-        "Que a Polícia Militar é citada como interveniente no episódio."
-      ],
-      "falta": [
-        "Manifestação ou nota oficial da Polícia Militar sobre o caso.",
-        "Confirmação oficial do município e do número de reféns.",
-        "Apresentação ou verificação oficial do vídeo mencionado nas publicações.",
-        "Registro do boletim de ocorrência pelas autoridades competentes."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Só Notícias",
-          "titulo": "Família é feita refém durante assalto em chácara e criminosos trocam tiros com a PM em Mato Grosso",
-          "link": "https://www.sonoticias.com.br/policia/familia-e-feita-refem-durante-assalto-em-chacara-e-criminosos-trocam-tiros-com-a-pm-em-mato-grosso/"
-        },
         {
           "veiculo": "Estadão MT",
-          "titulo": "Família é feita refém durante assalto e criminosos trocam tiros com a PM",
-          "link": "https://www.estadaomatogrosso.com.br/policia/familia-e-feita-refem-durante-assalto-e-criminosos-trocam-tiros-com-a-pm/143151"
+          "titulo": "Corpo de Bombeiros combate incêndio em unidade de armazenamento de grãos às margens da BR-163",
+          "link": "https://www.estadaomatogrosso.com.br/cidades/corpo-de-bombeiros-combate-incendio-em-unidade-de-armazenamento-de-graos-as-margens-da-br-163/143155"
         },
         {
-          "veiculo": "O Documento",
-          "titulo": "Família é feita refém durante confraternização em chácara e bandidos trocam tiros com a PM",
-          "link": "https://odocumento.com.br/familia-e-feita-refem-durante-confraternizacao-em-chacara-e-bandidos-trocam-tiros-com-a-pm/"
+          "veiculo": "Muvuca Popular",
+          "titulo": "Incêndio atinge estrutura de grãos e ameaça secadores na BR-163",
+          "link": "https://www.muvucapopular.com.br/2026/08/01/incendio-atinge-estrutura-de-graos-e-ameaca-secadores-na-br-163/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=incendio-atinge-estrutura-de-graos-e-ameaca-secadores-na-br-163"
+        },
+        {
+          "veiculo": "O Livre",
+          "titulo": "Bombeiros extinguem incêndio em Chapada e mantêm combate às chamas em Guiratinga",
+          "link": "https://olivre.com.br/bombeiros-extinguem-incendio-em-chapada-e-mantem-combate-as-chamas-em-guiratinga/"
         },
         {
           "veiculo": "g1 MT",
-          "titulo": "Família é feita refém durante confraternização em chácara de MT",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/familia-e-feita-refem-durante-confraternizacao-em-chacara-de-mt.ghtml"
+          "titulo": "Incêndio atinge estrutura de armazenamento de grãos às margens da BR-163 em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/incendio-atinge-estrutura-de-armazenamento-de-graos-as-margens-da-br-163-em-mt.ghtml"
         },
         {
-          "veiculo": "Primeira Página",
-          "titulo": "VÍDEO: família é feita refém durante roubo em chácara; criminosos trocam tiros com a PM e fogem",
-          "link": "https://primeirapagina.com.br/seguranca/video-familia-e-feita-refem-durante-roubo-em-chacara-criminosos-trocam-tiros-com-a-pm-e-fogem/"
+          "veiculo": "VG Notícias",
+          "titulo": "Incêndio atinge armazém de grãos às margens da BR-163",
+          "link": "https://www.vgnoticias.com.br/cidades/incendio-atinge-armazem-de-graos-as-margens-da-br-163/149859"
+        },
+        {
+          "veiculo": "Só Notícias",
+          "titulo": "Bombeiros combatem incêndio a secador de grãos em Lucas do Rio Verde",
+          "link": "https://www.sonoticias.com.br/geral/bombeiros-combatem-incendio-a-reservatorio-de-graos-em-lucas-do-rio-verde/"
+        }
+      ],
+      "link": "/materia/nc-incendio-atingiria-estrutura-de-armazenamento-de-graos-na-br-163-em-mt.html",
+      "corpo": [
+        "O Corpo de Bombeiros estaria combatendo um incêndio em uma unidade de armazenamento de grãos às margens da BR-163. As chamas teriam atingido a estrutura do local e ameaçariam secadores de grãos.",
+        "As publicações apontam que o fato ocorreria no estado de Mato Grosso, com citação ao município de Lucas do Rio Verde. Os relatos divergem entre os veículos, que também mencionam combates a incêndios nas regiões de Chapada e Guiratinga.",
+        "A intervenção da corporação visaria à extinção do fogo e à proteção do armazém. Até o momento, não constariam registros em fontes oficiais para confirmar a ocorrência relatada."
+      ],
+      "id": "circ:incendio-atingiria-estrutura-de-armazenamento-de-graos-na-br-163-em-mt",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Incêndio atingiria estrutura de armazenamento de grãos na BR-163 em MT",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-01T20:48:09.071Z",
+      "hora": "16h48"
+    },
+    {
+      "municipio": "rondonopolis",
+      "municipioNome": "Rondonópolis",
+      "seSabe": [
+        "O assunto está sendo veiculado por seis publicações da imprensa.",
+        "As matérias mencionam atuações da Polícia Militar e da Força Tática.",
+        "Os fatos relatados teriam ocorrido no estado de Mato Grosso."
+      ],
+      "falta": [
+        "Manifestação ou nota oficial da Polícia Militar sobre as ocorrências.",
+        "Confirmação oficial das identidades dos suspeitos citados nas matérias.",
+        "Número dos boletins de ocorrência vinculados às prisões.",
+        "Esclarecimento oficial sobre se as notícias tratam de um mesmo caso ou fatos distintos."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "O Documento",
+          "titulo": "Homem é preso pela Polícia Militar com espingarda, drogas e R$ 15 mil em dinheiro",
+          "link": "https://odocumento.com.br/homem-e-preso-pela-pm-com-espingarda-drogas-e-r-15-mil-em-dinheiro/"
+        },
+        {
+          "veiculo": "Muvuca Popular",
+          "titulo": "Força Tática prende homem com espingarda, drogas e R$ 15 mil em dinheiro",
+          "link": "https://www.muvucapopular.com.br/2026/08/01/forca-tatica-prende-homem-com-espingarda-drogas-e-r-15-mil-em-dinheiro/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=forca-tatica-prende-homem-com-espingarda-drogas-e-r-15-mil-em-dinheiro"
+        },
+        {
+          "veiculo": "Só Notícias",
+          "titulo": "Criminosos tentam fugir da polícia em MT, capotam veículo e acabam presos com carga milionária de drogas",
+          "link": "https://www.sonoticias.com.br/policia/criminosos-tentam-fugir-da-policia-em-mt-capotam-veiculo-e-acabam-presos-com-carga-milionaria-de-drogas/"
+        },
+        {
+          "veiculo": "hnt.com.br",
+          "titulo": "Homem é preso com arma adaptada e drogas escondidas na casa dos avós em Sinop",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONi1aTWhuTlZPdWJ2ZEctdy0ySE12NUFyYVJ0dXF0RGhvNy1lWlBoSUxRUG8tN1ZiOVdLRHlDV1hhLWl3cU1ybGctRlR2Z0VnNVJocFhHS3AwbERxQkUtTzBhMFJwTmV1OFFLT3ZwWl9UM3J3bW8wTE9XeS0yX1ZKS2FMWE90LWhpS3Bhcmw5b0ZqOHpsaG0xWGlNNC1FTjJjLTYzRHFHVFRKbTRONl9sV0ltRWxjZw?oc=5"
+        },
+        {
+          "veiculo": "Agora MT",
+          "titulo": "Polícia Militar prende casal com drogas e celulares no Residencial Magnólia em Rondonópolis",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVGVmTHV6dV9nM3RwRUlGVDN4Tm1RMU1zSVN1LWRWNXpRTVdYOEIxckpMVE9LaWxLWDQ4RTk5bXh6a2Iyak5OTU5YTVAyTWI0N3JjUUpBSVg4VWFoNWhMMm9tam1iblViQUprU1VMcUNRc2M0ZE9ZaHNzY2J6bmowUjJWWDFHTzJhU016dk43NzV5SjUtY3JmTHplckhNRDRtQkZrWmNkNURBYzB5VUh2TlNuam90UjZZQzNaNVpwSDd6enVISkE?oc=5"
         },
         {
           "veiculo": "CenárioMT",
-          "titulo": "PM interrompe assalto com 14 reféns em chácara de Juína",
-          "link": "https://cenariomt.com.br/mato-grosso/pm-interrompe-assalto-com-14-refens-em-chacara-de-juina/"
+          "titulo": "Homem monitorado por tornozeleira é preso por tráfico de drogas após polícia averiguar denúncia de ameaça de morte em Sorriso",
+          "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPejU1SzlNdFRMR1F6d3Vjc2Q0VXV0Z2kzREhrTEczTHlYOUJRa2dDcjQ5R1pyODI3NUUwRnkzTXF5TU9qWjg2VVBZUFVPZWV1VEtwbzNmc3pINzJ2WmF0aU4weVNDQ2VNSDJiUkF3SXRoZE1UYlJwM0dCMC1iVDE0d2txbmQ1dGV6ZlJjN2o3OVRqS3N0R1dLQ0F3dXJwNjU3NnRGQ3ZhNURlWnEzalIyUXIyeFJqelBCNzdfSmFHdGF6dlY0R0JQdW1tM2hIcjRkSEtPZ1hoeGpHZ193UV9DSmsydFpJbXY0Y0N5Z01vTmI3XzNETkFjNXo1YWRTZG44?oc=5"
         }
       ],
-      "link": "/materia/nc-familia-teria-sido-feita-refem-durante-assalto-em-chacara-de-mato-gros.html",
+      "link": "/materia/nc-operacoes-policiais-em-mato-grosso-teriam-resultado-em-prisoes-e-apree.html",
       "corpo": [
-        "Uma família teria sido mantida refém durante um assalto em uma chácara localizada no estado de Mato Grosso. Na ocasião, suspeitos teriam trocado tiros com a Polícia Militar.",
-        "Parte das publicações aponta que o evento teria ocorrido durante uma confraternização na cidade de Juína e envolveria 14 reféns. Um dos relatos menciona a existência de um vídeo da ação e afirma que os suspeitos teriam fugido após o confronto.",
-        "Há divergência entre as notícias quanto à localização exata e ao número de pessoas atingidas, variando entre menções genéricas ao estado e a especificação do município. A intervenção da Polícia Militar teria interrompido a ação criminosa no local."
+        "Diferentes veículos de imprensa teriam publicado relatos de prisões por tráfico e apreensões pela Polícia Militar em Mato Grosso. As ocorrências envolveriam entorpecentes, armas de fogo e quantias em dinheiro. Em um dos relatos, suspeitos teriam capotado um veículo ao tentar fugir da abordagem policial.",
+        "As publicações divergem quanto às cidades, aos suspeitos e aos materiais apreendidos nas ações. Há menções a ocorrências registradas em Sinop, Rondonópolis e Sorriso, além de apreensões descritas como carga milionária de drogas. Espingardas, telefones celulares, tornozeleira eletrônica e R$ 15 mil em dinheiro também teriam sido recolhidos.",
+        "A Polícia Militar e a Força Tática seriam as corporações responsáveis pelas prisões divulgadas. Não há esclarecimento público indicando se os relatos tratam de uma mesma operação ou de fatos isolados."
       ],
-      "id": "circ:familia-teria-sido-feita-refem-durante-assalto-em-chacara-de-mato-gros",
+      "id": "circ:operacoes-policiais-em-mato-grosso-teriam-resultado-em-prisoes-e-apree",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Família teria sido feita refém durante assalto em chácara de Mato Grosso",
+      "titulo": "Operações policiais em Mato Grosso teriam resultado em prisões e apreensões",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:54:00.172Z",
-      "hora": "13h54"
+      "iso": "2026-08-01T20:48:32.811Z",
+      "hora": "16h48"
     },
     {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
+      "municipio": null,
+      "municipioNome": null,
       "seSabe": [
-        "Que a informação é veiculada por cinco veículos da imprensa.",
-        "Que as publicações tratam de decretação de emergência em Várzea Grande, Mato Grosso.",
-        "Que os relatos mencionam estiagem, seca, calor, baixa umidade e risco no abastecimento."
+        "Que cinco veículos de imprensa publicaram relatos sobre a queda de focos de calor.",
+        "Que o Instituto Nacional de Pesquisas Espaciais foi citado como referência dos dados.",
+        "Que as notícias mencionam a manutenção do alerta estadual durante a estiagem."
       ],
       "falta": [
-        "Confirmação oficial por parte da Prefeitura de Várzea Grande.",
-        "Registro e publicação do decreto no Diário Oficial do município.",
-        "Número da norma, data da assinatura e prazo estipulado para a emergência."
+        "Confirmação oficial do Inpe com os dados consolidados sobre as queimadas em julho.",
+        "Uniformização sobre o período histórico do recorde e a porcentagem exata de queda.",
+        "Manifestação formal do governo estadual de Mato Grosso sobre o balanço apurado."
       ],
       "ondeCirculou": [
-        {
-          "veiculo": "Estadão MT",
-          "titulo": "Várzea Grande decreta situação de emergência por calor extremo e baixa umidade",
-          "link": "https://www.estadaomatogrosso.com.br/cidades/varzea-grande-decreta-situacao-de-emergencia-por-calor-extremo-e-baixa-umidade/143152"
-        },
         {
           "veiculo": "g1 MT",
-          "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/07/31/prefeitura-de-varzea-grande-mt-decreta-situacao-de-emergencia-por-causa-da-estiagem.ghtml"
+          "titulo": "Mato Grosso tem menor número de focos de calor no mês de julho em mais de 20 anos",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/mato-grosso-tem-menor-numero-de-focos-de-calor-no-mes-de-julho-em-mais-de-20-anos.ghtml"
         },
         {
-          "veiculo": "Diario de Cuiabá",
-          "titulo": "Várzea Grande decreta emergência por seca, calor extremo e risco no abastecimento",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObFpVSVhxd0xjSGltbnBkT1lVczYxQXZpbjBCS1dGN2RHNkV5d1JXQmVpWkRvQVpTV0dldW9WaVVqamlsSUJJVHlwQ2ZkTGtOcDhRbW1UNUc0NjJQSTNmNzdXYkFtSGNkOGtEU1ZTdjZma2NsTGlTMGNOdG11SG82amVSVlh4azhsVmh2WFlQemVROTZob1ZBLV9SNnVUQzJzQWxsalppOENEU0hUREpGRGRFUFp5ZmliWVozcmVNWXF4TS1zOGliUg?oc=5"
+          "veiculo": "Muvuca Popular",
+          "titulo": "MT registra redução histórica de focos de calor em julho",
+          "link": "https://www.muvucapopular.com.br/2026/08/01/mt-registra-reducao-historica-de-focos-de-calor-em-julho-bombeiros-reforcam-alerta-durante-periodo-de-estiagem/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mt-registra-reducao-historica-de-focos-de-calor-em-julho-bombeiros-reforcam-alerta-durante-periodo-de-estiagem"
         },
         {
-          "veiculo": "g1.globo.com",
-          "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNNzJqM3dvVzdkY1pjMldseHdFZG1IZ2Z5NjJfdS1VeHBJQno3cHIwY1I1b29aeGtpTUR1S2F0S0tZX3ItazhZZmc4V3NOaEhJR09KTFAzT3JWc0hEWmVjdzRHWnVObERKOU9JTjdrSE9xT0pCeUFMOE5wTnUtMTR1ZUJPWVJHUjM1al9KdG10aXJXQUFRUGZFaWR3VXdsNXNGdTFPQkVrcTI5RWFGRXl2bXlncmlrMzlvQmtPajZBVnZfdVFKQ29GWEQzMG9QMEVyRzMxcHJvR3BGQWY3MDdDUFBTcU9qanBoSnhr0gHrAUFVX3lxTE03Mmozd29XN2RjWmMyV2x4d0VkbUhnZnk2Ml91LVV4cElCejdwcjBjUjVvb1p4a2lNRHVLYXRLS1lfci1rOFlmZzhXc05oSElHT0pMUDNPclZzSERaZWN3NEdadU5sREo5T0lON2tIT3FPSkJ5QUw4TnBOdS0xNHVlQk9ZUkdSMzVqX0p0bXRpcldBQVFQZkVpZHdVd2w1c0Z1MU9CRWtxMjlFYUZFeXZteWdyaWszOW9Ca09qNkFWdl91UUpDb0ZYRDMwb1AwRXJHMzFwcm9HcEZBZjcwN0NQUFNxT2pqcGhKeGs?oc=5"
+          "veiculo": "VG Notícias",
+          "titulo": "Focos de calor caem 78% e MT bate recorde histórico em julho",
+          "link": "https://www.vgnoticias.com.br/cidades/focos-de-calor-caem-78-e-mt-bate-recorde-historico-em-julho/149862"
         },
         {
-          "veiculo": "Só Notícias",
-          "titulo": "Prefeitura em Mato Grosso decreta emergência por causa de altas temperaturas e baixa umidade",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNdEZqaVBXU2w3RVROM0UxYVZKYjJHdnZRQTI0Y0JKblptcU1KUkFxRzRxbWpyVk4yelNnWmh1SVRsWmxhbjNrWjlaakFDSDBCTFpzZHhCaXJCLWpMR3o2NkdURk01ZDRwVmVoWmJoYWJHNGhRRjVQQkt2dFZjSTMyajlGNHNRUFhjVzdPNkRnTlloMEw3VVY0VXFCc0RPNDUzTVBCdEJYSFBoZG11NEFBdExZYVZlaW9CNG1xUXdSYVRDUE1EUEU1RTBwUHNOQ2pDM1VmVmp4RTBRd2FIazFRWE9EOE1ET25J?oc=5"
+          "veiculo": "CenárioMT",
+          "titulo": "Mato Grosso registra menor número de focos de calor em julho na série histórica do Inpe e mantém alerta na estiagem",
+          "link": "https://cenariomt.com.br/mato-grosso/mato-grosso-registra-menor-numero-de-focos-de-calor-em-julho-na-serie-historica-do-inpe-e-mantem-alerta-na-estiagem/"
+        },
+        {
+          "veiculo": "Primeira Página",
+          "titulo": "Mato Grosso registra o menor número de focos de calor em 28 anos",
+          "link": "https://primeirapagina.com.br/meio-ambiente/mato-grosso-registra-o-menor-numero-de-focos-de-calor-em-28-anos/"
         }
       ],
-      "link": "/materia/nc-prefeitura-de-varzea-grande-teria-decretado-emergencia-por-seca-e-calo.html",
+      "link": "/materia/nc-mato-grosso-teria-registrado-menor-numero-de-focos-de-calor-em-julho.html",
       "corpo": [
-        "As publicações que divulgaram a informação apresentam divergências pontuais sobre o enfoque do ato. Enquanto alguns veículos citam risco no abastecimento de água, outros tratam a motivação especificamente como estiagem ou altas temperaturas.",
-        "A iniciativa estaria relacionada ao enfrentamento das condições climáticas adversas citadas na região. A validação do ato dependeria do cumprimento de trâmites formais pela administração municipal."
+        "O estado de Mato Grosso teria registrado uma redução histórica nos focos de calor no mês de julho. Segundo os veículos que publicaram o dado, o índice teria sido o menor verificado para o período em décadas. A diminuição nas ocorrências representaria um recorde na medição realizada no estado.",
+        "As publicações divergem sobre o alcance temporal do recorde, mencionando mais de 20 anos, 28 anos e a série histórica do Inpe. Uma das reportagens aponta que os focos de calor teriam caído 78% no mês de julho. O Instituto Nacional de Pesquisas Espaciais seria a única instituição citada como fonte das estatísticas.",
+        "Mesmo com o suposto recuo nos números, Mato Grosso estaria mantendo o alerta por conta do período de estiagem. A condição climática exigiria atenção continuada em relação aos riscos de incêndio no território estadual."
       ],
-      "id": "circ:prefeitura-de-varzea-grande-teria-decretado-emergencia-por-seca-e-calo",
+      "id": "circ:mato-grosso-teria-registrado-menor-numero-de-focos-de-calor-em-julho",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Prefeitura de Várzea Grande teria decretado emergência por seca e calor",
+      "titulo": "Mato Grosso teria registrado menor número de focos de calor em julho",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:54:22.503Z",
-      "hora": "13h54"
+      "iso": "2026-08-01T20:48:58.963Z",
+      "hora": "16h48"
     },
     {
       "municipio": "vg",
       "municipioNome": "Várzea Grande",
       "seSabe": [
-        "Que o assunto é noticiado por quatro veículos de imprensa.",
-        "Que as publicações atribuem a ocorrência à Guarda Municipal em Várzea Grande.",
-        "Que há divergência nos relatos quanto ao total exato de itens apreendidos."
+        "Que o assunto está sendo publicado por quatro veículos de imprensa.",
+        "Que todas as publicações citam a apreensão de 67 cigarros eletrônicos.",
+        "Que a Guarda Municipal é apontada como responsável pela abordagem."
       ],
       "falta": [
-        "Manifestação oficial da Guarda Municipal de Várzea Grande ou da Polícia Civil.",
-        "Apresentação do número do boletim de ocorrência, data e horário do fato.",
-        "Nomeação oficial da escola estadual mencionada nas publicações.",
-        "Confirmação da situação jurídica do jovem citado."
+        "Confirmação oficial da Guarda Municipal sobre a realização da ocorrência.",
+        "Data e horário exatos em que a abordagem teria ocorrido.",
+        "Identificação da escola e número de registro do procedimento oficial."
       ],
       "ondeCirculou": [
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Guarda Municipal apreende 67 cigarros eletrônicos em frente a escola em Várzea Grande",
+          "link": "https://cenariomt.com.br/mato-grosso/varzea-grande/guarda-municipal-apreende-67-cigarros-eletronicos-em-frente-a-escola-em-varzea-grande/"
+        },
         {
           "veiculo": "O Documento",
           "titulo": "GM apreende 67 cigarros eletrônicos durante abordagem em frente a uma escola Estadual",
@@ -1221,241 +1219,248 @@
           "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/67-cigarros-eletronicos-sao-apreendidos-durante-abordagem-em-frente-a-escola-de-varzea-grande-mt.ghtml"
         },
         {
-          "veiculo": "Só Notícias",
-          "titulo": "Jovem é preso transportando mais de 60 cigarros eletrônicos durante abordagem em MT",
-          "link": "https://www.sonoticias.com.br/geral/jovem-e-preso-transportando-mais-de-60-cigarros-eletronicos-durante-abordagem-em-mt/"
-        },
-        {
           "veiculo": "MidiaNews",
           "titulo": "GM apreende 67 cigarros eletrônicos em abordagem em Várzea Grande.",
           "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUzlIQ0l3UVlELTNSMkRJSFRDdVREVENKMHBRZm0xSnBhcXVWRi1VeDEyYXVYUzRRcnFteEtWTWl3NS0wUE4xLS1mSDE2TGY5NFBDREdCdHZwZnRQM0ktZjJpbE5YMGhkeGFDLXY0aDNwQ0djVTIyS0llZUpSRHVPTHpEWVgyTDRrNWFtY2ZQcmt6dnFhTWxmNWxtSU11eU9IbGdMQUFTRjc2dnd0LVE?oc=5"
         }
       ],
-      "link": "/materia/nc-guarda-municipal-teria-apreendido-67-cigarros-eletronicos-em-varzea-gr.html",
+      "link": "/materia/nc-gm-teria-apreendido-67-cigarros-eletronicos-em-frente-a-escola-em-varz.html",
       "corpo": [
-        "A Guarda Municipal teria apreendido dezenas de cigarros eletrônicos durante uma abordagem realizada em frente a uma escola estadual. Um jovem teria sido preso sob a alegação de transportar o material.",
-        "O fato teria ocorrido no município de Várzea Grande, em Mato Grosso. As publicações divergem pontualmente sobre o volume da apreensão, variando entre 67 unidades e mais de 60 dispositivos.",
-        "A operação teria sido conduzida por agentes municipais na área externa da instituição de ensino. O material recolhido estaria em posse do indivíduo fiscalizado no momento da ação."
+        "A Guarda Municipal teria apreendido 67 cigarros eletrônicos durante uma abordagem. A alegação veiculada por publicações aponta que o recolhimento do material teria ocorrido em frente a uma unidade escolar.",
+        "As matérias divergem pontualmente quanto aos detalhes do local do fato. Uma das fontes cita que a ação teria ocorrido em uma escola estadual em Várzea Grande, em Mato Grosso, enquanto outro texto omite a referência à instituição de ensino."
       ],
-      "id": "circ:guarda-municipal-teria-apreendido-67-cigarros-eletronicos-em-varzea-gr",
+      "id": "circ:gm-teria-apreendido-67-cigarros-eletronicos-em-frente-a-escola-em-varz",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Guarda Municipal teria apreendido 67 cigarros eletrônicos em Várzea Grande",
+      "titulo": "GM teria apreendido 67 cigarros eletrônicos em frente a escola em Várzea Grande",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:54:47.600Z",
-      "hora": "13h54"
+      "iso": "2026-08-01T20:49:27.778Z",
+      "hora": "16h49"
     },
     {
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
+      "municipio": null,
+      "municipioNome": null,
       "seSabe": [
-        "Quatro veículos publicaram matérias sobre a interdição de um restaurante em Cuiabá.",
-        "As matérias atribuem a ação à Polícia Civil e à Vigilância Sanitária.",
-        "A alegação principal indica descumprimento de ordens e irregularidades sanitárias."
+        "Que o assunto é veiculado por quatro publicações da imprensa.",
+        "Que a ocorrência envolveria a Polícia Militar de Mato Grosso.",
+        "Que o local citado refere-se a uma chácara em Juína."
       ],
       "falta": [
-        "Posicionamento oficial da Polícia Civil ou da Vigilância Sanitária de Cuiabá.",
-        "Identificação oficial do restaurante citado nas publicações.",
-        "Detalhamento formal das infrações sanitárias e do auto de interdição."
+        "Registro ou confirmação em fonte oficial de segurança pública.",
+        "Data e horário em que o episódio teria ocorrido.",
+        "Confirmação da quantidade de reféns e identificação dos suspeitos."
       ],
       "ondeCirculou": [
         {
           "veiculo": "O Documento",
-          "titulo": "Restaurante em Cuiabá descumpre determinação e é interditado pela terceira vez",
-          "link": "https://odocumento.com.br/restaurante-em-cuiaba-descumpre-determinacao-e-e-interditado-pela-terceira-vez-pela-vigilancia/"
+          "titulo": "Família é feita refém durante confraternização em chácara e bandidos trocam tiros com a PM",
+          "link": "https://odocumento.com.br/familia-e-feita-refem-durante-confraternizacao-em-chacara-e-bandidos-trocam-tiros-com-a-pm/"
         },
         {
           "veiculo": "Estadão MT",
-          "titulo": "Polícia Civil e Vigilância Sanitária interditam pela terceira vez restaurante na Capital",
-          "link": "https://www.estadaomatogrosso.com.br/policia/policia-civil-e-vigilancia-sanitaria-interditam-pela-terceira-vez-restaurante-na-capital/143148"
-        },
-        {
-          "veiculo": "VG Notícias",
-          "titulo": "Restaurante ignora interdição e volta a ser fechado em Cuiabá",
-          "link": "https://www.vgnoticias.com.br/policia/restaurante-ignora-interdicao-e-volta-a-ser-fechado-em-cuiaba/149853"
-        },
-        {
-          "veiculo": "Só Notícias",
-          "titulo": "Restaurante é interditado pela terceira vez por irregularidades sanitárias em Cuiabá",
-          "link": "https://www.sonoticias.com.br/policia/restaurante-e-interditado-pela-terceira-vez-por-irregularidades-sanitarias-em-cuiaba/"
-        }
-      ],
-      "link": "/materia/nc-restaurante-em-cuiaba-teria-sido-interditado-pela-terceira-vez.html",
-      "corpo": [
-        "A fiscalização teria sido realizada pela Polícia Civil em conjunto com a Vigilância Sanitária na capital. Motivações sanitárias teriam sido apontadas como a justificativa principal para a nova ação no local.",
-        "Os textos veiculados não detalham quais infrações específicas teriam sido constatadas pelas equipes. Informa-se apenas que esta seria a terceira medida de interdição aplicada ao comércio citado."
-      ],
-      "id": "circ:restaurante-em-cuiaba-teria-sido-interditado-pela-terceira-vez",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Restaurante em Cuiabá teria sido interditado pela terceira vez",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:55:11.344Z",
-      "hora": "13h55"
-    },
-    {
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "seSabe": [
-        "Três veículos de imprensa veiculam a condenação do acusado em Cuiabá.",
-        "As notícias apontam uma pena fixada em 36 anos de prisão.",
-        "As publicações citam o assassinato de uma ex-companheira e do namorado dela."
-      ],
-      "falta": [
-        "Confirmação oficial do Tribunal de Justiça sobre o resultado do julgamento.",
-        "Número do processo judicial e certidão da sentença proferida.",
-        "Registro em fonte oficial sobre a data exata do crime e do júri."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "O Documento",
-          "titulo": "Júri condena filho de ex-deputado a 36 anos de prisão por matar ex e o namorado dela em Cuiabá",
-          "link": "https://odocumento.com.br/juri-condena-filho-de-ex-deputado-por-a-36-anos-de-prisao-por-matar-ex-e-o-namorado-dela/"
+          "titulo": "Família é feita refém durante assalto e criminosos trocam tiros com a PM",
+          "link": "https://www.estadaomatogrosso.com.br/policia/familia-e-feita-refem-durante-assalto-e-criminosos-trocam-tiros-com-a-pm/143151"
         },
         {
           "veiculo": "g1 MT",
-          "titulo": "Três anos após o crime, Carlinhos Bezerra é condenado a 36 anos por matar ex-companheira e o namorado dela em Cuiabá",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/tres-anos-apos-o-crime-carlinhos-bezerra-e-condenado-a-36-anos-por-matar-ex-companheira-e-o-namorado-dela-em-cuiaba.ghtml"
+          "titulo": "Família é feita refém durante confraternização em chácara de MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/familia-e-feita-refem-durante-confraternizacao-em-chacara-de-mt.ghtml"
         },
         {
           "veiculo": "CenárioMT",
-          "titulo": "Júri condena empresário a 36 anos por duplo homicídio em Cuiabá",
-          "link": "https://cenariomt.com.br/mato-grosso/cuiaba/juri-condena-empresario-a-36-anos-por-duplo-homicidio-em-cuiaba/"
+          "titulo": "Família é feita refém em chácara de Juína e criminosos fogem após troca de tiros com a Polícia Militar",
+          "link": "https://cenariomt.com.br/mato-grosso/juina/familia-e-feita-refem-em-chacara-de-juina-e-criminosos-fogem-apos-troca-de-tiros-com-a-policia-militar/"
         }
       ],
-      "link": "/materia/nc-empresario-teria-sido-condenado-a-36-anos-de-prisao-por-duplo-homicidi.html",
+      "link": "/materia/nc-familia-teria-sido-feita-refem-em-chacara-de-mato-grosso.html",
       "corpo": [
-        "Um empresário, identificado também como filho de um ex-deputado, teria sido condenado a 36 anos de prisão por um júri em Cuiabá. A decisão estaria relacionada às mortes de sua ex-companheira e do namorado dela.",
-        "As publicações que noticiaram a decisão indicam que o crime teria ocorrido há três anos. Enquanto dois veículos enfatizam o parentesco do réu com o ex-político, outro o descreve pela sua atuação empresarial."
+        "Uma família teria sido mantida refém no interior de uma chácara no estado de Mato Grosso. O caso teria registrado uma troca de tiros entre suspeitos e a Polícia Militar. O episódio estaria sendo relatado por veículos da imprensa.",
+        "As publicações divergiam quanto ao contexto do fato, citando ora um assalto, ora uma confraternização na propriedade. O município de Juína surgia como a localização exata da ocorrência em parte dos relatos. Um dos textos acrescentava que os criminosos teriam fugido após a troca de tiros."
       ],
-      "id": "circ:empresario-teria-sido-condenado-a-36-anos-de-prisao-por-duplo-homicidi",
+      "id": "circ:familia-teria-sido-feita-refem-em-chacara-de-mato-grosso",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Empresário teria sido condenado a 36 anos de prisão por duplo homicídio em Cuiabá",
+      "titulo": "Família teria sido feita refém em chácara de Mato Grosso",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-01T17:55:33.295Z",
-      "hora": "13h55"
+      "iso": "2026-08-01T20:49:52.635Z",
+      "hora": "16h49"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que ao menos três veículos de imprensa veiculam as alegações sobre o caso.",
+        "Que o Ministério Público é citado como autor do pedido de R$ 1 milhão.",
+        "Que as publicações indicam o estado de Mato Grosso como local do fato."
+      ],
+      "falta": [
+        "Manifestação oficial do Ministério Público confirmando o oferecimento da denúncia.",
+        "Validação e confirmação do vídeo pelas autoridades investigativas.",
+        "Registro oficial da ocorrência do acidente com data e local exatos.",
+        "Número do processo ou do procedimento investigatório correspondente."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Motorista que matou criança de 4 anos é denunciado; MPE pede R$ 1 milhão",
+          "link": "https://www.vgnoticias.com.br/penal/motorista-que-matou-crianca-de-4-anos-e-denunciado-mpe-pede-r-1-milhao/149860"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Vídeo mostra motorista que matou menino de 4 anos bebendo antes de acidente em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/01/video-mostra-motorista-que-matou-menino-de-4-anos-bebendo-antes-de-acidente-em-mt.ghtml"
+        },
+        {
+          "veiculo": "RepórterMT",
+          "titulo": "MP pede indenização de R$ 1 milhão contra motorista denunciado por matar criança de 4 anos",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUy1DQm1vNTVDUUFON1U1T3FhWmRGWmx1T3NfQ0lPdWx2elA4VWhKYTlaRDkyNDkzS3V2QVhlTXJVRWN4U01YNkVoMVJoSkJnNTVVTldjaGZ3N1AtVF91eDVsNl9IR0paTlEwMi1zY0tvdTRTN0p4aTktRlI0Q0NLT2wxcFR6NjVmb3g2ZUpPYzgwQ3BDUzBnU1dDZm5aMUN6NUV4cXFPbDB0MTU1c1doU2g4RmUxdDNSRHZGNmV4d2xsVHpFVlo2ZWF0Zw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-motorista-teria-sido-denunciado-por-morte-de-crianca-e-mp-pediria-r-1-.html",
+      "corpo": [
+        "Um motorista teria sido denunciado pelo Ministério Público após envolvimento em um acidente que teria vitimado uma criança de 4 anos. A ação incluiria o pedido de pagamento de R$ 1 milhão a título de indenização.",
+        "De acordo com as publicações, o fato teria ocorrido no estado de Mato Grosso. Um vídeo em circulação mostraria o condutor consumindo bebida alcoólica antes do acidente.",
+        "Os veículos que publicaram o relato convergem quanto ao valor solicitado e à idade da vítima. A confirmação da denúncia e dos pedidos dependeria do posicionamento oficial do órgão ministerial."
+      ],
+      "id": "circ:motorista-teria-sido-denunciado-por-morte-de-crianca-e-mp-pediria-r-1-",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Motorista teria sido denunciado por morte de criança e MP pediria R$ 1 milhão",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-01T20:50:43.404Z",
+      "hora": "16h50"
     }
   ],
   "pautas": [
     {
-      "titulo": "Motorista que matou criança de 4 anos é denunciado; MPE pede R$ 1 milhão",
-      "veiculo": "VG Notícias",
+      "titulo": "Corpo de Bombeiros combate incêndio em unidade de armazenamento de grãos às margens da BR-163",
+      "veiculo": "Estadão MT",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 8,
       "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "GC Notícias"
-      ]
-    },
-    {
-      "titulo": "Família é feita refém durante assalto em chácara e criminosos trocam tiros com a PM em Mato Grosso",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
+        "Muvuca Popular",
+        "O Livre",
         "g1 MT"
       ]
     },
     {
-      "titulo": "Família é feita refém durante confraternização em chácara e bandidos trocam tiros com a PM",
+      "titulo": "Homem é preso pela Polícia Militar com espingarda, drogas e R$ 15 mil em dinheiro",
       "veiculo": "O Documento",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 5,
       "tambemEm": [
-        "Estadão MT",
-        "g1 MT",
-        "Primeira Página"
+        "Muvuca Popular",
+        "Só Notícias",
+        "hnt.com.br"
       ]
     },
     {
-      "titulo": "Várzea Grande decreta situação de emergência por calor extremo e baixa umidade",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "g1 MT",
-        "Diario de Cuiabá",
-        "g1.globo.com"
-      ]
-    },
-    {
-      "titulo": "Família é feita refém durante assalto e criminosos trocam tiros com a PM",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "Primeira Página"
-      ]
-    },
-    {
-      "titulo": "Família é feita refém durante confraternização em chácara de MT",
+      "titulo": "Mato Grosso tem menor número de focos de calor no mês de julho em mais de 20 anos",
       "veiculo": "g1 MT",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "Primeira Página"
+        "Muvuca Popular",
+        "VG Notícias",
+        "CenárioMT"
       ]
     },
     {
-      "titulo": "VÍDEO: família é feita refém durante roubo em chácara; criminosos trocam tiros com a PM e fogem",
-      "veiculo": "Primeira Página",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "MP denuncia motorista por morte de criança em acidente e pede indenização de R$ 1 milhão",
-      "veiculo": "O Documento",
+      "titulo": "MT registra redução histórica de focos de calor em julho",
+      "veiculo": "Muvuca Popular",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
         "g1 MT",
         "VG Notícias",
-        "GC Notícias"
+        "CenárioMT"
       ]
     },
     {
-      "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
-      "veiculo": "g1 MT",
+      "titulo": "Mato Grosso registra menor número de focos de calor em julho na série histórica do Inpe e mantém alerta na estiagem",
+      "veiculo": "CenárioMT",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "Diario de Cuiabá",
-        "g1.globo.com"
+        "Muvuca Popular",
+        "g1 MT",
+        "VG Notícias"
       ]
     },
     {
-      "titulo": "Prefeitura de Várzea Grande (MT) decreta situação de emergência por causa da estiagem",
-      "veiculo": "g1.globo.com",
+      "titulo": "Incêndio atinge estrutura de grãos e ameaça secadores na BR-163",
+      "veiculo": "Muvuca Popular",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
         "Estadão MT",
         "g1 MT",
-        "Diario de Cuiabá"
+        "VG Notícias"
       ]
     },
     {
-      "titulo": "Vídeos flagram motorista bebendo antes de causar acidente que matou menino de 4 anos em MT",
-      "veiculo": "O Documento",
+      "titulo": "Focos de calor caem 78% e MT bate recorde histórico em julho",
+      "veiculo": "VG Notícias",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
+        "Muvuca Popular",
         "g1 MT",
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Guarda Municipal apreende 67 cigarros eletrônicos em frente a escola em Várzea Grande",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "O Documento",
+        "g1 MT",
+        "MidiaNews"
+      ]
+    },
+    {
+      "titulo": "Mato Grosso registra o menor número de focos de calor em 28 anos",
+      "veiculo": "Primeira Página",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Muvuca Popular",
+        "g1 MT",
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Incêndio atinge estrutura de armazenamento de grãos às margens da BR-163 em MT",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estadão MT",
+        "Muvuca Popular",
         "VG Notícias"
+      ]
+    },
+    {
+      "titulo": "Criminosos tentam fugir da polícia em MT, capotam veículo e acabam presos com carga milionária de drogas",
+      "veiculo": "Só Notícias",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "O Documento",
+        "Muvuca Popular"
+      ]
+    },
+    {
+      "titulo": "Família é feita refém em chácara de Juína e criminosos fogem após troca de tiros com a Polícia Militar",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estadão MT",
+        "O Documento",
+        "g1 MT"
       ]
     },
     {
@@ -1465,7 +1470,7 @@
       "quentura": 3,
       "tambemEm": [
         "O Documento",
-        "Só Notícias",
+        "CenárioMT",
         "MidiaNews"
       ]
     },
@@ -1477,61 +1482,50 @@
       "tambemEm": [
         "O Documento",
         "g1 MT",
-        "Só Notícias"
+        "CenárioMT"
       ]
     },
     {
-      "titulo": "GM apreende 67 cigarros eletrônicos durante abordagem em frente a uma escola Estadual",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 MT",
-        "Só Notícias",
-        "MidiaNews"
-      ]
-    },
-    {
-      "titulo": "Restaurante em Cuiabá descumpre determinação e é interditado pela terceira vez",
+      "titulo": "Família é feita refém durante confraternização em chácara e bandidos trocam tiros com a PM",
       "veiculo": "O Documento",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
         "Estadão MT",
-        "VG Notícias",
-        "Só Notícias"
-      ]
-    },
-    {
-      "titulo": "Restaurante é interditado pela terceira vez por irregularidades sanitárias em Cuiabá",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "VG Notícias"
-      ]
-    },
-    {
-      "titulo": "Jovem é preso transportando mais de 60 cigarros eletrônicos durante abordagem em MT",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "MidiaNews"
-      ]
-    },
-    {
-      "titulo": "Júri condena filho de ex-deputado a 36 anos de prisão por matar ex e o namorado dela em Cuiabá",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
         "g1 MT",
         "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Bombeiros combatem incêndio a secador de grãos em Lucas do Rio Verde",
+      "veiculo": "Só Notícias",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estadão MT",
+        "Muvuca Popular",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "Motorista que matou criança de 4 anos é denunciado; MPE pede R$ 1 milhão",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 MT",
+        "RepórterMT"
+      ]
+    },
+    {
+      "titulo": "Incêndio atinge armazém de grãos às margens da BR-163",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estadão MT",
+        "Muvuca Popular",
+        "g1 MT"
       ]
     }
   ]
