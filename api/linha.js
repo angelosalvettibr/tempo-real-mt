@@ -99,7 +99,11 @@ const limparMarcos = arr => (Array.isArray(arr) ? arr : [])
 
 const PROMPT_LINHA = (relato, links) => `Você monta LINHAS DO TEMPO para o MERIDIANO, um jornal que só afirma o que consegue verificar e mostra ao leitor a origem de cada informação.
 
-Uma pessoa envolvida no caso contou a própria história abaixo, e forneceu os links que tinha. Sua tarefa é transformar isso numa cronologia de fatos — NÃO numa defesa.
+Uma pessoa envolvida no caso contou a própria história abaixo, e forneceu os links que tinha (às vezes nenhum). Sua tarefa é transformar isso numa cronologia de fatos — NÃO numa defesa.
+
+ANTES DE ESCREVER, PROCURE. Use a busca para localizar publicações sobre o caso: a acusação, o andamento, o desfecho, decisões judiciais, registros oficiais. Procure em português, e também em outras línguas quando o caso tiver repercussão fora do país. O que você encontrar vira marco verificado, com o nome da publicação e o endereço. O que não encontrar continua sendo relato da pessoa, e o marco deve dizer isso.
+
+Se a busca não devolver nada sobre o caso, DIGA ISSO na lista FALTA. Não preencha a lacuna com o relato travestido de fato.
 
 REGRAS QUE NÃO PODEM SER QUEBRADAS:
 1. NÃO INVENTE. Nenhuma data, número, nome de órgão ou desfecho que não esteja no material.
@@ -126,17 +130,32 @@ ${relato}
 LINKS FORNECIDOS:
 ${links && links.length ? links.join('\n') : '(nenhum)'}`;
 
-async function montarLinha(relato, links){
+async function montarLinha(relato, links, buscar = true){
   if (!CHAVE_IA) throw new Error('sem GEMINI_API_KEY na Vercel');
+
+  // Com a busca ligada, o agente procura sozinho o que o relato menciona. E o
+  // que resolve o caso de quem chega com a historia na cabeca e sem link
+  // nenhum — que e a maioria. O que ele achar vira marco verificado; o que
+  // nao achar continua sendo relato, e a pagina diz isso.
+  const corpo = {
+    contents:[{ parts:[{ text: PROMPT_LINHA(relato, links) }] }],
+    generationConfig:{ temperature:0.3, maxOutputTokens:4000 }
+  };
+  if (buscar) corpo.tools = [{ google_search: {} }];
+
   const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
     method:'POST', headers:{ 'Content-Type':'application/json' },
-    body: JSON.stringify({
-      contents:[{ parts:[{ text: PROMPT_LINHA(relato, links) }] }],
-      generationConfig:{ temperature:0.3, maxOutputTokens:4000 }
-    })
+    body: JSON.stringify(corpo)
   });
   if (!r.ok) throw new Error('IA HTTP ' + r.status);
   const j = await r.json();
+
+  // O que a busca realmente consultou. Serve para dois fins: completar o link
+  // de um marco que saiu sem endereco, e mostrar ao leitor onde procuramos.
+  const achados = (j?.candidates?.[0]?.groundingMetadata?.groundingChunks || [])
+    .map(c => ({ url: c?.web?.uri, titulo: c?.web?.title }))
+    .filter(x => x.url);
+
   const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '')
     .replace(/\u0060\u0060\u0060[a-z]*\n?/gi,'').replace(/\*\*/g,'').trim();
 
@@ -156,6 +175,7 @@ async function montarLinha(relato, links){
     linhaFina: (t.match(/LINHA\s*:\s*(.+)/i)?.[1] || '').trim(),
     intro: bloco('INTRO', 'MARCOS'),
     marcos,
+    consultadas: achados.slice(0, 20),
     falta: bloco('FALTA', null).split(/\n/).map(x => x.replace(/^[-•\s]+/,'').trim()).filter(x => x.length > 8).slice(0,4)
   };
 }
@@ -251,9 +271,9 @@ export default async function handler(req, res){
   if (corpo.acao === 'montar') {
     try {
       const relato = String(corpo.relato || '').slice(0, 20000);
-      if (relato.length < 200) return res.status(200).json({ ok:false, msg:'conte a história com mais detalhe — o agente não inventa o que falta' });
+      if (relato.length < 120) return res.status(200).json({ ok:false, msg:'conte com um pouco mais de detalhe — nome, datas e o que aconteceu' });
       const links = String(corpo.links || '').split(/\s+/).filter(x => /^https?:\/\//.test(x)).slice(0, 20);
-      const r = await montarLinha(relato, links);
+      const r = await montarLinha(relato, links, corpo.buscar !== false);
       if (r.marcos.length < 2) return res.status(200).json({ ok:false, msg:'não foi possível montar dois marcos com data a partir do material' });
       return res.status(200).json({ ok:true, ...r });
     } catch (e) {
