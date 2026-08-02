@@ -133,6 +133,9 @@ tr:hover td{background:var(--painel)}
 .red .lista .n span{flex:1;line-height:1.35}
 .red .lista .n button{padding:4px 9px;font-size:9px;border-color:#5A2222;color:#F85149}
 .red .lista .n button.tog{border-color:var(--borda);color:var(--texto2)}
+.red .lista .n button.ed{border-color:#1F4D7A;color:#58A6FF}
+.red .editando{background:#1A2733;border:1px solid #1F4D7A;padding:9px 14px;margin-bottom:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#58A6FF;display:flex;align-items:center;gap:12px}
+.red .editando button{margin-left:auto;padding:5px 11px;font-size:9px}
 .red .lista .n .est{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid;flex:none}
 .red .lista .n .est.no{color:#3FB950;border-color:#1D4A2A}
 .red .lista .n .est.ras{color:#D29922;border-color:#4A3A0E}
@@ -347,6 +350,7 @@ const EDS = [['br','Brasil'],['mundo','Mundo'],['mt','Mato Grosso'],['rs','Rio G
    serve para manter curioso longe. A protecao real esta no /api/nota, que
    confere a senha no servidor antes de gravar qualquer coisa.               */
 let senhaRedacao = '';
+let editandoId = null;   // quando preenchido, salvar altera em vez de criar
 
 function trava(){
   document.getElementById('redacao').innerHTML = `
@@ -377,6 +381,8 @@ function formulario(){
     <div class="cab"><b>Nota da redação</b>
       <span class="aviso">Sai com selo “Edição da redação” — não se passa por matéria confirmada.</span></div>
     <div class="corpo">
+      <div class="editando" id="av-ed" style="display:none">
+        editando uma nota já publicada<button id="bt-cancel">cancelar</button></div>
       <label>Fonte — de onde veio esta informação</label>
       <div class="dois">
         <input id="f-fonte" placeholder="ex.: Prefeitura de Cuiabá, apuração própria">
@@ -482,7 +488,8 @@ function formulario(){
   const enviar = async (rascunho) => {
     const m = document.getElementById('m-red');
     const dados = {
-      acao:'publicar', senha:senhaRedacao, rascunho,
+      acao: editandoId ? 'editar' : 'publicar',
+      id: editandoId, senha:senhaRedacao, rascunho,
       titulo: document.getElementById('f-titulo').value,
       linha: document.getElementById('f-linha').value,
       corpo: document.getElementById('f-corpo').value.split(/\n\s*\n/),
@@ -496,9 +503,8 @@ function formulario(){
     try {
       const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(dados) })).json();
       if (r.ok) {
-        m.className='msg bom'; m.textContent = rascunho ? 'salva como rascunho' : 'no ar';
-        ['f-bruto','f-titulo','f-linha','f-corpo','f-foto'].forEach(id => document.getElementById(id).value='');
-        document.getElementById('f-previa').style.display='none';
+        m.className='msg bom'; m.textContent = editandoId ? 'alterações salvas' : (rascunho ? 'salva como rascunho' : 'no ar');
+        limparForm();
         listaNotas();
       } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
     } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
@@ -508,6 +514,36 @@ function formulario(){
   document.getElementById('bt-ras').addEventListener('click', () => enviar(true));
 
   listaNotas();
+}
+
+function limparForm(){
+  ['f-bruto','f-titulo','f-linha','f-corpo','f-foto','f-fonte','f-link'].forEach(id => {
+    const e = document.getElementById(id); if (e) e.value = '';
+  });
+  const p = document.getElementById('f-previa'); if (p) p.style.display = 'none';
+  editandoId = null;
+  const av = document.getElementById('av-ed'); if (av) av.style.display = 'none';
+  const bp = document.getElementById('bt-pub'); if (bp) bp.textContent = 'publicar';
+}
+
+// Traz a nota gravada de volta para o formulario. Sem isto, corrigir um erro
+// de digitacao exigia apagar e reescrever tudo.
+function carregarNota(n){
+  editandoId = n.id;
+  document.getElementById('f-titulo').value = n.titulo || '';
+  document.getElementById('f-linha').value  = n.resumo || '';
+  document.getElementById('f-corpo').value  = (n.corpo || []).join('\n\n');
+  document.getElementById('f-fonte').value  = n.fonte || '';
+  document.getElementById('f-link').value   = n.fonteLink || '';
+  document.getElementById('f-foto').value   = n.foto || '';
+  document.getElementById('f-editoria').value = n.editoria || 'brasil';
+  document.getElementById('f-uf').value = n.uf || '';
+  const p = document.getElementById('f-previa');
+  if (n.foto) { p.src = n.foto; p.style.display = 'block'; } else { p.style.display = 'none'; }
+  document.getElementById('av-ed').style.display = 'flex';
+  document.getElementById('bt-pub').textContent = 'salvar alterações';
+  document.getElementById('bt-cancel').onclick = limparForm;
+  document.getElementById('redacao').scrollIntoView({ behavior:'smooth', block:'start' });
 }
 
 async function listaNotas(){
@@ -531,10 +567,15 @@ async function listaNotas(){
           <span class="est ${ok?'no':'ras'}">${ok?'no ar':'rascunho'}</span>
           <span>${(x.titulo||'').replace(/[<>]/g,'')}</span>
           <small>${orfa ? '⚠ regional sem estado — não aparece' : (ONDE[x.editoria]||'')}${x.uf?' '+x.uf.toUpperCase():''}</small>
+          <button class="ed" data-ed="${x.id}">editar</button>
           <button class="tog" data-tog="${x.id}">${ok?'tirar do ar':'publicar'}</button>
           <button data-id="${x.id}">apagar</button></div>`;
       }).join('');
 
+    alvo.querySelectorAll('button[data-ed]').forEach(b => b.addEventListener('click', () => {
+      const n = (r.notas || []).find(x => x.id === b.dataset.ed);
+      if (n) carregarNota(n);
+    }));
     alvo.querySelectorAll('button[data-tog]').forEach(b => b.addEventListener('click', async () => {
       await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ acao:'alternar', senha:senhaRedacao, id:b.dataset.tog }) });
