@@ -13,14 +13,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Explosão ou atentado em restaurante de Moscou teria deixado três mortos">
 <meta property="og:description" content="Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa">
-<meta property="article:published_time" content="2026-08-02T07:46:57.819Z">
+<meta property="article:published_time" content="2026-08-02T11:51:06.584Z">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle",
 "headline":"Explosão ou atentado em restaurante de Moscou teria deixado três mortos",
 "description":"Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-"datePublished":"2026-08-02T07:46:57.819Z","inLanguage":"pt-BR",
+"datePublished":"2026-08-02T11:51:06.584Z","inLanguage":"pt-BR",
 "articleSection":"Mundo",
 "publisher":{"@type":"NewsMediaOrganization","name":"MERIDIANO"},
 "isBasedOn":""}
@@ -223,6 +223,18 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     var lendo = false;
     ov.addEventListener('click', function(){
       if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
+      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
+</body>
+</html>'; return; }
       var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
       var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
       f.lang = 'pt-BR'; f.rate = 1;
