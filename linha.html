@@ -36,11 +36,16 @@ h1{font-family:var(--display);font-size:clamp(29px,5.6vw,42px);font-weight:700;l
 .metodo p{font-size:15px;line-height:1.6;color:var(--tinta2)}
 .privada{border-left:3px solid var(--sinal);background:#F6F1EE;padding:14px 18px;margin-bottom:26px;font-size:14.5px;line-height:1.58;color:var(--tinta2)}
 .privada b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:6px}
-.cartao{display:block;text-decoration:none;border-bottom:1px solid var(--linha);padding:20px 0}
+.casos{margin-top:30px}
+.cartao{display:block;text-decoration:none;background:#fff;border:1px solid var(--linha);
+  padding:24px 26px;margin-bottom:14px;transition:.15s;position:relative}
+.cartao:hover{border-color:var(--tinta);transform:translateY(-1px)}
 .cartao:hover h2{color:var(--sinal)}
-.cartao h2{font-family:var(--display);font-size:24px;font-weight:700;line-height:1.2;margin-bottom:8px}
-.cartao p{font-size:15.5px;color:var(--tinta2);line-height:1.5}
-.cartao span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:8px}
+.cartao h2{font-family:var(--display);font-size:23px;font-weight:700;line-height:1.22;margin-bottom:10px;color:var(--tinta)}
+.cartao p{font-size:15.5px;color:var(--tinta2);line-height:1.55;margin-bottom:14px}
+.cartao span{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--fraco);
+  display:flex;align-items:center;gap:9px;padding-top:12px;border-top:1px solid var(--linha)}
+.cartao span::after{content:'ver a cronologia →';margin-left:auto;color:var(--sinal)}
 .volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:26px 0 60px}
 .convite{border:1px solid var(--tinta);background:var(--caixa,#fff);padding:22px 24px;margin:38px 0 8px}
 .convite b{font-family:var(--display);font-size:19px;display:block;margin-bottom:9px}
@@ -113,14 +118,13 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
     const l = (await r.json()).linhas || [];
     alvo.innerHTML = `
       <h1>Linha do tempo</h1>
-      <p class="fina">Casos que se arrastaram no tempo e ficaram presos a um só capítulo. Os fatos em ordem, cada um com a origem declarada, sem posição do jornal.</p>
-      ${METODO}
-      ${l.length ? l.map(x => `<a class="cartao" href="/linha.html?id=${encodeURIComponent(x.id)}">
+      <p class="fina">Casos que se arrastaram no tempo e ficaram presos a um só capítulo. Cada marco traz a data e a origem: o veículo que registrou, o relato de quem viveu, ou a marca de que não há registro localizado.</p>
+      <div class="casos">${l.length ? l.map(x => `<a class="cartao" href="/linha.html?id=${encodeURIComponent(x.id)}">
           <h2>${esc(x.titulo)}</h2>
           <p>${esc(x.linhaFina || '')}</p>
           <span>${x.marcos} marcos · atualizada em ${new Date(x.atualizada).toLocaleDateString('pt-BR')}</span>
         </a>`).join('')
-        : '<p class="vazio">Nenhuma linha do tempo publicada ainda.</p>'}
+        : '<p class="vazio">Nenhuma linha do tempo publicada ainda.</p>'}</div>
       ${CONVITE}
       <a class="volta" href="/">← Voltar para a capa</a>`;
   } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }

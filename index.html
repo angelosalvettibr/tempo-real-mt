@@ -77,6 +77,24 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
 /* Linha do tempo nao e editoria do robo: e secao propria, com metodo proprio.
    Por isso entra na nav com marca visual diferente dos botoes de editoria. */
+/* Chamada da Linha do tempo. Nao e mais uma editoria: e a secao que carrega
+   a tese do jornal, entao ganha bloco proprio logo abaixo da faixa de metodo. */
+.chamada{border-bottom:1px solid var(--tinta);background:var(--tinta);color:var(--papel)}
+.chamada .wrap{display:flex;align-items:center;gap:22px;padding:19px 0;flex-wrap:wrap}
+.chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--papel);opacity:.62;flex:none;border-right:1px solid rgba(255,255,255,.22);padding-right:20px}
+.chamada .txt{flex:1;min-width:240px}
+.chamada .txt b{display:block;font-family:var(--display,Georgia),Georgia,serif;font-size:21px;
+  font-weight:700;line-height:1.24;letter-spacing:-.01em;margin-bottom:5px}
+.chamada .txt span{font-size:14.5px;opacity:.78;line-height:1.5}
+.chamada a{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--papel);border:1.5px solid var(--papel);padding:12px 18px;white-space:nowrap;transition:.14s}
+.chamada a:hover{background:var(--papel);color:var(--tinta)}
+@media(max-width:700px){
+  .chamada .wrap{gap:13px}
+  .chamada .rot{border-right:0;padding-right:0;width:100%}
+  .chamada a{width:100%;text-align:center}
+}
 nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--rosso);text-decoration:none;padding:12px 20px;display:inline-flex;align-items:center;gap:7px;
   white-space:nowrap;line-height:1;position:relative}
@@ -251,6 +269,17 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
   </nav>
   <div class="cidades" id="cidades"><div class="wrap"></div></div>
 </header>
+
+<div class="chamada">
+  <div class="wrap">
+    <span class="rot">Linha do tempo</span>
+    <div class="txt">
+      <b>A acusação vira manchete. O desfecho vira nota de rodapé.</b>
+      <span>Casos em que a primeira versão ficou registrada e a correção não. Os fatos em ordem, cada um com a origem à vista.</span>
+    </div>
+    <a href="linha.html">Ver a seção</a>
+  </div>
+</div>
 
 <div class="metodo">
   <div class="wrap">
