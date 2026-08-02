@@ -91,7 +91,8 @@ async function reescrever(titulo, texto, fonte){
     method:'POST', headers:{ 'Content-Type':'application/json' },
     body: JSON.stringify({
       contents:[{ parts:[{ text: PROMPT(titulo, texto, fonte) }] }],
-      generationConfig:{ temperature:0.4, maxOutputTokens:2000 }
+      // 2000 cortava o texto no meio da frase quando o material era longo.
+      generationConfig:{ temperature:0.4, maxOutputTokens:4000 }
     })
   });
   if (!r.ok) throw new Error('IA HTTP ' + r.status);
@@ -102,8 +103,12 @@ async function reescrever(titulo, texto, fonte){
   return {
     titulo: (limpo.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1] || '').trim(),
     linha:  (limpo.match(/LINHA\s*:\s*(.+)/i)?.[1] || '').trim(),
+    // Paragrafo que termina no meio da frase e resposta cortada pelo limite
+    // de tokens. Melhor descartar do que publicar frase pela metade.
     corpo:  (limpo.match(/CORPO\s*:\s*([\s\S]*)$/i)?.[1] || '')
-              .split(/\n\s*\n/).map(x => x.trim()).filter(x => x.length > 30)
+              .split(/\n\s*\n/).map(x => x.trim())
+              .filter(x => x.length > 30)
+              .filter((x, i, a) => i < a.length - 1 || /[.!?…"')\]]$/.test(x))
   };
 }
 
@@ -129,7 +134,12 @@ async function guardarFoto(base64, nome){
       Authorization: `Bearer ${BLOB}`,
       'x-content-type': m[1],
       'x-api-version': '7',
-      'x-add-random-suffix': '1'
+      'x-add-random-suffix': '1',
+      // O store nasce como Private na Vercel, e ai a imagem sobe mas nao abre
+      // para o leitor. Foto de jornal precisa ser publica — declaramos aqui,
+      // por requisicao, sem depender da configuracao do store.
+      'x-access': 'public',
+      'x-cache-control-max-age': '31536000'
     },
     body: bytes
   });
