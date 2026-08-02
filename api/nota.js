@@ -26,6 +26,7 @@
 //   KV_REST_API_URL / KV_REST_API_TOKEN   ja usados pelo /api/leitor
 
 import { timingSafeEqual, createHash } from 'node:crypto';
+import { cacarDocumento } from '../scripts/cacador.mjs';
 
 const URL_KV   = process.env.KV_REST_API_URL   || '';
 const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
@@ -191,6 +192,22 @@ async function guardarFoto(base64, nome){
   }
 }
 
+/* ------------------------------------------------- CACAR O DOCUMENTO ----
+   O mesmo cacador que o robo usa, agora a servico da nota manual.
+   Antes de escrever, ele classifica o assunto, deduz qual orgao guardaria o
+   registro e vai bater la. Se achar, a nota deixa de ser "edicao da redacao"
+   e passa a ser materia confirmada, com o documento a vista.
+
+   ORCAMENTO CURTO DE PROPOSITO: funcao serverless tem teto de tempo bem menor
+   que o job do Actions. Aqui vale achar rapido ou nao achar.                */
+async function cacar(titulo, uf){
+  return await cacarDocumento(titulo, uf || null, {
+    orcamentoMs: 7000,
+    maxOrgaos: 3,
+    corte: 0.55        // criterio mais duro: aqui nao ha segunda chance
+  });
+}
+
 /* ------------------------------------------------------------ ROTA ------ */
 export default async function handler(req, res){
   // A capa precisa ler as notas sem senha nenhuma — sao publicas.
@@ -241,6 +258,25 @@ export default async function handler(req, res){
     }
   }
 
+  /* --- procurar o registro oficial antes de escrever --- */
+  if (acao === 'cacar') {
+    try {
+      const r = await cacar(String(corpo.titulo || '').slice(0, 220), corpo.uf);
+      return res.status(200).json({
+        ok: true,
+        achado: r.achado,
+        link: r.link || null,
+        fonte: r.fonte || null,
+        titulo: r.titulo || null,
+        nota: r.nota || null,
+        procuradoEm: r.procuradoEm || [],
+        assunto: r.assunto || []
+      });
+    } catch (e) {
+      return res.status(200).json({ ok:false, msg: String(e.message).slice(0, 90) });
+    }
+  }
+
   /* --- publicar --- */
   if (acao === 'publicar') {
     if (!ligado()) return res.status(200).json({ ok:false, msg:'armazenamento não configurado' });
@@ -264,9 +300,12 @@ export default async function handler(req, res){
       editoria: ['brasil','internacional','regional'].includes(corpo.editoria) ? corpo.editoria : 'brasil',
       uf: corpo.uf || null,
       publicada: corpo.rascunho !== true,
-      nivel: 'redacao',
-      selo: 'Edição da redação',
-      chapeu: 'Redação',
+      // Nota com documento oficial em maos nao e "edicao da redacao": ela
+      // passou pela mesma prova das outras. O selo tem que dizer isso.
+      nivel:  corpo.documento ? 'confirmado' : 'redacao',
+      selo:   corpo.documento ? 'Confirmado oficialmente' : 'Edição da redação',
+      chapeu: corpo.documento ? 'Nosso texto' : 'Redação',
+      documento: corpo.documento || null,
       iso: new Date().toISOString(),
       hora: new Date().toLocaleTimeString('pt-BR', { timeZone:'America/Cuiaba', hour:'2-digit', minute:'2-digit' }).replace(':','h')
     };
