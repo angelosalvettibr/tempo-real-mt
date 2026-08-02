@@ -93,6 +93,7 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
         ${l.linhaFina ? `<p class="fina">${esc(l.linhaFina)}</p>` : ''}
         <div class="assina">Meridiano · atualizada em ${new Date(l.atualizada).toLocaleDateString('pt-BR')}</div>
         ${l.intro ? `<p class="intro">${esc(l.intro)}</p>` : ''}
+        ${METODO}
         <div class="marcos">${(l.marcos||[]).map(m => `<div class="m">
           <div class="q">${esc(m.quando)}</div>
           <div class="t">${esc(m.texto)}
@@ -100,7 +101,6 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
               ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.fonte)} &nearr;</a>`
               : `<span class="sem">${esc(m.fonte)}</span>`}</span>
           </div></div>`).join('')}</div>
-        ${METODO}
         ${CONVITE}
         <a class="volta" href="/linha.html">← Todas as linhas do tempo</a>`;
     } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }
