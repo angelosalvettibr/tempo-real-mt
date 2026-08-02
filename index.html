@@ -75,6 +75,14 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .cidades button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
 .cidades button i{font-style:normal;opacity:.6;margin-left:5px}
 .cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
+/* Linha do tempo nao e editoria do robo: e secao propria, com metodo proprio.
+   Por isso entra na nav com marca visual diferente dos botoes de editoria. */
+nav a.secao{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--rosso);text-decoration:none;padding:13px 14px;display:inline-flex;align-items:center;gap:7px;
+  border-left:1px solid var(--linha);margin-left:8px;white-space:nowrap}
+nav a.secao:hover{background:var(--areia)}
+nav a.secao::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--rosso);flex:none}
+@media(max-width:600px){nav a.secao{border-left:0;margin-left:0;padding-left:0}}
 nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--rosso)}
 .sel-estado{display:flex;align-items:center;gap:8px;padding-left:18px;margin-left:8px;border-left:1px solid var(--linha)}
 .sel-estado label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco)}
@@ -229,6 +237,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
       <button data-f="brasil" aria-pressed="false">Brasil</button>
       <button data-f="internacional" aria-pressed="false">Mundo</button>
       <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
+      <a class="secao" href="linha.html">Linha do tempo</a>
       <span class="sel-estado">
         <label for="selEstado">estado</label>
         <select id="selEstado">
