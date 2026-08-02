@@ -114,6 +114,13 @@ tr:hover td{background:var(--painel)}
 .red .acoes{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
 .red button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px;cursor:pointer;border:1px solid var(--borda);background:transparent;color:var(--texto2)}
 .red button:hover{border-color:var(--texto);color:var(--texto)}
+.red button.ca{border-color:#1F6FEB;color:#58A6FF}
+.red button.ca:hover{background:#1F6FEB;color:#fff}
+.red .doc{border:1px solid #1D4A2A;background:#0F2417;padding:12px 15px;margin-top:14px;font-size:13px;line-height:1.55;color:#7EE292}
+.red .doc b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px;color:#3FB950}
+.red .doc a{color:#58A6FF}
+.red .doc.nao{border-color:#4A3A0E;background:#241E0C;color:#E3B341}
+.red .doc.nao b{color:#D29922}
 .red button.ia{border-color:#8957E5;color:#A371F7}
 .red button.ia:hover{background:#8957E5;color:#fff}
 .red button.pub{border-color:#3FB950;color:#3FB950}
@@ -393,8 +400,10 @@ function formulario(){
       <textarea id="f-bruto" placeholder="Cole o texto, as anotações ou o release. A IA reescreve a partir disto, sem inventar nada que não esteja aqui."></textarea>
 
       <div class="acoes">
+        <button class="ca" id="bt-cacar">procurar documento oficial</button>
         <button class="ia" id="bt-ia">reescrever com IA</button>
       </div>
+      <div id="res-doc"></div>
 
       <label>Título</label>
       <input id="f-titulo" placeholder="preenchido pela IA, editável">
@@ -429,6 +438,39 @@ function formulario(){
       <p class="msg" id="m-red"></p>
     </div>
     <div class="lista" id="l-red"></div>`;
+
+  // Guarda o documento achado, se houver. E ele que decide o selo da nota:
+  // com documento ela vale como confirmada; sem, e edicao da redacao.
+  let documento = null;
+
+  document.getElementById('bt-cacar').addEventListener('click', async () => {
+    const bt = document.getElementById('bt-cacar'), cx = document.getElementById('res-doc');
+    const t = document.getElementById('f-titulo').value.trim() || document.getElementById('f-bruto').value.trim().slice(0, 180);
+    if (t.length < 20) { cx.innerHTML = '<div class="doc nao"><b>falta assunto</b>Escreva o título ou cole o material antes de procurar.</div>'; return; }
+
+    bt.disabled = true; bt.textContent = 'procurando…'; cx.innerHTML = '';
+    try {
+      const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'cacar', senha:senhaRedacao, titulo:t, uf: document.getElementById('f-uf').value }) })).json();
+
+      if (r.ok && r.achado) {
+        documento = { link:r.link, fonte:r.fonte, titulo:r.titulo };
+        document.getElementById('f-fonte').value = r.fonte;
+        document.getElementById('f-link').value = r.link;
+        cx.innerHTML = `<div class="doc"><b>documento encontrado</b>
+          ${(r.fonte||'').replace(/[<>]/g,'')} — <a href="${r.link}" target="_blank" rel="noopener">abrir o registro</a><br>
+          <small>A nota vai sair com selo <b>Confirmado oficialmente</b>. Cole o texto do documento no campo acima e reescreva a partir dele.</small></div>`;
+      } else if (r.ok) {
+        documento = null;
+        cx.innerHTML = `<div class="doc nao"><b>nenhum registro encontrado</b>
+          Procuramos em ${(r.procuradoEm||[]).length} ${(r.procuradoEm||[]).length === 1 ? 'órgão' : 'órgãos'}${(r.procuradoEm||[]).length ? ': ' + r.procuradoEm.join(', ').replace(/[<>]/g,'') : ''}.
+          A nota sai como <b>edição da redação</b>, que é o honesto neste caso.</div>`;
+      } else {
+        cx.innerHTML = `<div class="doc nao"><b>falhou</b>${(r.msg||'').replace(/[<>]/g,'')}</div>`;
+      }
+    } catch { cx.innerHTML = '<div class="doc nao"><b>falha de conexão</b>Tente de novo.</div>'; }
+    bt.disabled = false; bt.textContent = 'procurar documento oficial';
+  });
 
   document.getElementById('bt-ia').addEventListener('click', async () => {
     const bt = document.getElementById('bt-ia'), m = document.getElementById('m-red');
@@ -489,7 +531,7 @@ function formulario(){
     const m = document.getElementById('m-red');
     const dados = {
       acao: editandoId ? 'editar' : 'publicar',
-      id: editandoId, senha:senhaRedacao, rascunho,
+      id: editandoId, senha:senhaRedacao, rascunho, documento,
       titulo: document.getElementById('f-titulo').value,
       linha: document.getElementById('f-linha').value,
       corpo: document.getElementById('f-corpo').value.split(/\n\s*\n/),
@@ -522,6 +564,7 @@ function limparForm(){
   });
   const p = document.getElementById('f-previa'); if (p) p.style.display = 'none';
   editandoId = null;
+  const rd = document.getElementById('res-doc'); if (rd) rd.innerHTML = '';
   const av = document.getElementById('av-ed'); if (av) av.style.display = 'none';
   const bp = document.getElementById('bt-pub'); if (bp) bp.textContent = 'publicar';
 }
