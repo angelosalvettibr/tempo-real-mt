@@ -99,6 +99,42 @@ tr:hover td{background:var(--painel)}
 .desemp .resumo div b{display:block;font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1;font-family:var(--sans)}
 .desemp .resumo div span{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:6px}
 .desemp .vazio{font-family:var(--mono);font-size:12px;color:var(--fraco);padding:26px 0;text-align:center}
+.red{margin:26px 0;border:1px solid var(--borda);background:var(--painel)}
+.red .cab{padding:12px 18px;border-bottom:1px solid var(--borda);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.red .cab b{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--texto2);font-weight:500}
+.red .cab .aviso{font-family:var(--sans);font-size:11.5px;color:var(--fraco);margin-left:auto}
+.red .corpo{padding:18px}
+.red label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);margin:14px 0 6px}
+.red label:first-child{margin-top:0}
+.red input,.red textarea,.red select{width:100%;background:var(--fundo);border:1px solid var(--borda);color:var(--texto);padding:10px 12px;font-family:var(--sans);font-size:14px;line-height:1.5}
+.red textarea{min-height:150px;resize:vertical;font-family:var(--sans)}
+.red input:focus,.red textarea:focus,.red select:focus{outline:none;border-color:var(--texto2)}
+.red .dois{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:700px){.red .dois{grid-template-columns:1fr}}
+.red .acoes{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.red button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px;cursor:pointer;border:1px solid var(--borda);background:transparent;color:var(--texto2)}
+.red button:hover{border-color:var(--texto);color:var(--texto)}
+.red button.ia{border-color:#8957E5;color:#A371F7}
+.red button.ia:hover{background:#8957E5;color:#fff}
+.red button.pub{border-color:#3FB950;color:#3FB950}
+.red button.pub:hover{background:#3FB950;color:var(--fundo)}
+.red button:disabled{opacity:.4;cursor:default}
+.red .foto-area{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.red .foto-area input[type=file]{display:none}
+.red .foto-area label.bt{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px;cursor:pointer;border:1px solid var(--borda);color:var(--texto2);margin:0;display:inline-block}
+.red .foto-area label.bt:hover{border-color:var(--texto);color:var(--texto)}
+.red .previa{width:112px;height:74px;object-fit:cover;border:1px solid var(--borda)}
+.red .msg{font-family:var(--mono);font-size:11.5px;margin-top:12px;min-height:16px}
+.red .msg.erro{color:#F85149}.red .msg.bom{color:#3FB950}
+.red .lista{border-top:1px solid var(--borda);padding:14px 18px}
+.red .lista h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);font-weight:500;margin:0 0 10px}
+.red .lista .n{display:flex;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--borda);font-size:13px}
+.red .lista .n time{font-family:var(--mono);font-size:10.5px;color:var(--fraco);flex:none}
+.red .lista .n span{flex:1;line-height:1.35}
+.red .lista .n button{padding:4px 9px;font-size:9px;border-color:#5A2222;color:#F85149}
+.trava{padding:34px 18px;text-align:center}
+.trava input{max-width:230px;margin:12px auto 0;text-align:center;font-family:var(--mono);letter-spacing:.2em}
+.trava p{font-family:var(--sans);font-size:13px;color:var(--fraco);line-height:1.6;max-width:440px;margin:0 auto}
 </style>
 </head>
 <body>
@@ -116,6 +152,7 @@ tr:hover td{background:var(--painel)}
 <main class="wrap">
   <div class="edicoes" id="edicoes"></div>
   <div class="desemp" id="desemp"></div>
+  <div class="red" id="redacao"></div>
   <div class="barras" id="barras"></div>
 
   <div id="filtros"></div>
@@ -297,6 +334,190 @@ const EDS = [['br','Brasil'],['mundo','Mundo'],['mt','Mato Grosso'],['rs','Rio G
 // Producao diaria, lida do arquivo — que e a memoria de verdade do jornal,
 // nao da edicao do momento. Barra empilhada por nivel de evidencia: o que
 // importa nao e quantas materias sairam, e quantas tinham documento.
+/* ------------------------------ NOTA DA REDACAO -------------------------
+   O que o robo nao alcanca: historia que voce apurou, assunto que nenhuma
+   fonte livre cobriu, recado da redacao.
+
+   A senha desta tela NAO protege nada — quem abrir o codigo-fonte a ve. Ela
+   serve para manter curioso longe. A protecao real esta no /api/nota, que
+   confere a senha no servidor antes de gravar qualquer coisa.               */
+let senhaRedacao = '';
+
+function trava(){
+  document.getElementById('redacao').innerHTML = `
+    <div class="cab"><b>Nota da redação</b></div>
+    <div class="trava">
+      <p>Área de publicação manual. A nota entra no jornal com selo próprio, declarando que foi escrita pela redação e não confirmada pelo robô.</p>
+      <input id="s-red" type="password" placeholder="senha" autocomplete="off">
+      <div class="acoes" style="justify-content:center"><button id="bt-entrar">entrar</button></div>
+      <p class="msg" id="m-red"></p>
+    </div>`;
+  const ent = async () => {
+    const v = document.getElementById('s-red').value;
+    const m = document.getElementById('m-red');
+    m.className = 'msg'; m.textContent = 'verificando…';
+    try {
+      const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'entrar', senha:v }) })).json();
+      if (r.ok) { senhaRedacao = v; formulario(); }
+      else { m.className='msg erro'; m.textContent = r.msg || 'senha incorreta'; }
+    } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+  };
+  document.getElementById('bt-entrar').addEventListener('click', ent);
+  document.getElementById('s-red').addEventListener('keydown', e => { if (e.key==='Enter') ent(); });
+}
+
+function formulario(){
+  document.getElementById('redacao').innerHTML = `
+    <div class="cab"><b>Nota da redação</b>
+      <span class="aviso">Sai com selo “Edição da redação” — não se passa por matéria confirmada.</span></div>
+    <div class="corpo">
+      <label>Fonte — de onde veio esta informação</label>
+      <div class="dois">
+        <input id="f-fonte" placeholder="ex.: Prefeitura de Cuiabá, apuração própria">
+        <input id="f-link" placeholder="link do documento ou original (opcional)">
+      </div>
+
+      <label>Material bruto — cole aqui o que você tem</label>
+      <textarea id="f-bruto" placeholder="Cole o texto, as anotações ou o release. A IA reescreve a partir disto, sem inventar nada que não esteja aqui."></textarea>
+
+      <div class="acoes">
+        <button class="ia" id="bt-ia">reescrever com IA</button>
+      </div>
+
+      <label>Título</label>
+      <input id="f-titulo" placeholder="preenchido pela IA, editável">
+      <label>Linha de apoio</label>
+      <input id="f-linha">
+      <label>Texto final</label>
+      <textarea id="f-corpo" placeholder="parágrafos separados por linha em branco"></textarea>
+
+      <div class="dois">
+        <div><label>Editoria</label>
+          <select id="f-editoria">
+            <option value="brasil">Brasil</option>
+            <option value="internacional">Mundo</option>
+            <option value="regional">Regional</option>
+          </select></div>
+        <div><label>Estado (só se regional)</label>
+          <select id="f-uf"><option value="">—</option><option value="mt">Mato Grosso</option><option value="rs">Rio Grande do Sul</option><option value="rj">Rio de Janeiro</option></select></div>
+      </div>
+
+      <label>Foto (opcional)</label>
+      <div class="foto-area">
+        <label class="bt" for="f-arq">escolher imagem</label>
+        <input type="file" id="f-arq" accept="image/*">
+        <img class="previa" id="f-previa" style="display:none">
+        <input id="f-foto" placeholder="ou cole um endereço https://…" style="flex:1;min-width:200px">
+      </div>
+
+      <div class="acoes"><button class="pub" id="bt-pub">publicar</button></div>
+      <p class="msg" id="m-red"></p>
+    </div>
+    <div class="lista" id="l-red"></div>`;
+
+  document.getElementById('bt-ia').addEventListener('click', async () => {
+    const bt = document.getElementById('bt-ia'), m = document.getElementById('m-red');
+    const bruto = document.getElementById('f-bruto').value.trim();
+    if (bruto.length < 60) { m.className='msg erro'; m.textContent='cole mais material — a IA não inventa o que falta'; return; }
+    bt.disabled = true; bt.textContent = 'escrevendo…'; m.className='msg'; m.textContent='';
+    try {
+      const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'reescrever', senha:senhaRedacao, texto:bruto,
+          titulo: document.getElementById('f-titulo').value, fonte: document.getElementById('f-fonte').value }) })).json();
+      if (r.ok) {
+        document.getElementById('f-titulo').value = r.titulo;
+        document.getElementById('f-linha').value = r.linha;
+        document.getElementById('f-corpo').value = r.corpo.join('\n\n');
+        m.className='msg bom'; m.textContent='texto gerado — revise antes de publicar';
+      } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+    } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+    bt.disabled = false; bt.textContent = 'reescrever com IA';
+  });
+
+  // Reduzir no navegador antes de enviar: foto de celular passa de 5 MB e a
+  // funcao serverless nao aceita corpo desse tamanho. 1400px e mais que
+  // suficiente para a capa e para o card do WhatsApp.
+  document.getElementById('f-arq').addEventListener('change', async e => {
+    const arq = e.target.files[0]; if (!arq) return;
+    const m = document.getElementById('m-red');
+    m.className='msg'; m.textContent='preparando imagem…';
+
+    const menor = await new Promise((ok, falha) => {
+      const img = new Image();
+      img.onload = () => {
+        const larg = Math.min(1400, img.width);
+        const c = document.createElement('canvas');
+        c.width = larg; c.height = Math.round(img.height * (larg / img.width));
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        ok(c.toDataURL('image/jpeg', 0.82));
+      };
+      img.onerror = () => falha(new Error('não consegui ler a imagem'));
+      img.src = URL.createObjectURL(arq);
+    }).catch(() => null);
+
+    if (!menor) { m.className='msg erro'; m.textContent='não consegui ler a imagem'; return; }
+
+    m.textContent = 'enviando…';
+    try {
+      const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'imagem', senha:senhaRedacao, dados:menor, nome:arq.name }) })).json();
+      if (r.ok) {
+        document.getElementById('f-foto').value = r.url;
+        const p = document.getElementById('f-previa');
+        p.src = r.url; p.style.display = 'block';
+        m.className='msg bom'; m.textContent='imagem no ar';
+      } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+    } catch { m.className='msg erro'; m.textContent='falha ao enviar'; }
+  });
+
+  document.getElementById('bt-pub').addEventListener('click', async () => {
+    const m = document.getElementById('m-red');
+    const dados = {
+      acao:'publicar', senha:senhaRedacao,
+      titulo: document.getElementById('f-titulo').value,
+      linha: document.getElementById('f-linha').value,
+      corpo: document.getElementById('f-corpo').value.split(/\n\s*\n/),
+      fonte: document.getElementById('f-fonte').value,
+      fonteLink: document.getElementById('f-link').value,
+      foto: document.getElementById('f-foto').value,
+      editoria: document.getElementById('f-editoria').value,
+      uf: document.getElementById('f-uf').value
+    };
+    m.className='msg'; m.textContent='publicando…';
+    try {
+      const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(dados) })).json();
+      if (r.ok) {
+        m.className='msg bom'; m.textContent='publicada';
+        ['f-bruto','f-titulo','f-linha','f-corpo','f-foto'].forEach(id => document.getElementById(id).value='');
+        document.getElementById('f-previa').style.display='none';
+        listaNotas();
+      } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+    } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+  });
+
+  listaNotas();
+}
+
+async function listaNotas(){
+  const alvo = document.getElementById('l-red');
+  if (!alvo) return;
+  try {
+    const r = await (await fetch('/api/nota?t=' + Date.now(), { cache:'no-store' })).json();
+    const n = r.notas || [];
+    alvo.innerHTML = '<h4>' + (n.length ? n.length + ' no ar (últimos 7 dias)' : 'nenhuma nota publicada') + '</h4>' +
+      n.map(x => `<div class="n"><time>${new Date(x.iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}</time>
+        <span>${(x.titulo||'').replace(/[<>]/g,'')}</span>
+        <button data-id="${x.id}">apagar</button></div>`).join('');
+    alvo.querySelectorAll('button[data-id]').forEach(b => b.addEventListener('click', async () => {
+      await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'apagar', senha:senhaRedacao, id:b.dataset.id }) });
+      listaNotas();
+    }));
+  } catch {}
+}
+trava();
+
 async function desempenho(){
   const alvo = document.getElementById('desemp');
   const meses = (() => { const o=[], d=new Date();
