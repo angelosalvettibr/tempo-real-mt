@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FAF8F3;--tinta:#12100C;--tinta2:#3A362E;--linha:#DCD6C8;--fraco:#7A7264;--rosso:#B34700;
+      --serif:'Source Serif 4',Georgia,serif;--display:'Playfair Display',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--serif);-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--tinta);padding:18px 0;margin-bottom:34px}
+header .wrap{display:flex;align-items:baseline;gap:14px}
+header b{font-family:var(--display);font-size:22px;font-weight:900;letter-spacing:-.02em}
+header a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);text-decoration:none;margin-left:auto}
+header a:hover{color:var(--tinta)}
+.selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosso);border:1px solid var(--rosso);padding:4px 9px;display:inline-block;margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(28px,5.6vw,40px);font-weight:700;line-height:1.14;letter-spacing:-.02em;margin-bottom:14px}
+.linha{font-size:18px;color:var(--tinta2);margin-bottom:20px;line-height:1.5}
+.assina{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fraco);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:11px 0;margin-bottom:26px}
+.foto{margin:0 0 26px}
+.foto img{width:100%;height:auto;display:block;border:1px solid var(--linha)}
+.corpo p{font-size:18px;margin-bottom:19px;line-height:1.68}
+.fonte{border:1px solid var(--tinta);padding:16px 19px;margin:32px 0}
+.fonte b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:8px}
+.fonte p{font-size:15px;line-height:1.6;color:var(--tinta2)}
+.fonte a{color:var(--rosso)}
+.volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:10px 0 60px}
+.vazio{font-family:var(--mono);font-size:13px;color:var(--fraco);padding:60px 0;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><a href="/">← capa</a></div></header>
+<div class="wrap" id="alvo"><p class="vazio">carregando…</p></div>
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+(async () => {
+  const id = new URLSearchParams(location.search).get('id');
+  const alvo = document.getElementById('alvo');
+  try {
+    const r = await fetch('/api/nota?t=' + Date.now(), { cache:'no-store' });
+    const n = ((await r.json()).notas || []).find(x => x.id === id);
+    if (!n) { alvo.innerHTML = '<p class="vazio">Nota não encontrada. Ela pode ter saído do ar.</p>'; return; }
+
+    document.title = n.titulo + ' — Meridiano';
+    const d = new Date(n.iso);
+    alvo.innerHTML = `
+      <span class="selo">${esc(n.selo || 'Edição da redação')}</span>
+      <h1>${esc(n.titulo)}</h1>
+      ${n.resumo ? `<p class="linha">${esc(n.resumo)}</p>` : ''}
+      <div class="assina">Redação Meridiano · ${d.toLocaleDateString('pt-BR')}, ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</div>
+      ${n.foto ? `<figure class="foto"><img src="${esc(n.foto)}" alt="${esc(n.titulo)}" onerror="this.closest('figure').remove()"></figure>` : ''}
+      <div class="corpo">${(n.corpo||[]).map(p => `<p>${esc(p)}</p>`).join('')}</div>
+      <div class="fonte">
+        <b>De onde vem esta informação</b>
+        <p>Este texto foi escrito pela redação do Meridiano, e não passou pela checagem automática de documento oficial que aplicamos às demais matérias. A fonte declarada é <b>${esc(n.fonte)}</b>.${n.fonteLink ? ` O original está <a href="${esc(n.fonteLink)}" target="_blank" rel="noopener">aqui</a>.` : ''}</p>
+      </div>
+      <a class="volta" href="/">← Voltar para a capa</a>`;
+  } catch {
+    alvo.innerHTML = '<p class="vazio">Não consegui carregar esta nota.</p>';
+  }
+})();
+</script>
+</body>
+</html>

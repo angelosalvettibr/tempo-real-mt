@@ -134,6 +134,9 @@ main{padding:34px 0 0;min-height:50vh}
 .evid.confirmado{color:var(--verde)}
 .evid.atribuido{color:var(--oro)}
 .evid.sem-confirmacao{color:var(--fraco)}
+/* Nota escrita pela redacao. Cor propria de proposito: ela nao passou pelo
+   cacador nem pelo cruzamento, e nao pode se confundir com o que passou. */
+.evid.redacao{color:var(--rosso)}
 
 /* ---------------- grade ---------------- */
 .secao{border-bottom:1px solid var(--tinta);padding:10px 0 7px;margin-top:36px;display:flex;align-items:baseline;gap:12px}
@@ -547,7 +550,22 @@ async function carregar(){
       }
     };
     const ARQUIVOS = ['br','mundo', ...Object.keys(ESTADOS)];
-    const partes = (await Promise.all(ARQUIVOS.map(puxa))).filter(Boolean);
+
+    // As notas da redacao nao podem morar nos edicao-*.json: o robo reescreve
+    // aqueles arquivos a cada rodada e elas sumiriam. Vem de fora e sao
+    // juntadas aqui, na hora de exibir.
+    const puxaNotas = async () => {
+      try {
+        const r = await fetch('/api/nota?t=' + Date.now(), { cache:'no-store' });
+        return r.ok ? ((await r.json()).notas || []) : [];
+      } catch { return []; }
+    };
+
+    const [partesBrutas, notas] = await Promise.all([
+      Promise.all(ARQUIVOS.map(puxa)),
+      puxaNotas()
+    ]);
+    const partes = partesBrutas.filter(Boolean);
     window.__diag = diagnostico;
 
     if (!partes.length) {
@@ -569,6 +587,14 @@ async function carregar(){
     // Brasil e Mundo sao os mesmos nos tres: guardamos uma vez so.
     const vistos = new Set();
     const itens = [];
+
+    // A nota da redacao entra primeiro na lista, mas nao disfarcada de
+    // materia do robo: ela carrega nivel 'redacao' e selo proprio, e a
+    // ordenacao por horario coloca cada uma no seu lugar depois.
+    for (const n of notas) {
+      itens.push({ ...n, link: '/nota.html?id=' + encodeURIComponent(n.id), original: false });
+      vistos.add(n.id);
+    }
     for (const p of partes) {
       for (const i of (p.itens || [])) {
         const k = (i.editoria === 'regional' ? i.uf + ':' : '') + i.id;
