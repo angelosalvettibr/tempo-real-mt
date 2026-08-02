@@ -132,6 +132,11 @@ tr:hover td{background:var(--painel)}
 .red .lista .n time{font-family:var(--mono);font-size:10.5px;color:var(--fraco);flex:none}
 .red .lista .n span{flex:1;line-height:1.35}
 .red .lista .n button{padding:4px 9px;font-size:9px;border-color:#5A2222;color:#F85149}
+.red .lista .n button.tog{border-color:var(--borda);color:var(--texto2)}
+.red .lista .n .est{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid;flex:none}
+.red .lista .n .est.no{color:#3FB950;border-color:#1D4A2A}
+.red .lista .n .est.ras{color:#D29922;border-color:#4A3A0E}
+.red .lista .n small{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none}
 .trava{padding:34px 18px;text-align:center}
 .trava input{max-width:230px;margin:12px auto 0;text-align:center;font-family:var(--mono);letter-spacing:.2em}
 .trava p{font-family:var(--sans);font-size:13px;color:var(--fraco);line-height:1.6;max-width:440px;margin:0 auto}
@@ -411,7 +416,10 @@ function formulario(){
         <input id="f-foto" placeholder="ou cole um endereço https://…" style="flex:1;min-width:200px">
       </div>
 
-      <div class="acoes"><button class="pub" id="bt-pub">publicar</button></div>
+      <div class="acoes">
+        <button class="pub" id="bt-pub">publicar</button>
+        <button id="bt-ras">salvar como rascunho</button>
+      </div>
       <p class="msg" id="m-red"></p>
     </div>
     <div class="lista" id="l-red"></div>`;
@@ -471,10 +479,10 @@ function formulario(){
     } catch { m.className='msg erro'; m.textContent='falha ao enviar'; }
   });
 
-  document.getElementById('bt-pub').addEventListener('click', async () => {
+  const enviar = async (rascunho) => {
     const m = document.getElementById('m-red');
     const dados = {
-      acao:'publicar', senha:senhaRedacao,
+      acao:'publicar', senha:senhaRedacao, rascunho,
       titulo: document.getElementById('f-titulo').value,
       linha: document.getElementById('f-linha').value,
       corpo: document.getElementById('f-corpo').value.split(/\n\s*\n/),
@@ -484,17 +492,20 @@ function formulario(){
       editoria: document.getElementById('f-editoria').value,
       uf: document.getElementById('f-uf').value
     };
-    m.className='msg'; m.textContent='publicando…';
+    m.className='msg'; m.textContent = rascunho ? 'salvando…' : 'publicando…';
     try {
       const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(dados) })).json();
       if (r.ok) {
-        m.className='msg bom'; m.textContent='publicada';
+        m.className='msg bom'; m.textContent = rascunho ? 'salva como rascunho' : 'no ar';
         ['f-bruto','f-titulo','f-linha','f-corpo','f-foto'].forEach(id => document.getElementById(id).value='');
         document.getElementById('f-previa').style.display='none';
         listaNotas();
       } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
     } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
-  });
+  };
+
+  document.getElementById('bt-pub').addEventListener('click', () => enviar(false));
+  document.getElementById('bt-ras').addEventListener('click', () => enviar(true));
 
   listaNotas();
 }
@@ -502,13 +513,33 @@ function formulario(){
 async function listaNotas(){
   const alvo = document.getElementById('l-red');
   if (!alvo) return;
+  const ONDE = { brasil:'Capa · Brasil', internacional:'Capa · Mundo', regional:'aba do estado' };
   try {
-    const r = await (await fetch('/api/nota?t=' + Date.now(), { cache:'no-store' })).json();
+    // Com senha vem tudo, inclusive rascunho. O leitor so recebe o que esta no ar.
+    const r = await (await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'listar', senha:senhaRedacao }) })).json();
     const n = r.notas || [];
-    alvo.innerHTML = '<h4>' + (n.length ? n.length + ' no ar (últimos 7 dias)' : 'nenhuma nota publicada') + '</h4>' +
-      n.map(x => `<div class="n"><time>${new Date(x.iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}</time>
-        <span>${(x.titulo||'').replace(/[<>]/g,'')}</span>
-        <button data-id="${x.id}">apagar</button></div>`).join('');
+    const noAr = n.filter(x => x.publicada !== false).length;
+
+    alvo.innerHTML = '<h4>' + (n.length ? `${noAr} no ar · ${n.length - noAr} em rascunho` : 'nenhuma nota ainda') + '</h4>' +
+      n.map(x => {
+        const ok = x.publicada !== false;
+        // Aviso util: regional sem estado nao aparece em aba nenhuma.
+        const orfa = x.editoria === 'regional' && !x.uf;
+        return `<div class="n">
+          <time>${new Date(x.iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}</time>
+          <span class="est ${ok?'no':'ras'}">${ok?'no ar':'rascunho'}</span>
+          <span>${(x.titulo||'').replace(/[<>]/g,'')}</span>
+          <small>${orfa ? '⚠ regional sem estado — não aparece' : (ONDE[x.editoria]||'')}${x.uf?' '+x.uf.toUpperCase():''}</small>
+          <button class="tog" data-tog="${x.id}">${ok?'tirar do ar':'publicar'}</button>
+          <button data-id="${x.id}">apagar</button></div>`;
+      }).join('');
+
+    alvo.querySelectorAll('button[data-tog]').forEach(b => b.addEventListener('click', async () => {
+      await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'alternar', senha:senhaRedacao, id:b.dataset.tog }) });
+      listaNotas();
+    }));
     alvo.querySelectorAll('button[data-id]').forEach(b => b.addEventListener('click', async () => {
       await fetch('/api/nota', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ acao:'apagar', senha:senhaRedacao, id:b.dataset.id }) });
