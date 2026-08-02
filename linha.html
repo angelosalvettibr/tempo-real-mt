@@ -42,6 +42,12 @@ h1{font-family:var(--display);font-size:clamp(29px,5.6vw,42px);font-weight:700;l
 .cartao p{font-size:15.5px;color:var(--tinta2);line-height:1.5}
 .cartao span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:8px}
 .volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:26px 0 60px}
+.convite{border:1px solid var(--tinta);background:var(--caixa,#fff);padding:22px 24px;margin:38px 0 8px}
+.convite b{font-family:var(--display);font-size:19px;display:block;margin-bottom:9px}
+.convite p{font-size:15.5px;color:var(--tinta2);line-height:1.6;margin-bottom:15px}
+.convite a{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:11px 17px}
+.convite a:hover{background:var(--tinta);color:var(--papel)}
+.convite small{display:block;margin-top:12px;font-size:13px;color:var(--fraco);line-height:1.5}
 .vazio{font-family:var(--mono);font-size:13px;color:var(--fraco);padding:50px 0;text-align:center}
 </style>
 </head>
@@ -50,6 +56,13 @@ h1{font-family:var(--display);font-size:clamp(29px,5.6vw,42px);font-weight:700;l
 <div class="wrap" id="alvo"><p class="vazio">carregando…</p></div>
 <script>
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const CONVITE = `<div class="convite">
+  <b>Tem um caso que se arrastou assim?</b>
+  <p>Se você viveu uma história em que a versão inicial ficou registrada e o desfecho não, a redação pode montar a cronologia. Você conta o que aconteceu e junta os links que tiver; a apuração e a redação são nossas.</p>
+  <a href="/contar.html">Contar o caso &rarr;</a>
+  <small>Acesso restrito. O envio não garante publicação: a redação avalia o material e verifica o que for verificável.</small>
+</div>`;
 
 const METODO = `<div class="metodo"><b>Como esta página é feita</b>
   <p>Uma linha do tempo reúne os fatos de um caso em ordem, do mais recente ao mais antigo, sem análise nem posição do jornal. Cada marco declara a própria origem: o nome da publicação que o registrou, ou a indicação de que se trata de relato de quem viveu o caso, ou ainda de que não há registro localizado. Essa última marca costuma ser a informação mais reveladora da página.</p></div>`;
@@ -88,6 +101,7 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
               : `<span class="sem">${esc(m.fonte)}</span>`}</span>
           </div></div>`).join('')}</div>
         ${METODO}
+        ${CONVITE}
         <a class="volta" href="/linha.html">← Todas as linhas do tempo</a>`;
     } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }
     return;
@@ -107,6 +121,7 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
           <span>${x.marcos} marcos · atualizada em ${new Date(x.atualizada).toLocaleDateString('pt-BR')}</span>
         </a>`).join('')
         : '<p class="vazio">Nenhuma linha do tempo publicada ainda.</p>'}
+      ${CONVITE}
       <a class="volta" href="/">← Voltar para a capa</a>`;
   } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }
 })();
