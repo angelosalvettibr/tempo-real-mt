@@ -108,6 +108,7 @@ REGRAS QUE NÃO PODEM SER QUEBRADAS:
 4. NÃO ACUSE NINGUÉM. Não nomeie jornalista, delegado ou promotor. Órgão pode.
 5. ORDEM DO MAIS RECENTE PARA O MAIS ANTIGO.
 6. Se o material não permitir montar pelo menos dois marcos com data, diga isso em vez de inventar.
+7. ESCREVA EM PORTUGUÊS CORRETO, COM TODOS OS ACENTOS. "investigações", não "investigacoes". "indenizações", não "indenizacoes". Texto sem acento é erro de publicação.
 
 FORMATO — exatamente isto, sem markdown:
 TITULO: (uma linha, factual, até 90 caracteres)
