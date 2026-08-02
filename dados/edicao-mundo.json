@@ -1,26 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-02T11:51:28.489Z",
-  "modelo": "gemini-flash-latest",
+  "gerado": "2026-08-02T15:07:44.724Z",
+  "modelo": "gemini-2.0-flash-lite",
   "numeros": {
-    "pauta": 44,
-    "fonteLivre": 22,
-    "confirmadas": 3,
-    "publicadas": 11,
+    "pauta": 42,
+    "fonteLivre": 28,
+    "confirmadas": 0,
+    "publicadas": 4,
     "resgatadas": 0,
-    "semFonte": 15
+    "semFonte": 13
   },
   "fontes": {
-    "checadas": 10,
-    "responderam": 10,
-    "entregando": 9,
-    "itens": 66,
+    "checadas": 24,
+    "responderam": 18,
+    "entregando": 12,
+    "itens": 70,
     "lista": [
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -28,8 +28,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -48,7 +48,16 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,16 +66,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 7,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,8 +82,26 @@
       },
       {
         "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -99,77 +117,181 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       }
     ]
   },
   "cidades": [],
   "itens": [
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2023/08/07/burggrabenklamm---Landscape.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": null,
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:grupo-que-elaborou-manual-sobre-dependencias-se-reunira-em-roma-com-o-",
+      "id": "ilm:brasil-assina-acordo-para-criacao-de-organizacao-de-inteligencia-artif",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Grupo que elaborou manual sobre dependências se reunirá em Roma com o Papa Leão XIV",
-      "resumo": "O documento do CELAM será entregue ao término de dois dias de trabalhos no fim deste mês de agosto, após ter sido apresentado em Bogotá.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/manual-comunidades-eclesiais-latino-americanas-dependencias.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
+      "titulo": "Brasil assina acordo para criação de organização de inteligência artificial com a China",
+      "resumo": "O país está entre as 29 nações integrantes da Waico, entidade com sede em Xangai que busca desenvolver modelos de código aberto para a governança global da tecnologia.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/brasil-deve-aproveitar-alianca-com-china-para-soberania-digital-em-ia",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "Um grupo de pessoas envolvidas na redação do \"Manual das Comunidades Eclesiais Latino-Americanas para enfrentar crise das dependências\" vai se encontrar no fim deste mês de agosto, em Roma, para dois dias de trabalhos. Ao término do encontro, os participantes serão recebidos pelo Papa Leão XIV, a quem entregarão um exemplar do documento.",
-        "Intitulado em espanhol como \"Manual de Adicciones\", o texto foi promovido e redigido pelo Setor de Pastoral Latino-Americana de Acompanhamento e Prevenção das Dependências (PLAPA), do Conselho Episcopal Latino-Americano (CELAM). A apresentação do material ocorreu na sede do CELAM, em Bogotá, em 25 de junho, por Emilce Cuda, secretária da Pontifícia Comissão para a América Latina, e pelo Padre Charly Olivero, coordenador do PLAPA.",
-        "O documento atualiza a publicação de referência anterior, intitulada \"Igreja, droga e toxicodependência\", lançada em 2001 no pontificado de João Paulo II. Mais de trezentas pessoas se envolveram com o PLAPA na criação da rede que deu origem ao novo manual, concebido para auxiliar o acompanhamento de pessoas afetadas pelo uso de substâncias químicas em bairros populares e áreas vulneráveis.",
-        "A publicação foi dividida em três fases — ver, julgar e agir —, modelo adotado pelas Igrejas da América Latina e codificado por João XXIII na encíclica \"Mater et Magistra\". A elaboração baseia-se em princípios da Exortação apostólica \"Evangelii Gaudium\", do Papa Francisco, utilizando a estrutura do método escolar com questões, respostas e objeções."
+        "O Brasil integrou o grupo de 29 países que assinaram o documento de criação da Organização Mundial de Cooperação em Inteligência Artificial, denominada Waico. A iniciativa, anunciada em julho deste ano e sediada em Xangai, na China, busca estabelecer uma governança global da tecnologia por meio de modelos com código aberto.",
+        "O projeto liderado pela China contrapõe-se à proposta dos Estados Unidos para o futuro da inteligência artificial, chamada Pax Silica. A iniciativa da Casa Branca busca reunir aliados para controlar as cadeias de suprimento de semicondutores, minerais críticos e energia, conforme posicionamento do governo de Donald Trump exposto pelo subsecretário de Estado Jacob Helberg.",
+        "Diante do cenário geopolítico, o governo brasileiro defende manter diálogo com diferentes iniciativas e afirma que o país não pode ficar dependente de modelos específicos. Em fóruns multilaterais, o presidente Luiz Inácio Lula da Silva declarou que é necessária uma governança intergovernamental da tecnologia em que todos os Estados tenham assento, visão também defendida pelo secretário-geral da ONU, António Guterres.",
+        "Sobre a atuação brasileira, o professor da Universidade Federal do ABC, Sérgio Amadeu da Silveira, ressaltou a necessidade de o país investir em infraestrutura crítica própria para processamento e armazenamento de dados. Já o fundador da organização Plures, Ettore Arpini, indicou a capacidade do Brasil de transitar entre as iniciativas ocidentais e chinesas."
       ],
-      "link": "/materia/grupo-que-elaborou-manual-sobre-dependencias-se-reunira-em-roma-com-o-.html",
-      "iso": "2026-08-02T07:28:00.000Z",
-      "hora": "03h28",
+      "link": "/materia/brasil-assina-acordo-para-criacao-de-organizacao-de-inteligencia-artif.html",
+      "iso": "2026-08-01T11:32:00.000Z",
+      "hora": "07h32",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://images.theconversation.com/files/751491/original/file-20260731-50-pu7b24.jpg?ixlib=rb-4.1.1&amp;rect=253%2C709%2C5625%2C2812&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:oms-lanca-alerta-global-sobre-impactos-da-fumaca-de-incendios-floresta",
+      "id": "ilm:doutorandos-entregam-carta-a-lula-e-cobram-reajuste-em-bolsas-congelad",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "OMS lança alerta global sobre impactos da fumaça de incêndios florestais",
-      "resumo": "A agência orienta o isolamento residencial, o uso de máscaras FFP2 ou N95 e a suspensão de atividades físicas ao ar livre devido à poluição do ar.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853913",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [
-        "AP Photo/Michael Varaklas - Michael Varaklas"
-      ],
-      "quentura": 1,
+      "titulo": "Doutorandos entregam carta a Lula e cobram reajuste em bolsas congeladas há 17 anos",
+      "resumo": "Mais de 2.500 bolsistas do programa de doutorado-sanduíche vão ao exterior no segundo semestre de 2026 com benefício fixado em 1.300 dólares desde 2009.",
+      "fonte": "Meridiano, com informações de The Conversation",
+      "origemLink": "https://theconversation.com/o-drama-da-bolsa-de-pesquisa-sem-reajuste-muito-alem-da-carta-entregue-a-lula-288885",
+      "origemNome": "The Conversation",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Organização Mundial da Saúde, OMS, lançou um novo alerta global sobre os riscos dos incêndios florestais e da fumaça tóxica que atravessa continentes. A agência adverte que o monitoramento da qualidade do ar tornou-se uma prioridade urgente de saúde pública em locais afetados por altas temperaturas, como Portugal e diversas outras regiões.",
-        "A fumaça afeta a qualidade do ar a centenas de quilômetros dos focos de queimada, provocando impactos físicos e psicológicos. A exposição prolongada agrava problemas de saúde pré-existentes, como asma, doenças pulmonares crônicas e complicações cardíacas. Bebês, crianças, grávidas, idosos e trabalhadores ao ar livre estão entre os grupos de maior vulnerabilidade.",
-        "De acordo com as Nações Unidas, grande parte do fogo surge por negligência humana e ações de fogo posto, mas o aquecimento global, as mudanças climáticas e as transformações na gestão do solo aceleram a propagação das chamas. Na Europa, a OMS atua em parceria com governos para reforçar a estrutura de hospitais contra ondas de calor e densa fumaça.",
-        "Para mitigar os danos respiratórios, a OMS recomenda acompanhar os alertas locais, cumprir ordens de evacuação e permanecer no domicílio com portas e janelas fechadas. Caso a saída seja estritamente necessária, a orientação é utilizar máscaras FFP2 ou N95, reduzir viagens não essenciais e suspender exercícios ao ar livre."
+        "No dia 28 de julho de 2026, durante a 78ª Reunião Anual da Sociedade Brasileira para o Progresso da Ciência (SBPC) em Niterói, estudantes do Programa de Doutorado Sanduíche no Exterior (PDSE) entregaram ao Presidente Lula uma carta cobrando o reajuste das bolsas. Ao encerrar seu discurso no evento, o presidente subiu ao palco com o documento e pressionou seus ministros para que o reajuste fosse resolvido.",
+        "No segundo semestre de 2026, mais de 2.500 doutorandos vão para o exterior pelo programa da CAPES. A bolsa mensal do governo federal é de 1.300 dólares, valor fixado em 2009 e sem reajuste há 17 anos. Em destinos como Estados Unidos, França e Austrália, o valor fica abaixo do mínimo exigido por universidades para emissão de documentos migratórios, levando pesquisadores a recorrerem a economias pessoais, empréstimos e vaquinhas.",
+        "O PDSE é uma política de internacionalização do Ministério da Educação que permite a doutorandos desenvolverem parte da pesquisa em instituições estrangeiras, com a obrigação de retornar e concluir a tese no Brasil. As vagas são distribuídas aos programas de pós-graduação mais bem avaliados do país.",
+        "A internacionalização da ciência no Brasil começou na década de 1950, com a criação da CAPES e do CNPq. Em 2011, o governo criou o programa Ciência sem Fronteiras, que concedeu mais de 100 mil bolsas entre 2012 e 2016, com investimento de aproximadamente R$ 13 bilhões, sendo descontinuado em 2017."
       ],
-      "link": "/materia/oms-lanca-alerta-global-sobre-impactos-da-fumaca-de-incendios-floresta.html",
-      "iso": "2026-07-31T12:00:00.000Z",
-      "hora": "08h00",
+      "link": "/materia/doutorandos-entregam-carta-a-lula-e-cobram-reajuste-em-bolsas-congelad.html",
+      "iso": "2026-07-31T21:41:20.000Z",
+      "hora": "17h41",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -180,11 +302,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-pede-solucoes-de-paz-para-situacao-alarmante-em-ceuta",
+      "id": "ilm:papa-leao-xiv-expressa-preocupacao-com-crise-de-migrantes-em-ceuta",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Papa Leão XIV pede soluções de paz para situação alarmante em Ceuta",
-      "resumo": "Enclave espanhol no Marrocos enfrenta emergência humanitária com abrigos lotados, enquanto a diocese local destina arrecadações para auxílio aos migrantes.",
+      "titulo": "Papa Leão XIV expressa preocupação com crise de migrantes em Ceuta",
+      "resumo": "Durante a oração do Angelus, o Pontífice pediu soluções de paz para o enclave espanhol no Marrocos, que enfrenta situação de emergência humanitária e social.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-preocupado-ceuta-encontrem-solucoes-justas.html",
       "origemNome": "Vatican News",
@@ -192,12 +314,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV expressou preocupação com a situação em Ceuta, enclave espanhol no Marrocos, e pediu soluções de paz, estabilidade e justiça ao final da oração do Angelus, na Praça São Pedro. O pontífice fez o apelo em espanhol e pediu a intercessão de Nossa Senhora da África.",
-        "A cidade autônoma de Ceuta enfrenta uma emergência humanitária e social, com estruturas de acolhimento acima do limite de capacidade e milhares de pessoas dormindo ao ar livre. O enclave de Melilla também registrou aumento de chegadas, com confrontos entre jovens e forças de segurança marroquinas, o que gerou o fechamento temporário do posto de fronteira e o reforço do controle policial.",
-        "A diocese de Cádiz e Ceuta manifestou preocupação com a vulnerabilidade dos afetados e colocou-se à disposição das instituições civis. As doações arrecadadas durante o fim de semana nas paróquias de Ceuta foram destinadas à delegação diocesana para a migração, acompanhadas de um convite para que as comunidades intensifiquem orações pelos afetados e pelos gestores da crise.",
-        "Além do apelo por Ceuta, o Papa pediu orações pelo fim das guerras no mundo e pelo alcance de soluções diplomáticas para conflitos, lembrando crianças, idosos e doentes. Ele recordou ainda a comemoração do Perdão de Assis, indulgência obtida por São Francisco junto ao Papa Honório III em 1216."
+        "O Papa Leão XIV manifestou preocupação com a situação em Ceuta, enclave espanhol no Marrocos, durante a oração do Angelus na Praça São Pedro. Falando em espanhol, o Santo Padre fez um apelo para que sejam encontradas soluções de paz, estabilidade e justiça para a região.",
+        "A cidade autônoma vive uma emergência humanitária e social, com centros de acolhimento além da capacidade máxima e milhares de pessoas dormindo ao ar livre. O outro enclave espanhol em território marroquino, Melilla, também teve aumento de chegadas, com centenas de jovens tentando atravessar a cerca e o porto, gerando confrontos com forças de segurança. As autoridades fecharam o posto de fronteira temporariamente e reforçaram os controles.",
+        "A diocese de Cádiz e Ceuta colocou-se à disposição das instituições civis para colaborar no atendimento aos migrantes e direcionou as doações arrecadadas nas paróquias locais durante o fim de semana para a delegação de migração. O Papa solicitou ainda orações pelo fim das guerras no mundo e lembrou a data do Perdão de Assis, obtido por São Francisco junto ao Papa Honório III em 1216."
       ],
-      "link": "/materia/papa-leao-xiv-pede-solucoes-de-paz-para-situacao-alarmante-em-ceuta.html",
+      "link": "/materia/papa-leao-xiv-expressa-preocupacao-com-crise-de-migrantes-em-ceuta.html",
       "iso": "2026-08-02T10:52:00.000Z",
       "hora": "06h52",
       "original": true,
@@ -206,486 +327,37 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
-      "fotoAlt": null,
+      "foto": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/august/FullMoon28-7-2026BrankoNadj.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+      "fotoAlt": "moon",
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:oit-relata-queda-no-desemprego-para-5-3-na-america-latina-e-caribe",
+      "id": "ilm:imagem-na-krk-island-registra-a-buck-moon-e-o-belt-of-venus",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "OIT relata queda no desemprego para 5,3% na América Latina e Caribe",
-      "resumo": "A taxa de informalidade regional recuou para 47,4%, enquanto o desemprego no Brasil caiu para 7% no primeiro trimestre do ano passado.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853905",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [
-        "Folha Mundo"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A Organização Internacional do Trabalho, OIT, divulgou em Genebra, na Suíça, o relatório \"Tendências do Mercado de Trabalho na América Latina e no Caribe\". O documento aponta que a taxa regional de desemprego caiu de 5,8% para 5,3% entre 2024 e 2025, atingindo o nível mais baixo nos últimos 10 anos.",
-        "No mesmo período, a taxa de emprego regional aumentou de 59,7% para 59,9%. A desocupação entre jovens de 15 a 24 anos registrou 11,3%, enquanto entre pessoas com mais de 25 anos ficou em 4,1%. A taxa de desemprego entre homens foi de 4,4% e entre mulheres alcançou 6,3%.",
-        "A taxa de informalidade geral em um grupo de 15 países latino-americanos teve queda de 0,9 ponto percentual em relação a 2024, situando-se em 47,4%, o menor patamar desde 2019. No Brasil, a informalidade ficou em 35,6% e a taxa de desemprego caiu de 7,9% no primeiro trimestre de 2024 para 7% no mesmo período do ano passado. O Uruguai apresentou taxa de 22,4% e a Bolívia atingiu 82,2%.",
-        "O relatório destaca que as mulheres enfrentam obstáculos de acesso ao mercado ligados à distribuição desigual das responsabilidades de cuidado. Segundo Gerson Martínez, especialista regional em economia do trabalho da OIT, e Ana Virginia Moreira Gomes, diretora-regional da OIT para a América Latina e o Caribe, as políticas públicas precisam combinar formalização, produtividade e proteção social. Os primeiros dados para 2026 indicam manutenção no crescimento do emprego e queda no desemprego."
-      ],
-      "link": "/materia/oit-relata-queda-no-desemprego-para-5-3-na-america-latina-e-caribe.html",
-      "iso": "2026-07-31T12:00:00.000Z",
-      "hora": "08h00",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:brasil-integra-criacao-da-waico-para-governanca-de-inteligencia-artifi",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Brasil integra criação da Waico para governança de inteligência artificial",
-      "resumo": "Acordo assinado por 29 países prevê modelos de código aberto e se contrapõe ao projeto norte-americano Pax Silica.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/brasil-deve-aproveitar-alianca-com-china-para-soberania-digital-em-ia",
-      "origemNome": "Agência Brasil",
+      "titulo": "Imagem na Krk Island registra a Buck Moon e o Belt of Venus",
+      "resumo": "O registro feito por Branko Nadj em 28 de julho na costa de Croatia antecipa o eclipse solar total marcado para 12 de agosto.",
+      "fonte": "Meridiano, com informações de NASA",
+      "origemLink": "https://science.nasa.gov/image-article/apod-2026-august-1-buck-moon-and-belt-of-venus/",
+      "origemNome": "NASA",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Brasil assinou o documento de criação da Organização Mundial de Cooperação em Inteligência Artificial (Waico), ao lado de outros 28 países. Anunciada em julho deste ano, a instituição tem sede em Xangai, na China, e objetiva desenvolver uma governança global da tecnologia por meio de modelos com código aberto.",
-        "A iniciativa chinesa contrasta com o projeto dos Estados Unidos, denominado Pax Silica, que reúne aliados da Casa Branca para controlar cadeias de suprimento de semicondutores, minerais críticos, dados e energia. Sobre a disputa geopolítica, o presidente Luiz Inácio Lula da Silva defende que o Brasil não fique dependente de modelos específicos e apoia uma governança intergovernamental em que todos os Estados tenham assento.",
-        "O professor da Universidade Federal do ABC, Sérgio Amadeu da Silveira, aponta que o país necessita de infraestrutura crítica própria e soberania sobre dados para absorver o conhecimento da cooperação com a China. Já o fundador da organização Plures, Ettore Arpini, avalia que o Brasil tem condições de transitar entre as propostas chinesas e ocidentais.",
-        "Durante o lançamento da Waico, o secretário-geral da ONU, António Guterres, declarou que a tecnologia deve ser moldada por toda a humanidade. Em artigo, o subsecretário de Estado dos EUA para Assuntos Econômicos, Jacob Helberg, vinculou o projeto do governo de Donald Trump à crítica do conceito de soberania digital, defendendo o uso das infraestruturas das grandes empresas de tecnologia."
+        "Uma fotografia registrada em 28 de julho na Krk Island, na costa de Croatia, mostra o nascer da Buck Moon sobre o Mar Adriático e montanhas distantes. A imagem, feita por Branko Nadj, foi divulgada pela NASA em 1º de agosto de 2026 no Astronomy Picture of the Day.",
+        "A Buck Moon é o nome tradicional para a lua cheia de julho. Na imagem, a lua cheia surge no momento em que o Sol se põe, acompanhada pela sombra da Terra, que aparece como uma faixa cinza difusa acima do horizonte sudeste.",
+        "Acima da sombra terrestre está o arco anticrepuscular rosado, chamado de Belt of Venus. Essa faixa de luz solar retroespalhada compartilha o horizonte leste com a sombra atmosférica da Terra e a lua cheia.",
+        "O evento precede a New Moon de 12 de agosto. Nessa data, a lua projetará sua própria sombra sobre o planeta Terra durante um eclipse solar total."
       ],
-      "link": "/materia/brasil-integra-criacao-da-waico-para-governanca-de-inteligencia-artifi.html",
-      "iso": "2026-08-01T11:32:00.000Z",
-      "hora": "07h32",
+      "link": "/materia/imagem-na-krk-island-registra-a-buck-moon-e-o-belt-of-venus.html",
+      "iso": "2026-08-01T04:05:00.000Z",
+      "hora": "00h05",
       "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/srv/2026/08/02/2026-08-02-angelus/1785665758174.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-pede-redescoberta-da-partilha-e-da-caridade-durante-o-an",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Papa Leão XIV pede redescoberta da partilha e da caridade durante o Angelus",
-      "resumo": "Em catequese sobre a multiplicação dos pães na Praça de São Pedro, o Pontífice afirmou que nada é desperdiçado quando é compartilhado e criticou a ganância.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-deserto-guerra-arrogancia-redescobrir-logica-caridade.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Papa Leão XIV realizou o Angelus do 18º Domingo do Tempo Comum a partir da janela do Palácio Apostólico, na Praça de São Pedro. O Pontífice apresentou uma catequese dedicada ao Evangelho da multiplicação dos pães e declarou que os cristãos são chamados a redescobrir a lógica da partilha e da caridade no deserto da guerra e da arrogância.",
-        "Ao relembrar o milagre em que Jesus abençoou, partiu e entregou os pães aos discípulos para distribuição, o Papa indicou a ação como um modelo de fraternidade para superar a violência, o egoísmo e a indiferença. Ele explicou que esses atos encontram plenitude na Última Ceia e pediu que a celebração eucarística seja traduzida em gestos concretos no dia a dia, tendo como primeiro sinal a bênção da mesa em família e entre amigos.",
-        "O Papa afirmou que a acumulação e o desperdício são duas faces da ganância, a qual definiu como uma doença da alma que embriaga de riquezas e faz ignorar quem chora de fome e clama de sede. Por fim, Leão XIV pediu à Virgem Maria crescimento na caridade para que não falte o pão de cada dia a ninguém."
-      ],
-      "link": "/materia/papa-leao-xiv-pede-redescoberta-da-partilha-e-da-caridade-durante-o-an.html",
-      "iso": "2026-08-02T10:30:00.000Z",
-      "hora": "06h30",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:el-nino-deve-se-intensificar-e-alterar-clima-global-entre-agosto-e-out",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "El Niño deve se intensificar e alterar clima global entre agosto e outubro de 2026",
-      "resumo": "O fenômeno pode elevar temperaturas na maior parte do planeta e alterar o regime de chuvas, gerando impactos na agricultura, na saúde e em comunidades vulneráveis.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853909",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O fenômeno climático El Niño está em constante intensificação e deve dominar os padrões do clima global no período de agosto a outubro de 2026, segundo a Organização Meteorológica Mundial, a OMM. A projeção indica um evento forte, em um contexto de calor oceânico no qual as anomalias de temperatura da superfície do mar podem ultrapassar 2,9°C nas principais regiões de monitoramento.",
-        "O secretário-geral das Nações Unidas, António Guterres, afirmou que a exploração de combustíveis fósseis como carvão, petróleo e gás alimenta a crise do clima. A Atualização Climática Global da OMM aponta probabilidade extremamente elevada de temperaturas acima da média na maior parte das áreas continentais, incluindo grande parte da América do Sul. Além do El Niño, prevê-se a ocorrência de um Dipolo Positivo do Oceano Índico.",
-        "A previsão indica condições mais úmidas do que a média no sudeste da América do Sul, no Grande Chifre da África, em partes da Ásia Central, no sul da Europa e no oeste da América do Norte. Em contrapartida, cenários mais secos são prováveis no subcontinente indiano, no sul e leste da Austrália, no sul da América Central, em partes do Caribe, no noroeste da América do Sul e no norte da Europa.",
-        "O El Niño é um padrão climático natural caracterizado por temperaturas acima da média no Pacífico Equatorial Central e Oriental, ocorrendo a cada dois a sete anos com duração habitual de nove a doze meses. A secretária-geral da OMM, Celeste Saulo, declarou que as decisões atuais definirão os impactos futuros. A agência classifica os eventos como fracos, moderados, fortes ou muito fortes, sem incluir o termo \"super El Niño\" em seu sistema operacional."
-      ],
-      "link": "/materia/el-nino-deve-se-intensificar-e-alterar-clima-global-entre-agosto-e-out.html",
-      "iso": "2026-07-31T12:00:00.000Z",
-      "hora": "08h00",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:china-e-estados-unidos-lideram-iniciativas-distintas-para-controlar-a-",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "China e Estados Unidos lideram iniciativas distintas para controlar a cadeia da IA",
-      "resumo": "Enquanto a Pax Silica dos americanos reúne 23 países e a União Europeia, a organização chinesa Waico tem a adesão de 29 nações, incluindo o Brasil.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/waico-e-pax-silica-entenda-disputa-entre-china-e-eua-por-futuro-da-ia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "China e Estados Unidos criaram projetos concorrentes para influenciar a cadeia produtiva e a governança da Inteligência Artificial. A iniciativa norte-americana aposta no modelo Pax Silica com parceiros específicos, enquanto a proposta de Pequim fundou a Organização Mundial de Cooperação em IA, conhecida como Waico, focada no uso de sistemas de código aberto.",
-        "Lançada em dezembro de 2025 pelo governo de Donald Trump, a Pax Silica é formada atualmente por 23 países e a União Europeia, incluindo membros recentes como Argentina, El Salvador, Chile, Costa Rica e Panamá. O grupo busca controlar o acesso a semicondutores, minerais críticos e energia, além de explorar investimentos conjuntos entre países alinhados à Casa Branca.",
-        "Já a Waico foi criada em julho deste ano, com sede em Xangai, e teve sua declaração assinada por 29 nações, incluindo Brasil, Rússia, África do Sul, Moçambique, Cuba e Venezuela. A entidade defende o desenvolvimento da tecnologia com código aberto, o que permite o uso, estudo e modificação livre do software por qualquer organização, sem a exigência de contratos pagos com empresas de tecnologia.",
-        "Diante das duas propostas, o governo brasileiro afirmou que o país não pode ficar dependente de nenhum modelo, seja chinês ou ocidental. O posicionamento do governo defende o diálogo com todas as iniciativas para alcançar a soberania digital brasileira."
-      ],
-      "link": "/materia/china-e-estados-unidos-lideram-iniciativas-distintas-para-controlar-a-.html",
-      "iso": "2026-08-01T11:31:00.000Z",
-      "hora": "07h31",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/02/03/2.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:roma-realiza-festa-de-nossa-senhora-das-neves-na-basilica-de-santa-mar",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Roma realiza festa de Nossa Senhora das Neves na Basilica de Santa Maria Maior",
-      "resumo": "Evento tera missa solene celebrada pelo cardeal Rolandas Makrickas e reevocacao da nevada de 358 d.C.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/roma-5-agosto-retorna-festa-nossa-senhora-neves.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Basílica Papal de Santa Maria Maior, em Roma, realiza no dia 5 de agosto a comemoração do aniversário de sua dedicação na solenidade de Nossa Senhora das Neves. O evento é voltado a fiéis, moradores e turistas, com a repetição da tradicional reevocação da nevada.",
-        "A programação do dia 5 de agosto inclui uma missa solene às 10h, no horário local, celebrada pelo cardeal arcipreste Rolandas Makrickas. Às 17h, o bispo vigário Luis Manuel Alí Herrera preside o canto das Vésperas. A nevada é reevocada durante as duas celebrações eucarísticas.",
-        "A festa é precedida por um tríduo nos dias 2, 3 e 4 de agosto, com missas às 18h na capela da Salus Populi Romani. No dia 4 de agosto, às 17h, as primeiras vésperas solenes são presididas por monsenhor Ivan Ricupero, delegado para a Pastoral.",
-        "A tradição remonta ao ano de 358 d.C., sob o pontificado do Papa Libério, quando a Virgem apareceu em sonho ao Pontífice e ao patrício João pedindo a edificação de uma igreja onde caísse neve. A neve caiu sobre o Esquilino na noite quente entre 4 e 5 de agosto, e Libério traçou as proporções da igreja no local. O templo é também a basílica onde está sepultado o Papa Francisco."
-      ],
-      "link": "/materia/roma-realiza-festa-de-nossa-senhora-das-neves-na-basilica-de-santa-mar.html",
-      "iso": "2026-08-02T08:32:00.000Z",
-      "hora": "04h32",
-      "original": true,
-      "contexto": "As celebrações são voltadas para fiéis, moradores e turistas. A programação oficial do evento ocorre entre os dias 2 e 5 de agosto.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:fenomeno-el-nino-coloca-milhoes-de-pessoas-em-risco-no-leste-e-no-sul-",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Fenômeno El Niño coloca milhões de pessoas em risco no leste e no sul da África",
-      "resumo": "Para conter impactos previstos até o início de 2027, a ONU repassa recursos e prepara comunidades afetadas por secas e inundações no continente africano.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853900",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O fenômeno climático El Niño coloca milhões de vidas em risco no leste e no sul da África, levando agências e fundos da ONU a atuarem na preparação prévia das comunidades. Meteorologistas indicam que o aquecimento periódico do Oceano Pacífico deve se intensificar nos próximos meses e pode se estender até o início de 2027.",
-        "No leste da África, da Somália à Tanzânia, o padrão traz chuvas excessivas, enchentes repentinas, deslizamentos de terra, destruição de estradas e surtos de cólera e malária. No sul do continente, da Zâmbia à África do Sul e da Namíbia a Moçambique, o cenário oposto causa quebra de safras, escassez de alimentos e secagem de fontes de água.",
-        "A agricultora Esnart Chongani, da Zâmbia, relatou perda total da colheita de milho na seca de 2024, enquanto Martha Kalumbi, do Malauí, teve o filho hospitalizado por desnutrição após o fracasso da safra. Na Somália, Asha Mohamed, mãe de nove filhos, precisou deixar sua casa devido às inundações registradas em 2023.",
-        "Para mitigar os efeitos, a FAO e o WFP buscam atingir 8,8 milhões de pessoas em 22 países de alto risco. Entre 2023 e 2025, o financiamento para ações antecipatórias entregou recursos antes dos desastres a mais de 3 milhões de pessoas no sul da África e a 5,5 milhões no leste africano. Segundo Tom Fletcher, coordenador de Ajuda Humanitária de Emergência da ONU, a escolha é entre esperar pelo desastre ou investir em resiliência."
-      ],
-      "link": "/materia/fenomeno-el-nino-coloca-milhoes-de-pessoas-em-risco-no-leste-e-no-sul-.html",
-      "iso": "2026-07-31T12:00:00.000Z",
-      "hora": "08h00",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:travessia-de-migrantes-para-ceuta-deixa-19-mortos-nas-ultimas-24-horas",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Travessia de migrantes para Ceuta deixa 19 mortos nas últimas 24 horas",
-      "resumo": "Centenas de pessoas tentaram entrar em territórios espanhóis pelo Marrocos, enquanto agências da ONU acompanham a situação e o posto de Beni-Enzar permanece fechado.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/07/1853902",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Nas últimas 24 horas, subiu para 19 o número de mortos em tentativas de travessia a nado a partir do Marrocos para o território de Ceuta, administrado pela Espanha. No mesmo período, centenas de migrantes tentaram entrar por terra e mar nos territórios de Ceuta e Melilla.",
-        "As mortes ocorreram por afogamento durante a travessia marítima. Migrantes utilizaram boias improvisadas e câmaras de ar de pneus na água, enquanto grupos em terra superaram o dispositivo da Guarda Civil Espanhola no espigão costeiro e forçaram portões de acesso. Na sexta-feira, centenas de pessoas que haviam entrado de forma irregular em Ceuta iniciaram o retorno voluntário ao Marrocos pelo mesmo caminho do litoral.",
-        "A instabilidade atingiu também Melilla, onde o posto de Beni-Enzar, único ponto de travessia operacional entre Espanha e Marrocos naquela área, permanece totalmente fechado após sucessivas tentativas de entrada. O bloqueio deixou centenas de veículos e viajantes retidos nas vias de acesso, incluindo cidadãos de origem magrebina que vivem na Europa.",
-        "Para conter novos avanços na fronteira, veículos do Exército espanhol e patrulhas da Guarda Civil atuam no perímetro. A Organização Internacional para Migrações e a Agência das Nações Unidas para Refugiados na Espanha monitoram a situação e mantêm profissionais preparados para atuar na região."
-      ],
-      "link": "/materia/travessia-de-migrantes-para-ceuta-deixa-19-mortos-nas-ultimas-24-horas.html",
-      "iso": "2026-07-31T12:00:00.000Z",
-      "hora": "08h00",
-      "original": true,
-      "contexto": null,
+      "contexto": "A fotografia foi registrada em 28 de julho e divulgada pela NASA em 1º de agosto de 2026. A próxima etapa citada ocorre em 12 de agosto, data da lua nova e de um eclipse solar total. Não há registros de casos parecidos no histórico.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a suspensão de ataques ao Irã por Trump é veiculada por três publicações.",
-        "Que as notícias divergem entre busca de acordo rápido e existência de acordo preliminar.",
-        "Que o governo iraniano teria se manifestado de forma contrária ao conteúdo veiculado."
-      ],
-      "falta": [
-        "Registro oficial em órgãos governamentais dos Estados Unidos confirmando a decisão de Trump.",
-        "Pronunciamento formal de autoridades do Irã atestando o teor das tratativas.",
-        "Termos, prazos ou documentos que comprovem a existência do suposto acordo preliminar."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Folha Mundo",
-          "titulo": "Trump diz que suspenderá novos ataques ao Irã em busca de um acordo 'rápido'",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/trump-diz-que-suspendera-novos-ataques-ao-ira-em-busca-de-um-acordo-rapido.shtml"
-        },
-        {
-          "veiculo": "Euronews",
-          "titulo": "Estados Unidos: Trump cancela ataques ao Irão após acordo preliminar",
-          "link": "http://pt.euronews.com/2026/08/02/estados-unidos-trump-cancela-ataques-ao-irao-apos-acordo-preliminar"
-        },
-        {
-          "veiculo": "AP Photo/Jacquelyn Martin - Jacquelyn Martin",
-          "titulo": "Trump suspende novos ataques a pedidos do Irã e países aliados: 'uma mentira', segundo Teerã",
-          "link": "https://www.rfi.fr/br/mundo/20260802-trump-suspende-novos-ataques-a-pedidos-do-ir%C3%A3-e-pa%C3%ADses-aliados-uma-nova-mentira-segundo-teer%C3%A3"
-        }
-      ],
-      "link": "/materia/nc-donald-trump-teria-suspenso-novos-ataques-ao-ira-apos-tratativas-de-ac.html",
-      "corpo": [
-        "O ex-presidente norte-americano Donald Trump teria anunciado a suspensão ou o cancelamento de novos ataques militares ao Irã. A medida estaria relacionada a tentativas de avanço em negociações diplomáticas entre as partes.",
-        "As publicações apresentam divergências em relação aos motivos da decisão. Enquanto uma versão aponta a busca por um acordo rápido, outras mencionam a existência de um acordo preliminar ou solicitações feitas pelo Irã e por aliados.",
-        "O governo em Teerã teria contestado o relato e tratado a alegação sobre pedidos de trégua como uma mentira. Não há manifestação pública oficial emitida por órgãos dos Estados Unidos ou do Irã."
-      ],
-      "id": "circ:donald-trump-teria-suspenso-novos-ataques-ao-ira-apos-tratativas-de-ac",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Donald Trump teria suspenso novos ataques ao Irã após tratativas de acordo",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:49:27.293Z",
-      "hora": "07h49"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto estaria sendo veiculado por dois veículos da imprensa.",
-        "Que as manchetes publicadas abordariam a suposta adoção de modelo contra a violência."
-      ],
-      "falta": [
-        "Identificação oficial do país sul-americano que teria adotado o modelo citado.",
-        "Manifestação de órgãos oficiais confirmando a implementação das medidas de segurança.",
-        "Detalhamento de datas, dados concretos ou atos normativos sobre o caso."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1 Mundo",
-          "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
-          "link": "https://g1.globo.com/mundo/noticia/2026/08/02/o-que-aconteceu-no-pais-da-america-do-sul-que-adotou-o-modelo-bukele-de-combate-a-violencia.ghtml"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
-          "link": "https://www.bbc.com/portuguese/articles/cy74n55rpx8o?at_medium=RSS&amp;at_campaign=rss"
-        }
-      ],
-      "link": "/materia/nc-um-pais-da-america-do-sul-teria-adotado-modelo-de-combate-a-violencia.html",
-      "corpo": [
-        "As publicações trariam manchetes idênticas sem especificar o nome da nação que teria implementado as ações. O material veiculado também não detalharia datas, dados numéricos ou órgãos públicos envolvidos na suposta estratégia. A ausência de elementos oficiais impediria a confirmação factual sobre o evento alegado."
-      ],
-      "id": "circ:um-pais-da-america-do-sul-teria-adotado-modelo-de-combate-a-violencia",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Um país da América do Sul teria adotado modelo de combate à violência",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:49:46.814Z",
-      "hora": "07h49"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos de imprensa.",
-        "Que as publicações tratam das candidaturas para as eleições de 2026.",
-        "Que os nomes de Lula, Flávio, Caiado e Zema foram citados."
-      ],
-      "falta": [
-        "Manifestação oficial do Partido dos Trabalhadores ou da assessoria do político.",
-        "Comprovação do ato formalizado perante a Justiça Eleitoral.",
-        "Esclarecimento sobre o momento exato em que a candidatura seria lançada."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Euronews",
-          "titulo": "Lula da Silva formaliza hoje a candidatura à presidência do Brasil",
-          "link": "http://pt.euronews.com/2026/08/02/lula-da-silva-formaliza-hoje-a-candidatura-a-presidencia-do-brasil"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "Após confirmação de Flávio, Caiado e Zema, PT se prepara para lançar Lula: quem são os candidatos à Presidência nas eleições de 2026",
-          "link": "https://www.bbc.com/portuguese/articles/cly8vyqv06jo?at_medium=RSS&amp;at_campaign=rss"
-        }
-      ],
-      "link": "/materia/nc-lula-formalizaria-candidatura-a-presidencia-para-as-eleicoes-de-2026.html",
-      "corpo": [
-        "O presidente Luiz Inácio Lula da Silva formalizaria nesta data a sua candidatura à Presidência do Brasil. O Partido dos Trabalhadores estaria se organizando para o lançamento oficial do nome do político.",
-        "Os veículos que publicaram as informações divergiam sobre o estágio da medida. Uma das publicações afirmaria que o ato ocorreria hoje, enquanto outra apontaria que a legenda ainda se prepararia para efetivar a indicação.",
-        "O cenário citado envolveria a disputa eleitoral de 2026, que contaria também com mencões às confirmações de Flávio, Caiado e Zema. Não haveria registro público que comprove a realização do ato até o momento."
-      ],
-      "id": "circ:lula-formalizaria-candidatura-a-presidencia-para-as-eleicoes-de-2026",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Lula formalizaria candidatura à Presidência para as eleições de 2026",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:50:17.362Z",
-      "hora": "07h50"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a informação é veiculada por dois canais da imprensa.",
-        "Que os relatos mencionam a queda de um avião no Peru.",
-        "Que as matérias apontam a existência de 13 mortos no evento."
-      ],
-      "falta": [
-        "Manifestação oficial das autoridades peruanas confirmando a queda.",
-        "Registro sobre a data, horário e causas da ocorrência.",
-        "Identificação das vítimas e dados sobre a aeronave envolvida."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Euronews",
-          "titulo": "Peru: 13 mortos em queda de avião turístico sobre as linhas de Nazca",
-          "link": "http://pt.euronews.com/my-europe/2026/08/02/peru-13-mortos-em-queda-de-aviao-turistico-sobre-as-linhas-de-nazca"
-        },
-        {
-          "veiculo": "Folha Mundo",
-          "titulo": "Queda de avião mata 13 pessoas que visitavam Linhas de Nazca no Peru",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/queda-de-aviao-mata-13-pessoas-que-visitavam-linhas-de-nazca-no-peru.shtml"
-        }
-      ],
-      "link": "/materia/nc-queda-de-aviao-turistico-no-peru-teria-deixado-13-mortos-nas-linhas-de.html",
-      "corpo": [
-        "Um acidente aéreo no Peru teria deixado 13 mortos durante um passeio pelas Linhas de Nazca. A alegação foi veiculada na imprensa, sem que haja validação por órgãos governamentais até o momento.",
-        "As publicações afirmam que a queda envolveria pessoas que visitavam o ponto turístico peruano. Não há contradições registradas entre os veículos sobre o total de mortos ou a localização do fato.",
-        "O caso trataria da queda de uma aeronave de voo turístico na região de Nazca. A confirmação da ocorrência depende de pronunciamento oficial das autoridades de aviação ou de resgate."
-      ],
-      "id": "circ:queda-de-aviao-turistico-no-peru-teria-deixado-13-mortos-nas-linhas-de",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Queda de avião turístico no Peru teria deixado 13 mortos nas Linhas de Nazca",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:50:41.461Z",
-      "hora": "07h50"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que dois veículos divulgaram informações sobre mortes em um restaurante em Moscou.",
-        "Que as matérias concordam sobre o total de três mortos no local.",
-        "Que existe divergência entre as publicações quanto à classificação como explosão ou atentado."
-      ],
-      "falta": [
-        "Pronunciamento ou nota de órgãos oficiais de Moscou sobre a ocorrência.",
-        "Definição exata sobre a causa ser uma explosão ou um atentado.",
-        "Confirmação oficial do número de pessoas feridas no incidente.",
-        "Data e horário precisos em que a ocorrência teria registrado vítimas."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Euronews",
-          "titulo": "Explosão em restaurante de Moscovo faz três mortos e fere 21 pessoas",
-          "link": "http://pt.euronews.com/my-europe/2026/08/02/explosao-em-restaurante-de-moscovo-faz-tres-mortos-e-fere-21-pessoas"
-        },
-        {
-          "veiculo": "Folha Mundo",
-          "titulo": "Atentado mata 3 em restaurante de luxo de Moscou",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/explosao-mata-ao-menos-3-em-restaurante-de-luxo-em-moscou.shtml"
-        }
-      ],
-      "link": "/materia/nc-explosao-ou-atentado-em-restaurante-de-moscou-teria-deixado-tres-morto.html",
-      "corpo": [
-        "Uma ocorrência em um restaurante na cidade de Moscou teria provocado a morte de três pessoas. As publicações relatam que o episódio teria envolvido um estouro ou um ato deliberado no estabelecimento.",
-        "Os veículos que publicaram a notícia divergem quanto à classificação do evento, tratando-o como explosão ou atentado. Uma das matérias aponta que o local seria um restaurante de luxo e que 21 pessoas teriam ficado feridas. A outra publicação reitera o número de três mortos, mas não menciona feridos.",
-        "Até o momento, não foram divulgados registros por órgãos oficiais da cidade sobre o caso. A verificação do fato depende de posicionamento formal das autoridades de resgate ou de segurança."
-      ],
-      "id": "circ:explosao-ou-atentado-em-restaurante-de-moscou-teria-deixado-tres-morto",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Explosão ou atentado em restaurante de Moscou teria deixado três mortos",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:51:06.585Z",
-      "hora": "07h51"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos da imprensa.",
-        "Que o relato envolve uma chilena declarada desaparecida na era Pinochet.",
-        "Que as Notícias afirmam que a mulher estaria viva cinco décadas depois."
-      ],
-      "falta": [
-        "Manifestação ou confirmação oficial por parte de órgãos do governo chileno.",
-        "Identificação formal da pessoa e registros do procedimento de busca.",
-        "Detalhes sobre a data exata, local e circunstâncias da localização."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1 Mundo",
-          "titulo": "A chilena declarada desaparecida na era Pinochet e encontrada viva 5 décadas depois",
-          "link": "https://g1.globo.com/mundo/noticia/2026/08/01/a-chilena-declarada-desaparecida-na-era-pinochet-e-encontrada-viva-5-decadas-depois.ghtml"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "A chilena declarada desaparecida na era Pinochet e encontrada viva 5 décadas depois",
-          "link": "https://www.bbc.com/portuguese/articles/c9359g3xw7no?at_medium=RSS&amp;at_campaign=rss"
-        }
-      ],
-      "link": "/materia/nc-mulher-chilena-desaparecida-na-era-pinochet-teria-sido-achada-viva-5-d.html",
-      "corpo": [
-        "Uma mulher de nacionalidade chilena, declarada desaparecida durante a era Pinochet, teria sido localizada viva cinco décadas depois. A informação estaria sendo veiculada por veículos de imprensa, sem validação oficial até o momento.",
-        "As publicações apontam que o desaparecimento teria ocorrido no contexto do regime de Pinochet e que a pessoa teria sido encontrada 50 anos mais tarde. Não foram registradas divergências entre as manchetes veiculadas pelas fontes.",
-        "A confirmação do caso envolveria o esclarecimento sobre a situação de pessoas afetadas pelo período histórico no Chile. A validação dos fatos dependeria de manifestação formal por parte de autoridades competentes."
-      ],
-      "id": "circ:mulher-chilena-desaparecida-na-era-pinochet-teria-sido-achada-viva-5-d",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Mulher chilena desaparecida na era Pinochet teria sido achada viva 5 décadas após",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T11:51:27.584Z",
-      "hora": "07h51"
-    }
-  ],
+  "circulando": [],
   "pautas": [
     {
       "titulo": "Trump diz que suspenderá novos ataques ao Irã em busca de um acordo 'rápido'",
@@ -779,24 +451,6 @@
       ]
     },
     {
-      "titulo": "A chilena declarada desaparecida na era Pinochet e encontrada viva 5 décadas depois",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "A chilena declarada desaparecida na era Pinochet e encontrada viva 5 décadas depois",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
       "titulo": "Queda de avião mata 13 pessoas que visitavam Linhas de Nazca no Peru",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
@@ -815,7 +469,7 @@
       ]
     },
     {
-      "titulo": "Após confirmação de Flávio, Caiado e Zema, PT se prepara para lançar Lula: quem são os candidatos à Presidência nas eleições de 2026",
+      "titulo": "PT confirma candidatura de Lula à reeleição: saiba quem disputa a Presidência em 2026",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
