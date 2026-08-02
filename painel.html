@@ -186,6 +186,10 @@ tr:hover td{background:var(--painel)}
 .lt .marco .fon{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .lt .marco .fon input{font-family:var(--mono);font-size:11.5px}
 @media(max-width:700px){.lt .marco .fon{grid-template-columns:1fr}.lt .marco .top input{width:110px}}
+.lt .consult{border:1px solid var(--borda);background:var(--painel2);padding:13px 15px;margin-top:14px}
+.lt .consult b{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);display:block;margin-bottom:9px}
+.lt .consult a{display:block;font-size:12.5px;color:var(--quar);text-decoration:none;padding:4px 0;line-height:1.4}
+.lt .consult a:hover{text-decoration:underline}
 .lt .msg{font-family:var(--mono);font-size:11.5px;margin-top:12px;min-height:16px}
 .lt .msg.erro{color:#B3261E}.lt .msg.bom{color:#1F7A3D}
 .lt .lista{border-top:1px solid var(--borda);padding:14px 18px}
@@ -673,7 +677,8 @@ function ltTela(){
       <label>Links de publicações, um por linha</label>
       <textarea id="lt-links" placeholder="https://…"></textarea>
 
-      <div class="acoes"><button class="ia" id="lt-montar">montar a linha do tempo</button></div>
+      <div class="acoes"><button class="ia" id="lt-montar">buscar e montar a linha do tempo</button></div>
+      <div id="lt-consult"></div>
 
       <div id="lt-form" style="display:none">
         <label>Título</label><input id="lt-titulo">
@@ -762,7 +767,8 @@ const ltMarcos = () => [...document.querySelectorAll('#lt-marcos .marco')].map(c
 
 async function ltMontar(){
   const bt = document.getElementById('lt-montar'), m = document.getElementById('lt-msg');
-  bt.disabled = true; bt.textContent = 'montando…'; m.className='msg'; m.textContent='';
+  bt.disabled = true; bt.textContent = 'buscando…'; m.className='msg'; m.textContent='';
+  const cx = document.getElementById('lt-consult'); if (cx) cx.innerHTML = '';
   try {
     const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ acao:'montar', senha:senhaRedacao,
@@ -781,7 +787,7 @@ async function ltMontar(){
         (r.falta?.length ? ' · falta confirmar: ' + r.falta.join('; ') : '');
     } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
   } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
-  bt.disabled = false; bt.textContent = 'montar a linha do tempo';
+  bt.disabled = false; bt.textContent = 'buscar e montar a linha do tempo';
 }
 
 async function ltSalvar(estado){
