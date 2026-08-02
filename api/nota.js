@@ -20,7 +20,8 @@
 //
 // Variaveis necessarias na Vercel:
 //   SENHA_REDACAO   a senha de publicacao
-//   BLOB_READ_WRITE_TOKEN  para enviar foto (Storage -> Blob, na Vercel)
+//   GITHUB_TOKEN    token com permissao de escrita no repositorio (foto)
+//   BLOB_READ_WRITE_TOKEN  alternativa: Blob da Vercel (Storage -> Blob)
 //   GEMINI_API_KEY  para o botao de reescrever
 //   KV_REST_API_URL / KV_REST_API_TOKEN   ja usados pelo /api/leitor
 
@@ -31,6 +32,11 @@ const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
 const SENHA    = process.env.SENHA_REDACAO     || '';
 const CHAVE_IA = process.env.GEMINI_API_KEY    || '';
 const BLOB     = process.env.BLOB_READ_WRITE_TOKEN || '';
+// Caminho alternativo para a foto, e o mais confiavel: o proprio repositorio.
+// Ele ja e publico, ja serve arquivo pelo dominio do site, e a API do GitHub
+// e documentada — diferente da API HTTP do Blob, que exigiu adivinhacao.
+const GH_TOKEN = process.env.GITHUB_TOKEN || '';
+const GH_REPO  = process.env.GITHUB_REPO  || 'angelosalvettibr/tempo-real-mt';
 
 const ligado = () => Boolean(URL_KV && TOKEN_KV);
 
@@ -116,8 +122,31 @@ async function reescrever(titulo, texto, fonte){
 // Guardamos no Blob da propria Vercel, pela API HTTP — sem biblioteca, que e
 // a regra do projeto. O navegador ja manda a imagem reduzida: foto de celular
 // tem 5 MB e o limite de corpo de uma funcao serverless e bem menor.
+// Guarda a imagem no repositorio, via API do GitHub. O endereco devolvido e
+// o raw, que fica publico na hora — nao espera a Vercel republicar.
+async function guardarNoGitHub(bytes, tipo, caminho){
+  const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${caminho}`, {
+    method:'PUT',
+    headers:{
+      Authorization: `Bearer ${GH_TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'meridiano'
+    },
+    body: JSON.stringify({
+      message: 'foto da redacao: ' + caminho.split('/').pop(),
+      content: bytes.toString('base64')
+    })
+  });
+  if (!r.ok) {
+    const d = await r.text().catch(() => '');
+    throw new Error(`GitHub HTTP ${r.status} ${d.slice(0,120)}`);
+  }
+  return `https://raw.githubusercontent.com/${GH_REPO}/main/${caminho}`;
+}
+
 async function guardarFoto(base64, nome){
-  if (!BLOB) throw new Error('BLOB_READ_WRITE_TOKEN não configurado na Vercel');
+  if (!GH_TOKEN && !BLOB) throw new Error('configure GITHUB_TOKEN (ou BLOB_READ_WRITE_TOKEN) na Vercel');
 
   const m = String(base64).match(/^data:(image\/(jpeg|png|webp));base64,(.+)$/);
   if (!m) throw new Error('formato de imagem não aceito');
@@ -126,7 +155,11 @@ async function guardarFoto(base64, nome){
   if (bytes.length > 3_500_000) throw new Error('imagem grande demais');
 
   const ext = m[2] === 'jpeg' ? 'jpg' : m[2];
-  const caminho = `redacao/${Date.now().toString(36)}-${slug(nome || 'foto').slice(0,40) || 'foto'}.${ext}`;
+  const caminho = `fotos/${Date.now().toString(36)}-${slug(nome || 'foto').slice(0,40) || 'foto'}.${ext}`;
+
+  // GitHub primeiro quando houver token: e o caminho documentado e previsivel.
+  if (GH_TOKEN) return await guardarNoGitHub(bytes, m[1], caminho);
+  if (!BLOB) throw new Error('sem GITHUB_TOKEN configurado');
 
   // O store da Vercel pode estar como Private, e ai pedir acesso publico e
   // recusado com 400. Tentamos publico primeiro, porque foto de jornal
@@ -244,6 +277,34 @@ export default async function handler(req, res){
     await redis('SET', 'redacao:notas', JSON.stringify(notas.slice(0, 60)));
 
     return res.status(200).json({ ok:true, nota });
+  }
+
+  /* --- editar uma nota ja gravada --- */
+  if (acao === 'editar') {
+    if (!ligado()) return res.status(200).json({ ok:false });
+    let notas = [];
+    try { notas = JSON.parse(await redis('GET','redacao:notas') || '[]'); } catch {}
+    const n = notas.find(x => x.id === corpo.id);
+    if (!n) return res.status(200).json({ ok:false, msg:'nota não encontrada' });
+
+    const paragrafos = (Array.isArray(corpo.corpo) ? corpo.corpo : String(corpo.corpo||'').split(/\n\s*\n/))
+      .map(x => esc(x).trim()).filter(Boolean);
+    if (esc(corpo.titulo).trim().length < 12) return res.status(200).json({ ok:false, msg:'título muito curto' });
+    if (!paragrafos.length) return res.status(200).json({ ok:false, msg:'texto vazio' });
+    if (!corpo.fonte) return res.status(200).json({ ok:false, msg:'declare a fonte' });
+
+    n.titulo = esc(corpo.titulo).trim();
+    n.resumo = esc(corpo.linha).trim() || paragrafos[0].slice(0, 160);
+    n.corpo = paragrafos;
+    n.fonte = esc(corpo.fonte);
+    n.fonteLink = /^https?:\/\//.test(corpo.fonteLink || '') ? corpo.fonteLink : null;
+    n.foto = /^https?:\/\//.test(corpo.foto || '') ? corpo.foto : null;
+    n.editoria = ['brasil','internacional','regional'].includes(corpo.editoria) ? corpo.editoria : n.editoria;
+    n.uf = corpo.uf || null;
+    n.editadaEm = new Date().toISOString();
+
+    await redis('SET', 'redacao:notas', JSON.stringify(notas));
+    return res.status(200).json({ ok:true, nota:n });
   }
 
   /* --- listar tudo, inclusive rascunho (so com senha) --- */
