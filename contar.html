@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Conte o caso — Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#FFFDF9; --caixa:#FFFFFF; --tinta:#1A1713; --tinta2:#4A443C;
+  --linha:#E8E2D6; --fraco:#8B8375; --sinal:#9C3A25; --verde:#2F6B45;
+  --serif:'Source Serif 4',Georgia,serif; --display:'Playfair Display',Georgia,serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--sinal)}
+.wrap{max-width:660px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--linha);padding:20px 0;margin-bottom:40px;background:var(--caixa)}
+header .wrap{display:flex;align-items:baseline;gap:13px}
+header b{font-family:var(--display);font-size:21px;font-weight:700}
+header span{font-family:var(--mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--sinal)}
+
+h1{font-family:var(--display);font-size:clamp(27px,5.4vw,36px);font-weight:700;line-height:1.16;margin-bottom:16px}
+.sub{font-size:17px;color:var(--tinta2);margin-bottom:26px}
+.como{background:var(--caixa);border:1px solid var(--linha);padding:19px 22px;margin-bottom:30px}
+.como b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:10px}
+.como p{font-size:15.5px;color:var(--tinta2);margin-bottom:9px}
+.como p:last-child{margin-bottom:0}
+
+label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);margin:22px 0 7px}
+input,textarea{width:100%;background:var(--caixa);border:1px solid var(--linha);color:var(--tinta);padding:13px 15px;font-family:var(--serif);font-size:16px;line-height:1.6;border-radius:2px}
+input:focus,textarea:focus{outline:none;border-color:var(--tinta2)}
+#relato{min-height:260px;resize:vertical}
+#links{min-height:96px;resize:vertical;font-family:var(--mono);font-size:13px}
+.dica{font-size:13.5px;color:var(--fraco);margin-top:7px;line-height:1.5}
+
+button{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:14px 24px;cursor:pointer;border:1.5px solid var(--tinta);background:var(--tinta);color:var(--papel);margin-top:26px;border-radius:2px}
+button:hover{background:var(--sinal);border-color:var(--sinal)}
+button:disabled{opacity:.4;cursor:default}
+button.claro{background:transparent;color:var(--tinta)}
+button.claro:hover{background:var(--tinta);color:var(--papel)}
+
+.msg{font-family:var(--mono);font-size:12.5px;margin-top:16px;min-height:18px}
+.msg.erro{color:var(--sinal)} .msg.bom{color:var(--verde)}
+.trava{text-align:center;padding:24px 0 60px}
+.trava input{max-width:250px;margin:14px auto 0;text-align:center;font-family:var(--mono);letter-spacing:.22em}
+.pronto{background:var(--caixa);border:1px solid var(--verde);border-left:3px solid var(--verde);padding:24px 26px;margin-top:20px}
+.pronto b{font-family:var(--display);font-size:20px;display:block;margin-bottom:10px}
+.pronto p{font-size:15.5px;color:var(--tinta2)}
+.pe{padding:44px 0 60px;font-size:13.5px;color:var(--fraco);line-height:1.6;border-top:1px solid var(--linha);margin-top:44px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><span>Linha do tempo</span></div></header>
+<div class="wrap" id="alvo"></div>
+
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let senha = '';
+
+function trava(){
+  document.getElementById('alvo').innerHTML = `
+    <h1>Conte o caso</h1>
+    <p class="sub">Esta página é de acesso restrito. Se você recebeu uma senha, use-a abaixo.</p>
+    <div class="trava">
+      <input id="s" type="password" placeholder="senha" autocomplete="off">
+      <div><button id="b">entrar</button></div>
+      <p class="msg" id="m"></p>
+    </div>`;
+  const ir = async () => {
+    const m = document.getElementById('m');
+    m.className='msg'; m.textContent='verificando…';
+    try {
+      const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'entrar-relato', senha: document.getElementById('s').value }) })).json();
+      if (r.ok) { senha = document.getElementById('s').value; formulario(); }
+      else { m.className='msg erro'; m.textContent = r.msg || 'senha incorreta'; }
+    } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+  };
+  document.getElementById('b').addEventListener('click', ir);
+  document.getElementById('s').addEventListener('keydown', e => { if (e.key === 'Enter') ir(); });
+}
+
+function formulario(){
+  document.getElementById('alvo').innerHTML = `
+    <h1>Conte o caso</h1>
+    <p class="sub">Escreva o que aconteceu e junte os links que você tiver. A redação faz o resto.</p>
+
+    <div class="como">
+      <b>Como funciona</b>
+      <p>Você conta a história com o máximo de detalhe que conseguir — datas, órgãos envolvidos, o que foi publicado e quando. Junta os endereços das matérias que conhece.</p>
+      <p>A redação recebe o material, faz a própria busca e monta a linha do tempo: os fatos em ordem, cada um com a origem declarada. O que tem publicação por trás aparece como verificado; o que só você conta aparece como relato seu. Nada é inventado e nada é omitido.</p>
+      <p>Você não escreve o texto final nem escolhe o título. Quem apura e redige é a redação — é isso que dá valor ao resultado.</p>
+    </div>
+
+    <label>O que aconteceu</label>
+    <textarea id="relato" placeholder="Comece pelo começo. Quando foi, o que foi dito, quem registrou, como terminou. Quanto mais detalhe e mais datas, melhor — o que faltar não será preenchido por suposição."></textarea>
+    <p class="dica">Mínimo de algumas linhas. Datas e nomes de órgãos ajudam mais que adjetivos.</p>
+
+    <label>Links de matérias, decisões ou documentos</label>
+    <textarea id="links" placeholder="https://…&#10;https://…"></textarea>
+    <p class="dica">Um por linha. Inclua tanto o que te prejudicou quanto o que te favorece — a cronologia precisa dos dois lados para ter valor.</p>
+
+    <label>Como falar com você (opcional)</label>
+    <input id="contato" placeholder="e-mail ou telefone">
+
+    <div><button id="env">enviar para a redação</button></div>
+    <p class="msg" id="m"></p>
+
+    <div class="pe">O envio não garante publicação. A redação avalia o material, verifica o que for verificável e decide se e como o caso será tratado.</div>`;
+
+  document.getElementById('env').addEventListener('click', async () => {
+    const bt = document.getElementById('env'), m = document.getElementById('m');
+    const relato = document.getElementById('relato').value.trim();
+    if (relato.length < 200) { m.className='msg erro'; m.textContent='conte com mais detalhe — o que falta não será preenchido por suposição'; return; }
+    bt.disabled = true; bt.textContent = 'enviando…'; m.className='msg'; m.textContent='';
+    try {
+      const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'depositar', senha, relato,
+          links: document.getElementById('links').value,
+          contato: document.getElementById('contato').value }) })).json();
+      if (r.ok) {
+        document.getElementById('alvo').innerHTML = `
+          <div class="pronto"><b>Recebido</b>
+          <p>Seu relato chegou à redação. A partir daqui a apuração é nossa: vamos verificar o que for verificável e montar a cronologia. Se você deixou contato, avisamos quando houver resultado.</p></div>`;
+        window.scrollTo({ top:0, behavior:'smooth' });
+      } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; bt.disabled=false; bt.textContent='enviar para a redação'; }
+    } catch { m.className='msg erro'; m.textContent='falha de conexão'; bt.disabled=false; bt.textContent='enviar para a redação'; }
+  });
+}
+trava();
+</script>
+</body>
+</html>

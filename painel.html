@@ -150,6 +150,51 @@ tr:hover td{background:var(--painel)}
 .trava{padding:34px 18px;text-align:center}
 .trava input{max-width:230px;margin:12px auto 0;text-align:center;font-family:var(--mono);letter-spacing:.2em}
 .trava p{font-family:var(--sans);font-size:13px;color:var(--fraco);line-height:1.6;max-width:440px;margin:0 auto}
+.lt{margin:26px 0;border:1px solid var(--borda);background:var(--painel)}
+.lt .cab{padding:12px 18px;border-bottom:1px solid var(--borda);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lt .cab b{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--texto2);font-weight:500}
+.lt .cab .aviso{font-family:var(--sans);font-size:11.5px;color:var(--fraco);margin-left:auto}
+.lt .corpo{padding:18px}
+.lt label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);margin:14px 0 6px}
+.lt label:first-child{margin-top:0}
+.lt input,.lt textarea{width:100%;background:var(--fundo);border:1px solid var(--borda);color:var(--texto);padding:10px 12px;font-family:var(--sans);font-size:14px;line-height:1.5}
+.lt textarea{resize:vertical;font-family:var(--sans)}
+.lt #lt-relato{min-height:170px}
+.lt #lt-links{min-height:70px;font-family:var(--mono);font-size:12px}
+.lt .acoes{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.lt button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px;cursor:pointer;border:1px solid var(--borda);background:transparent;color:var(--texto2)}
+.lt button:hover{border-color:var(--texto);color:var(--texto)}
+.lt button.ia{border-color:#8957E5;color:#A371F7}
+.lt button.ia:hover{background:#8957E5;color:#fff}
+.lt button:disabled{opacity:.4;cursor:default}
+.lt .marco{border:1px solid var(--borda);padding:12px 14px;margin-bottom:9px;background:var(--fundo)}
+.lt .marco .top{display:flex;gap:9px;margin-bottom:8px}
+.lt .marco .top input{flex:none;width:170px;font-family:var(--mono);font-size:12px}
+.lt .marco .top button{padding:5px 10px;font-size:9px;border-color:#5A2222;color:#F85149;margin-left:auto}
+.lt .marco textarea{min-height:62px;margin-bottom:8px}
+.lt .marco .fon{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lt .marco .fon input{font-family:var(--mono);font-size:11.5px}
+@media(max-width:700px){.lt .marco .fon{grid-template-columns:1fr}.lt .marco .top input{width:110px}}
+.lt .msg{font-family:var(--mono);font-size:11.5px;margin-top:12px;min-height:16px}
+.lt .msg.erro{color:#F85149}.lt .msg.bom{color:#3FB950}
+.lt .lista{border-top:1px solid var(--borda);padding:14px 18px}
+.lt .lista h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fraco);font-weight:500;margin:0 0 10px}
+.lt .lista .n{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--borda);font-size:13px;flex-wrap:wrap}
+.lt .lista .n span.tt{flex:1;min-width:180px;line-height:1.35}
+.lt .lista .est{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid;flex:none}
+.lt .lista .est.pub{color:#3FB950;border-color:#1D4A2A}
+.lt .lista .est.priv{color:#58A6FF;border-color:#1F4D7A}
+.lt .lista .est.ras{color:#D29922;border-color:#4A3A0E}
+.lt .lista .n button{padding:4px 9px;font-size:9px}
+.lt .lista .n small{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none}
+.lt .fila{border-top:1px solid var(--borda);padding:14px 18px;background:#12202B}
+.lt .fila h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:#58A6FF;font-weight:500;margin:0 0 10px}
+.lt .fila .r{border:1px solid #1F4D7A;padding:12px 14px;margin-bottom:9px;background:var(--fundo)}
+.lt .fila .r .m{font-family:var(--mono);font-size:9.5px;color:var(--fraco);letter-spacing:.08em;margin-bottom:7px;display:flex;gap:12px;flex-wrap:wrap}
+.lt .fila .r p{font-size:13px;line-height:1.5;color:var(--texto2);max-height:74px;overflow:hidden;margin-bottom:9px}
+.lt .fila .r .bts{display:flex;gap:7px}
+.lt .fila .r button{padding:6px 12px;font-size:9px}
+.lt .fila .r button.usar{border-color:#1F6FEB;color:#58A6FF}
 </style>
 </head>
 <body>
@@ -168,6 +213,7 @@ tr:hover td{background:var(--painel)}
   <div class="edicoes" id="edicoes"></div>
   <div class="desemp" id="desemp"></div>
   <div class="red" id="redacao"></div>
+  <div class="lt" id="linhatempo"></div>
   <div class="barras" id="barras"></div>
 
   <div id="filtros"></div>
@@ -556,6 +602,7 @@ function formulario(){
   document.getElementById('bt-ras').addEventListener('click', () => enviar(true));
 
   listaNotas();
+  ltTela();
 }
 
 function limparForm(){
@@ -587,6 +634,214 @@ function carregarNota(n){
   document.getElementById('bt-pub').textContent = 'salvar alterações';
   document.getElementById('bt-cancel').onclick = limparForm;
   document.getElementById('redacao').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+/* ===================== LINHA DO TEMPO ==================================
+   A pessoa conta a historia, cola os links, e o agente monta a cronologia.
+   Voce revisa marco a marco e decide o estado:
+
+     rascunho  em construcao, ninguem ve
+     privada   pronta, fora da edicao, so abre com o endereco direto —
+               e o relatorio entregue a quem pediu
+     publica   entra na secao do jornal. So a redacao decide isso.        */
+
+let ltEditando = null;
+
+function ltTela(){
+  const alvo = document.getElementById('linhatempo');
+  if (!alvo || !senhaRedacao) return;
+  alvo.innerHTML = `
+    <div class="cab"><b>Linha do tempo</b>
+      <span class="aviso">Só a redação decide o que vira pública. Privada não aparece na capa nem é indexada.</span></div>
+    <div class="corpo">
+      <label>A história, contada por quem viveu o caso</label>
+      <textarea id="lt-relato" placeholder="Cole aqui o relato completo: o que aconteceu, quando, quem registrou. Quanto mais detalhe, melhor — o agente não inventa o que falta."></textarea>
+
+      <label>Links de publicações, um por linha</label>
+      <textarea id="lt-links" placeholder="https://…"></textarea>
+
+      <div class="acoes"><button class="ia" id="lt-montar">montar a linha do tempo</button></div>
+
+      <div id="lt-form" style="display:none">
+        <label>Título</label><input id="lt-titulo">
+        <label>Linha de apoio</label><input id="lt-fina">
+        <label>Introdução</label><textarea id="lt-intro" style="min-height:80px"></textarea>
+        <label>Marcos — do mais recente ao mais antigo</label>
+        <div id="lt-marcos"></div>
+        <div class="acoes">
+          <button id="lt-add">+ marco</button>
+          <button id="lt-ras">salvar rascunho</button>
+          <button id="lt-priv">salvar como privada</button>
+          <button id="lt-pub">publicar no jornal</button>
+          <button id="lt-cancel">limpar</button>
+        </div>
+      </div>
+      <p class="msg" id="lt-msg"></p>
+    </div>
+    <div class="fila" id="lt-fila"></div>
+    <div class="lista" id="lt-lista"></div>`;
+
+  document.getElementById('lt-montar').addEventListener('click', ltMontar);
+  document.getElementById('lt-add').addEventListener('click', () => ltMarco({}));
+  document.getElementById('lt-cancel').addEventListener('click', ltLimpar);
+  document.getElementById('lt-ras').addEventListener('click', () => ltSalvar('rascunho'));
+  document.getElementById('lt-priv').addEventListener('click', () => ltSalvar('privada'));
+  document.getElementById('lt-pub').addEventListener('click', () => ltSalvar('publica'));
+  ltLista();
+  ltFila();
+}
+
+// Os relatos que chegaram pela pagina de acesso restrito. Voce le, puxa para
+// o formulario e faz a sua propria busca antes de montar.
+async function ltFila(){
+  const alvo = document.getElementById('lt-fila');
+  if (!alvo) return;
+  try {
+    const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'fila', senha:senhaRedacao }) })).json();
+    const f = r.fila || [];
+    alvo.innerHTML = '<h4>' + (f.length ? f.length + ' relato(s) recebido(s)' : 'nenhum relato recebido') + '</h4>' +
+      f.map(x => `<div class="r">
+        <div class="m"><span>${new Date(x.iso).toLocaleString('pt-BR')}</span>
+          <span>${x.links.length} link(s)</span>
+          ${x.contato ? `<span>${(x.contato||'').replace(/[<>]/g,'')}</span>` : '<span>sem contato</span>'}</div>
+        <p>${(x.relato||'').replace(/[<>]/g,'').slice(0,420)}…</p>
+        <div class="bts">
+          <button class="usar" data-usar="${x.id}">usar este relato</button>
+          <button data-fdel="${x.id}" style="border-color:#5A2222;color:#F85149">descartar</button>
+        </div></div>`).join('');
+
+    alvo.querySelectorAll('button[data-usar]').forEach(b => b.addEventListener('click', () => {
+      const x = f.find(y => y.id === b.dataset.usar); if (!x) return;
+      document.getElementById('lt-relato').value = x.relato;
+      document.getElementById('lt-links').value = (x.links||[]).join('\n');
+      document.getElementById('linhatempo').scrollIntoView({ behavior:'smooth' });
+    }));
+    alvo.querySelectorAll('button[data-fdel]').forEach(b => b.addEventListener('click', async () => {
+      await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'fila-apagar', senha:senhaRedacao, id:b.dataset.fdel }) });
+      ltFila();
+    }));
+  } catch {}
+}
+
+function ltMarco(m){
+  const cx = document.createElement('div');
+  cx.className = 'marco';
+  cx.innerHTML = `
+    <div class="top">
+      <input class="q" placeholder="agosto de 2010" value="${(m.quando||'').replace(/"/g,'&quot;')}">
+      <button>remover</button>
+    </div>
+    <textarea class="t" placeholder="o fato, em uma a três frases">${m.texto||''}</textarea>
+    <div class="fon">
+      <input class="f" placeholder="origem: publicação, relatado pelo próprio…" value="${(m.fonte||'').replace(/"/g,'&quot;')}">
+      <input class="l" placeholder="link (opcional)" value="${(m.link||'').replace(/"/g,'&quot;')}">
+    </div>`;
+  cx.querySelector('button').addEventListener('click', () => cx.remove());
+  document.getElementById('lt-marcos').appendChild(cx);
+}
+
+const ltMarcos = () => [...document.querySelectorAll('#lt-marcos .marco')].map(c => ({
+  quando: c.querySelector('.q').value, texto: c.querySelector('.t').value,
+  fonte:  c.querySelector('.f').value, link:  c.querySelector('.l').value
+}));
+
+async function ltMontar(){
+  const bt = document.getElementById('lt-montar'), m = document.getElementById('lt-msg');
+  bt.disabled = true; bt.textContent = 'montando…'; m.className='msg'; m.textContent='';
+  try {
+    const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'montar', senha:senhaRedacao,
+        relato: document.getElementById('lt-relato').value,
+        links:  document.getElementById('lt-links').value }) })).json();
+    if (r.ok) {
+      document.getElementById('lt-titulo').value = r.titulo;
+      document.getElementById('lt-fina').value   = r.linhaFina;
+      document.getElementById('lt-intro').value  = r.intro;
+      document.getElementById('lt-marcos').innerHTML = '';
+      r.marcos.forEach(ltMarco);
+      document.getElementById('lt-form').style.display = 'block';
+      m.className='msg bom';
+      ltFila();
+      m.textContent = `${r.marcos.length} marcos montados — revise antes de decidir o estado` +
+        (r.falta?.length ? ' · falta confirmar: ' + r.falta.join('; ') : '');
+    } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+  } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+  bt.disabled = false; bt.textContent = 'montar a linha do tempo';
+}
+
+async function ltSalvar(estado){
+  const m = document.getElementById('lt-msg');
+  m.className='msg'; m.textContent='salvando…';
+  try {
+    const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'salvar', senha:senhaRedacao, id:ltEditando, estado,
+        titulo: document.getElementById('lt-titulo').value,
+        linhaFina: document.getElementById('lt-fina').value,
+        intro: document.getElementById('lt-intro').value,
+        marcos: ltMarcos() }) })).json();
+    if (r.ok) {
+      m.className='msg bom';
+      m.textContent = estado === 'publica' ? 'publicada no jornal'
+                    : estado === 'privada' ? 'salva como privada — endereço: /linha.html?id=' + r.linha.id
+                    : 'rascunho salvo';
+      ltEditando = r.linha.id;
+      ltLista();
+    } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+  } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
+}
+
+function ltLimpar(){
+  ltEditando = null;
+  ['lt-relato','lt-links','lt-titulo','lt-fina','lt-intro'].forEach(id => {
+    const e = document.getElementById(id); if (e) e.value = '';
+  });
+  document.getElementById('lt-marcos').innerHTML = '';
+  document.getElementById('lt-form').style.display = 'none';
+  document.getElementById('lt-msg').textContent = '';
+}
+
+async function ltLista(){
+  const alvo = document.getElementById('lt-lista');
+  if (!alvo) return;
+  const NOME = { publica:'no jornal', privada:'privada', rascunho:'rascunho' };
+  const CL   = { publica:'pub', privada:'priv', rascunho:'ras' };
+  try {
+    const r = await (await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'listar', senha:senhaRedacao }) })).json();
+    const l = r.linhas || [];
+    alvo.innerHTML = '<h4>' + (l.length ? l.length + ' linha(s) do tempo' : 'nenhuma linha do tempo ainda') + '</h4>' +
+      l.map(x => `<div class="n">
+        <span class="est ${CL[x.estado]}">${NOME[x.estado]}</span>
+        <span class="tt">${(x.titulo||'').replace(/[<>]/g,'')}</span>
+        <small>${x.marcos.length} marcos</small>
+        <button data-ver="${x.id}">abrir</button>
+        <button data-ed2="${x.id}">editar</button>
+        <button data-del="${x.id}" style="border-color:#5A2222;color:#F85149">apagar</button>
+      </div>`).join('');
+
+    alvo.querySelectorAll('button[data-ver]').forEach(b => b.addEventListener('click',
+      () => window.open('/linha.html?id=' + b.dataset.ver, '_blank')));
+
+    alvo.querySelectorAll('button[data-ed2]').forEach(b => b.addEventListener('click', () => {
+      const x = l.find(y => y.id === b.dataset.ed2); if (!x) return;
+      ltEditando = x.id;
+      document.getElementById('lt-titulo').value = x.titulo;
+      document.getElementById('lt-fina').value = x.linhaFina || '';
+      document.getElementById('lt-intro').value = x.intro || '';
+      document.getElementById('lt-marcos').innerHTML = '';
+      (x.marcos||[]).forEach(ltMarco);
+      document.getElementById('lt-form').style.display = 'block';
+      document.getElementById('linhatempo').scrollIntoView({ behavior:'smooth' });
+    }));
+
+    alvo.querySelectorAll('button[data-del]').forEach(b => b.addEventListener('click', async () => {
+      await fetch('/api/linha', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'apagar', senha:senhaRedacao, id:b.dataset.del }) });
+      ltLista();
+    }));
+  } catch {}
 }
 
 async function listaNotas(){

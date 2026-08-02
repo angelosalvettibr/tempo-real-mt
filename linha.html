@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linha do tempo — Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FAF8F3;--tinta:#12100C;--tinta2:#3A362E;--linha:#DCD6C8;--fraco:#7A7264;--sinal:#8B2E20;--verde:#2F5D3A;
+      --serif:'Source Serif 4',Georgia,serif;--display:'Playfair Display',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--serif);-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--tinta);padding:18px 0;margin-bottom:38px}
+header .wrap{display:flex;align-items:baseline;gap:14px}
+header b{font-family:var(--display);font-size:22px;font-weight:900;letter-spacing:-.02em}
+header .ed{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sinal)}
+header a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);text-decoration:none;margin-left:auto}
+header a:hover{color:var(--tinta)}
+h1{font-family:var(--display);font-size:clamp(29px,5.6vw,42px);font-weight:700;line-height:1.13;letter-spacing:-.02em;margin-bottom:15px}
+.fina{font-size:18.5px;color:var(--tinta2);margin-bottom:22px;line-height:1.52}
+.assina{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fraco);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:11px 0;margin-bottom:26px}
+.intro{font-size:16.5px;line-height:1.68;color:var(--tinta2);margin-bottom:8px}
+.marcos{border-top:1px solid var(--tinta);margin-top:26px}
+.m{display:grid;grid-template-columns:158px 1fr;gap:0 22px;padding:18px 0;border-bottom:1px solid var(--linha)}
+.m .q{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--sinal);padding-top:3px}
+.m .t{font-size:16.5px;line-height:1.6}
+.m .f{display:block;margin-top:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em}
+.m .f a{color:var(--sinal);text-decoration:none;border-bottom:1px solid var(--linha)}
+.m .f a:hover{border-color:var(--sinal)}
+.m .f .sem{color:var(--fraco)}
+@media(max-width:640px){.m{grid-template-columns:1fr;gap:7px}.m .q{padding-top:0}}
+.metodo{border:1px solid var(--tinta);padding:17px 20px;margin:34px 0}
+.metodo b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:8px}
+.metodo p{font-size:15px;line-height:1.6;color:var(--tinta2)}
+.privada{border-left:3px solid var(--sinal);background:#F6F1EE;padding:14px 18px;margin-bottom:26px;font-size:14.5px;line-height:1.58;color:var(--tinta2)}
+.privada b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sinal);display:block;margin-bottom:6px}
+.cartao{display:block;text-decoration:none;border-bottom:1px solid var(--linha);padding:20px 0}
+.cartao:hover h2{color:var(--sinal)}
+.cartao h2{font-family:var(--display);font-size:24px;font-weight:700;line-height:1.2;margin-bottom:8px}
+.cartao p{font-size:15.5px;color:var(--tinta2);line-height:1.5}
+.cartao span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:8px}
+.volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:26px 0 60px}
+.vazio{font-family:var(--mono);font-size:13px;color:var(--fraco);padding:50px 0;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><span class="ed">Linha do tempo</span><a href="/">← capa</a></div></header>
+<div class="wrap" id="alvo"><p class="vazio">carregando…</p></div>
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const METODO = `<div class="metodo"><b>Como esta página é feita</b>
+  <p>Uma linha do tempo reúne os fatos de um caso em ordem, do mais recente ao mais antigo, sem análise nem posição do jornal. Cada marco declara a própria origem: o nome da publicação que o registrou, ou a indicação de que se trata de relato de quem viveu o caso, ou ainda de que não há registro localizado. Essa última marca costuma ser a informação mais reveladora da página.</p></div>`;
+
+(async () => {
+  const id = new URLSearchParams(location.search).get('id');
+  const alvo = document.getElementById('alvo');
+
+  // Pagina de uma linha
+  if (id) {
+    try {
+      const r = await fetch('/api/linha?id=' + encodeURIComponent(id) + '&t=' + Date.now(), { cache:'no-store' });
+      const l = (await r.json()).linha;
+      if (!l) { alvo.innerHTML = '<p class="vazio">Linha do tempo não encontrada.</p>'; return; }
+
+      document.title = l.titulo + ' — Meridiano';
+      // Privada não deve ser indexada: é relatório entregue, não publicação.
+      if (l.estado === 'privada') {
+        const m = document.createElement('meta');
+        m.name = 'robots'; m.content = 'noindex,nofollow';
+        document.head.appendChild(m);
+      }
+
+      alvo.innerHTML = `
+        ${l.estado === 'privada' ? `<div class="privada"><b>Relatório de apuração</b>
+          Esta página foi produzida a pedido e não integra a edição do Meridiano. Não aparece na capa nem nos índices de busca. O conteúdo segue o mesmo método das demais linhas do tempo: fatos em ordem, cada um com a origem declarada.</div>` : ''}
+        <h1>${esc(l.titulo)}</h1>
+        ${l.linhaFina ? `<p class="fina">${esc(l.linhaFina)}</p>` : ''}
+        <div class="assina">Meridiano · atualizada em ${new Date(l.atualizada).toLocaleDateString('pt-BR')}</div>
+        ${l.intro ? `<p class="intro">${esc(l.intro)}</p>` : ''}
+        <div class="marcos">${(l.marcos||[]).map(m => `<div class="m">
+          <div class="q">${esc(m.quando)}</div>
+          <div class="t">${esc(m.texto)}
+            <span class="f">${m.link
+              ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.fonte)} &nearr;</a>`
+              : `<span class="sem">${esc(m.fonte)}</span>`}</span>
+          </div></div>`).join('')}</div>
+        ${METODO}
+        <a class="volta" href="/linha.html">← Todas as linhas do tempo</a>`;
+    } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }
+    return;
+  }
+
+  // Índice da seção
+  try {
+    const r = await fetch('/api/linha?t=' + Date.now(), { cache:'no-store' });
+    const l = (await r.json()).linhas || [];
+    alvo.innerHTML = `
+      <h1>Linha do tempo</h1>
+      <p class="fina">Casos que se arrastaram no tempo e ficaram presos a um só capítulo. Os fatos em ordem, cada um com a origem declarada, sem posição do jornal.</p>
+      ${METODO}
+      ${l.length ? l.map(x => `<a class="cartao" href="/linha.html?id=${encodeURIComponent(x.id)}">
+          <h2>${esc(x.titulo)}</h2>
+          <p>${esc(x.linhaFina || '')}</p>
+          <span>${x.marcos} marcos · atualizada em ${new Date(x.atualizada).toLocaleDateString('pt-BR')}</span>
+        </a>`).join('')
+        : '<p class="vazio">Nenhuma linha do tempo publicada ainda.</p>'}
+      <a class="volta" href="/">← Voltar para a capa</a>`;
+  } catch { alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>'; }
+})();
+</script>
+</body>
+</html>
