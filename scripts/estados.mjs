@@ -295,6 +295,23 @@ export const ABERTAS = [
     licenca:'integral', cc:'CC BY-NC-ND', editoria:'brasil', credito:'#Colabora' }
 ];
 
+// Instituicoes internacionais que autorizam reuso do proprio material.
+// A UE tem regra explicita: a Decisao 2011/833/UE libera a reutilizacao dos
+// documentos das instituicoes, inclusive comercial, mediante credito. Agencias
+// da ONU e orgaos do governo dos EUA seguem linha parecida.
+//
+// Diferente dos onze cadastrados no cacador: aqueles servem para CONFIRMAR
+// documento; estes podem virar TEXTO.
+export const INTERNACIONAIS_LIVRES = [
+  { id:'ec-noticias', nome:'Comissão Europeia', url:'https://ec.europa.eu/commission/presscorner/api/rss?language=pt&pagesize=20', base:'https://ec.europa.eu/commission/presscorner' },
+  { id:'eeas-pt',     nome:'Serviço Diplomático da UE', url:'https://www.eeas.europa.eu/eeas/rss.xml', base:'https://www.eeas.europa.eu' },
+  { id:'irini-news',  nome:'Operação EUNAVFOR MED Irini', url:'https://www.operationirini.eu/feed/', base:'https://www.operationirini.eu' },
+  { id:'acnur',       nome:'Acnur', url:'https://www.acnur.org/portugues/feed/', base:'https://www.acnur.org/portugues' },
+  { id:'unicef-br',   nome:'Unicef', url:'https://www.unicef.org/brazil/rss.xml', base:'https://www.unicef.org/brazil' },
+  { id:'oms-news',    nome:'OMS', url:'https://www.who.int/rss-feeds/news-english.xml', base:'https://www.who.int' },
+  { id:'voa-pt',      nome:'Voz da América', url:'https://www.voaportugues.com/api/zq$omekvi_', base:'https://www.voaportugues.com' }
+];
+
 export const ABERTAS_EDITAVEIS = ABERTAS.filter(f => f.esteira === 1);
 export const ABERTAS_INTEGRAIS = ABERTAS.filter(f => f.esteira === 2);
 // As que morrem no dia em que o jornal tiver anuncio.
@@ -388,6 +405,12 @@ export const EDICOES_GERAIS = {
       { id:'onu',          nome:'ONU News',        url:'https://news.un.org/feed/subscribe/pt/news/all/rss.xml' },
       { id:'conversation', nome:'The Conversation',url:'https://theconversation.com/br/articles.atom' },
       { id:'vaticano',     nome:'Vatican News',    url:'https://www.vaticannews.va/pt.rss.xml' }
+    ,
+      // Editaveis internacionais que estavam so na edicao Brasil, sem chegar
+      // aqui — justamente onde mais fazem sentido.
+      ...ABERTAS.filter(f => f.esteira === 1 && f.editoria === 'internacional')
+                .map(f => ({ id:f.id, nome:f.nome, url:f.url, base:f.base })),
+      ...INTERNACIONAIS_LIVRES
     ]
   }
 };

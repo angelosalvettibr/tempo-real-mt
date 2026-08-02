@@ -106,6 +106,15 @@ const FONTE_LIVRE = [
 const PODE_REESCREVER = new RegExp([
   // agencias e organismos que autorizam por escrito
   'agenciabrasil\\.ebc\\.com\\.br', 'news\\.un\\.org', 'theconversation\\.com', 'vaticannews\\.va',
+  // jornalismo em licenca aberta (esteira 1 — permite adaptar)
+  'globalvoices\\.org', 'scidev\\.net', 'agencia\\.fapesp\\.br',
+  'jornal\\.usp\\.br', 'unicamp\\.br', 'jornal\\.unesp\\.br', 'wikinews\\.org',
+  // instituicoes internacionais que autorizam reuso do proprio material.
+  // A UE tem regra expressa: Decisao 2011/833/UE libera reutilizacao com credito.
+  'ec\\.europa\\.eu', 'eeas\\.europa\\.eu', 'consilium\\.europa\\.eu',
+  'operationirini\\.eu', 'acnur\\.org', 'unicef\\.org', 'who\\.int',
+  // governo dos EUA: dominio publico
+  'nasa\\.gov', 'usgs\\.gov', 'voaportugues\\.com', 'voanews\\.com',
   // sufixos oficiais brasileiros
   '\\.gov\\.br', '\\.jus\\.br', '\\.leg\\.br', '\\.mp\\.br', '\\.tc\\.br', '\\.def\\.br',
   // dominios proprios de instituicao publica

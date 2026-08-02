@@ -32,7 +32,10 @@ export const TEMAS = {
   eleicao:   /(elei[çc][ãa]o|eleitoral|eleitor|candidat|urna|\btse\b|\btre\b|coliga[çc]|partido|propaganda eleitoral|registro de candidatura|pesquisa eleitoral|campanha de|pr[ée]-candidat|voto)/i,
   legislativo:/(c[âa]mara dos deputados|senado|congresso|projeto de lei|\bpec\b|deputad|senador|plen[áa]rio|relator|medida provis[óo]ria|comiss[ãa]o parlamentar|\bcpi\b)/i,
   economia:  /(infla[çc][ãa]o|\bpib\b|juros|selic|d[óo]lar|desemprego|\bipca\b|balan[çc]a comercial|banco central|imposto|tribut|or[çc]amento|d[íi]vida p[úu]blica|sal[áa]rio m[íi]nimo)/i,
-  internacional:/(\bonu\b|na[çc][õo]es unidas|vaticano|papa\b|uni[ãa]o europeia|mercosul|\bomc\b|itamaraty|embaixad|tratado|ac[oó]rdo internacional|tarifa)/i
+  // Vocabulario ampliado: a versao antiga so pegava ONU, UE e tarifa, e por
+  // isso 'Marinha da Italia inspeciona petroleiro' — pauta claramente
+  // internacional — nao casava com nada e caia nos curingas brasileiros.
+  internacional:/(\bonu\b|na[çc][õo]es unidas|vaticano|papa\b|uni[ãa]o europeia|\bue\b|bruxelas|mercosul|\bomc\b|\boms\b|\bfmi\b|\botan\b|nato\b|frontex|itamaraty|embaixad|diplomat|tratado|ac[oó]rdo internacional|tarifa|san[çc][õo]es|embargo|mediterr[âa]neo|marinha|naval|fragata|petroleiro|navio|embarca[çc][ãa]o|frota|guarda costeira|migrant|refugiad|g7\b|g20\b|cupula|summit|c[úu]pula)/i
 };
 
 // { id, nome, url (página de notícias), base (raiz do site), temas: [] }
@@ -104,6 +107,30 @@ export const OFICIAIS = {
     { id:'niteroi',   nome:'Prefeitura de Niterói',          url:'https://www.niteroi.rj.gov.br/noticias',   base:'https://www.niteroi.rj.gov.br',    temas:[] },
     { id:'buzios',    nome:'Prefeitura de Búzios',           url:'https://www.buzios.rj.gov.br/noticias',    base:'https://www.buzios.rj.gov.br',     temas:[] },
     { id:'camara-buzios', nome:'Câmara de Búzios',           url:'https://www.cmab.rj.gov.br/noticias',      base:'https://www.cmab.rj.gov.br',       temas:[] }
+  ],
+
+  // ORGANISMOS INTERNACIONAIS
+  //
+  // O cacador so conhecia orgao brasileiro, entao pauta de fora nunca achava
+  // documento. Estes sao os que registram o que costuma virar noticia com
+  // angulo europeu — e varios tem sede ou comando na Italia, que e o recorte
+  // que interessa aqui.
+  //
+  // Licenca: material das instituicoes da UE e reutilizavel mediante credito
+  // (Decisao 2011/833/UE). ONU e OTAN tem regras proprias, mais restritas —
+  // servem como documento para confirmar, nao como texto para reescrever.
+  internacional: [
+    { id:'irini',     nome:'Operação EUNAVFOR MED Irini', url:'https://www.operationirini.eu/news/', base:'https://www.operationirini.eu', temas:['internacional','policia'] },
+    { id:'eeas',      nome:'Serviço Diplomático da UE',   url:'https://www.eeas.europa.eu/eeas/press-material_en', base:'https://www.eeas.europa.eu', temas:['internacional'] },
+    { id:'ec-press',  nome:'Comissão Europeia',           url:'https://ec.europa.eu/commission/presscorner/home/en', base:'https://ec.europa.eu', temas:['internacional','economia'] },
+    { id:'consilium', nome:'Conselho da UE',              url:'https://www.consilium.europa.eu/en/press/press-releases/', base:'https://www.consilium.europa.eu', temas:['internacional'] },
+    { id:'frontex',   nome:'Frontex',                     url:'https://www.frontex.europa.eu/media-centre/news/news-release/', base:'https://www.frontex.europa.eu', temas:['internacional','policia'] },
+    { id:'nato',      nome:'Otan',                        url:'https://www.nato.int/cps/en/natohq/news.htm', base:'https://www.nato.int', temas:['internacional'] },
+    { id:'onu-news',  nome:'ONU News',                    url:'https://news.un.org/pt/', base:'https://news.un.org', temas:['internacional'] },
+    { id:'oms',       nome:'OMS',                         url:'https://www.who.int/news', base:'https://www.who.int', temas:['saude','internacional'] },
+    { id:'fmi',       nome:'FMI',                         url:'https://www.imf.org/en/News', base:'https://www.imf.org', temas:['economia','internacional'] },
+    { id:'marina-it', nome:'Marinha Militar Italiana',    url:'https://www.marina.difesa.it/media-cultura/Pagine/comunicati.aspx', base:'https://www.marina.difesa.it', temas:['internacional','policia'] },
+    { id:'farnesina', nome:'Farnesina',                   url:'https://www.esteri.it/it/sala_stampa/archivionotizie/', base:'https://www.esteri.it', temas:['internacional'] }
   ],
 
   // Vale para qualquer edição: o caso pode ser estadual, mas o registro
@@ -179,8 +206,12 @@ export function ondeProcurar(titulo, uf){
   const casa = o => o.temas?.some(t => temas.includes(t));
   const curinga = o => CURINGAS.includes(o.id);
 
+  const inter = OFICIAIS.internacional || [];
+
   const fila = temas.length
     ? [ ...doEstado.filter(casa),
+        // assunto internacional: o registro esta fora, nao numa prefeitura
+        ...inter.filter(casa),
         ...OFICIAIS.federal.filter(casa),
         ...OFICIAIS.federal.filter(curinga),
         ...doEstado.filter(o => !o.temas?.length),
