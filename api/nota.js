@@ -128,24 +128,34 @@ async function guardarFoto(base64, nome){
   const ext = m[2] === 'jpeg' ? 'jpg' : m[2];
   const caminho = `redacao/${Date.now().toString(36)}-${slug(nome || 'foto').slice(0,40) || 'foto'}.${ext}`;
 
-  const r = await fetch(`https://blob.vercel-storage.com/${caminho}`, {
-    method:'PUT',
-    headers:{
+  // O store da Vercel pode estar como Private, e ai pedir acesso publico e
+  // recusado com 400. Tentamos publico primeiro, porque foto de jornal
+  // precisa abrir para o leitor; se recusar, tentamos sem declarar nada.
+  const enviar = async (publico) => {
+    const cab = {
       Authorization: `Bearer ${BLOB}`,
       'x-content-type': m[1],
       'x-api-version': '7',
-      'x-add-random-suffix': '1',
-      // O store nasce como Private na Vercel, e ai a imagem sobe mas nao abre
-      // para o leitor. Foto de jornal precisa ser publica — declaramos aqui,
-      // por requisicao, sem depender da configuracao do store.
-      'x-access': 'public',
-      'x-cache-control-max-age': '31536000'
-    },
-    body: bytes
-  });
-  if (!r.ok) throw new Error('falha ao guardar: HTTP ' + r.status);
-  const j = await r.json();
-  return j.url;
+      'x-add-random-suffix': '1'
+    };
+    if (publico) cab['x-access'] = 'public';
+
+    const r = await fetch(`https://blob.vercel-storage.com/${caminho}`, {
+      method:'PUT', headers: cab, body: bytes
+    });
+    if (r.ok) return await r.json();
+
+    // O corpo da resposta diz o motivo. Sem ele, "HTTP 400" nao ensina nada.
+    const detalhe = await r.text().catch(() => '');
+    throw new Error(`HTTP ${r.status} ${detalhe.slice(0, 140)}`);
+  };
+
+  try {
+    return (await enviar(true)).url;
+  } catch (e) {
+    if (!/HTTP 400/.test(String(e.message))) throw e;
+    return (await enviar(false)).url;   // segunda tentativa, sem forcar acesso
+  }
 }
 
 /* ------------------------------------------------------------ ROTA ------ */
