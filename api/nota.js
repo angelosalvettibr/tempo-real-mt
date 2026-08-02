@@ -148,7 +148,10 @@ export default async function handler(req, res){
     try { notas = JSON.parse(cru || '[]'); } catch {}
     const corte = Date.now() - 7 * 86400000;
     return res.status(200).json({
-      notas: notas.filter(n => Date.parse(n.iso) > corte).slice(0, 30)
+      notas: notas
+        .filter(n => n.publicada !== false)          // rascunho nao vai ao ar
+        .filter(n => Date.parse(n.iso) > corte)
+        .slice(0, 30)
     });
   }
 
@@ -207,6 +210,7 @@ export default async function handler(req, res){
       foto: /^https?:\/\//.test(corpo.foto || '') ? corpo.foto : null,
       editoria: ['brasil','internacional','regional'].includes(corpo.editoria) ? corpo.editoria : 'brasil',
       uf: corpo.uf || null,
+      publicada: corpo.rascunho !== true,
       nivel: 'redacao',
       selo: 'Edição da redação',
       chapeu: 'Redação',
@@ -220,6 +224,26 @@ export default async function handler(req, res){
     await redis('SET', 'redacao:notas', JSON.stringify(notas.slice(0, 60)));
 
     return res.status(200).json({ ok:true, nota });
+  }
+
+  /* --- listar tudo, inclusive rascunho (so com senha) --- */
+  if (acao === 'listar') {
+    if (!ligado()) return res.status(200).json({ ok:true, notas: [] });
+    let notas = [];
+    try { notas = JSON.parse(await redis('GET','redacao:notas') || '[]'); } catch {}
+    return res.status(200).json({ ok:true, notas });
+  }
+
+  /* --- tirar do ar ou repor, sem apagar --- */
+  if (acao === 'alternar') {
+    if (!ligado()) return res.status(200).json({ ok:false });
+    let notas = [];
+    try { notas = JSON.parse(await redis('GET','redacao:notas') || '[]'); } catch {}
+    const n = notas.find(x => x.id === corpo.id);
+    if (!n) return res.status(200).json({ ok:false, msg:'nota não encontrada' });
+    n.publicada = n.publicada === false;
+    await redis('SET', 'redacao:notas', JSON.stringify(notas));
+    return res.status(200).json({ ok:true, publicada: n.publicada });
   }
 
   /* --- apagar --- */
