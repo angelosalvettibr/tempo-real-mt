@@ -148,7 +148,13 @@ tr:hover td{background:var(--painel)}
 .red .lista .n .est.ras{color:#D29922;border-color:#4A3A0E}
 .red .lista .n small{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none}
 .trava{padding:34px 18px;text-align:center}
-.trava input{max-width:230px;margin:12px auto 0;text-align:center;font-family:var(--mono);letter-spacing:.2em}
+/* O campo herdava a largura de bloco mas nao a caixa: sem display block e
+   sem contraste proprio, ele sumia no fundo e so o botao aparecia. */
+.trava input{display:block;width:100%;max-width:250px;margin:16px auto 0;padding:13px 15px;
+  text-align:center;font-family:var(--mono);font-size:15px;letter-spacing:.22em;
+  background:#fff;color:#111;border:2px solid var(--texto2);border-radius:3px}
+.trava input::placeholder{color:#9AA4B0;letter-spacing:.14em}
+.trava input:focus{outline:none;border-color:#58A6FF}
 .trava p{font-family:var(--sans);font-size:13px;color:var(--fraco);line-height:1.6;max-width:440px;margin:0 auto}
 .lt{margin:26px 0;border:1px solid var(--borda);background:var(--painel)}
 .lt .cab{padding:12px 18px;border-bottom:1px solid var(--borda);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
