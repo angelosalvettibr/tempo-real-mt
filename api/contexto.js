@@ -158,6 +158,75 @@ async function gerar(titulo, resumo){
   };
 }
 
+/* ------------------------------------------- PERGUNTA DO LEITOR ---------
+   O bloco automatico decide sozinho o que explicar, e as vezes decide que
+   nao ha o que explicar — deixando quem tinha duvida sem saida.
+
+   Aqui o leitor pergunta. E melhor que qualquer regua no prompt: quem mora
+   em Cuiaba nao pergunta o que e o Coxipo, quem le de fora pergunta. A
+   calibragem vem de quem esta lendo.
+
+   O CUIDADO QUE SUSTENTA ISSO: pergunta aberta sobre noticia nao confirmada
+   induz o agente a afirmar o fato. Ele responde sobre o ENTORNO; sobre o
+   fato, diz que nao esta confirmado.                                       */
+const PROMPT_PERGUNTA = (titulo, resumo, pergunta, nivel) => `Você responde perguntas de leitores do MERIDIANO, um jornal que só afirma o que consegue verificar.
+
+O leitor está lendo esta notícia:
+${titulo}
+${resumo || ''}
+
+${nivel === 'sem-confirmacao'
+  ? 'ATENÇÃO: esta notícia NÃO está confirmada. O jornal registrou que ela circula na imprensa e não encontrou documento oficial. Você NÃO pode tratar o fato como verdadeiro. Se a pergunta for sobre o fato em si, responda que ele não está confirmado e explique o que se sabe do entorno.'
+  : 'Esta notícia foi confirmada em documento de fonte oficial.'}
+
+E perguntou:
+${pergunta}
+
+PROCURE antes de responder. Use a busca. Não responda de memória.
+
+REGRAS:
+1. Responda a pergunta feita. Se ela for vaga, responda o que houver de mais provável e diga o que ficou de fora.
+2. NÃO opine, NÃO preveja, NÃO avalie. Nada de "isso indica", "especialistas avaliam", "deve levar a", "tende a".
+3. NÃO invente número, data ou nome. Se a busca não trouxer, diga que não encontrou.
+4. Se a pergunta pedir julgamento — "isso é bom?", "quem tem razão?" —, explique os fatos e diga que a avaliação é do leitor.
+5. Se a busca não trouxer nada sobre o que foi perguntado, diga isso com franqueza. Não preencha.
+6. Português correto, com acentos. Dois a quatro parágrafos curtos.
+
+FORMATO — exatamente isto, sem markdown:
+RESPOSTA:
+(os parágrafos, separados por linha em branco)
+FONTES:
+- (nome da fonte usada. 1 a 4 itens, ou vazio se não encontrou nada)`;
+
+async function responder(titulo, resumo, pergunta, nivel){
+  if (!CHAVE_IA) throw new Error('sem GEMINI_API_KEY');
+  const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
+    method:'POST', headers:{ 'Content-Type':'application/json' },
+    body: JSON.stringify({
+      contents:[{ parts:[{ text: PROMPT_PERGUNTA(titulo, resumo, pergunta, nivel) }] }],
+      tools:[{ google_search: {} }],
+      generationConfig:{ temperature:0.25, maxOutputTokens:2000 }
+    })
+  });
+  if (!r.ok) throw new Error('IA HTTP ' + r.status);
+  const j = await r.json();
+
+  const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '')
+    .replace(/\*\*/g,'').trim();
+
+  const paragrafos = (t.match(/RESPOSTA\s*:\s*([\s\S]*?)(?=FONTES\s*:|$)/i)?.[1] || '')
+    .split(/\n\s*\n/).map(x => x.trim()).filter(x => x.length > 25);
+
+  const fontes = (t.match(/FONTES\s*:\s*([\s\S]*)$/i)?.[1] || '').split(/\n/)
+    .map(x => x.replace(/^[-•\s]+/,'').trim()).filter(x => x.length > 2 && x.length < 90).slice(0, 4);
+
+  const proibido = /(indica que|sugere que|especialistas avaliam|deve levar|tende a|na minha opini)/i;
+  if (!paragrafos.length) return { ok:false, msg:'não consegui responder isso' };
+  if (proibido.test(paragrafos.join(' '))) return { ok:false, msg:'a resposta saiu opinativa — tente perguntar de outro jeito' };
+
+  return { ok:true, paragrafos, fontes: fontes.length ? fontes : null };
+}
+
 /* ------------------------------------------------ RESUMO DE UM CASO -----
    A pagina do caso mostra a materia original e a fila de desdobramentos em
    ordem. Falta a leitura do conjunto: o que aconteceu, do comeco ate agora.
@@ -207,6 +276,18 @@ export default async function handler(req, res){
   const id = esc(corpo.id).slice(0, 200);
   const titulo = esc(corpo.titulo).slice(0, 300);
   const resumo = esc(corpo.resumo).slice(0, 600);
+
+  /* ---- pergunta do leitor sobre a matéria ---- */
+  if (corpo.acao === 'perguntar') {
+    const q = esc(corpo.pergunta).slice(0, 300);
+    if (q.length < 5) return res.status(200).json({ ok:false, msg:'escreva a pergunta' });
+    try {
+      const r = await responder(titulo, resumo, q, esc(corpo.nivel));
+      return res.status(200).json(r);
+    } catch (e) {
+      return res.status(200).json({ ok:false, msg: String(e.message).slice(0, 80) });
+    }
+  }
 
   /* ---- resumo de um caso acompanhado ---- */
   if (corpo.acao === 'caso') {
