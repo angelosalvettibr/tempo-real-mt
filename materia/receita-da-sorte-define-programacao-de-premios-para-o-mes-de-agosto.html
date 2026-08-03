@@ -239,6 +239,31 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .ctx-bloco p:last-of-type{margin-bottom:0}
 .ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
 .ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
+
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
+.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
+.acoes button:hover{background:var(--tinta);color:var(--papel)}
+.acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.zap:hover{background:var(--verde);color:#fff}
+.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
+.acoes button.seg:hover{background:var(--sinal);color:#fff}
+.acoes button.seg.on{background:var(--sinal);color:#fff}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
+.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
+.ctx-perg{border-top:1px solid #CBD9E6;margin-top:16px;padding-top:15px}
+.ctx-perg label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:9px}
+.ctx-perg .campo{display:flex;gap:8px;flex-wrap:wrap}
+.ctx-perg input{flex:1;min-width:200px;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;border:1px solid #CBD9E6;background:#fff;padding:11px 13px}
+.ctx-perg button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:#1F4D7A;color:#fff;border:0;padding:11px 17px;cursor:pointer}
+.ctx-resp{margin-top:15px;padding-top:14px;border-top:1px dashed #CBD9E6}
+.ctx-resp .q{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#1F4D7A;margin-bottom:10px}
+.ctx-resp p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:11px}
 </style>
 </head>
 <body>
@@ -286,6 +311,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   
   
   
+  
   <div class="acoes">
     <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
     <button id="bt-link">Copiar link</button>
@@ -297,6 +323,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
 <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
+
 
 
 
@@ -353,13 +380,47 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
             + '</div>';
         } else if (j.ok) {
           ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
-            + '<p class="nada">Esta notícia não pede contexto adicional — o que ela informa se explica sozinho.</p></div>';
+            + '<p class="nada">Nada aqui exige explicação de fundo. Mas se você ficou com alguma dúvida, pergunte:</p></div>';
         } else {
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
+        montarPergunta();
       })
       .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
   });
+
+  function montarPergunta(){
+    var b = ca.querySelector('.ctx-bloco');
+    if (!b || b.querySelector('.ctx-perg')) return;
+    var d = document.createElement('div');
+    d.className = 'ctx-perg';
+    d.innerHTML = '<label>pergunte sobre esta notícia</label>'
+      + '<div class="campo"><input id="cp-q" placeholder="o que é isso? por que aconteceu? isso é muito?" maxlength="300">'
+      + '<button id="cp-ok">perguntar</button></div><div id="cp-saida"></div>';
+    b.appendChild(d);
+    var ir = function(){
+      var q = document.getElementById('cp-q').value.trim();
+      if (q.length < 5) return;
+      var bt = document.getElementById('cp-ok'), sa = document.getElementById('cp-saida');
+      bt.disabled = true; bt.textContent = 'procurando…';
+      fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'perguntar', pergunta:q, titulo:t,
+          resumo: document.querySelector('.linhafina') ? document.querySelector('.linhafina').textContent : '',
+          id: location.pathname.split('/').pop().replace(/\.html$/,'') }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          bt.disabled = false; bt.textContent = 'perguntar';
+          sa.innerHTML = j.ok
+            ? '<div class="ctx-resp"><div class="q">' + q.replace(/[<>]/g,'') + '</div>'
+              + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
+              + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '') + '</div>'
+            : '<div class="ctx-resp"><p>' + (j.msg || 'não consegui responder').replace(/[<>]/g,'') + '</p></div>';
+        })
+        .catch(function(){ bt.disabled = false; bt.textContent = 'perguntar'; });
+    };
+    document.getElementById('cp-ok').addEventListener('click', ir);
+    document.getElementById('cp-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') ir(); });
+  }
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;

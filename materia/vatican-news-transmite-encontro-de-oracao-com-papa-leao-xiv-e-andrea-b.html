@@ -76,6 +76,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   
   
   
+  
   <div class="acoes">
     <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
     <button id="bt-link">Copiar link</button>
@@ -87,6 +88,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
 <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
+
 
 
 
@@ -144,13 +146,47 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
             + '</div>';
         } else if (j.ok) {
           ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
-            + '<p class="nada">Esta notícia não pede contexto adicional — o que ela informa se explica sozinho.</p></div>';
+            + '<p class="nada">Nada aqui exige explicação de fundo. Mas se você ficou com alguma dúvida, pergunte:</p></div>';
         } else {
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
+        montarPergunta();
       })
       .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
   });
+
+  function montarPergunta(){
+    var b = ca.querySelector('.ctx-bloco');
+    if (!b || b.querySelector('.ctx-perg')) return;
+    var d = document.createElement('div');
+    d.className = 'ctx-perg';
+    d.innerHTML = '<label>pergunte sobre esta notícia</label>'
+      + '<div class="campo"><input id="cp-q" placeholder="o que é isso? por que aconteceu? isso é muito?" maxlength="300">'
+      + '<button id="cp-ok">perguntar</button></div><div id="cp-saida"></div>';
+    b.appendChild(d);
+    var ir = function(){
+      var q = document.getElementById('cp-q').value.trim();
+      if (q.length < 5) return;
+      var bt = document.getElementById('cp-ok'), sa = document.getElementById('cp-saida');
+      bt.disabled = true; bt.textContent = 'procurando…';
+      fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'perguntar', pergunta:q, titulo:t,
+          resumo: document.querySelector('.linhafina') ? document.querySelector('.linhafina').textContent : '',
+          id: location.pathname.split('/').pop().replace(/\.html$/,'') }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          bt.disabled = false; bt.textContent = 'perguntar';
+          sa.innerHTML = j.ok
+            ? '<div class="ctx-resp"><div class="q">' + q.replace(/[<>]/g,'') + '</div>'
+              + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
+              + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '') + '</div>'
+            : '<div class="ctx-resp"><p>' + (j.msg || 'não consegui responder').replace(/[<>]/g,'') + '</p></div>';
+        })
+        .catch(function(){ bt.disabled = false; bt.textContent = 'perguntar'; });
+    };
+    document.getElementById('cp-ok').addEventListener('click', ir);
+    document.getElementById('cp-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') ir(); });
+  }
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;
