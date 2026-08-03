@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-03T17:37:40.307Z",
+  "gerado": "2026-08-03T18:10:56.630Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 203,
-    "fonteLivre": 43,
-    "confirmadas": 6,
-    "publicadas": 17,
+    "pauta": 206,
+    "fonteLivre": 38,
+    "confirmadas": 5,
+    "publicadas": 15,
     "resgatadas": 0,
-    "semFonte": 46
+    "semFonte": 51
   },
   "fontes": {
     "checadas": 81,
-    "responderam": 52,
-    "entregando": 28,
-    "itens": 246,
+    "responderam": 51,
+    "entregando": 27,
+    "itens": 244,
     "lista": [
       {
         "tipo": "pauta",
@@ -30,15 +30,6 @@
         "tipo": "pauta",
         "id": "cnn",
         "nome": "CNN Brasil",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -136,6 +127,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1politica",
+        "nome": "g1 Política",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "poder360",
         "nome": "Poder360",
         "itens": 10,
@@ -145,8 +154,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-politica",
+        "nome": "Agência Brasil",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -163,15 +181,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usp",
         "nome": "Jornal da USP",
         "itens": 9,
@@ -180,19 +189,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "resgate",
         "id": "migalhas",
         "nome": "Migalhas",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -211,15 +211,6 @@
         "id": "g1economia",
         "nome": "g1 Economia",
         "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -289,8 +280,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +289,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -361,21 +352,21 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 405"
-      },
-      {
-        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -514,12 +505,12 @@
       },
       {
         "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 429"
       },
       {
         "tipo": "livre",
@@ -559,6 +550,15 @@
       },
       {
         "tipo": "livre",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ibama",
         "nome": "Ibama",
         "itens": 0,
@@ -570,6 +570,15 @@
         "tipo": "livre",
         "id": "mec",
         "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -595,15 +604,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "icmbio",
         "nome": "ICMBio",
         "itens": 0,
@@ -619,6 +619,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -640,8 +649,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -651,15 +660,6 @@
         "tipo": "livre",
         "id": "trabalho",
         "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -703,21 +703,21 @@
       },
       {
         "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "fiocruz",
         "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "funai",
+        "nome": "Funai",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -751,78 +751,15 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por IA",
-      "resumo": "Pesquisa indica que câmeras de segurança são instaladas em locais de atuação da oposição e não onde há maior taxa de crimes comuns.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
-      "origemNome": "Global Voices",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Um estudo de março de 2026, realizado pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais, constatou que 11 governos africanos gastaram juntos mais de US$ 2 bilhões em sistemas de vigilância operados por inteligência artificial. Do montante total, a Nigéria foi responsável por mais de US$ 470 milhões.",
-        "O conjunto de tecnologias adquiridas reúne câmeras CCTV de alta definição, leitores de placas de veículos, reconhecimento facial, identificação biométrica e salas de controle. Os recursos e equipamentos são fornecidos essencialmente por empresas e bancos chineses e por empresas israelenses.",
-        "A alegação oficial dos governos para a aquisição dos aparelhos é o combate à criminalidade. No entanto, os pesquisadores do IDS identificaram que os números da violência não caíram e encontraram poucas evidências de que as câmeras reduzem os crimes.",
-        "O mapeamento do instituto revelou que os equipamentos estão instalados em bairros com organização de partidos de oposição, locais de protestos e áreas onde a imprensa cobriu ações contrárias aos governos no poder."
-      ],
-      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia.html",
-      "iso": "2026-08-03T11:47:40.000Z",
-      "hora": "07h47",
-      "original": true,
-      "contexto": "Este tema foi registrado 3 vezes no histórico em 3 de agosto de 2026. Do montante de mais de US$ 2 bilhões gasto por 11 governos africanos, a Nigéria respondeu por mais de US$ 470 milhões. As tecnologias afetam pessoas em bairros com organização de partidos de oposição, locais de protestos e áreas onde a imprensa cobriu ações contrárias aos governos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": null,
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia",
+      "id": "ilm:paises-criam-restricoes-em-redes-sociais-para-criancas-e-adolescentes",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "PT oficializa candidatura de Luiz Inácio Lula da Silva à Presidência",
-      "resumo": "Geraldo Alckmin compõe a chapa como candidato à Vice-Presidência e a aliança para 2026 reúne PSB, PCdoB, PV, PDT, PSOL e Rede.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/pt-oficializa-candidatura-de-lula-presidencia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "Valor Econômico"
-      ],
-      "quentura": 4,
-      "uf": null,
-      "corpo": [
-        "O PT formalizou a candidatura de Luiz Inácio Lula da Silva à Presidência da República em convenção realizada neste domingo (2), no Expo Center Norte, na zona norte de São Paulo. Geraldo Alckmin, do PSB, compõe a chapa como candidato à Vice-Presidência da República, repetindo a dupla vitoriosa de 2022.",
-        "Em 2026, o PT terá como aliados PSB, PCdoB, PV, PDT, PSOL e Rede. Se for eleito, Lula cumprirá o quarto mandato e, aos 81 anos, vai ser o presidente mais velho a ocupar o cargo.",
-        "O evento começou por volta das 11h com a presença de lideranças e aliados. No discurso de abertura da Convenção Nacional do PT, o presidente do partido, Edinho Silva, afirmou que as próximas eleições terão impacto na América Latina e no mundo e definirão a soberania nacional. Também discursaram o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva.",
-        "Para encerrar o evento, o presidente Lula discursou por mais de uma hora. Ele declarou que a motivação para vencer a eleição é o legado do governo ser merecedor de confiança e de respeito, afirmando que quem fez pode prometer mais."
-      ],
-      "link": "/materia/pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia.html",
-      "iso": "2026-08-02T18:38:00.000Z",
-      "hora": "14h38",
-      "original": true,
-      "contexto": "A chapa composta por Luiz Inácio Lula da Silva e Geraldo Alckmin repete a formação vitoriosa das eleições de 2022. No histórico recente do arquivo, o Partido Verde oficializou apoio a essa candidatura em 1º de agosto de 2026. Se for eleito em 2026 para cumprir um quarto mandato, Lula ocupará a Presidência da República aos 81 anos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:paises-aprovam-medidas-para-restringir-acesso-de-jovens-a-redes-sociai",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Países aprovam medidas para restringir acesso de jovens a redes sociais",
-      "resumo": "Regras na Austrália, França e Reino Unido estabelecem proibições por idade e horário, e entidade brasileira orienta limites de tela.",
+      "titulo": "Países criam restrições em redes sociais para crianças e adolescentes",
+      "resumo": "Medidas incluem proibição por idade na Austrália e na França, bloqueio noturno no Reino Unido e recomendação de tolerância zero para até 2 anos no Brasil.",
       "fonte": "Meridiano, com informações de Jornal da USP",
       "origemLink": "https://jornal.usp.br/radio-usp/paises-ampliam-restricoes-as-redes-sociais-para-proteger-criancas-e-adolescentes/",
       "origemNome": "Jornal da USP",
@@ -832,73 +769,13 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "Diversos países aprovaram leis e propostas para limitar o acesso de crianças e adolescentes a plataformas digitais e redes sociais. As medidas visam proteger a saúde física e mental dos jovens, além de discutir o tempo de tela e a responsabilidade de famílias e empresas.",
-        "A Austrália foi pioneira ao proibir o uso dessas redes por menores de 16 anos. Na França, foi aprovada uma lei que veta o acesso para menores de 15 anos e proíbe celulares no ensino médio.",
-        "No Reino Unido, adolescentes com menos de 16 anos terão o acesso a aplicativos como Instagram, TikTok e YouTube bloqueado entre meia-noite e 6h.",
-        "No Brasil, a Sociedade Brasileira de Pediatria recomenda limites rigorosos para o tempo de tela, com tolerância zero para crianças de até 2 anos. O tema foi abordado na coluna do Dr. Bartô."
+        "Diversos países adotaram leis e propostas para proibir ou restringir o acesso de crianças e adolescentes a plataformas digitais e redes sociais. As medidas têm o objetivo de proteger a saúde física e mental dos jovens.",
+        "A Austrália proibiu o uso dessas plataformas por menores de 16 anos. A França aprovou uma lei que veta o acesso para menores de 15 anos e proíbe celulares no ensino médio. No Reino Unido, adolescentes com menos de 16 anos terão o acesso a aplicativos como Instagram, TikTok e YouTube bloqueado entre meia-noite e 6h.",
+        "No Brasil, a Sociedade Brasileira de Pediatria recomenda limites rigorosos para o tempo de tela, estabelecendo tolerância zero para crianças de até 2 anos. As medidas foram comentadas pelo Dr. Bartô em coluna do Jornal da USP."
       ],
-      "link": "/materia/paises-aprovam-medidas-para-restringir-acesso-de-jovens-a-redes-sociai.html",
+      "link": "/materia/paises-criam-restricoes-em-redes-sociais-para-criancas-e-adolescentes.html",
       "iso": "2026-08-03T11:50:00.000Z",
       "hora": "07h50",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.nasa.gov/wp-content/uploads/2026/07/navcube-lunar-mgnss.jpg",
-      "fotoAlt": "The NavCube3-mini payload in a laboratory at NASA&#039;s Goddard Space Flight Center in Greenbelt, Md.",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:nasa-entrega-sistema-de-navegacao-navcube3-mini-para-a-intuitive-machi",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "NASA entrega sistema de navegação NavCube3-mini para a Intuitive Machines",
-      "resumo": "Equipamento será integrado ao satélite Altus-1 para fornecer suporte de navegação e comunicação em missões na Lua, incluindo o Polo Sul lunar em 2028.",
-      "fonte": "Meridiano, com informações de NASA",
-      "origemLink": "https://www.nasa.gov/technology/space-comms/nasa-delivers-navigation-system-for-commercial-lunar-relay/",
-      "origemNome": "NASA",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A NASA entregou a carga útil NavCube3-mini em 13 de julho à Intuitive Machines. O equipamento será integrado ao Altus-1, o primeiro satélite de retransmissão lunar da empresa, projetado para permitir comunicações e navegação para astronautas e rovers na futura Base Lunar da agência.",
-        "Com cerca de metade do tamanho de uma caixa de sapatos, o NavCube3-mini pesa 3,5 libras e funciona com menos de 20 watts de potência. O receptor de navegação utiliza sinais dos sistemas GPS e Galileo baseados na Terra a distâncias lunares para determinar a posição precisa de uma espaçonave. A tecnologia foi desenvolvida no Goddard Space Flight Center da NASA, localizado em Greenbelt, Maryland.",
-        "O satélite Altus-1 é a primeira unidade de uma rede planejada sob o contrato Near Space Network Services da Intuitive Machines com a NASA. A estrutura prestará suporte a missões na superfície lunar, inclusive na região do Polo Sul da Lua, onde os astronautas do programa Artemis devem pousar em 2028.",
-        "Antes de ser entregue à Intuitive Machines, o NavCube3-mini passou por testes ambientais de vibração, vácuo térmico e compatibilidade eletromagnética no centro NASA Goddard. Sob a gerência de projeto de Munther Hassouneh, a carga útil servirá como demonstração tecnológica a bordo do Altus-1 para validar a navegação por satélite na região lunar."
-      ],
-      "link": "/materia/nasa-entrega-sistema-de-navegacao-navcube3-mini-para-a-intuitive-machi.html",
-      "iso": "2026-08-03T14:20:26.000Z",
-      "hora": "10h20",
-      "original": true,
-      "contexto": "Não há registros de casos parecidos no histórico. O equipamento afeta as comunicações e a navegação de astronautas e rovers em missões na Base Lunar e na região do Polo Sul. O cronograma prevê o pouso de astronautas do programa Artemis na Lua em 2028.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:lingua-kam-no-nordeste-da-nigeria-tem-entre-8-000-e-11-000-falantes",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Língua Kam no nordeste da Nigéria tem entre 8.000 e 11.000 falantes",
-      "resumo": "O idioma não recebeu atenção de pesquisadores antes de 2016, assim como outras línguas da mesma região.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A língua Kam, falada no nordeste da Nigéria, possui atualmente um número de falantes estimado entre aproximadamente 8.000 e 11.000 pessoas.",
-        "Antes do ano de 2016, o idioma não havia recebido atenção por parte de pesquisadores.",
-        "Essa ausência de estudos até esse período também ocorreu com muitas outras línguas situadas na região nordeste da Nigéria."
-      ],
-      "link": "/materia/lingua-kam-no-nordeste-da-nigeria-tem-entre-8-000-e-11-000-falantes.html",
-      "iso": "2026-08-03T05:38:53.000Z",
-      "hora": "01h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -909,30 +786,153 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tse-realiza-semana-de-acoes-sobre-seguranca-e-transparencia-da-urna-el",
+      "id": "ilm:pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "TSE realiza semana de ações sobre segurança e transparência da urna eletrônica",
-      "resumo": "Programação conta com transmissão ao vivo com abertura do equipamento, lançamento de campanha contra desinformação e corrida em Brasília.",
+      "titulo": "PT oficializa candidatura de Luiz Inácio Lula da Silva à Presidência da República",
+      "resumo": "Geraldo Alckmin, do PSB, é o candidato a vice na chapa, que reúne apoio do PCdoB, PV, PDT, PSOL e Rede para as eleições de 2026.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/tse-faz-semana-de-acoes-para-mostrar-funcionamento-da-urna-eletronica",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/pt-oficializa-candidatura-de-lula-presidencia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Metrópoles"
+        "g1",
+        "g1 Política"
       ],
-      "quentura": 1,
+      "quentura": 4,
       "uf": null,
       "corpo": [
-        "O Tribunal Superior Eleitoral (TSE) promove nesta semana a primeira edição da Semana Nacional do Sistema Eletrônico de Votação. A ação busca informar os eleitores sobre a segurança e a transparência da urna eletrônica por meio de demonstrações de uso, palestras, exposições e combate à desinformação.",
-        "Nesta segunda-feira (3), às 17h30, o TSE transmite uma live nas redes sociais na qual técnicos do tribunal vão abrir o equipamento para demonstrar cada componente. Na mesma data, ocorre o lançamento da campanha \"Fato ou Boato – Viralizou\", voltada a esclarecer dúvidas sobre a veracidade de conteúdos da internet.",
-        "O encerramento das atividades será no próximo domingo (9), com a Corrida Pela Democracia, realizada em Brasília para incentivar a participação popular no pleito.",
-        "As eleições têm o primeiro turno marcado para 4 de outubro, quando serão escolhidos deputados federais, estaduais e distritais, governadores, senadores e o presidente da República. O segundo turno pode ocorrer em 25 de outubro para governador e presidente, se nenhum candidato obtiver mais de 50% dos votos válidos no primeiro turno, excluídos brancos e nulos."
+        "O PT oficializou a candidatura de Luiz Inácio Lula da Silva à Presidência da República no domingo (2). A convenção partidária ocorreu no Expo Center Norte, na zona norte de São Paulo, com início por volta das 11h e presença de lideranças e aliados.",
+        "Geraldo Alckmin, do PSB, compõe a chapa como candidato à Vice-Presidência da República, repetindo a parceria vitoriosa de 2022. Em 2026, a coligação do PT terá como aliados o PSB, PCdoB, PV, PDT, PSOL e Rede. Caso seja eleito aos 81 anos, Lula será o presidente mais velho a ocupar o cargo e cumprirá seu quarto mandato.",
+        "Durante a abertura, o presidente do partido, Edinho Silva, declarou que as próximas eleições brasileiras impactarão a América Latina e o mundo, além de definir a soberania nacional perante possíveis intervencionismos. Na sequência, discursaram o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva.",
+        "No encerramento do evento, o presidente Lula discursou por mais de uma hora. Ele declarou que a motivação de um governo para vencer as eleições depende de o seu legado merecer confiança e respeito, acrescentando que quem fez pode prometer mais, enquanto quem não fez não tem o que prometer."
       ],
-      "link": "/materia/tse-realiza-semana-de-acoes-sobre-seguranca-e-transparencia-da-urna-el.html",
-      "iso": "2026-08-03T10:02:00.000Z",
-      "hora": "06h02",
+      "link": "/materia/pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d.html",
+      "iso": "2026-08-02T18:38:00.000Z",
+      "hora": "14h38",
       "original": true,
-      "contexto": "Esta é a primeira edição da Semana Nacional do Sistema Eletrônico de Votação, sem registros anteriores no histórico. As ações informativas do tribunal têm como público os eleitores. O evento se encerra no domingo (9) e a próxima etapa é a votação em primeiro turno no dia 4 de outubro, com eventual segundo turno em 25 de outubro.",
+      "contexto": "A chapa formada por Luiz Inácio Lula da Silva e Geraldo Alckmin repete a composição das eleições de 2022. Se for eleito em 2026, Lula assumirá a Presidência da República pela quarta vez. O arquivo de cobertura registra quatro episódios anteriores sobre a formalização da candidatura e de apoios partidários entre 1º e 2 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:campanha-comunitaria-ajuda-a-salvar-a-lingua-kam-na-nigeria",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Campanha comunitária ajuda a salvar a língua Kam na Nigéria",
+      "resumo": "O idioma do nordeste nigeriano conta com aproximadamente 8.000 – 11.000 falantes e não recebia atenção de pesquisadores antes de 2016.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Uma campanha liderada pela comunidade está ajudando a salvar a língua Kam, na Nigéria.",
+        "O número atual de falantes do idioma é de aproximadamente 8.000 – 11.000.",
+        "Assim como muitas outras línguas do nordeste da Nigéria, o Kam não recebeu atenção de pesquisadores antes de 2016."
+      ],
+      "link": "/materia/campanha-comunitaria-ajuda-a-salvar-a-lingua-kam-na-nigeria.html",
+      "iso": "2026-08-03T05:38:53.000Z",
+      "hora": "01h38",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por IA",
+      "resumo": "Estudo do IDS aponta concentração de equipamentos em áreas de atuação da oposição e da imprensa, e não onde a criminalidade é maior.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
+      "origemNome": "Global Voices",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais identificou que 11 governos africanos gastaram mais de US$ 2 bilhões em sistemas de vigilância por inteligência artificial. A Nigéria respondeu por mais de US$ 470 milhões desse total.",
+        "Os pacotes de vigilância incluem câmeras de alta definição, leitores de placas, reconhecimento facial, identificação biométrica e salas de controle. A maior parte dessa tecnologia é fornecida ou financiada por empresas e bancos chineses, além de empresas israelenses.",
+        "Os governos alegam que a aquisição dos equipamentos visa combater a criminalidade, porém os índices de crimes não apresentam queda. Os pesquisadores do IDS constataram poucas evidências de que as câmeras reduzem crimes e identificaram que a instalação ocorre em bairros onde a oposição se organiza, onde houve protestos e onde a imprensa atua.",
+        "A inteligência artificial permitiu que históricos de comunicações, impostos e transações bancárias acumulados pelo Estado se tornem consultáveis em segundos. O sistema atua de forma preventiva, suprimindo ações pelo fato de os cidadãos saberem que estão sendo monitorados."
+      ],
+      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia.html",
+      "iso": "2026-08-03T11:47:40.000Z",
+      "hora": "07h47",
+      "original": true,
+      "contexto": "Este assunto apareceu três vezes no nosso arquivo em 3 de agosto de 2026. Do total de mais de US$ 2 bilhões gastos por 11 governos africanos, a Nigéria responde por mais de US$ 470 milhões. O monitoramento afeta cidadãos que vivem em bairros com atuação da oposição, ocorrência de protestos e presença da imprensa.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260731_quadro.jpg",
+      "fotoAlt": "Pessoas escrevem palavras como &quot;paz&quot;, &quot;justiça&quot;, &quot;liberdade&quot; e &quot;saúde&quot; em uma tela durante uma atividade coletiva.",
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:usp-abre-selecao-com-100-vagas-para-projeto-de-dialogo-no-sistema-pris",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "USP abre seleção com 100 vagas para projeto de diálogo no sistema prisional",
+      "resumo": "As inscrições ocorrem entre 3 e 14 de agosto para o segundo semestre de 2026, com metade das oportunidades voltadas à comunidade externa e cotas para egressos do sistema prisional.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/diversidade/faculdade-de-direito-da-usp-abre-selecao-para-projeto-de-dialogo-em-prisoes-e-unidades-socioeducativas/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Faculdade de Direito da USP anunciou a abertura do processo seletivo para o Grupo de Diálogo Universidade-Cárcere-Comunidade, projeto de extensão que busca restabelecer a comunicação entre a academia, o sistema prisional e a sociedade civil.",
+        "A iniciativa oferece 100 vagas para o segundo semestre de 2026, divididas entre as frentes Adulto e Socioeducação. As inscrições são abertas ao público geral e ocorrem entre os dias 3 e 14 de agosto.",
+        "Metade das vagas é destinada à comunidade externa, com cotas reservadas para egressos do sistema prisional. O projeto foi idealizado pelos professores Alvino Augusto de Sá e Sérgio Salomão Shecaira, ambos da Faculdade de Direito, com a proposta de fundir saberes acadêmicos e vivenciais em rodas de diálogo."
+      ],
+      "link": "/materia/usp-abre-selecao-com-100-vagas-para-projeto-de-dialogo-no-sistema-pris.html",
+      "iso": "2026-08-03T15:29:36.000Z",
+      "hora": "11h29",
+      "original": true,
+      "contexto": "As 100 vagas oferecidas são abertas ao público geral, com metade reservada para a comunidade externa e cotas para egressos do sistema prisional. O período de inscrições para o projeto ocorre entre os dias 3 e 14 de agosto. O arquivo registra um caso semelhante em 3 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:congresso-nacional-retoma-trabalhos-com-foco-em-duas-semanas-de-esforc",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Congresso Nacional retoma trabalhos com foco em duas semanas de esforço concentrado",
+      "resumo": "Sem votações no plenário nos primeiros dias, deputados e senadores concentrarão as deliberações em dois períodos específicos antes das eleições de outubro.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/apos-recesso-congresso-retoma-trabalhos-nesta-semana",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1",
+        "g1 Política",
+        "CartaCapital"
+      ],
+      "quentura": 3,
+      "uf": null,
+      "corpo": [
+        "O Congresso Nacional retomou os trabalhos nesta segunda-feira (3) após duas semanas de recesso parlamentar, sem previsão de sessões plenárias deliberativas na Câmara dos Deputados e no Senado. Os presidentes das Casas acertaram a limitação do trabalho a duas semanas de esforço concentrado em razão do período eleitoral.",
+        "A primeira semana de esforço concentrado ocorrerá entre 10 e 14 de agosto, e a segunda, entre 31 de agosto e 3 de setembro. Na primeira semana pós-recesso, a pauta conta apenas com sessões solenes na Câmara e no Senado, além de audiências em comissões, como a Comissão de Direitos Humanos e a Comissão Mista do Orçamento.",
+        "Entre as propostas pendentes no Congresso está a PEC do fim da escala 6x1, que se encontra com o presidente do Senado, Davi Alcolumbre (União-AP), sem encaminhamento definido para a Comissão de Constituição e Justiça (CCJ). A oposição defende um texto alternativo mantendo a escala 6x1. O governo também cobra a votação da PEC da Segurança Pública no Senado e precisa enviar as propostas do orçamento de 2027 (LDO e LOA) até 31 de agosto.",
+        "Além disso, 87 vetos trancam a pauta do Legislativo, incluindo vetos à regulamentação da reforma tributária, ao Estatuto do Pantanal, às LDO e LOA de 2026, ao marco do setor elétrico e à Lei da Dosimetria. Outros projetos aguardando deliberação incluem a regulação dos minerais críticos, o PL da Misoginia e o PL da Inteligência Artificial, apresentado como prioridade pelo presidente da Câmara, Hugo Motta (Republicanos-PB)."
+      ],
+      "link": "/materia/congresso-nacional-retoma-trabalhos-com-foco-em-duas-semanas-de-esforc.html",
+      "iso": "2026-08-03T12:45:00.000Z",
+      "hora": "08h45",
+      "original": true,
+      "contexto": "A primeira semana de esforço concentrado no Congresso ocorrerá entre 10 e 14 de agosto, e a segunda será de 31 de agosto a 3 de setembro. O prazo para o governo enviar as propostas da LDO e da LOA de 2027 ao Legislativo vence em 31 de agosto. O histórico registra quatro matérias sobre a retomada dos trabalhos publicadas em 2 e 3 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -941,11 +941,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:documentos-confirmam-relacao-juridica-com-estado-mas-nao-criam-existen",
+      "id": "ilm:documentos-podem-confirmar-relacao-juridica-com-estado",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Documentos confirmam relação jurídica com Estado mas não criam existência",
-      "resumo": "Registros legais também não têm o poder de apagar a história, a família ou o sentimento de pertencimento de um indivíduo.",
+      "titulo": "Documentos podem confirmar relação jurídica com Estado",
+      "resumo": "A documentação oficial não tem o poder de criar ou apagar a existência, história, família e pertencimento de um indivíduo.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
       "origemNome": "Global Voices (EN)",
@@ -953,11 +953,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Documentos têm a capacidade de confirmar uma relação de caráter legal entre uma pessoa e um Estado.",
-        "No entanto, esses registros não possuem o poder de criar ou de apagar a existência e a história de um indivíduo.",
-        "A documentação legal também não pode criar nem apagar a família de uma pessoa ou o seu sentimento de pertencimento."
+        "A confirmação de uma relação jurídica com um Estado pode ser feita por meio de documentos.",
+        "No entanto, os documentos não têm a capacidade de criar a existência de uma pessoa, sua história, sua família ou seu sentimento de pertencimento.",
+        "Além disso, a documentação também não é capaz de apagar a existência, a história, a família ou o sentimento de pertencimento de um indivíduo."
       ],
-      "link": "/materia/documentos-confirmam-relacao-juridica-com-estado-mas-nao-criam-existen.html",
+      "link": "/materia/documentos-podem-confirmar-relacao-juridica-com-estado.html",
       "iso": "2026-08-02T16:38:17.000Z",
       "hora": "12h38",
       "original": true,
@@ -970,11 +970,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:estados-de-emergencia-no-caribe-alteram-rotinas-e-expoem-desafios-de-d",
+      "id": "ilm:estados-de-emergencia-no-caribe-impactam-seguranca-publica-e-desenvolv",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Estados de emergência no Caribe alteram rotinas e expõem desafios de desenvolvimento",
-      "resumo": "Medidas concedem ao Estado poderes de busca e apreensão sem acusação, enquanto organismos internacionais apontam impactos da violência na economia e no emprego.",
+      "titulo": "Estados de emergência no Caribe impactam segurança pública e desenvolvimento regional",
+      "resumo": "Medidas que ampliam poderes estatais afetam a rotina comunitária e a economia em países como Trinidad e Tobago e Jamaica.",
       "fonte": "Meridiano, com informações de Global Voices",
       "origemLink": "https://pt.globalvoices.org/2026/08/02/estados-de-emergencia-e-os-desafios-para-o-desenvolvimento-no-caribe/",
       "origemNome": "Global Voices",
@@ -982,12 +982,12 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A declaração de estados de emergência em países do Caribe, como Trinidad e Tobago e Jamaica, concedeu poderes adicionais ao Estado para enfrentar ameaças à segurança pública. Entre as regras estabelecidas está a expansão da autoridade estatal para realizar buscas e apreensões sem a necessidade de apresentar acusações formais.",
-        "Essas medidas provocam alterações na rotina de moradores, no funcionamento do comércio local e na programação de organizações comunitárias. Segundo o Fundo Monetário Internacional (FMI), a criminalidade e a violência influenciam os investimentos, a atividade econômica e as oportunidades de trabalho, afetando especialmente os jovens.",
-        "Na Jamaica, autoridades relataram a diminuição de crimes violentos em locais específicos cobertos pelas medidas de emergência, enquanto grupos comunitários e de direitos humanos demonstraram preocupação com os efeitos sobre a população local. O Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas indica que a segurança cidadã está associada a fatores como desigualdade, exclusão e limitações econômicas.",
-        "A forma de aplicação dessas ações afeta a percepção do público em relação à transparência, equidade e responsabilidade das instituições. Diante desse cenário, governos buscam equilibrar o combate rápido a ameaças imediatas e o foco em estratégias de longo prazo para a segurança pública e o desenvolvimento das comunidades."
+        "A decretação de estados de emergência em países do Caribe, como Trinidad e Tobago, envolve a concessão de poderes adicionais ao Estado. As regulamentações incluem a expansão da autoridade governamental para realizar buscas e apreensões sem a apresentação de acusações prévias.",
+        "Em Trinidad e Tobago, o debate público foca na capacidade das medidas de conter a violência e interromper atividades criminosas. Na Jamaica, onde o instrumento também é adotado, autoridades registraram redução de crimes violentos em áreas específicas, enquanto organizações de direitos e grupos comunitários demonstraram preocupação com os impactos da intervenção nas populações afetadas.",
+        "Dados do Fundo Monetário Internacional (FMI) indicam que o crime e a violência afetam investimentos, atividades econômicas e empregos. Paralelamente, o Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas associa a segurança do cidadão a fatores de desigualdade, exclusão e limitação de oportunidades sociais e econômicas.",
+        "A aplicação das regras de emergência altera rotinas de moradores, horários de funcionamento do comércio e a execução de programas comunitários. As ações governamentais influenciam a percepção pública em relação à transparência, equidade e confiança nas instituições."
       ],
-      "link": "/materia/estados-de-emergencia-no-caribe-alteram-rotinas-e-expoem-desafios-de-d.html",
+      "link": "/materia/estados-de-emergencia-no-caribe-impactam-seguranca-publica-e-desenvolv.html",
       "iso": "2026-08-02T11:29:47.000Z",
       "hora": "07h29",
       "original": true,
@@ -996,44 +996,15 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260731_quadro.jpg",
-      "fotoAlt": "Pessoas escrevem palavras como &quot;paz&quot;, &quot;justiça&quot;, &quot;liberdade&quot; e &quot;saúde&quot; em uma tela durante uma atividade coletiva.",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:faculdade-de-direito-da-usp-abre-selecao-com-100-vagas-para-projeto-em",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Faculdade de Direito da USP abre seleção com 100 vagas para projeto em prisões",
-      "resumo": "Inscrições ocorrem entre 3 e 14 de agosto para o segundo semestre de 2026, com metade das vagas destinadas à comunidade externa e cotas para egressos do sistema prisional.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/diversidade/faculdade-de-direito-da-usp-abre-selecao-para-projeto-de-dialogo-em-prisoes-e-unidades-socioeducativas/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Faculdade de Direito da USP anunciou a abertura do processo seletivo para o Grupo de Diálogo Universidade-Cárcere-Comunidade (GDUCC). O projeto de extensão oferece 100 vagas para atuação no segundo semestre de 2026.",
-        "As inscrições ficam abertas ao público geral entre os dias 3 e 14 de agosto. As oportunidades estão divididas entre as frentes Adulto e Socioeducação, sendo metade das vagas reservada para a comunidade externa, com cotas para egressos do sistema prisional.",
-        "Idealizado pelos professores Alvino Augusto de Sá e Sérgio Salomão Shecaira, ambos da Faculdade de Direito, o projeto busca restabelecer a comunicação entre a academia, o sistema prisional e a sociedade civil por meio da fusão de saberes acadêmicos e vivenciais em rodas de diálogo."
-      ],
-      "link": "/materia/faculdade-de-direito-da-usp-abre-selecao-com-100-vagas-para-projeto-em.html",
-      "iso": "2026-08-03T15:29:36.000Z",
-      "hora": "11h29",
-      "original": true,
-      "contexto": "As inscrições para as 100 vagas ocorrem entre os dias 3 e 14 de agosto. A seleção atinge a comunidade acadêmica e o público geral, com metade das oportunidades destinada à comunidade externa e reserva de cotas para egressos do sistema prisional. Não há registro de processo seletivo semelhante no histórico.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": "https://jornal.usp.br/wp-content/uploads/2025/03/20250328_cafe_graos.jpg",
       "fotoAlt": "A imagem mostra duas mãos segurando grãos de café torrados sobre uma máquina de torrefação cheia de grãos",
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:eua-impoem-duas-novas-tarifas-sobre-produtos-do-brasil",
+      "id": "ilm:donald-trump-impoe-duas-novas-tarifas-sobre-produtos-do-brasil",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "EUA impõem duas novas tarifas sobre produtos do Brasil",
-      "resumo": "As medidas cobram alíquotas de 25% por práticas consideradas desleais e de 12,5% associadas a trabalho forçado.",
+      "titulo": "Donald Trump impõe duas novas tarifas sobre produtos do Brasil",
+      "resumo": "As alíquotas fixadas são de 25%, decorrente de investigações sobre práticas desleais, e de 12,5%, aplicada a países com trabalho forçado.",
       "fonte": "Meridiano, com informações de Jornal da USP",
       "origemLink": "https://jornal.usp.br/atualidades/do-pix-ao-cafe-por-que-o-tarifaco-dos-eua-atingiu-a-industria-brasileira-mas-poupou-as-commodities/",
       "origemNome": "Jornal da USP",
@@ -1041,12 +1012,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "No mês de julho, o presidente dos EUA, Donald Trump, impôs duas tarifas distintas sobre produtos brasileiros. A primeira medida aplicou uma alíquota de 25%, resultante de uma investigação norte-americana contra o Brasil sobre práticas consideradas desleais pelos Estados Unidos.",
-        "A segunda taxa estabelecida foi de 12,5%, voltada para países que possuem trabalho forçado.",
-        "O professor Paulo Feldmann, do Departamento de Administração da Faculdade de Economia, Administração, Contabilidade e Atuária (FEA) da USP, declarou que a medida não é inédita. O docente pontuou que o fato causou surpresa por partir dos Estados Unidos, que defendiam o livre comércio.",
-        "Professores da USP declararam que a ação pode acelerar a relação entre Brasil e China, indicando que é necessário cuidado."
+        "No mês de julho, o presidente dos Estados Unidos, Donald Trump, impôs duas tarifas sobre produtos brasileiros. A primeira medida definiu uma alíquota de 25%, resultante de uma investigação norte-americana contra o Brasil a respeito de práticas consideradas desleais pelos Estados Unidos.",
+        "A segunda tarifa estabeleceu o percentual de 12,5% para países que possuem trabalho forçado. Sobre as novas alíquotas, o professor Paulo Feldmann, do Departamento de Administração da Faculdade de Economia, Administração, Contabilidade e Atuária da USP, declarou que a ação surpreendeu por ter sido realizada pelos Estados Unidos, que eram defensores do livre comércio.",
+        "Docentes da USP pontuam que a medida adotada pelos Estados Unidos pode acelerar a relação entre o Brasil e a China, ressaltando que é necessário cuidado."
       ],
-      "link": "/materia/eua-impoem-duas-novas-tarifas-sobre-produtos-do-brasil.html",
+      "link": "/materia/donald-trump-impoe-duas-novas-tarifas-sobre-produtos-do-brasil.html",
       "iso": "2026-08-03T13:55:45.000Z",
       "hora": "09h55",
       "original": true,
@@ -1055,77 +1025,15 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:preenchimento-de-cbs-e-ibs-em-documentos-fiscais-comeca-nesta-segunda-",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Preenchimento de CBS e IBS em documentos fiscais começa nesta segunda-feira",
-      "resumo": "A exigência atinge inicialmente a NF-e e a NFC-e, com cronograma escalonado para outros modelos até janeiro de 2027.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/emissao-de-notas-fiscais-com-cbs-e-ibs-comeca-nesta-segunda-feira",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Economia"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A obrigatoriedade de preenchimento dos campos da Contribuição sobre Bens e Serviços (CBS) e do Imposto sobre Bens e Serviços (IBS) em parte dos documentos fiscais eletrônicos começa nesta segunda-feira (3). A medida faz parte da implementação da reforma tributária sobre o consumo e abrange, nesta primeira etapa, a Nota Fiscal Eletrônica (NF-e) e a Nota Fiscal de Consumidor Eletrônica (NFC-e).",
-        "Segundo a Receita Federal e o Comitê Gestor do IBS (CGIBS), a implantação ocorrerá de forma gradual até janeiro de 2027 para dar tempo de adaptação aos sistemas fiscais de empresas e desenvolvedores. Além da NF-e e NFC-e, a primeira fase inclui o Conhecimento de Transporte Eletrônico (CT-e), o Manifesto Eletrônico de Documentos Fiscais (MDF-e) e a Nota Fiscal de Energia Elétrica Eletrônica (NF3-e).",
-        "As etapas seguintes começam em 1º de outubro, 15 de novembro e 1º de dezembro, alcançando serviços de comunicação, plataformas digitais, transportes municipais e locações. A última fase, em 1º de janeiro de 2027, inclui a Declaração Única de Importação (Duimp), contribuintes do Simples Nacional e operações sujeitas ao regime monofásico.",
-        "Em 2026, a cobrança ocorre em caráter de teste, com alíquota de 0,9% para a CBS e de 0,1% para o IBS, com valores deduzidos dos tributos atuais. Os percentuais servem para testar o funcionamento dos sistemas eletrônicos e preparar empresas e administrações tributárias para o novo modelo."
-      ],
-      "link": "/materia/preenchimento-de-cbs-e-ibs-em-documentos-fiscais-comeca-nesta-segunda-.html",
-      "iso": "2026-08-03T15:40:00.000Z",
-      "hora": "11h40",
-      "original": true,
-      "contexto": "A medida afeta nesta primeira fase os emissores de NF-e, NFC-e, CT-e, MDF-e e NF3-e. As etapas seguintes do cronograma ocorrem em 1º de outubro, 15 de novembro e 1º de dezembro. A fase final está prevista para 1º de janeiro de 2027, alcançando serviços de comunicação, plataformas digitais, o Simples Nacional e operações de importação.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.nasa.gov/wp-content/uploads/2026/07/dsc-4954-copy.jpg",
-      "fotoAlt": "NASA",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:ike-theriot-prepara-astronautas-para-missoes-lunares-no-programa-artem",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Ike Theriot prepara astronautas para missões lunares no programa Artemis da NASA",
-      "resumo": "O profissional do Johnson Space Center conduz testes de trajes espaciais, simulações aquáticas e treinamentos de campo para o próximo pouso na Lua.",
-      "fonte": "Meridiano, com informações de NASA",
-      "origemLink": "https://www.nasa.gov/centers-and-facilities/johnson/ike-theriot-helps-prepare-astronauts-to-work-on-the-moon/",
-      "origemNome": "NASA",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Ike Theriot atua no apoio à preparação de astronautas para viver e trabalhar na Lua e na Estação Espacial Internacional, no Johnson Space Center da NASA, em Houston. Ele integra os testes de operações de superfície do programa Artemis e iniciou a transição para focar no desenvolvimento de missões, treinamento e execução do próximo pouso lunar.",
-        "Em instalações como o Neutral Buoyancy Laboratory, um tanque com 40 pés de profundidade, e o Active Response Gravity Offload System (ARGOS), Theriot planeja e realiza simulações. Ele apoiou testes do projeto de traje espacial de referência da NASA e do traje AxEMU, da Axiom Space, além de avaliar configurações de iluminação para o currículo de treinamento e ajudar no desenvolvimento do Lunar Grid Reference System.",
-        "Theriot também atua como controlador de voo certificado, foi selecionado como comunicador de cápsula (capcom) e realizou treinamentos geológicos na cratera de Kamestastin, no Canadá, ao lado de membros da tripulação da Artemis II. Para reforçar habilidades de navegação de superfície, ele criou um exercício prático no Challenger 7 Memorial Park, em Houston.",
-        "Sua trajetória na agência espacial começou após servir no Exército dos Estados Unidos no Iraque e no Afeganistão. Ele cursou engenharia mecânica na University of Houston, ingressou como estagiário no Johnson Space Center em 2016 e assumiu um cargo em tempo integral na agência em 2019."
-      ],
-      "link": "/materia/ike-theriot-prepara-astronautas-para-missoes-lunares-no-programa-artem.html",
-      "iso": "2026-08-03T14:00:00.000Z",
-      "hora": "10h00",
-      "original": true,
-      "contexto": "As simulações e testes de preparação afetam os astronautas que vão viver e trabalhar na Lua e na Estação Espacial Internacional. As atividades envolvem diretamente os membros da tripulação da missão Artemis II.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": "https://globalvoices.org/wp-content/uploads/2026/07/%E0%A4%A6%E0%A5%81%E0%A4%A8%E0%A4%BE_%E0%A4%9F%E0%A4%AA%E0%A4%B0%E0%A5%801-800x450.webp",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:mulheres-no-nepal-produzem-pratos-de-folhas-em-florestas-comunitarias",
+      "id": "ilm:mulheres-no-nepal-produzem-pratos-ecologicos-de-folhas",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Mulheres no Nepal produzem pratos de folhas em florestas comunitárias",
-      "resumo": "A iniciativa apoia a conservação do meio ambiente, a resiliência climática e o desenvolvimento econômico local ao gerar subsistência sustentável.",
+      "titulo": "Mulheres no Nepal produzem pratos ecológicos de folhas",
+      "resumo": "A produção em grupos florestais comunitários busca apoiar a conservação ambiental, a resiliência climática e o desenvolvimento econômico local.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/02/nepals-community-forests-offer-climate-solutions-one-leaf-at-a-time/",
       "origemNome": "Global Voices (EN)",
@@ -1133,11 +1041,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Mulheres integrantes de grupos florestais comunitários no Nepal estão produzindo pratos de folhas ecológicos. A atividade transforma situações de vulnerabilidade em meios de subsistência sustentáveis.",
-        "A fabricação desses pratos atua no suporte à conservação ambiental e no fortalecimento da resiliência climática.",
-        "Além disso, o trabalho desenvolvido por esses grupos apoia o desenvolvimento econômico local."
+        "Mulheres integrantes de grupos florestais comunitários no Nepal estão produzindo pratos ecológicos de folhas. A prática transforma a vulnerabilidade em meios de subsistência sustentáveis.",
+        "A fabricação dos itens apoia a conservação do meio ambiente e fortalece a resiliência climática.",
+        "A iniciativa desenvolvida pelas mulheres nos grupos comunitários também atua no suporte ao desenvolvimento econômico local."
       ],
-      "link": "/materia/mulheres-no-nepal-produzem-pratos-de-folhas-em-florestas-comunitarias.html",
+      "link": "/materia/mulheres-no-nepal-produzem-pratos-ecologicos-de-folhas.html",
       "iso": "2026-08-02T00:00:00.000Z",
       "hora": "20h00",
       "original": true,
@@ -1150,60 +1058,29 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:programa-desenrola-brasil-2-0-e-prorrogado-ate-31-de-agosto",
+      "id": "ilm:preenchimento-de-campos-de-cbs-e-ibs-em-notas-fiscais-comeca-nesta-seg",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Programa Desenrola Brasil 2.0 é prorrogado até 31 de agosto",
-      "resumo": "Medida oficializada pelo Ministério da Fazenda exige limite mínimo de 1 mil operações com garantia do FGO para instituições participantes.",
+      "titulo": "Preenchimento de campos de CBS e IBS em notas fiscais começa nesta segunda-feira",
+      "resumo": "A obrigatoriedade abrange inicialmente documentos como a NF-e e a NFC-e, com implantação escalonada para outros modelos até janeiro de 2027.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/programa-de-renegociacao-de-dividas-e-prorrogado-ate-31-de-agosto",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/emissao-de-notas-fiscais-com-cbs-e-ibs-comeca-nesta-segunda-feira",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "InfoMoney"
+        "g1 Economia"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "A prorrogação do Desenrola Brasil 2.0, programa de renegociação de dívidas bancárias, foi oficializada neste sábado (1º) em portaria do Ministério da Fazenda no Diário Oficial da União. Com a medida, os consumidores têm até 31 de agosto para negociar débitos com os bancos e regularizar a situação de acesso ao crédito.",
-        "As regras do programa permanecem inalteradas. A extensão do prazo aplica-se exclusivamente às instituições financeiras que tenham celebrado, até 30 de julho, no mínimo 1 mil operações de crédito com garantia do Fundo de Garantia de Operações (FGO).",
-        "A prorrogação havia sido anunciada pelo ministro da Fazenda, Dario Durigan, que ressaltou que a decisão não exige novos aportes públicos ao FGO, pois os recursos destinados são suficientes. O objetivo do prazo adicional é permitir que pessoas que estão em negociação consigam concluir o processo de regularização.",
-        "O ministro pontuou ainda que a medida beneficia quem pretende contratar financiamentos. Entre os contemplados estão motoristas de aplicativo, taxistas, entregadores e caminhoneiros que buscam trocar de veículo por meio do Programa Move Brasil."
+        "A obrigatoriedade do preenchimento dos campos da Contribuição sobre Bens e Serviços (CBS) e do Imposto sobre Bens e Serviços (IBS) em parte dos documentos fiscais eletrônicos emitidos no país passou a valer nesta segunda-feira (3). A medida faz parte da implementação da reforma tributária sobre o consumo e alcança, nesta primeira etapa, documentos como a Nota Fiscal Eletrônica (NF-e) e a Nota Fiscal de Consumidor Eletrônica (NFC-e).",
+        "A exigência para os demais modelos será implantada de forma gradual até janeiro de 2027, seguindo cronograma estabelecido pela Receita Federal e pelo Comitê Gestor do IBS (CGIBS). As próximas fases do calendário ocorrem em 1º de outubro, 15 de novembro e 1º de dezembro, incluindo serviços de comunicação, plataformas digitais, transportes e eventos da Declaração de Regimes Específicos (DeRE).",
+        "O objetivo da implantação em etapas é conceder tempo para empresas e desenvolvedores adaptarem seus sistemas fiscais. No ano de 2026, os dois tributos são informados apenas em caráter de teste, com alíquota de 0,9% para a CBS e de 0,1% para o IBS, sendo os percentuais deduzidos dos tributos atuais para validar o funcionamento do novo modelo."
       ],
-      "link": "/materia/programa-desenrola-brasil-2-0-e-prorrogado-ate-31-de-agosto.html",
-      "iso": "2026-08-01T22:08:00.000Z",
-      "hora": "18h08",
+      "link": "/materia/preenchimento-de-campos-de-cbs-e-ibs-em-notas-fiscais-comeca-nesta-seg.html",
+      "iso": "2026-08-03T15:40:00.000Z",
+      "hora": "11h40",
       "original": true,
-      "contexto": "O prazo para a renegociação de dívidas bancárias foi estendido até 31 de agosto. A medida afeta consumidores com débitos em bancos e profissionais como motoristas de aplicativo, taxistas, entregadores e caminhoneiros. A prorrogação aplica-se a instituições financeiras que tenham celebrado no mínimo 1 mil operações de crédito até 30 de julho.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:exposicao-de-igor-vidor-investiga-a-origem-da-palavra-favela-e-a-histo",
-      "editoria": "brasil",
-      "chapeu": "Nosso texto",
-      "titulo": "Exposição de Igor Vidor investiga a origem da palavra favela e a história de Canudos",
-      "resumo": "Mostra analisa como arquivos e materiais revelam a exclusão no Brasil a partir do conflito ocorrido em 1897 no arraial de Belo Monte.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/radio-usp/canudos-memoria-e-violencia-a-historia-que-continua-a-ecoar/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O artista Igor Vidor apresenta uma exposição que resgata as origens da palavra \"favela\" e investiga como imagens, arquivos e materiais revelam permanências da exclusão no Brasil. A obra busca na história de Canudos a relação entre a violência do presente e suas raízes históricas.",
-        "Em 1897, após três derrotas do Exército, a quarta expedição militar destruiu o arraial de Canudos. O local baiano havia sido fundado em 1893 por Antônio Conselheiro com o nome de Belo Monte e vivia da agropecuária de subsistência, do comércio local e do trabalho comunitário, fora do alcance do Estado.",
-        "Antes de definir moradias, a palavra \"favela\" era o nome de uma flor da caatinga. O termo passou a denominar o morro onde as forças militares se posicionaram para bombardear Belo Monte com canhões Krupp.",
-        "Após o massacre, os soldados transportaram o nome para o Morro da Providência, localizado no Rio de Janeiro. A instalação dos militares no morro carioca ocorreu após uma promessa de moradia que não se cumpriu."
-      ],
-      "link": "/materia/exposicao-de-igor-vidor-investiga-a-origem-da-palavra-favela-e-a-histo.html",
-      "iso": "2026-08-03T11:58:40.000Z",
-      "hora": "07h58",
-      "original": true,
-      "contexto": null,
+      "contexto": "A medida afeta emitentes de Nota Fiscal Eletrônica (NF-e) e Nota Fiscal de Consumidor Eletrônica (NFC-e) nesta primeira etapa. As próximas fases do cronograma ocorrem em 1º de outubro, 15 de novembro e 1º de dezembro, com exigência gradual para os demais modelos até janeiro de 2027. O histórico registra um caso parecido em 3 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1212,11 +1089,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:primeiro-emancipation-day-em-trinidad-ocorreu-em-1834",
+      "id": "ilm:primeiro-dia-da-emancipacao-em-trinidad-ocorreu-em-1834",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Primeiro Emancipation Day em Trinidad ocorreu em 1834",
-      "resumo": "Na data, os africanos deixaram de ser escravos sem estarem totalmente livres, e sua autocontenção silenciosa pode ter frustrado um plano para adiar a libertação.",
+      "titulo": "Primeiro Dia da Emancipação em Trinidad ocorreu em 1834",
+      "resumo": "No evento, os africanos deixaram de ser escravos sem estarem livres, e seu autocontrole silencioso pode ter evitado o adiamento da libertação.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/01/mightily-like-insurrection-revisiting-trinidad-tobagos-first-emancipation-day/",
       "origemNome": "Global Voices (EN)",
@@ -1224,11 +1101,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "No primeiro Emancipation Day em Trinidad, ocorrido em 1834, os africanos deixaram de ser escravos, embora ainda não estivessem livres.",
-        "A autocontenção silenciosa mantida pelos africanos pode ter frustrado um plano existente para adiar a libertação do grupo.",
-        "Em 1834, a liberdade plena dos africanos em Trinidad ainda não havia sido atingida, apesar de eles já não figurarem como escravos no primeiro Emancipation Day."
+        "No primeiro Dia da Emancipação em Trinidad, no ano de 1834, os africanos não eram mais escravos, porém ainda não estavam livres.",
+        "A conduta dos africanos durante esse período caracterizou-se por um autocontrole silencioso.",
+        "Essa postura pode ter frustrado um plano direcionado a adiar a libertação."
       ],
-      "link": "/materia/primeiro-emancipation-day-em-trinidad-ocorreu-em-1834.html",
+      "link": "/materia/primeiro-dia-da-emancipacao-em-trinidad-ocorreu-em-1834.html",
       "iso": "2026-08-01T18:09:35.000Z",
       "hora": "14h09",
       "original": true,
@@ -1241,28 +1118,86 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:republicanos-lanca-candidatura-de-tarcisio-de-freitas-a-reeleicao-em-s",
+      "id": "ilm:exposicao-do-artista-igor-vidor-investiga-a-origem-da-palavra-favela",
       "editoria": "brasil",
       "chapeu": "Nosso texto",
-      "titulo": "Republicanos lança candidatura de Tarcísio de Freitas à reeleição em São Paulo",
-      "resumo": "A chapa conta com Felício Ramuth como candidato a vice-governador e coligação de 12 partidos, além de lançar André do Prado e Guilherme Derrite ao Senado.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-lanca-candidatura-de-tarcisio-ao-governo-de-sao-paulo",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1"
-      ],
-      "quentura": 1,
+      "titulo": "Exposição do artista Igor Vidor investiga a origem da palavra favela",
+      "resumo": "A mostra utiliza imagens, arquivos e materiais para retratar a história do arraial de Canudos e demonstrar permanências da exclusão no Brasil.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/radio-usp/canudos-memoria-e-violencia-a-historia-que-continua-a-ecoar/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Partido Republicanos confirmou a candidatura de Tarcísio de Freitas à reeleição para o governo do estado de São Paulo durante convenção realizada na capital paulista. A chapa traz Felício Ramuth (MDB) como candidato a vice-governador e formou coligação com MDB, PL, PSD, União Brasil, PP, Podemos, PSDB, Cidadania, Solidariedade, PRD, Avante e Novo.",
-        "Na mesma convenção, foram aprovadas as candidaturas de André do Prado (PL) e Guilherme Derrite (PP) ao Senado, além de concorrentes aos cargos de deputados federais e estaduais. O candidato à presidência da República pelo PL, Flávio Bolsonaro, esteve presente no evento.",
-        "Durante seu discurso, Tarcísio agradeceu à esposa, Cristiane Freitas, lembrou a luta contra o câncer e citou o início de sua carreira política ao lado de Jair Bolsonaro. O candidato declarou que servir é o único motivo para ocupar o cargo e que assumiu o mandato com esse princípio.",
-        "Tarcísio de Freitas tem 51 anos, nasceu no Rio de Janeiro e é engenheiro civil. Antes de ser governador, foi ministro da Infraestrutura do governo Jair Bolsonaro, secretário da Coordenação de Projetos da Secretaria Especial do Programa de Parceria de Investimentos, diretor executivo do DNIT, coordenador-geral de auditoria da área de transportes na CGU e consultor legislativo da Câmara dos Deputados."
+        "O artista Igor Vidor apresenta uma exposição que resgata as origens da palavra favela. A mostra utiliza imagens, arquivos e materiais para investigar a violência e as permanências da exclusão no Brasil.",
+        "A obra recupera o histórico do arraial baiano fundado em 1893 por Antônio Conselheiro e batizado de Belo Monte. O local funcionava de forma autossuficiente e fora do alcance do Estado, mantido por agropecuária de subsistência, comércio local e trabalho comunitário.",
+        "Em 1897, depois de sofrer três derrotas, a quarta expedição do Exército destruiu o arraial. Os militares bombardearam Belo Monte com canhões Krupp posicionados em um morro chamado favela, termo que antes nomeava uma flor da caatinga.",
+        "Após o massacre, os soldados se instalaram no Morro da Providência, no Rio de Janeiro, devido a uma promessa de moradia que não se cumpriu, e levaram o nome favela com eles."
       ],
-      "link": "/materia/republicanos-lanca-candidatura-de-tarcisio-de-freitas-a-reeleicao-em-s.html",
-      "iso": "2026-08-01T18:09:00.000Z",
-      "hora": "14h09",
+      "link": "/materia/exposicao-do-artista-igor-vidor-investiga-a-origem-da-palavra-favela.html",
+      "iso": "2026-08-03T11:58:40.000Z",
+      "hora": "07h58",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:legislacao-permite-realizacao-de-concursos-publicos-em-ano-eleitoral",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Legislação permite realização de concursos públicos em ano eleitoral",
+      "resumo": "Até o fim de 2026, há dois certames com edital publicado e cinco com banca definida, mas a lei restringe nomeações nos três meses anteriores ao pleito.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/concursos-publicos-seguem-previstos-durante-periodo-eleitoral",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A legislação brasileira permite a realização de concursos públicos durante o ano eleitoral, segundo o Tribunal Superior Eleitoral (TSE). A aplicação de provas não sofre restrições legais com o início do cumprimento do calendário eleitoral e a oficialização de candidatos em convenções partidárias.",
+        "Até o fim de 2026, dois certames estão com edital publicado: o da Empresa de Tecnologia e Informações da Previdência (Dataprev) e o da Agência Brasileira Gestora de Fundos Garantidores (ABGF). As inscrições de ambos ficam abertas até 6 de agosto, respectivamente nos sites da Fundação Getulio Vargas e da Fundação Carlos Chagas.",
+        "Também existem seleções com banca definida e sem edital publicado para a Petrobras, Indústrias Nucleares do Brasil, Conselho Federal de Enfermagem, Conselho Federal de Contabilidade e Agência Nacional de Assistência Técnica e Extensão Rural (Anater).",
+        "As vedações da lei incidem sobre o provimento de cargos. Nos três meses que antecedem as eleições até a posse dos eleitos, ressalvadas exceções, os governantes não podem convocar aprovados. O coordenador do Gran Concursos, Eduardo Cambuy, recomenda iniciar a preparação pelas matérias básicas de maior peso."
+      ],
+      "link": "/materia/legislacao-permite-realizacao-de-concursos-publicos-em-ano-eleitoral.html",
+      "iso": "2026-08-03T10:24:00.000Z",
+      "hora": "06h24",
+      "original": true,
+      "contexto": "As inscrições para os concursos da Dataprev e da ABGF ficam abertas até 6 de agosto para os candidatos interessados. A vedação de convocação atinge os aprovados nos três meses anteriores às eleições até a posse dos eleitos. O histórico registra um relato semelhante sobre o tema em 3 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia",
+      "editoria": "brasil",
+      "chapeu": "Nosso texto",
+      "titulo": "Democrata oficializa Wilson Grassi Júnior como candidato à Presidência",
+      "resumo": "Escolha do nome para a vice-presidência permaneceu aberta à decisão da Comissão Executiva Nacional do partido.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/democrata-define-wilson-grassi-junior-candidato-presidencia",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O partido Democrata oficializou a candidatura de Wilson Grassi Júnior ao cargo de presidente da República durante convenção realizada neste domingo (2), no Rio de Janeiro. A definição do nome para vice-presidente permaneceu aberta à Comissão Executiva Nacional da legenda, com a possibilidade de formação de coligação.",
+        "Nascido em São Paulo, Wilson Grassi Júnior é veterinário de formação e atuou como conselheiro da Associação Nacional de Clínicos Veterinários de Pequenos Animais de São Paulo (Anclivepa-SP). Ele trabalhou no projeto de implantação e gestão do primeiro hospital público para cães e gatos do país, localizado no Tatuapé, na zona leste de São Paulo.",
+        "Esta foi a primeira convenção do Democrata desde que a legenda mudou de nome, em dezembro de 2025, quando deixou de se chamar Partido da Mulher Brasileira (PMB). Desde a sua criação, em 2008, é a primeira vez que o partido lança um candidato à Presidência da República.",
+        "As próximas oficializações previstas de candidatos são do União Brasil, em 4 de agosto, e do PRD e do Solidariedade, em 5 de agosto. Oito partidos ainda não definiram a data de suas convenções nacionais: Avante, Cidadania, Podemos, PP, PSDB, PSOL, Rede e Republicanos."
+      ],
+      "link": "/materia/democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia.html",
+      "iso": "2026-08-02T19:58:00.000Z",
+      "hora": "15h58",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1274,19 +1209,19 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que quatro veículos de imprensa veicularam informações sobre as definições partidárias.",
-        "Que as matérias divergem sobre a indicação tratar-se de pré-candidatura ou candidatura.",
-        "Que o PL e o PSD são apontados como siglas envolvidas nas escolhas."
+        "Que a informação está sendo veiculada por quatro veículos de imprensa.",
+        "Que as publicações citam indicações atribuidas ao PL e ao PSD.",
+        "Que são mencionadas candidaturas voltadas ao Senado e a vice."
       ],
       "falta": [
-        "Confirmação oficial do registro das atas de convenção na Justiça Eleitoral.",
-        "Posicionamento oficial dos partidos ou dos nomes citados nas publicações.",
-        "Identificação da unidade da federação relativa às candidaturas atribuídas ao PSD.",
-        "Data e local de realização das convenções mencionadas nas matérias."
+        "Registro e confirmação oficial das atas de convenção na Justiça Eleitoral.",
+        "Esclarecimento quanto ao enquadramento entre pré-candidatura e candidatura definitiva do PL.",
+        "Indicação do estado ou local onde teria ocorrido a convenção do PSD.",
+        "Manifestação oficial e pública dos partidos e dos citados nas matérias."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "cartacapital.com.br",
+          "veiculo": "CartaCapital",
           "titulo": "Michelle Bolsonaro falta a convenção, mas é confirmada como candidata do PL ao Senado no DF",
           "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZWkwaGU4SW1xZktOSWlCWUYxa1h5dHAwSzZoLVp6bGV5YnhySHFoZkUyajdxZV91M1UyN3VZVTNyV1NMaXNOM2RxRm52c0xXLTRIdUtZUmlEUDhHc05ERnVSSmdXSWh3SmdPblZ2SWNYSU9WWFQ1clZWeDhsQ3J2LWlsQmxTWG5OWGJRZ2JvYlpSMUEtal9OUFdJa2E1QjFyUkR6MDB0cWl1bmdhNDE0RmpIdzJsa2xFRE0zeWxrekN0ZDFoZGtTNV9qdjA4UkJqYnRj?oc=5"
         },
@@ -1296,7 +1231,7 @@
           "link": "https://www.jota.info/eleicoes/eleicoes-2026/pl-confirma-pre-candidatura-de-michelle-bolsonaro-ao-senado-pelo-df"
         },
         {
-          "veiculo": "GZH",
+          "veiculo": "gauchazh.clicrbs.com.br",
           "titulo": "Convenção do PSD homologa candidaturas de Ernani Polo a vice e Frederico Antunes para o Senado",
           "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNTzJkVllHVW4tT2pfN3NXTUk1U1JSdFV4b19nWXgwM19wYktvYzY4T01Ka2NMV1kzbERIbTlwR3praTBBUHFnNHA3a1k1a1dhV3E2UTF4enNvYU1hMXhXeUQ4X01QekY4aHFtRVAxek1JU2ZFa29WT0p3VVRPamVPb0g4YVRkSTU3X1JfeW9fYmwweFJSWlNwZ0djdHp6c0ZiSmhUb3M4dkcwVTdMLWRSU0kzckl5R2FDOHZaRGxHaWxNWV9EUjJfTlg0NXlINzNIdmtiM3psZ0NYcGd4TVdPdVNNU19PX1hVaVdLWmU3Q0tGdXlVSVdXSmk4d1A0U2FxZm1xODhoWDRMa0pZYmhBb3FBeUpPTFV1S0ZYOHlYNkdCTzlGZXBscEtScw?oc=5"
         },
@@ -1306,36 +1241,37 @@
           "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPdEV4SGdKekdoQUFIQlZQTmxLZ2taeWUtNjVwY0UwZXFOQ0Z0WlpTMzY5dlRIWGRmV3RzaEdTRWc5S0VqTlpxdTg1eDFwdzZpNnFqREhwVE9xT0NwYlJBbUkzTkp3SklsMnpzRmtONEJGeXNMVTNSaS03V2hKRjN0SWh6dUV5N2NxeDV0cS1nS2ozTTR5TGJvOU1ibEpFMFgyU3o2d2JDV1FkVUMwenZHX0tBcEZzNy1QVGt4OUhWQTAxT1gyR2djVVlhdzZOOE1pWWRReEdPTzBTYlBtdmFR0gHkAUFVX3lxTE1GanRIc19xSGhKR09XNFBSMnEzTjByVWlSMk5kZHR5cjJ0MXRsVXdzVEZxdXhjaFQ5TVNnMl9wdHJRdTZvWVh1SFhnQmpMemhYYUR1bzNLVG9fS0RlUjhYQ2JfcmlHcVhYMXYycVZtTkR3SFFJT3VVZ3NiQTdoenlNb1JyMFJXSkZlT3I2UWRvZ1RmWl9PZWZSdk9VVUdFdmhHX3JZeXFvYnExSjdIcVk4a0dhQ0o4cTlPNDFJN3pPUEJoeGNoVmJrNDhJNkRnSUJOM1FEVDdIRnBzbTV6UGd1czdOUg?oc=5"
         }
       ],
-      "link": "/materia/nc-pl-e-psd-teriam-oficializado-candidaturas-ao-senado-e-a-vice-governado.html",
+      "link": "/materia/nc-pl-e-psd-teriam-confirmado-nomes-para-o-senado-e-cargos-de-vice.html",
       "corpo": [
-        "O Partido Liberal (PL) teria confirmado a candidatura de Michelle Bolsonaro ao Senado pelo Distrito Federal. A indicação teria ocorrido apesar de sua ausência na convenção partidária, evento para o qual teria enviado uma carta a apoiadores.",
-        "As matérias veiculadas divergiam entre os termos pré-candidatura e candidatura para a indicação do PL. Paralelamente, as publicações apontavam que a convenção do PSD teria homologado as candidaturas de Ernani Polo a vice e Frederico Antunes ao Senado."
+        "O Partido Liberal teria confirmado Michelle Bolsonaro para o Senado pelo Distrito Federal. A política teria faltado à convenção de sua sigla, mas teria enviado uma carta aos apoiadores. Em outro desdobramento, a convenção do PSD teria homologado as candidaturas de Ernani Polo a vice e Frederico Antunes ao Senado.",
+        "As publicações divergem sobre o status da indicação do PL, citando o nome ora como candidata, ora como pré-candidata. Os textos não informam a localização ou o estado relativo às homologações anunciadas pelo PSD. Tampouco haveria detalhes sobre os termos exatos da carta atribuída a Michelle Bolsonaro.",
+        "Os atos indicariam a definição de nomes partidários para as disputas ao Senado e a cargos de vice. A validação definitiva das candidaturas estaria sujeita ao registro formal perante a Justiça Eleitoral."
       ],
-      "id": "circ:pl-e-psd-teriam-oficializado-candidaturas-ao-senado-e-a-vice-governado",
+      "id": "circ:pl-e-psd-teriam-confirmado-nomes-para-o-senado-e-cargos-de-vice",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "PL e PSD teriam oficializado candidaturas ao Senado e a vice-governador",
+      "titulo": "PL e PSD teriam confirmado nomes para o Senado e cargos de vice",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:34:12.729Z",
-      "hora": "13h34"
+      "iso": "2026-08-03T18:03:57.361Z",
+      "hora": "14h03"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por cinco veículos da imprensa.",
-        "Que as matérias atribuem os dados ao instituto BTG/Nexus.",
-        "Que os textos citam os nomes de Lula e Flávio Bolsonaro."
+        "Que ao menos cinco veículos noticiaram dados de uma pesquisa eleitoral recente.",
+        "Que a realização do levantamento é atribuída ao BTG e ao instituto Nexus.",
+        "Que as matérias divulgadas divergem entre dados de primeiro e de segundo turno."
       ],
       "falta": [
-        "Número de registro oficial da pesquisa na Justiça Eleitoral.",
-        "Acesso à íntegra da metodologia e contratante do estudo.",
-        "Esclarecimento se o empate técnico refere-se ao primeiro ou segundo turno.",
-        "Confirmação pública do levantamento pelos organizadores do estudo."
+        "O número de registro oficial da pesquisa eleitoral nos órgãos competentes.",
+        "A divulgação do relatório completo e a manifestação oficial dos institutos citados.",
+        "A especificação da data de coleta dos dados e da amostragem utilizada.",
+        "O esclarecimento sobre a divergência entre os cenários de primeiro e segundo turno."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "cartacapital.com.br",
+          "veiculo": "CartaCapital",
           "titulo": "A disputa entre Lula e Flávio Bolsonaro no segundo turno, segundo a nova pesquisa Nexus/BTG",
           "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUC1aeVVDbG1NNktfb0VldExybUlGREhoUklraGRob1FaYTV6QVltZGliaGFsZlhMSjJEdVdBZlFzZjNwaW9zdVhmenQxWXowLVd0QVY0d2h3cHhxVEV6WUlyRlUwOGhOVUw3c1UxUk5RSFI4UUdZQkd5U2QyN1dCY1R1M2FlaXh1MzhucS0wVVptcHRoSHRUbEIzR3N2R0Z4aXVmaDdGR1AwZ0FzVGRCRFBRZE1kY2FoekV5cG5iUm4xWXlBY1FLaGpmSzQ?oc=5"
         },
@@ -1350,7 +1286,7 @@
           "link": "https://www.jota.info/eleicoes/eleicoes-2026/btg-nexus-registra-avanco-de-flavio-bolsonaro-e-disputa-mais-competitiva"
         },
         {
-          "veiculo": "GZH",
+          "veiculo": "gauchazh.clicrbs.com.br",
           "titulo": "Flávio Bolsonaro sobe e empata com Lula em nova pesquisa eleitoral | Gaúcha Atualidade",
           "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxON2lKZTVJMklWbF9jM1dkMXV2eG9MMkpLN1hYSldqbnFEaHk2RHVPb1R3Z29SRDR5aDFKd09kZ2FubEJZTTF3aHFmUk5RbXUtR3RuVTFOME1WaERXbmlEZjV6NWFmLUFjNU5BYnc1blJkM1R5ckF1VVdBc3BIV3BBUEZpOTFBVGtnVzdwMF9mVVhJQ0l6VjU1ejItYkxFYUNWQ0F4bFE0WTAtajZnWEJfc3dPZWd3SXpENmZPV2ZJVHhsVDlzNXo4V2wtUmVTdzF6clFqWnJ4Vm05eFNhSmxONU1aZzR6RW8x?oc=5"
         },
@@ -1360,67 +1296,112 @@
           "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPZW5RWDNwTjZpQW9IVXhzV0xxU3N5bFZUUXVoeFhPcHRZMmRzUDhJVUFzcjMycEtXcFNjZ2tjSGRHR0JNUjJRV2k3RkVZVTVqNnNLNEtRWlQ2ZUsxbTJFWFJ4RHhSWDlwRFlQQ2FpSFRzTTNFN25mYVc3bzJOUFFnaEltTFg1SGR1d29VaDg2NUQtRGVvbDNWeVZEcE1UUXFZUDVicVVvcVVZOFZCQ2tzakNEdXV2V2lUT3VDNXluT0hNQWd0ajFr0gHMAUFVX3lxTE9ic3JHX1NJcno2cjJxSjVUemlDalhwU2xBcEFzMkpaUkFIazVlc1RtSW1uMW5UcmhsUWxDMW9hT3FLLUJ4Vlc2WnllUlM3U0pMblZnaWF1TmtxblFLaVVkRGN0eG9mMWJqX25MUExLWGYtV0VpbXdxQUNzR1lyd0RuTEZqVnF0MjRzMWdPREw0eUlidXBHUXJnb1MxSTlkY3hic0JQeG1hQzdwUmFqZFlhLWxsdno3NDZEX1dtSGF4bmRQc3JZUk9NU0hmNQ?oc=5"
         }
       ],
-      "link": "/materia/nc-nova-pesquisa-eleitoral-indicaria-empate-entre-lula-e-flavio-bolsonaro.html",
+      "link": "/materia/nc-pesquisa-indicaria-empate-tecnico-entre-lula-e-flavio-bolsonaro.html",
       "corpo": [
-        "Uma nova pesquisa do instituto BTG/Nexus estaria apontando avanço do senador Flávio Bolsonaro e empate com o presidente Lula. O levantamento indicaria um cenário de disputa mais competitiva entre os dois nomes.",
-        "As publicações divergiram quanto ao recorte do levantamento, citando tanto um empate técnico no primeiro turno quanto uma disputa no segundo turno. Além disso, uma das matérias indicaria que a rejeição ao senador em Sergipe chegaria a 55%."
+        "Haveria divergência entre as publicações sobre qual etapa da eleição teria sido avaliada, havendo menções tanto ao primeiro quanto ao segundo turno. Além do cenário nacional, um dos relatos apontaria que a rejeição a Flávio Bolsonaro teria chegado a 55% no estado de Sergipe.",
+        "Os conteúdos veiculados indicariam alterações na preferência do eleitorado em relação aos dois políticos. Não foram apresentados nos relatos os detalhes metodológicos do levantamento citado."
       ],
-      "id": "circ:nova-pesquisa-eleitoral-indicaria-empate-entre-lula-e-flavio-bolsonaro",
+      "id": "circ:pesquisa-indicaria-empate-tecnico-entre-lula-e-flavio-bolsonaro",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Nova pesquisa eleitoral indicaria empate entre Lula e Flávio Bolsonaro",
+      "titulo": "Pesquisa indicaria empate técnico entre Lula e Flávio Bolsonaro",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:34:38.786Z",
-      "hora": "13h34"
+      "iso": "2026-08-03T18:04:52.525Z",
+      "hora": "14h04"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto é noticiado por dois veículos de imprensa.",
-        "Que o título Homem-Aranha: Um Novo Dia é citado em uma publicação."
+        "O assunto está sendo publicado por três veículos da imprensa.",
+        "As matérias atribuem ao ministro Fachin a defesa das críticas ao STF."
       ],
       "falta": [
-        "Divulgação oficial de dados de bilheteria por parte das distribuidoras.",
-        "Esclarecimento sobre o valor exato arrecadado no período de estreia."
+        "Confirmação oficial por parte do Supremo Tribunal Federal ou do ministro.",
+        "Indicação de data, local e evento em que a fala teria ocorrido.",
+        "Transcrição oficial, áudio ou vídeo que comprove a declaração."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Novo 'Homem-Aranha' tem 2ª maior estreia da história com quase $ 1 bi",
-          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTU1hUTQyYVRTWlAzLXAxank5elJuY0dKdjJVS0JrdzFvQ0RfR2N3NGl6RkxKS1BRZW5fRjM4TS1qbUZmRElLdDJDelRBNFRzanJiLTRTNTBBTlpCSjFaQ0Rlb2RTMU43bEt2ZFdkdUNFQXhZSTd0RHpJeGlMVXBGeThNSjluOFE1MVFvSjBraF95Y3BqMW9TRTN6bm02X1FWRnVVZFI5QkVWOElvVm5BM3l6bHJnbUtleTk2clpGTFdGVWdITzc3dVdvcG5QdmNlcGhpSng2c9IB3AFBVV95cUxNU3VLdEMyNDU3UWwxMHhCd0xPc2lWb3Z0WVRrQk95c0NUTTN5MmxiOEZVWXNNSVZvNzNQX2ZVTHBMdGV5U1BIX01mQ0RVWlRYdlBrcnFlVkp0cUFQd0Q0ZzEteXJJWm45ZmlXZ3E0eUhRMjNjM2RBOG1XMGJOSjhMOUh2SHI1VUdFd1p0Y3FSbDFsRTZlaDU1emhVTi1COWVNZjZlX3FuOW1EQjdic2s2ay1GSHo0aUs4NWQ1VE9XNVBGRWFFcUlSdnNiaVRDdUZDM2RHcEVzLUhsTm15?oc=5"
+          "veiculo": "Metrópoles",
+          "titulo": "Fachin diz que críticas às decisões do STF fortalecem a democracia",
+          "link": "https://www.metropoles.com/colunas/manoela-alcantara/fachin-diz-que-criticas-as-decisoes-do-stf-fortalecem-a-democracia"
         },
         {
-          "veiculo": "Exame",
-          "titulo": "'Homem-Aranha: Um Novo Dia' tem maior estreia do ano nos cinemas",
-          "link": "https://exame.com/pop/homem-aranha-um-novo-dia-tem-maior-estreia-do-ano-nos-cinemas/"
+          "veiculo": "g1",
+          "titulo": "Críticas ao STF fortalecem a democracia e não fragilizam a instituição, diz Fachin",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/03/criticas-ao-stf-fortalecem-a-democracia-e-nao-fragilizam-a-instituicao-diz-fachin.ghtml"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Críticas ao STF fortalecem a democracia e não fragilizam a instituição, diz Fachin",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/03/criticas-ao-stf-fortalecem-a-democracia-e-nao-fragilizam-a-instituicao-diz-fachin.ghtml"
         }
       ],
-      "link": "/materia/nc-novo-filme-do-homem-aranha-teria-registrado-marca-historica-de-estreia.html",
+      "link": "/materia/nc-fachin-teria-afirmado-que-criticas-ao-stf-fortalecem-a-democracia.html",
       "corpo": [
-        "O novo filme da franquia do Homem-Aranha teria alcançado marcas expressivas de bilheteria em sua estreia nos cinemas. A informação sobre o desempenho financeiro da produção estaria circulando na imprensa.",
-        "Uma das publicações afirma que a obra, intitulada \"Homem-Aranha: Um Novo Dia\", teria obtido a maior estreia do ano nos cinemas. Outra notícia indica que o novo \"Homem-Aranha\" teria a segunda maior estreia da história, somando quase 1 bilhão de dólares. As manchetes divergem quanto ao parâmetro de recorde atribuído ao lançamento."
+        "O ministro Fachin teria declarado que as críticas direcionadas às decisões do Supremo Tribunal Federal fortalecem a democracia. Segundo as publicações, a manifestação do magistrado sustentaria ainda que as contestações ao tribunal não fragilizariam a instituição.",
+        "Os veículos que publicaram a informação apresentam convergência quanto ao conteúdo atribuído ao ministro. Não há, contudo, menção nas manchetes sobre o local, a data ou o evento em que a declaração teria sido proferida.",
+        "A alegação situaria as críticas públicas no contexto da preservação do regime democrático. A fala atribuída ao magistrado associaria o debate sobre as decisões da Corte à manutenção do equilíbrio institucional."
       ],
-      "id": "circ:novo-filme-do-homem-aranha-teria-registrado-marca-historica-de-estreia",
+      "id": "circ:fachin-teria-afirmado-que-criticas-ao-stf-fortalecem-a-democracia",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Novo filme do Homem-Aranha teria registrado marca historica de estreia",
+      "titulo": "Fachin teria afirmado que críticas ao STF fortalecem a democracia",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:35:04.227Z",
-      "hora": "13h35"
+      "iso": "2026-08-03T18:05:43.660Z",
+      "hora": "14h05"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto é noticiado simultaneamente por três veículos da imprensa.",
-        "Que as publicações atribuem a Milei declarações ofensivas direcionadas a Lula.",
-        "Que há divergência nas matérias sobre o uso do termo condenado."
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que o Banco Interamericano de Desenvolvimento é citado como fonte em notícia."
       ],
       "falta": [
-        "Registro em áudio, vídeo ou transcrição oficial das supostas declarações.",
-        "Identificação da data, local e evento em que a fala teria ocorrido.",
-        "Manifestação oficial das partes ou dos órgãos governamentais envolvidos."
+        "Confirmação oficial do Banco Interamericano de Desenvolvimento sobre o relatório.",
+        "Identificação do título exato e da data de publicação do documento.",
+        "Verificação da metodologia empregada no cálculo comparativo de produtividade."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Folha",
+          "titulo": "Condições de trabalho na América Latina avançaram pouco em três décadas, diz BID",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/08/condicoes-de-trabalho-na-america-latina-avancaram-pouco-em-tres-decadas-diz-bid.shtml"
+        },
+        {
+          "veiculo": "Exame",
+          "titulo": "Trabalhador latino-americano tem 26% da produtividade de um norte-americano",
+          "link": "https://exame.com/mundo/trabalhador-latino-americano-tem-26-da-produtividade-de-um-norte-americano/"
+        }
+      ],
+      "link": "/materia/nc-condicoes-de-trabalho-na-america-latina-teriam-tido-pouco-avanco-em-tr.html",
+      "corpo": [
+        "As condições de trabalho na América Latina teriam registrado avanços limitados ao longo das últimas três décadas. A avaliação constaria em levantamento atribuído ao Banco Interamericano de Desenvolvimento.",
+        "Paralelamente, alega-se que um trabalhador latino-americano teria cerca de 26% da produtividade de um trabalhador norte-americano. As publicações complementam o tema, mas apenas uma cita formalmente o órgão como origem das informações.",
+        "O panorama apresentado abordaria o desempenho e as transformações do mercado de trabalho na região. A confirmação integral dos indicadores dependeria da disponibilização e análise do relatório oficial."
+      ],
+      "id": "circ:condicoes-de-trabalho-na-america-latina-teriam-tido-pouco-avanco-em-tr",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Condições de trabalho na América Latina teriam tido pouco avanço em três décadas",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-03T18:06:35.048Z",
+      "hora": "14h06"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Três veículos de imprensa publicaram relatos sobre supostos novos ataques de Milei a Lula.",
+        "As expressões \"ladrão\" e \"corrupto\" foram citadas pelas matérias analisadas.",
+        "Há divergência entre as manchetes sobre a inclusão da palavra \"condenado\"."
+      ],
+      "falta": [
+        "Registro audiovisual ou transcrição oficial das declarações atribuídas a Milei.",
+        "Manifestação oficial dos órgãos de comunicação de Milei ou de Lula.",
+        "Informação sobre a data, o local e o contexto exato do ocorrido."
       ],
       "ondeCirculou": [
         {
@@ -1439,123 +1420,84 @@
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSEJZZWh4aVBtUGhVYkEwS0k0VE85Y2pySnpkSDRReld2eDI2SE11Y3FTSHBLNHA4clRRY1NWODh1YmtQMWhLQ1diWUh4WG11Yk1oNi04aTNBWVhZUTZHSnRKRDJ3NHRuZjF4WkF1VHFXdHlWaW9QQmdsRmRuQ2VyZ1lZVkNqeHltdlV6YmZ2Y0pnS1dEdWFZ0gGcAUFVX3lxTE1qOWNwQ2N2ZTBqSkdHSnhGRXNqUUdwckI5QmRPcUlNMm5BaTVwbV9hVHZjMkdpcFRVVE8xMzFobFgwWDdjYUR3SFNzdzFnZWZyMjA0eVVBVGk4Unk3ZUEzeFpFUzN1azdQZHUyUktKRGFUOXExZ1FFWmlpb253emNyX0ZaVjVndDZSRloxRkdjSVpRYkg3T25ZdVVORA?oc=5"
         }
       ],
-      "link": "/materia/nc-milei-teria-voltado-a-proferir-ataques-verbais-contra-o-presidente-lul.html",
+      "link": "/materia/nc-milei-teria-voltado-a-chamar-lula-de-ladrao-e-corrupto.html",
       "corpo": [
-        "O presidente argentino, Javier Milei, teria voltado a atacar o presidente Luiz Inácio Lula da Silva com o uso de ofensas diretas. Segundo relatos, Milei teria chamado o mandatário brasileiro de \"ladrão\" e \"corrupto\".",
-        "As publicações que veicularam a informação apresentam divergências pontuais quanto ao teor do discurso. Enquanto uma matéria teria registrado o acréscimo do termo \"condenado\", outra teria se limitado a citar apenas as palavras anteriores.",
-        "Uma das coberturas estaria interpretando o fato como uma decisão do líder argentino de intensificar os ataques contra o brasileiro. Não foram divulgados detalhes sobre o momento ou contexto em que as falas teriam ocorrido."
+        "Milei teria voltado a realizar ataques verbais contra Lula. Segundo as publicações, teriam sido proferidas declarações chamando Lula de \"ladrão\" e \"corrupto\". Uma das matérias acrescentaria ainda o termo \"condenado\" entre os ataques.",
+        "Os veículos que publicaram o caso divergiram pontualmente sobre o conteúdo exato atribuído a Milei. Duas matérias citaram as palavras \"ladrão\" e \"corrupto\", enquanto uma terceira incluiu a expressão \"condenado\". As manchetes não informaram a data exata, o local ou o contexto em que as falas teriam ocorrido.",
+        "As publicações questionariam os motivos pelos quais Milei teria decidido intensificar a postura e atacar Lula novamente. O episódio representaria a reiteração de um comportamento anterior atribuído a Milei em relação a Lula."
       ],
-      "id": "circ:milei-teria-voltado-a-proferir-ataques-verbais-contra-o-presidente-lul",
+      "id": "circ:milei-teria-voltado-a-chamar-lula-de-ladrao-e-corrupto",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Milei teria voltado a proferir ataques verbais contra o presidente Lula",
+      "titulo": "Milei teria voltado a chamar Lula de \"ladrão\" e \"corrupto",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:35:34.675Z",
-      "hora": "13h35"
+      "iso": "2026-08-03T18:07:37.096Z",
+      "hora": "14h07"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Três veículos publicaram matérias sobre o impacto nas cotações do petróleo.",
-        "As declarações atribuídas a Trump citam escolha entre acordo ou rendição total.",
-        "As matérias vinculam a oscilação de preços à expectativa de acordo bilateral."
+        "O assunto está sendo publicado por três veículos da imprensa.",
+        "As manchetes citam planos do presidente Lula para as eleições de 2026.",
+        "Há relatos sobre novos ataques promovidos pelo presidente da Argentina."
       ],
       "falta": [
-        "Registro em fonte oficial ou posicionamento direto do governo dos Estados Unidos.",
-        "Pronunciamento oficial do governo do Irã sobre as declarações atribuídas a Trump.",
-        "Dados oficiais sobre datas, números das cotações e detalhes do suposto ataque."
+        "Transcrição ou confirmação oficial do pronunciamento atribuído a Lula.",
+        "Discriminação detalhada dos cinco compromissos citados nas notícias.",
+        "Pronunciamento oficial ou registro formal das declarações atribuídas a Javier Milei."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "R7",
-          "titulo": "Preços do petróleo caem após Trump cancelar ataque ao Irã para buscar acordo",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORk9zTnRSUHE1dXJaUWgwNW1wdHRTdkF6X0dST284Uzdsb0FzM3VRLUdIVDZoNVdaUFB3aFhpZXNFMjZCbGNVY2hRTVlIOFRjQ09fQ0dLZDJFS1JPeV9xSWJpUm81NWxNem1TVFJWd0llMERBVUFGVnZHcDdhWHltYWZVQjJVeFNsSWNqWjVMZnhsUmxJOGpWUzBpeWszNkpPeWRXS3o4dGZpT0o4NldFbGE2WHY0ZXRVVHVv?oc=5"
+          "veiculo": "CartaCapital",
+          "titulo": "Os 5 compromissos de Lula para um possível novo mandato",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTFRWVEFUckVuLXZYbWJkSmNHSk5UNnpOTjRKVm82TnVGRlJheGRFakRObG1tTWFSYmJkMmFsYVZLZUwwRGR6ZFFpNkZZSWFXeU5vS05aY2otMkRxcG96SmxaYTZoWkc0WFQyZGx3RWE2WjI4Vy10aE9ObmlNLTc4UzYyOERMYkNOcmVYMDdjODZNa0ltODNadlljNnpFUQ?oc=5"
         },
         {
-          "veiculo": "Exame",
-          "titulo": "Irã deverá escolher entre 'acordo ou rendição total', diz Trump",
-          "link": "https://exame.com/mundo/ira-devera-escolher-entre-acordo-ou-rendicao-total-diz-trump/"
+          "veiculo": "BBC Brasil",
+          "titulo": "Por que Milei resolveu dobrar a aposta e atacar Lula de novo?",
+          "link": "https://www.bbc.com/portuguese/articles/c4gxjqzew80o?at_medium=RSS&amp;at_campaign=rss"
         },
         {
           "veiculo": "Valor Econômico",
-          "titulo": "Expectativa de acordo entre EUA e Irã derruba cotação do petróleo",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMjFlZmtxR3BnNW9LY2lzN1pNeUtGZ3JMMDBYX0VyN1ROZXZHQUJ4ci1YLW9jMVVvYXYxczU0UzhRUTFIMk9aUG51bnpFYnpFRFVWVHhNNzdtWmdPTDdCYjRySjJrN3ZWT3FHa09kZHEyQ2xlMDU2WGs1Z2dPdXFaYXkxWVJYVHJaY25Mczg2SUxQdjlEbDdCN1A4VVpGaHE4MEhKandnXy16Ylg2am0yazJibl8wM281MlBXdTNMUUrSAc8BQVVfeXFMTXd4MjA3VDVfbDkxQ0Z3bzNRc2dkRWRnb0xtZHpFcjRaOWpsWEQxX2xMcl9tczZZSG80ajFXeTg2VjRNTzVTM1E1RW9oQWtlRDl0M0JidE9vTTN5QmlQLVBOUWRXQWJjZU02ZlMtTHU4VGduYzF0MWZvQ1NuRU5ySktKWU93YUpnUExKT2tLaHFNTXpVUUl4NEltcDJaMmhVRGR3a1AyZXNldnQ1N0FGaHpQTG05X2xRci1Md3BGRFlhZ0pScjVHc3lwTklFS21N?oc=5"
+          "titulo": "Lula diz que vai brigar por controle do Orçamento em eventual 4º mandato | Eleições 2026",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPYTM4WmZCVEx0dGxsVzFCdVpKTmsxc0pnZzFjWTdPRnRSWGdwQXVMZXFVUlFYY0U2Y1JUT202RGp1ZHhWdGpNZkgtWi1sMTJ5Qzhaa0JYZXJidGJNWDZOQmRpWlR6OVdVU201ZGozVWh4SEpseWQzTEF6N3JlUHlIb083WGkwQWFydV96V1BHOHRobEFZTnVEamJHVHhKYTk4YTVYcTdWc1dLMWdtS0QwcDg2M1JtTGRkcTNJRlJjaUNabnFqZnhxdDN3U01aSWJhRzZKS1JMOTZpWVli?oc=5"
         }
       ],
-      "link": "/materia/nc-trump-teria-cancelado-ataque-ao-ira-impactando-preco-do-petroleo.html",
+      "link": "/materia/nc-lula-teria-prometido-disputa-pelo-controle-do-orcamento-em-eventual-no.html",
       "corpo": [
-        "O presidente Donald Trump teria cancelado um ataque planejado ao Irã com o objetivo de buscar um acordo com o país. A expectativa por esse possível entendimento entre Estados Unidos e Irã estaria motivando uma queda na cotação do petróleo.",
-        "Segundo as informações veiculadas, Trump teria afirmado que o Irã deverá escolher entre um acordo ou a rendição total. As publicações associam essa declaração diretamente ao recuo registrado no valor da commodity.",
-        "Não foram observadas divergências entre os relatos quanto à relação entre os fatos e a oscilação do mercado. O cenário estaria condicionado à perspectiva de redução das tensões diplomáticas."
+        "O presidente Luiz Inácio Lula da Silva teria declarado a intenção de disputar o controle do Orçamento público em um eventual quarto mandato nas eleições de 2026. A fala estaria associada a um conjunto de compromissos que o mandatário estaria definindo para uma futura candidatura.",
+        "As publicações apontam a existência de cinco compromissos específicos do presidente para a disputa eleitoral. Além disso, os relatos mencionam que o presidente argentino Javier Milei teria feito novos ataques contra o chefe do Executivo brasileiro.",
+        "A gestão das verbas orçamentárias estaria no centro do debate político atribuído ao presidente brasileiro. As manchetes veiculadas não detalham o teor individual dos compromissos nem os termos usados no ataque do líder argentino."
       ],
-      "id": "circ:trump-teria-cancelado-ataque-ao-ira-impactando-preco-do-petroleo",
+      "id": "circ:lula-teria-prometido-disputa-pelo-controle-do-orcamento-em-eventual-no",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Trump teria cancelado ataque ao Irã, impactando preço do petróleo",
+      "titulo": "Lula teria prometido disputa pelo controle do Orçamento em eventual novo mandato",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:35:59.758Z",
-      "hora": "13h35"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a informação está sendo veiculada por dois veículos de imprensa.",
-        "Que os relatos tratam da morte de um menino de 11 anos.",
-        "Que o episódio teria ocorrido no ambiente de uma escola."
-      ],
-      "falta": [
-        "Confirmação oficial sobre o caso por órgãos públicos ou de segurança.",
-        "Nome ou identificação da escola onde teria ocorrido o fato.",
-        "Data e horário exatos em que a ocorrência teria sido registrada.",
-        "Informação oficial sobre a causa do mal-estar e do óbito."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "Criança de 11 anos morre após passar mal em escola no litoral de SP",
-          "link": "https://www.metropoles.com/sao-paulo/crianca-de-11-anos-morre-apos-passar-mal-em-escola-no-litoral-de-sp"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Menino de 11 anos morre após passar mal em escola de Bertioga (SP)",
-          "link": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/menino-de-11-anos-morre-apos-passar-mal-em-escola-de-bertioga-sp/"
-        }
-      ],
-      "link": "/materia/nc-menino-de-11-anos-teria-morrido-apos-passar-mal-em-escola-em-bertioga.html",
-      "corpo": [
-        "Uma criança de 11 anos teria morrido após passar mal no interior de uma escola. A ocorrência envolveria um menino daquela faixa etária.",
-        "As publicações apresentariam variações em relação à especificação do local do fato. Um dos veículos que publicaram a notícia citaria o município de Bertioga, enquanto a outra publicação registraria apenas o litoral de São Paulo."
-      ],
-      "id": "circ:menino-de-11-anos-teria-morrido-apos-passar-mal-em-escola-em-bertioga",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Menino de 11 anos teria morrido após passar mal em escola em Bertioga",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T17:36:21.585Z",
-      "hora": "13h36"
+      "iso": "2026-08-03T18:08:43.044Z",
+      "hora": "14h08"
     }
   ],
   "pautas": [
     {
       "titulo": "Michelle Bolsonaro falta a convenção, mas é confirmada como candidata do PL ao Senado no DF",
-      "veiculo": "cartacapital.com.br",
+      "veiculo": "CartaCapital",
       "quentura": 4,
       "tambemEm": [
         "JOTA",
-        "GZH",
+        "gauchazh.clicrbs.com.br",
         "Correio Braziliense"
       ]
     },
     {
       "titulo": "A disputa entre Lula e Flávio Bolsonaro no segundo turno, segundo a nova pesquisa Nexus/BTG",
-      "veiculo": "cartacapital.com.br",
+      "veiculo": "CartaCapital",
       "quentura": 4,
       "tambemEm": [
         "Poder360",
         "JOTA",
-        "GZH"
+        "gauchazh.clicrbs.com.br"
       ]
     },
     {
@@ -1565,8 +1507,8 @@
       "quentura": 3,
       "tambemEm": [
         "g1 Política",
-        "cartacapital.com.br",
-        "GZH"
+        "CartaCapital",
+        "gauchazh.clicrbs.com.br"
       ]
     },
     {
@@ -1575,26 +1517,18 @@
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "cartacapital.com.br",
+        "CartaCapital",
         "Correio Braziliense"
       ]
     },
     {
       "titulo": "Flávio Bolsonaro sobe e empata com Lula em nova pesquisa eleitoral | Gaúcha Atualidade",
-      "veiculo": "GZH",
+      "veiculo": "gauchazh.clicrbs.com.br",
       "quentura": 3,
       "tambemEm": [
         "Poder360",
-        "cartacapital.com.br",
+        "CartaCapital",
         "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Novo 'Homem-Aranha' tem 2ª maior estreia da história com quase $ 1 bi",
-      "veiculo": "Correio Braziliense",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame"
       ]
     },
     {
@@ -1603,8 +1537,47 @@
       "quentura": 3,
       "tambemEm": [
         "JOTA",
-        "cartacapital.com.br",
-        "GZH"
+        "CartaCapital",
+        "gauchazh.clicrbs.com.br"
+      ]
+    },
+    {
+      "titulo": "Fachin diz que críticas às decisões do STF fortalecem a democracia",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Críticas ao STF fortalecem a democracia e não fragilizam a instituição, diz Fachin",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Críticas ao STF fortalecem a democracia e não fragilizam a instituição, diz Fachin",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Condições de trabalho na América Latina avançaram pouco em três décadas, diz BID",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Exame"
       ]
     },
     {
@@ -1614,7 +1587,7 @@
       "quentura": 2,
       "tambemEm": [
         "Congresso em Foco",
-        "cartacapital.com.br"
+        "CartaCapital"
       ]
     },
     {
@@ -1633,17 +1606,8 @@
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "cartacapital.com.br",
+        "CartaCapital",
         "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Preços do petróleo caem após Trump cancelar ataque ao Irã para buscar acordo",
-      "veiculo": "R7",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
-        "Valor Econômico"
       ]
     },
     {
@@ -1656,58 +1620,39 @@
       ]
     },
     {
-      "titulo": "Confira o que Lula pode e não pode fazer na campanha pela reeleição",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Valor Econômico"
-      ]
-    },
-    {
       "titulo": "Michelle Bolsonaro envia carta a apoiadores e é confirmada candidata ao Senado",
       "veiculo": "Correio Braziliense",
       "quentura": 2,
       "tambemEm": [
         "JOTA",
-        "cartacapital.com.br"
+        "CartaCapital"
       ]
     },
     {
-      "titulo": "Criança de 11 anos morre após passar mal em escola no litoral de SP",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 1,
+      "titulo": "Os 5 compromissos de Lula para um possível novo mandato",
+      "veiculo": "CartaCapital",
+      "quentura": 2,
       "tambemEm": [
-        "CNN Brasil"
+        "BBC Brasil",
+        "Valor Econômico"
       ]
     },
     {
-      "titulo": "PF adia depoimento de Augusto Lima, ex-sócio de Vorcaro",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Menino de 11 anos morre após passar mal em escola de Bertioga (SP)",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Bombeiros ainda tentam controlar incêndios florestais na região de Atenas",
+      "titulo": "PF pede ao STF abertura de 3º inquérito contra Lulinha sob suspeita de tráfico de influência",
       "veiculo": "Folha",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "GZH"
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Usuários relatam bloqueio automático e sem motivo de contas no WhatsApp",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Economia"
       ]
     }
   ]
