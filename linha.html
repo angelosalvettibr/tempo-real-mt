@@ -21,7 +21,8 @@ header a:hover{color:var(--tinta)}
 h1{font-family:var(--display);font-size:clamp(29px,5.6vw,42px);font-weight:700;line-height:1.13;letter-spacing:-.02em;margin-bottom:15px}
 .fina{font-size:18.5px;color:var(--tinta2);margin-bottom:22px;line-height:1.52}
 .assina{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fraco);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:11px 0;margin-bottom:26px}
-.intro{font-size:16.5px;line-height:1.68;color:var(--tinta2);margin-bottom:8px}
+.intro{font-size:17px;line-height:1.72;color:var(--tinta2);margin-bottom:17px}
+.intro:first-of-type{font-size:18px;color:var(--tinta)}
 .marcos{border-top:1px solid var(--tinta);margin-top:26px}
 .m{display:grid;grid-template-columns:158px 1fr;gap:0 22px;padding:18px 0;border-bottom:1px solid var(--linha)}
 .m .q{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--sinal);padding-top:3px}
@@ -97,7 +98,7 @@ const METODO = `<div class="metodo"><b>Como esta página é feita</b>
         <h1>${esc(l.titulo)}</h1>
         ${l.linhaFina ? `<p class="fina">${esc(l.linhaFina)}</p>` : ''}
         <div class="assina">Meridiano · atualizada em ${new Date(l.atualizada).toLocaleDateString('pt-BR')}</div>
-        ${l.intro ? `<p class="intro">${esc(l.intro)}</p>` : ''}
+        ${l.intro ? l.intro.split(/\n\s*\n/).filter(x => x.trim()).map(x => `<p class="intro">${esc(x.trim())}</p>`).join('') : ''}
         ${METODO}
         <div class="marcos">${(l.marcos||[]).map(m => `<div class="m">
           <div class="q">${esc(m.quando)}</div>
