@@ -117,7 +117,14 @@ REGRAS QUE NÃO PODEM SER QUEBRADAS:
 FORMATO — exatamente isto, sem markdown:
 TITULO: (uma linha, factual, até 90 caracteres)
 LINHA: (uma ou duas frases de apoio. Se o desfecho contradisser a repercussão inicial, CONSTATE isso sem julgar — ex.: "O caso teve desfecho oposto ao que a repercussão inicial indicava.")
-INTRO: (um parágrafo explicando que a página reúne os fatos em ordem, sem posição do jornal, e que cada marco traz sua origem)
+INTRO:
+(DOIS OU TRÊS PARÁGRAFOS, separados por linha em branco. Esta é a parte mais desenvolvida da página — é onde o leitor entende o caso antes de descer para a cronologia. Escreva assim:
+
+ · Primeiro parágrafo: quem é a pessoa ou o que é o caso, e o que aconteceu em resumo. Concreto, com datas.
+ · Segundo parágrafo: o detalhe que explica o caso. Toda história dessas tem um: uma prova que se revelou frágil, um erro de identificação, uma testemunha que se retratou. Se o material trouxer, é aqui que ele entra.
+ · Terceiro parágrafo, quando houver material: o contraste entre a repercussão da acusação e a do desfecho, em termos factuais — onde e como cada capítulo foi noticiado.
+
+Depois desses parágrafos, acrescente uma frase final informando que a página reúne os fatos em ordem, sem posição do jornal, e que cada marco declara a própria origem.)
 MARCOS:
 (uma linha por marco, do mais recente ao mais antigo, com barras verticais separando os quatro campos e SEM colchetes. Exemplo exato do formato:)
 18 de maio de 1988 | Morreu em Milão, aos 59 anos, menos de dois anos após a confirmação da absolvição. | Wikipédia | https://exemplo.com
@@ -202,6 +209,8 @@ async function montarLinha(relato, links, buscar = true){
   return {
     titulo: (t.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1] || '').trim(),
     linhaFina: (t.match(/LINHA\s*:\s*(.+)/i)?.[1] || '').trim(),
+    // A introducao vem em varios paragrafos: preservamos a quebra para a
+    // pagina renderizar cada um separado.
     intro: bloco('INTRO', 'MARCOS'),
     marcos,
     consultadas: achados.slice(0, 20),
