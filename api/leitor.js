@@ -211,6 +211,16 @@ export default async function handler(req, res){
       quando: new Date().toISOString()
     });
     await redis('SET', `segue:${nome}`, JSON.stringify(segue.slice(0, 40)));
+
+    // Indice global do que esta sendo acompanhado. E por ele que o robo sabe
+    // com o que comparar, sem precisar varrer leitor por leitor.
+    let idx = [];
+    try { idx = JSON.parse(await redis('GET', 'casos:seguidos') || '[]'); } catch {}
+    if (!idx.some(x => x.id === corpo.id)) {
+      idx.unshift({ id: corpo.id, titulo: String(corpo.titulo || '').slice(0, 200) });
+      await redis('SET', 'casos:seguidos', JSON.stringify(idx.slice(0, 300)));
+    }
+
     return res.status(200).json({ ok:true, seguindo:true });
   }
 
@@ -266,12 +276,16 @@ export default async function handler(req, res){
 
     // O estado atual de cada caso acompanhado, e se mudou desde a marcacao.
     const ordem = { 'sem-confirmacao':0, 'redacao':0, 'atribuido':1, 'confirmado':2 };
-    const acompanhando = segue.map(s => {
+    const filas = await Promise.all(segue.map(s => redis('GET', `fila:${s.id}`)));
+    const acompanhando = segue.map((s, k) => {
+      let fila = [];
+      try { fila = JSON.parse(filas[k] || '[]'); } catch {}
       const agora = estados[s.id];
       const subiu = agora && (ordem[agora.nivel] ?? 0) > (ordem[s.nivel] ?? 0);
       return { ...s, atual: agora ? agora.nivel : s.nivel,
                titulo: (agora && agora.titulo) || s.titulo,
-               link: (agora && agora.link) || s.link, mudou: Boolean(subiu) };
+               link: (agora && agora.link) || s.link, mudou: Boolean(subiu),
+               naFila: fila.length };
     });
 
     // O que ele le, contado. Serve para a pagina dizer "voce le principalmente
@@ -294,6 +308,54 @@ export default async function handler(req, res){
       acompanhando,
       historico: historico.slice(0, 40).map(h => ({ id:h.id, titulo:h.t, editoria:h.e, uf:h.uf, nivel:h.n, quando:h.q }))
     });
+  }
+
+  /* ---------------------------------------------------- a fila do caso ---
+     Quem acompanha uma noticia nao quer so saber se ela mudou de estado:
+     quer o que veio depois. Entao cada noticia marcada vira uma pasta, e o
+     robo empilha ali tudo que publicar de parecido.
+
+     A noticia escolhida e a propria definicao do assunto — ninguem precisa
+     inventar palavra-chave.                                                */
+  if (acao === 'fila') {
+    if (!ligado()) return res.status(200).json({ ok:true, fila: [] });
+    const cru = await redis('GET', `fila:${String(corpo.id || '')}`);
+    let fila = [];
+    try { fila = JSON.parse(cru || '[]'); } catch {}
+    return res.status(200).json({ ok:true, fila });
+  }
+
+  /* ---- o robo empilha os desdobramentos nas filas abertas ---- */
+  if (acao === 'empilhar') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:false });
+
+    let somadas = 0;
+    for (const [id, novas] of Object.entries(corpo.filas || {})) {
+      let fila = [];
+      try { fila = JSON.parse(await redis('GET', `fila:${id}`) || '[]'); } catch {}
+      const tinha = new Set(fila.map(x => x.id));
+      for (const n of novas) {
+        if (tinha.has(n.id)) continue;
+        fila.unshift(n); somadas++;
+      }
+      // Teto por fila: serie como o Boletim Focus se repete toda semana e
+      // acumularia sem fim.
+      if (fila.length) await redis('SET', `fila:${id}`, JSON.stringify(fila.slice(0, 15)));
+    }
+    return res.status(200).json({ ok:true, somadas });
+  }
+
+  /* ---- quais casos estao sendo acompanhados, para o robo saber o que comparar ---- */
+  if (acao === 'seguidos') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:true, casos: [] });
+
+    // O indice e mantido no proprio 'acompanhar': assim nao e preciso varrer
+    // todos os leitores a cada rodada.
+    let idx = [];
+    try { idx = JSON.parse(await redis('GET', 'casos:seguidos') || '[]'); } catch {}
+    return res.status(200).json({ ok:true, casos: idx.slice(0, 300) });
   }
 
   /* ---- o robo publica aqui o estado atual das historias ---- */
