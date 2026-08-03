@@ -935,6 +935,54 @@ try {
   }
 } catch (e) { console.log('     aviso foto repetida: ' + String(e.message).slice(0,40)); }
 
+/* --------------------------- FILA DOS CASOS ------------------------------
+   Quem acompanha uma noticia quer o que veio depois dela. Cada noticia
+   marcada vira uma pasta, e aqui o robo empilha o que publicou de parecido.
+
+   O corte de semelhanca e alto de proposito: frouxo, a fila enche de coisa
+   vagamente relacionada e deixa de valer.                                  */
+if (process.env.CHAVE_ROBO && process.env.URL_SITE) {
+  try {
+    const base = process.env.URL_SITE.replace(/\/+$/,'') + '/api/leitor';
+    const r = await fetch(base, { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'seguidos', chave: process.env.CHAVE_ROBO }) });
+    const casos = ((await r.json().catch(() => ({}))).casos) || [];
+
+    if (casos.length) {
+      const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      const chaves = x => [...new Set(sa(x).replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+        .filter(p => p.length >= 5).map(p => p.slice(0,6)))];
+      const parece = (a,b) => {
+        const A = chaves(a), B = chaves(b);
+        if (A.length < 3 || B.length < 3) return 0;
+        return A.filter(p => B.includes(p)).length / Math.min(A.length, B.length);
+      };
+
+      const saiu = [...publicados, ...circulando];
+      const filas = {};
+      for (const c of casos) {
+        const achadas = saiu
+          .filter(p => p.id !== c.id && parece(c.titulo, p.titulo) >= 0.62)
+          .slice(0, 5)
+          .map(p => ({ id:p.id, titulo:p.titulo, link:p.link, iso:p.iso,
+                       nivel:p.nivel || 'confirmado', hora:p.hora }));
+        if (achadas.length) filas[c.id] = achadas;
+      }
+
+      if (Object.keys(filas).length) {
+        const r2 = await fetch(base, { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ acao:'empilhar', chave: process.env.CHAVE_ROBO, filas }) });
+        const j2 = await r2.json().catch(() => ({}));
+        console.log(`     ${j2.somadas || 0} desdobramentos empilhados em ${Object.keys(filas).length} caso(s) acompanhado(s)`);
+      } else if (casos.length) {
+        console.log(`     ${casos.length} caso(s) acompanhado(s), nenhum desdobramento nesta rodada`);
+      }
+    }
+  } catch (e) {
+    console.log('     aviso fila: ' + String(e.message).slice(0, 50));
+  }
+}
+
 /* ------------------------- ESTADO DAS HISTORIAS -------------------------
    O jornal sabe uma coisa que nenhum feed sabe: quando uma historia muda de
    estado. Uma nota que era "sem confirmacao" e virou "confirmado
