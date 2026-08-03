@@ -101,6 +101,14 @@ for (const arq of arquivos) {
   const caminho = `${PASTA}/${arq}`;
   let h = await readFile(caminho, 'utf8');
 
+  // Corrige tambem as paginas que receberam o botao com id vazio — nelas ele
+  // existia mas se escondia sozinho.
+  if (h.includes('data-id=""')) {
+    h = h.replace(/data-id=""/g, `data-id="mat:${arq.replace(/\.html$/,'')}"`);
+    h = h.replace(/if \(sg && !sg\.dataset\.id\) \{ sg\.style\.display = 'none'; \}\s*else if \(sg\) \{/, 'if (sg) {');
+    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
+    feitas++; continue;
+  }
   if (h.includes('bt-seguir')) { puladas++; continue; }
 
   // O link de volta e a ancora: existe em todas as materias, do primeiro dia

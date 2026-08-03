@@ -604,7 +604,8 @@ if (temChave()) {
 
       const mun = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
       await writeFile('materia/'+arq, pagina(
-        { chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
+        { id:'ilm:'+slug(m.titulo), nivel:'confirmado',
+          chapeu: i.editoria==='regional'?(mun?mun.nome:E.nome):i.editoria==='internacional'?'Mundo':'Brasil',
           titulo:m.titulo, linhaFina:m.linhaFina, corpo:m.corpo, contexto,
           origemNome: i.veiculo, radar: false, checar:[],
           foto, creditoFoto: i.veiculo,
@@ -805,7 +806,8 @@ if (temChave() && soPautaFiltrada.length) {
             historico: pareR.map(x => ({ dia:(x.iso||'').slice(0,10), titulo:x.titulo }))
           }) : null;
               await writeFile('materia/' + arq, pagina(
-            { chapeu: GERAL ? GERAL.nome : E.nome,
+            { id:'ilm:'+slug(m.titulo), nivel:'confirmado',
+              chapeu: GERAL ? GERAL.nome : E.nome,
               titulo: m.titulo, linhaFina: m.linhaFina, corpo: m.corpo,
               origemNome: caca.fonte, radar: false, checar: [], contexto: ctxR,
               foto: fotoR, creditoFoto: caca.fonte,

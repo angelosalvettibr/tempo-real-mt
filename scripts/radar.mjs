@@ -521,8 +521,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   var ap = null;
   try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
 
-  if (sg && !sg.dataset.id) { sg.style.display = 'none'; }
-  else if (sg) {
+  // Quando o id nao vem do robo, o proprio endereco da pagina serve: e unico e
+  // estavel. A versao anterior escondia o botao nesse caso — e o id chegava
+  // vazio em toda materia, entao o botao sumia sempre.
+  if (sg) {
+    if (!sg.dataset.id) sg.dataset.id = 'mat:' + location.pathname.split('/').pop().replace(/\.html$/,'');
     sg.addEventListener('click', function(){
       if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
       sg.disabled = true;
