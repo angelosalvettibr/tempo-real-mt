@@ -175,6 +175,84 @@ export default async function handler(req, res){
 
   /* ------------------------------------------------------- esquecer ------ */
   // A pessoa apaga tudo dela. Sem burocracia, sem e-mail.
+  /* -------------------------------------------- acompanhar um caso ------
+     O que nenhum feed de rede social faz.
+
+     Para o algoritmo do Instagram, "fulano foi acusado" e "fulano foi
+     absolvido" sao dois posts sem relacao — e o segundo rende menos, entao
+     some. Aqui os dois sao a MESMA historia em estados diferentes, e o
+     jornal sabe disso porque tem selo de evidencia, arquivo e cacador.
+
+     O leitor marca o caso. Quando o nivel mudar — de "sem confirmacao" para
+     "confirmado oficialmente" — ele e avisado ao voltar. Nao ha e-mail nem
+     push: seria preciso cadastro, e o jornal promete nao pedir.            */
+  if (acao === 'acompanhar') {
+    const nome = limpar(corpo.apelido);
+    if (!nome || !corpo.id) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:true, local:true });
+
+    let segue = [];
+    try { segue = JSON.parse(await redis('GET', `segue:${nome}`) || '[]'); } catch {}
+
+    const ja = segue.findIndex(x => x.id === corpo.id);
+    if (ja >= 0) {
+      segue.splice(ja, 1);                       // clicar de novo deixa de seguir
+      await redis('SET', `segue:${nome}`, JSON.stringify(segue));
+      return res.status(200).json({ ok:true, seguindo:false });
+    }
+
+    segue.unshift({
+      id: corpo.id,
+      titulo: String(corpo.titulo || '').slice(0, 200),
+      link: String(corpo.link || '').slice(0, 300),
+      // O nivel do dia em que o leitor marcou. E a comparacao com este valor
+      // que revela o desfecho depois.
+      nivel: corpo.nivel || 'sem-confirmacao',
+      quando: new Date().toISOString()
+    });
+    await redis('SET', `segue:${nome}`, JSON.stringify(segue.slice(0, 40)));
+    return res.status(200).json({ ok:true, seguindo:true });
+  }
+
+  /* ---- o que mudou nos casos que este leitor acompanha ---- */
+  if (acao === 'novidades') {
+    const nome = limpar(corpo.apelido);
+    if (!nome || !ligado()) return res.status(200).json({ ok:true, mudou:[], segue:[] });
+
+    let segue = [];
+    try { segue = JSON.parse(await redis('GET', `segue:${nome}`) || '[]'); } catch {}
+    if (!segue.length) return res.status(200).json({ ok:true, mudou:[], segue:[] });
+
+    // O robo grava aqui o estado atual de cada historia a cada rodada.
+    let estados = {};
+    try { estados = JSON.parse(await redis('GET', 'casos:estado') || '{}'); } catch {}
+
+    const ordem = { 'sem-confirmacao':0, 'redacao':0, 'atribuido':1, 'confirmado':2 };
+    const mudou = segue.map(s => {
+      const agora = estados[s.id];
+      if (!agora) return null;
+      const antes = ordem[s.nivel] ?? 0;
+      const depois = ordem[agora.nivel] ?? 0;
+      if (depois <= antes) return null;
+      return { ...s, virou: agora.nivel, novoLink: agora.link || s.link, novoTitulo: agora.titulo || s.titulo };
+    }).filter(Boolean);
+
+    return res.status(200).json({ ok:true, mudou, segue });
+  }
+
+  /* ---- o robo publica aqui o estado atual das historias ---- */
+  if (acao === 'estados') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:false });
+    let estados = {};
+    try { estados = JSON.parse(await redis('GET', 'casos:estado') || '{}'); } catch {}
+    for (const [id, v] of Object.entries(corpo.estados || {})) estados[id] = v;
+    // guarda no maximo 3 mil historias, as mais recentes
+    const podado = Object.fromEntries(Object.entries(estados).slice(-3000));
+    await redis('SET', 'casos:estado', JSON.stringify(podado));
+    return res.status(200).json({ ok:true, total: Object.keys(podado).length });
+  }
+
   if (acao === 'esquecer') {
     const nome = limpar(corpo.apelido);
     if (nome && ligado()) {
@@ -182,6 +260,7 @@ export default async function handler(req, res){
       await redis('DEL', `apelido:${nome}`);
       await redis('DEL', `visto:${nome}`);
       await redis('DEL', `tent:${nome}`);
+      await redis('DEL', `segue:${nome}`);
     }
     return res.status(200).json({ ok:true });
   }
