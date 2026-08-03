@@ -65,7 +65,7 @@ header{border-bottom:1px solid var(--tinta)}
 @media(max-width:600px){.ultimas ol{grid-template-columns:1fr}.ultimas span{font-size:14.5px}}
 nav{border-bottom:1px solid var(--tinta);background:var(--papel);position:sticky;top:0;z-index:30}
 nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;padding:0}
-nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 20px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
+nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 16px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
 nav button:hover{color:var(--tinta)}
 nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .cidades{display:none;border-bottom:1px solid var(--linha);background:var(--areia,#F1EFE8)}
@@ -208,6 +208,35 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
   .bloco .lista2 .lin:nth-last-child(-n+2):nth-child(odd){border-bottom:0}
 }
 
+/* UMA TARJA, NAO CINCO
+   Metodo, anonimato, linha do tempo, ultimas e novidades: cada faixa se
+   justificou quando entrou, e juntas empurravam a manchete para 700px abaixo
+   do topo. Agora e uma linha de contexto, e as secoes foram para a navegacao
+   — que e o lugar delas. */
+.tarja{border-bottom:1px solid var(--linha);background:var(--areia)}
+.tarja .wrap{display:flex;align-items:center;gap:16px;padding:11px 0;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--tinta2);letter-spacing:.04em}
+.tarja .selo-anon{color:var(--verde);border:1px solid var(--verde);padding:3px 9px;flex:none;letter-spacing:.12em;text-transform:uppercase;font-size:9.5px}
+.tarja .liga{background:none;border:0;font-family:var(--mono);font-size:10.5px;color:var(--fraco);
+  cursor:pointer;padding:0;border-bottom:1px solid var(--linha2);letter-spacing:.04em}
+.tarja .liga:hover{color:var(--tinta);border-color:var(--tinta)}
+.tarja .liga[aria-pressed="true"]{color:var(--rosso);border-color:var(--rosso)}
+.tarja #stats{flex:1;min-width:210px}
+@media(max-width:700px){.tarja #stats{width:100%;flex:none}}
+
+/* secao do jornal: mesmo peso das editorias, sem o sublinhado de aba */
+nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta2);padding:12px 16px;white-space:nowrap;transition:.14s}
+nav a.secao:hover{color:var(--tinta)}
+
+/* Seu Meridiano nao e conteudo, e o leitor. A distancia visual diz isso. */
+nav button.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
+  color:var(--tinta);font-size:10.5px;letter-spacing:.13em}
+nav button.eu:hover{border-color:var(--tinta);background:var(--areia)}
+nav button.eu[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+nav button.eu[aria-pressed="true"]::after{display:none}
+@media(max-width:700px){nav button.eu{margin-left:0}}
+
 .novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
 .novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
 .novid .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);
@@ -221,33 +250,48 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
   text-transform:uppercase;color:var(--verde);display:block;margin-top:3px}
 /* Anonimato. E um argumento raro e a gente vinha subaproveitando: todo jornal
    quer e-mail, todo agregador quer conta. Aqui nao existe campo para isso. */
-.anon-faixa{border-bottom:1px solid var(--linha);background:var(--areia)}
-.anon-faixa .wrap{display:flex;align-items:center;gap:20px;padding:16px 0;flex-wrap:wrap}
-.anon-faixa .ic{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--verde);border:1px solid var(--verde);padding:5px 10px;flex:none}
-.anon-faixa p{flex:1;min-width:250px;font-size:14.5px;line-height:1.55;color:var(--tinta2)}
-.anon-faixa p b{color:var(--tinta)}
-.anon-faixa a{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--tinta2);border-bottom:1px solid var(--linha2);padding-bottom:2px}
-.anon-faixa a:hover{color:var(--tinta);border-color:var(--tinta)}
-.chamada{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--tinta);color:var(--papel)}
-.chamada .wrap{display:flex;align-items:center;gap:24px;padding:24px 0;flex-wrap:wrap}
-.chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--papel);opacity:.62;flex:none;border-right:1px solid rgba(255,255,255,.22);padding-right:20px}
-.chamada .txt{flex:1;min-width:240px}
-.chamada .txt b{display:block;font-family:var(--tit);font-size:21px;
-  font-weight:700;line-height:1.24;letter-spacing:-.01em;margin-bottom:5px}
-.chamada .txt span{font-size:14.5px;opacity:.78;line-height:1.5}
-.chamada a{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
-  text-decoration:none;color:var(--papel);border:1.5px solid var(--papel);padding:12px 18px;white-space:nowrap;transition:.14s}
-.chamada a:hover{background:var(--papel);color:var(--tinta)}
-@media(max-width:700px){
-  .chamada .wrap{gap:13px}
-  .chamada .rot{border-right:0;padding-right:0;width:100%}
-  .chamada a{width:100%;text-align:center}
-}
+/* UMA TARJA, NAO CINCO
+   Metodo, anonimato, linha do tempo, ultimas e novidades: cada faixa se
+   justificou quando entrou, e juntas empurravam a manchete para 700px abaixo
+   do topo. Agora e uma linha de contexto, e as secoes foram para a navegacao
+   — que e o lugar delas. */
+.tarja{border-bottom:1px solid var(--linha);background:var(--areia)}
+.tarja .wrap{display:flex;align-items:center;gap:16px;padding:11px 0;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--tinta2);letter-spacing:.04em}
+.tarja .selo-anon{color:var(--verde);border:1px solid var(--verde);padding:3px 9px;flex:none;letter-spacing:.12em;text-transform:uppercase;font-size:9.5px}
+.tarja .liga{background:none;border:0;font-family:var(--mono);font-size:10.5px;color:var(--fraco);
+  cursor:pointer;padding:0;border-bottom:1px solid var(--linha2);letter-spacing:.04em}
+.tarja .liga:hover{color:var(--tinta);border-color:var(--tinta)}
+.tarja .liga[aria-pressed="true"]{color:var(--rosso);border-color:var(--rosso)}
+.tarja #stats{flex:1;min-width:210px}
+@media(max-width:700px){.tarja #stats{width:100%;flex:none}}
+
+/* secao do jornal: mesmo peso das editorias, sem o sublinhado de aba */
+nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta2);padding:12px 16px;white-space:nowrap;transition:.14s}
+nav a.secao:hover{color:var(--tinta)}
+
+/* Seu Meridiano nao e conteudo, e o leitor. A distancia visual diz isso. */
+nav button.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
+  color:var(--tinta);font-size:10.5px;letter-spacing:.13em}
+nav button.eu:hover{border-color:var(--tinta);background:var(--areia)}
+nav button.eu[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+nav button.eu[aria-pressed="true"]::after{display:none}
+@media(max-width:700px){nav button.eu{margin-left:0}}
+
+.novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
+.novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.novid .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);
+  border:1px solid var(--verde);padding:5px 10px;flex:none;margin-top:2px}
+.novid .lista{flex:1;min-width:230px}
+.novid .lista b{display:block;font-size:15px;margin-bottom:8px;line-height:1.4}
+.novid .lista a{display:block;text-decoration:none;color:var(--tinta);font-size:14.5px;line-height:1.42;
+  padding:6px 0;border-top:1px solid rgba(0,0,0,.07)}
+.novid .lista a:hover{color:var(--verde)}
+.novid .lista a em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--verde);display:block;margin-top:3px}
 nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--rosso)}
-.sel-estado{display:flex;align-items:center;gap:8px;padding-left:18px;margin-left:8px;border-left:1px solid var(--linha)}
+.sel-estado{display:flex;align-items:center;gap:8px;padding-left:14px;margin-left:6px;border-left:1px solid var(--linha)}
 .sel-estado label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco)}
 .sel-estado select{font-family:var(--mono);font-size:11px;border:1px solid var(--linha2);background:var(--papel);padding:6px 8px;cursor:pointer;color:var(--tinta)}
 .sel-estado select:hover{border-color:var(--tinta)}
@@ -408,18 +452,19 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
   <nav>
     <div class="wrap">
       <button data-f="capa" aria-pressed="true">Capa</button>
-      <button data-f="meu" aria-pressed="false" id="btMeu" hidden>Para você</button>
       <button data-f="brasil" aria-pressed="false">Brasil</button>
       <button data-f="internacional" aria-pressed="false">Mundo</button>
       <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
+      <a class="secao" href="linha.html">Linha do tempo</a>
+      <a class="secao" href="arquivo.html">Arquivo</a>
       <span class="sel-estado">
-        <label for="selEstado">estado</label>
-        <select id="selEstado">
+        <select id="selEstado" aria-label="estado">
           <option value="mt">Mato Grosso</option>
           <option value="rs">Rio Grande do Sul</option>
           <option value="rj">Rio de Janeiro</option>
         </select>
       </span>
+      <button class="eu" data-f="meu" aria-pressed="false" id="btMeu" hidden>Seu Meridiano</button>
     </div>
   </nav>
   <div class="cidades" id="cidades"><div class="wrap"></div></div>
@@ -429,33 +474,12 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
 
 <div id="bv"></div>
 
-<div class="anon-faixa">
+<div class="tarja">
   <div class="wrap">
-    <span class="ic">sem cadastro</span>
-    <p><b>Aqui você lê sem se identificar.</b> O jornal aprende o que te interessa por assunto e por cidade — não por quanto tempo você fica na tela. E aprende ligado a um apelido que você inventa, sem e-mail, nome ou telefone.</p>
-    <a href="anonimo.html">como funciona</a>
-  </div>
-</div>
-
-<div class="chamada">
-  <div class="wrap">
-    <span class="rot">Linha do tempo</span>
-    <div class="txt">
-      <b>A acusação vira manchete. O desfecho vira nota de rodapé.</b>
-      <span>Casos em que a primeira versão ficou registrada e a correção não. Os fatos em ordem, cada um com a origem à vista.</span>
-    </div>
-    <a href="linha.html">Ver a seção</a>
-  </div>
-</div>
-
-<div class="metodo">
-  <div class="wrap">
-    <b>1</b> lê o que os grandes veículos estão dando
-    <span class="seta">→</span>
-    <b>2</b> procura a mesma história em fonte que autoriza reprodução
-    <span class="seta">→</span>
-    <b>3</b> escreve o nosso texto
-    <button class="liga" id="btMetodo" aria-pressed="false">Ver o método em cada matéria</button>
+    <span class="selo-anon">sem cadastro</span>
+    <span id="stats">—</span>
+    <a href="anonimo.html" class="liga">como apuramos</a>
+    <button class="liga" id="btMetodo" aria-pressed="false">ver o método em cada matéria</button>
   </div>
 </div>
 
@@ -1300,7 +1324,7 @@ aplicarEstado();
 $('#btMetodo').addEventListener('click', e => {
   const on = document.body.classList.toggle('mostra-metodo');
   e.target.setAttribute('aria-pressed', on);
-  e.target.textContent = on ? 'Ocultar o método' : 'Ver o método em cada matéria';
+  e.target.textContent = on ? 'ocultar o método' : 'ver o método em cada matéria';
 });
 
 /* ===================== LEITOR ANÔNIMO =====================================

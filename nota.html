@@ -28,6 +28,17 @@ h1{font-family:var(--display);font-size:clamp(28px,5.6vw,40px);font-weight:700;l
 .fonte b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:8px}
 .fonte p{font-size:15px;line-height:1.6;color:var(--tinta2)}
 .fonte a{color:var(--rosso)}
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0 4px;padding:16px 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.acoes button{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
+.acoes button:hover{background:var(--tinta);color:var(--papel)}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:24px 0}
+.ctx-bloco b.tit{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:var(--mono);font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-size:15px;color:#5A6B7C}
 .volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:10px 0 60px}
 .vazio{font-family:var(--mono);font-size:13px;color:var(--fraco);padding:60px 0;text-align:center}
 </style>
@@ -54,11 +65,39 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
       <div class="assina">Redação Meridiano · ${d.toLocaleDateString('pt-BR')}, ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</div>
       ${n.foto ? `<figure class="foto"><img src="${esc(n.foto)}" alt="${esc(n.titulo)}" onerror="this.closest('figure').remove()"></figure>` : ''}
       <div class="corpo">${(n.corpo||[]).map(p => `<p>${esc(p)}</p>`).join('')}</div>
+
+      <div class="acoes">
+        <button class="ctx" id="bt-ctx">Entender o contexto</button>
+      </div>
+      <div id="ctx-area"></div>
       <div class="fonte">
         <b>De onde vem esta informação</b>
         <p>Este texto foi escrito pela redação do Meridiano, e não passou pela checagem automática de documento oficial que aplicamos às demais matérias. A fonte declarada é <b>${esc(n.fonte)}</b>.${n.fonteLink ? ` O original está <a href="${esc(n.fonteLink)}" target="_blank" rel="noopener">aqui</a>.` : ''}</p>
       </div>
       <a class="volta" href="/">← Voltar para a capa</a>`;
+
+    // O mesmo contexto das materias do robo. A nota da redacao usa outro
+    // molde, e por isso ficou de fora quando o botao foi criado.
+    const bc = document.getElementById('bt-ctx');
+    const ca = document.getElementById('ctx-area');
+    if (bc) bc.addEventListener('click', async () => {
+      bc.disabled = true; bc.textContent = 'procurando…';
+      try {
+        const r = await fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ id: n.id, titulo: n.titulo, resumo: n.resumo || '' }) });
+        const j = await r.json();
+        bc.style.display = 'none';
+        if (j.ok && j.precisa) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + j.paragrafos.map(p => `<p>${esc(p)}</p>`).join('')
+            + (j.fontes ? `<div class="fontes">Levantado em: ${esc(j.fontes.join(' · '))}</div>` : '')
+            + '</div>';
+        } else if (j.ok) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + '<p class="nada">Esta nota não pede contexto adicional.</p></div>';
+        } else { bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto'; }
+      } catch { bc.disabled = false; bc.textContent = 'Entender o contexto'; }
+    });
   } catch {
     alvo.innerHTML = '<p class="vazio">Não consegui carregar esta nota.</p>';
   }
