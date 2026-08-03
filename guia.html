@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia — Meridiano</title>
+<meta name="description" content="Como funciona o Meridiano: o método, os selos de evidência, a Linha do tempo e o que o leitor pode fazer.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FFFDF9;--areia:#F7F6F3;--tinta:#1A1713;--tinta2:#4A443C;--linha:#E8E2D6;--linha2:#C9C4B8;
+      --fraco:#8B8375;--rosso:#B34700;--verde:#1F6B4A;--oro:#8A6B14;
+      --tit:'Playfair Display',Georgia,serif;--txt:'Source Serif 4',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+header{border-bottom:1px solid var(--tinta);padding:18px 0}
+header .wrap{display:flex;align-items:baseline;gap:14px}
+header b{font-family:var(--tit);font-size:22px;font-weight:900;letter-spacing:-.02em}
+header .ed{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso)}
+header a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);margin-left:auto;text-decoration:none}
+header a:hover{color:var(--tinta)}
+
+.capa{padding:56px 0 44px;border-bottom:1px solid var(--linha)}
+h1{font-family:var(--tit);font-size:clamp(32px,6vw,50px);font-weight:900;letter-spacing:-.03em;line-height:1.06;margin-bottom:18px}
+.lead{font-size:20px;color:var(--tinta2);line-height:1.5;max-width:56ch}
+
+.indice{background:var(--areia);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:20px 0}
+.indice .wrap{display:flex;gap:9px;flex-wrap:wrap}
+.indice a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--tinta2);border:1px solid var(--linha2);padding:8px 13px;text-decoration:none;background:var(--papel)}
+.indice a:hover{border-color:var(--tinta);color:var(--tinta)}
+
+section{padding:48px 0 8px;border-bottom:1px solid var(--linha)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--tit);font-size:clamp(24px,3.6vw,32px);font-weight:700;letter-spacing:-.022em;line-height:1.16;margin-bottom:16px}
+h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);margin:32px 0 12px}
+p{margin-bottom:16px;font-size:17px}
+p:last-child{margin-bottom:0}
+b{font-weight:600}
+.destaque{border-left:3px solid var(--tinta);padding:2px 0 2px 20px;margin:24px 0;font-size:18.5px;line-height:1.55}
+
+.passos{counter-reset:p;margin:22px 0 26px}
+.passo{display:flex;gap:16px;padding:17px 0;border-top:1px solid var(--linha)}
+.passo:last-child{border-bottom:1px solid var(--linha)}
+.passo b.n{font-family:var(--mono);font-size:11px;background:var(--tinta);color:var(--papel);
+  width:24px;height:24px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.passo div{flex:1}
+.passo strong{display:block;font-family:var(--txt);font-size:17px;font-weight:600;margin-bottom:5px}
+.passo span{font-size:16px;color:var(--tinta2);line-height:1.55}
+
+table{width:100%;border-collapse:collapse;margin:20px 0 26px;font-size:15.5px}
+td{padding:13px 12px 13px 0;border-bottom:1px solid var(--linha);vertical-align:top}
+td:first-child{width:210px;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;padding-top:16px}
+td .pt{display:inline-flex;align-items:center;gap:7px}
+td .pt::before{content:'';width:8px;height:8px;border-radius:50%;background:currentColor}
+.v{color:var(--verde)} .o{color:var(--oro)} .f{color:var(--fraco)} .r{color:var(--rosso)}
+td:last-child{color:var(--tinta2);line-height:1.5}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:22px 0 26px}
+.duas>div{padding:18px 20px}
+.duas>div+div{border-left:1px solid var(--linha)}
+.duas b{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:10px}
+.duas .s b{color:var(--verde)} .duas .n b{color:var(--rosso)}
+.duas ul{list-style:none;font-size:15.5px;line-height:1.5}
+.duas li{margin-bottom:8px;padding-left:16px;position:relative;color:var(--tinta2)}
+.duas li::before{content:'·';position:absolute;left:4px;font-weight:700}
+.duas .s li::before{color:var(--verde)} .duas .n li::before{color:var(--rosso)}
+@media(max-width:620px){.duas{grid-template-columns:1fr}.duas>div+div{border-left:0;border-top:1px solid var(--linha)}}
+
+.limite{background:var(--areia);border:1px solid var(--linha);padding:20px 22px;margin:22px 0}
+.limite b{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--fraco);display:block;margin-bottom:11px}
+.limite p{font-size:16px;color:var(--tinta2);margin-bottom:12px}
+.limite p:last-child{margin-bottom:0}
+
+.fim{padding:44px 0 70px;text-align:center}
+.fim a{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;border:1.5px solid var(--tinta);padding:14px 26px;color:var(--tinta);transition:.14s}
+.fim a:hover{background:var(--tinta);color:var(--papel)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><span class="ed">guia</span><a href="/">← capa</a></div></header>
+
+<div class="wrap capa">
+  <h1>Uma notícia sozinha não conta a história.</h1>
+  <p class="lead">O Meridiano é um jornal que mostra de onde veio cada informação, o que veio antes e o que veio depois. Este guia explica como ele funciona e o que você pode fazer com ele.</p>
+</div>
+
+<div class="indice"><div class="wrap">
+  <a href="#metodo">O método</a>
+  <a href="#selos">Os selos</a>
+  <a href="#naoconfirmado">O que não confirmamos</a>
+  <a href="#tempo">Linha do tempo</a>
+  <a href="#voce">O que você pode fazer</a>
+  <a href="#fontes">De onde vem o texto</a>
+  <a href="#limites">Os limites</a>
+</div></div>
+
+<div class="wrap">
+
+<section id="metodo">
+  <h2>O método</h2>
+  <p>Não há redação. Há um programa que roda sozinho várias vezes ao dia, lê algumas centenas de manchetes, consulta dezenas de órgãos públicos e escreve as matérias.</p>
+
+  <div class="passos">
+    <div class="passo"><b class="n">1</b><div>
+      <strong>Lê a imprensa — e não copia uma linha</strong>
+      <span>O robô acompanha g1, Folha, UOL, CNN, ANSA e dezenas de veículos regionais. Isso serve só de termômetro: diz do que vale a pena tratar. Nenhum texto deles é usado.</span></div></div>
+
+    <div class="passo"><b class="n">2</b><div>
+      <strong>Vai atrás de quem registrou o fato</strong>
+      <span>Para cada história ele identifica o assunto e deduz qual órgão guardaria o registro. Prisão está na Polícia Civil. Temporal está na Defesa Civil. Propina está no Ministério Público. Obra está no Tribunal de Contas. E vai bater na porta.</span></div></div>
+
+    <div class="passo"><b class="n">3</b><div>
+      <strong>Escreve a partir do documento</strong>
+      <span>Achando o registro oficial, a matéria é escrita a partir dele, com o link do original no fim. O texto é próprio; a fonte é declarada.</span></div></div>
+
+    <div class="passo"><b class="n">4</b><div>
+      <strong>E quando não acha, publica dizendo isso</strong>
+      <span>A história entra marcada como sem confirmação, com a lista de onde procuramos, quantas publicações foram lidas e quais órgãos não responderam.</span></div></div>
+  </div>
+
+  <div class="destaque">O que decide se algo é publicado não é o interesse que desperta. É existir ou não um documento por trás.</div>
+</section>
+
+<section id="selos">
+  <h2>Os selos</h2>
+  <p>Cada matéria carrega uma marca dizendo o grau de certeza. É a informação mais importante da página, e ela aparece antes do texto.</p>
+
+  <table>
+    <tr><td class="v"><span class="pt">Confirmado</span></td><td>Há documento de órgão público, com o endereço do original no fim da matéria.</td></tr>
+    <tr><td class="o"><span class="pt">Atribuído</span></td><td>A informação vem de fonte oficial, mas sem o documento em mãos.</td></tr>
+    <tr><td class="f"><span class="pt">Sem confirmação</span></td><td>Circula na imprensa e não encontramos registro. A matéria mostra onde procuramos.</td></tr>
+    <tr><td class="r"><span class="pt">Edição da redação</span></td><td>Escrito por uma pessoa, não pelo robô, e não submetido à checagem automática.</td></tr>
+  </table>
+</section>
+
+<section id="naoconfirmado">
+  <h2>Por que existe notícia dizendo que não confirmamos</h2>
+  <p>Um jornal comum tem dois estados: publicou ou não publicou. O Meridiano tem um terceiro — <b>está circulando, procuramos, não achamos</b>.</p>
+  <p>Dentro dessas matérias há um bloco chamado <b>o que procuramos antes de publicar</b>, com a conta exata: quantos órgãos foram consultados, quantas publicações foram lidas, e quais não responderam.</p>
+  <p>Esse último dado importa por si só. Órgão público que não publica de forma legível é um problema — e o registro fica ali em vez de ser escondido.</p>
+</section>
+
+<section id="tempo">
+  <h2>Linha do tempo</h2>
+  <p>Casos que se arrastaram no tempo e ficaram presos a um só capítulo. Uma acusação vira manchete; a absolvição, meses depois, vira nota de rodapé. Quem foi acusado carrega a primeira versão para sempre.</p>
+  <p>A seção remonta esses casos em ordem, do mais recente ao mais antigo. Cada marco traz a data e declara a origem: o veículo que registrou, o relato de quem viveu, ou a marca de que <b>não há registro localizado</b>.</p>
+  <p>Essa última marca costuma ser a informação mais reveladora da página — porque cai justamente sobre os capítulos que sumiram dos índices de busca.</p>
+  <p>Não há análise nem posição do jornal. A cronologia convence sozinha.</p>
+</section>
+
+<section id="voce">
+  <h2>O que você pode fazer</h2>
+
+  <h3>Ler sem se identificar</h3>
+  <p>Não pedimos e-mail, nome nem telefone. Você inventa um apelido e um PIN de seis dígitos. É uma etiqueta sem dono: você sabe que é você, nós não temos como saber.</p>
+  <p>Serve para o jornal abrir na sua praça, lembrar o que já foi lido, e funcionar também no celular.</p>
+
+  <h3>Acompanhar um caso</h3>
+  <p>Em qualquer matéria há um botão para isso. Quando aquela história mudar de estado — quando aparecer o documento, quando sair a decisão —, você é avisado ao voltar.</p>
+  <p>É o desfecho: exatamente o capítulo que costuma sair pequeno e que nenhum feed de rede social mostra, porque desfecho não engaja.</p>
+
+  <h3>Acompanhar um assunto</h3>
+  <p>Diferente do caso. Um assunto é um tema que se repete e não termina — “Cuiabá”, “licitação”, “Fifa”. Você escreve, e tudo que sair sobre aquilo aparece na sua página.</p>
+  <p>Quando o jornal não cobre o assunto, ele mostra as manchetes que circulam em outros veículos, com o link do original — dizendo que não verificou nenhuma.</p>
+
+  <h3>Entender o contexto</h3>
+  <p>Toda matéria tem um botão que explica os termos que ela pressupõe. Numa notícia sobre migrantes em Ceuta, ele explica o que é Ceuta — enclave espanhol no norte da África, uma das duas fronteiras terrestres da União Europeia — sem afirmar nada sobre o fato noticiado.</p>
+</section>
+
+<section id="fontes">
+  <h2>De onde vem o texto</h2>
+  <p>Nunca de veículo comercial. Só de fontes que autorizam reprodução.</p>
+
+  <div class="duas">
+    <div class="s"><b>o texto pode vir daqui</b><ul>
+      <li>Agência Brasil, Câmara, Senado</li>
+      <li>ONU News, Vatican News</li>
+      <li>Comissão Europeia e agências da ONU</li>
+      <li>Assessorias de órgãos públicos</li>
+      <li>Jornalismo em licença aberta</li>
+      <li>Dados públicos, como o Banco Central</li>
+    </ul></div>
+    <div class="n"><b>daqui só a manchete</b><ul>
+      <li>g1, Folha, UOL, Estadão</li>
+      <li>CNN, Veja, ANSA</li>
+      <li>Qualquer veículo comercial</li>
+    </ul></div>
+  </div>
+
+  <p>Cada fonte tem a licença registrada no sistema, e o robô sabe o que pode reescrever e o que só pode ser republicado sem alteração. Fonte que proíbe adaptação nunca passa pela reescrita.</p>
+</section>
+
+<section id="limites">
+  <h2>Os limites</h2>
+  <p>Um jornal que cobra transparência dos outros precisa dizer o que não faz.</p>
+
+  <div class="limite">
+    <b>nem todo órgão responde</b>
+    <p>Boa parte das prefeituras e secretarias mantém sites que o robô não consegue ler. Isso limita a cobertura — e é por isso que a lista dos que não responderam aparece dentro das matérias.</p>
+  </div>
+
+  <div class="limite">
+    <b>o período eleitoral silencia fontes</b>
+    <p>A lei suspende a publicidade institucional, e muitos órgãos ficam calados até outubro. O jornal sente.</p>
+  </div>
+
+  <div class="limite">
+    <b>o robô não apura por conta própria</b>
+    <p>Ele não liga para ninguém, não visita lugar, não ouve testemunha. Cruza o que a imprensa noticia com o que os órgãos publicam. É menos que jornalismo de campo, e não fingimos o contrário.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="fim"><a href="/">Ir para a capa</a></div>
+</body>
+</html>
