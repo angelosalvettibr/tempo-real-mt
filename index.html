@@ -79,6 +79,17 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
    Por isso entra na nav com marca visual diferente dos botoes de editoria. */
 /* Chamada da Linha do tempo. Nao e mais uma editoria: e a secao que carrega
    a tese do jornal, entao ganha bloco proprio logo abaixo da faixa de metodo. */
+.novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
+.novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.novid .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);
+  border:1px solid var(--verde);padding:5px 10px;flex:none;margin-top:2px}
+.novid .lista{flex:1;min-width:230px}
+.novid .lista b{display:block;font-size:15px;margin-bottom:8px;line-height:1.4}
+.novid .lista a{display:block;text-decoration:none;color:var(--tinta);font-size:14.5px;line-height:1.42;
+  padding:6px 0;border-top:1px solid rgba(0,0,0,.07)}
+.novid .lista a:hover{color:var(--verde)}
+.novid .lista a em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--verde);display:block;margin-top:3px}
 .chamada{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--tinta);color:var(--papel)}
 .chamada .wrap{display:flex;align-items:center;gap:24px;padding:24px 0;flex-wrap:wrap}
 .chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
@@ -261,6 +272,8 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
   </nav>
   <div class="cidades" id="cidades"><div class="wrap"></div></div>
 </header>
+
+<div class="novid" id="novid" hidden><div class="wrap"></div></div>
 
 <div class="chamada">
   <div class="wrap">
@@ -452,6 +465,32 @@ async function atualizar(){
     if (bt) bt.textContent = 'falhou';
   }
   // carregar() redesenha tudo, inclusive este botao
+}
+
+// NOVIDADE NOS CASOS QUE O LEITOR ACOMPANHA
+//
+// Isto e o que um feed de rede social nao faz. Para o algoritmo, "acusado" e
+// "absolvido" sao dois posts sem relacao, e o segundo rende menos — entao
+// some. Aqui sao a mesma historia em estados diferentes, e o jornal sabe
+// disso porque tem selo de evidencia.
+async function novidades(){
+  const caixa = $('#novid');
+  if (!leitor.apelido) { caixa.hidden = true; return; }
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'novidades', apelido: leitor.apelido }) });
+    const j = await r.json();
+    const m = j.mudou || [];
+    if (!m.length) { caixa.hidden = true; return; }
+
+    const ROT = { confirmado:'agora confirmado em documento oficial', atribuido:'agora atribuído a fonte oficial' };
+    caixa.querySelector('.wrap').innerHTML =
+      '<span class="selo">desfecho</span><div class="lista">' +
+      `<b>${m.length === 1 ? 'Um caso que você acompanha teve desfecho' : m.length + ' casos que você acompanha tiveram desfecho'}</b>` +
+      m.map(x => `<a href="${esc(x.novoLink)}">${esc(x.novoTitulo)}<em>${esc(ROT[x.virou] || x.virou)}</em></a>`).join('') +
+      '</div>';
+    caixa.hidden = false;
+  } catch { caixa.hidden = true; }
 }
 
 // ULTIMAS — as mais recentes de TODAS as edicoes, nao so da aba aberta.
@@ -688,6 +727,7 @@ async function carregar(){
     return;
   }
   carregadoEm = Date.now();
+  novidades();
   ultimas();
   pintar(); pintarDescarte();
   if(ED.gerado){
