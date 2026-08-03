@@ -1,21 +1,21 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-03T18:11:20.218Z",
+  "gerado": "2026-08-03T18:28:37.634Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 119,
-    "fonteLivre": 31,
-    "confirmadas": 12,
-    "publicadas": 20,
+    "pauta": 120,
+    "fonteLivre": 29,
+    "confirmadas": 11,
+    "publicadas": 22,
     "resgatadas": 1,
     "semFonte": 83
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 19,
-    "entregando": 16,
-    "itens": 150,
+    "responderam": 20,
+    "entregando": 17,
+    "itens": 149,
     "lista": [
       {
         "tipo": "pauta",
@@ -37,7 +37,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -46,7 +46,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -100,15 +100,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
         "itens": 9,
@@ -129,7 +120,7 @@
         "tipo": "pauta",
         "id": "gn-rs-canoas",
         "nome": "Canoas",
-        "itens": 6,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -145,8 +136,17 @@
       },
       {
         "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -154,8 +154,17 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "saude-rs",
+        "nome": "Secretaria de Saúde do RS",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -169,15 +178,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -196,6 +196,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -246,15 +255,6 @@
         "tipo": "assessoria",
         "id": "tjrs",
         "nome": "TJRS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -352,15 +352,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "saude-rs",
-        "nome": "Secretaria de Saúde do RS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "tce-rs",
         "nome": "TCE-RS",
         "itens": 0,
@@ -394,6 +385,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
       }
     ]
   },
@@ -411,32 +411,33 @@
     {
       "foto": null,
       "fotoAlt": null,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:velorio-de-bagre-fagundes-sera-no-palacio-piratini-nesta-segunda-feira",
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:ceee-equatorial-realiza-prestacao-de-contas-sobre-energia-eletrica-no-",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Velório de Bagre Fagundes será no Palácio Piratini nesta segunda-feira",
-      "resumo": "O artista faleceu no domingo (2/8), aos 86 anos, no Hospital Ernesto Dornelles, em Porto Alegre, onde estava internado desde maio após sofrer parada cardiorrespiratória.",
-      "fonte": "Meridiano, com informações de Governo do RS",
-      "origemLink": "https://estado.rs.gov.br/bagre-fagundes-sera-velado-no-palacio-piratini-nesta-segunda-feira-3",
-      "origemNome": "Governo do RS",
+      "titulo": "CEEE Equatorial realiza prestação de contas sobre energia elétrica no RS",
+      "resumo": "Evento apresentou o montante investido entre 2021 e 2025 e a projeção de R$ 1 bilhão em aporte adicional para 2026.",
+      "fonte": "Meridiano, com informações de Sema-RS",
+      "origemLink": "https://sema.rs.gov.br/ceee-equatorial-presta-contas-sobre-a-distribuicao-de-energia-eletrica-no-rio-grande-do-sul",
+      "origemNome": "Sema-RS",
       "pautadoPor": [
-        "OAB/RS",
-        "Correio do Povo"
+        "Canal Rural",
+        "estanciavelha.rs.gov.br",
+        "band.com.br"
       ],
       "quentura": 3,
       "uf": "rs",
       "corpo": [
-        "O velório do artista Bagre Fagundes é realizado no Palácio Piratini, em Porto Alegre, nesta segunda-feira (3/8). A cerimônia fúnebre será aberta ao público a partir das 10h, em reconhecimento do governo do Estado à grandeza do seu legado e como homenagem.",
-        "Bagre Fagundes faleceu neste domingo (2/8), aos 86 anos, no Hospital Ernesto Dornelles, em Porto Alegre. Ele estava internado no local desde maio, período em que sofreu uma parada cardiorrespiratória.",
-        "O governador Eduardo Leite manifestou solidariedade à esposa do artista, Marlene, aos filhos Neto, Ernesto, Paulinho e Luciana, além de amigos e admiradores. O governador declarou que Bagre Fagundes foi um dos grandes nomes da cultura popular e da música regional."
+        "A CEEE Equatorial realizou uma prestação de contas sobre a distribuição de energia elétrica no Rio Grande do Sul, cinco anos após o início de suas operações. O encontro reuniu representantes da concessionária, do poder público, de órgãos reguladores e de diferentes instituições, com a presença do governador Eduardo Leite representando o poder concedente.",
+        "Durante a reunião, foram apresentados dados sobre a operação do sistema de distribuição e o valor investido no período de 2021 a 2025. A companhia informou também a projeção de um aporte adicional de R$ 1 bilhão para 2026.",
+        "Entre os assuntos tratados, estiveram os impactos de eventos meteorológicos extremos na rede elétrica, o planejamento para manutenção e o fortalecimento da resiliência da infraestrutura. Como medida preventiva, a empresa investiu mais de R$ 9,5 milhões na modernização tecnológica do Centro de Operações Integradas (COI), responsável pelo monitoramento do sistema na área de atuação."
       ],
-      "link": "/materia/velorio-de-bagre-fagundes-sera-no-palacio-piratini-nesta-segunda-feira.html",
-      "iso": "2026-08-03T17:58:45.791Z",
-      "hora": "13h58",
+      "link": "/materia/ceee-equatorial-realiza-prestacao-de-contas-sobre-energia-eletrica-no-.html",
+      "iso": "2026-08-03T18:16:46.798Z",
+      "hora": "14h16",
       "original": true,
-      "contexto": "A cerimônia fúnebre é aberta ao público em geral, além de familiares, amigos e admiradores do artista. A etapa seguinte da homenagem ocorre nesta segunda-feira (3/8), com a liberação da entrada do público no Palácio Piratini a partir das 10h.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -449,7 +450,7 @@
       "editoria": "regional",
       "chapeu": "Nosso texto",
       "titulo": "Prefeitura de Porto Alegre inicia demolição de 70 casas na Vila Dique",
-      "resumo": "A medida é a primeira de quatro fases para liberar a área e permitir a recuperação do sistema de proteção contra cheias.",
+      "resumo": "Ação busca liberar espaço para obras do sistema de proteção contra cheias e envolve o reassentamento de famílias em três modalidades.",
       "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
       "origemLink": "https://prefeitura.poa.br/demhab/noticias/prefeitura-inicia-demolicao-de-moradias-na-vila-dique-para-avanco-das-obras-de",
       "origemNome": "Prefeitura de Porto Alegre",
@@ -457,49 +458,81 @@
         "Correio do Povo",
         "radiocaicara.com.br"
       ],
-      "quentura": 4,
+      "quentura": 5,
       "uf": "rs",
       "corpo": [
-        "A Prefeitura de Porto Alegre iniciou, nesta segunda-feira, 3, a demolição de 70 moradias no Trecho I da Vila Dique, localizado na avenida Severo Dullius. A ação responde à necessidade de liberar o local para o início das obras de recuperação do sistema de proteção contra as cheias.",
-        "Das famílias envolvidas nesta etapa, 53 estão em imóveis adquiridos pelo programa Compra Assistida, do governo federal. Duas famílias são atendidas pela modalidade Estadia Solidária e outras 15 foram realocadas para casas desocupadas na própria comunidade. A iniciativa é conduzida de forma integrada por Demhab, Dmae, Smoi, Gabinete da Causa Animal, Defesa Civil e Escritório de Reconstrução.",
-        "A intervenção atual é a primeira das quatro fases programadas para a área. As obras de reconstrução no dique do Arroio Areia serão iniciadas depois de concluídas a remoção das casas, a supressão da vegetação e a retirada da rede de energia elétrica. O Dmae propôs aos governos estadual e federal uma mudança no projeto da região, que prevê uma bacia permanente de amortecimento e duas Estações de Bombeamento de Águas Pluviais (Ebaps).",
-        "Em vistoria no local, o Gabinete da Causa Animal e a Diretoria Geral de Fiscalização localizaram cerca de dez animais microchipados acompanhados por seus responsáveis. Uma cadela e seus filhotes foram encaminhados à Unidade de Saúde Animal Victória (Usav), onde receberão atendimento veterinário antes de serem colocados para adoção."
+        "A Prefeitura de Porto Alegre iniciou, nesta segunda-feira (3), a demolição de 70 moradias no Trecho I da Vila Dique, localizado na avenida Severo Dullius. A medida libera a área para o início das obras de recuperação do sistema de proteção contra as cheias.",
+        "Das famílias atendidas nesta etapa, 53 estão em imóveis do programa Compra Assistida, duas são atendidas pela Estadia Solidária e 15 foram realocadas para casas desocupadas na própria comunidade. A ação é realizada de forma integrada pelo Demhab, Dmae, Smoi, Gabinete da Causa Animal, Defesa Civil e Escritório de Reconstrução.",
+        "Esta é a primeira de quatro fases de demolição previstas na Vila Dique. As obras de reconstrução no dique do Arroio Areia terão início após a remoção das residências, a supressão vegetal e a retirada da rede de energia elétrica. O Dmae propôs uma mudança de projeto aos governos estadual e federal que inclui a construção de uma bacia permanente de amortecimento e duas novas Estações de Bombeamento de Águas Pluviais.",
+        "Durante vistoria na área, equipes do Gabinete da Causa Animal e da Diretoria Geral de Fiscalização encontraram cerca de dez animais, todos microchipados e com seus responsáveis. Uma cadela e seus filhotes serão encaminhados à Unidade de Saúde Animal Victória para avaliação veterinária e posterior adoção."
       ],
       "link": "/materia/prefeitura-de-porto-alegre-inicia-demolicao-de-70-casas-na-vila-dique.html",
-      "iso": "2026-08-03T17:59:03.652Z",
-      "hora": "13h59",
+      "iso": "2026-08-03T18:16:02.470Z",
+      "hora": "14h16",
       "original": true,
-      "contexto": "A ação afeta 70 famílias da Vila Dique, sendo 53 pelo programa Compra Assistida, 15 realocadas na própria comunidade e duas atendidas pela Estadia Solidária. Esta é a primeira de quatro fases previstas na área, e as obras de reconstrução do dique do Arroio Areia começam após a remoção das casas, a supressão da vegetação e a retirada da rede elétrica.",
+      "contexto": "A medida afeta 70 famílias da Vila Dique, das quais 53 estão no programa Compra Assistida, duas na Estadia Solidária e 15 foram realocadas dentro da comunidade. A ação é a primeira de quatro fases de demolição na área, com as obras de reconstrução no dique do Arroio Areia previstas para começar após a remoção das moradias, a supressão vegetal e a retirada da rede elétrica.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://camaracaxias.rs.gov.br/upload/noticias/thumbs/cf4568492477773b432301984f75353e.png",
+      "foto": null,
       "fotoAlt": null,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:seminario-regional-de-protecao-e-defesa-civil-ocorre-na-camara-na-prox",
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:velorio-de-bagre-fagundes-sera-no-palacio-piratini-nesta-segunda-feira",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Seminário Regional de Proteção e Defesa Civil ocorre na Câmara na próxima segunda-feira",
-      "resumo": "O evento gratuito terá seis palestras com lideranças de órgãos de segurança e do Ministério Público sobre o planejamento diante de eventos climáticos extremos.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32949",
-      "origemNome": "Câmara de Caxias do Sul",
+      "titulo": "Velório de Bagre Fagundes será no Palácio Piratini nesta segunda-feira",
+      "resumo": "O artista morreu neste domingo (2/8), aos 86 anos, em Porto Alegre, onde estava internado desde maio após parada cardiorrespiratória.",
+      "fonte": "Meridiano, com informações de Governo do RS",
+      "origemLink": "https://estado.rs.gov.br/bagre-fagundes-sera-velado-no-palacio-piratini-nesta-segunda-feira-3",
+      "origemNome": "Governo do RS",
       "pautadoPor": [
-        "Prefeitura de Pelotas"
+        "OAB/RS",
+        "Correio do Povo"
+      ],
+      "quentura": 2,
+      "uf": "rs",
+      "corpo": [
+        "O artista Bagre Fagundes faleceu neste domingo (2/8), aos 86 anos, no Hospital Ernesto Dornelles, em Porto Alegre. O velório será realizado no Palácio Piratini nesta segunda-feira (3/8), em cerimônia aberta ao público a partir das 10h.",
+        "O local da cerimônia fúnebre foi definido pelo governo do Estado como homenagem e reconhecimento ao legado do artista. Bagre Fagundes estava internado no hospital desde maio, quando sofreu uma parada cardiorrespiratória.",
+        "O governador Eduardo Leite declarou que o Rio Grande do Sul se despede de um dos grandes nomes da cultura popular e da música regional, afirmando que o legado do artista permanecerá vivo na cultura, na tradição e na música.",
+        "O governador também prestou solidariedade aos amigos, admiradores e à família do artista, citando a esposa Marlene e os filhos Neto, Ernesto, Paulinho e Luciana."
+      ],
+      "link": "/materia/velorio-de-bagre-fagundes-sera-no-palacio-piratini-nesta-segunda-feira.html",
+      "iso": "2026-08-03T18:15:44.108Z",
+      "hora": "14h15",
+      "original": true,
+      "contexto": "A próxima etapa das homenagens é o velório aberto ao público, agendado para esta segunda-feira (3/8), a partir das 10h, no Palácio Piratini. A cerimônia envolve os admiradores do artista e seus familiares, incluindo a esposa Marlene e os filhos Neto, Ernesto, Paulinho e Luciana.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mprs-divulga-cartilha-para-identificacao-de-bullying-e-cyberbullying",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "MPRS divulga cartilha para identificação de bullying e cyberbullying",
+      "resumo": "A publicação foi desenvolvida pela área de Comunicação MPRS e aborda o reconhecimento dessas práticas.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/media/areas/imprensa/arquivos/cartilhabbullyingcyberbullying_2026.pdf",
+      "origemNome": "MPRS",
+      "pautadoPor": [
+        "GZH"
       ],
       "quentura": 1,
       "uf": "rs",
       "corpo": [
-        "A Câmara de Vereadores recebe na próxima segunda-feira (03/08), das 9h às 18h, no plenário da Casa, o Seminário Regional Legislativo de Proteção e Defesa Civil. Promovida pela Frente Parlamentar de Proteção e Defesa Civil do Legislativo, a atividade debaterá o planejamento dos órgãos públicos para amenizar os efeitos de eventos climáticos extremos e apresentará um modelo de ações de atendimento à população.",
-        "A programação conta com seis palestras ao longo do dia. As apresentações começam às 9h30 com Marcelo Almeida de Souza, titular da 9º Coordenadoria Regional de Proteção e Defesa Civil de Caxias do Sul. Às 10h, fala Eder Camilo Dalla Porta, presidente da filial de Caxias do Sul da Cruz Vermelha Brasileira, e às 11h, o promotor de Justiça do Ministério Público, Ádrio Gelatti. No período da tarde, palestram César de Assumpção Nunes, assessor especial de Santa Catarina, às 13h30; Márcio Müller Batista, comandante do 5º Batalhão de Bombeiro Militar, às 15h30; e Julimar Fortes Pinheiro, ex-comandante-geral do Corpo de Bombeiros do Rio Grande do Sul.",
-        "O presidente da Frente Parlamentar, Alexandre Bortoluz (PP), informou que os trabalhos visam antecipar ações contra eventos climáticos e promover a interlocução entre órgãos competentes e o Poder Legislativo. Segundo o parlamentar, a informação antecipada é um dos fatores determinantes para que a população saiba como agir, para onde se deslocar e como solicitar apoio durante crises climáticas.",
-        "O promotor de Justiça Ádrio Gelatti explicou que o Ministério Público atua no acompanhamento e controle das políticas públicas de defesa civil, mencionando o acompanhamento do Plano de Contingência e do Plano Diretor do município. O evento tem entrada franca, sendo necessário realizar cadastramento prévio por meio de link."
+        "A Comunicação MPRS elaborou a cartilha sobre bullying e cyberbullying com orientações para a identificação dessas condutas.",
+        "O material foi intitulado como Cartilha Bullying e Cyberbullying: saiba como identificar.",
+        "A produção do conteúdo consta vinculada ao registro Cartilha sobre bullying e cyberbullying_2026 da Comunicação MPRS."
       ],
-      "link": "/materia/seminario-regional-de-protecao-e-defesa-civil-ocorre-na-camara-na-prox.html",
-      "iso": "2026-08-03T18:00:04.287Z",
-      "hora": "14h00",
+      "link": "/materia/mprs-divulga-cartilha-para-identificacao-de-bullying-e-cyberbullying.html",
+      "iso": "2026-08-03T18:16:05.106Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -510,11 +543,11 @@
       "fotoAlt": null,
       "municipio": "santamaria",
       "municipioNome": "Santa Maria",
-      "id": "ilm:defesa-civil-do-rs-atualiza-prognostico-e-alerta-para-risco-de-inundac",
+      "id": "ilm:defesa-civil-do-rs-atualiza-prognostico-hidrologico-e-aponta-risco-de-",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Defesa Civil do RS atualiza prognóstico e alerta para risco de inundação",
-      "resumo": "Estações dos rios Uruguai, Jacuí e Sinos apresentam pontos acima da cota de inundação, com previsão de volumes moderados a elevados de chuva no estado.",
+      "titulo": "Defesa Civil do RS atualiza prognóstico hidrológico e aponta risco de inundação",
+      "resumo": "Os rios Uruguai, Jacuí e Sinos apresentam pontos acima da cota de inundação, com previsão de chuvas moderadas a elevadas no estado.",
       "fonte": "Meridiano, com informações de Defesa Civil do RS",
       "origemLink": "https://www.defesacivil.rs.gov.br/o-centro-de-monitoramento-da-defesa-civil-do-rs-atualiza-o-prognostico-hidrologico-para-os-proximos-dias-no-estado",
       "origemNome": "Defesa Civil do RS",
@@ -522,14 +555,259 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "O Centro de Monitoramento da Defesa Civil do RS atualizou o prognóstico hidrológico e meteorológico para os próximos dias no estado. A condição hidrológica atual apresenta níveis entre os limiares de inundação e a normalidade, com tendências gerais de estabilidade ou declínio.",
-        "Com chuvas previstas em volumes moderados a elevados, há indicação de condição de ALERTA e INUNDAÇÃO para cidades marcadas em laranja e vermelho no mapa hidrológico. Há risco de cheias em arroios e pequenos rios, além de alagamentos em áreas urbanas conforme a intensidade da precipitação.",
-        "Níveis elevados continuam na região do Baixo rio Uruguai, de São Borja a Uruguaiana, no rio Jacuí, a partir de Dona Francisca até o Delta, e no rio Sinos, em São Leopoldo. Os rios Uruguai, Jacuí e Sinos contam com estações de monitoramento acima da cota de inundação.",
-        "São esperados riscos de inundação para o rio Ibirapuitã em Alegrete, rio Santa Maria em Dom Pedrito e Rosário do Sul, rio Ibicuí em Manoel Viana e rio Quaraí em Quaraí. A Defesa Civil também registrou alertas para instabilidades atuando em áreas próximas de São Miguel das Missões."
+        "O Centro de Monitoramento da Defesa Civil do RS atualizou o prognóstico hidrológico para os próximos dias no estado. A condição hidrológica atual apresenta níveis entre os limiares de inundação e a normalidade, com tendências gerais de estabilidade ou declínio.",
+        "Os rios Uruguai, Jacuí e Sinos apresentam estações de monitoramento acima da cota de inundação. Em função dessa condição e das chuvas previstas com volumes moderados a elevados, é indicada a condição de alerta e de inundação para as cidades indicadas no mapa hidrológico.",
+        "Existe risco de cheias em arroios e pequenos rios, além de alagamentos em áreas urbanas conforme a intensidade da chuva. Nos locais onde os rios principais apresentam condição de inundação, deve haver continuidade dos níveis elevados, como no Baixo rio Uruguai (de São Borja a Uruguaiana), no rio Jacuí (a partir de Dona Francisca até o Delta) e no Sinos (São Leopoldo).",
+        "Devem ser esperados riscos de inundação para o rio Ibirapuitã em Alegrete, rio Santa Maria em Dom Pedrito e Rosário do Sul, rio Ibicuí em Manoel Viana e rio Quaraí em Quaraí. A Defesa Civil também emitiu alerta para tempestades com granizo e vento na Campanha."
       ],
-      "link": "/materia/defesa-civil-do-rs-atualiza-prognostico-e-alerta-para-risco-de-inundac.html",
-      "iso": "2026-08-03T17:59:37.241Z",
-      "hora": "13h59",
+      "link": "/materia/defesa-civil-do-rs-atualiza-prognostico-hidrologico-e-aponta-risco-de-.html",
+      "iso": "2026-08-03T18:16:37.254Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:area-de-prevencao-e-combate-a-doencas-reune-informacoes-e-diretrizes-d",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Área de prevenção e combate a doenças reúne informações e diretrizes de saúde",
+      "resumo": "O material aborda diagnósticos, tratamentos e reabilitação, com ações baseadas em universalidade, humanização e participação social.",
+      "fonte": "Meridiano, com informações de Secretaria de Saúde do RS",
+      "origemLink": "https://saude.rs.gov.br/prevencao-e-combate-a-doencas",
+      "origemNome": "Secretaria de Saúde do RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "A área de prevenção e combate a doenças reúne informações relativas a diagnósticos, tratamentos, reabilitação, prevenção de agravos e manutenção da saúde.",
+        "O objetivo das orientações disponibilizadas é garantir a promoção e a proteção da saúde.",
+        "As ações informadas são fundamentadas em princípios que englobam universalidade, acessibilidade, coordenação do cuidado, vínculo e continuidade do cuidado.",
+        "As diretrizes incluem também integralidade, responsabilidade com as demandas dos usuários, humanização, equidade e participação social."
+      ],
+      "link": "/materia/area-de-prevencao-e-combate-a-doencas-reune-informacoes-e-diretrizes-d.html",
+      "iso": "2026-08-03T18:16:46.063Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:irrigacao-superficial-deixa-de-exigir-licenciamento-ambiental-no-rio-g",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Irrigação superficial deixa de exigir licenciamento ambiental no Rio Grande do Sul",
+      "resumo": "A medida foi aprovada pelo Consema para adequação à Lei Federal 15.190/2025 e alterou duas resoluções do conselho estadual.",
+      "fonte": "Meridiano, com informações de Sema-RS",
+      "origemLink": "https://sema.rs.gov.br/empreendimentos-de-irrigacao-superficial-passam-a-nao-precisar-de-licenciamento-ambiental-no-rio-grande-do-sul",
+      "origemNome": "Sema-RS",
+      "pautadoPor": [
+        "Canal Rural",
+        "estanciavelha.rs.gov.br",
+        "band.com.br"
+      ],
+      "quentura": 3,
+      "uf": "rs",
+      "corpo": [
+        "A atividade de irrigação pelo método superficial não necessita mais de licenciamento ambiental no Rio Grande do Sul. A alteração foi aprovada na 286ª reunião ordinária do Conselho Estadual do Meio Ambiente (Consema), realizada em 9/7, para adequação à Lei Geral do Licenciamento Ambiental, Lei Federal 15.190/2025.",
+        "Com a aprovação, as Resoluções Consema 372/2018 e 512/2024 passaram por alterações em suas redações. As versões atualizadas foram publicadas no Diário Oficial de quarta-feira (15/7) e estão disponíveis no site do Consema, acompanhadas dos documentos que oficializaram as mudanças.",
+        "Mesmo sem a exigência do licenciamento ambiental para a irrigação superficial, a atividade continua submetida ao Cadastro Ambiental Rural (CAR), à outorga do uso da água para captação e lançamento, à fiscalização, ao poder de polícia e às responsabilidades administrativa, civil e penal. Além disso, empreendimentos que utilizem reservatórios hídricos seguem necessitando de licenciamento ambiental.",
+        "A próxima reunião do conselho está prevista para 13 de agosto."
+      ],
+      "link": "/materia/irrigacao-superficial-deixa-de-exigir-licenciamento-ambiental-no-rio-g.html",
+      "iso": "2026-08-03T18:16:46.798Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.estado.rs.gov.br/upload/recortes/202604/01153154_2270054_GD.jpg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:boletim-aponta-estabilidade-do-pib-do-rio-grande-do-sul-no-primeiro-tr",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Boletim aponta estabilidade do PIB do Rio Grande do Sul no primeiro trimestre de 2026",
+      "resumo": "Publicado pelo Departamento de Economia e Estatística, o levantamento mostra crescimento de 0,4% na comparação do PIB gaúcho com o mesmo período do ano anterior.",
+      "fonte": "Meridiano, com informações de Governo do RS",
+      "origemLink": "https://estado.rs.gov.br/boletim-reune-indicadores-da-economia-do-rs-em-2026",
+      "origemNome": "Governo do RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Departamento de Economia e Estatística divulgou o Boletim de Conjuntura do Rio Grande do Sul com dados econômicos de 2026. O Produto Interno Bruto estadual ficou estável no primeiro trimestre na comparação com os três meses anteriores, registrando variação de 0,0% na série com ajuste sazonal, e subiu 0,4% em relação ao mesmo período de 2025.",
+        "Na composição do PIB gaúcho, a indústria cresceu 0,9% e os serviços avançaram 0,2%, enquanto a agropecuária encolheu 9,9% por conta das quedas nas produções de arroz e fumo. Para o milho e a soja, as estimativas apontam altas de 21,8% e 34,6%, respectivamente, enquanto a área plantada de trigo teve redução de 23,6%.",
+        "No mercado de trabalho do estado, a taxa de desocupação no primeiro trimestre foi de 4%, com 5,895 milhões de pessoas ocupadas e rendimento médio mensal real de R$ 4.127. As exportações gaúchas somaram US$ 9,844 bilhões no primeiro semestre, crescimento de 4,9%, e a arrecadação de ICMS no período totalizou R$ 27,540 bilhões, valor 3,2% inferior ao do primeiro semestre do ano anterior.",
+        "No âmbito nacional, o PIB brasileiro cresceu 1,1% no primeiro trimestre e a taxa de desocupação até maio ficou em 5,6%, com a taxa Selic em 14,25% ao ano. Para a economia mundial, o Fundo Monetário Internacional projeta crescimento de 3% em 2026."
+      ],
+      "link": "/materia/boletim-aponta-estabilidade-do-pib-do-rio-grande-do-sul-no-primeiro-tr.html",
+      "iso": "2026-08-03T18:15:44.108Z",
+      "hora": "14h15",
+      "original": true,
+      "contexto": "Nosso histórico registra um caso parecido publicado em 3 de agosto de 2026. Em comparação ao mesmo período de 2025, o PIB do estado subiu 0,4% no primeiro trimestre, enquanto o PIB nacional cresceu 1,1%. A arrecadação de ICMS no primeiro semestre totalizou R$ 27,540 bilhões, valor 3,2% inferior ao do mesmo período do ano anterior.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:prefeitura-de-porto-alegre-divulga-pautas-e-servicos-para-terca-feira-",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Prefeitura de Porto Alegre divulga pautas e serviços para terça-feira, 4",
+      "resumo": "As ações incluem a entrega de escola no bairro Sarandi, lançamento de plataforma urbana, cortes de água programados e suspensão de atendimento em farmácia distrital.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/gcs/noticias/previsao-de-pautas-terca-feira-4-de-agosto-0",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [
+        "Terra",
+        "jornaltimoneiro.com.br"
+      ],
+      "quentura": 4,
+      "uf": "rs",
+      "corpo": [
+        "A Prefeitura de Porto Alegre programou para esta terça-feira, 4, a vistoria de entrega da reconstrução e ampliação da Escola de Educação Infantil Favo de Mel, no bairro Sarandi, às 9h. Esta é a primeira obra entregue do projeto Infância em Construção, direcionado a instituições parceiras da Rede Municipal de Ensino atingidas pela enchente de 2024.",
+        "Na área urbana, a Secretaria do Meio Ambiente, Urbanismo e Sustentabilidade (Smamus) lança às 15h a plataforma do Distrito da Inovação, que apresenta dados e projetos para uma área de 258 hectares no 4º Distrito. Quanto aos serviços municipais, o Dmae executa cortes na rede de água da avenida Souza Melo, o que pode ocasionar falta de água no bairro Sarandi, e o DMLU realiza o projeto Bota-Fora em quatro comunidades nesta terça-feira.",
+        "A Farmácia Distrital Restinga suspende o atendimento público nesta terça-feira, 4, e na quarta-feira, 5, para a realização do inventário anual de medicamentos. Entre outros destaques da agenda municipal, consta a divulgação do edital do concurso público do Demhab no Dopa para os cargos de arquiteto, engenheiro civil, economista e assistente administrativo, além da abertura das inscrições para voluntários da Copa do Mundo Feminina de 2027 e para o Turismo Farroupilha de Galpão 2026."
+      ],
+      "link": "/materia/prefeitura-de-porto-alegre-divulga-pautas-e-servicos-para-terca-feira-.html",
+      "iso": "2026-08-03T18:16:02.470Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.defesacivil.rs.gov.br/upload/recortes/202608/01223017_129939_GD.jpeg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:defesa-civil-monitora-barragem-santa-lucia-e-prepara-alertas-via-cell-",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Defesa Civil monitora Barragem Santa Lúcia e prepara alertas via Cell Broadcast",
+      "resumo": "Estrutura localizada entre Ilópolis e Putinga passa por reparos após vistoria motivada por chuvas, e moradores de Putinga devem ficar atentos para eventual evacuação.",
+      "fonte": "Meridiano, com informações de Defesa Civil do RS",
+      "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-estadual-acompanha-situacao-da-barragem-santa-lucia-e-se-necessario-emitira-alertas-via-cell-broadcast",
+      "origemNome": "Defesa Civil do RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "A Defesa Civil do Estado monitora as condições da Barragem Santa Lúcia, situada entre os municípios de Ilópolis e Putinga, em apoio à Secretaria Estadual do Meio Ambiente e Infraestrutura (Sema). A ação foi motivada por uma vistoria técnica realizada na estrutura pela Divisão de Segurança de Barragens e Emergências da Sema, em parceria com a Defesa Civil estadual, devido à sequência de chuvas registrada na última semana.",
+        "Atualmente, as condições da barragem são sensíveis e medidas de reparos estão sendo executadas. Foram alinhadas medidas emergenciais a serem adotadas pelo município em caso de elevação do nível da água. O Centro de Monitoramento da Defesa Civil acompanha os fatores hidrometeorológicos e, caso sejam atingidas cotas de risco, emitirá alertas à população via Cell Broadcast.",
+        "A recomendação atual é que os moradores de Putinga fiquem atentos às orientações dos órgãos de emergência e preparados para uma eventual evacuação. Em cenário de chuvas persistentes, a orientação é contatar a coordenadoria municipal de Proteção e Defesa Civil pelo telefone (51) 99125-5399 e acompanhar os canais oficiais de informação."
+      ],
+      "link": "/materia/defesa-civil-monitora-barragem-santa-lucia-e-prepara-alertas-via-cell-.html",
+      "iso": "2026-08-03T18:16:37.254Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:mprs-detalha-acoes-de-defesa-do-consumidor-e-canais-de-atendimento",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "MPRS detalha ações de defesa do consumidor e canais de atendimento",
+      "resumo": "A atuação envolve a publicação de guias orientativos e fiscalizações como a ação que apreendeu 2,2 toneladas de produtos impróprios para consumo.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/consumidor",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Ministério Público do Rio Grande do Sul (MPRS) atua na proteção do consumidor e da ordem econômica em casos de produtos adulterados, publicidade enganosa, vícios em serviços e cláusulas abusivas. O atendimento ao cidadão e a apuração de infrações coletivas são exercidos pelas Promotorias de Justiça na capital e no interior do estado.",
+        "Para a defesa de interesses coletivos, a instituição utiliza o inquérito civil para celebrar compromissos de ajustamento de conduta ou mover ações coletivas. Em prejuízos estritamente individuais, a defesa deve ser feita pelo próprio interessado por meio de advogado, Procons ou Juizados Especiais Cíveis, cabendo ao MPRS orientar e promover acordos nos municípios que não possuem órgão de proteção.",
+        "O MPRS atua com o apoio do Centro de Apoio Operacional do Consumidor e da Ordem Econômica (CAOCON) e disponibiliza a plataforma Consumidor.gov.br. A instituição e órgãos parceiros oferecem materiais informativos sobre segurança cibernética, o sistema PIX, prevenção contra golpes em contratações bancárias, empréstimos consignados para idosos e pessoas com deficiência, planos de saúde e transporte aéreo.",
+        "Entre as medidas recentes do MPRS estão o ajuizamento de ação civil pública contra a Corsan e a Aegea Saneamento, o cumprimento de cinco mandados de busca e apreensão em Porto Alegre no dia 29 de junho e a interdição de um local de preparo de alimentos. Além disso, a Força-Tarefa do Programa Segurança dos Alimentos apreendeu 2,2 toneladas de produtos impróprios para consumo na terça-feira, 7 de julho."
+      ],
+      "link": "/materia/mprs-detalha-acoes-de-defesa-do-consumidor-e-canais-de-atendimento.html",
+      "iso": "2026-08-03T18:16:05.106Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:site-do-mprs-apresenta-recursos-para-facilitar-acesso-de-cidadaos-ao-c",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Site do MPRS apresenta recursos para facilitar acesso de cidadãos ao conteúdo",
+      "resumo": "A página conta com a ferramenta de Alto Contraste em preto e branco e permite o ajuste de tamanho do texto por teclado ou mouse.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/frbl_ga",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O portal do Ministério Público do Estado do Rio Grande do Sul oferece recursos para facilitar o acesso de qualquer cidadão ao seu conteúdo. A página utiliza cookies com o objetivo de disponibilizar uma melhor experiência de navegação aos usuários.",
+        "Entre as ferramentas disponíveis no site está o recurso de Alto Contraste. A função alterna o esquema de cores dos textos e do fundo da tela para branco e preto, maximizando o contraste para a leitura.",
+        "A maioria dos navegadores atuais possui ajustes de tamanho de texto compatíveis com o portal. As alterações de tamanho podem ser feitas por meio de combinações de teclas ou usando a roda do mouse enquanto a tecla Ctrl ou Cmd é mantida pressionada."
+      ],
+      "link": "/materia/site-do-mprs-apresenta-recursos-para-facilitar-acesso-de-cidadaos-ao-c.html",
+      "iso": "2026-08-03T18:16:05.106Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:smamus-lanca-plataforma-para-atrair-investimentos-ao-distrito-da-inova",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Smamus lança plataforma para atrair investimentos ao Distrito da Inovação",
+      "resumo": "A ferramenta de inteligência urbana reúne dados, ações de proteção e oportunidades em uma área de 258 hectares no 4º Distrito.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/smamus/noticias/prefeitura-lanca-plataforma-para-atrair-investimentos-ao-distrito-da-inovacao",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [
+        "GZH"
+      ],
+      "quentura": 2,
+      "uf": "rs",
+      "corpo": [
+        "A Secretaria do Meio Ambiente, Urbanismo e Sustentabilidade (Smamus) lança nesta terça-feira, 4, às 15h, a plataforma do Distrito da Inovação. O evento ocorre no Centro de Monitoramento e Contingência Climática, na sede da Smamus, localizada na rua Luiz Voelcker, 55, bairro Três Figueiras.",
+        "A ferramenta apresenta dados, projetos e oportunidades de investimento em uma área estratégica de 258 hectares dentro do 4º Distrito. Entre os projetos previstos estão a criação do Parque do Porto, da Praça Navegantes, do Corredor verde, de Caminhos sustentáveis até o bairro Moinhos de Vento, de Urbanismo tático e de Mobilidade.",
+        "A plataforma também mostra o andamento das ações de infraestrutura e proteção do 4º Distrito. Segundo a Prefeitura Municipal de Porto Alegre, este projeto é o primeiro passo na construção do seu novo portal."
+      ],
+      "link": "/materia/smamus-lanca-plataforma-para-atrair-investimentos-ao-distrito-da-inova.html",
+      "iso": "2026-08-03T18:16:02.470Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -544,7 +822,7 @@
       "editoria": "regional",
       "chapeu": "Nosso texto",
       "titulo": "Vistoria técnica avalia estrutura da Barragem Santa Lúcia em Ilópolis",
-      "resumo": "A população de Putinga deve ficar atenta às orientações dos órgãos de emergência e se preparar para uma eventual evacuação.",
+      "resumo": "A população de Putinga foi orientada a ficar atenta e preparada para eventual evacuação após chuvas na região e previsão de novos volumes.",
       "fonte": "Meridiano, com informações de Sema-RS",
       "origemLink": "https://sema.rs.gov.br/barragem-santa-lucia-no-municipio-de-ilopolis-passa-por-vistoria-tecnica-na-quinta-30",
       "origemNome": "Sema-RS",
@@ -552,258 +830,14 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "Uma vistoria técnica foi realizada na quinta-feira (30/7) na Barragem Santa Lúcia, localizada no município de Ilópolis e sob gestão da Prefeitura de Putinga. A ação foi motivada pela sequência de chuvas registrada na última semana e pela previsão de novos volumes para os próximos dias, com o objetivo de avaliar as condições estruturais do reservatório.",
-        "A inspeção foi conduzida pela Secretaria do Meio Ambiente e Infraestrutura (Sema), por meio da Divisão de Segurança de Barragens e Emergências, em parceria com a Defesa Civil estadual. Durante o trabalho, foram alinhadas medidas emergenciais a serem adotadas pelo município em caso de elevação do nível da água, visando evitar o extravasamento.",
-        "Entre as ações previstas está o uso de maquinário para intervenção no sistema, caso o nível atinja a cota superior das tubulações que atualmente operam como vertedouro.",
-        "Na data da vistoria, o nível da barragem encontrava-se dentro da normalidade. A Sema permanece em contato com a prefeitura e realiza o monitoramento contínuo da situação."
+        "A Secretaria do Meio Ambiente e Infraestrutura (Sema) e a Defesa Civil estadual realizaram, na quinta-feira (30/7), uma vistoria técnica na Barragem Santa Lúcia, localizada no município de Ilópolis. O reservatório está sob gestão da Prefeitura de Putinga.",
+        "A inspeção foi motivada pela sequência de chuvas registrada na última semana e pela previsão de novos volumes para os próximos dias, para avaliar a estrutura e alinhar medidas preventivas. A recomendação para os moradores de Putinga, cidade situada abaixo da barragem, é acompanhar as orientações dos órgãos de emergência e estar preparada para eventual evacuação.",
+        "Durante a atividade, conduzida pela Divisão de Segurança de Barragens e Emergências da Sema em conjunto com a Defesa Civil, foram definidas ações para o município adotar caso ocorra elevação do nível da água, evitando o extravasamento. O plano prevê o uso de maquinário para intervenção no sistema se a água atingir a cota superior das tubulações que funcionam como vertedouro.",
+        "Na data da vistoria, o nível da barragem estava dentro da normalidade. A Sema segue em contato com a prefeitura e faz o monitoramento contínuo da situação."
       ],
       "link": "/materia/vistoria-tecnica-avalia-estrutura-da-barragem-santa-lucia-em-ilopolis.html",
-      "iso": "2026-08-03T17:59:48.881Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:prefeitura-de-porto-alegre-programa-entregas-de-obras-e-servicos-para-",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Prefeitura de Porto Alegre programa entregas de obras e serviços para esta terça-feira",
-      "resumo": "Pauta envolve ações de infraestrutura no bairro Sarandi, lançamento de plataforma do Distrito da Inovação, recolhimento de resíduos e campanha de multivacinação.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/gcs/noticias/previsao-de-pautas-terca-feira-4-de-agosto-0",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "Terra"
-      ],
-      "quentura": 3,
-      "uf": "rs",
-      "corpo": [
-        "A Prefeitura de Porto Alegre realiza nesta terça-feira, 4, às 9h, a vistoria de entrega da reconstrução e ampliação da Escola de Educação Infantil Favo de Mel, no bairro Sarandi. A obra é a primeira entregue dentro do projeto Infância em Construção. No mesmo bairro, o Departamento Municipal de Água e Esgotos (Dmae) executa cortes na rede da avenida Souza Melo a partir das 9h, intervenção que pode causar falta de água na região.",
-        "Às 15h, a Secretaria do Meio Ambiente, Urbanismo e Sustentabilidade (Smamus) lança a plataforma do Distrito da Inovação para uma área de 258 hectares no 4º Distrito. O Departamento Municipal de Limpeza Urbana (DMLU) atende as comunidades Morro dos Ventos, Bastillanas, Renascença e Travessa do Lami com o projeto Bota-Fora. Já a Farmácia Distrital Restinga suspende o atendimento ao público nesta terça-feira, 4, e na quarta-feira, 5, para inventário anual de estoque.",
-        "A agenda do dia também contempla a continuidade da campanha nacional de multivacinação para menores de 15 anos e a participação da Procuradoria-Geral do Município no evento Cidade da Advocacia, no Cais Embarcadero. Além disso, a FIFA abriu cadastramento de voluntários para a Copa do Mundo Feminina de 2027. A previsão do tempo para a capital indica pancadas de chuva, acumulados de 10 mm e temperaturas variando entre 17°C e 26°C."
-      ],
-      "link": "/materia/prefeitura-de-porto-alegre-programa-entregas-de-obras-e-servicos-para-.html",
-      "iso": "2026-08-03T17:59:03.652Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://camaracaxias.rs.gov.br/upload/noticias/thumbs/3fce1675256a560f5a3907a7dd3b9e06.png",
-      "fotoAlt": null,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:camara-de-caxias-do-sul-abre-processo-seletivo-para-estagiarios-de-niv",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Câmara de Caxias do Sul abre processo seletivo para estagiários de nível superior",
-      "resumo": "O cadastro de reserva é voltado a estudantes do Ensino Superior a partir do segundo semestre, com bolsa de R$ 1.153,05 e inscrições gratuitas até 3 de agosto de 2026.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32943",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [
-        "Paralelo 29"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "A Câmara Municipal de Caxias do Sul abriu processo seletivo público para formação de cadastro de reserva de estagiários do Ensino Superior, das redes pública e privada. As inscrições são gratuitas e ficam abertas até o dia 3 de agosto de 2026.",
-        "Podem se candidatar estudantes a partir do segundo semestre com frequência regular nos cursos de Administração, Ciências Contábeis, Design Gráfico, Direito, Fotografia, Informática, Jornalismo, Letras, Marketing, Produção Audiovisual, Publicidade e Propaganda, e Relações Públicas. Para o cadastro, é preciso apresentar cópia do documento de identidade, do comprovante de matrícula e do relatório de notas do semestre imediatamente anterior.",
-        "As inscrições devem ser realizadas de forma online pelo site www.ebcpconsultoria.com.br, na opção Processos Seletivos de Estágio. Estudantes sem acesso à internet podem se inscrever presencialmente no escritório da EBCP Consultoria, na Rua José Tovasi, 417, bairro Cruzeiro, em Caxias do Sul, em dias úteis de segunda a sexta-feira, das 8h30 às 12h e das 13h30 às 17h.",
-        "O valor da bolsa-auxílio para seis horas diárias de estágio é de R$ 1.153,05, acompanhado de auxílio-transporte correspondente a duas passagens de transporte público coletivo municipal por dia estagiado. Mais informações estão disponíveis pelo e-mail rh@camaracaxias.rs.gov.br e pelo telefone (54) 3218-1600, ramais 3838 e 3839."
-      ],
-      "link": "/materia/camara-de-caxias-do-sul-abre-processo-seletivo-para-estagiarios-de-niv.html",
-      "iso": "2026-08-03T18:00:04.287Z",
-      "hora": "14h00",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://estado.rs.gov.br/upload/recortes/202607/03130604_2293656_GD.jpeg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:executivo-do-rs-altera-sites-e-redes-sociais-para-cumprir-legislacao-e",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Executivo do RS altera sites e redes sociais para cumprir legislação eleitoral",
-      "resumo": "Medidas começam no sábado (4/7) e incluem a desativação de notícias antigas, a criação de perfis temporários nas redes e a suspensão da publicidade institucional.",
-      "fonte": "Meridiano, com informações de Governo do RS",
-      "origemLink": "https://estado.rs.gov.br/sites-e-redes-sociais-de-secretarias-vinculadas-e-orgaos-do-executivo-adotam-medidas-para-atender-a-legislacao-eleitoral",
-      "origemNome": "Governo do RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "A partir de sábado (4/7), os sites de secretarias, instituições vinculadas e órgãos do Executivo estadual do Rio Grande do Sul passam a adotar procedimentos excepcionais para atender às restrições da legislação eleitoral. Até o fim do período eleitoral, as informações sobre o governo do Estado ficarão centralizadas no portal de notícias do governo.",
-        "Todas as notícias veiculadas antes de 4 de julho de 2026 ficarão temporariamente inativas nos portais estaduais. As medidas seguem a Lei nº 9.504/1997 e o Manual de Orientações aos Agentes Públicos Estaduais, da Procuradoria-Geral do Estado. A norma proíbe a autorização de publicidade institucional nos três meses que antecedem o pleito, cujo primeiro turno ocorrerá em 4 de outubro.",
-        "Nas redes sociais, os perfis institucionais serão desativados temporariamente ou utilizarão contas alternativas para serviços essenciais. No Instagram, a conta @governo_rs ficará suspensa e dará lugar ao perfil temporário @informacoesgovrs. No Facebook, a página @GovernoDoRS será desativada, mantendo-se a conta @InformacoesGovRS. Os perfis originais retornarão após as eleições.",
-        "A veiculação de publicidade institucional na mídia encerra-se na sexta-feira (3/7), incluindo a retirada de materiais físicos como outdoors. As empresas e agências deverão comprovar a desativação à Secretaria de Comunicação. A vedação não se aplica a casos de grave e urgente necessidade reconhecida pela Justiça Eleitoral. O atendimento à imprensa pelas assessorias de comunicação continuará sem alterações."
-      ],
-      "link": "/materia/executivo-do-rs-altera-sites-e-redes-sociais-para-cumprir-legislacao-e.html",
-      "iso": "2026-08-03T17:58:45.791Z",
-      "hora": "13h58",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.defesacivil.rs.gov.br/upload/recortes/202608/01223017_129939_GD.jpeg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Defesa Civil monitora Barragem Santa Lúcia entre Ilópolis e Putinga",
-      "resumo": "Estrutura apresenta condições sensíveis e moradores de Putinga devem ficar preparados para eventual evacuação.",
-      "fonte": "Meridiano, com informações de Defesa Civil do RS",
-      "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-estadual-acompanha-situacao-da-barragem-santa-lucia-e-se-necessario-emitira-alertas-via-cell-broadcast",
-      "origemNome": "Defesa Civil do RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "A Defesa Civil do Estado monitora as condições da Barragem Santa Lúcia, situada entre Ilópolis e Putinga, em apoio à Secretaria Estadual do Meio Ambiente e Infraestrutura (Sema). A estrutura passou por vistoria técnica motivada por uma sequência de chuvas registrada na última semana.",
-        "Atualmente, as condições da barragem são sensíveis e medidas de reparos estão sendo realizadas. A vistoria foi conduzida pela Divisão de Segurança de Barragens e Emergências da Sema e pela Defesa Civil estadual para alinhar ações emergenciais a serem adotadas pelo município caso ocorra elevação do nível da água.",
-        "O Centro de Monitoramento da Defesa Civil acompanha as condições hidrometeorológicas que possam influenciar a barragem. Caso o nível da água atinja cotas consideradas de risco, a Defesa Civil emitirá alertas para preparar a população via Cell Broadcast.",
-        "A recomendação atual é para que os moradores de Putinga fiquem atentos às orientações e preparados para eventual evacuação. Em caso de chuvas persistentes, a orientação é contatar a coordenadoria municipal de Proteção e Defesa Civil pelo telefone (51) 99125-5399 e acompanhar os canais oficiais de informação."
-      ],
-      "link": "/materia/defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga.html",
-      "iso": "2026-08-03T17:59:37.241Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:smamus-lanca-plataforma-de-investimentos-do-distrito-da-inovacao",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Smamus lança plataforma de investimentos do Distrito da Inovação",
-      "resumo": "A ferramenta reúne dados e oportunidades em 258 hectares do 4º Distrito, além de acompanhar ações de infraestrutura e proteção.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/smamus/noticias/prefeitura-lanca-plataforma-para-atrair-investimentos-ao-distrito-da-inovacao",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "GZH"
-      ],
-      "quentura": 2,
-      "uf": "rs",
-      "corpo": [
-        "A Secretaria do Meio Ambiente, Urbanismo e Sustentabilidade (Smamus) lança nesta terça-feira, 4, às 15h, a plataforma do Distrito da Inovação. O lançamento ocorre no Centro de Monitoramento e Contingência Climática, localizado na sede da Smamus, na rua Luiz Voelcker, 55, no bairro Três Figueiras.",
-        "A ferramenta de inteligência urbana apresenta dados, projetos e oportunidades de investimento em uma área estratégica de 258 hectares dentro do 4º Distrito. Entre os projetos previstos estão o Parque do Porto, a Praça Navegantes, o Corredor verde, os Caminhos sustentáveis até o bairro Moinhos de Vento, o Urbanismo tático e a Mobilidade.",
-        "A plataforma exibe também o andamento das ações de infraestrutura e proteção do 4º Distrito. Este projeto é a primeira etapa na construção do novo portal da Prefeitura Municipal de Porto Alegre."
-      ],
-      "link": "/materia/smamus-lanca-plataforma-de-investimentos-do-distrito-da-inovacao.html",
-      "iso": "2026-08-03T17:59:03.652Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://sema.rs.gov.br/upload/recortes/202607/15152519_118778_GD.jpg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:sistema-de-outorga-de-agua-do-rs-fica-indisponivel-ate-domingo-por-man",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Sistema de Outorga de Água do RS fica indisponível até domingo por manutenção",
-      "resumo": "O acesso ao Siout RS será liberado aos usuários a partir de segunda-feira (3/8), após a prorrogação dos trabalhos iniciados em 23/7.",
-      "fonte": "Meridiano, com informações de Sema-RS",
-      "origemLink": "https://sema.rs.gov.br/sistema-de-outorga-de-agua-do-rs-permanecera-indisponivel-ate-domingo-2-devido-a-manutencao",
-      "origemNome": "Sema-RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Sistema de Outorga de Água do Rio Grande do Sul (Siout RS) permanecerá indisponível até domingo (2/8). A indisponibilidade do serviço ocorre em razão de uma manutenção programada que precisou ser prorrogada.",
-        "Os trabalhos no sistema começaram às 19h de quinta-feira (23/7). O acesso e a utilização serão liberados aos usuários a partir de segunda-feira (3/8), quando a plataforma deve ser restabelecida e voltar a operar normalmente.",
-        "A recomendação é que os usuários que necessitam realizar operações no Siout RS programem suas atividades considerando o período informado. Em caso de dúvidas ou necessidade de esclarecimentos, o contato pode ser feito com a equipe responsável pelo e-mail siout@sema.rs.gov.br."
-      ],
-      "link": "/materia/sistema-de-outorga-de-agua-do-rs-fica-indisponivel-ate-domingo-por-man.html",
-      "iso": "2026-08-03T17:59:48.881Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.estado.rs.gov.br/upload/recortes/202604/01153154_2270054_GD.jpg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:dee-divulga-boletim-com-indicadores-economicos-do-rio-grande-do-sul-e-",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "DEE divulga boletim com indicadores econômicos do Rio Grande do Sul e do Brasil",
-      "resumo": "O PIB gaúcho ficou estável no primeiro trimestre de 2026, enquanto a taxa de desocupação no estado atingiu 4% e as exportações somaram US$ 9,844 bilhões no primeiro semestre.",
-      "fonte": "Meridiano, com informações de Governo do RS",
-      "origemLink": "https://estado.rs.gov.br/boletim-reune-indicadores-da-economia-do-rs-em-2026",
-      "origemNome": "Governo do RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Departamento de Economia e Estatística (DEE) publicou o Boletim de Conjuntura do Rio Grande do Sul com dados econômicos estaduais, nacionais e internacionais referentes a 2026. No primeiro trimestre do ano, o Produto Interno Bruto (PIB) gaúcho apresentou variação de 0,0% na série com ajuste sazonal em relação aos três meses anteriores, e manteve crescimento de 0,4% na comparação com o mesmo período de 2025.",
-        "Na divisão setorial do PIB do estado, a indústria cresceu 0,9% e o setor de serviços avançou 0,2%, enquanto a agropecuária teve queda de 9,9% devido a reduções nas safras de arroz e fumo. Para o milho e a soja, as projeções indicam altas de 21,8% e 34,6%, respectivamente, com reflexos no segundo trimestre. A área plantada de trigo encolheu 23,6%.",
-        "No mercado de trabalho do estado, a taxa de desocupação encerrou o primeiro trimestre em 4%, o rendimento médio mensal real ficou em R$ 4.127 e o número de pessoas ocupadas permaneceu em 5,895 milhões. Já os dados do Novo Caged registraram saldo negativo de 3.474 postos formais no trimestre encerrado em maio. Nas exportações, o estado somou US$ 9,844 bilhões no primeiro semestre, alta de 4,9%, enquanto a arrecadação de ICMS chegou a R$ 27,540 bilhões, valor 3,2% menor do que o do mesmo período de 2025.",
-        "Em âmbito nacional, o PIB brasileiro subiu 1,1% no primeiro trimestre em relação ao quarto trimestre de 2025 e 1,8% na comparação anual. A taxa de desocupação do país ficou em 5,6% no trimestre encerrado em maio, o IPCA em 12 meses até junho atingiu 4,64% e a taxa Selic fixou-se em 14,25% ao ano. Para a economia mundial, o Fundo Monetário Internacional projeta crescimento de 3% em 2026."
-      ],
-      "link": "/materia/dee-divulga-boletim-com-indicadores-economicos-do-rio-grande-do-sul-e-.html",
-      "iso": "2026-08-03T17:58:45.791Z",
-      "hora": "13h58",
-      "original": true,
-      "contexto": "O histórico registra uma publicação anterior sobre o boletim econômico do DEE no Rio Grande do Sul em 3 de agosto de 2026. Os dados do relatório afetam trabalhadores formais e produtores rurais gaúchos de safras como arroz, fumo, milho, soja e trigo. O texto informa reflexos das safras de milho e soja no segundo trimestre.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://camaracaxias.rs.gov.br/upload/noticias/thumbs/ec0291d468b03c032a89aba9ddf52515.jpg",
-      "fotoAlt": null,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:daiane-mello-entrega-jornal-de-prestacao-de-contas-no-centro-de-caxias",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Daiane Mello entrega jornal de prestação de contas no centro de Caxias do Sul",
-      "resumo": "O material reúne ações e projetos do primeiro ano de mandato da vereadora e já foi distribuído em outros nove bairros do município.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32939",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [
-        "Serra em Pauta"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "A vereadora Daiane Mello (PL) entregou o Jornal de Prestação de Contas 2025 na área central de Caxias do Sul no último sábado (25). A parlamentar percorreu a Avenida Júlio de Castilhos em direção ao bairro São Pelegrino para realizar a entrega do impresso e conversar com a população.",
-        "O material institucional apresenta as principais ações, projetos de lei, fiscalizações e resultados do primeiro ano de mandato na Câmara de Vereadores. Durante a caminhada, a vereadora apresentou o trabalho desenvolvido, ouviu sugestões e recebeu demandas da comunidade.",
-        "A entrega do informativo aos sábados integra o projeto Daiane na Comunidade. Além da região central, a distribuição do jornal já foi realizada nos bairros Cruzeiro, Fátima, Santa Fé, Kayser, Colina do Sol, Parque Oásis, Serrano, Eldorado e Belo Horizonte."
-      ],
-      "link": "/materia/daiane-mello-entrega-jornal-de-prestacao-de-contas-no-centro-de-caxias.html",
-      "iso": "2026-08-03T18:00:04.287Z",
-      "hora": "14h00",
+      "iso": "2026-08-03T18:16:46.798Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -818,7 +852,7 @@
       "editoria": "regional",
       "chapeu": "Nosso texto",
       "titulo": "Porto Alegre realiza campanha de multivacinação para menores de 15 anos até 1º de setembro",
-      "resumo": "O Dia D ocorre no sábado, 22, das 9h às 18h, com passe livre nos ônibus da Capital e oferta de doses do calendário oficial, gripe e Covid-19.",
+      "resumo": "O Dia D ocorrerá no sábado, 22, das 9h às 18h, com passe livre nos ônibus para mobilizar a população a atualizar a caderneta de vacinação.",
       "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
       "origemLink": "https://prefeitura.poa.br/sms/noticias/campanha-de-multivacinacao-para-menores-de-15-anos-segue-ate-1o-de-setembro",
       "origemNome": "Prefeitura de Porto Alegre",
@@ -829,14 +863,14 @@
       "quentura": 2,
       "uf": "rs",
       "corpo": [
-        "A campanha para atualização da caderneta de vacinação de crianças e adolescentes menores de 15 anos segue em Porto Alegre até 1º de setembro. A mobilização busca alcançar pessoas não vacinadas, completar esquemas vacinais e imunizar quem não possui registro de doses nos sistemas oficiais de informação.",
-        "No sábado, 22, será realizado o Dia D, das 9h às 18h, com passe livre nos ônibus da Capital. Estão disponíveis as vacinas do calendário oficial da infância e adolescência, além das que protegem contra gripe e Covid-19, a dose dTpa para gestantes e a vacina contra a dengue para a faixa de 10 a 14 anos em unidades de referência.",
-        "A maior parte dos imunizantes pode ser encontrada em todas as unidades de saúde da cidade, enquanto as vacinas contra Covid-19 e BCG contam com locais de referência específicos. Durante o período da campanha, a Secretaria Municipal de Saúde fará a busca ativa das crianças e adolescentes que precisam completar a vacinação.",
-        "A chefe do Núcleo de Imunizações Zona Sul da Secretaria Municipal de Saúde, Ana Paula Linhares, destacou que o atendimento para as demais faixas etárias segue normalmente e que os responsáveis podem aproveitar a oportunidade para avaliar o próprio histórico vacinal."
+        "A campanha de multivacinação para atualização da caderneta de crianças e adolescentes menores de 15 anos é realizada até o dia 1º de setembro em Porto Alegre. A ação tem como objetivo alcançar pessoas não vacinadas, completar esquemas vacinais e imunizar quem não possui registro de doses nos sistemas oficiais de informação.",
+        "No sábado, 22, será realizado o Dia D de mobilização, das 9h às 18h, com passe livre nos ônibus da capital. Durante o período da campanha, a Secretaria Municipal de Saúde fará a busca ativa de crianças e adolescentes que necessitam completar o calendário vacinal.",
+        "Estão disponíveis as vacinas do calendário oficial da infância e da adolescência, além de doses contra gripe e Covid-19, e imunização contra a dengue para a faixa de 10 a 14 anos em postos específicos. A maioria dos imunizantes é oferecida em todas as unidades de saúde da cidade, com locais de referência para Covid-19 e BCG, além de atendimento nos fins de semana durante a Operação Inverno.",
+        "A chefe do Núcleo de Imunizações Zona Sul da Secretaria Municipal de Saúde, enfermeira Ana Paula Linhares, informou que a vacinação para as demais faixas etárias prossegue normalmente. Segundo ela, os responsáveis pelas crianças e adolescentes podem aproveitar a oportunidade para avaliar o seu próprio histórico vacinal."
       ],
       "link": "/materia/porto-alegre-realiza-campanha-de-multivacinacao-para-menores-de-15-ano.html",
-      "iso": "2026-08-03T17:59:03.652Z",
-      "hora": "13h59",
+      "iso": "2026-08-03T18:16:02.470Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -847,11 +881,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:oito-municipios-do-vale-do-taquari-recebem-mapas-de-manchas-de-inundac",
+      "id": "ilm:oito-municipios-do-vale-do-taquari-recebem-mapas-com-manchas-de-inunda",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Oito municípios do Vale do Taquari recebem mapas de manchas de inundação",
-      "resumo": "Os mapeamentos da Defesa Civil do Rio Grande do Sul indicam áreas de risco que podem ser atingidas pela elevação do nível do Rio Taquari.",
+      "titulo": "Oito municípios do Vale do Taquari recebem mapas com manchas de inundação",
+      "resumo": "Os mapeamentos da Defesa Civil apontam as áreas de risco no Rio Grande do Sul caso o Rio Taquari alcance a cota prevista após chuvas volumosas.",
       "fonte": "Meridiano, com informações de Defesa Civil do RS",
       "origemLink": "https://www.defesacivil.rs.gov.br/municipios-em-alerta-recebem-mapas-com-manchas-de-inundacao",
       "origemNome": "Defesa Civil do RS",
@@ -859,14 +893,14 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "Até as 8h da manhã de quarta-feira (22/7), oito municípios da região do Vale do Taquari, no Rio Grande do Sul, receberam alertas via Cell Broadcast e mapeamentos oficiais das manchas de inundação. A ação ocorreu devido à elevação do nível dos rios provocada pelas chuvas volumosas na região.",
-        "Os mapas foram enviados para Arroio do Meio, Lajeado, Encantado, Santa Tereza, Cruzeiro do Sul, Roca Sales, Muçum e Estrela. As representações visuais mostram quais pontos podem ser cobertos pela água se o Rio Taquari atingir a cota prevista pela Defesa Civil, orientando gestores municipais em medidas preventivas, como a retirada de pessoas das áreas de risco.",
-        "Os mapeamentos são elaborados com base em dados de topografia, níveis históricos dos rios e modelagem matemática e hidrodinâmica. Na terça-feira (21/7), haviam sido disparados dois alertas via Cell Broadcast sobre chuvas intensas e volumosas para 45 municípios, mas as manchas de inundação aplicam-se apenas a alertas hidrológicos.",
-        "A orientação é para que a população busque informações junto às Defesas Civis municipais, que indicarão os procedimentos a adotar com base em seus Planos de Contingência. Os alertas vigentes, o nível dos rios em tempo real e dados de radar meteorológico podem ser acompanhados no Portal Prepara RS."
+        "Oito municípios da região do Vale do Taquari, no Rio Grande do Sul, receberam mapeamentos oficiais das manchas de inundação e alertas via Cell Broadcast até as 8h desta quarta-feira (22/7). A medida foi tomada devido à elevação do nível dos rios provocada por chuvas volumosas na região.",
+        "Os mapas foram enviados para Arroio do Meio, Lajeado, Encantado, Santa Tereza, Cruzeiro do Sul, Roca Sales, Muçum e Estrela. As manchas de inundação representam visualmente os pontos que podem ser cobertos pela água em caso de transbordamento e preveem quais regiões serão afetadas se o Rio Taquari atingir a cota indicada.",
+        "A geração dos mapeamentos utiliza dados de topografia, níveis históricos dos rios e modelagem matemática/hidrodinâmica. O material orienta gestores municipais em ações preventivas, como a retirada de pessoas das áreas atingidas. Na terça-feira (21/7), dois alertas via Cell Broadcast já haviam sido disparados para 45 municípios devido a chuvas intensas e volumosas, mas as manchas aplicam-se apenas a alertas hidrológicos.",
+        "A orientação para a população é buscar informações com as Defesas Civis municipais, que indicarão os procedimentos com base nos Planos de Contingência. Avisos vigentes, nível dos rios em tempo real, dados do radar meteorológico e da rede de monitoramento hidrometeorológico podem ser acompanhados pelo Portal Prepara RS."
       ],
-      "link": "/materia/oito-municipios-do-vale-do-taquari-recebem-mapas-de-manchas-de-inundac.html",
-      "iso": "2026-08-03T17:59:37.241Z",
-      "hora": "13h59",
+      "link": "/materia/oito-municipios-do-vale-do-taquari-recebem-mapas-com-manchas-de-inunda.html",
+      "iso": "2026-08-03T18:16:37.254Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -875,30 +909,57 @@
     {
       "foto": null,
       "fotoAlt": null,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:porto-alegre-entrega-reconstrucao-da-escola-favo-de-mel-nesta-terca-fe",
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:secretaria-de-saude-do-rs-disponibiliza-documentos-e-normas-do-funafir",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Porto Alegre entrega reconstrução da Escola Favo de Mel nesta terça-feira",
-      "resumo": "A obra é a primeira do projeto Infância em Construção e vai gerar mais de 50 novas vagas de berçário e maternal após a enchente de 2024.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/smed/noticias/primeira-obra-do-projeto-infancia-em-construcao-sera-entregue-nesta-terca-feira",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "Prefeitura de Pelotas",
-        "Correio do Povo"
-      ],
-      "quentura": 2,
+      "titulo": "Secretaria de Saúde do RS disponibiliza documentos e normas do FUNAFIR",
+      "resumo": "O Fundo de Apoio financeiro e de recuperação atende hospitais públicos e privados sem fins lucrativos, que possuem canal específico para envio de prestação de contas.",
+      "fonte": "Meridiano, com informações de Secretaria de Saúde do RS",
+      "origemLink": "https://saude.rs.gov.br/funafir-58dd2141ce302",
+      "origemNome": "Secretaria de Saúde do RS",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "A Prefeitura de Porto Alegre realiza nesta terça-feira, 4, às 9h, a vistoria de entrega da reconstrução e ampliação da Escola de Educação Infantil Favo de Mel. O ato ocorre na rua Vidal Barbosa, 1075, no bairro Sarandi.",
-        "A instituição é parceira da Rede Municipal de Ensino e foi atingida pela enchente de 2024. A intervenção foi viabilizada pelo Instituto Alma Mater e permitirá a criação de mais de 50 novas vagas de berçário e maternal.",
-        "A ampliação é a primeira obra entregue do projeto Infância em Construção. A iniciativa prevê a construção e a ampliação de escolas de Educação Infantil em parceria com instituições privadas sem fins lucrativos."
+        "A Secretaria de Saúde do RS disponibiliza as instruções e formulários do FUNAFIR, o Fundo de Apoio financeiro e de recuperação dos hospitais privados, sem fins lucrativos e hospitais públicos.",
+        "A estrutura do fundo reúne a Lei nº 11 366 de 31 de agosto de 1999 e o Decreto n 39 712 de 08 09 1999, que regulamenta o FUNAFIR. Estão listados ainda o Decreto nº 58 711 DOE 2026 04 06 e a Resolução Normativa 001 2023 FUNAFIR EDIÇÃO XII.",
+        "Para a prestação de contas de financiamentos, são fornecidos os Formularios Funafir em arquivo XLS de 802,00 KBytes e o arquivo em PDF de Orientações de Prestação de Contas FUNAFIR XII EDIÇÃO, com 103,37 KBytes.",
+        "O envio da prestação de contas é realizado por meio do e-mail funafir@saude.rs.gov.br."
       ],
-      "link": "/materia/porto-alegre-entrega-reconstrucao-da-escola-favo-de-mel-nesta-terca-fe.html",
-      "iso": "2026-08-03T17:59:03.652Z",
-      "hora": "13h59",
+      "link": "/materia/secretaria-de-saude-do-rs-disponibiliza-documentos-e-normas-do-funafir.html",
+      "iso": "2026-08-03T18:16:46.063Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": "A medida afeta hospitais públicos e hospitais privados sem fins lucrativos. O histórico registra um caso parecido em 1º de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mprs-divulga-cartilha-luma-valente-contra-a-violencia-de-genero",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "MPRS divulga cartilha Luma Valente contra a violência de gênero",
+      "resumo": "O documento intitulado Não é drama, é violência aborda o tema da violência de gênero.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/media/areas/imprensa/arquivos/lumavalente_cartilha_mar2026.pdf",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O MPRS divulgou a publicação intitulada Cartilha Luma Valente: Não é drama, é violência.",
+        "O material aborda o tema da violência de gênero e traz o nome de Luma Valente.",
+        "A criação do arquivo do documento foi realizada por meio do programa Canva."
+      ],
+      "link": "/materia/mprs-divulga-cartilha-luma-valente-contra-a-violencia-de-genero.html",
+      "iso": "2026-08-03T18:16:05.106Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -909,11 +970,11 @@
       "fotoAlt": null,
       "municipio": "santamaria",
       "municipioNome": "Santa Maria",
-      "id": "ilm:defesa-civil-reclassifica-risco-meteorologico-no-rio-grande-do-sul-par",
+      "id": "ilm:defesa-civil-altera-para-laranja-o-risco-meteorologico-em-36-municipio",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Defesa Civil reclassifica risco meteorológico no Rio Grande do Sul para laranja",
-      "resumo": "A medida atinge 36 municípios com possibilidade de eventos severos e foi anunciada em reunião do Gabinete Integrado de Gerenciamento de Desastres.",
+      "titulo": "Defesa Civil altera para laranja o risco meteorológico em 36 municípios do RS",
+      "resumo": "A mudança foi definida no Giged e prevê chuva com acumulados que podem superar 120 mm por dia no Estado até terça-feira.",
       "fonte": "Meridiano, com informações de Defesa Civil do RS",
       "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-atualiza-prognostico-meteorologico-e-reclassifica-areas-em-risco-de-vermelho-para-laranja",
       "origemNome": "Defesa Civil do RS",
@@ -921,46 +982,14 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "A Defesa Civil do Estado do Rio Grande do Sul reclassificou de vermelho para laranja o nível de risco de uma área com 36 municípios propensos a eventos meteorológicos severos. A atualização ocorreu no domingo (19/7), durante reunião do Gabinete Integrado de Gerenciamento de Desastres (Giged).",
-        "Para o domingo (19/7), a previsão registrou chuva intensa entre 40 e 80 mm/dia, com pontuais acima de 100 mm/dia no Noroeste, Centro e Campanha, além de vento acima de 90 km/h e granizo isolado. Na segunda-feira (20/7), os acumulados variam de 40 a 100 mm/dia, podendo superar 120 mm/dia no Oeste, Centro e Vales. Na terça-feira (21/7), a chuva concentram-se na metade norte, com acumulados que também podem superar 120 mm/dia.",
-        "O governador Eduardo Leite declarou que os impactos entre sexta-feira e o início do domingo foram menores que o prognóstico inicial, mas que a situação exige atenção até terça-feira. A orientação do governo é que a população permaneça atenta aos alertas e não se arrisque em áreas alagadas.",
-        "O chefe da Casa Militar e coordenador estadual de Proteção e Defesa Civil, coronel Luciano Chaves Boeira, informou que as equipes estaduais do órgão permanecerão a postos em Santa Maria para prestar apoio aos municípios que registrarem danos."
+        "A Defesa Civil do Rio Grande do Sul reclassificou a área de 36 municípios do alerta vermelho para o nível laranja de risco meteorológico. A atualização do prognóstico foi feita neste domingo (19/7), durante reunião do Gabinete Integrado de Gerenciamento de Desastres (Giged).",
+        "Para o domingo (19/7), a previsão indicava chuva entre 40 e 80 mm/dia, com pontos podendo passar dos 100 mm/dia no Noroeste, Centro e Campanha. Também foi apontado risco de tempestades com granizo e rajadas de vento acima de 90 km/h em áreas isoladas do Estado.",
+        "Na segunda-feira (20/7), a chuva deve variar entre 40 e 100 mm/dia, com acumulados superiores a 120 mm/dia no Oeste, Centro e Vales, além de risco de tempestades severas na faixa central. Para a terça-feira (21/7), a chuva concentrará volumes acima de 120 mm/dia na metade norte gaúcha.",
+        "O governador Eduardo Leite afirmou que os impactos entre sexta-feira e domingo foram menores que o previsto, mas que o cenário exige atenção e as equipes seguirão mobilizadas. O chefe da Casa Militar e coordenador estadual de Proteção e Defesa Civil, coronel Luciano Chaves Boeira, declarou que as equipes estaduais permanecerão de prontidão em Santa Maria."
       ],
-      "link": "/materia/defesa-civil-reclassifica-risco-meteorologico-no-rio-grande-do-sul-par.html",
-      "iso": "2026-08-03T17:59:37.241Z",
-      "hora": "13h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://camaracaxias.rs.gov.br/upload/noticias/thumbs/8838696b476ca01dfa585067f2df589d.JPG",
-      "fotoAlt": null,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:vulcano-suprimentos-industriais-recebe-premio-caxias-do-sul-em-sessao-",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Vulcano Suprimentos Industriais recebe Prêmio Caxias do Sul em sessão solene",
-      "resumo": "A homenagem foi proposta pelo vereador Alexandre Bortoluz e reconhece os 35 anos de atuação da empresa no setor industrial do município.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32935",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [
-        "Serra em Pauta"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "A Câmara Municipal de Caxias do Sul entregou o Prêmio Caxias à empresa Vulcano Suprimentos Industriais em sessão solene realizada na noite de quinta-feira (23). A cerimônia reuniu autoridades, empresários, familiares, colaboradores e convidados no plenário da Casa Legislativa.",
-        "Fundada em 1991 por Juarez Antonio Madalosso com o nome Todero e Madalosso, a empresa começou atuando no fornecimento de ferramentas, equipamentos e soluções para o setor industrial. Em 1999, expandiu as atividades com a marca Correias Caxias e, dois anos depois, criou a marca Vulcano. Hoje instalada no bairro Sagrada Família, a estrutura tem mais de 10 mil metros quadrados e gera mais de 40 empregos diretos.",
-        "Na solenidade, a empresa recebeu o troféu com o símbolo do Monumento Nacional ao Imigrante e 17 colaboradores foram homenageados por 10, 20 e 30 anos de dedicação. Os sócios Cristian Maddalozzo e Marco Aurélio Maddalozzo discursaram em agradecimento e relembraram a trajetória do fundador, falecido em 2020.",
-        "O prefeito de Caxias do Sul, Adiló Didomenico, também se pronunciou durante a homenagem. O Prêmio Caxias do Sul é concedido a entidades, pessoas ou movimentos que se destacam por serviços prestados à comunidade nas mais diferentes áreas."
-      ],
-      "link": "/materia/vulcano-suprimentos-industriais-recebe-premio-caxias-do-sul-em-sessao-.html",
-      "iso": "2026-08-03T18:00:04.287Z",
-      "hora": "14h00",
+      "link": "/materia/defesa-civil-altera-para-laranja-o-risco-meteorologico-em-36-municipio.html",
+      "iso": "2026-08-03T18:16:37.254Z",
+      "hora": "14h16",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -971,11 +1000,73 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:defesa-civil-do-rs-emite-alerta-para-areas-proximas-de-sao-miguel-das-",
+      "id": "ilm:sistema-de-outorga-de-agua-do-rs-fica-indisponivel-ate-domingo-para-ma",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Defesa Civil do RS emite alerta para áreas próximas de São Miguel das Missões",
-      "resumo": "Aviso prevê tempestade com vento, granizo e alto risco de destelhamento até as 22h45 do dia 19 de julho.",
+      "titulo": "Sistema de Outorga de Água do RS fica indisponível até domingo para manutenção",
+      "resumo": "O acesso à plataforma será liberado na segunda-feira (3/8), após a prorrogação de manutenção iniciada no dia 23/7.",
+      "fonte": "Meridiano, com informações de Sema-RS",
+      "origemLink": "https://sema.rs.gov.br/sistema-de-outorga-de-agua-do-rs-permanecera-indisponivel-ate-domingo-2-devido-a-manutencao",
+      "origemNome": "Sema-RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Sistema de Outorga de Água do Rio Grande do Sul (Siout RS) permanecerá indisponível até domingo (2/8). O acesso e a utilização serão liberados aos usuários a partir de segunda-feira (3/8).",
+        "A indisponibilidade ocorre em função de uma manutenção programada iniciada às 19h de quinta-feira (23/7). O serviço precisou ser prorrogado.",
+        "A recomendação é que os usuários que necessitem realizar operações no Siout RS programem suas atividades considerando o período informado. Após a conclusão dos trabalhos, o sistema deverá ser restabelecido e voltar a operar normalmente.",
+        "Em caso de dúvidas ou necessidade de esclarecimentos, os usuários podem entrar em contato com a equipe responsável pelo e-mail siout@sema.rs.gov.br."
+      ],
+      "link": "/materia/sistema-de-outorga-de-agua-do-rs-fica-indisponivel-ate-domingo-para-ma.html",
+      "iso": "2026-08-03T18:16:46.798Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:porto-alegre-entrega-primeira-obra-do-projeto-infancia-em-construcao-n",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Porto Alegre entrega primeira obra do projeto Infância em Construção nesta terça-feira",
+      "resumo": "A reconstrução e ampliação da Escola de Educação Infantil Favo de Mel viabilizará mais de 50 novas vagas de berçário e maternal no bairro Sarandi.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/smed/noticias/primeira-obra-do-projeto-infancia-em-construcao-sera-entregue-nesta-terca-feira",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [
+        "jornaltimoneiro.com.br",
+        "Correio do Povo"
+      ],
+      "quentura": 2,
+      "uf": "rs",
+      "corpo": [
+        "A Prefeitura de Porto Alegre realiza nesta terça-feira, 4, às 9h, a vistoria de entrega da reconstrução e ampliação da Escola de Educação Infantil Favo de Mel. O ato ocorre na rua Vidal Barbosa, 1075, no bairro Sarandi.",
+        "A instituição é parceira da Rede Municipal de Ensino e foi atingida pela enchente de 2024. A obra foi viabilizada pelo Instituto Alma Mater e permitirá a criação de mais de 50 novas vagas de berçário e maternal.",
+        "Esta é a primeira obra entregue do projeto Infância em Construção, iniciativa que prevê a construção e a ampliação de escolas de Educação Infantil em parceria com instituições privadas sem fins lucrativos."
+      ],
+      "link": "/materia/porto-alegre-entrega-primeira-obra-do-projeto-infancia-em-construcao-n.html",
+      "iso": "2026-08-03T18:16:02.470Z",
+      "hora": "14h16",
+      "original": true,
+      "contexto": "A vistoria de entrega da Escola de Educação Infantil Favo de Mel ocorre nesta terça-feira, 4, às 9h, no bairro Sarandi. A reconstrução e ampliação beneficia a comunidade local com a criação de mais de 50 novas vagas de berçário e maternal. Trata-se da primeira obra entregue dentro do projeto Infância em Construção.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:defesa-civil-alerta-para-tempestade-e-risco-de-destelhamento-em-sao-mi",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Defesa Civil alerta para tempestade e risco de destelhamento em São Miguel das Missões",
+      "resumo": "O aviso prevê vento e granizo em áreas próximas ao município com validade até as 22h45 do dia 19 de julho, orientando a população a evitar áreas de risco e ligar para 190 ou 193.",
       "fonte": "Meridiano, com informações de Defesa Civil do RS",
       "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-alerta-condicao-de-alerta-para-instabilidades-atuam-em-areas-proximas-de-sao-miguel-das-missoes",
       "origemNome": "Defesa Civil do RS",
@@ -983,46 +1074,15 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "A Defesa Civil do RS emitiu um alerta para a atuação de instabilidades em áreas próximas de São Miguel das Missões. O comunicado foi publicado às 21h22min do dia 19 de julho de 2026.",
-        "O aviso do órgão prevê a ocorrência de tempestade acompanhada de vento e granizo. De acordo com a publicação, há alto risco de destelhamento nas localidades afetadas, com validade até as 22h45 do dia 19 de julho.",
-        "A orientação emitida à população é evitar áreas de risco e ligar para os números 190 ou 193 em emergências. O texto orienta também que os moradores procurem informações na Defesa Civil local e conheçam os Planos de Contingência municipais.",
-        "O Centro de Monitoramento da Defesa Civil do RS também registrou atualizações sobre os prognósticos meteorológico e hidrológico no estado em 26 de julho de 2026, às 13h43min e 13h52min."
+        "A Defesa Civil do RS emitiu um alerta sobre a atuação de instabilidades em áreas próximas a São Miguel das Missões. A publicação do comunicado ocorreu às 21h22 do dia 19 de julho de 2026.",
+        "A condição abrange tempestade com vento e granizo, acompanhada de risco alto de destelhamento. A vigência do aviso foi estabelecida até as 22h45 do dia 19 de julho.",
+        "O órgão orienta a população a evitar áreas de risco e utilizar os telefones 190 ou 193 em casos de emergência. A instrução inclui buscar informações com a Defesa Civil municipal e consultar os Planos de Contingência para identificar os riscos e as formas de ação no município."
       ],
-      "link": "/materia/defesa-civil-do-rs-emite-alerta-para-areas-proximas-de-sao-miguel-das-.html",
-      "iso": "2026-08-03T17:59:37.241Z",
-      "hora": "13h59",
+      "link": "/materia/defesa-civil-alerta-para-tempestade-e-risco-de-destelhamento-em-sao-mi.html",
+      "iso": "2026-08-03T18:16:37.254Z",
+      "hora": "14h16",
       "original": true,
-      "contexto": "O alerta atinge moradores de áreas próximas a São Miguel das Missões e tem validade até as 22h45 do dia 19 de julho de 2026. O histórico do arquivo registra 1 caso parecido de alerta para o mesmo município em 3 de agosto de 2026.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:camara-de-caxias-do-sul-realiza-2-edicao-do-premio-darcy-ribeiro-caxia",
-      "editoria": "regional",
-      "chapeu": "Nosso texto",
-      "titulo": "Câmara de Caxias do Sul realiza 2ª edição do Prêmio Darcy Ribeiro - Caxias Educadora",
-      "resumo": "A premiação reconhece projetos de educadores das redes pública e privada e terá entrega no dia 20 de outubro de 2025.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/conteudo/index/244",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "A Câmara Municipal de Caxias do Sul realiza em 2025 a 2ª edição do Prêmio Darcy Ribeiro - Caxias Educadora. Estabelecida pelo Decreto Legislativo nº 443/A, de 24 de junho de 2022, a iniciativa busca reconhecer profissionais da educação que desenvolvem projetos nas redes pública e privada de ensino e educadores não formais.",
-        "Para concorrer, os profissionais precisam inscrever seus projetos até o dia 30 de setembro de 2025. Serão premiados até três projetos por categoria, divididas em ensino público municipal, ensino público estadual, ensino público federal, ensino privado e ensino não formal.",
-        "A definição dos contemplados será feita por uma Comissão de Organização e Julgamento composta por representantes do Sindiserv, SINPRO, SINTEP/SERRA-RS, CPERS, Sindicato dos Empregados em Entidades Culturais, Recreativas, de Assistência Social, de Orientação e Formação Profissional de Caxias do Sul/RS e dois representantes da Câmara Municipal de Caxias do Sul.",
-        "A entrega da premiação ocorrerá em sessão solene no dia 20 de outubro de 2025, uma segunda-feira, às 19h, no plenário da Câmara Municipal de Caxias do Sul, localizado na Rua Alfredo Chaves, 1323, bairro Exposição, em conjunto com as comemorações do Dia do Professor."
-      ],
-      "link": "/materia/camara-de-caxias-do-sul-realiza-2-edicao-do-premio-darcy-ribeiro-caxia.html",
-      "iso": "2026-08-03T18:00:04.287Z",
-      "hora": "14h00",
-      "original": true,
-      "contexto": "Esta é a 2ª edição do prêmio instituído por decreto legislativo em junho de 2022, voltado a profissionais das redes pública e privada de ensino e a educadores não formais. O prazo para a inscrição de projetos vai até 30 de setembro de 2025. A sessão solene de entrega da premiação está agendada para 20 de outubro de 2025.",
+      "contexto": "O aviso abrange a população de São Miguel das Missões e de áreas próximas. O alerta possui vigência até as 22h45 do dia 19 de julho de 2026. No histórico, constam outros dois alertas semelhantes relativos à região registrados em 3 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1031,11 +1091,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pre-selecionados-no-fies-do-2-semestre-devem-complementar-dados-ate-te",
+      "id": "ilm:pre-selecionados-do-fies-tem-ate-terca-feira-para-completar-informacoe",
       "editoria": "regional",
       "chapeu": "Nosso texto",
-      "titulo": "Pré-selecionados no Fies do 2º semestre devem complementar dados até terça-feira",
-      "resumo": "O procedimento deve ser feito no site do Fies Seleção e a lista está no Portal Único de Acesso ao Ensino Superior.",
+      "titulo": "Pré-selecionados do Fies têm até terça-feira para completar informações",
+      "resumo": "O procedimento deve ser feito no site do Fies Seleção e a lista de pré-selecionados do 2º semestre está no Portal Único de Acesso ao Ensino Superior.",
       "fonte": "Meridiano, com informacoes de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/educacao",
       "origemNome": "Agência Brasil",
@@ -1043,13 +1103,14 @@
       "quentura": 0,
       "uf": "rs",
       "corpo": [
-        "Estudantes pré-selecionados no Fies do 2º semestre de 2026 devem complementar suas informações até esta terça-feira. O procedimento deve ser realizado no site do Fies Seleção.",
-        "A relação dos pré-selecionados está disponível para consulta no Portal Único de Acesso ao Ensino Superior.",
-        "Outros prazos da área da educação incluem o encerramento da coleta de dados da 1ª etapa do Censo Escolar 2026 nesta sexta-feira. As universidades federais têm até sábado para pedir a implantação de cuidotecas ao MEC."
+        "Estudantes pré-selecionados no Fies do 2º semestre devem complementar suas informações até esta terça-feira.",
+        "O procedimento precisa ser realizado no site do Fies Seleção. A lista com os pré-selecionados está disponível para consulta no Portal Único de Acesso ao Ensino Superior.",
+        "Na área da educação, a coleta de dados da 1ª etapa do Censo Escolar 2026 se encerra nesta sexta-feira. Além disso, as universidades federais possuem prazo até sábado para solicitar cuidotecas ao MEC.",
+        "Outras informações do setor indicam inscrições abertas até o dia 6 para a segunda edição do Celpe-Bras e inscrições para a Olimpíada de Eficiência Energética, além da liberação da cartilha de redação do Encceja 2026."
       ],
-      "link": "/materia/pre-selecionados-no-fies-do-2-semestre-devem-complementar-dados-ate-te.html",
-      "iso": "2026-08-03T18:09:09.583Z",
-      "hora": "14h09",
+      "link": "/materia/pre-selecionados-do-fies-tem-ate-terca-feira-para-completar-informacoe.html",
+      "iso": "2026-08-03T18:26:58.773Z",
+      "hora": "14h26",
       "original": true,
       "resgatada": true,
       "nivel": "confirmado",
@@ -1061,57 +1122,14 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Três publicações veiculam conteúdos sobre suposta autorização de pavimentação municipal.",
-        "O município de Passo de Torres aparece em relatos sobre obras de infraestrutura.",
-        "Há divergência sobre o número de vias e citação a São Caetano do Sul."
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que as manchetes citam apresentação de rock de câmara do grupo O Bom e Velho.",
+        "Que a atração estaria vinculada ao aniversário da Sala Jazz Geraldo Flach."
       ],
       "falta": [
-        "Confirmação em diário oficial da autorização de obras pelas prefeituras citadas.",
-        "Esclarecimento sobre o número correto de vias e montante de recursos previstos.",
-        "Definição quanto ao envolvimento de Passo de Torres ou São Caetano do Sul."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "a folha torres",
-          "titulo": "Prefeitura de Passo de Torres autoriza pavimentação na Rua do Estaleiro e em outras 6 vias do município",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTjltSFM5d04xTlBoRzJvQmkxQ08tb3dBNVVhbkR2OFdsT2ltdU9RR2QtQm9IaFdxemFXaWtYMVdZWEdxOFFYcFgzamtaREszWjR3aERmeXl0OG93MWxTLXRuOWwzaFNaMGh1VTVqOXdRbHgwd051eGM0WkRCOHhieHh3cFVvZU92VzZwR2JQOU55TzFIN3hYa05FRGxlcHVWb09xOFRNb09yakZQX21qTmo2OHpLSWR5ZG5rV3ZDSC16ZWVPV1pRbUZjZTI?oc=5"
-        },
-        {
-          "veiculo": "Rádio Maristela",
-          "titulo": "Passo de Torres/SC autoriza novas obras de pavimentação em cinco vias e prevê investimento de R$ 2,8 milhões",
-          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPLTlLaXg2XzFtY2dLRU9LcTNRbUVVY1YtTEdDRGREQlc4YmIzLXR2dHU1U3VIVU50cDB2cHpZb1BUTzJnR1h4UjRCYXBaQnMtZGw1VnRIc1NlRlVZcG1CQlZ3RE1rWWp5WlFZdWQ3VG9hQmNNM0drcl90dnQyOVRGTzBZeHVQbzI0X3U3XzY4RElhb3lsbF9PRi1OdEZ4T1FVdWwyU2xTS2pqdUhJNGZYSVdIUzgzWnZhVHdqd1hhaUliNmxseEV1dS1HeVd0MVJ0dDZKU2hpcjR3X3JUQ1ZIVm5B?oc=5"
-        },
-        {
-          "veiculo": "Prefeitura de São Caetano do Sul",
-          "titulo": "Prefeitura Municipal de São Caetano do Sul",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBsRlZ2SmUwOWJJX0MwWU1lcWtBYU5yeE55ZGR1X2FkV2pFMGQ5SDBrRVl5Zm1XR1ZzTnJTLVVVYTVFTmM0VDkxTDJmZVplcFk1Z1IzOGN1TWpSb1h6cjhZ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-prefeitura-de-passo-de-torres-teria-autorizado-pavimentacao-em-vias-do.html",
-      "corpo": [
-        "As publicações veiculadas apresentariam divergências sobre o total de logradouros contemplados. Enquanto um relato citaria a Rua do Estaleiro e outras seis vias, outro mencionaria cinco vias com previsão de R$ 2,8 milhões em investimentos.",
-        "Entre os conteúdos que circulam, haveria ainda uma citação isolada à Prefeitura Municipal de São Caetano do Sul. Não constariam maiores detalhes sobre a relação dessa administração com as obras mencionadas."
-      ],
-      "id": "circ:prefeitura-de-passo-de-torres-teria-autorizado-pavimentacao-em-vias-do",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Prefeitura de Passo de Torres teria autorizado pavimentação em vias do município",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:05:41.152Z",
-      "hora": "14h05"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que duas publicações noticiaram a apresentação do grupo O Bom e Velho.",
-        "Que o espetáculo anunciado seria no formato de rock de câmara.",
-        "Que a atração estaria associada ao aniversário da Sala Jazz Geraldo Flach."
-      ],
-      "falta": [
-        "Confirmação oficial do evento pela agenda da Sala Jazz Geraldo Flach.",
-        "Divulgação da data e do horário exatos da apresentação.",
-        "Informações oficiais sobre acesso, ingressos e capacidade do espaço."
+        "Manifestação oficial dos responsáveis pela Sala Jazz Geraldo Flach.",
+        "Informação oficial sobre a data e o horário do evento.",
+        "Confirmação de detalhes sobre acesso ou venda de ingressos."
       ],
       "ondeCirculou": [
         {
@@ -1127,30 +1145,29 @@
       ],
       "link": "/materia/nc-grupo-o-bom-e-velho-apresentaria-rock-de-camara-em-aniversario-de-espa.html",
       "corpo": [
-        "O grupo O Bom e Velho apresentaria um show de rock de câmara em celebração cultural. A performance estaria inserida na programação de aniversário da Sala Jazz Geraldo Flach.",
-        "A informação teria sido veiculada por duas publicações sem divergências quanto ao conteúdo do anúncio. Ambas as notícias citariam a mesma atração musical para a comemoração do local.",
-        "A efetivação do evento dependeria de confirmação por parte dos organizadores ou da administração do espaço. Não constariam, até o momento, dados sobre cronograma ou acesso do público."
+        "O grupo O Bom e Velho apresentaria um show de rock de câmara em celebração ao aniversário da Sala Jazz Geraldo Flach. A atração faria parte da programação festiva do local citado.",
+        "Os veículos que publicaram a informação trazem o mesmo teor sobre a realização do evento. Não foram registradas divergências entre as publicações analisadas.",
+        "A apresentação reuniria o estilo de rock de câmara em homenagem ao aniversário do espaço. A confirmação da agenda ainda dependeria de validação por canais institucionais."
       ],
       "id": "circ:grupo-o-bom-e-velho-apresentaria-rock-de-camara-em-aniversario-de-espa",
       "editoria": "regional",
       "uf": "rs",
       "titulo": "Grupo O Bom e Velho apresentaria rock de câmara em aniversário de espaço cultural",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:06:04.098Z",
-      "hora": "14h06"
+      "iso": "2026-08-03T18:22:29.934Z",
+      "hora": "14h22"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o tema é veiculado por três publicações da imprensa.",
-        "Que as notícias mencionam a participação de Bagé em linhas de crédito.",
-        "Que o Rio Grande do Sul é citado como local das ocorrências."
+        "Que o assunto vem sendo veiculado por três veículos de imprensa distintos.",
+        "Que as publicações citam o Rio Grande do Sul e o município de Bagé."
       ],
       "falta": [
-        "Confirmação oficial de órgão estadual sobre o número de desabrigados.",
-        "Boletim oficial de órgão competente confirmando o alerta meteorológico para agosto.",
-        "Registro oficial em órgão público validando o lançamento das linhas de crédito."
+        "Confirmação de órgãos oficiais sobre o número exato de desabrigados e alertas meteorológicos.",
+        "Posicionamento oficial das autoridades estaduais ou municipais sobre as linhas de crédito.",
+        "Publicação de documentos ou dados governamentais que comprovem as informações veiculadas."
       ],
       "ondeCirculou": [
         {
@@ -1169,31 +1186,32 @@
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOczJ2QUdjREVyQ1hhei1Bb3NhRUZGSFNpbVdrY2xreEZERWpDeWFCdmgxQS1iR1NwSG9IdDJ0QlIxN2lXZm4waXBzYVE2MVBHeVpwTXBZR1lxUE5fR0N6TXpBR1BaTU9sQzRMcTZaOFh3UlZfN1RibU5GZVo5X3pia0ZaNWpXWHFxenA1ZVNiR05hbzZhazZ1QlI0LUs0YjcwZHJZVE5XTVhGTjZkYTd0Ml9n?oc=5"
         }
       ],
-      "link": "/materia/nc-rio-grande-do-sul-teria-700-desabrigados-e-estaria-em-alerta-no-mes-de.html",
+      "link": "/materia/nc-publicacoes-relatariam-alerta-de-temporais-desabrigados-e-linhas-de-cr.html",
       "corpo": [
-        "Veículos de imprensa teriam veiculado que o Rio Grande do Sul somaria 700 desabrigados devido às chuvas e estaria sob alerta de temporais e frio intenso no mês de agosto. Além do cenário climático, o município de Bagé estaria participando do lançamento de linhas de crédito voltadas ao turismo e à inovação no estado.",
-        "As publicações teriam apresentado os dados meteorológicos e os incentivos financeiros de forma concomitante na região. O conjunto de informações apontaria para desdobramentos simultâneos nas áreas de assistência social e fomento econômico regional."
+        "Veículos de imprensa estariam noticiando diferentes impactos meteorológicos e ações governamentais no Rio Grande do Sul. Segundo as publicações, o estado registraria centenas de desabrigados devido às chuvas e estaria sob alerta para novas intempéries. Simultaneamente, haveria iniciativas voltadas ao desenvolvimento econômico e turístico na região.",
+        "De acordo com os relatos, 700 pessoas estariam desabrigadas em decorrência das chuvas no território gaúcho. O estado também estaria em situação de alerta para a chegada de temporais e frio intenso durante o mês de agosto. Além disso, o município de Bagé estaria participando do lançamento de linhas de crédito direcionadas ao fortalecimento do turismo e da inovação no Rio Grande do Sul.",
+        "As informações divulgadas abordariam tanto um cenário emergencial decorrente das precipitações quanto medidas de apoio financeiro no estado. Não haveria detalhamento de divergências diretas entre os relatos, que tratariam de diferentes desdobramentos locais."
       ],
-      "id": "circ:rio-grande-do-sul-teria-700-desabrigados-e-estaria-em-alerta-no-mes-de",
+      "id": "circ:publicacoes-relatariam-alerta-de-temporais-desabrigados-e-linhas-de-cr",
       "editoria": "regional",
       "uf": "rs",
-      "titulo": "Rio Grande do Sul teria 700 desabrigados e estaria em alerta no mês de agosto",
+      "titulo": "Publicações relatariam alerta de temporais, desabrigados e linhas de crédito no RS",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:06:34.333Z",
-      "hora": "14h06"
+      "iso": "2026-08-03T18:22:55.419Z",
+      "hora": "14h22"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a informação está sendo veiculada por dois veículos da imprensa.",
-        "Que os relatos apontam chuva e frio no Sul e seca no interior.",
-        "Que as publicações citam previsões para o início da semana e para agosto."
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que há relatos sobre chuvas no Sul e tempo seco no interior.",
+        "Que o Rio Grande do Sul é citado com previsão de frio e temporais."
       ],
       "falta": [
-        "Manifestação de órgão oficial de meteorologia confirmando os alertas citados.",
-        "Datas e horários exatos de início e término dos fenômenos previstos.",
-        "Delimitação oficial dos municípios afetados pela baixa umidade e pelos temporais."
+        "Manifestação ou boletim oficial de órgão público meteorológico.",
+        "Indicação exata de datas, temperaturas previstas e volumes de chuva.",
+        "Detalhamento de quais municípios do interior do país seriam afetados."
       ],
       "ondeCirculou": [
         {
@@ -1207,97 +1225,125 @@
           "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0RySVlsOWp3LXNzejZhSXJKcjNRQVR0aE5pTFRndzh6UEpRNkxGS2ZxdDJvUkl1ZFRFa0Z1ZlJIN2Y0LUhjazYxOU91UHY5UjN1a1dtOWYzUno1ZnB6eE40U3Nrc0FES3NaaW5yajNmZHQ0bFdwaHhCREpFdVFnRXVJQ1RmSGlsbFR1Zi1Yd3M2bDJVYm5KUUl5ZFZTWW5HMWQ4bE1jN24?oc=5"
         }
       ],
-      "link": "/materia/nc-regiao-sul-e-interior-do-brasil-teriam-alertas-para-chuva-frio-e-tempo.html",
+      "link": "/materia/nc-regiao-sul-e-interior-do-pais-teriam-alertas-para-chuva-frio-e-tempo-s.html",
       "corpo": [
-        "A semana começaria com chuva na Região Sul, enquanto o tempo seco manteria o alerta para baixa umidade no interior do país. A informação estaria sendo veiculada por publicações da imprensa sem confirmação oficial anexada.",
-        "Uma das publicações acrescentaria que o Rio Grande do Sul estaria em alerta para temporais e frio intenso no mês de agosto. Os relatos divergiam quanto ao recorte temporal, mencionando desde o início da semana até previsões para todo o mês.",
-        "O cenário descrito envolveria a ocorrência simultânea de baixa umidade no interior e chuva no Sul do país. O quadro incluiria também a possibilidade de baixas temperaturas no território gaúcho."
+        "A semana estaria começando com chuva na Região Sul e tempo seco no interior do país. Essa situação manteria o alerta para a baixa umidade relativa do ar nas áreas do interior.",
+        "Paralelamente, o estado do Rio Grande do Sul estaria sob alerta para a ocorrência de temporais e frio intenso no mês de agosto. As publicações apresentariam abordagens complementares, variando o foco entre o início da semana e a previsão para o mês."
       ],
-      "id": "circ:regiao-sul-e-interior-do-brasil-teriam-alertas-para-chuva-frio-e-tempo",
+      "id": "circ:regiao-sul-e-interior-do-pais-teriam-alertas-para-chuva-frio-e-tempo-s",
       "editoria": "regional",
       "uf": "rs",
-      "titulo": "Região Sul e interior do Brasil teriam alertas para chuva, frio e tempo seco",
+      "titulo": "Região Sul e interior do país teriam alertas para chuva, frio e tempo seco",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:07:01.199Z",
-      "hora": "14h07"
-    },
-    {
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "seSabe": [
-        "Que a informação está sendo veiculada por dois veículos da imprensa.",
-        "Que as publicações tratam da liberação de trânsito na Rua Sinimbu.",
-        "Que o município citado nas duas manchetes é Caxias do Sul."
-      ],
-      "falta": [
-        "Confirmação oficial emitida por órgãos de trânsito ou pela prefeitura.",
-        "Informação exata sobre a data e o horário da liberação da pista.",
-        "Detalhes técnicos e oficiais sobre a obra de recuperação provisória realizada."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Rádio Solaris",
-          "titulo": "Trânsito é liberado na Sinimbu após recuperação provisória da pista em Caxias do Sul",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPc2J5TXdwcGtuYi0xSTlyNkZuTWF1Mk1aVnVBaEJsSTRMY2d2M0U2ZnBkZWJQd2lONGpPSVlWdHRrclpVd2I5eWF5WWg3enVDRXp1LTZkajhmMk5XSDVjTW1OenpVczZXaGEtVDhNVWctWDh2OGUwU0pZcm42QmlTYzBHZUxpR2hnMzdxNk5WUHJNazhJZzhZX3I5Y2x3R2Myd1UyZjJHVDczQ3ktM1VGaVFyaw?oc=5"
-        },
-        {
-          "veiculo": "GZH",
-          "titulo": "Tráfego é liberado neste início de semana após conserto provisório na Rua Sinimbu, em Caxias do Sul",
-          "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOY2gteHExZmlXQWFrbEZLSmJuVkQzYzNraXlhb1M5NGtWMXNidHRLZjdfWW1DbUhHVTdCREs5Zmx2aVBwUVp4RDhkN3h0SUdIb0w1WE5TUWRjLXFTVzlacEVJTXBrejhfN0trOVJreXRDdHg2QlpTdFEyNWNyWExjemphRmhFNG96YjFVWXpvTVJlM0ZPM1E1cVpBcjVURHl6WHEtem5lZXdCeHRRYU1wcnBGWExqbHg2dUczbFBIaEQ2cm9xejZhMDFkekhPTTFqQVZTSGo2dHp0Q2c2WUJKRDQ2MXRPM3lGM3RPcTZCdXBSMy1CTmJ2NnNWeFZlWjJkOXVfdDhQXzNWaFR2Z0pXbmlLRTZqVlN0bFN0cQ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-transito-na-rua-sinimbu-em-caxias-do-sul-teria-sido-liberado-apos-cons.html",
-      "corpo": [
-        "O trânsito na Rua Sinimbu, em Caxias do Sul, teria sido liberado para a circulação de veículos. A liberação da via teria ocorrido após a realização de uma recuperação provisória na pista.",
-        "As publicações indicam que o tráfego teria sido restabelecido neste início de semana. O serviço executado no local é descrito pelos veículos que publicaram como um conserto temporário.",
-        "As informações veiculadas divergem quanto à especificação do momento da liberação. Uma das publicações aponta que o fato teria ocorrido neste início de semana, enquanto a outra não traz a indicação temporal do evento."
-      ],
-      "id": "circ:transito-na-rua-sinimbu-em-caxias-do-sul-teria-sido-liberado-apos-cons",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Trânsito na Rua Sinimbu em Caxias do Sul teria sido liberado após conserto",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:07:28.169Z",
-      "hora": "14h07"
+      "iso": "2026-08-03T18:23:27.215Z",
+      "hora": "14h23"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto é veiculado por dois veículos da imprensa nesta semana.",
-        "Que as publicações abordam a volta do Congresso Nacional após o recesso.",
-        "Que há divergência entre os relatos sobre a existência de votações previstas."
+        "Que a informação sobre as obras está sendo veiculada por dois veículos de imprensa.",
+        "Que a cidade de Passo de Torres, em Santa Catarina, é citada nas publicações.",
+        "Que a Rua do Estaleiro é nominalmente apontada por uma das publicações."
       ],
       "falta": [
-        "Manifestação oficial do Congresso Nacional sobre a pauta e votações da semana.",
-        "Divulgação do calendário formal de sessões e deliberações do órgão.",
-        "Confirmação oficial sobre a data exata da retomada dos trabalhos legislativos."
+        "Confirmação em canal oficial da Prefeitura de Passo de Torres sobre a autorização.",
+        "Definição oficial sobre o número exato de vias contempladas no projeto.",
+        "Divulgação de ato ou documento público que confirme o investimento de R$ 2,8 milhões."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Sul21",
-          "titulo": "Congresso volta do recesso sem previsão de votações nesta semana",
-          "link": "https://sul21.com.br/noticias/politica/2026/08/congresso-volta-do-recesso-sem-previsao-de-votacoes-nesta-semana/"
+          "veiculo": "a folha torres",
+          "titulo": "Prefeitura de Passo de Torres autoriza pavimentação na Rua do Estaleiro e em outras 6 vias do município",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTjltSFM5d04xTlBoRzJvQmkxQ08tb3dBNVVhbkR2OFdsT2ltdU9RR2QtQm9IaFdxemFXaWtYMVdZWEdxOFFYcFgzamtaREszWjR3aERmeXl0OG93MWxTLXRuOWwzaFNaMGh1VTVqOXdRbHgwd051eGM0WkRCOHhieHh3cFVvZU92VzZwR2JQOU55TzFIN3hYa05FRGxlcHVWb09xOFRNb09yakZQX21qTmo2OHpLSWR5ZG5rV3ZDSC16ZWVPV1pRbUZjZTI?oc=5"
         },
         {
-          "veiculo": "Correio do Povo",
-          "titulo": "Após recesso, Congresso retoma trabalhos nesta semana",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORTI1dDlvaURqMEZfVXFmM0E0NmZVdHBYbUJtSmVuOEdjM0tWQVM0Nkt3NWJxem9OTWZtRFdqUjBVMFQyRTctanVUdmhHc1J2OVhxbjlVTXl1UEhTVWhNZVQ4ZjY2cTZYdjBMWFpfWnQzeEVGdmdGUm9Qank0VWFfTXdIcTdWQmgzTWIybU5rMkVhZ2F5SXdmU1NJc2FSai03YkIwSkMwZktUU3pHcndNNERDeTlfWU9aU3F3dlBNc2s?oc=5"
+          "veiculo": "Rádio Maristela",
+          "titulo": "Passo de Torres/SC autoriza novas obras de pavimentação em cinco vias e prevê investimento de R$ 2,8 milhões",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPLTlLaXg2XzFtY2dLRU9LcTNRbUVVY1YtTEdDRGREQlc4YmIzLXR2dHU1U3VIVU50cDB2cHpZb1BUTzJnR1h4UjRCYXBaQnMtZGw1VnRIc1NlRlVZcG1CQlZ3RE1rWWp5WlFZdWQ3VG9hQmNNM0drcl90dnQyOVRGTzBZeHVQbzI0X3U3XzY4RElhb3lsbF9PRi1OdEZ4T1FVdWwyU2xTS2pqdUhJNGZYSVdIUzgzWnZhVHdqd1hhaUliNmxseEV1dS1HeVd0MVJ0dDZKU2hpcjR3X3JUQ1ZIVm5B?oc=5"
         }
       ],
-      "link": "/materia/nc-congresso-retornaria-do-recesso-nesta-semana-sem-previsao-de-votacoes.html",
+      "link": "/materia/nc-prefeitura-de-passo-de-torres-teria-autorizado-novas-obras-de-paviment.html",
       "corpo": [
-        "O Congresso Nacional estaria retornando do recesso parlamentar durante esta semana. As publicações apontariam para a retomada das atividades legislativas no órgão citado.",
-        "As matérias veiculadas divergiriam quanto ao agendamento de votações para o período. Uma das publicações afirmaria que não haveria previsão de votações, enquanto outra apenas indicaria a retomada dos trabalhos.",
-        "A programação efetiva das atividades no órgão estaria pendente de confirmação. A divergência relatada deixaria em aberto se haveria deliberações plenárias durante a semana."
+        "As publicações sobre o assunto apresentam divergências em relação ao número total de ruas contempladas. Enquanto um relato aponta a liberação para a Rua do Estaleiro e outras seis vias, a outra publicação menciona a pavimentação de cinco vias.",
+        "Uma das matérias veiculadas acrescenta que as intervenções preveriam um investimento de R$ 2,8 milhões. Não há registro público oficial que confirme a aprovação das obras ou os valores citados."
       ],
-      "id": "circ:congresso-retornaria-do-recesso-nesta-semana-sem-previsao-de-votacoes",
+      "id": "circ:prefeitura-de-passo-de-torres-teria-autorizado-novas-obras-de-paviment",
       "editoria": "regional",
       "uf": "rs",
-      "titulo": "Congresso retornaria do recesso nesta semana sem previsão de votações",
+      "titulo": "Prefeitura de Passo de Torres teria autorizado novas obras de pavimentação",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T18:08:29.059Z",
-      "hora": "14h08"
+      "iso": "2026-08-03T18:24:16.758Z",
+      "hora": "14h24"
+    },
+    {
+      "municipio": "santamaria",
+      "municipioNome": "Santa Maria",
+      "seSabe": [
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que a Prefeitura de Santa Maria aparece como promovente de ambos os eventos.",
+        "Que UFSM e LISM são citadas na coorganização do evento na Gare."
+      ],
+      "falta": [
+        "Confirmação das agendas nos canais institucionais da Prefeitura, UFSM e LISM.",
+        "Publicação de portaria ou decreto oficial autorizando os eventos no município.",
+        "Identificação oficial dos meses referentes aos dias 3 e 6 citados."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Paralelo 29",
+          "titulo": "Promovido pela Prefeitura, 2º Seminário Regional de Turismo Rural ocorre em Santa Maria na quinta (6)",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZnNBZ2dMdW1yWjhsaVYyTVFvMWJfaVYwbS0xaHVBamlqVUNpSGoxYVNOX2ZuVkVGZ3dMNVpuYTZENE8wOVJyVE1XNU5yY1pGOUpxTlRnejhleUY2SVRsN2U0cGNIYmJtcTM3OUx5YUliTEZndTN2dFdQbE5mR0pqaGNCSUZXNnNfUWRJbm1COXVSMERrMjZ6SEZpWHFQTG1uaTYtbUZ0Vm5DbUUzbzI3Tk95eEp6andMU2xEbldfOWZlSHlzZXRPWVJNaEU5NDhlQlE?oc=5"
+        },
+        {
+          "veiculo": "Alcir 61",
+          "titulo": "Prefeitura, UFSM e LISM promovem a Calourada do 2º semestre de 2026 nesta segunda (03), na Gare em Santa Maria",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeDdRdi1EMlZSOU95Z3ZlN2pWX0kzanRHdG4yMGxfRVQzNEJRbFoyZElmdUNfNXhva0RBb195b0c3UXpfdDdsdkJxcmlkNkEzUmVnb2FvUGpObzhpM2NLRURLcWowV0RuaXVEbEtTakJZVENYU1htY2VMQ3V1VmtQbWYxRVpCUmZnQ0ludk9TTS11OUtLRTA3UlUzLVlPU3duc0dva2hXUEpSYmhCTjZBbXRMUkdENGlMSDRDMWFYUUxjTm9wQ0E?oc=5"
+        }
+      ],
+      "link": "/materia/nc-prefeitura-e-entidades-promoveriam-eventos-de-turismo-e-academico-em-s.html",
+      "corpo": [
+        "Publicações estariam veiculando informações sobre eventos que seriam promovidos em Santa Maria. Segundo relatos de veículos da imprensa, estariam previstos um seminário de turismo e uma celebração universitária. As atividades contariam com o envolvimento da Prefeitura local.",
+        "O 2º Seminário Regional de Turismo Rural seria promovido pela Prefeitura para ocorrer em uma quinta-feira, dia 6, em Santa Maria. Já a Calourada do 2º semestre de 2026 estaria agendada para uma segunda-feira, dia 3, no espaço da Gare. Esta segunda atividade seria realizada em conjunto pela Prefeitura, pela UFSM e pela LISM.",
+        "As publicações abordariam duas agendas distintas com datas e organizadores específicos para o mesmo município. Até o momento, a realização de ambas as programações não estaria confirmada por documentos oficiais."
+      ],
+      "id": "circ:prefeitura-e-entidades-promoveriam-eventos-de-turismo-e-academico-em-s",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Prefeitura e entidades promoveriam eventos de turismo e acadêmico em Santa Maria",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-03T18:24:44.917Z",
+      "hora": "14h24"
+    },
+    {
+      "municipio": "caxias",
+      "municipioNome": "Caxias do Sul",
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "Serra em Pauta",
+          "titulo": "ONG abre inscrições para seis cursos gratuitos em Caxias do Sul",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQV3RPNXI3dzNvdmFjbTRuTDhFeF9fb3VESHRlOUFUdGhLOTNjbTZleUo4VDZ2TlBKODJYRmVfWUpfYWhDWEpLd1l6cEpQazFGbGVKanZycGFnZWxtcVhubnBWZmdCSTJqaGstSDhma0ZVbk9RSlc5WjZpQURWMDdBSkFPZFlBajVxTjUtcVdTa0dXdUstYkFUeVROWHdkd1ZLQ3R2VXhn?oc=5"
+        },
+        {
+          "veiculo": "Tua Rádio",
+          "titulo": "Secretaria da Receita abre novamente neste sábado para renegociação de dívidas, em Caxias do Sul",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNc0hqaGVoSGR0X0xkUjdUMnh2WDY3V0NaSHo5TnMtQm1FRE1GV0tJQzJ2aEF4cFBReEhPQ0FWc3ByT1hoNHlHcXBMMEkyN1J3UFNwRHVkdkZXRGpWOEFFVUpLN1dtQkhkNV83em5LUV90YVM2UDBIb3RzcUE2VVd4OUxRSnEwR25DS0RQdjlyQWpkd2ZHX3Q5RGZtcHR5Qlhhcm9mOGpuUlgzcE9DMXcyYmlsR21SQTcyTWIzLVNhYVl1cFo4NGxxMFRkUWt1dDd4T3dxQkxRQkdIR3dKalpHM2hzbw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-ong-e-secretaria-da-receita-estariam-realizando-acoes-em-caxias-do-sul.html",
+      "corpo": [
+        "Publicações estariam veiculando informações sobre diferentes iniciativas em Caxias do Sul. Os relatos abordariam a prestação de serviços e oferta de cursos para a comunidade local.",
+        "Uma das publicações indica que uma ONG teria aberto inscrições para seis cursos gratuitos. A outra matéria aponta que a Secretaria da Receita estaria aberta neste sábado para renegociação de dívidas. As publicações divergiriam sobre o tema central e a entidade responsável pelas atividades."
+      ],
+      "id": "circ:ong-e-secretaria-da-receita-estariam-realizando-acoes-em-caxias-do-sul",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "ONG e Secretaria da Receita estariam realizando ações em Caxias do Sul",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-03T18:25:16.534Z",
+      "hora": "14h25"
     }
   ],
   "pautas": [
@@ -1310,17 +1356,6 @@
         "Sul21",
         "g1 RS",
         "OAB/RS"
-      ]
-    },
-    {
-      "titulo": "Rio Grande do Sul em alerta para temporais e frio intenso em agosto",
-      "veiculo": "Canal Rural",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "estanciavelha.rs.gov.br",
-        "bage.rs.gov.br",
-        "Notícias Agrícolas"
       ]
     },
     {
@@ -1367,17 +1402,6 @@
       ]
     },
     {
-      "titulo": "Rio Grande do Sul tem 700 desabrigados vítimas da chuvas",
-      "veiculo": "band.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Canal Rural",
-        "estanciavelha.rs.gov.br",
-        "bage.rs.gov.br"
-      ]
-    },
-    {
       "titulo": "Morte de Bagre Fagundes rende homenagens de personalidades e instituições do RS",
       "veiculo": "Sul21",
       "editoria": "regional",
@@ -1409,6 +1433,17 @@
       ]
     },
     {
+      "titulo": "Prefeitura, UFSM e LISM promovem a Calourada do 2º semestre de 2026 nesta segunda (03), na Gare em Santa Maria",
+      "veiculo": "Alcir 61",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Diário de Santa Maria",
+        "Infonet",
+        "Paralelo 29"
+      ]
+    },
+    {
       "titulo": "Começo de nova gestão em 28 unidades de saúde de Porto Alegre tem movimento intenso, adaptação de equipes e queda de sistema",
       "veiculo": "GZH",
       "editoria": "regional",
@@ -1437,26 +1472,6 @@
       ]
     },
     {
-      "titulo": "Prefeitura de Passo de Torres autoriza pavimentação na Rua do Estaleiro e em outras 6 vias do município",
-      "veiculo": "a folha torres",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Rádio Maristela",
-        "Prefeitura de São Caetano do Sul"
-      ]
-    },
-    {
-      "titulo": "Estanciense representa o Rio Grande do Sul no Campeonato Brasileiro de Judô, em Macapá",
-      "veiculo": "estanciavelha.rs.gov.br",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Canal Rural",
-        "band.com.br"
-      ]
-    },
-    {
       "titulo": "O Bom e Velho apresenta rock de câmara no aniversário da Sala Jazz Geraldo Flach",
       "veiculo": "Sul21",
       "editoria": "regional",
@@ -1482,6 +1497,33 @@
       "tambemEm": [
         "g1 RS",
         "OAB/RS"
+      ]
+    },
+    {
+      "titulo": "Semana começa com chuva no Sul e tempo seco mantém alerta para baixa umidade no interior do Brasil",
+      "veiculo": "Notícias Agrícolas",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Canal Rural"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Passo de Torres autoriza pavimentação na Rua do Estaleiro e em outras 6 vias do município",
+      "veiculo": "a folha torres",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Rádio Maristela"
+      ]
+    },
+    {
+      "titulo": "Promovido pela Prefeitura, 2º Seminário Regional de Turismo Rural ocorre em Santa Maria na quinta (6)",
+      "veiculo": "Paralelo 29",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Alcir 61"
       ]
     }
   ]
