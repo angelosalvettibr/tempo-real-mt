@@ -13,6 +13,7 @@ import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques } from './municipios.mjs';
 import { lerDiario, ASSOCIACOES } from './diario.mjs';
+import { focus, comoTexto } from './bancocentral.mjs';
 import { OFICIAIS } from './oficiais.mjs';
 
 // A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
@@ -106,6 +107,8 @@ const FONTE_LIVRE = [
 const PODE_REESCREVER = new RegExp([
   // agencias e organismos que autorizam por escrito
   'agenciabrasil\\.ebc\\.com\\.br', 'news\\.un\\.org', 'theconversation\\.com', 'vaticannews\\.va',
+  // dado publico: nao tem direito autoral, art. 8 da Lei 9.610/98
+  'bcb\\.gov\\.br', 'olinda\\.bcb\\.gov\\.br', 'dadosabertos\\.bcb\\.gov\\.br',
   // jornalismo em licenca aberta (esteira 1 — permite adaptar)
   'globalvoices\\.org', 'scidev\\.net', 'agencia\\.fapesp\\.br',
   'jornal\\.usp\\.br', 'unicamp\\.br', 'jornal\\.unesp\\.br', 'wikinews\\.org',
@@ -495,6 +498,56 @@ if (!GERAL && ASSOCIACOES[UF]) {
     }
   } catch (e) {
     console.log('  aviso diario: ' + String(e.message).slice(0, 50));
+  }
+}
+
+/* ===================== 2f. DADO DIRETO DA FONTE ==========================
+   Toda segunda sai o Boletim Focus e dez veiculos publicam o mesmo numero
+   lido do mesmo lugar. Nenhum e a fonte: a fonte e a API publica do Banco
+   Central, em JSON, sem chave e sem cadastro.
+
+   Aqui o dado entra como fonte livre — com a mediana, o intervalo e a
+   variacao em relacao a semana anterior, que a materia refritada nao traz.
+   Dado publico nao tem direito autoral: a Lei 9.610/98, art. 8, poe os dados
+   em si fora da protecao.                                                  */
+if (EDITORIA === 'brasil' && !GERAL?.tipo) {
+  // Segunda e terca: o boletim sai no primeiro dia util da semana, e no dia
+  // seguinte ainda e noticia. Fora disso nao vale a chamada.
+  const diaSemana = new Date().getDay();
+  if (diaSemana === 1 || diaSemana === 2) {
+    console.log('\n  2f. BANCO CENTRAL — Boletim Focus');
+    try {
+      const ano = new Date().getFullYear();
+      const dados = await focus(ano);
+      let entraram = 0;
+      for (const d of dados) {
+        // So vira materia quando ha movimento: projecao parada nao e noticia.
+        if (d.variacao === null || d.variacao === 0) continue;
+        F.itens.push({
+          titulo: `Projeção para ${d.nome} em ${ano} vai a ${d.unidade === 'R$' ? 'R$ ' + d.mediana.toFixed(2) : d.mediana.toFixed(2) + '%'}`,
+          texto: comoTexto(d),
+          resumo: comoTexto(d).slice(0, 200),
+          link: 'https://www.bcb.gov.br/publicacoes/focus',
+          origemLink: 'https://www.bcb.gov.br/publicacoes/focus',
+          veiculo: 'Banco Central do Brasil',
+          fonte: 'Banco Central do Brasil',
+          orgao: 'Banco Central do Brasil',
+          origemNome: 'Banco Central do Brasil',
+          editoria: 'brasil',
+          uf: null,
+          oficial: true,
+          iso: new Date().toISOString()
+        });
+        entraram++;
+      }
+      console.log(`  ok    ${dados.length} indicadores lidos · ${entraram} com movimento na semana`);
+      for (const d of dados) {
+        const sinal = d.variacao === null ? '—' : d.variacao > 0 ? '+' : '';
+        console.log(`        ${d.nome.padEnd(28)} ${String(d.mediana).padStart(7)} ${d.variacao === null ? '' : `(${sinal}${d.variacao})`}`);
+      }
+    } catch (e) {
+      console.log('  aviso Focus: ' + String(e.message).slice(0, 50));
+    }
   }
 }
 

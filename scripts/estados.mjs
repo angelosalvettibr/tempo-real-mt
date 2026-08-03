@@ -454,6 +454,15 @@ export const PAUTA_GERAL = [
   // Agencia italiana publicando em portugues, com pauta que cruza Brasil e
   // Italia. SO PAUTA: a ANSA proibe expressamente republicacao dos feeds.
   { id:'ansabr',     nome:'ANSA Brasil', editoria:'brasil',        url:'https://www.ansa.it/brasil/rss.xml' },
+  // Economia e o assunto com mais republicacao em cadeia: seis veiculos dando
+  // o mesmo numero do mesmo boletim. Servem de termometro; o dado vem da fonte.
+  { id:'veja',       nome:'Veja',            editoria:'brasil', url:'https://veja.abril.com.br/feed/' },
+  { id:'vejaeco',    nome:'Veja Economia',   editoria:'brasil', url:'https://veja.abril.com.br/economia/feed/' },
+  { id:'moneytimes', nome:'Money Times',     editoria:'brasil', url:'https://www.moneytimes.com.br/feed/' },
+  { id:'diariocom',  nome:'Diário do Comércio', editoria:'brasil', url:'https://diariodocomercio.com.br/feed/' },
+  { id:'jbrasilia',  nome:'Jornal de Brasília', editoria:'brasil', url:'https://jornaldebrasilia.com.br/feed/' },
+  { id:'aominuto',   nome:'Notícias ao Minuto', editoria:'brasil', url:'https://www.noticiasaominuto.com.br/rss/economia' },
+  { id:'seudinheiro',nome:'Seu Dinheiro',    editoria:'brasil', url:'https://www.seudinheiro.com/feed/' },
   { id:'folha',      nome:'Folha',       editoria:'brasil',        url:'https://feeds.folha.uol.com.br/emcimadahora/rss091.xml' },
   { id:'folhamundo', nome:'Folha Mundo', editoria:'internacional', url:'https://feeds.folha.uol.com.br/mundo/rss091.xml' },
   { id:'cnn',        nome:'CNN Brasil',  editoria:'brasil',        url:'https://www.cnnbrasil.com.br/feed/' },
