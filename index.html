@@ -64,7 +64,7 @@ header{border-bottom:1px solid var(--tinta)}
 @media(max-width:900px){.ultimas ol{grid-template-columns:repeat(2,1fr);gap:0 20px}}
 @media(max-width:600px){.ultimas ol{grid-template-columns:1fr}.ultimas span{font-size:14.5px}}
 nav{border-bottom:1px solid var(--tinta);background:var(--papel);position:sticky;top:0;z-index:30}
-nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;padding:0}
+nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:nowrap;padding:0;overflow-x:auto}
 nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 16px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
 nav button:hover{color:var(--tinta)}
 nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
@@ -225,15 +225,26 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 @media(max-width:700px){.tarja #stats{width:100%;flex:none}}
 
 /* secao do jornal: mesmo peso das editorias, sem o sublinhado de aba */
-nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--tinta2);padding:12px 16px;white-space:nowrap;transition:.14s}
-nav a.secao:hover{color:var(--tinta)}
+/* DUAS FILEIRAS
+   Seis itens mais o seletor nao cabiam numa linha so: "Linha do tempo" e
+   "Arquivo" quebravam para baixo desalinhados, com o sublinhado da nav
+   passando por debaixo. Separar em duas resolve o espaco E deixa claro que
+   editoria e secao sao coisas diferentes. */
+.secoes{border-bottom:1px solid var(--tinta);background:var(--areia)}
+.secoes .wrap{display:flex;align-items:center;gap:0;padding:0}
+.secoes a{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--tinta2);padding:10px 18px 10px 0;white-space:nowrap;transition:.14s}
+.secoes a+a{padding-left:18px;border-left:1px solid var(--linha)}
+.secoes a:hover{color:var(--rosso)}
 
 /* Seu Meridiano nao e conteudo, e o leitor. A distancia visual diz isso. */
-nav a.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
-  color:var(--tinta);font-size:10.5px;letter-spacing:.13em}
-nav a.eu:hover{border-color:var(--tinta);background:var(--areia)}
-@media(max-width:700px){nav a.eu{margin-left:0}}
+.secoes a.eu{margin-left:auto;border:1px solid var(--linha2);border-left:1px solid var(--linha2);
+  border-radius:5px;padding:7px 13px;color:var(--tinta);margin-top:6px;margin-bottom:6px;background:var(--papel)}
+.secoes a.eu:hover{border-color:var(--tinta);color:var(--tinta);background:var(--areia)}
+@media(max-width:700px){
+  .secoes .wrap{overflow-x:auto}
+  .secoes a.eu{margin-left:12px}
+}
 
 .novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
 .novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
@@ -265,9 +276,6 @@ nav a.eu:hover{border-color:var(--tinta);background:var(--areia)}
 @media(max-width:700px){.tarja #stats{width:100%;flex:none}}
 
 /* secao do jornal: mesmo peso das editorias, sem o sublinhado de aba */
-nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--tinta2);padding:12px 16px;white-space:nowrap;transition:.14s}
-nav a.secao:hover{color:var(--tinta)}
 
 /* Seu Meridiano nao e conteudo, e o leitor. A distancia visual diz isso. */
 nav button.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
@@ -447,13 +455,11 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
     <div class="sub">Brasil · Mundo · Estados</div>
   </div>
   <nav>
-    <div class="wrap">
+    <div class="wrap linha1">
       <button data-f="capa" aria-pressed="true">Capa</button>
       <button data-f="brasil" aria-pressed="false">Brasil</button>
       <button data-f="internacional" aria-pressed="false">Mundo</button>
       <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
-      <a class="secao" href="linha.html">Linha do tempo</a>
-      <a class="secao" href="arquivo.html">Arquivo</a>
       <span class="sel-estado">
         <label for="selEstado">estado</label>
         <select id="selEstado">
@@ -462,9 +468,15 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
           <option value="rj">Rio de Janeiro</option>
         </select>
       </span>
-      <a class="eu" href="meu.html" id="btMeu" hidden>Seu Meridiano</a>
     </div>
   </nav>
+  <div class="secoes">
+    <div class="wrap">
+      <a href="linha.html">Linha do tempo</a>
+      <a href="arquivo.html">Arquivo</a>
+      <a class="eu" href="meu.html" id="btMeu" hidden>Seu Meridiano</a>
+    </div>
+  </div>
   <div class="cidades" id="cidades"><div class="wrap"></div></div>
 </header>
 
