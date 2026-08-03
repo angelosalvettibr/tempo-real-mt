@@ -47,26 +47,32 @@ const esc = s => String(s || '').replace(/[<>]/g, '').trim();
 // o Meridiano deixa de ser o que e.
 const PROMPT = (titulo, resumo) => `Você escreve o bloco PARA ENTENDER do MERIDIANO, um jornal que só afirma o que consegue verificar.
 
-O leitor acabou de abrir a notícia abaixo e pode não ter a informação de fundo necessária para compreendê-la. Sua tarefa é dar essa informação — não recontar a notícia.
+MÉTODO — siga nesta ordem:
 
-Exemplo do que isso significa: numa notícia sobre "entrada de migrantes em Ceuta", o leitor precisa saber que Ceuta é uma cidade espanhola no norte da África e uma das duas fronteiras terrestres da União Europeia com o continente africano. Isso é contexto. Repetir que migrantes entraram não é.
+PASSO 1. Leia o título e identifique os TERMOS FORTES: as palavras que o leitor pode não conhecer e sem as quais a notícia não faz sentido. Em geral são nomes de lugar, de instituição, de órgão, de operação, de processo ou de acordo. Palavras comuns não contam.
 
-PROCURE ANTES DE ESCREVER. Use a busca para levantar o que é o lugar, a instituição, o órgão ou o processo mencionado, e o que já aconteceu de relevante antes.
+Exemplo: em "Entrada de 60 mil migrantes em Ceuta teria gerado crise migratória europeia", os termos fortes são "Ceuta" — que quase ninguém sabe situar — e "crise migratória europeia", que é um processo com história. "Migrantes" e "entrada" não são: todo mundo entende.
+
+Outro: em "Prefeitura de Cuiabá entrega creche no Coxipó", não há termo forte para quem lê aquela edição. Nesse caso a resposta é NAO.
+
+PASSO 2. PROCURE cada termo forte. Use a busca para levantar o que é, onde fica, o que faz, e o que já aconteceu de relevante com ele.
+
+PASSO 3. Escreva um parágrafo curto por termo forte — no máximo três. Cada parágrafo começa pelo termo e explica o que ele é. Nada mais.
 
 REGRAS QUE NÃO PODEM SER QUEBRADAS:
-1. NÃO recontar a notícia. Se o parágrafo puder ser resumido como "aconteceu X", está errado.
+1. NÃO recontar a notícia. Se um parágrafo puder ser resumido como "aconteceu X", está errado — apague e escreva sobre o termo.
 2. NÃO opinar, NÃO prever, NÃO avaliar. Nada de "isso indica", "especialistas avaliam", "deve levar a", "tende a".
-3. NÃO afirmar como certo o fato noticiado. Ele pode não estar confirmado. O contexto trata do entorno, não do fato.
+3. NÃO afirmar como certo o fato noticiado. Ele pode não estar confirmado. Você explica o entorno, não o fato.
 4. NÃO INVENTE número, data ou nome. Se a busca não trouxer, escreva sem.
-5. Escreva em português correto, com todos os acentos.
-6. Se o assunto for corriqueiro e não exigir contexto nenhum — uma entrega de obra municipal, um aviso de serviço —, diga isso e não force.
+5. Português correto, com todos os acentos.
 
 FORMATO — exatamente isto, sem markdown:
-PRECISA: (SIM ou NAO — se a notícia dispensa contexto, escreva NAO e pare)
+PRECISA: (SIM ou NAO)
+TERMOS: (os termos fortes identificados, separados por vírgula — ou vazio se NAO)
 TEXTO:
-(1 a 3 parágrafos curtos, separados por linha em branco. O primeiro explica o que é o lugar, a instituição ou o processo. O segundo, quando houver material, traz o antecedente relevante com data. O terceiro, se necessário, dá a escala ou a comparação.)
+(um parágrafo por termo, separados por linha em branco, na ordem em que aparecem no título)
 FONTES:
-- (nome da fonte usada — enciclopédia, órgão, publicação. 1 a 4 itens)
+- (nome da fonte usada. 1 a 4 itens)
 
 NOTÍCIA:
 ${titulo}
@@ -114,8 +120,14 @@ async function gerar(titulo, resumo){
   const proibido = /(indica que|sugere que|especialistas|analistas avaliam|deve levar|tende a|provavelmente|pode significar|e um sinal)/i;
   if (proibido.test(paragrafos.join(' '))) return { precisa:false, recusado:true };
 
+  // Os termos que o agente destrinchou. Mostrar isso ao leitor torna o bloco
+  // auditavel: da para ver o que foi explicado e o que ficou de fora.
+  const termos = (t.match(/TERMOS\s*:\s*(.+)/i)?.[1] || '')
+    .split(',').map(x => x.trim()).filter(x => x.length > 1 && x.length < 60).slice(0, 4);
+
   return {
     precisa: true,
+    termos: termos.length ? termos : null,
     paragrafos,
     fontes: fontes.length ? fontes : (consultadas.length ? consultadas : null)
   };
