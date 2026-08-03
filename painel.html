@@ -785,7 +785,15 @@ async function ltMontar(){
       ltFila();
       m.textContent = `${r.marcos.length} marcos montados — revise antes de decidir o estado` +
         (r.falta?.length ? ' · falta confirmar: ' + r.falta.join('; ') : '');
-    } else { m.className='msg erro'; m.textContent = r.msg || 'falhou'; }
+    } else {
+      m.className='msg erro'; m.textContent = r.msg || 'falhou';
+      // Mostrar o que a IA escreveu. Sem isso, corrigir vira adivinhacao.
+      if (r.cru && cx) {
+        cx.innerHTML = '<div class="consult"><b>o que a IA devolveu</b>' +
+          '<pre style="white-space:pre-wrap;font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--texto2);margin:0">' +
+          r.cru.replace(/[<>]/g,'') + '</pre></div>';
+      }
+    }
   } catch { m.className='msg erro'; m.textContent='falha de conexão'; }
   bt.disabled = false; bt.textContent = 'buscar e montar a linha do tempo';
 }
