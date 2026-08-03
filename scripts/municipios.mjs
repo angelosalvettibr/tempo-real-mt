@@ -90,3 +90,61 @@ export function detectarMunicipio(texto, uf){
 export function destaques(uf){
   return (MUNICIPIOS[uf] || []).filter(m => m.destaque).map(m => ({ id:m.id, nome:m.nome }));
 }
+
+
+/* ==================== FORA DA PRAÇA ======================================
+   Toda materia publicada numa edicao estadual herdava a UF da edicao, sem
+   olhar o conteudo. Bastava um feed do Rio Grande do Sul republicar noticia
+   de Aracaju para o Meridiano etiquetar Sergipe como RS — e "Fachin afirma
+   que criticas nao fragilizam o STF" saiu como Mato Grosso.
+
+   Etiqueta errada e grave num jornal que se vende por procedencia: quem le
+   de Sergipe ve na hora que a maquina nao sabe do que esta falando.
+
+   A checagem e simples: se o texto cita outro estado ou outra capital, e nao
+   cita a praca da edicao, entao nao e materia daquela praca.              */
+
+const OUTRAS_PRACAS = {
+  ac:['acre','rio branco'], al:['alagoas','maceió'], am:['amazonas','manaus'],
+  ap:['amapá','macapá'], ba:['bahia','salvador'], ce:['ceará','fortaleza'],
+  df:['distrito federal','brasília'], es:['espírito santo','vitória'],
+  go:['goiás','goiânia'], ma:['maranhão','são luís'], mg:['minas gerais','belo horizonte'],
+  ms:['mato grosso do sul','campo grande'], mt:['mato grosso','cuiabá','várzea grande','sinop','rondonópolis'],
+  pa:['pará','belém'], pb:['paraíba','joão pessoa'], pe:['pernambuco','recife'],
+  pi:['piauí','teresina'], pr:['paraná','curitiba'], rj:['rio de janeiro','niterói','petrópolis','búzios','volta redonda','nova iguaçu'],
+  rn:['rio grande do norte','natal'], ro:['rondônia','porto velho'], rr:['roraima','boa vista'],
+  rs:['rio grande do sul','porto alegre','caxias do sul','pelotas','santa maria','canoas'],
+  sc:['santa catarina','florianópolis'], se:['sergipe','aracaju'],
+  sp:['são paulo','campinas','santos'], to:['tocantins','palmas']
+};
+
+const sem = t => String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+
+/**
+ * O texto e de outra praca que nao a da edicao?
+ * @returns {string|null} sigla da praca citada, ou null
+ */
+export function foraDaPraca(texto, uf){
+  const t = sem(texto);
+  const meu = (OUTRAS_PRACAS[uf] || []).map(sem);
+
+  // Cita a propria praca? Entao e daqui, mesmo que cite outras de passagem.
+  if (meu.some(x => t.includes(x))) return null;
+
+  for (const [sigla, nomes] of Object.entries(OUTRAS_PRACAS)) {
+    if (sigla === uf) continue;
+    for (const n of nomes.map(sem)) {
+      // "rio de janeiro" dentro de "rio grande do sul" nao vale: exigimos
+      // que o nome esteja delimitado.
+      const re = new RegExp('(^|[^a-z])' + n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '($|[^a-z])');
+      if (re.test(t)) return sigla;
+    }
+  }
+  return null;
+}
+
+// Assunto nacional que nao pertence a praca nenhuma: STF, Congresso, governo
+// federal. Publicado numa edicao estadual, deveria estar em Brasil.
+const NACIONAL = /(\bstf\b|supremo tribunal|\bstj\b|\btse\b|\btst\b|congresso nacional|c[âa]mara dos deputados|senado federal|planalto|minist[ée]rio da|governo federal|banco central|receita federal|\bpec\b|medida provis[óo]ria)/i;
+
+export const ehNacional = texto => NACIONAL.test(String(texto||''));

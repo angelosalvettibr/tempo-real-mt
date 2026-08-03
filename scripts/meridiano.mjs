@@ -11,7 +11,7 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { reescrever, textoCompleto, temChave, modeloUsado, preparar, escreverCirculacao, escreverContexto, acharParecidos, acharOrgao, carteiraAcabou, fotoDaUltima } from './redator.mjs';
 import { pagina, slug } from './radar.mjs';
 import { cacarDocumento } from './cacador.mjs';
-import { detectarMunicipio, destaques } from './municipios.mjs';
+import { detectarMunicipio, destaques, foraDaPraca, ehNacional } from './municipios.mjs';
 import { lerDiario, ASSOCIACOES } from './diario.mjs';
 import { focus, comoTexto } from './bancocentral.mjs';
 import { OFICIAIS } from './oficiais.mjs';
@@ -104,6 +104,24 @@ const FONTE_LIVRE = [
 // Dominios de onde o texto pode ser lido e reescrito. Nem todo orgao usa
 // .gov.br: a Prefeitura do Rio e prefeitura.rio, e ha muitos com dominio
 // proprio. Por isso reconhecemos tambem pelo nome da instituicao.
+/* ---------------------------- ONDE A MATERIA MORA ------------------------
+   Toda materia de uma edicao estadual herdava a UF da edicao, sem olhar o
+   conteudo. Bastava um feed do RS republicar noticia de Aracaju para o
+   Meridiano etiquetar Sergipe como Rio Grande do Sul.
+
+   Agora o conteudo manda: se cita outra praca, ou se e assunto nacional,
+   a materia vai para Brasil em vez de ficar com a etiqueta errada.       */
+function ondeMora(texto, editoriaPadrao, ufPadrao){
+  if (!ufPadrao) return { editoria: editoriaPadrao, uf: null };
+
+  const outra = foraDaPraca(texto, ufPadrao);
+  if (outra) return { editoria:'brasil', uf:null, motivo:`cita ${outra.toUpperCase()}` };
+
+  if (ehNacional(texto)) return { editoria:'brasil', uf:null, motivo:'assunto nacional' };
+
+  return { editoria: editoriaPadrao, uf: ufPadrao };
+}
+
 const PODE_REESCREVER = new RegExp([
   // agencias e organismos que autorizam por escrito
   'agenciabrasil\\.ebc\\.com\\.br', 'news\\.un\\.org', 'theconversation\\.com', 'vaticannews\\.va',
@@ -459,7 +477,10 @@ const promovidos = [];
 for (const p of P.itens) {
   if (!p.link || !PODE_REESCREVER.test(p.link)) continue;
   if (F.itens.some(f => f.link === p.link)) continue;
-  promovidos.push({ ...p, editoria: EDITORIA, uf: GERAL ? null : UF });
+  {
+    const w = ondeMora(p.titulo, EDITORIA, GERAL ? null : UF);
+    promovidos.push({ ...p, editoria: w.editoria, uf: w.uf });
+  }
 }
 if (promovidos.length) {
   F.itens.push(...promovidos);
@@ -667,12 +688,15 @@ if (temChave()) {
       publicados.push({
         foto: foto ? foto.src : null, fotoAlt: foto ? foto.alt : null,
         municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
-        id:'ilm:'+slug(m.titulo), editoria: EDITORIA, chapeu:'Nosso texto',
+        id:'ilm:'+slug(m.titulo), chapeu:'Nosso texto',
+        ...(() => { const w = ondeMora(m.titulo + ' ' + (m.linhaFina||''), EDITORIA, GERAL ? null : UF);
+                    if (w.motivo) console.log(`     realocada para Brasil (${w.motivo}): ${m.titulo.slice(0,52)}`);
+                    return { editoria: w.editoria }; })(),
         titulo:m.titulo, resumo:m.linhaFina,
         fonte:'Meridiano, com informações de '+i.veiculo,
         origemLink:i.link, origemNome:i.veiculo,
         pautadoPor:i.pautadoPor||[], quentura:i.quentura||0,
-        uf: GERAL ? null : UF,
+        uf: ondeMora(m.titulo + ' ' + (m.linhaFina||''), EDITORIA, GERAL ? null : UF).uf,
         corpo: m.corpo,
         link:'/materia/'+arq, iso:i.iso, hora:horaBR(i.iso), original:true, contexto,
         ...nivelDe(i, texto)
@@ -891,7 +915,7 @@ if (temChave() && soPautaFiltrada.length) {
             fonte: 'Meridiano, com informacoes de ' + caca.fonte,
             origemLink: caca.link, origemNome: caca.fonte,
             pautadoPor: c.tambemEm || [], quentura: c.quentura || 0,
-            uf: GERAL ? null : UF, corpo: m.corpo,
+            uf: ondeMora(m.titulo, EDITORIA, GERAL ? null : UF).uf, corpo: m.corpo,
             link: '/materia/' + arq, iso: agora, hora: horaBR(agora),
             original: true, resgatada: true,
             nivel: 'confirmado', selo: 'Confirmado oficialmente'
