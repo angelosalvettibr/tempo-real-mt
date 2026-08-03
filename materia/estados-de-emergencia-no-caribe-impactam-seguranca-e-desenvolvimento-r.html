@@ -150,8 +150,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
   <div class="corpo"><p>A declaração de estados de emergência em países do Caribe, como Trinidad e Tobago, concedeu poderes adicionais ao Estado, incluindo a busca e apreensão sem apresentação de acusações. A medida foi introduzida como resposta a ameaças à segurança pública e à violência.</p>
 <p>Além das ações policiais, as regulamentações de emergência afetam o funcionamento de instituições e a rotina das comunidades. O Fundo Monetário Internacional (FMI) apontou que o crime e a violência prejudicam investimentos, atividades econômicas e oportunidades de trabalho, sobretudo para jovens com caminhos limitados para o emprego estável.</p>
-<p>Na Jamaica, a adoção de estados de emergência reduziu crimes violentos em locais específicos, ao mesmo tempo em que gerou preocupações em organizações de direitos e grupos comunitários. O Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas relacionou a segurança cidadã a fatores como desigualdade, exclusão e limitações econômicas.</p>
-<p>A atuação de segurança influencia a percepção da população sobre transparência e governança. O impacto dessas intervenções na confiança pública varia conforme a sua implementação e a ligação com melhorias nas condições de vida diária, como emprego, educação e serviços públicos.</p></div>
+<p>Na Jamaica, a adoção de estados de emergência reduziu crimes violentos em locais específicos, ao mesmo tempo em que gerou preocupações em organizações de direitos e grupos comunitários. O Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas relacionou a segurança cidadã a fatores como desigualdade, exclusão e limitaesenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas destacou a conexão entre a segurança do cidadão, a desigualdade e a exclusão social. O relatório aponta que respostas eficazes dependem de intervenções de segurança combinadas com estratégias voltadas aos fatores que geram a insegurança nas instituições e comunidades.</p></div>
 
   
 
@@ -170,26 +169,21 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     
   </details>
 
+  
+
   <div class="relac">
     <b>Já publicamos sobre isso</b>
-    <a href="/materia/estados-de-emergencia-no-caribe-geram-debates-sobre-seguranca-e-desenv.html">Estados de emergência no Caribe geram debates sobre segurança e desenvolvimento<span>02/08/2026</span></a><a href="/materia/medidas-de-emergencia-e-seguranca-publica-impactam-o-desenvolvimento-n.html">Medidas de emergência e segurança pública impactam o desenvolvimento no Caribe<span>02/08/2026</span></a>
+    <a href="/materia/estados-de-emergencia-no-caribe-expoem-desafios-entre-seguranca-e-dese.html">Estados de emergência no Caribe expõem desafios entre segurança e desenvolvimento<span>02/08/2026</span></a><a href="/materia/estados-de-emergencia-no-caribe-geram-debates-sobre-seguranca-e-desenv.html">Estados de emergência no Caribe geram debates sobre segurança e desenvolvimento<span>02/08/2026</span></a><a href="/materia/estado-de-emergencia-em-trinidad-e-tobago-amplia-debate-sobre-seguranc.html">Estado de emergência em Trinidad e Tobago amplia debate sobre segurança no Caribe<span>02/08/2026</span></a>
   </div>
 
   <div class="acoes">
     <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
     <button id="bt-link">Copiar link</button>
     <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="ilm:estados-de-emergencia-no-caribe-impactam-seguranca-e-desenvolvimento-r" data-nivel="confirmado">Acompanhar este caso</button>
   </div>
 
-  
-  <div class="acoes">
-    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
-    <button id="bt-link">Copiar link</button>
-    <button id="bt-ouvir">Ouvir a matéria</button>
-    <button class="seg" id="bt-seguir" data-id="mat:estados-de-emergencia-no-caribe-impactam-seguranca-e-desenvolvimento-r" data-nivel="confirmado">Acompanhar este caso</button>
-  </div>
-
-<a class="voltar" href="/">← Voltar para a capa</a>
+  <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
 <script>
 (function(){
@@ -222,45 +216,45 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       lendo = true; ov.textContent = 'Parar';
     });
   } else if (ov) { ov.style.display = 'none'; }
-})();
-</script>
 
-<script>
-(function(){
-  var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
-  var u = location.href;
-
-  var zap = document.getElementById('bt-zap');
-  if (zap) zap.addEventListener('click', function(){
-    window.open('https://wa.me/?text=' + encodeURIComponent(t + '\n\n' + u), '_blank', 'noopener');
-  });
-
-  var lk = document.getElementById('bt-link');
-  if (lk) lk.addEventListener('click', function(){
-    var pronto = function(){ var v = lk.textContent; lk.textContent = 'Link copiado'; setTimeout(function(){ lk.textContent = v; }, 1800); };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(pronto, pronto);
-    else { var c = document.createElement('textarea'); c.value = u; document.body.appendChild(c); c.select();
-           try { document.execCommand('copy'); } catch(e){} document.body.removeChild(c); pronto(); }
-  });
-
-  var ov = document.getElementById('bt-ouvir');
-  if (ov && 'speechSynthesis' in window) {
-    var lendo = false;
-    ov.addEventListener('click', function(){
-      if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
-      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
-      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
-      f.lang = 'pt-BR'; f.rate = 1;
-      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
-      speechSynthesis.cancel(); speechSynthesis.speak(f);
-      lendo = true; ov.textContent = 'Parar';
-    });
-  } else if (ov) { ov.style.display = 'none'; }
-
+  // Acompanhar o caso. Quando o nivel de evidencia mudar — de "sem
+  // confirmacao" para "confirmado oficialmente" — o leitor e avisado ao
+  // voltar. E o desfecho: o capitulo que sempre sai pequeno.
   var sg = document.getElementById('bt-seguir');
   var ap = null;
-  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
-  if (sg) sg.addEventListener('click', function(){
+  try {
+    // A capa guarda o apelido em 'meridiano_apelido', como texto simples.
+    // Eu procurava em 'meridiano-leitor' esperando um objeto JSON — chave
+    // errada e formato errado, entao nunca achava e o botao dizia para
+    // escolher um apelido que ja existia.
+    ap = localStorage.getItem('meridiano_apelido') || null;
+    if (!ap) ap = (JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido) || null;
+  } catch(e){}
+
+  // Quando o id nao vem do robo, o proprio endereco da pagina serve: e unico e
+  // estavel. A versao anterior escondia o botao nesse caso — e o id chegava
+  // vazio em toda materia, entao o botao sumia sempre.
+  if (sg) {
+    if (!sg.dataset.id) sg.dataset.id = 'mat:' + location.pathname.split('/').pop().replace(/.html$/,'');
+    sg.addEventListener('click', function(){
+      if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
+      sg.disabled = true;
+      fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
+          nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          sg.disabled = false;
+          if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
+          else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
+        })
+        .catch(function(){ sg.disabled = false; });
+    });
+  }
+})();
+</script>
+</body>
+</html>on(){
     if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
     sg.disabled = true;
     fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
