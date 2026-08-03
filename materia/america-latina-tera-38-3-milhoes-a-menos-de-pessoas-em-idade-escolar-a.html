@@ -157,6 +157,23 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .fonte-box ul{margin:10px 0 0 18px}
 .voltar{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--tinta);padding:10px 15px;text-decoration:none;margin:10px 0 50px}
 .voltar:hover{background:var(--tinta);color:var(--papel)}
+
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
+.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
+.acoes button:hover{background:var(--tinta);color:var(--papel)}
+.acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.zap:hover{background:var(--verde);color:#fff}
+.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
+.acoes button.seg:hover{background:var(--sinal);color:#fff}
+.acoes button.seg.on{background:var(--sinal);color:#fff}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
+.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
 </style>
 </head>
 <body>
@@ -178,18 +195,6 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 <p>Segundo o relatório, a taxa de fecundidade regional passou de uma média de 5,8 filhos por mulher em 1950 para 1,8 nos últimos anos. Entre 2018 e 2023, Uruguai e Venezuela registraram queda de natalidade superior a 15%, enquanto Chile, Costa Rica e Argentina ultrapassaram 20%. No Brasil, dados do Censo Demográfico do Instituto Brasileiro de Geografia e Estatística, Ibge, apontam que o índice caiu para cerca de 1,55 filho por mulher, abaixo do nível de reposição populacional de 2,1.</p>
 <p>A redução é motivada por fatores como urbanização, maior especialização profissional e acadêmica feminina, acesso a métodos contraceptivos e altos custos associados à criação de filhos e moradia. Em países com declínio demográfico, as simulações indicam que os sistemas educacionais podem encolher entre 32% e 40% até 2050, com atenuação parcial em regiões receptoras de migrantes mais jovens.</p>
 <p>Até a metade do século, a queda demográfica poderá liberar cerca de 30% dos recursos financeiros por nível educacional. Para aproveitar essa verba, Unesco e Cepal recomendam reduzir o tamanho das turmas, universalizar a educação pré-escolar, fortalecer o ensino médio e técnico, melhorar a capacitação docente e desenvolver sistemas de informação georreferenciados para adaptar a infraestrutura escolar.</p></div>
-
-  
-
-  <div class="acoes">
-    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
-    <button id="bt-link">Copiar link</button>
-    <button id="bt-ouvir">Ouvir a matéria</button>
-    <button class="seg" id="bt-seguir" data-id="ilm:america-latina-tera-38-3-milhoes-a-menos-de-pessoas-em-idade-escolar-a" data-nivel="confirmado">Acompanhar este caso</button>
-    <button class="ctx" id="bt-ctx">Entender o contexto</button>
-  </div>
-  <div id="ctx-area"></div>
-
 
   
 
@@ -219,8 +224,19 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <a href="/materia/queda-da-natalidade-reduzira-populacao-em-idade-escolar-na-america-lat.html">Queda da natalidade reduzirá população em idade escolar na América Latina até 2050<span>03/08/2026</span></a><a href="/materia/queda-na-natalidade-reduzira-populacao-em-idade-escolar-na-america-lat.html">Queda na natalidade reduzirá população em idade escolar na América Latina até 2050<span>03/08/2026</span></a><a href="/materia/queda-da-natalidade-reduzira-populacao-escolar-na-america-latina-em-38.html">Queda da natalidade reduzirá população escolar na América Latina em 38,3 milhões até 2050<span>03/08/2026</span></a>
   </div>
 
-  <a class="voltar" href="/">← Voltar para a capa</a>
+  
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="mat:america-latina-tera-38-3-milhoes-a-menos-de-pessoas-em-idade-escolar-a" data-nivel="confirmado">Acompanhar este caso</button>
+    <button class="ctx" id="bt-ctx">Entender o contexto</button>
+  </div>
+  <div id="ctx-area"></div>
+
+<a class="voltar" href="/">← Voltar para a capa</a>
 </article>
+
 <script>
 (function(){
   var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
@@ -253,20 +269,13 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     });
   } else if (ov) { ov.style.display = 'none'; }
 
-  // Acompanhar o caso. Quando o nivel de evidencia mudar — de "sem
-  // confirmacao" para "confirmado oficialmente" — o leitor e avisado ao
-  // voltar. E o desfecho: o capitulo que sempre sai pequeno.
-  // Entender o contexto: informacao de fundo que a materia nao traz. Quem le
-  // "60 mil migrantes em Ceuta" e nao sabe o que e Ceuta nao entende nada — e
-  // a materia nao pode explicar, porque nota nao confirmada e registro do que
-  // circula, nao reportagem.
   var bc = document.getElementById('bt-ctx');
   var ca = document.getElementById('ctx-area');
   if (bc) bc.addEventListener('click', function(){
     bc.disabled = true; bc.textContent = 'procurando…';
     var res = document.querySelector('.linhafina');
     fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/.html$/,''),
+      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/\.html$/,''),
         titulo: t, resumo: res ? res.textContent : '' }) })
       .then(function(r){ return r.json(); })
       .then(function(j){
@@ -282,7 +291,6 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
         } else {
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
-        ca.scrollIntoView({ behavior:'smooth', block:'nearest' });
       })
       .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
   });
@@ -297,27 +305,20 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ap = localStorage.getItem('meridiano_apelido') || null;
     if (!ap) ap = (JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido) || null;
   } catch(e){}
-
-  // Quando o id nao vem do robo, o proprio endereco da pagina serve: e unico e
-  // estavel. A versao anterior escondia o botao nesse caso — e o id chegava
-  // vazio em toda materia, entao o botao sumia sempre.
-  if (sg) {
-    if (!sg.dataset.id) sg.dataset.id = 'mat:' + location.pathname.split('/').pop().replace(/.html$/,'');
-    sg.addEventListener('click', function(){
-      if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
-      sg.disabled = true;
-      fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
-          nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
-        .then(function(r){ return r.json(); })
-        .then(function(j){
-          sg.disabled = false;
-          if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
-          else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
-        })
-        .catch(function(){ sg.disabled = false; });
-    });
-  }
+  if (sg) sg.addEventListener('click', function(){
+    if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
+    sg.disabled = true;
+    fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
+        nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        sg.disabled = false;
+        if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
+        else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
+      })
+      .catch(function(){ sg.disabled = false; });
+  });
 })();
 </script>
 </body>
