@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ler sem se identificar — Meridiano</title>
+<meta name="description" content="Como o Meridiano personaliza a leitura sem pedir e-mail, nome ou telefone.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FFFFFF;--areia:#F7F6F3;--tinta:#0E0E0E;--tinta2:#555;--linha:#E2E2E2;--linha2:#C9C9C9;
+      --fraco:#8E8E8E;--rosso:#B34700;--verde:#1F6B4A;
+      --tit:'Playfair Display',Georgia,serif;--txt:'Source Serif 4',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--txt);line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--tinta);padding:18px 0;margin-bottom:40px}
+header .wrap{display:flex;align-items:baseline;gap:14px}
+header b{font-family:var(--tit);font-size:22px;font-weight:900;letter-spacing:-.02em}
+header a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);margin-left:auto;text-decoration:none}
+header a:hover{color:var(--tinta)}
+h1{font-family:var(--tit);font-size:clamp(30px,5.6vw,44px);font-weight:900;letter-spacing:-.028em;line-height:1.1;margin-bottom:16px}
+.sub{font-size:19px;color:var(--tinta2);margin-bottom:36px;line-height:1.55}
+h2{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+   border-bottom:1px solid var(--tinta);padding-bottom:9px;margin:38px 0 16px}
+p{margin-bottom:16px;font-size:17px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:8px 0 20px}
+.duas>div{padding:18px 20px}
+.duas>div+div{border-left:1px solid var(--linha)}
+.duas b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:11px}
+.duas .sim b{color:var(--verde)} .duas .nao b{color:var(--rosso)}
+.duas ul{list-style:none;font-size:15px;line-height:1.5}
+.duas li{margin-bottom:8px;padding-left:16px;position:relative}
+.duas li::before{content:'·';position:absolute;left:4px;font-weight:700}
+.duas .sim li::before{color:var(--verde)} .duas .nao li::before{color:var(--rosso)}
+@media(max-width:620px){.duas{grid-template-columns:1fr}.duas>div+div{border-left:0;border-top:1px solid var(--linha)}}
+.destaque{border-left:3px solid var(--tinta);padding:4px 0 4px 20px;margin:24px 0;font-size:17.5px;line-height:1.6}
+.volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:28px 0 60px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><a href="/">← capa</a></div></header>
+<div class="wrap">
+
+<h1>Ler sem se identificar</h1>
+<p class="sub">Todo jornal quer o seu e-mail. Todo agregador quer uma conta. Toda rede social quer um perfil. Aqui você inventa uma palavra e pronto.</p>
+
+<h2>O que pedimos e o que não pedimos</h2>
+<div class="duas">
+  <div class="sim"><b>o que guardamos</b>
+    <ul>
+      <li>um apelido que você inventa</li>
+      <li>um PIN de seis dígitos, guardado embaralhado</li>
+      <li>as matérias que você abriu</li>
+      <li>os casos que você marcou para acompanhar</li>
+    </ul></div>
+  <div class="nao"><b>o que nunca pedimos</b>
+    <ul>
+      <li>e-mail</li>
+      <li>nome</li>
+      <li>telefone</li>
+      <li>login por rede social</li>
+      <li>sua localização</li>
+    </ul></div>
+</div>
+
+<p>O apelido é uma etiqueta sem dono. Você sabe que é você; nós não temos como saber. Não existe campo no sistema para ligar aquele apelido a uma pessoa — não é promessa, é ausência de mecanismo.</p>
+
+<h2>Para que serve, então</h2>
+<p>Para o jornal abrir na sua praça, lembrar o que você já leu e avisar quando um caso que você acompanha mudar de estado. O PIN existe para isso funcionar também no celular ou em outro computador: mesmo apelido, mesmo PIN.</p>
+<p>Guardamos apenas uma impressão embaralhada do PIN, nunca o número. Por isso mesmo não há como recuperá-lo — se esquecer, é começar com outro apelido.</p>
+
+<h2>A diferença que importa</h2>
+<div class="destaque">A rede social aprende com o tempo que você fica na tela. O Meridiano aprende com o assunto e o lugar que te interessam.</div>
+<p>Não é detalhe técnico. O que prende alguém numa tela é a indignação, e é por isso que uma acusação circula em três países enquanto a absolvição sai em um jornal só. Um sistema que otimiza atenção vai sempre escolher o primeiro.</p>
+<p>Aqui o que o jornal se compromete a te mostrar é o desfecho — inclusive quando ele é chato, tardio e não rende clique nenhum. É o botão <b>acompanhar este caso</b>, que existe em toda matéria.</p>
+
+<h2>Apagar tudo</h2>
+<p>A qualquer momento você pode apagar o apelido e todo o histórico ligado a ele. Some do navegador e some do nosso lado. Não pedimos motivo e não há tela de retenção.</p>
+
+<a class="volta" href="/">← Voltar para a capa</a>
+</div>
+</body>
+</html>

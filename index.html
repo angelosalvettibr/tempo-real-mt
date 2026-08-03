@@ -77,6 +77,35 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
 /* Chamada da Linha do tempo. Nao e mais uma editoria: e a secao que carrega
    a tese do jornal, entao ganha bloco proprio logo abaixo da faixa de metodo. */
+/* BLOCOS COM SENTIDO
+   A grade uniforme dava o mesmo peso a uma nomeacao de secretario e a um
+   decreto de calamidade. Aqui a capa se divide por SENTIDO, nao por editoria:
+   o que tem documento, o que so circula, o dinheiro publico, os numeros.
+   Editoria e divisao de redacao — ninguem acorda querendo ler "regional". */
+.bloco{margin-top:40px}
+.bloco>.cab{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--tinta);padding-bottom:9px;margin-bottom:2px}
+.bloco>.cab h3{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.bloco>.cab .exp{font-family:var(--txt);font-size:13.5px;color:var(--fraco);letter-spacing:0;text-transform:none;font-weight:400}
+.bloco>.cab span.n{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--fraco)}
+.bloco.duvida>.cab{border-bottom-color:var(--fraco)}
+.bloco.duvida>.cab h3{color:var(--fraco)}
+.bloco.dinheiro>.cab{border-bottom-color:var(--oro)}
+.bloco.dinheiro>.cab h3{color:var(--oro)}
+
+/* Dentro de cada bloco a lista e mais compacta que a grade: bloco com muito
+   cartao grande vira parede e some a hierarquia que a gente acabou de criar. */
+.lin{display:block;padding:15px 0;border-bottom:1px solid var(--linha)}
+.lin:hover h4{color:var(--rosso)}
+.lin h4{font-family:var(--tit);font-size:19px;font-weight:700;line-height:1.24;letter-spacing:-.012em;margin:5px 0 6px}
+.lin p{font-size:14.5px;line-height:1.5;color:var(--tinta2)}
+.lin .pe{display:flex;gap:13px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.lin .pe .hora{font-family:var(--mono);font-size:9.5px;color:var(--fraco);letter-spacing:.05em}
+.lin .evid{margin-top:0}
+@media(min-width:820px){
+  .bloco .lista2{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+  .bloco .lista2 .lin:nth-last-child(-n+2):nth-child(odd){border-bottom:0}
+}
+
 .novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
 .novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
 .novid .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);
@@ -88,6 +117,17 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .novid .lista a:hover{color:var(--verde)}
 .novid .lista a em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--verde);display:block;margin-top:3px}
+/* Anonimato. E um argumento raro e a gente vinha subaproveitando: todo jornal
+   quer e-mail, todo agregador quer conta. Aqui nao existe campo para isso. */
+.anon-faixa{border-bottom:1px solid var(--linha);background:var(--areia)}
+.anon-faixa .wrap{display:flex;align-items:center;gap:20px;padding:16px 0;flex-wrap:wrap}
+.anon-faixa .ic{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--verde);border:1px solid var(--verde);padding:5px 10px;flex:none}
+.anon-faixa p{flex:1;min-width:250px;font-size:14.5px;line-height:1.55;color:var(--tinta2)}
+.anon-faixa p b{color:var(--tinta)}
+.anon-faixa a{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tinta2);border-bottom:1px solid var(--linha2);padding-bottom:2px}
+.anon-faixa a:hover{color:var(--tinta);border-color:var(--tinta)}
 .chamada{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--tinta);color:var(--papel)}
 .chamada .wrap{display:flex;align-items:center;gap:24px;padding:24px 0;flex-wrap:wrap}
 .chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
@@ -272,6 +312,14 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
 </header>
 
 <div class="novid" id="novid" hidden><div class="wrap"></div></div>
+
+<div class="anon-faixa">
+  <div class="wrap">
+    <span class="ic">sem cadastro</span>
+    <p><b>Aqui você lê sem se identificar.</b> O jornal aprende o que te interessa por assunto e por cidade — não por quanto tempo você fica na tela. E aprende ligado a um apelido que você inventa, sem e-mail, nome ou telefone.</p>
+    <a href="anonimo.html">como funciona</a>
+  </div>
+</div>
 
 <div class="chamada">
   <div class="wrap">
@@ -569,19 +617,54 @@ function pintar(){
     </div>
   </div>`;
 
-  if (resto.length) {
-    h += `<div class="secao"><h3>${filtro === 'capa' ? 'Edição' : esc(NOMES[filtro] || chapeuDe(resto[0]))}</h3><span>${resto.length} ${resto.length === 1 ? 'matéria' : 'matérias'}</span></div>`;
-    h += '<div class="grade">' + resto.map(i => `<a class="art cartao" href="${esc(i.link)}" data-id="${esc(i.id)}">
-      ${i.foto ? `<img class="mini" src="${esc(i.foto)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
-      <span class="chapeu">${esc(chapeuDe(i))}</span>
+  // Os blocos: cada um com um sentido que o leitor reconhece. A ordem importa
+  // — o que tem documento vem antes do que so circula.
+  const usados = new Set();
+  const pega = (fn, teto) => {
+    const r = [];
+    for (const i of resto) {
+      if (usados.has(i.id) || !fn(i)) continue;
+      usados.add(i.id); r.push(i);
+      if (r.length >= teto) break;
+    }
+    return r;
+  };
+
+  const DINHEIRO = /licita|pregao|preg[ãa]o|contrato|convenio|conv[êe]nio|or[çc]amento|milh[õo]|bilh[õo]|R\$|repasse|verba|gasto|despesa|receita|imposto|tribut/i;
+  const dinheiro = pega(i => DINHEIRO.test(i.titulo + ' ' + (i.resumo||'')), 6);
+  const semDoc   = pega(i => (i.nivel || '') === 'sem-confirmacao', 6);
+  const oResto   = resto.filter(i => !usados.has(i.id));
+
+  const linha = i => `<a class="lin" href="${esc(i.link)}" data-id="${esc(i.id)}">
+      <span class="chapeu">${esc(i.municipioNome || chapeuDe(i))}</span>
       ${cifra(i)}
-      <h3>${esc(i.titulo)}</h3>
+      <h4>${esc(i.titulo)}</h4>
       <p>${esc(i.resumo)}</p>
-      ${selo(i)}
-      <div class="hora">${esc(i.hora)}</div>
+      <div class="pe">${selo(i)}<span class="hora">${esc(i.hora)}</span></div>
       ${nasceu(i)}
-    </a>`).join('') + '</div>';
+    </a>`;
+
+  const bloco = (classe, titulo, explica, itens) => itens.length
+    ? `<div class="bloco ${classe}">
+         <div class="cab"><h3>${titulo}</h3><span class="exp">${explica}</span>
+           <span class="n">${itens.length}</span></div>
+         <div class="lista2">${itens.map(linha).join('')}</div>
+       </div>` : '';
+
+  h += bloco('dinheiro', 'Dinheiro público',
+             'contratos, licitações e gastos — com o documento à vista', dinheiro);
+
+  if (oResto.length) {
+    h += `<div class="bloco">
+        <div class="cab"><h3>${filtro === 'capa' ? 'Com documento' : esc(NOMES[filtro] || chapeuDe(oResto[0]))}</h3>
+          <span class="exp">o que encontramos registrado em fonte oficial</span>
+          <span class="n">${oResto.length}</span></div>
+        <div class="lista2">${oResto.map(linha).join('')}</div>
+      </div>`;
   }
+
+  h += bloco('duvida', 'Circulando, sem confirmação',
+             'a imprensa está dando — procuramos o documento e não achamos', semDoc);
 
   alvo.innerHTML = h;
 }
@@ -739,7 +822,14 @@ async function carregar(){
     $('#rodape').textContent = 'edição de ' + new Date(ED.gerado).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'});
   }
   const n = ED.numeros;
-  if(n) $('#stats').textContent = `${n.pauta} manchetes lidas · ${n.publicadas} matérias próprias · ${n.semFonte} sem fonte livre`;
+  // O metodo em numeros. Estava enterrado no painel; e o diferencial do
+  // jornal e cabe na faixa do topo, onde todo mundo ve.
+  if (n) {
+    const comDoc = ED.itens.filter(i => (i.nivel||'') === 'confirmado').length;
+    const semDoc = ED.itens.filter(i => (i.nivel||'') === 'sem-confirmacao').length;
+    $('#stats').textContent =
+      `hoje: ${n.pauta} manchetes lidas · ${comDoc} com documento · ${semDoc} sem confirmação`;
+  }
 }
 
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
