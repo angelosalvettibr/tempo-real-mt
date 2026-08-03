@@ -138,54 +138,48 @@ const SCRIPT = `
 `;
 
 const arquivos = (await readdir(PASTA)).filter(f => f.endsWith('.html'));
-let feitas = 0, puladas = 0, semAncora = 0;
+let feitas = 0, limpas = 0, semAncora = 0;
+
+// LIMPAR ANTES DE INJETAR
+//
+// As versoes anteriores deste script mudaram a condicao de "ja foi feito" a
+// cada correcao, e nenhuma reconhecia o trabalho da anterior. Resultado: tres
+// blocos de acoes, tres botoes de seguir e um </script> orfao na mesma pagina
+// — com o codigo do ultimo bloco vazando como texto na tela.
+//
+// A correcao e simples e definitiva: apaga tudo o que este script ja pos, e
+// poe uma vez so. Idempotente de verdade, nao por deteccao.
+const limparInjecoes = h => h
+  .replace(/<div class="acoes">[\s\S]*?<\/div>\s*/g, '')
+  .replace(/<div id="ctx-area">\s*<\/div>\s*/g, '')
+  .replace(/<script>\s*\(function\(\)\{[\s\S]*?\}\)\(\);\s*<\/script>\s*/g, '')
+  .replace(/(<\/script>\s*){2,}/g, '</script>\n');
+
+// Fechamentos sem abertura correspondente. Um </script> orfao faz o navegador
+// encerrar o bloco cedo e o resto do codigo vaza como texto na pagina — que e
+// exatamente o que estava aparecendo embaixo das materias.
+const tirarOrfaos = h => {
+  let abre = (h.match(/<script[\s>]/g) || []).length;
+  let fecha = (h.match(/<\/script>/g) || []).length;
+  while (fecha > abre) {
+    h = h.replace(/<\/script>\s*/, '');
+    fecha--;
+  }
+  return h;
+};
 
 for (const arq of arquivos) {
   const caminho = `${PASTA}/${arq}`;
   let h = await readFile(caminho, 'utf8');
 
-  // Corrige tambem as paginas que receberam o botao com id vazio — nelas ele
-  // existia mas se escondia sozinho.
-  // Paginas que ja receberam o botao mas leem a chave errada do navegador.
-  if (h.includes("localStorage.getItem('meridiano-leitor')") && !h.includes("getItem('meridiano_apelido')")) {
-    h = h.replace(
-      "ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null;",
-      "ap = localStorage.getItem('meridiano_apelido') || null;");
-    h = h.replace(/data-id=""/g, `data-id="mat:${arq.replace(/\.html$/,'')}"`);
-    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
-    feitas++; continue;
-  }
+  const tinha = (h.match(/class="acoes"/g) || []).length;
+  if (tinha > 1) limpas++;
+  h = tirarOrfaos(limparInjecoes(h));
 
-  if (h.includes('data-id=""')) {
-    h = h.replace(/data-id=""/g, `data-id="mat:${arq.replace(/\.html$/,'')}"`);
-    h = h.replace(/if \(sg && !sg\.dataset\.id\) \{ sg\.style\.display = 'none'; \}\s*else if \(sg\) \{/, 'if (sg) {');
-    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
-    feitas++; continue;
-  }
-  // Ja tem os botoes de compartilhar e seguir, mas nao o de contexto.
-  if (h.includes('bt-seguir') && !h.includes('bt-ctx')) {
-    h = h.replace('</div>\n  <a class="voltar"',
-      `  <button class="ctx" id="bt-ctx">Entender o contexto</button>\n  </div>\n  <div id="ctx-area"></div>\n  <a class="voltar"`);
-    if (!h.includes('bt-ctx')) {
-      // molde diferente: injeta antes do link de volta
-      const v = h.match(/<a class="voltar"[^>]*>[\s\S]*?<\/a>/);
-      if (v) h = h.replace(v[0], '<div class="acoes"><button class="ctx" id="bt-ctx">Entender o contexto</button></div>\n<div id="ctx-area"></div>\n' + v[0]);
-    }
-    if (h.includes('</style>')) h = h.replace('</style>', CSS + '</style>');
-    h = h.includes('</body>') ? h.replace('</body>', SCRIPT + '</body>') : h + SCRIPT;
-    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
-    feitas++; continue;
-  }
-
-  if (h.includes('bt-seguir')) { puladas++; continue; }
-
-  // O link de volta e a ancora: existe em todas as materias, do primeiro dia
-  // ate hoje, e marca exatamente o fim do conteudo.
   const volta = h.match(/<a class="voltar"[^>]*>[\s\S]*?<\/a>/);
   if (!volta) { semAncora++; continue; }
 
   h = h.replace(volta[0], BLOCO(arq) + '\n' + volta[0]);
-
   if (h.includes('</style>')) h = h.replace('</style>', CSS + '</style>');
   h = h.includes('</body>') ? h.replace('</body>', SCRIPT + '</body>') : h + SCRIPT;
 
@@ -196,7 +190,7 @@ for (const arq of arquivos) {
 console.log('');
 console.log(`  RETROFIT ${SIMULAR ? '(simulacao, nada gravado)' : ''}`);
 console.log(`  ${arquivos.length} materias no acervo`);
-console.log(`  ${feitas} receberam os botoes`);
-console.log(`  ${puladas} ja tinham`);
+console.log(`  ${feitas} refeitas do zero`);
+console.log(`  ${limpas} tinham blocos duplicados — corrigidas`);
 if (semAncora) console.log(`  ${semAncora} sem o link de volta — nao alteradas`);
 console.log('');

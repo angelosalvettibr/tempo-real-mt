@@ -317,7 +317,22 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
 .relac a:hover{color:var(--sinal)}
 .relac span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--fraco);margin-top:4px}
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
+/* QUATRO CAMADAS: ler, agir, verificar, explorar.
+   Antes o leitor atravessava nove blocos de bastidor — onde circulou, resgate,
+   apuracao, fonte, cronologia — para so entao encontrar os botoes. A ordem
+   estava invertida: o que o leitor faz vem antes do que a redacao registra. */
+.proced{border:1px solid var(--linha);margin:30px 0;background:var(--areia,#F7F6F3)}
+.proced summary{cursor:pointer;padding:15px 20px;list-style:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.proced summary::-webkit-details-marker{display:none}
+.proced summary::after{content:'ver';font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco);margin-left:auto;border-bottom:1px solid var(--linha2)}
+.proced[open] summary::after{content:'ocultar'}
+.proced summary b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta)}
+.proced summary span{font-family:'Source Serif 4',Georgia,serif;font-size:13.5px;color:var(--fraco)}
+.proced summary:hover b{color:var(--sinal)}
+.proced .dentro{padding:0 20px 6px;border-top:1px solid var(--linha)}
+.proced .dentro>div,.proced .dentro>details{margin-top:20px}
+.proced .fonte-box{margin-bottom:20px}
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0 4px;padding:16px 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
 .acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
 .acoes button:hover{background:var(--tinta);color:var(--papel)}
 .acoes button.zap{border-color:var(--verde);color:var(--verde)}
@@ -413,12 +428,24 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <div class="nao"><b>O que falta para confirmar</b><ul>${(m.falta||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
   </div>` : ''}
 
-  ${m.ondeCirculou?.length ? `<div class="circulou">
-    <b>Onde esta informação circulou</b>
-    <p class="obs">Não reproduzimos o texto de ninguém. Listamos quem publicou, com o endereço original, para você conferir na fonte.</p>
-    <ol>${m.ondeCirculou.map(v => `<li><span class="vc">${esc(v.veiculo)}</span>${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener nofollow">${esc(v.titulo)}</a>` : esc(v.titulo)}</li>`).join('')}</ol>
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="${esc(m.id || '')}" data-nivel="${esc(m.nivel || 'sem-confirmacao')}">Acompanhar este caso</button>
+    <button class="ctx" id="bt-ctx">Entender o contexto</button>
+  </div>
+  <div id="ctx-area"></div>
+
+
+  ${m.contexto ? `<div class="contexto">
+    <b>O que isso quer dizer</b>
+    <p>${esc(m.contexto)}</p>
   </div>` : ''}
 
+  <details class="proced">
+    <summary><b>Como esta matéria foi apurada</b><span>procedência, checagem e documento</span></summary>
+    <div class="dentro">
   ${m.resgatada ? `<div class="resgate">
     <b>Como esta matéria chegou aqui</b>
     <p>Esta história começou circulando na imprensa sem registro oficial. Em vez de publicá-la como rumor, procuramos o documento em ${m.resgatada.procuradoEm.length} ${m.resgatada.procuradoEm.length === 1 ? 'órgão público' : 'órgãos públicos'} e encontramos em ${esc(m.resgatada.orgao)}. O texto acima foi escrito a partir desse registro — o endereço do original está no fim da página.</p>
@@ -453,9 +480,10 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     </div>
   </div>`; })() : ''}
 
-  ${m.contexto ? `<div class="contexto">
-    <b>O que isso quer dizer</b>
-    <p>${esc(m.contexto)}</p>
+  ${m.ondeCirculou?.length ? `<div class="circulou">
+    <b>Onde esta informação circulou</b>
+    <p class="obs">Não reproduzimos o texto de ninguém. Listamos quem publicou, com o endereço original, para você conferir na fonte.</p>
+    <ol>${m.ondeCirculou.map(v => `<li><span class="vc">${esc(v.veiculo)}</span>${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener nofollow">${esc(v.titulo)}</a>` : esc(v.titulo)}</li>`).join('')}</ol>
   </div>` : ''}
 
   <details class="fonte-box">
@@ -467,6 +495,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
         : `Reescrevemos com nossas palavras a partir do material publicado por ${esc(m.origemNome || 'fonte que autoriza reprodução')}. Nenhum número foi alterado: todos constam do original, cujo endereço está abaixo.`}
     ${c.link ? `<br><br>Documento: <a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.link)}</a>` : ''}
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+  </details>
+
+    </div>
   </details>
 
   ${m.cronologia?.length ? `<div class="crono">
@@ -483,15 +514,6 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <b>Já publicamos sobre isso</b>
     ${m.relacionadas.map(r => `<a href="${esc(r.link)}">${esc(r.titulo)}${r.dia ? `<span>${esc(r.dia.split('-').reverse().join('/'))}</span>` : ''}</a>`).join('')}
   </div>` : ''}
-
-  <div class="acoes">
-    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
-    <button id="bt-link">Copiar link</button>
-    <button id="bt-ouvir">Ouvir a matéria</button>
-    <button class="seg" id="bt-seguir" data-id="${esc(m.id || '')}" data-nivel="${esc(m.nivel || 'sem-confirmacao')}">Acompanhar este caso</button>
-    <button class="ctx" id="bt-ctx">Entender o contexto</button>
-  </div>
-  <div id="ctx-area"></div>
 
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
