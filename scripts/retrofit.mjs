@@ -75,7 +75,14 @@ const SCRIPT = `
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;
-  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
+  try {
+    // A capa guarda o apelido em 'meridiano_apelido', como texto simples.
+    // Eu procurava em 'meridiano-leitor' esperando um objeto JSON — chave
+    // errada e formato errado, entao nunca achava e o botao dizia para
+    // escolher um apelido que ja existia.
+    ap = localStorage.getItem('meridiano_apelido') || null;
+    if (!ap) ap = (JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido) || null;
+  } catch(e){}
   if (sg) sg.addEventListener('click', function(){
     if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
     sg.disabled = true;
@@ -103,6 +110,16 @@ for (const arq of arquivos) {
 
   // Corrige tambem as paginas que receberam o botao com id vazio — nelas ele
   // existia mas se escondia sozinho.
+  // Paginas que ja receberam o botao mas leem a chave errada do navegador.
+  if (h.includes("localStorage.getItem('meridiano-leitor')") && !h.includes("getItem('meridiano_apelido')")) {
+    h = h.replace(
+      "ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null;",
+      "ap = localStorage.getItem('meridiano_apelido') || null;");
+    h = h.replace(/data-id=""/g, `data-id="mat:${arq.replace(/\.html$/,'')}"`);
+    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
+    feitas++; continue;
+  }
+
   if (h.includes('data-id=""')) {
     h = h.replace(/data-id=""/g, `data-id="mat:${arq.replace(/\.html$/,'')}"`);
     h = h.replace(/if \(sg && !sg\.dataset\.id\) \{ sg\.style\.display = 'none'; \}\s*else if \(sg\) \{/, 'if (sg) {');

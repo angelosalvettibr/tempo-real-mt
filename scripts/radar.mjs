@@ -519,7 +519,14 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   // voltar. E o desfecho: o capitulo que sempre sai pequeno.
   var sg = document.getElementById('bt-seguir');
   var ap = null;
-  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
+  try {
+    // A capa guarda o apelido em 'meridiano_apelido', como texto simples.
+    // Eu procurava em 'meridiano-leitor' esperando um objeto JSON — chave
+    // errada e formato errado, entao nunca achava e o botao dizia para
+    // escolher um apelido que ja existia.
+    ap = localStorage.getItem('meridiano_apelido') || null;
+    if (!ap) ap = (JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido) || null;
+  } catch(e){}
 
   // Quando o id nao vem do robo, o proprio endereco da pagina serve: e unico e
   // estavel. A versao anterior escondia o botao nesse caso — e o id chegava
