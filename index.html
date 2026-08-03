@@ -158,11 +158,21 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .assuntos .add button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
   background:var(--tinta);color:var(--papel);border:0;padding:10px 17px;cursor:pointer}
 .assuntos .dica{font-size:13px;color:var(--fraco);margin-top:10px;line-height:1.5}
-.assuntos .sugs{margin-top:11px;font-size:13px;color:var(--fraco)}
+.assuntos .sugs{margin-top:11px;font-size:13px;color:var(--fraco);display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .assuntos .sugs button{background:none;border:1px dashed var(--linha2);color:var(--tinta2);
-  font-family:var(--mono);font-size:10.5px;padding:5px 10px;margin:0 5px 5px 0;cursor:pointer}
+  font-family:var(--mono);font-size:10.5px;padding:6px 11px;margin:0;cursor:pointer}
 .assuntos .sugs button:hover{border-style:solid;border-color:var(--tinta);color:var(--tinta)}
 .assuntos .erro{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:9px;min-height:14px}
+.afina{border:1px solid var(--tinta);background:var(--papel);padding:15px 17px;margin-top:13px}
+.afina b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosso);display:block;margin-bottom:8px}
+.afina p{font-size:15.5px;line-height:1.5;margin-bottom:11px}
+.afina .resp{display:flex;gap:8px;flex-wrap:wrap}
+.afina .resp input{flex:1;min-width:180px;font-family:var(--txt);font-size:15px;border:1px solid var(--linha2);padding:9px 12px}
+.afina .resp button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--tinta);color:var(--papel);border:0;padding:9px 15px;cursor:pointer}
+.afina .prop{background:var(--areia);padding:11px 14px;margin-bottom:11px;font-size:15px;line-height:1.5}
+.afina .prop code{font-family:var(--mono);font-size:14px;background:var(--papel);border:1px solid var(--linha);padding:2px 7px}
+.afina .bts{display:flex;gap:8px;flex-wrap:wrap}
+.afina .bts button.nao{background:none;color:var(--tinta2);border:1px solid var(--linha2)}
 
 .bloco{margin-top:40px}
 .bloco>.cab{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--tinta);padding-bottom:9px;margin-bottom:2px}
@@ -577,6 +587,33 @@ function montarCidades(doEstadoTodas){
 
 let carregadoEm = 0;
 let assuntos = [];   // o que o leitor escolheu acompanhar
+let acervo = null;   // arquivo dos ultimos dias, carregado sob demanda
+
+// O jornal guarda tudo desde que comecou, e o leitor nunca teve acesso. Sem
+// isto, definir um assunto novo devolvia uma tela vazia ate a rodada seguinte
+// — e a pessoa nao tinha como saber se a regra dela funcionava.
+async function carregarAcervo(){
+  if (acervo) return acervo;
+  const mes = new Date().toISOString().slice(0,7);
+  const antes = new Date(Date.now() - 31*86400000).toISOString().slice(0,7);
+  const meses = [...new Set([mes, antes])];
+  const ufs = ['br','mundo', ...Object.keys(ESTADOS)];
+
+  const pedidos = [];
+  for (const uf of ufs) for (const m of meses)
+    pedidos.push(fetch(`dados/arquivo/${uf}-${m}.json?t=${Date.now()}`, { cache:'no-store' })
+      .then(r => r.ok ? r.json() : null).catch(() => null));
+
+  const blocos = (await Promise.all(pedidos)).filter(Boolean);
+  const vistos = new Set();
+  const corte = Date.now() - 7*86400000;   // sete dias: mais que isso vira arquivo, nao noticia
+
+  acervo = blocos.flatMap(b => b.itens || [])
+    .filter(i => i.titulo && i.iso && Date.parse(i.iso) > corte)
+    .filter(i => { const k = i.id || i.titulo; return !vistos.has(k) && vistos.add(k); })
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+  return acervo;
+}
 
 // Compara um titulo com um assunto escrito a mao. Nao e busca exata: quem
 // escreve "projecoes" tem que achar "projecao" e "projetado".
@@ -597,6 +634,69 @@ async function carregarAssuntos(){
     assuntos = ((await r.json()).assuntos) || [];
   } catch { assuntos = []; }
   const bt = $('#btMeu'); if (bt) bt.hidden = !leitor.apelido;
+}
+
+// O leitor escreve em linguagem natural; o agente devolve um termo que a
+// busca entende. Uma pergunta, no maximo — duas ja viram formulario.
+let afinandoBruto = '';
+
+async function afinar(bruto, resposta){
+  const cx = document.getElementById('as-afina');
+  if (!cx) return;
+  afinandoBruto = bruto;
+  cx.innerHTML = '<div class="afina"><b>pensando</b><p>Vendo como transformar isso em busca…</p></div>';
+
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'afinar', bruto, resposta: resposta || '' }) });
+    const j = await r.json();
+
+    if (j.pergunta) {
+      cx.innerHTML = `<div class="afina">
+        <b>uma pergunta</b>
+        <p>${esc(j.pergunta)}</p>
+        <div class="resp">
+          <input id="af-resp" placeholder="responda em poucas palavras">
+          <button id="af-ok">responder</button>
+        </div></div>`;
+      const mandar = () => {
+        const v = document.getElementById('af-resp').value.trim();
+        if (v) afinar(afinandoBruto, v);
+      };
+      document.getElementById('af-ok').addEventListener('click', mandar);
+      document.getElementById('af-resp').addEventListener('keydown', e => { if (e.key === 'Enter') mandar(); });
+      document.getElementById('af-resp').focus();
+      return;
+    }
+
+    // Mostrar quantas materias existem HOJE com aquele termo. Sem isso a
+    // pessoa so descobre que a regra nao funciona no dia seguinte.
+    const base = [...ED.itens, ...((acervo || []).filter(a => !ED.itens.some(i => i.id === a.id)))];
+    const quantas = base.filter(i => bateAssunto(i.titulo + ' ' + (i.resumo||''), j.termo)).length;
+
+    cx.innerHTML = `<div class="afina">
+      <b>proposta</b>
+      <div class="prop">Acompanhar <code>${esc(j.termo)}</code>${j.explica ? ` — ${esc(j.explica)}` : ''}<br>
+        <span style="font-size:13.5px;color:var(--fraco)">${quantas
+          ? `${quantas} ${quantas === 1 ? 'matéria encontrada' : 'matérias encontradas'} nos últimos sete dias.`
+          : 'Nenhuma matéria nos últimos sete dias — pode ser assunto que ainda não apareceu, ou termo específico demais.'}</span></div>
+      <div class="bts">
+        <button id="af-usar">acompanhar assim</button>
+        <button class="nao" id="af-outro">deixa, escrevo de novo</button>
+      </div></div>`;
+
+    document.getElementById('af-usar').addEventListener('click', () => {
+      cx.innerHTML = '';
+      mexerAssunto('somar', j.termo);
+    });
+    document.getElementById('af-outro').addEventListener('click', () => {
+      cx.innerHTML = '';
+      document.getElementById('as-novo')?.focus();
+    });
+  } catch {
+    cx.innerHTML = '';
+    mexerAssunto('somar', bruto);   // falhando o agente, vale o que ele escreveu
+  }
 }
 
 async function mexerAssunto(por, termo){
@@ -702,7 +802,7 @@ function pintar(){
 
   // A aba "Para voce" e outra pagina, nao um filtro sobre a capa. A capa
   // continua igual para todo mundo, editada pelo criterio do jornal.
-  if (filtro === 'meu') { pintarMeu(); return; }
+  if (filtro === 'meu') { carregarAcervo().then(() => pintarMeu()); return; }
 
   let lista = filtro === 'capa'
     ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
@@ -875,11 +975,14 @@ function pintarMeu(){
     </div>
     <p class="dica">Escreva o que está te interessando agora. Assunto muito amplo, como “política”, traz matéria demais — termos específicos funcionam melhor. Você tira quando quiser.</p>
     ${sugs.length ? `<div class="sugs">apareceram hoje: ${sugs.map(w => `<button data-sug="${esc(w)}">${esc(w)}</button>`).join('')}</div>` : ''}
+    <div id="as-afina"></div>
     <p class="erro" id="as-erro"></p>
   </div>`;
 
-  // O que saiu hoje em cada assunto
-  const todos = [...ED.itens];
+  // Edicao de hoje mais o acervo dos ultimos sete dias. Assunto recem-criado
+  // ja aparece com o que existe, em vez de tela vazia ate amanha.
+  const antigos = (acervo || []).filter(a => !ED.itens.some(i => i.id === a.id));
+  const todos = [...ED.itens, ...antigos];
   let achou = 0;
   for (const a of assuntos) {
     const casam = todos.filter(i => bateAssunto(i.titulo + ' ' + (i.resumo||''), a.termo)).slice(0, 8);
@@ -887,31 +990,34 @@ function pintarMeu(){
     achou += casam.length;
     h += `<div class="bloco">
       <div class="cab"><h3>${esc(a.termo)}</h3>
-        <span class="exp">o que saiu hoje sobre este assunto</span>
+        <span class="exp">o que saiu sobre este assunto nos últimos dias</span>
         <span class="n">${casam.length}</span></div>
-      <div class="lista2">${casam.map((i,k) => `<a class="lin${k===0?' top':''}" href="${esc(i.link)}" data-id="${esc(i.id)}">
+      <div class="lista2">${casam.map((i,k) => {
+        const dias = Math.floor((Date.now() - Date.parse(i.iso)) / 86400000);
+        const quando = dias >= 1 ? (dias === 1 ? 'ontem' : `há ${dias} dias`) : (i.hora || '');
+        return `<a class="lin${k===0?' top':''}" href="${esc(i.link)}" data-id="${esc(i.id)}">
         <span class="chapeu">${esc(i.municipioNome || chapeuDe(i))}</span>
         ${cifra(i)}
         <h4>${esc(i.titulo)}</h4>
-        <p>${esc(i.resumo)}</p>
-        <div class="pe">${selo(i)}<span class="hora">${esc(i.hora)}</span></div>
-      </a>`).join('')}</div>
+        <p>${esc(i.resumo || '')}</p>
+        <div class="pe">${selo(i)}<span class="hora">${esc(quando)}</span></div>
+      </a>`; }).join('')}</div>
     </div>`;
   }
 
   if (assuntos.length && !achou) {
-    h += `<p class="aviso">Nada novo nos seus assuntos nas últimas 24 horas.<br>
-      <span style="font-size:14px">Isso também é informação: o assunto não voltou hoje.</span></p>`;
+    h += `<p class="aviso">Nada sobre os seus assuntos nos últimos sete dias.<br>
+      <span style="font-size:14px">Isso também é informação — mas vale conferir se o termo não está específico demais. “Fifa e Uefa” exige as duas palavras na mesma matéria.</span></p>`;
   }
 
   alvo.innerHTML = h;
 
   document.getElementById('as-add')?.addEventListener('click', () => {
     const c = document.getElementById('as-novo');
-    if (c.value.trim()) mexerAssunto('somar', c.value.trim());
+    if (c.value.trim()) { afinar(c.value.trim()); c.value = ''; }
   });
   document.getElementById('as-novo')?.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && e.target.value.trim()) mexerAssunto('somar', e.target.value.trim());
+    if (e.key === 'Enter' && e.target.value.trim()) { afinar(e.target.value.trim()); e.target.value = ''; }
   });
   alvo.querySelectorAll('[data-tirar]').forEach(b =>
     b.addEventListener('click', () => mexerAssunto('tirar', b.dataset.tirar)));
