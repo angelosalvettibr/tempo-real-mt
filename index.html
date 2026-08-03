@@ -75,8 +75,6 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .cidades button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
 .cidades button i{font-style:normal;opacity:.6;margin-left:5px}
 .cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
-/* Linha do tempo nao e editoria do robo: e secao propria, com metodo proprio.
-   Por isso entra na nav com marca visual diferente dos botoes de editoria. */
 /* Chamada da Linha do tempo. Nao e mais uma editoria: e a secao que carrega
    a tese do jornal, entao ganha bloco proprio logo abaixo da faixa de metodo. */
 .novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
@@ -95,7 +93,7 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--papel);opacity:.62;flex:none;border-right:1px solid rgba(255,255,255,.22);padding-right:20px}
 .chamada .txt{flex:1;min-width:240px}
-.chamada .txt b{display:block;font-family:var(--display,Georgia),Georgia,serif;font-size:21px;
+.chamada .txt b{display:block;font-family:var(--tit);font-size:21px;
   font-weight:700;line-height:1.24;letter-spacing:-.01em;margin-bottom:5px}
 .chamada .txt span{font-size:14.5px;opacity:.78;line-height:1.5}
 .chamada a{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
@@ -588,11 +586,17 @@ function pintar(){
   alvo.innerHTML = h;
 }
 
+// Sobrou de uma versao antiga da capa: procurava #boxDescarte, que nao existe
+// mais no HTML. Como roda fora do try, o erro interrompia tudo o que vinha
+// depois — e era por isso que a faixa do topo ficava em "atualizado —" e as
+// estatisticas nunca apareciam.
 function pintarDescarte(){
+  const caixa = $('#boxDescarte'), lista = $('#listaDescarte');
+  if (!caixa || !lista) return;
   const p = ED.pautas || [];
   if(!p.length) return;
-  $('#boxDescarte').style.display = '';
-  $('#listaDescarte').innerHTML = p.slice(0,18).map(x => {
+  caixa.style.display = '';
+  lista.innerHTML = p.slice(0,18).map(x => {
     const eco = x.quentura >= 1
       ? ` <span style="color:var(--rosso)">· ${x.quentura+1} veículos deram</span>` : '';
     return `<li><b>${esc(x.veiculo)}${eco}</b>${esc(x.titulo)}</li>`;
