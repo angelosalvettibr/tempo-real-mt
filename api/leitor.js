@@ -14,6 +14,7 @@ import { scryptSync, randomBytes, timingSafeEqual } from 'node:crypto';
 const URL_KV   = process.env.KV_REST_API_URL   || '';
 const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
 // Booleano de verdade. Antes devolvia o proprio token, que vazava na resposta.
+const CHAVE_IA = process.env.GEMINI_API_KEY || '';
 const ligado = () => Boolean(URL_KV && TOKEN_KV);
 
 // Uma chamada ao Redis pela API REST do Upstash.
@@ -308,6 +309,65 @@ export default async function handler(req, res){
       acompanhando,
       historico: historico.slice(0, 40).map(h => ({ id:h.id, titulo:h.t, editoria:h.e, uf:h.uf, nivel:h.n, quando:h.q }))
     });
+  }
+
+  /* --------------------------------------------- afinar o assunto --------
+     "Fifa e Uefa problemas" nao casa com nada: exige as tres palavras na
+     mesma materia, e "problemas" nunca esta num release oficial. O que a
+     pessoa queria era o conflito entre as duas — e isso nenhuma caixa de
+     texto captura sozinha.
+
+     Aqui o agente le o que ela escreveu, faz UMA pergunta curta quando
+     precisa, e devolve um termo que funciona de verdade. Duas perguntas ja
+     viram formulario e cansam.                                             */
+  if (acao === 'afinar') {
+    if (!CHAVE_IA) return res.status(200).json({ ok:true, termo: String(corpo.bruto||'').trim() });
+
+    const bruto = String(corpo.bruto || '').trim().slice(0, 200);
+    const resposta = String(corpo.resposta || '').trim().slice(0, 200);
+    if (bruto.length < 3) return res.status(200).json({ ok:false, msg:'escreva um pouco mais' });
+
+    const prompt = `Você ajuda o leitor de um jornal a transformar um interesse em um TERMO DE BUSCA que funcione.
+
+Como a busca funciona: o termo é comparado com o título e o resumo de cada matéria. TODAS as palavras do termo precisam aparecer. Palavras genéricas — problemas, notícias, situação, sobre, caso — nunca aparecem em título de matéria e fazem a busca não encontrar nada.
+
+O leitor escreveu: "${bruto}"
+${resposta ? `Ele respondeu à sua pergunta anterior: "${resposta}"` : ''}
+
+Sua tarefa:
+1. Se o que ele escreveu já funciona como termo, devolva-o limpo — sem palavras genéricas.
+2. Se estiver ambíguo e uma pergunta resolveria, faça UMA pergunta curta e objetiva.
+3. Nunca faça mais de uma pergunta. Se ele já respondeu uma, decida.
+
+FORMATO — exatamente isto, sem markdown:
+PERGUNTA: (uma pergunta curta, ou a palavra NENHUMA)
+TERMO: (o termo de busca final, 1 a 4 palavras, sem genéricas)
+EXPLICA: (uma frase dizendo o que esse termo vai trazer)`;
+
+    try {
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
+        method:'POST', headers:{ 'Content-Type':'application/json' },
+        body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }],
+          generationConfig:{ temperature:0.3, maxOutputTokens:600 } })
+      });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json();
+      const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '').replace(/\*\*/g,'').trim();
+
+      const perg = (t.match(/PERGUNTA\s*:\s*(.+)/i)?.[1] || '').trim();
+      const termo = (t.match(/TERMO\s*:\s*(.+)/i)?.[1] || '').trim();
+      const expl = (t.match(/EXPLICA\s*:\s*(.+)/i)?.[1] || '').trim();
+
+      return res.status(200).json({
+        ok: true,
+        pergunta: (!perg || /^nenhuma/i.test(perg)) ? null : perg,
+        termo: termo || bruto,
+        explica: expl || null
+      });
+    } catch (e) {
+      // Falhando a IA, o termo do leitor vale — melhor que travar.
+      return res.status(200).json({ ok:true, termo: bruto, pergunta:null });
+    }
   }
 
   /* ------------------------------------------------ assuntos seguidos ----
