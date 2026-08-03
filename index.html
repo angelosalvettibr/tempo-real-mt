@@ -629,11 +629,40 @@ async function carregarAcervo(){
 // escreve "projecoes" tem que achar "projecao" e "projetado".
 const bateAssunto = (texto, termo) => {
   const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  const t = sa(texto);
   const palavras = sa(termo).split(/\s+/).filter(p => p.length >= 3);
   if (!palavras.length) return false;
-  // todas as palavras do assunto precisam aparecer, pelo radical
-  return palavras.every(p => t.includes(p.slice(0, Math.max(4, p.length - 2))));
+
+  // O radical vale so no COMECO de palavra. Procurar em qualquer posicao era
+  // desastre: "Italia" vira o radical "ital", e ai casava com hospITAL,
+  // capITAL, diGITAL, distrITAL — foi assim que uma busca por Italia trouxe
+  // Cuiaba, Porto Alegre e Volta Redonda.
+  const doTexto = sa(texto).split(/[^a-z0-9]+/).filter(Boolean);
+
+  return palavras.every(p => {
+    const raiz = p.length <= 5 ? p : p.slice(0, p.length - 2);
+    return doTexto.some(w => w.startsWith(raiz));
+  });
+};
+
+// Duas materias sao a mesma historia? Usado para nao mostrar tres versoes do
+// mesmo fato — o robo as vezes gera variacoes em rodadas seguidas e o filtro
+// dele compara titulo exato, que nao pega "NASA apresenta" e "NASA exibe".
+const mesmaHistoria = (a, b) => {
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const ch = x => [...new Set(sa(x).split(/[^a-z0-9]+/).filter(w => w.length >= 4).map(w => w.slice(0,6)))];
+  const A = ch(a), B = ch(b);
+  if (A.length < 3 || B.length < 3) return false;
+  return A.filter(w => B.includes(w)).length / Math.min(A.length, B.length) >= 0.7;
+};
+
+// Fica a mais antiga de cada grupo: e a que noticiou primeiro.
+const semRepetidas = lista => {
+  const fora = [];
+  for (const i of [...lista].sort((a,b) => Date.parse(a.iso) - Date.parse(b.iso))) {
+    if (fora.some(j => mesmaHistoria(j.titulo, i.titulo))) continue;
+    fora.push(i);
+  }
+  return fora.sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
 };
 
 async function carregarAssuntos(){
@@ -995,7 +1024,7 @@ function pintarMeu(){
   const todos = [...ED.itens, ...antigos];
   let achou = 0;
   for (const a of assuntos) {
-    const casam = todos.filter(i => bateAssunto(i.titulo + ' ' + (i.resumo||''), a.termo)).slice(0, 8);
+    const casam = semRepetidas(todos.filter(i => bateAssunto(i.titulo + ' ' + (i.resumo||''), a.termo))).slice(0, 10);
     if (!casam.length) continue;
     achou += casam.length;
     h += `<div class="bloco">
