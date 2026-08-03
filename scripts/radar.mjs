@@ -350,6 +350,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
 .acoes button.seg:hover{background:var(--sinal);color:#fff}
 .acoes button.seg.on{background:var(--sinal);color:#fff}
+.seg-nota{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.55;
+  color:var(--tinta2);margin:12px 0 0;padding-left:13px;border-left:2px solid var(--sinal)}
+.seg-nota a{color:var(--sinal)}
 .acoes button.zap:hover{background:var(--verde);color:#fff}
 .saber{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:28px 0}
 .saber>div{padding:16px 19px}
@@ -608,8 +611,20 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
         .then(function(r){ return r.json(); })
         .then(function(j){
           sg.disabled = false;
-          if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
-          else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
+          if (j && j.seguindo) {
+            sg.classList.add('on'); sg.textContent = 'Acompanhando';
+            // Sem isto o leitor clica e nao sabe o que vai acontecer depois.
+            if (!document.getElementById('seg-nota')) {
+              var n = document.createElement('p');
+              n.id = 'seg-nota'; n.className = 'seg-nota';
+              n.innerHTML = 'Avisamos quando esta história mudar — quando aparecer o documento oficial, quando sair a decisão. Fica em <a href="/meu.html">Seu Meridiano</a>.';
+              sg.parentNode.insertAdjacentElement('afterend', n);
+            }
+          }
+          else {
+            sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso';
+            var v = document.getElementById('seg-nota'); if (v) v.remove();
+          }
         })
         .catch(function(){ sg.disabled = false; });
     });
