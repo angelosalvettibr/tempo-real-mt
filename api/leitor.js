@@ -310,6 +310,38 @@ export default async function handler(req, res){
     });
   }
 
+  /* ------------------------------------------------ assuntos seguidos ----
+     Categoria fixa nao funciona: o leitor marca oito caixas no primeiro dia
+     e nunca mais volta la, enquanto o que ele le muda toda semana.
+
+     Assunto escrito a mao e outra coisa. "Lula", "projecoes", "licitacao em
+     Sinop" — e o que esta ocupando a cabeca dele agora, e ele tira quando
+     cansar. Perfil declarado envelhece; assunto vivo, nao.                 */
+  if (acao === 'assuntos') {
+    const nome = limpar(corpo.apelido);
+    if (!nome || !ligado()) return res.status(200).json({ ok:true, assuntos: [] });
+
+    let lista = [];
+    try { lista = JSON.parse(await redis('GET', `assunto:${nome}`) || '[]'); } catch {}
+
+    if (corpo.por === 'somar') {
+      const novo = String(corpo.assunto || '').trim().slice(0, 60);
+      if (novo.length < 3) return res.status(200).json({ ok:false, msg:'escreva pelo menos 3 letras' });
+      if (lista.length >= 12) return res.status(200).json({ ok:false, msg:'doze assuntos é o limite — tire um para pôr outro' });
+      if (!lista.some(x => x.termo.toLowerCase() === novo.toLowerCase())) {
+        lista.unshift({ termo: novo, desde: new Date().toISOString() });
+        await redis('SET', `assunto:${nome}`, JSON.stringify(lista));
+      }
+    }
+
+    if (corpo.por === 'tirar') {
+      lista = lista.filter(x => x.termo !== corpo.assunto);
+      await redis('SET', `assunto:${nome}`, JSON.stringify(lista));
+    }
+
+    return res.status(200).json({ ok:true, assuntos: lista });
+  }
+
   /* ---------------------------------------------------- a fila do caso ---
      Quem acompanha uma noticia nao quer so saber se ela mudou de estado:
      quer o que veio depois. Entao cada noticia marcada vira uma pasta, e o
