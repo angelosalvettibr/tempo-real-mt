@@ -240,6 +240,62 @@ export default async function handler(req, res){
     return res.status(200).json({ ok:true, mudou, segue });
   }
 
+  /* ------------------------------------------------- o seu Meridiano ----
+     Devolve o retrato do leitor: o que ele acompanha, o que costuma ler, e
+     o historico. Tudo isso ja era gravado — faltava um lugar para mostrar.
+
+     A diferenca para um feed de rede social esta no criterio: aqui a
+     personalizacao e por ASSUNTO e LUGAR, nao por engajamento. O que prende
+     no Instagram e a acusacao; o que falta no jornalismo e o desfecho.     */
+  if (acao === 'meu') {
+    const nome = limpar(corpo.apelido);
+    if (!nome || !ligado()) return res.status(200).json({ ok:true, vazio:true });
+
+    const [historicoCru, segueCru, estadosCru] = await Promise.all([
+      redis('LRANGE', `leitor:${nome}`, 0, 199),
+      redis('GET', `segue:${nome}`),
+      redis('GET', 'casos:estado')
+    ]);
+
+    let historico = [];
+    for (const x of (historicoCru || [])) { try { historico.push(JSON.parse(x)); } catch {} }
+
+    let segue = [], estados = {};
+    try { segue = JSON.parse(segueCru || '[]'); } catch {}
+    try { estados = JSON.parse(estadosCru || '{}'); } catch {}
+
+    // O estado atual de cada caso acompanhado, e se mudou desde a marcacao.
+    const ordem = { 'sem-confirmacao':0, 'redacao':0, 'atribuido':1, 'confirmado':2 };
+    const acompanhando = segue.map(s => {
+      const agora = estados[s.id];
+      const subiu = agora && (ordem[agora.nivel] ?? 0) > (ordem[s.nivel] ?? 0);
+      return { ...s, atual: agora ? agora.nivel : s.nivel,
+               titulo: (agora && agora.titulo) || s.titulo,
+               link: (agora && agora.link) || s.link, mudou: Boolean(subiu) };
+    });
+
+    // O que ele le, contado. Serve para a pagina dizer "voce le principalmente
+    // Cuiaba e licitacao" — e para mostrar o que saiu hoje nesses assuntos.
+    const conta = (campo) => {
+      const m = {};
+      for (const h of historico) { const v = h[campo]; if (v) m[v] = (m[v] || 0) + 1; }
+      return Object.entries(m).sort((a,b) => b[1] - a[1]).slice(0, 6)
+        .map(([chave, n]) => ({ chave, n }));
+    };
+
+    return res.status(200).json({
+      ok: true,
+      apelido: nome,
+      total: historico.length,
+      desde: historico.length ? historico[historico.length - 1].q : null,
+      editorias: conta('e'),
+      estados: conta('uf'),
+      niveis: conta('n'),
+      acompanhando,
+      historico: historico.slice(0, 40).map(h => ({ id:h.id, titulo:h.t, editoria:h.e, uf:h.uf, nivel:h.n, quando:h.q }))
+    });
+  }
+
   /* ---- o robo publica aqui o estado atual das historias ---- */
   if (acao === 'estados') {
     if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
