@@ -223,6 +223,17 @@ nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;ri
 .aviso-ap{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:10px}
 .sug{font-family:var(--mono);font-size:11px;background:#fff;border:1px solid var(--linha2);padding:3px 8px;margin-left:4px;cursor:pointer;color:var(--tinta)}
 .sug:hover{border-color:var(--tinta)}
+/* Apagar tudo. A funcao existia no servidor desde o inicio e nunca tinha
+   botao — a pagina do anonimato prometia algo que nao dava para fazer. */
+.apagar{margin-top:18px;padding-top:15px;border-top:1px solid var(--linha2)}
+.apagar p{font-size:13.5px;color:var(--fraco);margin-bottom:9px;max-width:62ch}
+.apagar button{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  background:none;border:1px solid var(--linha2);color:var(--fraco);padding:8px 13px;cursor:pointer}
+.apagar button:hover{border-color:var(--rosso);color:var(--rosso)}
+.apagar button.confirma{border-color:var(--rosso);color:#fff;background:var(--rosso)}
+.apagar .dois{display:flex;gap:9px;flex-wrap:wrap}
+.apagar button.sair{border-color:var(--linha2);color:var(--tinta2)}
+.apagar button.sair:hover{border-color:var(--tinta);color:var(--tinta)}
 .metodo{border-bottom:1px solid var(--linha);padding:12px 0;background:var(--areia)}
 .metodo .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--tinta2)}
 .metodo b{background:var(--tinta);color:var(--papel);padding:2px 7px;font-weight:500}
@@ -414,6 +425,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
       <button class="bt-mini" data-ap="fechar">agora não</button>
     </div>
     <div class="aviso-ap" id="aviso-apelido"></div>
+    <div class="apagar" id="apagar-area"></div>
   </div>
 </div>
 
@@ -1030,7 +1042,7 @@ document.addEventListener('click', e => {
   if (!b) return;
   const acao = b.dataset.ap;
   const cx = document.getElementById('caixa-apelido');
-  if (acao === 'abrir')  { cx.classList.add('aberta'); document.getElementById('campo-apelido')?.focus(); }
+  if (acao === 'abrir')  { cx.classList.add('aberta'); montarApagar(); document.getElementById('campo-apelido')?.focus(); }
   if (acao === 'fechar') cx.classList.remove('aberta');
   if (acao === 'salvar') salvarApelido();
   if (acao === 'sugestao') {
@@ -1038,6 +1050,59 @@ document.addEventListener('click', e => {
     document.getElementById('aviso-apelido').textContent = '';
   }
 });
+
+// Apaga o apelido e tudo que esta ligado a ele: historico de leitura, casos
+// acompanhados e o PIN. Some do navegador e some do servidor. Sem pedir
+// motivo e sem tela de retencao — isso e o que a pagina do anonimato promete.
+function montarApagar(){
+  const alvo = document.getElementById('apagar-area');
+  if (!alvo) return;
+  if (!leitor.apelido) { alvo.innerHTML = ''; return; }
+
+  // Duas coisas diferentes, e confundi-las custa caro.
+  //
+  //   SAIR    o navegador esquece quem voce e; o registro continua no
+  //           servidor. Voltando com o mesmo apelido e PIN, esta tudo la.
+  //           E o que faz falta em computador compartilhado.
+  //   APAGAR  remove tudo dos dois lados, sem volta.
+  alvo.innerHTML = `<p>Você está como <b>${esc(leitor.apelido)}</b> neste navegador.</p>
+    <div class="dois">
+      <button class="sair" id="bt-sair">sair deste navegador</button>
+      <button id="bt-apagar">apagar apelido e histórico</button>
+    </div>
+    <p style="margin-top:10px">Sair só faz este navegador esquecer você — o histórico e os casos que acompanha continuam guardados, e voltam quando você entrar de novo com o mesmo apelido e PIN. Apagar remove tudo, dos dois lados, sem como desfazer.</p>`;
+
+  document.getElementById('bt-sair').addEventListener('click', () => {
+    // Nao chama a API: o registro no servidor fica intacto de proposito.
+    try {
+      localStorage.removeItem('meridiano_apelido');
+      localStorage.removeItem('meridiano_lidas');
+    } catch {}
+    document.getElementById('caixa-apelido').classList.remove('aberta');
+    montarApelido(); montarApagar();
+    const nv = document.getElementById('novid'); if (nv) nv.hidden = true;
+  });
+
+  document.getElementById('bt-apagar').addEventListener('click', async e => {
+    const b = e.target;
+    if (!b.classList.contains('confirma')) {
+      b.classList.add('confirma');
+      b.textContent = 'clique de novo para confirmar';
+      setTimeout(() => { if (b.isConnected) { b.classList.remove('confirma'); b.textContent = 'apagar meu apelido e o histórico'; } }, 6000);
+      return;
+    }
+    b.disabled = true; b.textContent = 'apagando…';
+    await api('esquecer', { apelido: leitor.apelido });
+    try {
+      localStorage.removeItem('meridiano_apelido');
+      localStorage.removeItem('meridiano_lidas');
+      localStorage.removeItem('meridiano_bv');
+    } catch {}
+    document.getElementById('caixa-apelido').classList.remove('aberta');
+    montarApelido(); montarApagar();
+    const nv = document.getElementById('novid'); if (nv) nv.hidden = true;
+  });
+}
 
 async function salvarApelido(){
   const campo = document.getElementById('campo-apelido');
@@ -1049,7 +1114,7 @@ async function salvarApelido(){
     leitor.apelido = r.apelido;
     if (cPin) cPin.value = '';
     document.getElementById('caixa-apelido').classList.remove('aberta');
-    montarApelido();
+    montarApelido(); montarApagar();
     if (r.entrou) aviso.textContent = '';
     return;
   }
