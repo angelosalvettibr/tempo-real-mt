@@ -311,6 +311,53 @@ export default async function handler(req, res){
     });
   }
 
+  /* --------------------------------- manchetes que circulam por assunto ---
+     Ha assunto que o Meridiano nao cobre — Fifa, celebridade, futebol — e
+     nao adianta fingir: nao existe orgao publico brasileiro que registre
+     decisao da Fifa, entao nunca havera documento.
+
+     O honesto e mostrar o que circula, dizendo que nao verificamos, com o
+     nome do veiculo e o link para o original. Nenhuma linha de texto alheio
+     e reproduzida: e citacao de titulo com credito, que a lei permite — e
+     mais limpo que a nota reescrita, porque deixa obvio que so apontamos. */
+  if (acao === 'circulando') {
+    if (!ligado()) return res.status(200).json({ ok:true, itens: [] });
+    const termo = String(corpo.assunto || '');
+    if (!termo) return res.status(200).json({ ok:true, itens: [] });
+
+    let guardadas = [];
+    try { guardadas = JSON.parse(await redis('GET', `pauta:${termo.toLowerCase()}`) || '[]'); } catch {}
+    const corte = Date.now() - 7 * 86400000;
+    return res.status(200).json({ ok:true, itens: guardadas.filter(x => Date.parse(x.iso) > corte) });
+  }
+
+  /* ---- o robo guarda as manchetes que batem com assunto seguido ---- */
+  if (acao === 'guardar-pauta') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:false });
+
+    let total = 0;
+    for (const [termo, itens] of Object.entries(corpo.porAssunto || {})) {
+      const k = `pauta:${termo.toLowerCase()}`;
+      let atual = [];
+      try { atual = JSON.parse(await redis('GET', k) || '[]'); } catch {}
+      const tinha = new Set(atual.map(x => x.titulo));
+      for (const i of itens) { if (!tinha.has(i.titulo)) { atual.unshift(i); total++; } }
+      const corte = Date.now() - 7 * 86400000;
+      await redis('SET', k, JSON.stringify(atual.filter(x => Date.parse(x.iso) > corte).slice(0, 40)));
+    }
+    return res.status(200).json({ ok:true, total });
+  }
+
+  /* ---- todos os assuntos seguidos, para o robo saber o que separar ---- */
+  if (acao === 'assuntos-todos') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:true, termos: [] });
+    let idx = [];
+    try { idx = JSON.parse(await redis('GET', 'assuntos:todos') || '[]'); } catch {}
+    return res.status(200).json({ ok:true, termos: idx.slice(0, 200) });
+  }
+
   /* --------------------------------------------- afinar o assunto --------
      "Fifa e Uefa problemas" nao casa com nada: exige as tres palavras na
      mesma materia, e "problemas" nunca esta num release oficial. O que a
@@ -391,6 +438,15 @@ EXPLICA: (uma frase dizendo o que esse termo vai trazer)`;
       if (!lista.some(x => x.termo.toLowerCase() === novo.toLowerCase())) {
         lista.unshift({ termo: novo, desde: new Date().toISOString() });
         await redis('SET', `assunto:${nome}`, JSON.stringify(lista));
+
+        // Indice global: uma copia por assunto serve todos os leitores que o
+        // seguem, e o robo separa as manchetes sem varrer leitor por leitor.
+        let idx = [];
+        try { idx = JSON.parse(await redis('GET','assuntos:todos') || '[]'); } catch {}
+        if (!idx.some(t => t.toLowerCase() === novo.toLowerCase())) {
+          idx.unshift(novo);
+          await redis('SET', 'assuntos:todos', JSON.stringify(idx.slice(0, 200)));
+        }
       }
     }
 
