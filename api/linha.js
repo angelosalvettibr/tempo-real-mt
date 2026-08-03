@@ -141,7 +141,7 @@ async function montarLinha(relato, links, buscar = true){
   // nao achar continua sendo relato, e a pagina diz isso.
   const corpo = {
     contents:[{ parts:[{ text: PROMPT_LINHA(relato, links) }] }],
-    generationConfig:{ temperature:0.3, maxOutputTokens:4000 }
+    generationConfig:{ temperature:0.3, maxOutputTokens:8000 }
   };
   if (buscar) corpo.tools = [{ google_search: {} }];
 
@@ -205,6 +205,10 @@ async function montarLinha(relato, links, buscar = true){
     intro: bloco('INTRO', 'MARCOS'),
     marcos,
     consultadas: achados.slice(0, 20),
+    // Quando a leitura falha, devolver o texto cru e o que resolve: sem ver o
+    // que o modelo escreveu, o conserto vira adivinhacao.
+    cru: marcos.length < 2 ? t.slice(0, 2500) : null,
+    motivo: !t ? 'a IA não devolveu texto' : (marcos.length < 2 ? 'texto veio fora do formato esperado' : null),
     falta: bloco('FALTA', null).split(/\n/).map(x => x.replace(/^[-•\s]+/,'').trim()).filter(x => x.length > 8).slice(0,4)
   };
 }
@@ -303,7 +307,11 @@ export default async function handler(req, res){
       if (relato.length < 120) return res.status(200).json({ ok:false, msg:'conte com um pouco mais de detalhe — nome, datas e o que aconteceu' });
       const links = String(corpo.links || '').split(/\s+/).filter(x => /^https?:\/\//.test(x)).slice(0, 20);
       const r = await montarLinha(relato, links, corpo.buscar !== false);
-      if (r.marcos.length < 2) return res.status(200).json({ ok:false, msg:'não foi possível montar dois marcos com data a partir do material' });
+      if (r.marcos.length < 2) {
+        return res.status(200).json({ ok:false,
+          msg: 'não foi possível montar dois marcos: ' + (r.motivo || 'formato inesperado'),
+          cru: r.cru, consultadas: r.consultadas });
+      }
       return res.status(200).json({ ok:true, ...r });
     } catch (e) {
       return res.status(200).json({ ok:false, msg: String(e.message).slice(0, 90) });
