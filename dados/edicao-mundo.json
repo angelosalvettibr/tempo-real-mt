@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-02T21:18:29.490Z",
+  "gerado": "2026-08-03T11:00:39.373Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 37,
-    "fonteLivre": 25,
-    "confirmadas": 0,
+    "pauta": 43,
+    "fonteLivre": 24,
+    "confirmadas": 2,
     "publicadas": 17,
     "resgatadas": 0,
-    "semFonte": 6
+    "semFonte": 8
   },
   "fontes": {
-    "checadas": 24,
+    "checadas": 23,
     "responderam": 18,
-    "entregando": 12,
-    "itens": 62,
+    "entregando": 11,
+    "itens": 67,
     "lista": [
       {
         "tipo": "pauta",
@@ -27,18 +27,18 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "tipo": "livre",
+        "id": "vaticano",
+        "nome": "Vatican News",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -48,7 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 5,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -66,15 +66,15 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 4,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -99,19 +99,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 1,
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,22 +111,13 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -154,6 +136,15 @@
       },
       {
         "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
@@ -163,8 +154,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,8 +163,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -199,15 +190,6 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -217,17 +199,26 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
         "id": "acnur",
         "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -238,60 +229,65 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/GV-800x450.jpg",
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2026/08/03/00/1785711046952.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:estado-de-emergencia-em-trinidad-e-tobago-amplia-debate-sobre-seguranc",
+      "id": "ilm:trump-cancela-ataque-contra-o-ira-e-anuncia-retomada-de-negociacoes",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Estado de emergência em Trinidad e Tobago amplia debate sobre segurança no Caribe",
-      "resumo": "Medidas concedem novos poderes de busca ao governo local, enquanto dados regionais relacionam criminalidade a impactos na economia e no desenvolvimento.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/02/estados-de-emergencia-e-os-desafios-para-o-desenvolvimento-no-caribe/",
-      "origemNome": "Global Voices",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "Trump cancela ataque contra o Irã e anuncia retomada de negociações",
+      "resumo": "A decisão atendeu a pedidos da Arábia Saudita, Emirados Árabes Unidos e Catar, com conversas focadas na reabertura do Estreito de Ormuz e na desnuclearização do país.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/mundo/news/2026-08/eua-ira-trump-cancela-ataque-anuncia-retomada-negociacoes.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [
+        "AP Photo/Vahid Salemi - Vahid Salemi",
+        "AP Photo/Jacquelyn Martin - Jacquelyn Martin",
+        "g1 Mundo"
+      ],
+      "quentura": 3,
       "uf": null,
       "corpo": [
-        "A declaração de estado de emergência em Trinidad e Tobago gerou discussões sobre segurança pública e o impacto das medidas no desenvolvimento. Sob as regulamentações implementadas no país, o Estado passou a ter poderes adicionais, incluindo a expansão da autoridade para realizar buscas e apreensões sem a necessidade de apresentar acusações.",
-        "A medida em Trinidad e Tobago reflete uma discussão regional no Caribe sobre a resposta estatal à violência. Na Jamaica, onde o estado de emergência também é utilizado, autoridades apontaram redução nos crimes violentos em áreas específicas, enquanto organizações por direitos e grupos comunitários levantaram preocupações sobre os efeitos das ações. O Fundo Monetário Internacional (FMI) indicou que o crime e a violência afetam investimentos, atividades econômicas e oportunidades de emprego.",
-        "O Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas abordou a relação entre a segurança do cidadão, a desigualdade, a exclusão e as oportunidades sociais e econômicas limitadas. O documento apontou que respostas eficazes exigem tanto intervenções de segurança quanto ações que abordem as causas subjacentes da insegurança.",
-        "Além dos efeitos imediatos da aplicação da lei, as medidas de emergência alteram o funcionamento de instituições, comunidades e rotinas diárias. Pequenos comerciantes e organizações comunitárias ajustam horários e programas devido a preocupações com a segurança, enquanto a forma como as medidas são implementadas influencia a confiança pública e a percepção de transparência nas instituições."
+        "O presidente dos Estados Unidos, Trump, cancelou o ataque ao Irã e anunciou a retomada de negociações diplomáticas nesta segunda-feira (03/08). O recuo ocorreu a pedido dos parceiros do Golfo — Arábia Saudita, Emirados Árabes Unidos e Catar — e de funcionários iranianos, cancelando a ação 24 horas antes do seu início.",
+        "As conversações entre Washington e Teerã têm como foco a reabertura do Estreito de Ormuz e a desnuclearização iraniana, tendo como base o acordo-quadro assinado pelas partes em 17 de junho. O Irã havia fechado o estreito durante o conflito e insiste em manter o controle da via e cobrar pedágios de navios.",
+        "A suspensão da ação militar reverteu a decisão tomada em reunião na Casa Branca entre Trump e o primeiro-ministro israelense Netanyahu, que previa atingir a infraestrutura energética do Irã. Após o anúncio da alteração de planos, o preço do petróleo caiu mais de 4%.",
+        "O conflito recente incluiu uma ação conjunta dos Estados Unidos e da Arábia Saudita contra milícias iraquianas apoiadas pelo Irã. Na madrugada, uma explosão ocorreu perto de um petroleiro a 20 milhas náuticas de Khasab, em Omã, sem deixar vítimas."
       ],
-      "link": "/materia/estado-de-emergencia-em-trinidad-e-tobago-amplia-debate-sobre-seguranc.html",
-      "iso": "2026-08-02T11:29:47.000Z",
-      "hora": "07h29",
+      "link": "/materia/trump-cancela-ataque-contra-o-ira-e-anuncia-retomada-de-negociacoes.html",
+      "iso": "2026-08-03T08:34:00.000Z",
+      "hora": "04h34",
       "original": true,
-      "contexto": null,
+      "contexto": "Esta é a segunda vez que a suspensão de ataques dos Estados Unidos ao Irã é citada no histórico recente, após registro em 2 de agosto. As negociações diplomáticas entre as partes têm como base o acordo-quadro assinado em 17 de junho. Após o anúncio da alteração dos planos militares, o preço do petróleo caiu mais de 4%.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://images.theconversation.com/files/751491/original/file-20260731-50-pu7b24.jpg?ixlib=rb-4.1.1&amp;rect=253%2C709%2C5625%2C2812&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+      "foto": null,
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:doutorandos-entregam-carta-a-lula-para-cobrar-reajuste-em-bolsas-no-ex",
+      "id": "ilm:comissao-aprova-auxilio-de-20-milhoes-de-eur-para-empresas-em-friul-ve",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Doutorandos entregam carta a Lula para cobrar reajuste em bolsas no exterior",
-      "resumo": "O valor mensal de 1.300 dólares está sem reajuste há 17 anos, enquanto mais de 2.500 pesquisadores do programa da CAPES embarcam no segundo semestre de 2026.",
-      "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/o-drama-da-bolsa-de-pesquisa-sem-reajuste-muito-alem-da-carta-entregue-a-lula-288885",
-      "origemNome": "The Conversation",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "Comissão aprova auxílio de 20 milhões de EUR para empresas em Friul-Venécia Juliana",
+      "resumo": "Recursos destinam-se a produtores agrícolas, de pesca e aquicultura afetados pelo aumento dos preços dos combustíveis.",
+      "fonte": "Meridiano, com informações de Comissão Europeia",
+      "origemLink": "https://ec.europa.eu/commission/presscorner/detail/pt/mex_26_1717",
+      "origemNome": "Comissão Europeia",
+      "pautadoPor": [
+        "Euronews"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "Estudantes do Programa de Doutorado Sanduíche no Exterior entregaram uma carta ao Presidente Lula no dia 28 de julho de 2026, durante a 78ª Reunião Anual da SBPC em Niterói, para cobrar o reajuste das bolsas concedidas pelo governo federal. Após receber o documento, Lula encerrou seu discurso pedindo providências aos seus ministros sobre a demanda dos pesquisadores.",
-        "A bolsa mensal do programa da CAPES está fixada em 1.300 dólares desde 2009. Sem reajuste há 17 anos, o valor fica abaixo do mínimo exigido por universidades em locais como Estados Unidos, França e Austrália para a emissão de documentos migratórios, o que leva bolsistas a usarem economias pessoais, empréstimos e vaquinhas para custear a estadia.",
-        "Mais de 2.500 doutorandos irão ao exterior no segundo semestre de 2026 por meio do programa. A política pública distribui vagas entre os cursos de pós-graduação mais bem avaliados do Brasil e exige que o estudante retorne para concluir a tese no país.",
-        "A internacionalização da ciência brasileira começou na década de 1950 com a criação da CAPES e do CNPq. O maior programa da área foi o Ciência sem Fronteiras, que concedeu mais de 100 mil bolsas e investiu cerca de R$ 13 bilhões entre 2012 e 2016, sendo descontinuado em 2017."
+        "A Comissão aprovou um auxílio estatal no valor de 20 milhões de EUR focado na região de Friul-Venécia Juliana.",
+        "A medida beneficia empresas atuantes nos setores agrícola, de pescas e de aquicultura.",
+        "O recurso é direcionado a negócios locais que enfrentam o aumento nos preços dos combustíveis."
       ],
-      "link": "/materia/doutorandos-entregam-carta-a-lula-para-cobrar-reajuste-em-bolsas-no-ex.html",
-      "iso": "2026-07-31T21:41:20.000Z",
-      "hora": "17h41",
+      "link": "/materia/comissao-aprova-auxilio-de-20-milhoes-de-eur-para-empresas-em-friul-ve.html",
+      "iso": "2026-08-03T09:31:09.000Z",
+      "hora": "05h31",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -302,11 +298,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:brasil-assina-criacao-de-organizacao-de-inteligencia-artificial-sediad",
+      "id": "ilm:brasil-integra-grupo-de-29-paises-que-criaram-organizacao-global-de-ia",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Brasil assina criação de organização de inteligência artificial sediada na China",
-      "resumo": "Iniciativa reúne 29 países para desenvolver governança por código aberto, em contraste com o projeto Pax Silica dos Estados Unidos.",
+      "titulo": "Brasil integra grupo de 29 países que criaram organização global de IA",
+      "resumo": "Sediada na China, a Waico busca desenvolver a governança da tecnologia por modelos de código aberto, enquanto os Estados Unidos lideram a iniciativa Pax Silica.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/brasil-deve-aproveitar-alianca-com-china-para-soberania-digital-em-ia",
       "origemNome": "Agência Brasil",
@@ -314,14 +310,163 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Brasil está entre os 29 países que assinaram o documento de criação da Organização Mundial de Cooperação em Inteligência Artificial (Waico). Anunciada em julho deste ano, a entidade tem sede em Xangai, na China, e busca desenvolver uma governança global por meio de modelos com código aberto. A iniciativa contrasta com o projeto Pax Silica, liderado pelos Estados Unidos para reunir aliados e controlar cadeias de suprimento de semicondutores, minerais críticos e energia.",
-        "O professor da Universidade Federal do ABC (UFABC), Sérgio Amadeu da Silveira, afirmou que o Brasil tem posição privilegiada pelo tamanho e pelos centros de pesquisa, mas necessita desenvolver sua própria infraestrutura e soberania sobre dados. O fundador da organização Plures, Ettore Arpini, destacou que o país tem capacidade de transitar entre as iniciativas chinesas e ocidentais na geopolítica da tecnologia.",
-        "O governo brasileiro defende que não pode ficar dependente de nenhum modelo e mantém diálogo com todas as iniciativas. O presidente Luiz Inácio Lula da Silva defendeu em fóruns multilaterais uma governança intergovernamental na qual todos os Estados tenham assento. No lançamento da Waico, o secretário-geral da ONU, António Guterres, também declarou que a tecnologia não pode ser governada por um punhado de países ou empresas.",
-        "Do lado norte-americano, o subsecretário de Estado para Assuntos Econômicos, Jacob Helberg, expôs a visão da Pax Silica em artigo no qual atacou o conceito de soberania digital defendido pela ONU. Segundo o representante dos Estados Unidos, os governos terão maiores benefícios ao utilizarem as infraestruturas construídas pelas grandes empresas de tecnologia."
+        "O Brasil está entre os 29 países que assinaram o documento de criação da Organização Mundial de Cooperação em Inteligência Artificial (Waico). Anunciada em julho deste ano, a entidade tem sede em Xangai, na China, e busca desenvolver uma governança global de inteligência artificial por meio de modelos com código aberto.",
+        "A iniciativa contrasta com o projeto Pax Silica, liderado pelos Estados Unidos para reunir aliados para controlar cadeias de suprimento de semicondutores, minerais críticos e energia. Em artigo, o subsecretário de Estado dos EUA para Assuntos Econômicos no governo de Donald Trump, Jacob Helberg, criticou o conceito de soberania digital defendido pela ONU e pelo Brasil, afirmando que os países se beneficiarão mais ao aproveitar as infraestruturas já construídas por empresas de tecnologia.",
+        "O governo brasileiro afirma que mantém diálogo com todas as iniciativas para alcançar a soberania digital, sem depender de modelos chineses ou ocidentais. O presidente Luiz Inácio Lula da Silva tem defendido em fóruns multilaterais uma governança intergovernamental em que todos os Estados tenham assento, evitando que a tecnologia seja privilégio de poucos países ou instrumento de manipulação.",
+        "O professor da Universidade Federal do ABC (UFABC), Sérgio Amadeu da Silveira, apontou a necessidade de o país desenvolver infraestrutura própria de dados e processamento, exemplificando que, de R$ 10 milhões para projetos na universidade, R$ 5 milhões seriam gastos com nuvem de empresas como Amazon ou Huawei. O fundador da organização Plures, Ettore Arpini, declarou que o Brasil pode atuar entre as iniciativas chinesas e ocidentais. No lançamento da Waico, o secretário-geral da ONU, António Guterres, afirmou que a tecnologia não pode ser governada por um pequeno grupo de países ou empresas."
       ],
-      "link": "/materia/brasil-assina-criacao-de-organizacao-de-inteligencia-artificial-sediad.html",
+      "link": "/materia/brasil-integra-grupo-de-29-paises-que-criaram-organizacao-global-de-ia.html",
       "iso": "2026-08-01T11:32:00.000Z",
       "hora": "07h32",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/GV-800x450.jpg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:estados-de-emergencia-no-caribe-geram-debates-sobre-seguranca-e-desenv",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Estados de emergência no Caribe geram debates sobre segurança e desenvolvimento",
+      "resumo": "Medidas adotadas em Trinidad e Tobago e na Jamaica ampliam os poderes do Estado para busca e apreensão e alteram a rotina econômica e social das comunidades.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/02/estados-de-emergencia-e-os-desafios-para-o-desenvolvimento-no-caribe/",
+      "origemNome": "Global Voices",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A declaração de estado de emergência em Trinidad e Tobago direcionou o debate público para a segurança e os limites da atuação estatal. Sob as regulamentações instauradas, o Estado recebeu poderes adicionais que incluem a expansão da autoridade para realizar buscas e apreensões sem a apresentação prévia de acusações.",
+        "Além das ações policiais, as medidas causam impactos na rotina das comunidades, levando comerciantes a alterarem horários de funcionamento e moradores a mudarem seus itinerários. O Fundo Monetário Internacional (FMI) apontou que o crime e a violência afetam os investimentos, as atividades econômicas e os empregos, sobretudo em contextos onde os jovens enfrentam caminhos limitados para o trabalho estável.",
+        "A situação reflete uma discussão recorrente na região do Caribe. Na Jamaica, as autoridades relataram a redução de crimes violentos em áreas específicas após a aplicação do estado de emergência, enquanto organizações de direitos e grupos comunitários apresentaram preocupações sobre os efeitos das medidas nas populações locais.",
+        "O Relatório de Desenvolvimento Humano Regional de 2025 do Programa de Desenvolvimento das Nações Unidas relaciona a segurança do cidadão à desigualdade, à exclusão e à limitação de oportunidades sociais e econômicas. A forma como as intervenções de segurança são implementadas interfere diretamente na percepção pública sobre a transparência e a confiança nas instituições."
+      ],
+      "link": "/materia/estados-de-emergencia-no-caribe-geram-debates-sobre-seguranca-e-desenv.html",
+      "iso": "2026-08-02T11:29:47.000Z",
+      "hora": "07h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:lingua-kam-na-nigeria-conta-com-aproximadamente-8-000-a-11-000-falante",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Língua Kam na Nigéria conta com aproximadamente 8,000 a 11,000 falantes",
+      "resumo": "Idioma do nordeste nigeriano não recebia atenção de pesquisadores antes do ano de 2016.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A língua Kam, localizada no nordeste da Nigéria, possui atualmente aproximadamente 8,000 – 11,000 falantes.",
+        "Antes de 2016, o idioma não havia recebido atenção por parte de pesquisadores.",
+        "Assim como a língua Kam, muitos outros idiomas do nordeste da Nigéria também não receberam atenção de pesquisadores antes de 2016."
+      ],
+      "link": "/materia/lingua-kam-na-nigeria-conta-com-aproximadamente-8-000-a-11-000-falante.html",
+      "iso": "2026-08-03T05:38:53.000Z",
+      "hora": "01h38",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/august/MeteorGecko_Burnett_4944.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+      "fotoAlt": "Vaporizing Meteor Photobombs the Lacerta Nebula",
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:meteoro-em-vaporizacao-e-registrado-diante-da-nebulosa-de-lacerta-em-i",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Meteoro em vaporização é registrado diante da Nebulosa de Lacerta em imagem da Nasa",
+      "resumo": "A fotografia foi feita no mês passado a partir do Death Valley Observatories, em Nevada, e mostra a passagem rápida do meteoroide durante uma exposição longa.",
+      "fonte": "Meridiano, com informações de NASA",
+      "origemLink": "https://science.nasa.gov/image-article/apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula/",
+      "origemNome": "NASA",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Uma fotografia registrada a partir do Death Valley Observatories, em Nevada, nos Estados Unidos, capturou um meteoro brilhante cruzando a visão da Great Lacerta Nebula. A imagem, divulgada pela Nasa em 3 de agosto de 2026, foi obtida no mês passado por meio de uma longa exposição.",
+        "O meteoroide, provavelmente um pequeno pedregulho, gerou brilho ao aquecer e excitar o ar na atmosfera da Terra antes de se vaporizar. O evento deixou gás e poeira conduzidos pelo vento, com cores que indicam sua composição. A nebulosa aparece de forma tênue em vermelho no centro da imagem registrada por Tom Burnett.",
+        "Atualmente, três chuvas de meteoros estão em andamento, competindo em visibilidade com o brilho de uma Lua gibosa. A mais ativa delas, a das Perseidas, terá maior atividade em cerca de 10 dias, após a redução do brilho lunar.",
+        "Neste ano, o ponto máximo da chuva das Perseidas coincide quase exatamente com uma Lua nova e, em algumas localizações, com um eclipse solar total."
+      ],
+      "link": "/materia/meteoro-em-vaporizacao-e-registrado-diante-da-nebulosa-de-lacerta-em-i.html",
+      "iso": "2026-08-03T04:05:00.000Z",
+      "hora": "00h05",
+      "original": true,
+      "contexto": "O histórico registra a divulgação de imagens destacadas pela Nasa em duas ocasiões no dia 2 de agosto de 2026. A chuva de meteoros das Perseidas terá sua maior atividade em cerca de 10 dias, coincidindo com a Lua nova e um eclipse solar total em algumas localizações.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:china-e-eua-disputam-governanca-global-da-inteligencia-artificial-com-",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "China e EUA disputam governança global da inteligência artificial com projetos opostos",
+      "resumo": "Enquanto a Pax Silica reúne os Estados Unidos e países aliados, a iniciativa chinesa Waico promove o modelo de código aberto e conta com a adesão formal do Brasil.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/waico-e-pax-silica-entenda-disputa-entre-china-e-eua-por-futuro-da-ia",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A China e os Estados Unidos lideram iniciativas distintas para influenciar a governança e a cadeia produtiva da inteligência artificial. Enquanto o governo norte-americano busca restringir a tecnologia a parceiros alinhados, a proposta liderada por Pequim defende o uso de sistemas de código aberto abertos a todas as nações. O governo do Brasil afirma que não ficará dependente de nenhum dos modelos para buscar sua soberania digital.",
+        "Criada em dezembro de 2025 pelo governo de Donald Trump, a parceria Pax Silica é formada atualmente por 23 países e a União Europeia, incluindo Argentina, Chile, Costa Rica, El Salvador e Panamá, que ingressaram em junho deste ano. O grupo busca controlar suprimentos de semicondutores, minerais críticos e energia entre nações alinhadas à Casa Branca, além de explorar investimentos conjuntos.",
+        "Por outro lado, a Organização Mundial de Cooperação em IA, chamada de Waico, foi criada pela China em julho deste ano, com sede em Xangai. A declaração de fundação foi assinada por 29 países, incluindo o Brasil, e defende a inteligência artificial de código aberto, que permite o uso e a modificação livre da tecnologia sem a necessidade de contratos pagos com empresas norte-americanas.",
+        "Sobre os modelos, o especialista Ettore Arpini, da organização Plures, afirma que a proposta dos Estados Unidos gera riscos de bloqueio e dependência econômica para os demais países. Já o professor Sérgio Amadeu da Silveira, da Universidade Federal do ABC, pondera que, para se beneficiar da proposta chinesa voltada ao Sul Global, o Brasil precisa desenvolver infraestrutura local própria para processar a tecnologia."
+      ],
+      "link": "/materia/china-e-eua-disputam-governanca-global-da-inteligencia-artificial-com-.html",
+      "iso": "2026-08-01T11:31:00.000Z",
+      "hora": "07h31",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/Luglio/24/ps-191-copertina.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:irma-judita-cakova-gerencia-hospital-catolico-em-damasco-ha-quatro-ano",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Irmã Judita Cáková gerencia hospital católico em Damasco há quatro anos",
+      "resumo": "A estrutura conta com 108 camas e atende tanto pacientes pagantes quanto pessoas sem recursos para manter a sustentabilidade financeira do local.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/projeto-sisters-irmas-siria-oriente-medio-comunidade-deus-guerra.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A religiosa e enfermeira irmã Judita Cáková atua há quatro anos na gestão do Hospital francês, instituição católica mantida pela Companhia das Filhas da Caridade de São Vicente de Paulo em Damasco, na Síria. Membro da congregação há 33 anos, ela coordena a administração da unidade, que opera com o trabalho de profissionais leigos de diferentes religiões.",
+        "O hospital possui 108 camas, cerca de 250 funcionários e atua com aproximadamente 130 médicos. Para assegurar salários e manter os atendimentos aos pacientes que não podem pagar, a unidade acolhe também pessoas com recursos financeiros. A instituição colabora com a Cáritas, organizações de beneficência e contou com apoio da iniciativa Open Hospital do Vaticano, liderada pelo cardeal Mario Zenari.",
+        "Antes de chegar a Damasco, a irmã Judita trabalhou em campos de refugiados e áreas de conflito. Sem falar árabe ao chegar ao país, ela atuou no bloco operatório com o auxílio de dois médicos que estudaram na Rússia, participando de procedimentos como cesarianas.",
+        "A sociedade local enfrenta transformações desde o início da guerra na Síria, em 2011, com a busca por segundo emprego e o êxodo de cristãos e minorias para a Europa, América e Austrália. Diante de ataques na região, o hospital prestou atendimento a cerca de oitenta por cento dos feridos em um bombardeamento contra uma igreja ortodoxa."
+      ],
+      "link": "/materia/irma-judita-cakova-gerencia-hospital-catolico-em-damasco-ha-quatro-ano.html",
+      "iso": "2026-08-03T09:34:00.000Z",
+      "hora": "05h34",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -332,11 +477,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:documentos-confirmam-relacao-legal-com-estado-mas-nao-alteram-existenc",
+      "id": "ilm:documentos-confirmam-relacao-com-estado-mas-nao-definem-existencia",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Documentos confirmam relação legal com Estado mas não alteram existência humana",
-      "resumo": "Registros formais não têm a capacidade de criar ou apagar a história, a família e o pertencimento de um indivíduo.",
+      "titulo": "Documentos confirmam relação com Estado mas não definem existência",
+      "resumo": "A história, a família e o sentimento de pertencimento de um indivíduo não são criados nem apagados por registros oficiais.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
       "origemNome": "Global Voices (EN)",
@@ -344,11 +489,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Documentos servem para confirmar uma relação jurídica oficial entre uma pessoa e um Estado. No entanto, esses registros formais não criam e nem apagam a existência de um indivíduo.",
-        "A documentação oficial também não possui a capacidade de constituir ou eliminar a história pessoal de alguém nem a sua família.",
-        "Além disso, os papéis legais não têm o poder de gerar ou apagar o sentimento de pertencimento de uma pessoa."
+        "Documentos têm a função de confirmar uma relação jurídica entre um indivíduo e um Estado.",
+        "Esses registros, contudo, não podem criar ou apagar a existência e a história de uma pessoa.",
+        "A documentação estatal também não possui a capacidade de criar ou eliminar a família e o sentimento de pertencimento."
       ],
-      "link": "/materia/documentos-confirmam-relacao-legal-com-estado-mas-nao-alteram-existenc.html",
+      "link": "/materia/documentos-confirmam-relacao-com-estado-mas-nao-definem-existencia.html",
       "iso": "2026-08-02T16:38:17.000Z",
       "hora": "12h38",
       "original": true,
@@ -357,32 +502,32 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2023/08/04/WhatsApp-Image-2023-08-04-at-11.53.27.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/Mother-Nature-800x450.jpg",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:leao-xiv-envia-videomensagem-aos-jovens-da-viii-jornada-nacional-da-ju",
+      "id": "ilm:camboja-promulga-lei-que-permite-revogar-cidadania-de-acusados-de-trai",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Leão XIV envia videomensagem aos jovens da VIII Jornada Nacional da Juventude no Equador",
-      "resumo": "O Pontífice pediu aos participantes do evento em Ibarra que sejam promotores do perdão, da reconciliação e da paz.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-jovens-equatorianos-promotores-perdao-paz.html",
-      "origemNome": "Vatican News",
+      "titulo": "Camboja promulga lei que permite revogar cidadania de acusados de traição",
+      "resumo": "A medida foi proposta por Hun Sen e aprovada em 2025, sob críticas de cerca de 50 organizações da sociedade civil que alertam para o risco de ativistas se tornarem apátridas.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/01/lei-do-camboja-pode-tornar-cidadaos-apatridas-por-prejudicarem-a-seguranca-nacional/",
+      "origemNome": "Global Voices",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV enviou uma mensagem em vídeo aos participantes da VIII Jornada Nacional da Juventude do Equador, realizada em Ibarra de 31 de julho a 2 de agosto. Na gravação, o Pontífice exortou os jovens a se deixarem transformar pelo amor de Cristo e a agirem como promotores do perdão, da reconciliação e da paz.",
-        "Ao recordar o lema do evento, \"Tenham coragem, eu venci o mundo\", Leão XIV enviou uma saudação afetuosa e pediu que os jovens ouçam o chamado do Senhor e o sigam com determinação. O Papa declarou que o encontro com Jesus enche o coração de alegria e dá força para que sejam testemunhas do seu amor e da sua misericórdia.",
-        "Na mensagem, o Pontífice afirmou que a Igreja precisa da alegria, da coragem e do testemunho dos jovens para que muitos outros possam encontrar Cristo.",
-        "Ao final do vídeo, antes da bênção, o Papa entregou todos os jovens do Equador a Nossa Senhora da Apresentação. Ele expressou o desejo de que Maria seja o modelo no qual se inspirar para viver o Evangelho e se dedicar ao projeto de Deus para a própria vida."
+        "O Camboja promulgou uma nova lei e alterou sua Constituição para permitir que as autoridades revoguem a cidadania khmer de pessoas acusadas ou condenadas por traição, conspiração com potências estrangeiras ou por prejudicar a segurança nacional. A emenda constitucional foi proposta em 27 de junho de 2025 pelo ex-primeiro-ministro e atual presidente do Senado, Hun Sen, e aprovada pelas instâncias legislativas em julho do mesmo ano.",
+        "O projeto de emenda à Lei de Cidadania foi promulgado em 25 de agosto de 2025, e o Sub-decreto para Implementar a Lei de Nacionalidade foi publicado em 22 de janeiro de 2026. Segundo o governo, a legislação visa fortalecer o nacionalismo durante conflitos de fronteira com a Tailândia. O primeiro-ministro Hun Manet declarou que os cidadãos cumpridores da lei não têm o que temer.",
+        "Cerca de 50 organizações da sociedade civil alertaram em declaração conjunta que a nova regra tem texto vago e pode ser usada para perseguir ativistas e defensores dos direitos humanos. Em setembro de 2025, grupos de direitos humanos apontaram que a perda da cidadania retira direitos como posse de terra, acesso à saúde, educação, trabalho formal e viagem.",
+        "O texto constitucional alterado permite a cassação da nacionalidade de atingidos por acusações ou condenações relativas à segurança nacional, mesmo que essa seja a única cidadania do indivíduo. A detenção persistente de jovens ativistas do grupo Mãe Natureza também evidencia o uso de leis e processos legais para sufocar a oposição no país."
       ],
-      "link": "/materia/leao-xiv-envia-videomensagem-aos-jovens-da-viii-jornada-nacional-da-ju.html",
-      "iso": "2026-08-02T17:00:00.000Z",
-      "hora": "13h00",
+      "link": "/materia/camboja-promulga-lei-que-permite-revogar-cidadania-de-acusados-de-trai.html",
+      "iso": "2026-08-01T11:43:00.000Z",
+      "hora": "07h43",
       "original": true,
-      "contexto": null,
+      "contexto": "A medida atinge pessoas acusadas ou condenadas por traição, conspiração com potências estrangeiras ou por prejudicar a segurança nacional. O histórico registra um caso semelhante no Camboja em 1º de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -391,11 +536,11 @@
       "fotoAlt": "rainbow",
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:nasa-destaca-imagem-de-arco-circunhorizontal-registrado-em-west-virgin",
+      "id": "ilm:nasa-destaca-foto-de-arco-iris-de-fogo-registrado-em-west-virginia",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "NASA destaca imagem de arco circunhorizontal registrado em West Virginia",
-      "resumo": "O fenômeno óptico é formado por cristais de gelo em nuvens cirrus e exige que o Sol esteja a pelo menos 58 graus de altura no céu.",
+      "titulo": "NASA destaca foto de arco-íris de fogo registrado em West Virginia",
+      "resumo": "O fenômeno óptico ocorre quando a luz solar é refratada por cristais de gelo em nuvens cirrus, exigindo que o Sol esteja posicionado a pelo menos 58 graus de altura.",
       "fonte": "Meridiano, com informações de NASA",
       "origemLink": "https://science.nasa.gov/image-article/apod-2026-august-2-a-fire-rainbow-over-west-virginia/",
       "origemNome": "NASA",
@@ -403,101 +548,14 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Uma fotografia de um arco circunhorizontal, conhecido informalmente como arco-íris de fogo, registrada perto de North Fork Mountain em West Virginia, nos Estados Unidos, foi destacada no Astronomy Picture of the Day da NASA em 2 de agosto de 2026. A imagem foi fotografada em 2021 por Christa Harbig.",
-        "O fenômeno ocorre quando cristais de gelo em uma nuvem cirrus distante atuam como prismas flutuantes, aparecendo de forma paralela ao horizonte. Para a visualização do arco, o Sol precisa estar a pelo menos 58 graus de altura e com nuvens cirrus presentes abaixo, especificamente do tipo cirrus fibratus.",
-        "Os cristais de gelo planos e hexagonais que compõem a nuvem precisam estar alinhados horizontalmente para refratar a luz do Sol de maneira similar. Devido a essa necessidade de alinhamento, a observação do fenômeno é considerada pouco comum.",
-        "O serviço Astronomy Picture of the Day é ligado à ASD na NASA / GSFC, NASA Science Activation e Michigan Tech. U. Os autores e editores do conteúdo são Robert Nemiroff, Jerry Bonnell, Cecilia Chirenti e Keighley Rockcliffe."
+        "A NASA divulgou em sua publicação Astronomy Picture of the Day do dia 2 de agosto de 2026 a fotografia de um arco circunhorizontal, conhecido informalmente como arco-íris de fogo, capturada em 2021 perto de North Fork Mountain, em West Virginia, nos USA. A imagem foi registrada por Christa Harbig.",
+        "O fenômeno com aparência de chama surge quando cristais de gelo em uma nuvem cirrus distante funcionam como prismas flutuantes, exibindo um arco paralelo ao horizonte. Na imagem em destaque, a nuvem presente é do tipo cirrus fibratus.",
+        "Para a visualização do arco circunhorizontal, é necessário que o Sol esteja a uma altura de pelo menos 58 graus no céu com nuvens cirrus abaixo. Os cristais de gelo planos e hexagonais que formam a nuvem precisam estar alinhados horizontalmente para refratar a luz solar de maneira coletiva.",
+        "Em razão da exigência desse alinhamento dos cristais e da posição do Sol, a observação de arcos circunhorizontais é considerada incomum."
       ],
-      "link": "/materia/nasa-destaca-imagem-de-arco-circunhorizontal-registrado-em-west-virgin.html",
+      "link": "/materia/nasa-destaca-foto-de-arco-iris-de-fogo-registrado-em-west-virginia.html",
       "iso": "2026-08-02T04:05:00.000Z",
       "hora": "00h05",
-      "original": true,
-      "contexto": "O arquivo registra um caso parecido uma vez, em 2 de agosto de 2026. A fotografia destacada no projeto da NASA foi tirada por Christa Harbig em 2021.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/Mother-Nature-800x450.jpg",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:camboja-aprova-leis-que-permitem-revogar-cidadania-de-acusados-de-trai",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Camboja aprova leis que permitem revogar cidadania de acusados de traição",
-      "resumo": "As alterações constitucionais e na Lei de Cidadania possibilitam que autoridades retirem a nacionalidade cambojana de quem afetar a segurança nacional ou conspirar com países estrangeiros.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/01/lei-do-camboja-pode-tornar-cidadaos-apatridas-por-prejudicarem-a-seguranca-nacional/",
-      "origemNome": "Global Voices",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Camboja alterou sua Constituição e promulgou uma nova lei para permitir que autoridades revoguem a cidadania de pessoas julgadas culpadas de traição, conspiração com países estrangeiros, insultos ao rei ou atos que afetem a segurança nacional e a soberania do país.",
-        "A emenda foi proposta em 27 de junho de 2025 pelo ex-primeiro-ministro e presidente em exercício do Senado, Hun Sen. O texto foi aprovado pelo Conselho Constitucional em 2 de julho, pela Assembleia Nacional em 11 de julho e pelo Senado em 15 de julho de 2025. O projeto foi promulgado em 25 de agosto de 2025, e o decreto de implementação acabou publicado em 22 de janeiro de 2026.",
-        "O governo declarou que a legislação visa fortalecer o nacionalismo durante conflitos de fronteira com a Tailândia, e o primeiro-ministro Hun Manet afirmou que cidadãos cumpridores da lei não precisam se preocupar. Apoiadores do governo no Parlamento disseram que as emendas reforçam a necessidade de proteção da nação.",
-        "Em contrapartida, cerca de 50 organizações da sociedade civil emitiram declaração conjunta alertando para o uso da lei na perseguição de ativistas e na criação de apátridas. Em setembro de 2025, grupos de direitos humanos ressaltaram que a perda da cidadania impede direitos fundamentais, como posse de terras, trabalho legal, acesso à saúde e à educação, além de citarem a detenção contínua de jovens ativistas do grupo Mãe Natureza."
-      ],
-      "link": "/materia/camboja-aprova-leis-que-permitem-revogar-cidadania-de-acusados-de-trai.html",
-      "iso": "2026-08-01T11:43:00.000Z",
-      "hora": "07h43",
-      "original": true,
-      "contexto": "A legislação afeta pessoas julgadas culpadas por traição, conspiração com países estrangeiros, insultos ao rei ou atos que ameacem a segurança e a soberania nacional do Camboja. O histórico registra um caso parecido em 1º de agosto de 2026.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:comissao-europeia-emite-declaracao-antes-do-dia-europeu-em-memoria-dos",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Comissão Europeia emite declaração antes do Dia Europeu em Memória dos Ciganos",
-      "resumo": "O documento antecede o dia 2 de agosto e foi emitido pela presidente Ursula von der Leyen, por Roxana Mînzatu e por Hadja Lahbib.",
-      "fonte": "Meridiano, com informações de Comissão Europeia",
-      "origemLink": "https://ec.europa.eu/commission/presscorner/detail/pt/statement_26_1711",
-      "origemNome": "Comissão Europeia",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Autoridades da Comissão Europeia emitiram uma declaração antes do Dia Europeu em Memória dos Ciganos em Memória do Holocausto. A data ocorre em 2 de agosto.",
-        "A declaração foi emitida por Ursula von der Leyen, presidente da Comissão Europeia, e por Roxana Mînzatu, vice-presidente executiva responsável pelos Direitos Sociais e Competências, Empregos de Qualidade e Preparação.",
-        "O ato também foi realizado por Hadja Lahbib, comissária responsável pela Igualdade, Preparação e Gestão de Crises."
-      ],
-      "link": "/materia/comissao-europeia-emite-declaracao-antes-do-dia-europeu-em-memoria-dos.html",
-      "iso": "2026-07-31T22:00:00.000Z",
-      "hora": "18h00",
-      "original": true,
-      "contexto": "O Dia Europeu em Memória dos Ciganos ocorre em 2 de agosto. A declaração é referente à memória da população cigana afetada pelo Holocausto.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:china-e-eua-disputam-a-governanca-e-a-cadeia-produtiva-de-inteligencia",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "China e EUA disputam a governança e a cadeia produtiva de inteligência artificial",
-      "resumo": "A iniciativa norte-americana Pax Silica reúne 23 países e a União Europeia, enquanto a organização chinesa Waico conta com 29 nações signatárias, incluindo o Brasil.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/waico-e-pax-silica-entenda-disputa-entre-china-e-eua-por-futuro-da-ia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A China e os Estados Unidos lideram iniciativas distintas para influenciar a cadeia produtiva e a governança da Inteligência Artificial. A proposta norte-americana busca criar um sistema focado em parceiros alinhados, enquanto a iniciativa chinesa propõe a participação de todas as nações por meio de sistemas de código aberto.",
-        "Criada em dezembro de 2025 pelo governo de Donald Trump, a parceria norte-americana"
-      ],
-      "link": "/materia/china-e-eua-disputam-a-governanca-e-a-cadeia-produtiva-de-inteligencia.html",
-      "iso": "2026-08-01T11:31:00.000Z",
-      "hora": "07h31",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -512,7 +570,7 @@
       "editoria": "internacional",
       "chapeu": "Nosso texto",
       "titulo": "Mulheres no Nepal produzem pratos de folhas em florestas comunitárias",
-      "resumo": "A iniciativa transforma a vulnerabilidade em meios de subsistência sustentáveis e apoia o desenvolvimento econômico local.",
+      "resumo": "A fabricação dos itens ecologicamente corretos apoia a conservação ambiental, a resiliência climática e o desenvolvimento econômico local.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/02/nepals-community-forests-offer-climate-solutions-one-leaf-at-a-time/",
       "origemNome": "Global Voices (EN)",
@@ -520,9 +578,9 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Mulheres integrantes de grupos de florestas comunitárias no Nepal estão produzindo pratos de folhas ecologicamente corretos.",
-        "A fabricação dos itens transforma a vulnerabilidade das participantes em meios de subsistência sustentáveis.",
-        "O trabalho apoia a conservação ambiental, a resiliência climática e o desenvolvimento econômico local."
+        "Mulheres integrantes de grupos florestais comunitários no Nepal estão produzindo pratos de folhas ecologicamente corretos.",
+        "A confecção dos utensílios transforma a vulnerabilidade das participantes em meios de subsistência sustentáveis.",
+        "A ação apoia a conservação ambiental, a resiliência climática e o desenvolvimento econômico local."
       ],
       "link": "/materia/mulheres-no-nepal-produzem-pratos-de-folhas-em-florestas-comunitarias.html",
       "iso": "2026-08-02T00:00:00.000Z",
@@ -533,148 +591,60 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/reuters/2026/08/01/01/1785539454415.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2023/01/28/cccc.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-pede-solucoes-de-paz-e-justica-para-situacao-alarmante-e",
+      "id": "ilm:bispo-aldo-berardi-viaja-a-madagascar-para-centenario-da-ordem-da-sant",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Papa Leão XIV pede soluções de paz e justiça para situação alarmante em Ceuta",
-      "resumo": "O enclave espanhol no Marrocos enfrenta emergência humanitária com centros de acolhimento lotados e aumento no número de chegadas de migrantes.",
+      "titulo": "Bispo Aldo Berardi viaja a Madagascar para centenário da Ordem da Santíssima Trindade",
+      "resumo": "O Vigário Apostólico da Arábia do Norte retorna à ilha africana quarenta anos após ter definido sua vocação religiosa com os missionários trinitários na região de Tsiroanomandidy.",
       "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-preocupado-ceuta-encontrem-solucoes-justas.html",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/trinitarios-madagascar-cem-anos-ordem-santissima-trindade-berard.html",
       "origemNome": "Vatican News",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Ao final da oração do Angelus, na Praça São Pedro, o Papa Leão XIV manifestou preocupação com a situação alarmante em Ceuta, enclave espanhol no Marrocos. Falando em espanhol, o pontífice fez um apelo para que sejam encontradas soluções de paz, estabilidade e justiça, pedindo a intercessão de Nossa Senhora da África.",
-        "A cidade autônoma de Ceuta enfrenta uma emergência humanitária e social absoluta, com instalações de acolhimento além da capacidade máxima e milhares de pessoas passando a noite ao ar livre. Em Melilla, outro enclave espanhol em território marroquino, houve aumento repentino de chegadas e centenas de jovens tentaram cruzar a fronteira pela cerca e pelo porto, o que provocou confrontos com forças de segurança marroquinas e o fechamento temporário do posto de fronteira.",
-        "O Papa também pediu aos fiéis que continuem a rezar pelo fim das guerras e por soluções diplomáticas para os conflitos, recordando vítimas como crianças, idosos e doentes. Ele citou a comemoração do Perdão de Assis, indulgência obtida por São Francisco junto ao Papa Honório III em 1216, e recordou o oitavo centenário da morte de São Francisco, ocorrida em 3 de outubro de 1226 na Porciúncula.",
-        "A diocese de Cádiz e Ceuta expressou profunda preocupação com a vulnerabilidade das pessoas afetadas e colocou-se à disposição para colaborar com as instituições civis. A diocese informou que todas as doações arrecadadas neste fim de semana nas paróquias de Ceuta serão destinadas à delegação diocesana para a migração."
+        "O bispo Aldo Berardi, Vigário Apostólico da Arábia do Norte, prepara-se para viajar a Madagascar para participar das celebrações do centenário da presença da Ordem da Santíssima Trindade na ilha. A viagem marca o retorno do religioso ao local onde encontrou sua família religiosa há quarenta anos.",
+        "Atualmente em Cerfroid, na França, o bispo fez uma parada na casa-mãe da ordem após ter celebrado, no último dia 26 de julho, o 35º aniversário de sua ordenação sacerdotal na igreja de Saint-Martin, em Ars-sur-Moselle. Ele relatou que tentou retornar a Madagascar durante a pandemia de Covid, quando atuava na formação em Roma, mas não pôde viajar e posteriormente recebeu a nomeação episcopal.",
+        "Berardi ingressou no seminário na França aos dezesseis anos e cumpriu dois anos de serviço civil antes de ser enviado a Madagascar, onde conheceu os Trinitários espanhóis na diocese de Tsiroanomandidy. Na região, morou por dois anos e foi ordenado padre por um bispo malgaxe. Sua trajetória inclui passagens pela região de Metz, Villiers-lès-Nancy, Roma e três anos no seminário maior de Montreal.",
+        "A Ordem da Santíssima Trindade completa cem anos de presença em Madagascar. A atuação dos religiosos esteve na origem de quatro dioceses na ilha: Miarinarivo, Tsiroanomandidy, Ambatondrazaka e Maintirano."
       ],
-      "link": "/materia/papa-leao-xiv-pede-solucoes-de-paz-e-justica-para-situacao-alarmante-e.html",
-      "iso": "2026-08-02T10:52:00.000Z",
-      "hora": "06h52",
+      "link": "/materia/bispo-aldo-berardi-viaja-a-madagascar-para-centenario-da-ordem-da-sant.html",
+      "iso": "2026-08-03T08:02:00.000Z",
+      "hora": "04h02",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/august/FullMoon28-7-2026BrankoNadj.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-      "fotoAlt": "moon",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:nasa-divulga-imagem-da-buck-moon-e-do-cinturao-de-venus-capturada-na-c",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Nasa divulga imagem da Buck Moon e do Cinturão de Vênus capturada na Croácia",
-      "resumo": "Registro feito por Branko Nadj na Ilha de Krk antecede o eclipse solar total marcado para o dia 12 de agosto.",
-      "fonte": "Meridiano, com informações de NASA",
-      "origemLink": "https://science.nasa.gov/image-article/apod/apod-2026-august-1-buck-moon-and-belt-of-venus/",
-      "origemNome": "NASA",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Uma imagem capturada no dia 28 de julho na Ilha de Krk, na costa da Croácia, registrou o surgimento da Buck Moon, nome tradicional para a lua cheia do mês de julho, sobre montanhas distantes no Mar Adriático. A fotografia foi publicada no dia 1º de agosto de 2026.",
-        "A cena retrata a sombra da Terra subindo durante o crepúsculo como uma faixa cinza difusa acima do horizonte sudeste. Logo acima dessa sombra está o arco anticrepuscular de tom rosado, conhecido como Cinturão de Vênus, formado pelo retroespalhamento da luz do Sol.",
-        "O fenômeno antecede a Lua Nova de 12 de agosto, quando uma sombra será projetada sobre a Terra em um eclipse solar total. O registro foi feito por Branko Nadj e a publicação é um serviço de ASD na NASA / GSFC, NASA Science Activation e Michigan Tech. U., sob autoria e edição de Robert Nemiroff, Jerry Bonnell, Cecilia Chirenti e Keighley Rockcliffe."
-      ],
-      "link": "/materia/nasa-divulga-imagem-da-buck-moon-e-do-cinturao-de-venus-capturada-na-c.html",
-      "iso": "2026-08-01T04:05:00.000Z",
-      "hora": "00h05",
-      "original": true,
-      "contexto": "O histórico do arquivo registra dois casos parecidos em 1º de agosto de 2026. O texto informa que a próxima etapa é a Lua Nova do dia 12 de agosto, data em que ocorrerá um eclipse solar total.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/srv/2026/08/02/2026-08-02-angelus/1785665758174.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2021/05/06/PADRE-LICIO-DE-ARAUJO_.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-pede-redescoberta-da-partilha-e-da-caridade-durante-o-an",
+      "id": "ilm:papa-leao-xiv-escreve-enciclica-magnifica-humanitas-sobre-inteligencia",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Papa Leão XIV pede redescoberta da partilha e da caridade durante o Angelus",
-      "resumo": "Em catequese sobre a multiplicação dos pães na Praça de São Pedro, o Pontífice afirmou que a acumulação e o desperdício são marcas da ganância.",
+      "titulo": "Papa Leão XIV escreve encíclica Magnífica humanitas sobre inteligência artificial",
+      "resumo": "O documento convida a Igreja e a sociedade a observar os rumos da humanidade diante do avanço tecnológico e propõe colocar o ser humano no centro da inovação.",
       "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-deserto-guerra-arrogancia-redescobrir-logica-caridade.html",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/magnifica-humanitas-ia-encontro-tecnologia-humanidade.html",
       "origemNome": "Vatican News",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV afirmou que os cristãos são chamados a redescobrir a lógica da partilha e da caridade diante da guerra e da arrogância. A declaração foi feita durante a oração do Angelus no 18º Domingo do Tempo Comum, realizada da janela do Palácio Apostólico, na Praça de São Pedro.",
-        "Dedicada ao Evangelho da multiplicação dos pães, a catequese do Pontífice relembrou o gesto de Jesus ao abençoar e distribuir os alimentos. Segundo o Papa, esse milagre representa o modelo de uma fraternidade capaz de vencer a violência, o egoísmo e a indiferença.",
-        "Leão XIV indicou a bênção da mesa em família e entre amigos como um primeiro sinal para traduzir a celebração eucarística em gestos cotidianos. O Pontífice declarou que nada se desperdiça quando é partilhado, enquanto a acumulação e o desperdício são faces da ganância.",
-        "Ao final, o Papa pediu à Virgem Maria para fazer os fiéis crescerem na caridade, de modo que não falte o pão de cada dia a ninguém."
+        "O Papa Leão XIV escreveu a carta encíclica Magnífica humanitas, o primeiro documento do tipo elaborado integralmente pelo pontífice. A publicação convida a Igreja Católica e toda a sociedade a analisar os rumos da humanidade em um período marcado por avanços tecnológicos, como a inteligência artificial.",
+        "Conforme o texto assinado pelo Padre Licio de Araújo Vale, da Diocese de São Miguel Paulista, a inteligência artificial já atua na educação, na saúde, no setor público e nas empresas. O conceito da encíclica propõe colocar o ser humano no centro do desenvolvimento tecnológico e utilizar a ferramenta para ampliar as potencialidades das pessoas.",
+        "O documento aponta que o avanço tecnológico apresenta desafios relacionados à privacidade, segurança das informações, vieses algorítmicos, transparência e impactos no mercado de trabalho. Diante desse cenário, a encíclica defende um modelo de desenvolvimento que respeite os direitos fundamentais, promova a diversidade e reduza desigualdades.",
+        "A publicação também aborda a necessidade de formação profissional para a convivência com as novas tecnologias. A convivência com a inteligência artificial exigirá a combinação de conhecimentos técnicos com habilidades humanas, como pensamento crítico, empatia, criatividade, comunicação e discernimento ético."
       ],
-      "link": "/materia/papa-leao-xiv-pede-redescoberta-da-partilha-e-da-caridade-durante-o-an.html",
-      "iso": "2026-08-02T10:30:00.000Z",
-      "hora": "06h30",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://assets.science.nasa.gov/content/dam/science/cds/ciencia/sistema-solar/2026/eclipse%20lunar.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-      "fotoAlt": "What’s Up: August 2026 Skywatching Tips from NASA",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:nasa-divulga-eventos-astronomicos-para-o-mes-de-agosto-de-2026",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "NASA divulga eventos astronômicos para o mês de agosto de 2026",
-      "resumo": "A programação inclui eclipse solar total, chuva de meteoros Perseidas, eclipse lunar parcial com 93% de cobertura e a máxima elongação do planeta Vênus.",
-      "fonte": "Meridiano, com informações de NASA",
-      "origemLink": "https://science.nasa.gov/solar-system/whats-up-august-2026-skywatching-tips-from-nasa/",
-      "origemNome": "NASA",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A NASA divulgou os eventos de observação do céu previstos para o mês de agosto de 2026. As informações apresentadas por Raquel Villanueva, do Jet Propulsion Laboratory da NASA, detalham dois eclipses, uma chuva de meteoros e a posição do planeta Vênus.",
-        "No dia 12 de agosto, ocorre um eclipse solar total que passa pelo norte da Rússia, Groenlândia, Islândia, norte da Espanha e parte de Portugal, além de ser parcial em trechos dos Estados Unidos. Na mesma data ocorre a Lua Nova e o início do pico da chuva de meteoros Perseidas, que segue até a madrugada do dia 13 de agosto, gerada por detritos do Comet Swift-Tuttle.",
-        "Entre 14 e 16 de agosto, Vênus atinge sua maior elongação a leste, ficando visível no céu ocidental logo após o pôr do sol. O planeta superará em brilho as estrelas ao redor e apresentará cerca de metade de sua superfície iluminada quando visto por telescópio.",
-        "Nos dias 27 e 28 de agosto, um eclipse lunar parcial poderá ser visto da América do Norte, América do Sul e de partes da Europa e África. No ponto máximo do fenômeno, cerca de 93% do diâmetro da Lua estará dentro da sombra central da Terra. O calendário de fases do mês também registra a Lua em Quarto Minguante no dia 5 de agosto."
-      ],
-      "link": "/materia/nasa-divulga-eventos-astronomicos-para-o-mes-de-agosto-de-2026.html",
-      "iso": "2026-07-31T22:35:36.000Z",
-      "hora": "18h35",
-      "original": true,
-      "contexto": "Os eventos astronômicos divulgados estão previstos para ocorrer entre os dias 12 e 28 de agosto de 2026. A visibilidade dos eclipses afeta observadores na América do Norte, América do Sul, partes da Europa, África, Groenlândia, Islândia, Espanha, Portugal e Rússia.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Lithograph-Bridgens--800x450.png",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:africanos-em-trinidad-deixaram-escravidao-em-1834-sem-liberdade-plena",
-      "editoria": "internacional",
-      "chapeu": "Nosso texto",
-      "titulo": "Africanos em Trinidad deixaram escravidão em 1834 sem liberdade plena",
-      "resumo": "A contenção silenciosa dos africanos pode ter frustrado um plano direcionado a adiar a libertação do grupo.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/01/mightily-like-insurrection-revisiting-trinidad-tobagos-first-emancipation-day/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "No primeiro Dia da Emancipação em Trinidad, ocorrido em 1834, os africanos deixaram de ser escravos, mas ainda não estavam livres.",
-        "A população africana manteve uma postura de contenção silenciosa durante o evento.",
-        "A atitude do grupo pode ter frustrado um plano que previa o adiamento de sua libertação."
-      ],
-      "link": "/materia/africanos-em-trinidad-deixaram-escravidao-em-1834-sem-liberdade-plena.html",
-      "iso": "2026-08-01T18:09:35.000Z",
-      "hora": "14h09",
+      "link": "/materia/papa-leao-xiv-escreve-enciclica-magnifica-humanitas-sobre-inteligencia.html",
+      "iso": "2026-08-03T07:38:00.000Z",
+      "hora": "03h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -685,11 +655,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:familias-em-assam-evitam-aderir-ao-citizenship-amendment-act",
+      "id": "ilm:moradores-de-assam-evitam-adesao-a-lei-de-emenda-a-cidadania",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Famílias em Assam evitam aderir ao Citizenship Amendment Act",
-      "resumo": "O governo local incentivou a população a utilizar a medida, mas temores sobre reivindicações legais e status de migrante afastaram os moradores.",
+      "titulo": "Moradores de Assam evitam adesão à Lei de Emenda à Cidadania",
+      "resumo": "Governo incentivou população a recorrer à legislação, mas temores sobre perda de direitos legais e enquadramento como migrantes forçados afastaram famílias do processo.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/01/citizenship-in-limbo-why-assams-citizenship-amendment-act-caa-pathway-struggled-to-gain-traction/",
       "origemNome": "Global Voices (EN)",
@@ -697,11 +667,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Muitas famílias decidiram evitar completamente o processo do Citizenship Amendment Act. A decisão ocorreu apesar de o governo de Assam ter pedido aos moradores que utilizassem a legislação.",
-        "O posicionamento das famílias foi motivado por temores amplamente difundidos na região sobre os impactos da adesão.",
-        "Havia o receio de que a medida pudesse enfraquecer reivindicações legais já existentes, além do medo de enquadramento no status de migrante forçado."
+        "Muitas famílias em Assam evitaram utilizar o processo da Lei de Emenda à Cidadania, conhecida pela sigla CAA. A recusa ocorreu mesmo após o governo local solicitar que os moradores fizessem uso da medida.",
+        "O desinteresse da população foi motivado pelo receio generalizado de que a adesão pudesse enfraquecer reivindicações legais que já estavam em andamento.",
+        "Além disso, os moradores evitaram o procedimento devido ao medo de serem enquadrados sob o status de migrantes forçados."
       ],
-      "link": "/materia/familias-em-assam-evitam-aderir-ao-citizenship-amendment-act.html",
+      "link": "/materia/moradores-de-assam-evitam-adesao-a-lei-de-emenda-a-cidadania.html",
       "iso": "2026-08-01T12:59:18.000Z",
       "hora": "08h59",
       "original": true,
@@ -710,30 +680,59 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/02/03/2.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Lithograph-Bridgens--800x450.png",
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:roma-realiza-celebracao-de-nossa-senhora-das-neves-na-basilica-de-sant",
+      "id": "ilm:primeiro-dia-da-emancipacao-em-trinidad-ocorreu-em-1834",
       "editoria": "internacional",
       "chapeu": "Nosso texto",
-      "titulo": "Roma realiza celebração de Nossa Senhora das Neves na Basílica de Santa Maria Maior",
-      "resumo": "A festividade no dia 5 de agosto inclui a tradicional nevada em referência ao evento ocorrido no ano 358 d.C. sob o pontificado do Papa Libério.",
+      "titulo": "Primeiro Dia da Emancipação em Trinidad ocorreu em 1834",
+      "resumo": "Na data, os africanos deixaram de ser escravizados, mas ainda não eram livres, e seu autocontrole silencioso pode ter impedido um plano para adiar a libertação.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/01/mightily-like-insurrection-revisiting-trinidad-tobagos-first-emancipation-day/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "No primeiro Dia da Emancipação em Trinidad, registrado no ano de 1834, os africanos não eram mais escravizados, contudo ainda não estavam livres.",
+        "Nessa ocasião, a mudança na condição dos africanos não representou o alcance imediato de sua liberdade plena.",
+        "O autocontrole silencioso mantido pelos africanos pode ter frustrado um plano cujo objetivo era adiar a libertação."
+      ],
+      "link": "/materia/primeiro-dia-da-emancipacao-em-trinidad-ocorreu-em-1834.html",
+      "iso": "2026-08-01T18:09:35.000Z",
+      "hora": "14h09",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/Luglio/31/seul-4.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:seul-entra-em-nova-fase-de-preparativos-para-a-jmj-2027",
+      "editoria": "internacional",
+      "chapeu": "Nosso texto",
+      "titulo": "Seul entra em nova fase de preparativos para a JMJ 2027",
+      "resumo": "Evento católico será realizado de 3 a 8 de agosto de 2027 na capital da Coreia do Sul e marca a segunda edição do encontro no continente asiático.",
       "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/roma-5-agosto-retorna-festa-nossa-senhora-neves.html",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/preparativos-a-todo-vapor-para-a-jornada-mundial-da-juventude.html",
       "origemNome": "Vatican News",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Basílica Papal de Santa Maria Maior, em Roma, realiza no dia 5 de agosto a festa de Nossa Senhora das Neves, no aniversário da dedicação do templo. A programação inclui a tradicional \"nevada\", reevocada durante as duas celebrações eucarísticas do dia.",
-        "No dia 5 de agosto, a missa solene ocorre às 10h (hora local), celebrada pelo cardeal arcipreste Rolandas Makrickas. Às 17h, o canto das Vésperas será presidido pelo bispo vigário Luis Manuel Alí Herrera.",
-        "As atividades incluem um tríduo de preparação nos dias 2, 3 e 4 de agosto, com missas às 18h na capela da Salus Populi Romani. No dia 4 de agosto, às 17h, as primeiras vésperas solenes serão presididas por monsenhor Ivan Ricupero, delegado para a Pastoral.",
-        "A reevocação remete ao ano de 358 d.C., quando a neve caiu sobre o Esquilino na noite quente entre 4 e 5 de agosto. Na ocasião, após a Virgem pedir em sonho ao Papa Libério e ao patrício João a construção de uma igreja dedicada a Ela, o pontífice traçou as proporções na neve. A basílica é o local onde está sepultado o Papa Francisco."
+        "O Comitê Organizador Local da Jornada Mundial da Juventude Seul 2027 iniciou a transição da fase de planejamento inicial para a implementação plena das ações. O evento da Igreja Católica será realizado na capital da Coreia do Sul entre os dias 3 e 8 de agosto de 2027.",
+        "A reestruturação abrange os setores de cooperação internacional, serviços aos peregrinos, hospedagem, transporte, segurança, assistência médica e comunicação. Segundo o arcebispo de Seul e presidente do comitê organizador, dom Peter Soon-taick Chung, os últimos três anos foram concentrados em lançar as bases da organização, enquanto o próximo ano servirá para concluir os trabalhos.",
+        "Esta será a segunda vez que a Jornada Mundial da Juventude ocorre na Ásia, após a edição de 1995 em Manila, e a primeira em um país onde o cristianismo é uma religião minoritária. O encontro é promovido a cada dois ou três anos e reúne milhões de participantes.",
+        "O prefeito do Dicastério para os Leigos, a Família e a Vida, cardeal Kevin Farrell, declarou que os jovens estão no centro das atividades preparatórias. A organização também desenvolve a seleção dos cinco Santos Patronos da edição, processo iniciado no final de 2024 com uma pesquisa nacional."
       ],
-      "link": "/materia/roma-realiza-celebracao-de-nossa-senhora-das-neves-na-basilica-de-sant.html",
-      "iso": "2026-08-02T08:32:00.000Z",
-      "hora": "04h32",
+      "link": "/materia/seul-entra-em-nova-fase-de-preparativos-para-a-jmj-2027.html",
+      "iso": "2026-08-03T06:13:00.000Z",
+      "hora": "02h13",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -745,149 +744,153 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o tema é veiculado por dois veículos da imprensa.",
-        "Que as publicações apresentam títulos idênticos sobre a alegação.",
-        "Que os Estados Unidos figuram como o país citado na tese."
+        "Três veículos de imprensa estão publicando relatos sobre a crise migratória em Ceuta.",
+        "As publicações citam mortes de migrantes e tensão diplomática entre Espanha e Marrocos.",
+        "Marrocos é citado por atribuir o cenário a redes de tráfico e desinformação."
       ],
       "falta": [
-        "Identificação de fontes oficiais ou históricas que confirmem a tese.",
-        "Detalhamento de datas, locais ou do contexto exato da alegação.",
-        "Manifestação de órgãos públicos ou instituições sobre o tema."
+        "Confirmação oficial dos governos da Espanha ou do Marrocos sobre o número de mortos.",
+        "Pronunciamento formal de órgãos oficiais validando o aumento da tensão diplomática relatada.",
+        "Identificação oficial dos migrantes e indicação das datas exatas em que ocorreram os óbitos."
       ],
       "ondeCirculou": [
         {
           "veiculo": "g1 Mundo",
-          "titulo": "Como um parafuso ajudou os Estados Unidos a conquistar o mundo",
-          "link": "https://g1.globo.com/mundo/noticia/2026/08/02/como-um-parafuso-ajudou-os-estados-unidos-a-conquistar-o-mundo.ghtml"
+          "titulo": "Marrocos atribui crise migratória em Ceuta à desinformação e ao tráfico",
+          "link": "https://g1.globo.com/mundo/noticia/2026/08/03/marrocos-atribui-crise-migratoria-em-ceuta-a-desinformacao-e-ao-trafico.ghtml"
         },
         {
-          "veiculo": "BBC Brasil",
-          "titulo": "Como um parafuso ajudou os Estados Unidos a conquistar o mundo",
-          "link": "https://www.bbc.com/portuguese/articles/c3v0z1q0zeko?at_medium=RSS&amp;at_campaign=rss"
-        }
-      ],
-      "link": "/materia/nc-parafuso-teria-tido-papel-na-expansao-global-dos-estados-unidos.html",
-      "corpo": [
-        "O conteúdo divulgado não apresentaria divergências entre os veículos que publicaram a informação. Nenhuma das matérias teria especificado datas, locais, pessoas envolvidas ou fontes oficiais que sustentem a alegação.",
-        "A tese situaria o impacto do parafuso no processo de avanço geopolítico norte-americano. A existência de documentação histórica ou comprovação formal sobre a alegação, contudo, ainda não estaria estabelecida."
-      ],
-      "id": "circ:parafuso-teria-tido-papel-na-expansao-global-dos-estados-unidos",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Parafuso teria tido papel na expansão global dos Estados Unidos",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T21:17:27.300Z",
-      "hora": "17h17"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a informação sobre a suspensão de ataques circula em dois veículos de imprensa.",
-        "Que a busca por um acordo rápido é citada como justificativa para a decisão.",
-        "Que Teerã teria classificado a declaração atribuída a Trump como uma mentira."
-      ],
-      "falta": [
-        "Confirmação oficial do governo dos Estados Unidos sobre a suspensão das ações militares.",
-        "Pronunciamento oficial do governo do Irã esclarecendo o teor das declarações.",
-        "Identificação dos países aliados que teriam solicitado a interrupção dos ataques."
-      ],
-      "ondeCirculou": [
+          "veiculo": "Euronews",
+          "titulo": "Espanha: crise migratória em Ceuta acentua tensão diplomática no Estreito",
+          "link": "http://pt.euronews.com/my-europe/2026/08/03/espanha-crise-migratoria-em-ceuta-acentua-tensao-diplomatica-no-estreito"
+        },
         {
           "veiculo": "Folha Mundo",
-          "titulo": "Trump diz que suspenderá novos ataques ao Irã em busca de um acordo 'rápido'",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/trump-diz-que-suspendera-novos-ataques-ao-ira-em-busca-de-um-acordo-rapido.shtml"
-        },
-        {
-          "veiculo": "AP Photo/Jacquelyn Martin - Jacquelyn Martin",
-          "titulo": "Trump suspende novos ataques a pedidos do Irã e países aliados: 'uma mentira', segundo Teerã",
-          "link": "https://www.rfi.fr/br/mundo/20260802-trump-suspende-novos-ataques-a-pedidos-do-ir%C3%A3-e-pa%C3%ADses-aliados-uma-nova-mentira-segundo-teer%C3%A3"
+          "titulo": "Sobe para 72 o número de migrantes do Marrocos mortos em tentativa de entrar em Ceuta",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/sobe-para-72-o-numero-de-migrantes-do-marrocos-mortos-em-tentativa-de-entrar-em-ceuta.shtml"
         }
       ],
-      "link": "/materia/nc-trump-teria-anunciado-a-suspensao-de-novos-ataques-ao-ira.html",
+      "link": "/materia/nc-crise-migratoria-em-ceuta-envolveria-dezenas-de-mortes-e-tensao-diplom.html",
       "corpo": [
-        "O ex-presidente Donald Trump teria declarado que suspenderá novos ataques contra o Irã. A motivação informada para a medida seria a busca por um acordo classificado como rápido entre as partes.",
-        "As informações veiculadas acrescentam que a interrupção das ações militares teria ocorrido após pedidos do próprio Irã e de países aliados. No entanto, há divergência entre os relatos publicados sobre a posição atribuída às autoridades iranianas.",
-        "Enquanto uma publicação menciona a intenção de negociação, outra aponta que Teerã teria classificado a alegação como uma mentira. Até o momento, não foram detalhados os termos do eventual acordo nem quais países teriam intervindo."
+        "Três veículos de imprensa estariam relatando uma crise migratória na região de Ceuta envolvendo Marrocos e Espanha. A situação estaria associada ao registro de mortes de migrantes e a um desgaste nas relações entre os dois países.",
+        "De acordo com as publicações, o número de migrantes oriundos do Marrocos mortos ao tentar entrar em Ceuta teria chegado a 72. O governo marroquino teria atribuído a origem da crise à ação de redes de tráfico e à disseminação de desinformação.",
+        "O episódio estaria acentuando a tensão diplomática na região do Estreito. As informações veiculadas abordariam diferentes aspectos do mesmo acontecimento sem apresentar divergências diretas nas manchetes."
       ],
-      "id": "circ:trump-teria-anunciado-a-suspensao-de-novos-ataques-ao-ira",
+      "id": "circ:crise-migratoria-em-ceuta-envolveria-dezenas-de-mortes-e-tensao-diplom",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "Trump teria anunciado a suspensão de novos ataques ao Irã",
+      "titulo": "Crise migratória em Ceuta envolveria dezenas de mortes e tensão diplomática",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T21:18:08.410Z",
-      "hora": "17h18"
+      "iso": "2026-08-03T10:59:52.646Z",
+      "hora": "06h59"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que ao menos dois veículos publicaram conteúdos sobre o tema na América do Sul.",
-        "Que a adoção do chamado modelo Bukele de combate à violência é o assunto central."
+        "Que o assunto está sendo publicado por dois veículos da imprensa.",
+        "Que a empresa estatal de energia de Cuba é citada como fonte da informação."
       ],
       "falta": [
-        "A nomeação oficial do país sul-americano referido nas matérias.",
-        "Manifestação de órgãos oficiais ou governamentais sobre as medidas implementadas.",
-        "Registros documentais, datas e locais exatos dos fatos alegados nas matérias."
+        "Confirmação direta emitida nos canais oficiais da empresa estatal de energia.",
+        "Data e horário exatos do início da interrupção do sistema elétrico.",
+        "Detalhamento sobre as causas que teriam provocado o desligamento do serviço."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Euronews",
+          "titulo": "Empresa estatal de energia de Cuba regista novo apagão a nível nacional",
+          "link": "http://pt.euronews.com/2026/08/03/empresa-estatal-de-energia-de-cuba-regista-novo-apagao-a-nivel-nacional"
+        },
+        {
+          "veiculo": "Folha Mundo",
+          "titulo": "Cuba sofre novo apagão geral, informa empresa estatal de energia",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/cuba-sofre-novo-apagao-geral-informa-empresa-estatal-de-energia.shtml"
+        }
+      ],
+      "link": "/materia/nc-cuba-teria-sofrido-novo-apagao-geral-segundo-empresa-estatal-de-energi.html",
+      "corpo": [
+        "Cuba teria registrado um novo apagão de proporções nacionais. A interrupção no fornecimento de energia elétrica estaria afetando o território do país de forma geral.",
+        "A informação teria sido comunicada pela empresa estatal de energia local. As publicações que veiculam o caso coincidem na citação do órgão oficial e tratam a ocorrência como um novo evento de desligamento do sistema."
+      ],
+      "id": "circ:cuba-teria-sofrido-novo-apagao-geral-segundo-empresa-estatal-de-energi",
+      "editoria": "internacional",
+      "uf": null,
+      "titulo": "Cuba teria sofrido novo apagão geral, segundo empresa estatal de energia",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-03T11:00:18.160Z",
+      "hora": "07h00"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a alegação sobre a fala é publicada por dois veículos de imprensa.",
+        "Que há divergência entre os relatos quanto ao local onde o político estaria."
+      ],
+      "falta": [
+        "Manifestação oficial do governo da Venezuela ou de autoridades dos Estados Unidos.",
+        "Confirmação oficial sobre a localização física e o status de liberdade do político.",
+        "Registro ou agendamento oficial da reunião citada em Caracas."
       ],
       "ondeCirculou": [
         {
           "veiculo": "g1 Mundo",
-          "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
-          "link": "https://g1.globo.com/mundo/noticia/2026/08/02/o-que-aconteceu-no-pais-da-america-do-sul-que-adotou-o-modelo-bukele-de-combate-a-violencia.ghtml"
+          "titulo": "Maduro defende diálogo entre governo e oposição venezuelanas dias antes de primeira reunião em Caracas",
+          "link": "https://g1.globo.com/mundo/noticia/2026/08/02/maduro-defende-dialogo-entre-governo-e-oposicao-venezuelanas-dias-antes-de-primeira-reuniao-em-caracas.ghtml"
         },
         {
-          "veiculo": "BBC Brasil",
-          "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
-          "link": "https://www.bbc.com/portuguese/articles/cy74n55rpx8o?at_medium=RSS&amp;at_campaign=rss"
+          "veiculo": "Folha Mundo",
+          "titulo": "Da prisão em Nova York, Maduro defende diálogo para consolidar paz na Venezuela",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/da-prisao-em-nova-york-maduro-defende-dialogo-para-consolidar-paz-na-venezuela.shtml"
         }
       ],
-      "link": "/materia/nc-pais-da-america-do-sul-teria-registrado-desdobramentos-do-modelo-bukel.html",
+      "link": "/materia/nc-maduro-teria-defendido-dialogo-entre-governo-e-oposicao-na-venezuela.html",
       "corpo": [
-        "Publicações da imprensa estariam relatando acontecimentos em um país da América do Sul que teria adotado o modelo Bukele de combate à violência. Os relatos abordariam os desdobramentos de políticas de segurança pública associadas a esse formato de combate ao crime. O tema estaria sendo difundido por veículos de comunicação.",
-        "Os conteúdos veiculados pelas publicações apresentariam a mesma linha temática sobre o assunto. As manchetes citariam a adoção da estratégia na região sem especificar expressamente o nome da nação envolvida. Não haveria indicação de dados numéricos ou atos oficiais nos títulos divulgados.",
-        "Não existiriam divergências entre as manchetes veiculadas pelas fontes de imprensa. As informações dependeriam de verificação para identificar quais medidas concretas teriam sido efetivamente implementadas. O impacto das ações citadas ainda estaria pendente de validação por órgãos governamentais."
+        "As publicações que veiculam a notícia divergem sobre as circunstâncias e a localização do fato. Enquanto uma das matérias afirma que a declaração ocorreria dias antes de uma primeira reunião em Caracas, outra sustenta que a fala teria sido feita a partir de uma prisão em Nova York.",
+        "Até o momento, não foram encontrados registros oficiais que confirmem o teor veiculado. Tampouco há validação pública sobre a realização do encontro na capital venezuelana ou sobre qualquer detenção do político em território norte-americano."
       ],
-      "id": "circ:pais-da-america-do-sul-teria-registrado-desdobramentos-do-modelo-bukel",
+      "id": "circ:maduro-teria-defendido-dialogo-entre-governo-e-oposicao-na-venezuela",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "País da América do Sul teria registrado desdobramentos do modelo Bukele",
+      "titulo": "Maduro teria defendido diálogo entre governo e oposição na Venezuela",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-02T21:18:28.584Z",
-      "hora": "17h18"
+      "iso": "2026-08-03T11:00:38.467Z",
+      "hora": "07h00"
     }
   ],
   "pautas": [
     {
-      "titulo": "Como um parafuso ajudou os Estados Unidos a conquistar o mundo",
+      "titulo": "Marrocos atribui crise migratória em Ceuta à desinformação e ao tráfico",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil"
+        "Euronews",
+        "Folha Mundo"
       ]
     },
     {
-      "titulo": "Como um parafuso ajudou os Estados Unidos a conquistar o mundo",
-      "veiculo": "BBC Brasil",
+      "titulo": "Espanha: crise migratória em Ceuta acentua tensão diplomática no Estreito",
+      "veiculo": "Euronews",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Trump diz que suspenderá novos ataques ao Irã em busca de um acordo 'rápido'",
-      "veiculo": "Folha Mundo",
+      "titulo": "Fantástico vai até Ceuta, epicentro da crise migratória que sacudiu a Europa",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "AP Photo/Jacquelyn Martin - Jacquelyn Martin"
+        "Euronews"
       ]
     },
     {
-      "titulo": "Trump suspende novos ataques a pedidos do Irã e países aliados: 'uma mentira', segundo Teerã",
-      "veiculo": "AP Photo/Jacquelyn Martin - Jacquelyn Martin",
+      "titulo": "Empresa estatal de energia de Cuba regista novo apagão a nível nacional",
+      "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -895,17 +898,35 @@
       ]
     },
     {
-      "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
+      "titulo": "Cuba sofre novo apagão geral, informa empresa estatal de energia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Maduro defende diálogo entre governo e oposição venezuelanas dias antes de primeira reunião em Caracas",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "Folha Mundo"
       ]
     },
     {
-      "titulo": "O que aconteceu no país da América do Sul que adotou o 'modelo Bukele' de combate à violência",
-      "veiculo": "BBC Brasil",
+      "titulo": "Da prisão em Nova York, Maduro defende diálogo para consolidar paz na Venezuela",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Sobe para 72 o número de migrantes do Marrocos mortos em tentativa de entrar em Ceuta",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [

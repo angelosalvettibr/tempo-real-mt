@@ -114,8 +114,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .fonte-box summary::after{content:" ▸ mostrar";font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco)}
 .fonte-box[open] summary::after{content:" ▾ ocultar"}
 .fonte-box summary b{display:inline}
-.fonte-box b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:9px}
-.fonte-box a{color:var(--verde);word-break:break-all}
+.fonte-box b{font-family:'IBM Ple}
 .fonte-box ul{margin:10px 0 0 18px}
 .voltar{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--tinta);padding:10px 15px;text-decoration:none;margin:10px 0 50px}
 .voltar:hover{background:var(--tinta);color:var(--papel)}
@@ -129,9 +128,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
 <article class="wrap">
   <span class="selo">Com informações de Global Voices (EN)</span>
-  <span class="chapeu">Mundo</span>
+  <span class="chapeu">Brasil</span>
   <h1>Mulheres no Nepal produzem pratos de folhas em florestas comunitárias</h1>
-  <p class="linha-fina">A produção ecológica busca transformar vulnerabilidades em subsistência sustentável, apoiando a conservação ambiental, a resiliência climática e o desenvolvimento econômico local.</p>
+  <p class="linha-fina">A produção transforma a vulnerabilidade em meios de subsistência sustentáveis e impulsiona o desenvolvimento econômico local.</p>
   <div class="assina">Redação Meridiano · 01/08/2026, 20:00:00</div>
 
   <figure class="foto">
@@ -139,10 +138,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <figcaption>Foto: Global Voices (EN)</figcaption>
   </figure>
 
-  <div class="corpo"><p>Mulheres que integram grupos em florestas comunitárias no Nepal estão produzindo pratos ecológicos feitos de folhas.</p>
-<p>A prática transforma a vulnerabilidade das participantes em meios de subsistência sustentáveis.</p>
-<p>O trabalho apoia a conservação ambiental e o fortalecimento da resiliência climática no país.</p>
-<p>A iniciativa também atua no suporte ao desenvolvimento econômico local e oferece soluções para o clima por meio do uso das florestas comunitárias.</p></div>
+  <div class="corpo"><p>Mulheres integrantes de grupos de florestas comunitárias no Nepal estão produzindo pratos de folhas ecologicamente corretos.</p>
+<p>A ação busca transformar a vulnerabilidade das participantes em meios de subsistência sustentáveis.</p>
+<p>A fabricação desses itens apoia a conservação ambiental, a resiliência climática e o desenvolvimento econômico local.</p></div>
 
   
 
@@ -161,7 +159,10 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     
   </details>
 
-  
+  <div class="relac">
+    <b>Já publicamos sobre isso</b>
+    <a href="/materia/mulheres-no-nepal-produzem-pratos-ecologicos-em-florestas-comunitarias.html">Mulheres no Nepal produzem pratos ecológicos em florestas comunitárias<span>02/08/2026</span></a>
+  </div>
 
   <div class="acoes">
     <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
@@ -200,6 +201,12 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
       speechSynthesis.cancel(); speechSynthesis.speak(f);
       lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+})();
+</script>
+</body>
+</html>t = 'Parar';
     });
   } else if (ov) { ov.style.display = 'none'; }
 })();
