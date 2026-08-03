@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERIDIANO — Brasil, Mundo e o seu estado</title>
+<meta name="description" content="Jornal digital. Brasil, Mundo e edições estaduais, com texto próprio a partir de fontes que autorizam reprodução.">
+<meta name="theme-color" content="#FBF9F4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="MERIDIANO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#FFFFFF; --areia:#F7F6F3; --tinta:#0E0E0E; --tinta2:#555; --tinta3:#767676;
+  --linha:#E2E2E2; --linha2:#C9C9C9; --fraco:#8E8E8E;
+  --rosso:#B34700; --verde:#1F6B4A; --oro:#8A6B14;
+  --tit:'Playfair Display',Georgia,serif;
+  --txt:'Source Serif 4',Georgia,serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--txt);line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rosso);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ---------------- topo ---------------- */
+.faixa{border-bottom:1px solid var(--linha);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--tinta3);padding:9px 0}
+.faixa .wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.faixa b{color:var(--tinta);font-weight:500}
+.faixa .pulso{width:6px;height:6px;border-radius:50%;background:var(--verde);display:inline-block;margin-right:6px}
+
+header{border-bottom:1px solid var(--tinta)}
+.masthead{text-align:center;padding:24px 0 16px}
+.masthead .lema{font-family:var(--mono);font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--fraco);margin-bottom:8px}
+.masthead h1{font-family:var(--tit);font-size:clamp(40px,7.5vw,78px);font-weight:900;letter-spacing:-.03em;line-height:.88;color:var(--tinta)}
+.masthead h1 em{font-style:normal;font-weight:900;color:var(--rosso);letter-spacing:-.01em}
+.masthead .sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--fraco);margin-top:12px}
+
+.abre .capa{display:block;width:100%;height:auto;border:1px solid var(--linha);margin-bottom:14px;background:var(--areia)}
+.cartao .mini{float:right;width:104px;height:78px;object-fit:cover;margin:2px 0 8px 14px;border:1px solid var(--linha);background:var(--areia)}
+@media(max-width:600px){.cartao .mini{width:82px;height:62px;margin-left:10px}}
+.ultimas{border-bottom:1px solid var(--linha);background:var(--areia)}
+.ultimas .caixa{padding:13px 0 15px}
+.ultimas .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fraco);display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.ultimas .rot .regua{flex:1;height:1px;background:var(--linha2)}
+.ultimas .rot button{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;background:none;border:1px solid var(--linha2);color:var(--fraco);padding:4px 10px;cursor:pointer;flex:none;transition:.14s}
+.ultimas .rot button:hover{border-color:var(--tinta);color:var(--tinta)}
+.ultimas .rot button:disabled{opacity:.45;cursor:default}
+.ultimas .rot button.girando{color:var(--rosso);border-color:var(--rosso)}
+.ultimas .quando{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none;letter-spacing:.08em}
+.ultimas .pulso{width:6px;height:6px;border-radius:50%;background:var(--rosso);flex:none;animation:bat 2.4s ease-in-out infinite}
+@keyframes bat{0%,100%{opacity:1}50%{opacity:.25}}
+.ultimas ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 26px}
+.ultimas li{border-top:1px solid var(--linha)}
+.ultimas a{display:flex;gap:10px;padding:8px 0;text-decoration:none;color:var(--tinta);align-items:baseline}
+.ultimas a:hover{color:var(--rosso)}
+.ultimas time{font-family:var(--mono);font-size:10.5px;color:var(--fraco);flex:none;width:38px}
+.ultimas span{font-size:14px;line-height:1.34;font-weight:500}
+.ultimas em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);display:block;margin-top:2px}
+@media(max-width:900px){.ultimas ol{grid-template-columns:repeat(2,1fr);gap:0 20px}}
+@media(max-width:600px){.ultimas ol{grid-template-columns:1fr}.ultimas span{font-size:14.5px}}
+nav{border-bottom:1px solid var(--tinta);background:var(--papel);position:sticky;top:0;z-index:30}
+nav .wrap{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;padding:0}
+nav button{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:0;padding:12px 20px;cursor:pointer;color:var(--tinta2);transition:.14s;position:relative}
+nav button:hover{color:var(--tinta)}
+nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
+.cidades{display:none;border-bottom:1px solid var(--linha);background:var(--areia,#F1EFE8)}
+.cidades .wrap{display:flex;gap:8px;align-items:center;padding:9px 0;overflow-x:auto}
+.cidades button{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;background:none;border:1px solid var(--linha);border-radius:999px;padding:6px 13px;cursor:pointer;color:var(--tinta2);white-space:nowrap;transition:.14s}
+.cidades button:hover{border-color:var(--tinta)}
+.cidades button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.cidades button i{font-style:normal;opacity:.6;margin-left:5px}
+.cidades .rot{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2);margin-right:2px}
+/* Chamada da Linha do tempo. Nao e mais uma editoria: e a secao que carrega
+   a tese do jornal, entao ganha bloco proprio logo abaixo da faixa de metodo. */
+.novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
+.novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.novid .selo{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);
+  border:1px solid var(--verde);padding:5px 10px;flex:none;margin-top:2px}
+.novid .lista{flex:1;min-width:230px}
+.novid .lista b{display:block;font-size:15px;margin-bottom:8px;line-height:1.4}
+.novid .lista a{display:block;text-decoration:none;color:var(--tinta);font-size:14.5px;line-height:1.42;
+  padding:6px 0;border-top:1px solid rgba(0,0,0,.07)}
+.novid .lista a:hover{color:var(--verde)}
+.novid .lista a em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--verde);display:block;margin-top:3px}
+.chamada{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--tinta);color:var(--papel)}
+.chamada .wrap{display:flex;align-items:center;gap:24px;padding:24px 0;flex-wrap:wrap}
+.chamada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--papel);opacity:.62;flex:none;border-right:1px solid rgba(255,255,255,.22);padding-right:20px}
+.chamada .txt{flex:1;min-width:240px}
+.chamada .txt b{display:block;font-family:var(--tit);font-size:21px;
+  font-weight:700;line-height:1.24;letter-spacing:-.01em;margin-bottom:5px}
+.chamada .txt span{font-size:14.5px;opacity:.78;line-height:1.5}
+.chamada a{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--papel);border:1.5px solid var(--papel);padding:12px 18px;white-space:nowrap;transition:.14s}
+.chamada a:hover{background:var(--papel);color:var(--tinta)}
+@media(max-width:700px){
+  .chamada .wrap{gap:13px}
+  .chamada .rot{border-right:0;padding-right:0;width:100%}
+  .chamada a{width:100%;text-align:center}
+}
+nav button[aria-pressed="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--rosso)}
+.sel-estado{display:flex;align-items:center;gap:8px;padding-left:18px;margin-left:8px;border-left:1px solid var(--linha)}
+.sel-estado label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--fraco)}
+.sel-estado select{font-family:var(--mono);font-size:11px;border:1px solid var(--linha2);background:var(--papel);padding:6px 8px;cursor:pointer;color:var(--tinta)}
+.sel-estado select:hover{border-color:var(--tinta)}
+
+/* ---------------- método ---------------- */
+.area-leitor{margin-left:auto;display:flex;align-items:center;gap:9px}
+.area-leitor .quem{color:var(--tinta2)}
+.bt-mini{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--linha2);color:var(--tinta2);padding:4px 9px;cursor:pointer}
+.bt-mini:hover{border-color:var(--tinta);color:var(--tinta)}
+.caixa-apelido{display:none;border-bottom:1px solid var(--linha);background:var(--areia);padding:22px 0}
+.caixa-apelido.aberta{display:block}
+.caixa-apelido b{font-family:var(--tit);font-size:20px;display:block;margin-bottom:7px}
+.caixa-apelido p{font-size:15px;line-height:1.6;color:var(--tinta2);max-width:70ch;margin-bottom:10px}
+.caixa-apelido .anon{background:#fff;border-left:3px solid var(--verde);padding:11px 15px;margin-bottom:15px}
+.caixa-apelido .anon b{display:inline;font-family:var(--txt);font-size:15px;color:var(--tinta)}
+.linha-campo{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.linha-campo input{font-family:var(--mono);font-size:14px;border:1px solid var(--linha2);padding:9px 12px;min-width:210px;background:#fff}
+.bt-salvar{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--tinta);color:#fff;border:0;padding:10px 16px;cursor:pointer}
+.aviso-ap{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:10px}
+.sug{font-family:var(--mono);font-size:11px;background:#fff;border:1px solid var(--linha2);padding:3px 8px;margin-left:4px;cursor:pointer;color:var(--tinta)}
+.sug:hover{border-color:var(--tinta)}
+.metodo{border-bottom:1px solid var(--linha);padding:12px 0;background:var(--areia)}
+.metodo .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--tinta2)}
+.metodo b{background:var(--tinta);color:var(--papel);padding:2px 7px;font-weight:500}
+.metodo .seta{color:var(--rosso)}
+.metodo .liga{margin-left:auto;border:1px solid var(--linha2);background:none;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;cursor:pointer}
+.metodo .liga[aria-pressed="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+
+main{padding:34px 0 0;min-height:50vh}
+
+/* ---------------- abertura ---------------- */
+/* Sem foto, a escala e o espaco fazem a hierarquia. A manchete e enorme;
+   ao lado, uma coluna so de titulos, para dar ritmo e densidade. */
+.abertura{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(240px,.95fr);gap:0;padding-bottom:30px;border-bottom:3px solid var(--tinta)}
+.abre{padding-right:38px;border-right:1px solid var(--linha)}
+.abre h2{font-family:var(--tit);font-size:clamp(32px,4.7vw,56px);font-weight:900;letter-spacing:-.028em;line-height:1.02;margin:6px 0 15px}
+.abre .linhafina{font-size:19px;line-height:1.55;color:var(--tinta2);max-width:54ch}
+.abre:hover h2{color:var(--rosso)}
+
+.olhada{padding-left:26px}
+.olhada .rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rosso);border-bottom:1px solid var(--tinta);padding-bottom:7px;margin-bottom:4px;display:block}
+.olhada a{display:block;padding:13px 0;border-bottom:1px solid var(--linha)}
+.olhada a:last-child{border-bottom:0}
+.olhada h4{font-family:var(--tit);font-size:17px;font-weight:700;line-height:1.24;letter-spacing:-.01em}
+.olhada a:hover h4{color:var(--rosso)}
+.olhada .meta{font-family:var(--mono);font-size:9.5px;color:var(--fraco);margin-top:5px;letter-spacing:.04em}
+
+/* ---------------- chapéu e selo ---------------- */
+.chapeu{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso);display:block}
+.evid{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;color:var(--tinta3);margin-top:11px;cursor:help;position:relative}
+.evid::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 7px}
+/* a origem e informacao de segundo nivel: fica recolhida ate alguem querer */
+.evid .txt{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .25s ease,opacity .2s ease}
+.evid:hover .txt,.evid:focus .txt,.art:hover .evid .txt,.abre:hover .evid .txt{max-width:340px;opacity:1}
+.evid.confirmado{color:var(--verde)}
+.evid.atribuido{color:var(--oro)}
+.evid.sem-confirmacao{color:var(--fraco)}
+/* Nota escrita pela redacao. Cor propria de proposito: ela nao passou pelo
+   cacador nem pelo cruzamento, e nao pode se confundir com o que passou. */
+.evid.redacao{color:var(--rosso)}
+
+/* ---------------- grade ---------------- */
+.secao{border-bottom:1px solid var(--tinta);padding:10px 0 7px;margin-top:36px;display:flex;align-items:baseline;gap:12px}
+.secao h3{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.secao span{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-left:auto}
+
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.art{padding:22px 26px 24px;border-right:1px solid var(--linha);border-bottom:1px solid var(--linha);display:flex;flex-direction:column}
+.art:nth-child(3n){border-right:0;padding-right:0}
+.art:nth-child(3n+1){padding-left:0}
+.art h3{font-family:var(--tit);font-size:20px;font-weight:700;line-height:1.18;letter-spacing:-.014em;margin:7px 0 8px}
+.art p{font-size:15px;line-height:1.5;color:var(--tinta2);flex:1}
+.art:hover h3{color:var(--rosso)}
+.art .hora{font-family:var(--mono);font-size:9.5px;color:var(--fraco);margin-top:10px;letter-spacing:.05em}
+
+/* número em destaque: o que da peso visual ao jornalismo de dado */
+.art .cifra{font-family:var(--tit);font-size:31px;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--rosso);margin:2px 0 6px;display:block}
+
+/* ---------------- como nasceu ---------------- */
+.nasceu{display:none;margin-top:12px;border-top:1px dotted var(--linha2);padding-top:10px;font-family:var(--mono);font-size:10px;line-height:1.7;color:var(--tinta2)}
+body.mostra-metodo .nasceu{display:block}
+.nasceu .passo{display:flex;gap:7px;margin-bottom:3px;align-items:flex-start}
+.nasceu .n{background:var(--linha);color:var(--tinta);width:15px;height:15px;flex:0 0 15px;display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:600;margin-top:2px}
+.nasceu .n.ok{background:var(--verde);color:#fff}
+.nasceu em{font-style:normal;color:var(--rosso)}
+
+/* ---------------- caixa de erro ---------------- */
+.aviso{text-align:center;padding:70px 20px;color:var(--fraco);font-size:16px}
+.erro-box{max-width:680px;margin:50px auto;border:1px solid var(--linha);padding:26px 28px;background:var(--areia)}
+.erro-box b{font-family:var(--tit);font-size:21px;display:block;margin-bottom:10px}
+.erro-box p{font-size:15.5px;line-height:1.6;color:var(--tinta2);margin-bottom:18px}
+.erro-box code{font-family:var(--mono);font-size:13px;background:#fff;padding:2px 6px;border:1px solid var(--linha)}
+.erro-box table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
+.erro-box td{padding:7px 8px;border-bottom:1px solid var(--linha)}
+.erro-box td.sim{color:var(--verde);font-weight:600}
+.erro-box td.nao{color:var(--rosso);font-weight:600}
+
+/* ---------------- rodapé ---------------- */
+footer{border-top:3px solid var(--tinta);margin-top:44px;padding:32px 0 46px;font-size:14.5px;color:var(--tinta2)}
+.rod{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:40px}
+footer h5{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta);margin-bottom:11px}
+footer p{line-height:1.6}
+footer ul{list-style:none}
+footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--tinta2)}
+.selo-final{font-family:var(--mono);font-size:10px;color:var(--fraco);margin-top:28px;padding-top:16px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.selo-final a{border-bottom:1px solid var(--linha2)}
+
+@media (max-width:980px){
+  .abertura{grid-template-columns:1fr}
+  .abre{padding-right:0;border-right:0;border-bottom:1px solid var(--linha);padding-bottom:24px;margin-bottom:20px}
+  .olhada{padding-left:0}
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .art:nth-child(3n){border-right:1px solid var(--linha);padding-right:26px}
+  .art:nth-child(3n+1){padding-left:26px}
+  .art:nth-child(2n){border-right:0;padding-right:0}
+  .art:nth-child(2n+1){padding-left:0}
+  .rod{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .grade{grid-template-columns:1fr}
+  .art{border-right:0!important;padding:20px 0!important}
+  .rod{grid-template-columns:1fr}
+  nav .wrap{justify-content:flex-start;overflow-x:auto}
+  .sel-estado{border-left:0;padding-left:0;margin-left:0;width:100%;padding-bottom:10px}
+  .metodo .liga{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="faixa">
+  <div class="wrap">
+    <span id="data">—</span>
+    <span id="praca">—</span>
+    <span>atualizado <b id="quando">—</b></span>
+    <span id="stats"></span>
+    <span id="area-leitor" class="area-leitor"></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap masthead">
+    <div class="lema">O jornal que mostra como apura</div>
+    <h1>MERID<em>·IA·</em>NO</h1>
+    <div class="sub">Brasil · Mundo · Estados</div>
+  </div>
+  <nav>
+    <div class="wrap">
+      <button data-f="capa" aria-pressed="true">Capa</button>
+      <button data-f="brasil" aria-pressed="false">Brasil</button>
+      <button data-f="internacional" aria-pressed="false">Mundo</button>
+      <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
+      <span class="sel-estado">
+        <label for="selEstado">estado</label>
+        <select id="selEstado">
+          <option value="mt">Mato Grosso</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="rj">Rio de Janeiro</option>
+        </select>
+      </span>
+    </div>
+  </nav>
+  <div class="cidades" id="cidades"><div class="wrap"></div></div>
+</header>
+
+<div class="novid" id="novid" hidden><div class="wrap"></div></div>
+
+<div class="chamada">
+  <div class="wrap">
+    <span class="rot">Linha do tempo</span>
+    <div class="txt">
+      <b>A acusação vira manchete. O desfecho vira nota de rodapé.</b>
+      <span>Casos em que a primeira versão ficou registrada e a correção não. Os fatos em ordem, cada um com a origem à vista.</span>
+    </div>
+    <a href="linha.html">Ver a seção</a>
+  </div>
+</div>
+
+<div class="metodo">
+  <div class="wrap">
+    <b>1</b> lê o que os grandes veículos estão dando
+    <span class="seta">→</span>
+    <b>2</b> procura a mesma história em fonte que autoriza reprodução
+    <span class="seta">→</span>
+    <b>3</b> escreve o nosso texto
+    <button class="liga" id="btMetodo" aria-pressed="false">Ver o método em cada matéria</button>
+  </div>
+</div>
+
+<div class="caixa-apelido" id="caixa-apelido">
+  <div class="wrap">
+    <b>Escolha um apelido</b>
+    <p>Serve para o Meridiano abrir direto na sua praça, marcar o que você já leu e deixar de repetir o que não te interessa. Quanto mais você lê, melhor o jornal fica para você.</p>
+    <p class="anon"><b>Não pedimos e-mail, nome nem telefone.</b> Você inventa um apelido qualquer — só você sabe que é você. Para nós é uma etiqueta sem dono. Ele fica guardado neste navegador, e você pode apagar tudo quando quiser.</p>
+    <p>O <b>PIN de 6 dígitos</b> é o que te reconhece em outro computador ou no celular: basta digitar o mesmo apelido e o mesmo PIN. Guardamos só uma impressão embaralhada dele, nunca o número. <b>Não há como recuperá-lo</b> — se esquecer, é só começar com outro apelido.</p>
+    <div class="linha-campo">
+      <input id="campo-apelido" placeholder="njeletto" maxlength="24" autocomplete="off" spellcheck="false">
+      <input id="campo-pin" placeholder="PIN de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" style="width:150px">
+      <button class="bt-salvar" data-ap="salvar">usar este</button>
+      <button class="bt-mini" data-ap="fechar">agora não</button>
+    </div>
+    <div class="aviso-ap" id="aviso-apelido"></div>
+  </div>
+</div>
+
+<div class="ultimas" id="ultimas" hidden><div class="wrap caixa"></div></div>
+
+<main class="wrap" id="conteudo">
+  <p class="aviso">Carregando a edição…</p>
+</main>
+
+
+
+<footer>
+  <div class="wrap">
+    <div class="rod">
+      <div>
+        <h5>Como fazemos</h5>
+        <p>Os grandes veículos nos dizem o que é notícia. O texto vem sempre de quem autoriza: Agência Brasil, Agência Câmara, Agência Senado, ONU News, The Conversation, Vatican News e assessorias públicas. Cada matéria é escrita por nós, com a fonte declarada e o link do documento original.</p>
+      </div>
+      <div>
+        <h5>Fontes livres</h5>
+        <ul>
+          <li>Agência Brasil</li><li>Agência Câmara</li><li>Agência Senado</li>
+          <li>ONU News</li><li>The Conversation</li><li>Vatican News</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Editorias</h5>
+        <ul><li>Brasil</li><li>Mundo</li><li>Mato Grosso</li><li>Rio Grande do Sul</li><li>Rio de Janeiro</li></ul>
+      </div>
+    </div>
+    <div class="selo-final">
+      <span><a href="linha.html" style="border-bottom:1px solid var(--linha2)">Linha do tempo</a></span>
+      <span><a href="painel.html" style="border-bottom:1px solid var(--linha2)">Painel de fontes</a></span>
+      <span>MERIDIANO · jornalismo de fonte aberta</span>
+      <span id="rodape">—</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const NOMES = { internacional:'Mundo', brasil:'Brasil', regional:'Estado' };
+// o chapeu mostra o nome do estado da propria materia, nao a palavra "Estado"
+const SELO_NIVEL = {
+  confirmado:       { cor:'var(--verde)', fundo:'#EAF3EE' },
+  atribuido:        { cor:'var(--oro)',   fundo:'#F9F2E0' },
+  'sem-confirmacao':{ cor:'var(--fraco)', fundo:'#F2F2F2' }
+};
+function selo(i){
+  const n = i.nivel || 'confirmado';
+  const txt = i.selo || (n === 'confirmado' ? 'Confirmado oficialmente' : 'Sem confirmação');
+  return `<span class="evid ${n}" tabindex="0" title="${esc(txt)}"><span class="txt">${esc(txt)}</span></span>`;
+}
+
+// O numero e o que da peso visual quando nao ha foto. Extraimos a cifra mais
+// significativa do resumo e mostramos grande — funciona bem justamente no
+// jornalismo de dado, que e o nosso.
+function cifra(i){
+  const m = String(i.resumo || '').match(/R\$\s?[\d.,]+\s?(?:mil|milh[õo]es|bilh[õo]es)?|\d+[,.]?\d*\s?%|\d{1,3}(?:\.\d{3})+/);
+  if (!m) return '';
+  const v = m[0].replace(/\s+/g,' ').trim();
+  return v.length <= 18 ? `<span class="cifra">${esc(v)}</span>` : '';
+}
+
+const ESTADOS = { mt:'Mato Grosso', rs:'Rio Grande do Sul', rj:'Rio de Janeiro' };
+const chapeuDe = i => i.editoria === 'regional'
+  ? (ESTADOS[i.uf] || NOMES.regional)
+  : (NOMES[i.editoria] || i.editoria);
+let ED = { itens:[], pautas:[] }, filtro = 'capa';
+let cidade = null;
+// PARA ADICIONAR UMA CIDADE, NAO MEXA AQUI.
+// Abra scripts/municipios.mjs, ache a cidade (ou escreva uma nova) e ponha
+// destaque:true. O robo publica a lista dentro da edicao e a capa monta a aba
+// sozinha. Esta lista abaixo e so reserva, para a capa nao ficar sem aba caso
+// o robo ainda nao tenha rodado depois da mudanca.
+const CIDADES_RESERVA = { mt:[{id:'cuiaba',nome:'Cuiabá'},{id:'vg',nome:'Várzea Grande'},{id:'sinop',nome:'Sinop'}],
+                          rj:[{id:'rio',nome:'Rio de Janeiro'},{id:'niteroi',nome:'Niterói'},{id:'buzios',nome:'Búzios'}],
+                          rs:[{id:'poa',nome:'Porto Alegre'},{id:'caxias',nome:'Caxias do Sul'}] };
+const cidadesDe = uf => (ED.cidades && ED.cidades[uf]) || CIDADES_RESERVA[uf] || [];
+// o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
+// e o link pode ser compartilhado ja no estado certo
+let estado = (location.hash.replace('#','') || 'mt').toLowerCase();
+if (!ESTADOS[estado]) estado = 'mt';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const faz = iso => { const m = Math.round((Date.now()-Date.parse(iso))/60000);
+  if(!isFinite(m)) return ''; if(m<1) return 'agora'; if(m<60) return 'há '+m+' min';
+  const h=Math.round(m/60); return 'há '+h+(h===1?' hora':' horas'); };
+
+function nasceu(i){
+  const pautou = (i.pautadoPor||[]).length
+    ? `pautado por <em>${(i.pautadoPor||[]).map(esc).join(', ')}</em>`
+    : 'sem correspondência na pauta do dia';
+  return `<div class="nasceu">
+    <div class="passo"><span class="n">1</span><span>${pautou}</span></div>
+    <div class="passo"><span class="n ok">2</span><span>fonte livre encontrada: <em>${esc(i.origemNome||'—')}</em></span></div>
+    <div class="passo"><span class="n ok">3</span><span>texto reescrito por nós, com link para o documento</span></div>
+  </div>`;
+}
+
+// As abas de cidade so aparecem na aba do estado, e so mostram cidade que
+// tem materia hoje. Aba vazia e promessa quebrada.
+function montarCidades(doEstadoTodas){
+  const caixa = $('#cidades');
+  const linha = caixa.querySelector('.wrap');
+  const lista = cidadesDe(estado)
+    .map(c => ({ ...c, n: doEstadoTodas.filter(i => i.municipio === c.id).length }))
+    .filter(c => c.n > 0);
+
+  if (!lista.length) { caixa.style.display = 'none'; cidade = null; return; }
+
+  const total = doEstadoTodas.length;
+  linha.innerHTML = '<span class="rot">cidade</span>'
+    + `<button data-c="" aria-pressed="${cidade === null}">Todo o estado <i>${total}</i></button>`
+    + lista.map(c => `<button data-c="${c.id}" aria-pressed="${cidade === c.id}">${esc(c.nome)} <i>${c.n}</i></button>`).join('');
+  caixa.style.display = 'block';
+
+  linha.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    cidade = b.dataset.c || null;
+    pintar();
+  }));
+}
+
+let carregadoEm = 0;
+
+// Idade do JORNAL, nao a do carregamento da pagina. Sao coisas diferentes:
+// voce pode ter acabado de abrir uma edicao feita ha dez horas. Quem promete
+// mostrar como apura tem que mostrar tambem quando apurou.
+const idadeDoJornal = () => {
+  if (!ED.gerado) return '';
+  const min = Math.round((Date.now() - Date.parse(ED.gerado)) / 60000);
+  if (min < 2)  return 'agora';
+  if (min < 60) return `há ${min} min`;
+  const h = Math.round(min / 60);
+  if (h < 24) return h === 1 ? 'há 1 hora' : `há ${h} horas`;
+  const d = Math.round(h / 24);
+  return d === 1 ? 'ontem' : `há ${d} dias`;
+};
+
+const desdeQuando = () => {
+  if (!carregadoEm) return '';
+  const min = Math.round((Date.now() - carregadoEm) / 60000);
+  return min < 1 ? 'agora' : min === 1 ? 'há 1 min' : min < 60 ? `há ${min} min` : `há ${Math.round(min/60)}h`;
+};
+
+// Busca os JSON de novo na fonte, sem cache. Sem isto o botao so remontaria
+// o que ja estava na memoria — pareceria funcionar e nao traria nada novo.
+async function atualizar(){
+  const bt = document.getElementById('bt-atualizar');
+  if (bt) { bt.disabled = true; bt.classList.add('girando'); bt.textContent = 'buscando…'; }
+  try {
+    await carregar();
+  } catch {
+    if (bt) bt.textContent = 'falhou';
+  }
+  // carregar() redesenha tudo, inclusive este botao
+}
+
+// NOVIDADE NOS CASOS QUE O LEITOR ACOMPANHA
+//
+// Isto e o que um feed de rede social nao faz. Para o algoritmo, "acusado" e
+// "absolvido" sao dois posts sem relacao, e o segundo rende menos — entao
+// some. Aqui sao a mesma historia em estados diferentes, e o jornal sabe
+// disso porque tem selo de evidencia.
+async function novidades(){
+  const caixa = $('#novid');
+  if (!leitor.apelido) { caixa.hidden = true; return; }
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'novidades', apelido: leitor.apelido }) });
+    const j = await r.json();
+    const m = j.mudou || [];
+    if (!m.length) { caixa.hidden = true; return; }
+
+    const ROT = { confirmado:'agora confirmado em documento oficial', atribuido:'agora atribuído a fonte oficial' };
+    caixa.querySelector('.wrap').innerHTML =
+      '<span class="selo">desfecho</span><div class="lista">' +
+      `<b>${m.length === 1 ? 'Um caso que você acompanha teve desfecho' : m.length + ' casos que você acompanha tiveram desfecho'}</b>` +
+      m.map(x => `<a href="${esc(x.novoLink)}">${esc(x.novoTitulo)}<em>${esc(ROT[x.virou] || x.virou)}</em></a>`).join('') +
+      '</div>';
+    caixa.hidden = false;
+  } catch { caixa.hidden = true; }
+}
+
+// ULTIMAS — as mais recentes de TODAS as edicoes, nao so da aba aberta.
+// Fica fixa no topo: quem entra ve o que acabou de sair sem precisar
+// procurar em qual editoria caiu.
+function ultimas(){
+  const caixa = $('#ultimas');
+  const lista = [...ED.itens, ...(ED.circulando || [])]
+    .filter(i => i.titulo && i.iso && i.link)
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso))
+    .filter((i,n,a) => a.findIndex(x => x.titulo === i.titulo) === n)
+    .slice(0, 6);
+
+  if (lista.length < 3) { caixa.hidden = true; return; }
+
+  const onde = i => i.municipioNome || (i.uf && ESTADOS[i.uf]) ||
+                    (i.editoria === 'internacional' ? 'Mundo' : 'Brasil');
+
+  caixa.querySelector('.caixa').innerHTML =
+    '<div class="rot"><span class="pulso"></span>últimas<span class="regua"></span>' +
+      `<span class="quando">${esc(idadeDoJornal())}</span>` +
+      '<button id="bt-atualizar">atualizar</button></div>' +
+    '<ol>' + lista.map(i => `<li><a href="${esc(i.link)}">
+        <time>${esc(i.hora || '')}</time>
+        <span>${esc(i.titulo)}<em>${esc(onde(i))}</em></span>
+      </a></li>`).join('') + '</ol>';
+  caixa.hidden = false;
+  document.getElementById('bt-atualizar')?.addEventListener('click', atualizar);
+}
+
+function pintar(){
+  const doEstado = i => i.uf === estado;
+  let lista = filtro === 'capa'
+    ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
+    : filtro === 'regional'
+      ? ED.itens.filter(i => i.editoria === 'regional' && doEstado(i))
+      : ED.itens.filter(i => i.editoria === filtro);
+
+  if (filtro === 'regional') {
+    montarCidades(lista);
+    if (cidade) lista = lista.filter(i => i.municipio === cidade);
+  } else {
+    $('#cidades').style.display = 'none';
+  }
+
+  const alvo = $('#conteudo');
+  if(!lista.length){
+    const nomeCidade = cidade && cidadesDe(estado).find(c => c.id === cidade)?.nome;
+    alvo.innerHTML = filtro === 'regional'
+      ? (nomeCidade
+        ? `<div class="vazio-estado"><b>Nada de ${esc(nomeCidade)} nas últimas 24 horas</b>
+           As fontes públicas da cidade não publicaram nada novo. Toque em "Todo o estado" para ver ${esc(ESTADOS[estado])} inteiro.</div>`
+        : `<div class="vazio-estado"><b>Ainda não temos edição de ${esc(ESTADOS[estado])}</b>
+         As fontes públicas deste estado estão sendo conectadas. A capa, com Brasil e Mundo, continua completa.</div>`)
+      : '<p class="aviso">Nada nesta editoria nas últimas 24 horas.</p>';
+    return;
+  }
+
+  const d = lista[0];
+  const olhada = lista.slice(1, 5);        // coluna lateral: so titulos
+  const resto = lista.slice(5);
+
+  let h = `<div class="abertura">
+    <a class="abre" href="${esc(d.link)}" data-id="${esc(d.id)}">
+      ${d.foto ? `<img class="capa" src="${esc(d.foto)}" alt="${esc(d.fotoAlt || d.titulo)}" loading="lazy" onerror="this.remove()">` : ''}
+      <span class="chapeu">${esc(chapeuDe(d))}</span>
+      <h2>${esc(d.titulo)}</h2>
+      <p class="linhafina">${esc(d.resumo)}</p>
+      ${selo(d)}
+      ${nasceu(d)}
+    </a>
+    <div class="olhada">
+      <span class="rot">O dia em uma olhada</span>
+      ${olhada.map(i => `<a href="${esc(i.link)}" data-id="${esc(i.id)}">
+        <h4>${esc(i.titulo)}</h4>
+        <div class="meta">${esc(chapeuDe(i))} · ${esc(i.hora)}</div>
+      </a>`).join('')}
+    </div>
+  </div>`;
+
+  if (resto.length) {
+    h += `<div class="secao"><h3>${filtro === 'capa' ? 'Edição' : esc(NOMES[filtro] || chapeuDe(resto[0]))}</h3><span>${resto.length} ${resto.length === 1 ? 'matéria' : 'matérias'}</span></div>`;
+    h += '<div class="grade">' + resto.map(i => `<a class="art cartao" href="${esc(i.link)}" data-id="${esc(i.id)}">
+      ${i.foto ? `<img class="mini" src="${esc(i.foto)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+      <span class="chapeu">${esc(chapeuDe(i))}</span>
+      ${cifra(i)}
+      <h3>${esc(i.titulo)}</h3>
+      <p>${esc(i.resumo)}</p>
+      ${selo(i)}
+      <div class="hora">${esc(i.hora)}</div>
+      ${nasceu(i)}
+    </a>`).join('') + '</div>';
+  }
+
+  alvo.innerHTML = h;
+}
+
+// Sobrou de uma versao antiga da capa: procurava #boxDescarte, que nao existe
+// mais no HTML. Como roda fora do try, o erro interrompia tudo o que vinha
+// depois — e era por isso que a faixa do topo ficava em "atualizado —" e as
+// estatisticas nunca apareciam.
+function pintarDescarte(){
+  const caixa = $('#boxDescarte'), lista = $('#listaDescarte');
+  if (!caixa || !lista) return;
+  const p = ED.pautas || [];
+  if(!p.length) return;
+  caixa.style.display = '';
+  lista.innerHTML = p.slice(0,18).map(x => {
+    const eco = x.quentura >= 1
+      ? ` <span style="color:var(--rosso)">· ${x.quentura+1} veículos deram</span>` : '';
+    return `<li><b>${esc(x.veiculo)}${eco}</b>${esc(x.titulo)}</li>`;
+  }).join('');
+}
+
+async function carregar(){
+  try{
+    // Cada estado grava o proprio arquivo. Buscamos os tres ao mesmo tempo:
+    // se um faltar, os outros entram e o site nao fica vazio.
+    // Guarda o que aconteceu com cada arquivo, para a tela poder explicar
+    // em vez de só dizer que falhou.
+    const diagnostico = [];
+    const puxa = async uf => {
+      const url = `dados/edicao-${uf}.json?t=${Date.now()}`;
+      try {
+        const r = await fetch(url, { cache:'no-store' });
+        if (!r.ok) { diagnostico.push({ uf, ok:false, msg:`HTTP ${r.status}` }); return null; }
+        const j = await r.json();
+        const n = (j.itens || []).length;
+        diagnostico.push({ uf, ok:true, msg:`${n} ${n === 1 ? 'matéria' : 'matérias'}` });
+        return j;
+      } catch (e) {
+        diagnostico.push({ uf, ok:false, msg: String(e.message).slice(0,40) });
+        return null;
+      }
+    };
+    const ARQUIVOS = ['br','mundo', ...Object.keys(ESTADOS)];
+
+    // As notas da redacao nao podem morar nos edicao-*.json: o robo reescreve
+    // aqueles arquivos a cada rodada e elas sumiriam. Vem de fora e sao
+    // juntadas aqui, na hora de exibir.
+    const puxaNotas = async () => {
+      try {
+        const r = await fetch('/api/nota?t=' + Date.now(), { cache:'no-store' });
+        return r.ok ? ((await r.json()).notas || []) : [];
+      } catch { return []; }
+    };
+
+    const [partesBrutas, notas] = await Promise.all([
+      Promise.all(ARQUIVOS.map(puxa)),
+      puxaNotas()
+    ]);
+    const partes = partesBrutas.filter(Boolean);
+    window.__diag = diagnostico;
+
+    if (!partes.length) {
+      const local = location.protocol === 'file:';
+      $('#conteudo').innerHTML = `<div class="erro-box">
+        <b>Não consegui carregar nenhuma edição.</b>
+        ${local
+          ? '<p>Você está abrindo o arquivo direto do computador, e o navegador bloqueia a leitura de arquivos locais por segurança. Publique o site ou rode <code>npx serve</code> na pasta.</p>'
+          : '<p>Os arquivos de edição não foram encontrados no servidor. Rode o robô <b>Il Meridiano</b> em Actions para gerá-los.</p>'}
+        <table>${diagnostico.map(d => `<tr>
+          <td>dados/edicao-${d.uf}.json</td>
+          <td class="${d.ok ? 'sim' : 'nao'}">${d.ok ? 'ok' : 'falhou'}</td>
+          <td>${esc(d.msg)}</td>
+        </tr>`).join('')}</table>
+      </div>`;
+      return;
+    }
+
+    // Brasil e Mundo sao os mesmos nos tres: guardamos uma vez so.
+    const vistos = new Set();
+    const itens = [];
+
+    // A nota da redacao entra primeiro na lista, mas nao disfarcada de
+    // materia do robo: ela carrega nivel 'redacao' e selo proprio, e a
+    // ordenacao por horario coloca cada uma no seu lugar depois.
+    for (const n of notas) {
+      itens.push({ ...n, link: '/nota.html?id=' + encodeURIComponent(n.id), original: false });
+      vistos.add(n.id);
+    }
+    for (const p of partes) {
+      for (const i of (p.itens || [])) {
+        const k = (i.editoria === 'regional' ? i.uf + ':' : '') + i.id;
+        if (vistos.has(k)) continue;
+        vistos.add(k);
+        itens.push(i);
+      }
+    }
+    // as notas de circulacao de todas as edicoes, sem duplicar
+    const vistosC = new Set();
+    const circulando = [];
+    for (const p of partes) {
+      for (const c of (p.circulando || [])) {
+        const k = (c.uf || '') + ':' + c.id;
+        if (vistosC.has(k)) continue;
+        vistosC.add(k);
+        circulando.push(c);
+      }
+    }
+
+    // as notas sem confirmacao entram na edicao normal, com selo cinza
+    for (const c of circulando) {
+      itens.push({
+        id: c.id, editoria: c.editoria, uf: c.uf,
+        titulo: c.titulo, resumo: (c.corpo||[])[0] || '',
+        municipio: c.municipio || null,
+        fonte: 'Meridiano', link: c.link || '#', iso: c.iso, hora: c.hora,
+        nivel: 'sem-confirmacao', selo: 'Sem confirmação'
+      });
+    }
+
+    // ordem por importancia, nao por evidencia: confirmado pesa, mas o que
+    // muitos veiculos deram tambem, e o mais recente desempata
+    const peso = i => (i.nivel === 'confirmado' ? 3 : i.nivel === 'atribuido' ? 2 : 0)
+                    + Math.min(3, i.quentura || 0);
+    itens.sort((a,b) => (peso(b) - peso(a)) || (Date.parse(b.iso) - Date.parse(a.iso)));
+
+    const pautas = [];
+    for (const p of partes) for (const x of (p.pautas || [])) pautas.push(x);
+
+    ED = {
+      circulando,
+      cidades: Object.fromEntries(
+        partes.filter(p => p.uf && (p.cidades || []).length).map(p => [p.uf, p.cidades])),
+      gerado: partes.map(p => p.gerado).sort().pop(),
+      numeros: partes.reduce((a,p) => {
+        const n = p.numeros || {};
+        for (const k of Object.keys(n)) a[k] = (a[k]||0) + n[k];
+        return a;
+      }, {}),
+      itens, pautas
+    };
+  }catch(e){
+    $('#conteudo').innerHTML = `<div class="erro-box">
+      <b>Erro ao montar a edição.</b>
+      <p>${esc(String(e.message))}</p>
+      <table>${(window.__diag || []).map(d => `<tr><td>dados/edicao-${d.uf}.json</td><td class="${d.ok?'sim':'nao'}">${d.ok?'ok':'falhou'}</td><td>${esc(d.msg)}</td></tr>`).join('')}</table>
+    </div>`;
+    return;
+  }
+  carregadoEm = Date.now();
+  novidades();
+  ultimas();
+  pintar(); pintarDescarte();
+  if(ED.gerado){
+    $('#quando').textContent = faz(ED.gerado);
+    $('#rodape').textContent = 'edição de ' + new Date(ED.gerado).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'});
+  }
+  const n = ED.numeros;
+  if(n) $('#stats').textContent = `${n.pauta} manchetes lidas · ${n.publicadas} matérias próprias · ${n.semFonte} sem fonte livre`;
+}
+
+document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
+  filtro = b.dataset.f;
+  cidade = null;
+  document.querySelectorAll('nav button').forEach(o => o.setAttribute('aria-pressed', o===b));
+  pintar();
+}));
+
+function aplicarEstado(){
+  $('#selEstado').value = estado;
+  const p = $('#praca'); if (p) p.textContent = 'edição ' + ESTADOS[estado];
+  $('#btEstado').textContent = ESTADOS[estado];
+  location.hash = estado;
+  pintar();
+}
+$('#selEstado').addEventListener('change', e => {
+  estado = e.target.value;
+  cidade = null;
+  // quem escolhe um estado quer ver aquele estado: leva junto para a aba
+  filtro = 'regional';
+  document.querySelectorAll('nav button').forEach(o =>
+    o.setAttribute('aria-pressed', o.dataset.f === 'regional'));
+  aplicarEstado();
+});
+window.addEventListener('hashchange', () => {
+  const novo = location.hash.replace('#','').toLowerCase();
+  if (ESTADOS[novo] && novo !== estado) { estado = novo; aplicarEstado(); }
+});
+aplicarEstado();
+
+$('#btMetodo').addEventListener('click', e => {
+  const on = document.body.classList.toggle('mostra-metodo');
+  e.target.setAttribute('aria-pressed', on);
+  e.target.textContent = on ? 'Ocultar o método' : 'Ver o método em cada matéria';
+});
+
+/* ===================== LEITOR ANÔNIMO =====================================
+   O leitor escolhe um apelido. Ele fica guardado no navegador dele, e o
+   histórico de leitura se liga só a esse apelido. Sem e-mail, sem nome, sem
+   telefone. Ele sabe quem é; nós não.
+   Enquanto o banco não estiver ligado, tudo funciona local e nada é enviado.
+=========================================================================== */
+
+/* Grava pelo /api/leitor, que roda no Vercel. A chave de escrita fica no
+   servidor — se ficasse aqui no código da página, qualquer um poderia apagar
+   tudo. Se o armazenamento ainda não estiver ligado, a função responde ok e o
+   navegador segue guardando localmente. */
+
+const leitor = {
+  get apelido(){ try { return localStorage.getItem('meridiano_apelido') || ''; } catch { return ''; } },
+  set apelido(v){ try { localStorage.setItem('meridiano_apelido', v); } catch {} },
+  get lidas(){ try { return JSON.parse(localStorage.getItem('meridiano_lidas') || '{}'); } catch { return {}; } },
+  set lidas(v){ try { localStorage.setItem('meridiano_lidas', JSON.stringify(v)); } catch {} }
+};
+
+async function api(acao, dados = {}){
+  try {
+    const r = await fetch('/api/leitor', {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify({ acao, ...dados })
+    });
+    return r.ok ? await r.json() : null;
+  } catch { return null; }
+}
+
+async function checarApelido(nome, pin){
+  const limpo = String(nome).toLowerCase().trim()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9_-]/g,'');
+  if (limpo.length < 3)  return { ok:false, msg:'Use pelo menos 3 caracteres.' };
+  if (limpo.length > 24) return { ok:false, msg:'Use no máximo 24 caracteres.' };
+
+  const r = await api('apelido', { apelido: limpo, pin });
+  if (!r) return { ok:true, apelido:limpo };
+  return r.ok ? { ok:true, apelido:r.apelido, novo:r.novo, entrou:r.entrou }
+              : { ok:false, msg:r.msg, precisaPin:r.precisaPin };
+}
+
+function registrarLeitura(i){
+  const l = leitor.lidas;
+  l[i.id] = (l[i.id] || 0) + 1;
+  leitor.lidas = l;
+  api('leitura', {
+    apelido: leitor.apelido || '', id: i.id, titulo: i.titulo,
+    editoria: i.editoria, uf: i.uf || '', nivel: i.nivel || ''
+  });
+}
+
+function abrirCaixaApelido(){
+  const cx = document.getElementById('caixa-apelido');
+  if (cx) cx.classList.add('aberta');
+}
+
+function montarApelido(){
+  const alvo = document.getElementById('area-leitor');
+  if (!alvo) return;
+  const a = leitor.apelido;
+  alvo.innerHTML = a
+    ? `<span class="quem">olá, <b>${esc(a)}</b></span>
+       <button class="bt-mini" data-ap="abrir">trocar</button>`
+    : `<button class="bt-mini" data-ap="abrir">quem é você?</button>`;
+}
+
+// O clique e escutado na pagina inteira, nao no botao. Assim funciona
+// independente de quando o botao nasce ou de quantas vezes a area e
+// redesenhada — que era o motivo de nao responder.
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-ap]');
+  if (!b) return;
+  const acao = b.dataset.ap;
+  const cx = document.getElementById('caixa-apelido');
+  if (acao === 'abrir')  { cx.classList.add('aberta'); document.getElementById('campo-apelido')?.focus(); }
+  if (acao === 'fechar') cx.classList.remove('aberta');
+  if (acao === 'salvar') salvarApelido();
+  if (acao === 'sugestao') {
+    document.getElementById('campo-apelido').value = b.textContent;
+    document.getElementById('aviso-apelido').textContent = '';
+  }
+});
+
+async function salvarApelido(){
+  const campo = document.getElementById('campo-apelido');
+  const cPin  = document.getElementById('campo-pin');
+  const aviso = document.getElementById('aviso-apelido');
+  const r = await checarApelido(campo.value, (cPin?.value || '').replace(/\D/g,''));
+
+  if (r.ok) {
+    leitor.apelido = r.apelido;
+    if (cPin) cPin.value = '';
+    document.getElementById('caixa-apelido').classList.remove('aberta');
+    montarApelido();
+    if (r.entrou) aviso.textContent = '';
+    return;
+  }
+  aviso.textContent = r.msg || '';
+  if (r.precisaPin) cPin?.focus();
+}
+
+$('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
+setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30000);
+setInterval(carregar, 5*60*1000);
+// A area do leitor nao pode depender de nada que venha antes. Se o carregamento
+// da edicao falhar, o apelido continua funcionando.
+for (const id of ['campo-apelido','campo-pin']) {
+  document.getElementById(id)?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') salvarApelido();
+  });
+}
+document.getElementById('campo-pin')?.addEventListener('input', e => {
+  e.target.value = e.target.value.replace(/\D/g,'').slice(0,6);
+});
+montarApelido();
+
+// conta a leitura quando o leitor abre a materia
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[data-id]');
+  if (!a) return;
+  const i = (ED.itens || []).find(x => x.id === a.dataset.id);
+  if (i) registrarLeitura(i);
+});
+
+carregar();
+</script>
+</body>
+</html>
