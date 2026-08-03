@@ -728,6 +728,15 @@ if (temChave()) {
   const usosCidade = new Map();
   const titulosJaFeitos = [];
 
+  // Titulos das ultimas 72 horas, do arquivo. E a memoria entre rodadas.
+  const jaSaiuAntes = (() => {
+    const corteMem = Date.now() - 72 * 3600 * 1000;
+    return (arquivoMemoria.itens || [])
+      .filter(x => x.iso && Date.parse(x.iso) > corteMem)
+      .map(x => x.titulo)
+      .filter(Boolean);
+  })();
+
   const filaLimpa = revezar(fila).filter(i => {
     const n = (usos.get(i.veiculo) || 0);
     if (n >= TETO_POR_FONTE) return false;
@@ -742,7 +751,13 @@ if (temChave()) {
     }
     // mesma historia com titulo diferente: "MT AgroFestival lanca programacao"
     // e "Prefeitura lanca programacao do AgroFestival" sao a mesma coisa
+    // Repetida DENTRO da rodada
     if (titulosJaFeitos.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
+    // ...e repetida em rodadas ANTERIORES. Sem isto o robo nao sabia o que
+    // publicou ha tres horas, e a mesma historia saia tres vezes com o titulo
+    // ligeiramente diferente — "NASA apresenta", "NASA exibe na", "NASA exibe
+    // no". Dentro da rodada o filtro pegava; entre rodadas, nao existia.
+    if (jaSaiuAntes.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
     usos.set(i.veiculo, n + 1);
     titulosJaFeitos.push(i.titulo);
     return true;
@@ -987,6 +1002,59 @@ try {
     console.log(`     ${tiradas} fotos removidas: mesma imagem repetida em varias materias (arte do orgao)`);
   }
 } catch (e) { console.log('     aviso foto repetida: ' + String(e.message).slice(0,40)); }
+
+/* ------------------ MANCHETES DOS ASSUNTOS SEGUIDOS ----------------------
+   Ha assunto que o jornal nao cobre: Fifa, celebridade, futebol. Nao existe
+   orgao publico brasileiro que registre decisao da Fifa, entao nunca havera
+   documento — e fingir que ha seria pior que nao ter.
+
+   O que da para fazer com honestidade e guardar as manchetes que circulam,
+   com nome do veiculo e link. O leitor recebe o que pediu, ninguem tem texto
+   copiado, e a tela deixa claro que so estamos apontando.
+
+   Guardamos por ASSUNTO, nao por leitor: uma copia serve todos que seguem o
+   mesmo termo.                                                             */
+if (process.env.CHAVE_ROBO && process.env.URL_SITE) {
+  try {
+    const base = process.env.URL_SITE.replace(/\/+$/,'') + '/api/leitor';
+    const r = await fetch(base, { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'assuntos-todos', chave: process.env.CHAVE_ROBO }) });
+    const termos = ((await r.json().catch(() => ({}))).termos) || [];
+
+    if (termos.length) {
+      const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      const bate = (texto, termo) => {
+        const t = sa(texto);
+        const ps = sa(termo).split(/\s+/).filter(p => p.length >= 3);
+        return ps.length ? ps.every(p => t.includes(p.slice(0, Math.max(4, p.length - 2)))) : false;
+      };
+
+      // A pauta bruta da rodada: tudo que os veiculos deram, inclusive o que
+      // foi descartado por nao ter fonte livre. E justamente o descartado que
+      // interessa aqui.
+      const pauta = [...(P.itens || [])];
+      const porAssunto = {};
+      for (const termo of termos) {
+        const achadas = pauta
+          .filter(i => bate(i.titulo, termo))
+          .slice(0, 10)
+          .map(i => ({ titulo: i.titulo, veiculo: i.veiculo, link: i.link, iso: i.iso || new Date().toISOString() }));
+        if (achadas.length) porAssunto[termo] = achadas;
+      }
+
+      if (Object.keys(porAssunto).length) {
+        const r2 = await fetch(base, { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ acao:'guardar-pauta', chave: process.env.CHAVE_ROBO, porAssunto }) });
+        const j2 = await r2.json().catch(() => ({}));
+        console.log(`     ${j2.total || 0} manchetes guardadas em ${Object.keys(porAssunto).length} assunto(s) seguido(s)`);
+      } else {
+        console.log(`     ${termos.length} assunto(s) seguido(s), nenhuma manchete correspondente nesta rodada`);
+      }
+    }
+  } catch (e) {
+    console.log('     aviso assuntos: ' + String(e.message).slice(0, 50));
+  }
+}
 
 /* --------------------------- FILA DOS CASOS ------------------------------
    Quem acompanha uma noticia quer o que veio depois dela. Cada noticia
