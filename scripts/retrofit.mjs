@@ -35,6 +35,14 @@ const CSS = `
 .ctx-bloco p:last-of-type{margin-bottom:0}
 .ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
 .ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
+.ctx-perg{border-top:1px solid #CBD9E6;margin-top:16px;padding-top:15px}
+.ctx-perg label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:9px}
+.ctx-perg .campo{display:flex;gap:8px;flex-wrap:wrap}
+.ctx-perg input{flex:1;min-width:200px;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;border:1px solid #CBD9E6;background:#fff;padding:11px 13px}
+.ctx-perg button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:#1F4D7A;color:#fff;border:0;padding:11px 17px;cursor:pointer}
+.ctx-resp{margin-top:15px;padding-top:14px;border-top:1px dashed #CBD9E6}
+.ctx-resp .q{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#1F4D7A;margin-bottom:10px}
+.ctx-resp p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:11px}
 `;
 
 // O id da historia nao existe no HTML antigo. Usamos o proprio nome do arquivo,
@@ -101,13 +109,47 @@ const SCRIPT = `
             + '</div>';
         } else if (j.ok) {
           ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
-            + '<p class="nada">Esta notícia não pede contexto adicional — o que ela informa se explica sozinho.</p></div>';
+            + '<p class="nada">Nada aqui exige explicação de fundo. Mas se você ficou com alguma dúvida, pergunte:</p></div>';
         } else {
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
+        montarPergunta();
       })
       .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
   });
+
+  function montarPergunta(){
+    var b = ca.querySelector('.ctx-bloco');
+    if (!b || b.querySelector('.ctx-perg')) return;
+    var d = document.createElement('div');
+    d.className = 'ctx-perg';
+    d.innerHTML = '<label>pergunte sobre esta notícia</label>'
+      + '<div class="campo"><input id="cp-q" placeholder="o que é isso? por que aconteceu? isso é muito?" maxlength="300">'
+      + '<button id="cp-ok">perguntar</button></div><div id="cp-saida"></div>';
+    b.appendChild(d);
+    var ir = function(){
+      var q = document.getElementById('cp-q').value.trim();
+      if (q.length < 5) return;
+      var bt = document.getElementById('cp-ok'), sa = document.getElementById('cp-saida');
+      bt.disabled = true; bt.textContent = 'procurando…';
+      fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'perguntar', pergunta:q, titulo:t,
+          resumo: document.querySelector('.linhafina') ? document.querySelector('.linhafina').textContent : '',
+          id: location.pathname.split('/').pop().replace(/\\.html$/,'') }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          bt.disabled = false; bt.textContent = 'perguntar';
+          sa.innerHTML = j.ok
+            ? '<div class="ctx-resp"><div class="q">' + q.replace(/[<>]/g,'') + '</div>'
+              + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
+              + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '') + '</div>'
+            : '<div class="ctx-resp"><p>' + (j.msg || 'não consegui responder').replace(/[<>]/g,'') + '</p></div>';
+        })
+        .catch(function(){ bt.disabled = false; bt.textContent = 'perguntar'; });
+    };
+    document.getElementById('cp-ok').addEventListener('click', ir);
+    document.getElementById('cp-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') ir(); });
+  }
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;
