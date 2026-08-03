@@ -1,0 +1,53 @@
+name: Retrofit
+
+# Poe os botoes de compartilhar e de acompanhar nas materias que ja estao no ar.
+#
+# As paginas em /materia sao HTML estatico e ficam congeladas no formato do dia
+# em que nasceram. Quando o molde ganha algo novo, o acervo antigo nao
+# acompanha. Este workflow resolve o acervo inteiro de uma vez, sem Gemini e
+# sem custo — e edicao de texto.
+#
+# Roda so quando voce mandar. Nao tem agendamento de proposito: mexer em 380
+# arquivos e coisa para fazer com intencao, nao automaticamente.
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: 'Só simular, sem gravar nada'
+        type: boolean
+        default: false
+
+jobs:
+  retrofit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+
+      - name: Rodar o retrofit
+        run: |
+          if [ "${{ inputs.simular }}" = "true" ]; then
+            node scripts/retrofit.mjs --simular
+          else
+            node scripts/retrofit.mjs
+          fi
+
+      - name: Publicar
+        if: ${{ inputs.simular != true }}
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add materia
+          if git diff --staged --quiet; then
+            echo "nada mudou — o acervo ja estava atualizado"
+          else
+            git commit -m "retrofit: botoes de compartilhar e acompanhar no acervo"
+            git push
+          fi
