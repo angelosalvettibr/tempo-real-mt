@@ -29,6 +29,8 @@ h1 a:hover{color:var(--rosso)}
 .est.confirmado{color:var(--verde)} .est.atribuido{color:var(--oro)}
 .est.sem-confirmacao,.est.redacao{color:var(--fraco)}
 
+.oquee{font-size:14.5px;line-height:1.55;color:var(--tinta2);margin:20px 0 4px;padding-left:13px;border-left:2px solid var(--linha2)}
+.oquee b{color:var(--tinta)} .oquee a{color:var(--rosso)}
 .resumo{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:22px 0}
 .resumo b{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:11px}
 .resumo p{font-size:16.5px;line-height:1.65;color:#2A3540}
@@ -84,7 +86,7 @@ const ROT = { confirmado:'confirmado em documento', atribuido:'atribuído a font
     document.title = (caso ? caso.titulo : 'Caso acompanhado') + ' — Meridiano';
 
     alvo.innerHTML = `
-      <span class="rot">Você acompanha este caso</span>
+      <span class="rot">Caso que você acompanha</span>
       <h1>${caso ? `<a href="${esc(caso.link)}">${esc(caso.titulo)}</a>` : 'Caso acompanhado'}</h1>
       ${caso ? `<span class="est ${esc(caso.atual)}">${esc(ROT[caso.atual] || caso.atual)}</span>` : ''}
 
@@ -92,6 +94,8 @@ const ROT = { confirmado:'confirmado em documento', atribuido:'atribuído a font
         <p>Esta história mudou de estado desde que você começou a acompanhar. É o capítulo que costuma sair pequeno na imprensa — aqui ele tem o mesmo peso do primeiro.</p></div>` : ''}
 
       <div id="resumo-caso"></div>
+
+      <p class="oquee">Um <b>caso</b> é uma história específica, acompanhada até o desfecho. Diferente de um <b>assunto</b>, que é um tema que se repete e não termina — esses ficam em <a href="/meu.html">Seu Meridiano</a>.</p>
 
       <div class="tit">O que veio depois <span>${fila.length || 'nada ainda'}</span></div>
       ${fila.length

@@ -28,6 +28,20 @@ h1{font-family:var(--tit);font-size:clamp(28px,5.4vw,40px);font-weight:900;lette
 .bloco h2{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
   border-bottom:1px solid var(--tinta);padding-bottom:9px;margin-bottom:16px;display:flex;align-items:baseline;gap:10px}
 .bloco h2 span{margin-left:auto;font-size:9.5px;color:var(--fraco);letter-spacing:.1em}
+/* Caso e assunto se pareciam demais na tela: os dois acumulam materia, e quem
+   nao pensou nisso marca os dois achando que fazem o mesmo. A diferenca e de
+   TEMPO — caso termina, assunto se repete — e precisa estar escrita. */
+.bloco .oquee{font-family:var(--txt);font-size:14.5px;line-height:1.55;color:var(--tinta2);
+  margin:-6px 0 16px;padding-left:13px;border-left:2px solid var(--linha2)}
+.bloco .oquee b{color:var(--tinta);font-weight:600}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin-bottom:30px}
+.par>div{padding:16px 18px}
+.par>div+div{border-left:1px solid var(--linha)}
+.par b{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:9px}
+.par .c b{color:var(--verde)} .par .a b{color:var(--rosso)}
+.par p{font-size:14.5px;line-height:1.55;color:var(--tinta2)}
+.par p em{font-style:normal;color:var(--tinta);font-weight:600}
+@media(max-width:620px){.par{grid-template-columns:1fr}.par>div+div{border-left:0;border-top:1px solid var(--linha)}}
 
 .caso{display:block;padding:14px 0;border-bottom:1px solid var(--linha)}
 .caso:hover h3{color:var(--rosso)}
@@ -138,15 +152,20 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
         ${mudaram.length === 1 ? 'Um caso que você acompanha mudou de estado.' : `${mudaram.length} casos que você acompanha mudaram de estado.`}
         É o capítulo que a imprensa costuma publicar pequeno.</div>` : ''}
 
+      <div class="par">
+        <div class="a"><b>assunto</b><p><em>O que sai sobre isso.</em> Um tema que se repete — “Cuiabá”, “licitação”, “Fifa”. Não termina: enquanto houver matéria, ela cai aqui. Você tira quando cansar.</p></div>
+        <div class="c"><b>caso</b><p><em>No que deu.</em> Uma história específica que você marcou dentro da matéria. O jornal avisa quando ela mudar — quando aparecer o documento, quando sair a decisão.</p></div>
+      </div>
+
       <div class="bloco">
-        <h2>Assuntos que você acompanha</h2>
+        <h2>Assuntos <span>o que sai sobre isso</span></h2>
         <div class="assuntos">
           <div class="etq" id="as-etq"></div>
           <div class="add">
             <input id="as-novo" placeholder="escreva um assunto — Lula, projeções, licitação em Sinop…" maxlength="60">
             <button id="as-add">acompanhar</button>
           </div>
-          <p class="dica">Escreva o que está te interessando agora. Você tira quando quiser.</p>
+          <p class="dica">Escreva um tema, não uma notícia. Termos específicos funcionam melhor que “política”. Você tira quando quiser.</p>
           <div id="as-afina"></div>
           <p class="erro" id="as-erro"></p>
         </div>
@@ -154,12 +173,12 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
       </div>
 
       <div class="bloco">
-        <h2>Casos que você acompanha <span>${seg.length}</span></h2>
+        <h2>Casos <span>no que deu · ${seg.length}</span></h2>
         ${seg.length ? seg.map(x => `<a class="caso" href="/caso.html?id=${encodeURIComponent(x.id)}">
             <h3>${esc(x.titulo)}</h3>
             <span class="est ${esc(x.atual)}">${esc(ROT[x.atual] || x.atual)}${x.mudou ? ' · mudou desde que você marcou' : ''}${x.naFila ? ` · ${x.naFila} ${x.naFila === 1 ? 'desdobramento' : 'desdobramentos'}` : ''}</span>
           </a>`).join('')
-          : '<p class="vazio">Nenhum ainda. Em qualquer matéria, o botão <b>Acompanhar este caso</b> avisa você quando ela mudar de estado — quando uma história sem confirmação passa a ter documento oficial, por exemplo.</p>'}
+          : '<p class="vazio">Nenhum caso ainda. Dentro de qualquer matéria há o botão <b>Acompanhar este caso</b> — é como você pede para ser avisado do desfecho daquela história específica.</p>'}
       </div>
 
       ${tags.length ? `<div class="bloco">
