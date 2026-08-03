@@ -69,8 +69,68 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     
   </div>
 
-  <a class="voltar" href="/">← Voltar para a capa</a>
+  
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="mat:vatican-news-transmite-encontro-de-oracao-com-papa-leao-xiv-e-andrea-b" data-nivel="confirmado">Acompanhar este caso</button>
+  </div>
+
+<a class="voltar" href="/">← Voltar para a capa</a>
 </article>
+
+<script>
+(function(){
+  var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
+  var u = location.href;
+
+  var zap = document.getElementById('bt-zap');
+  if (zap) zap.addEventListener('click', function(){
+    window.open('https://wa.me/?text=' + encodeURIComponent(t + '\n\n' + u), '_blank', 'noopener');
+  });
+
+  var lk = document.getElementById('bt-link');
+  if (lk) lk.addEventListener('click', function(){
+    var pronto = function(){ var v = lk.textContent; lk.textContent = 'Link copiado'; setTimeout(function(){ lk.textContent = v; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(pronto, pronto);
+    else { var c = document.createElement('textarea'); c.value = u; document.body.appendChild(c); c.select();
+           try { document.execCommand('copy'); } catch(e){} document.body.removeChild(c); pronto(); }
+  });
+
+  var ov = document.getElementById('bt-ouvir');
+  if (ov && 'speechSynthesis' in window) {
+    var lendo = false;
+    ov.addEventListener('click', function(){
+      if (lendo) { speechSynthesis.cancel(); lendo = false; ov.textContent = 'Ouvir a matéria'; return; }
+      var ps = [].slice.call(document.querySelectorAll('.corpo p')).map(function(p){ return p.textContent; });
+      var f = new SpeechSynthesisUtterance(t + '. ' + ps.join(' '));
+      f.lang = 'pt-BR'; f.rate = 1;
+      f.onend = function(){ lendo = false; ov.textContent = 'Ouvir a matéria'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(f);
+      lendo = true; ov.textContent = 'Parar';
+    });
+  } else if (ov) { ov.style.display = 'none'; }
+
+  var sg = document.getElementById('bt-seguir');
+  var ap = null;
+  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
+  if (sg) sg.addEventListener('click', function(){
+    if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
+    sg.disabled = true;
+    fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
+        nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        sg.disabled = false;
+        if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
+        else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
+      })
+      .catch(function(){ sg.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
   <span class="chapeu">Mundo</span>
