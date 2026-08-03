@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Caso acompanhado — Meridiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FFFFFF;--areia:#F7F6F3;--tinta:#0E0E0E;--tinta2:#555;--linha:#E2E2E2;--linha2:#C9C9C9;
+      --fraco:#8E8E8E;--rosso:#B34700;--verde:#1F6B4A;--oro:#8A6B14;
+      --tit:'Playfair Display',Georgia,serif;--txt:'Source Serif 4',Georgia,serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--txt);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--tinta);padding:18px 0;margin-bottom:32px}
+header .wrap{display:flex;align-items:baseline;gap:14px}
+header b{font-family:var(--tit);font-size:22px;font-weight:900;letter-spacing:-.02em}
+header .ed{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rosso)}
+header a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fraco);margin-left:auto}
+header a:hover{color:var(--tinta)}
+
+.rot{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rosso);margin-bottom:10px;display:block}
+h1{font-family:var(--tit);font-size:clamp(26px,5vw,36px);font-weight:900;letter-spacing:-.025em;line-height:1.14;margin-bottom:14px}
+h1 a:hover{color:var(--rosso)}
+.est{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px}
+.est::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.est.confirmado{color:var(--verde)} .est.atribuido{color:var(--oro)}
+.est.sem-confirmacao,.est.redacao{color:var(--fraco)}
+
+.aviso{background:#EAF3EE;border-left:3px solid var(--verde);padding:14px 17px;margin:20px 0}
+.aviso b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:5px}
+.aviso p{font-size:15px;line-height:1.55;color:var(--tinta2)}
+
+.tit{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  border-bottom:1px solid var(--tinta);padding-bottom:9px;margin:34px 0 4px;display:flex;align-items:baseline}
+.tit span{margin-left:auto;font-size:9.5px;color:var(--fraco);letter-spacing:.1em}
+
+.item{display:block;padding:16px 0;border-bottom:1px solid var(--linha)}
+.item:hover h3{color:var(--rosso)}
+.item h3{font-family:var(--tit);font-size:19px;font-weight:700;line-height:1.24;margin-bottom:7px}
+.item .meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.item time{font-family:var(--mono);font-size:10px;color:var(--fraco);letter-spacing:.06em}
+
+.vazio{color:var(--fraco);font-family:var(--mono);font-size:12.5px;padding:24px 0;line-height:1.75}
+.volta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  border-bottom:1.5px solid var(--tinta);padding-bottom:3px;margin:26px 0 60px}
+.nota{font-size:14px;color:var(--fraco);line-height:1.6;border-top:1px solid var(--linha);padding-top:16px;margin-top:26px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Meridiano</b><span class="ed">caso acompanhado</span><a href="/meu.html">← o seu Meridiano</a></div></header>
+<div class="wrap" id="alvo"><p class="vazio">carregando…</p></div>
+
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ROT = { confirmado:'confirmado em documento', atribuido:'atribuído a fonte oficial',
+              'sem-confirmacao':'sem confirmação', redacao:'edição da redação' };
+
+(async () => {
+  const alvo = document.getElementById('alvo');
+  const p = new URLSearchParams(location.search);
+  const id = p.get('id');
+  if (!id) { alvo.innerHTML = '<p class="vazio">Caso não informado.</p>'; return; }
+
+  let ap = ''; try { ap = localStorage.getItem('meridiano_apelido') || ''; } catch {}
+
+  try {
+    // A fila e publica por id; o retrato do leitor traz o titulo e o estado.
+    const [rf, rm] = await Promise.all([
+      fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'fila', id }) }).then(r => r.json()),
+      ap ? fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'meu', apelido: ap }) }).then(r => r.json()) : Promise.resolve({})
+    ]);
+
+    const fila = rf.fila || [];
+    const caso = (rm.acompanhando || []).find(x => x.id === id);
+    document.title = (caso ? caso.titulo : 'Caso acompanhado') + ' — Meridiano';
+
+    alvo.innerHTML = `
+      <span class="rot">Você acompanha este caso</span>
+      <h1>${caso ? `<a href="${esc(caso.link)}">${esc(caso.titulo)}</a>` : 'Caso acompanhado'}</h1>
+      ${caso ? `<span class="est ${esc(caso.atual)}">${esc(ROT[caso.atual] || caso.atual)}</span>` : ''}
+
+      ${caso && caso.mudou ? `<div class="aviso"><b>desfecho</b>
+        <p>Esta história mudou de estado desde que você começou a acompanhar. É o capítulo que costuma sair pequeno na imprensa — aqui ele tem o mesmo peso do primeiro.</p></div>` : ''}
+
+      <div class="tit">O que veio depois <span>${fila.length || 'nada ainda'}</span></div>
+      ${fila.length
+        ? fila.map(x => `<a class="item" href="${esc(x.link)}">
+            <h3>${esc(x.titulo)}</h3>
+            <div class="meta">
+              <span class="est ${esc(x.nivel)}">${esc(ROT[x.nivel] || x.nivel)}</span>
+              <time>${x.iso ? new Date(x.iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'}) : ''} ${esc(x.hora || '')}</time>
+            </div></a>`).join('')
+        : `<p class="vazio">Nada ainda. A cada rodada, o robô compara o que publica com este caso e empilha aqui o que for da mesma história.<br>Se o assunto não voltar, a fila fica vazia — e isso também é informação.</p>`}
+
+      <p class="nota">Esta fila é montada sozinha: o jornal compara cada matéria nova com o caso que você marcou e, quando são a mesma história, acrescenta aqui. O critério de semelhança é rígido, para a lista não encher de coisa vagamente relacionada.</p>
+      <a class="volta" href="/meu.html">← Todos os casos que você acompanha</a>`;
+  } catch {
+    alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>';
+  }
+})();
+</script>
+</body>
+</html>

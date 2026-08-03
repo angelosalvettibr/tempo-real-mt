@@ -107,9 +107,9 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
 
       <div class="bloco">
         <h2>Casos que você acompanha <span>${seg.length}</span></h2>
-        ${seg.length ? seg.map(x => `<a class="caso" href="${esc(x.link)}">
+        ${seg.length ? seg.map(x => `<a class="caso" href="/caso.html?id=${encodeURIComponent(x.id)}">
             <h3>${esc(x.titulo)}</h3>
-            <span class="est ${esc(x.atual)}">${esc(ROT[x.atual] || x.atual)}${x.mudou ? ' · mudou desde que você marcou' : ''}</span>
+            <span class="est ${esc(x.atual)}">${esc(ROT[x.atual] || x.atual)}${x.mudou ? ' · mudou desde que você marcou' : ''}${x.naFila ? ` · ${x.naFila} ${x.naFila === 1 ? 'desdobramento' : 'desdobramentos'}` : ''}</span>
           </a>`).join('')
           : '<p class="vazio">Nenhum ainda. Em qualquer matéria, o botão <b>Acompanhar este caso</b> avisa você quando ela mudar de estado — quando uma história sem confirmação passa a ter documento oficial, por exemplo.</p>'}
       </div>
