@@ -232,7 +232,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;
-  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
+  try { ap = localStorage.getItem('meridiano_apelido') || null; } catch(e){}
   if (sg) sg.addEventListener('click', function(){
     if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
     sg.disabled = true;
