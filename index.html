@@ -82,6 +82,62 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
    decreto de calamidade. Aqui a capa se divide por SENTIDO, nao por editoria:
    o que tem documento, o que so circula, o dinheiro publico, os numeros.
    Editoria e divisao de redacao — ninguem acorda querendo ler "regional". */
+/* HIERARQUIA
+   Antes a abertura era so "a primeira da lista", e todo o resto tinha o mesmo
+   tamanho — uma nomeacao de secretario com o mesmo peso de um decreto de
+   calamidade. Agora existe manchete escolhida (a mais quente), uma segunda em
+   destaque para quebrar o degrau, e o primeiro item de cada bloco em corpo
+   maior. Jornal e feito de tamanhos diferentes. */
+.segunda{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:34px;
+  padding:26px 0 8px;border-bottom:1px solid var(--tinta)}
+.segunda .dest{border-right:1px solid var(--linha);padding-right:32px}
+.segunda .dest h3{font-family:var(--tit);font-size:clamp(24px,3.1vw,32px);font-weight:900;
+  letter-spacing:-.022em;line-height:1.08;margin:7px 0 10px}
+.segunda .dest p{font-size:16.5px;line-height:1.55;color:var(--tinta2)}
+.segunda .dest:hover h3{color:var(--rosso)}
+.segunda .dest img{width:100%;height:auto;display:block;border:1px solid var(--linha);margin-bottom:12px}
+.segunda .col{display:flex;flex-direction:column}
+.segunda .col a{padding:11px 0;border-bottom:1px solid var(--linha)}
+.segunda .col a:last-child{border-bottom:0}
+.segunda .col h4{font-family:var(--tit);font-size:17px;font-weight:700;line-height:1.22}
+.segunda .col a:hover h4{color:var(--rosso)}
+.segunda .col .m{font-family:var(--mono);font-size:9.5px;color:var(--fraco);margin-top:5px;letter-spacing:.05em}
+@media(max-width:820px){.segunda{grid-template-columns:1fr;gap:0}
+  .segunda .dest{border-right:0;padding-right:0;border-bottom:1px solid var(--linha);padding-bottom:18px;margin-bottom:12px}}
+
+/* primeiro item de cada bloco pesa mais que os seguintes */
+.lin.top h4{font-size:23px;line-height:1.16}
+.lin.top p{font-size:15.5px}
+@media(min-width:820px){.bloco .lista2 .lin.top{grid-column:1 / -1;border-bottom:2px solid var(--linha2);padding-bottom:19px}}
+
+/* BOAS-VINDAS
+   Uma vez so, na primeira visita. Explica a ideia em tres linhas e oferece o
+   apelido. Quem fecha nao ve de novo — porta que insiste vira incomodo. */
+.bv{position:fixed;inset:0;background:rgba(14,14,14,.72);z-index:200;display:flex;
+  align-items:center;justify-content:center;padding:22px;opacity:0;animation:ap .3s ease forwards}
+@keyframes ap{to{opacity:1}}
+.bv .cx{background:var(--papel);max-width:560px;width:100%;padding:38px 40px;max-height:90vh;overflow-y:auto;
+  border:1px solid var(--tinta);box-shadow:0 18px 50px rgba(0,0,0,.28)}
+.bv .lema{font-family:var(--mono);font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--fraco);margin-bottom:9px}
+.bv h2{font-family:var(--tit);font-size:clamp(27px,4.6vw,36px);font-weight:900;letter-spacing:-.028em;line-height:1.08;margin-bottom:18px}
+.bv .passos{border-top:1px solid var(--linha);margin:20px 0}
+.bv .passo{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--linha);align-items:flex-start}
+.bv .passo b{font-family:var(--mono);font-size:10px;background:var(--tinta);color:var(--papel);
+  width:20px;height:20px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.bv .passo span{font-size:15.5px;line-height:1.52;color:var(--tinta2)}
+.bv .passo span em{font-style:normal;color:var(--tinta);font-weight:600}
+.bv .chave{background:var(--areia);border-left:3px solid var(--verde);padding:14px 17px;margin-bottom:20px;font-size:15px;line-height:1.55;color:var(--tinta2)}
+.bv .chave b{color:var(--tinta)}
+.bv .campos{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.bv .campos input{font-family:var(--mono);font-size:14px;border:1px solid var(--linha2);padding:11px 13px;background:#fff;flex:1;min-width:150px}
+.bv .campos input:focus{outline:none;border-color:var(--tinta)}
+.bv .bts{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bv .bts button{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  padding:12px 20px;cursor:pointer;border:1.5px solid var(--tinta);background:var(--tinta);color:var(--papel)}
+.bv .bts button.claro{background:none;color:var(--tinta2);border-color:var(--linha2)}
+.bv .bts button.claro:hover{border-color:var(--tinta);color:var(--tinta)}
+.bv .erro{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:10px;min-height:15px}
+
 .bloco{margin-top:40px}
 .bloco>.cab{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--tinta);padding-bottom:9px;margin-bottom:2px}
 .bloco>.cab h3{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
@@ -288,7 +344,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
 
 <header>
   <div class="wrap masthead">
-    <div class="lema">O jornal que mostra como apura</div>
+    <div class="lema">O que veio antes · o que veio depois · de onde veio</div>
     <h1>MERID<em>·IA·</em>NO</h1>
     <div class="sub">Brasil · Mundo · Estados</div>
   </div>
@@ -312,6 +368,8 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
 </header>
 
 <div class="novid" id="novid" hidden><div class="wrap"></div></div>
+
+<div id="bv"></div>
 
 <div class="anon-faixa">
   <div class="wrap">
@@ -389,7 +447,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
     <div class="selo-final">
       <span><a href="linha.html" style="border-bottom:1px solid var(--linha2)">Linha do tempo</a></span>
       <span><a href="painel.html" style="border-bottom:1px solid var(--linha2)">Painel de fontes</a></span>
-      <span>MERIDIANO · jornalismo de fonte aberta</span>
+      <span>MERIDIANO · notícia com endereço</span>
       <span id="rodape">—</span>
     </div>
   </div>
@@ -595,9 +653,19 @@ function pintar(){
     return;
   }
 
-  const d = lista[0];
-  const olhada = lista.slice(1, 5);        // coluna lateral: so titulos
-  const resto = lista.slice(5);
+  // A manchete e ESCOLHIDA, nao a primeira da lista: a mais quente do dia,
+  // com peso de documento. Antes a abertura era so a de cima, e por isso a
+  // capa parecia uma lista.
+  const forca = i => (i.quentura || 0) * 2
+                   + (i.nivel === 'confirmado' ? 3 : i.nivel === 'atribuido' ? 1 : 0)
+                   + (i.foto ? 1 : 0);
+  const porForca = [...lista].sort((a,b) => forca(b) - forca(a) || Date.parse(b.iso) - Date.parse(a.iso));
+
+  const d = porForca[0];
+  const segunda = porForca[1];
+  const olhada = porForca.slice(2, 6);
+  const restoBruto = porForca.slice(6);
+  const resto = restoBruto;
 
   let h = `<div class="abertura">
     <a class="abre" href="${esc(d.link)}" data-id="${esc(d.id)}">
@@ -609,13 +677,33 @@ function pintar(){
       ${nasceu(d)}
     </a>
     <div class="olhada">
-      <span class="rot">O dia em uma olhada</span>
-      ${olhada.map(i => `<a href="${esc(i.link)}" data-id="${esc(i.id)}">
+      <span class="rot">Também hoje</span>
+      ${porForca.slice(6, 10).map(i => `<a href="${esc(i.link)}" data-id="${esc(i.id)}">
         <h4>${esc(i.titulo)}</h4>
-        <div class="meta">${esc(chapeuDe(i))} · ${esc(i.hora)}</div>
+        <div class="meta">${esc(i.municipioNome || chapeuDe(i))} · ${esc(i.hora)}</div>
       </a>`).join('')}
     </div>
   </div>`;
+
+  // Segunda materia em destaque: sem ela o salto da manchete para a lista e
+  // brusco demais e a pagina perde ritmo.
+  if (segunda) {
+    h += `<div class="segunda">
+      <a class="dest" href="${esc(segunda.link)}" data-id="${esc(segunda.id)}">
+        ${segunda.foto ? `<img src="${esc(segunda.foto)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+        <span class="chapeu">${esc(segunda.municipioNome || chapeuDe(segunda))}</span>
+        <h3>${esc(segunda.titulo)}</h3>
+        <p>${esc(segunda.resumo)}</p>
+        ${selo(segunda)}
+      </a>
+      <div class="col">
+        ${olhada.map(i => `<a href="${esc(i.link)}" data-id="${esc(i.id)}">
+          <h4>${esc(i.titulo)}</h4>
+          <div class="m">${esc(i.municipioNome || chapeuDe(i))} · ${esc(i.hora)}</div>
+        </a>`).join('')}
+      </div>
+    </div>`;
+  }
 
   // Os blocos: cada um com um sentido que o leitor reconhece. A ordem importa
   // — o que tem documento vem antes do que so circula.
@@ -635,7 +723,7 @@ function pintar(){
   const semDoc   = pega(i => (i.nivel || '') === 'sem-confirmacao', 6);
   const oResto   = resto.filter(i => !usados.has(i.id));
 
-  const linha = i => `<a class="lin" href="${esc(i.link)}" data-id="${esc(i.id)}">
+  const linha = (i, k) => `<a class="lin${k === 0 ? ' top' : ''}" href="${esc(i.link)}" data-id="${esc(i.id)}">
       <span class="chapeu">${esc(i.municipioNome || chapeuDe(i))}</span>
       ${cifra(i)}
       <h4>${esc(i.titulo)}</h4>
@@ -969,6 +1057,74 @@ async function salvarApelido(){
   if (r.precisaPin) cPin?.focus();
 }
 
+/* ===================== BOAS-VINDAS ========================================
+   Uma vez so, na primeira visita. Quem chega no Meridiano nao entende de
+   cara por que uma noticia tem selo verde e outra cinza — e sem entender
+   isso o jornal parece so mais um agregador.
+
+   Tres linhas explicando, e o apelido oferecido junto. Quem fecha nao ve de
+   novo: porta que insiste vira incomodo.                                   */
+function boasVindas(){
+  let viu = false, temApelido = false;
+  try {
+    viu = localStorage.getItem('meridiano_bv') === '1';
+    temApelido = Boolean(localStorage.getItem('meridiano_apelido'));
+  } catch { return; }
+  if (viu || temApelido) return;
+
+  const cx = document.getElementById('bv');
+  if (!cx) return;
+
+  const fechar = () => {
+    try { localStorage.setItem('meridiano_bv','1'); } catch {}
+    cx.innerHTML = '';
+  };
+
+  cx.innerHTML = `<div class="bv">
+    <div class="cx">
+      <div class="lema">o jornal que mostra como apura</div>
+      <h2>Uma notícia sozinha não conta a história.</h2>
+      <p style="font-size:17px;line-height:1.55;color:var(--tinta2);margin-bottom:4px">Aqui você vê o que veio antes, o que veio depois, e de onde saiu cada informação.</p>
+
+      <div class="passos">
+        <div class="passo"><b>1</b><span><em>De onde veio.</em> Cada matéria nasce do documento de quem registrou o fato — polícia, Ministério Público, prefeitura, tribunal — com o link do original. Quando não achamos o documento, a notícia sai marcada como não confirmada, com a lista de onde procuramos.</span></div>
+        <div class="passo"><b>2</b><span><em>O que veio antes.</em> Toda matéria mostra o que já publicamos sobre o mesmo assunto. Uma prisão sem o histórico engana; uma acusação sem o desfecho vira condenação.</span></div>
+        <div class="passo"><b>3</b><span><em>E o que vier depois.</em> Você marca um caso e o jornal continua acompanhando. Quando a história mudar — quando aparecer o documento, quando sair a decisão — você é avisado. É o capítulo que a imprensa publica pequeno.</span></div>
+      </div>
+
+      <div class="chave"><b>Sem cadastro.</b> Para o jornal lembrar a sua cidade e avisar quando um caso seu tiver desfecho, invente um apelido. Não pedimos e-mail, nome nem telefone.</div>
+
+      <div class="campos">
+        <input id="bv-ap" placeholder="um apelido qualquer" maxlength="24" autocomplete="off" spellcheck="false">
+        <input id="bv-pin" placeholder="PIN de 6 dígitos" maxlength="6" inputmode="numeric" autocomplete="off" style="max-width:150px">
+      </div>
+      <div class="bts">
+        <button id="bv-ok">começar</button>
+        <button class="claro" id="bv-nao">ler sem apelido</button>
+      </div>
+      <p class="erro" id="bv-erro"></p>
+    </div></div>`;
+
+  document.getElementById('bv-nao').addEventListener('click', fechar);
+
+  const entrar = async () => {
+    const er = document.getElementById('bv-erro');
+    const nome = document.getElementById('bv-ap').value;
+    const pin  = (document.getElementById('bv-pin').value || '').replace(/\D/g,'');
+    if (!nome.trim()) { fechar(); return; }
+    er.textContent = 'verificando…';
+    const r = await checarApelido(nome, pin);
+    if (r.ok) { leitor.apelido = r.apelido; montarApelido(); fechar(); novidades(); }
+    else { er.textContent = r.msg || 'não deu certo'; }
+  };
+  document.getElementById('bv-ok').addEventListener('click', entrar);
+  for (const id of ['bv-ap','bv-pin'])
+    document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') entrar(); });
+  document.getElementById('bv-pin').addEventListener('input', e => {
+    e.target.value = e.target.value.replace(/\D/g,'').slice(0,6);
+  });
+}
+
 $('#data').textContent = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Cuiaba'});
 setInterval(()=>{ if(ED.gerado) $('#quando').textContent = faz(ED.gerado); }, 30000);
 setInterval(carregar, 5*60*1000);
@@ -983,6 +1139,7 @@ document.getElementById('campo-pin')?.addEventListener('input', e => {
   e.target.value = e.target.value.replace(/\D/g,'').slice(0,6);
 });
 montarApelido();
+boasVindas();
 
 // conta a leitura quando o leitor abre a materia
 document.addEventListener('click', e => {
