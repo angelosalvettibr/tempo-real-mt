@@ -173,6 +173,16 @@ nav button[aria-pressed="true"]{color:var(--rosso);font-weight:600}
 .afina .prop code{font-family:var(--mono);font-size:14px;background:var(--papel);border:1px solid var(--linha);padding:2px 7px}
 .afina .bts{display:flex;gap:8px;flex-wrap:wrap}
 .afina .bts button.nao{background:none;color:var(--tinta2);border:1px solid var(--linha2)}
+/* Bloco do que apenas circula. Visual deliberadamente diferente do resto:
+   nao e materia do Meridiano, e nao pode parecer que e. */
+.bloco.circula>.cab{border-bottom-color:var(--linha2)}
+.bloco.circula>.cab h3{color:var(--fraco)}
+.circ-lista a{display:block;padding:12px 0;border-bottom:1px dashed var(--linha);text-decoration:none}
+.circ-lista a:hover h4{color:var(--rosso)}
+.circ-lista h4{font-family:var(--txt);font-size:16px;font-weight:600;line-height:1.35;color:var(--tinta)}
+.circ-lista .v{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);margin-top:6px;display:flex;gap:9px;align-items:center}
+.circ-lista .v .fora{color:var(--rosso)}
+.circ-aviso{font-size:14px;line-height:1.6;color:var(--tinta2);background:var(--areia);padding:13px 16px;margin-bottom:13px;border-left:3px solid var(--linha2)}
 
 .bloco{margin-top:40px}
 .bloco>.cab{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--tinta);padding-bottom:9px;margin-bottom:2px}
@@ -1005,6 +1015,9 @@ function pintarMeu(){
     </div>`;
   }
 
+  // Assunto que o jornal nao cobre: mostramos o que circula, sem reescrever.
+  h += '<div id="as-circ"></div>';
+
   if (assuntos.length && !achou) {
     h += `<p class="aviso">Nada sobre os seus assuntos nos últimos sete dias.<br>
       <span style="font-size:14px">Isso também é informação — mas vale conferir se o termo não está específico demais. “Fifa e Uefa” exige as duas palavras na mesma matéria.</span></p>`;
@@ -1023,6 +1036,47 @@ function pintarMeu(){
     b.addEventListener('click', () => mexerAssunto('tirar', b.dataset.tirar)));
   alvo.querySelectorAll('[data-sug]').forEach(b =>
     b.addEventListener('click', () => mexerAssunto('somar', b.dataset.sug)));
+
+  circulandoPorAssunto();
+}
+
+// O que circula na imprensa sobre os assuntos seguidos e o jornal nao cobriu.
+// Aqui nao ha texto nosso: titulo, veiculo e link de saida. E citacao com
+// credito, que a lei permite — e deixa obvio que so estamos apontando.
+async function circulandoPorAssunto(){
+  const cx = document.getElementById('as-circ');
+  if (!cx || !assuntos.length) return;
+
+  const blocos = await Promise.all(assuntos.map(async a => {
+    try {
+      const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'circulando', assunto: a.termo }) });
+      const itens = ((await r.json()).itens) || [];
+      return { termo: a.termo, itens: itens.slice(0, 8) };
+    } catch { return { termo: a.termo, itens: [] }; }
+  }));
+
+  const comAlgo = blocos.filter(b => b.itens.length);
+  if (!comAlgo.length) { cx.innerHTML = ''; return; }
+
+  // A data e calculada ANTES do template: expressao com chaves dentro de
+  // template aninhado confunde o parser e quebra o arquivo inteiro.
+  const dia = iso => { try { return new Date(iso).toLocaleDateString('pt-BR').slice(0,5); } catch { return ''; } };
+
+  const linhaCirc = i => '<a href="' + esc(i.link) + '" target="_blank" rel="noopener nofollow">'
+    + '<h4>' + esc(i.titulo) + '</h4>'
+    + '<div class="v"><span class="fora">' + esc(i.veiculo || 'imprensa') + '</span>'
+    + '<span>' + dia(i.iso) + '</span>'
+    + '<span>abre fora do Meridiano &nearr;</span></div></a>';
+
+  cx.innerHTML = comAlgo.map(b =>
+    '<div class="bloco circula">'
+    + '<div class="cab"><h3>Circulando · ' + esc(b.termo) + '</h3>'
+    + '<span class="exp">a imprensa está dando — não verificamos</span>'
+    + '<span class="n">' + b.itens.length + '</span></div>'
+    + '<p class="circ-aviso">O Meridiano não publicou nada sobre isto porque não encontrou registro em fonte oficial. Estes são títulos de outros veículos, com o link do original. Não reescrevemos nem verificamos nenhum deles.</p>'
+    + '<div class="circ-lista">' + b.itens.map(linhaCirc).join('') + '</div>'
+    + '</div>').join('');
 }
 
 function pintarDescarte(){
