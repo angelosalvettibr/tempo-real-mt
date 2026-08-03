@@ -27,6 +27,14 @@ const CSS = `
 .acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
 .acoes button.seg:hover{background:var(--sinal);color:#fff}
 .acoes button.seg.on{background:var(--sinal);color:#fff}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
+.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
 `;
 
 // O id da historia nao existe no HTML antigo. Usamos o proprio nome do arquivo,
@@ -37,7 +45,9 @@ const BLOCO = arquivo => `
     <button id="bt-link">Copiar link</button>
     <button id="bt-ouvir">Ouvir a matéria</button>
     <button class="seg" id="bt-seguir" data-id="mat:${arquivo.replace(/\.html$/,'')}" data-nivel="confirmado">Acompanhar este caso</button>
+    <button class="ctx" id="bt-ctx">Entender o contexto</button>
   </div>
+  <div id="ctx-area"></div>
 `;
 
 const SCRIPT = `
@@ -72,6 +82,32 @@ const SCRIPT = `
       lendo = true; ov.textContent = 'Parar';
     });
   } else if (ov) { ov.style.display = 'none'; }
+
+  var bc = document.getElementById('bt-ctx');
+  var ca = document.getElementById('ctx-area');
+  if (bc) bc.addEventListener('click', function(){
+    bc.disabled = true; bc.textContent = 'procurando…';
+    var res = document.querySelector('.linhafina');
+    fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/\\.html$/,''),
+        titulo: t, resumo: res ? res.textContent : '' }) })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        bc.style.display = 'none';
+        if (j.ok && j.precisa) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
+            + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '')
+            + '</div>';
+        } else if (j.ok) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + '<p class="nada">Esta notícia não pede contexto adicional — o que ela informa se explica sozinho.</p></div>';
+        } else {
+          bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
+        }
+      })
+      .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
+  });
 
   var sg = document.getElementById('bt-seguir');
   var ap = null;
@@ -126,6 +162,21 @@ for (const arq of arquivos) {
     if (!SIMULAR) await writeFile(caminho, h, 'utf8');
     feitas++; continue;
   }
+  // Ja tem os botoes de compartilhar e seguir, mas nao o de contexto.
+  if (h.includes('bt-seguir') && !h.includes('bt-ctx')) {
+    h = h.replace('</div>\n  <a class="voltar"',
+      `  <button class="ctx" id="bt-ctx">Entender o contexto</button>\n  </div>\n  <div id="ctx-area"></div>\n  <a class="voltar"`);
+    if (!h.includes('bt-ctx')) {
+      // molde diferente: injeta antes do link de volta
+      const v = h.match(/<a class="voltar"[^>]*>[\s\S]*?<\/a>/);
+      if (v) h = h.replace(v[0], '<div class="acoes"><button class="ctx" id="bt-ctx">Entender o contexto</button></div>\n<div id="ctx-area"></div>\n' + v[0]);
+    }
+    if (h.includes('</style>')) h = h.replace('</style>', CSS + '</style>');
+    h = h.includes('</body>') ? h.replace('</body>', SCRIPT + '</body>') : h + SCRIPT;
+    if (!SIMULAR) await writeFile(caminho, h, 'utf8');
+    feitas++; continue;
+  }
+
   if (h.includes('bt-seguir')) { puladas++; continue; }
 
   // O link de volta e a ancora: existe em todas as materias, do primeiro dia
