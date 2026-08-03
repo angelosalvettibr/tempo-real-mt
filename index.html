@@ -230,12 +230,10 @@ nav a.secao{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-tra
 nav a.secao:hover{color:var(--tinta)}
 
 /* Seu Meridiano nao e conteudo, e o leitor. A distancia visual diz isso. */
-nav button.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
+nav a.eu{margin-left:auto;border:1px solid var(--linha2);border-radius:6px;padding:9px 14px;
   color:var(--tinta);font-size:10.5px;letter-spacing:.13em}
-nav button.eu:hover{border-color:var(--tinta);background:var(--areia)}
-nav button.eu[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
-nav button.eu[aria-pressed="true"]::after{display:none}
-@media(max-width:700px){nav button.eu{margin-left:0}}
+nav a.eu:hover{border-color:var(--tinta);background:var(--areia)}
+@media(max-width:700px){nav a.eu{margin-left:0}}
 
 .novid{border-bottom:1px solid var(--linha);background:#F1F6F2}
 .novid .wrap{padding:15px 0;display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
@@ -464,7 +462,7 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
           <option value="rj">Rio de Janeiro</option>
         </select>
       </span>
-      <button class="eu" data-f="meu" aria-pressed="false" id="btMeu" hidden>Seu Meridiano</button>
+      <a class="eu" href="meu.html" id="btMeu" hidden>Seu Meridiano</a>
     </div>
   </nav>
   <div class="cidades" id="cidades"><div class="wrap"></div></div>
@@ -865,8 +863,6 @@ function pintar(){
 
   // A aba "Para voce" e outra pagina, nao um filtro sobre a capa. A capa
   // continua igual para todo mundo, editada pelo criterio do jornal.
-  if (filtro === 'meu') { carregarAcervo().then(() => pintarMeu()); return; }
-
   let lista = filtro === 'capa'
     ? ED.itens.filter(i => i.editoria === 'brasil' || i.editoria === 'internacional')
     : filtro === 'regional'
@@ -1001,137 +997,6 @@ function pintar(){
 // mais no HTML. Como roda fora do try, o erro interrompia tudo o que vinha
 // depois — e era por isso que a faixa do topo ficava em "atualizado —" e as
 // estatisticas nunca apareciam.
-// A aba do leitor: os assuntos que ele escolheu acompanhar, e o que saiu
-// hoje em cada um.
-function pintarMeu(){
-  const alvo = $('#conteudo');
-  $('#cidades').style.display = 'none';
-
-  if (!leitor.apelido) {
-    alvo.innerHTML = `<div class="vazio-estado"><b>Escolha um apelido primeiro</b>
-      Para o jornal guardar os assuntos que você quer acompanhar, ele precisa saber que é você — e isso é uma palavra que você inventa, sem e-mail nem telefone.</div>`;
-    return;
-  }
-
-  // Sugestoes tiradas do que ele ja leu, nunca aplicadas sozinhas: proposta,
-  // nao decisao. Perfil que o sistema define por conta propria envelhece mal.
-  const jaTem = new Set(assuntos.map(a => a.termo.toLowerCase()));
-  const cont = {};
-  for (const i of ED.itens.slice(0, 60)) {
-    for (const p of String(i.titulo||'').split(/\s+/)) {
-      const w = p.replace(/[^A-Za-zÀ-ú]/g,'');
-      if (w.length < 5 || /^[a-zà-ú]/.test(w)) continue;   // so nomes proprios
-      cont[w] = (cont[w] || 0) + 1;
-    }
-  }
-  const sugs = Object.entries(cont).filter(([w,n]) => n >= 2 && !jaTem.has(w.toLowerCase()))
-    .sort((a,b) => b[1]-a[1]).slice(0,5).map(([w]) => w);
-
-  let h = `<div class="assuntos">
-    <h4>assuntos que você acompanha</h4>
-    <div class="etq">${assuntos.length
-      ? assuntos.map(a => `<span><b>${esc(a.termo)}</b><button data-tirar="${esc(a.termo)}" title="deixar de acompanhar">×</button></span>`).join('')
-      : '<span style="border-style:dashed;color:var(--fraco)"><b>nenhum ainda</b></span>'}</div>
-    <div class="add">
-      <input id="as-novo" placeholder="escreva um assunto — Lula, projeções, licitação em Sinop…" maxlength="60">
-      <button id="as-add">acompanhar</button>
-    </div>
-    <p class="dica">Escreva o que está te interessando agora. Assunto muito amplo, como “política”, traz matéria demais — termos específicos funcionam melhor. Você tira quando quiser.</p>
-    ${sugs.length ? `<div class="sugs">apareceram hoje: ${sugs.map(w => `<button data-sug="${esc(w)}">${esc(w)}</button>`).join('')}</div>` : ''}
-    <div id="as-afina"></div>
-    <p class="erro" id="as-erro"></p>
-  </div>`;
-
-  // Edicao de hoje mais o acervo dos ultimos sete dias. Assunto recem-criado
-  // ja aparece com o que existe, em vez de tela vazia ate amanha.
-  const antigos = (acervo || []).filter(a => !ED.itens.some(i => i.id === a.id));
-  const todos = [...ED.itens, ...antigos];
-  let achou = 0;
-  for (const a of assuntos) {
-    const casam = semRepetidas(todos.filter(i => bateAssunto(i.titulo + ' ' + (i.resumo||''), a.termo))).slice(0, 10);
-    if (!casam.length) continue;
-    achou += casam.length;
-    h += `<div class="bloco">
-      <div class="cab"><h3>${esc(a.termo)}</h3>
-        <span class="exp">o que saiu sobre este assunto nos últimos dias</span>
-        <span class="n">${casam.length}</span></div>
-      <div class="lista2">${casam.map((i,k) => {
-        const dias = Math.floor((Date.now() - Date.parse(i.iso)) / 86400000);
-        const quando = dias >= 1 ? (dias === 1 ? 'ontem' : `há ${dias} dias`) : (i.hora || '');
-        return `<a class="lin${k===0?' top':''}" href="${esc(i.link)}" data-id="${esc(i.id)}">
-        <span class="chapeu">${esc(i.municipioNome || chapeuDe(i))}</span>
-        ${cifra(i)}
-        <h4>${esc(i.titulo)}</h4>
-        <p>${esc(i.resumo || '')}</p>
-        <div class="pe">${selo(i)}<span class="hora">${esc(quando)}</span></div>
-      </a>`; }).join('')}</div>
-    </div>`;
-  }
-
-  // Assunto que o jornal nao cobre: mostramos o que circula, sem reescrever.
-  h += '<div id="as-circ"></div>';
-
-  if (assuntos.length && !achou) {
-    h += `<p class="aviso">Nada sobre os seus assuntos nos últimos sete dias.<br>
-      <span style="font-size:14px">Isso também é informação — mas vale conferir se o termo não está específico demais. “Fifa e Uefa” exige as duas palavras na mesma matéria.</span></p>`;
-  }
-
-  alvo.innerHTML = h;
-
-  document.getElementById('as-add')?.addEventListener('click', () => {
-    const c = document.getElementById('as-novo');
-    if (c.value.trim()) { afinar(c.value.trim()); c.value = ''; }
-  });
-  document.getElementById('as-novo')?.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && e.target.value.trim()) { afinar(e.target.value.trim()); e.target.value = ''; }
-  });
-  alvo.querySelectorAll('[data-tirar]').forEach(b =>
-    b.addEventListener('click', () => mexerAssunto('tirar', b.dataset.tirar)));
-  alvo.querySelectorAll('[data-sug]').forEach(b =>
-    b.addEventListener('click', () => mexerAssunto('somar', b.dataset.sug)));
-
-  circulandoPorAssunto();
-}
-
-// O que circula na imprensa sobre os assuntos seguidos e o jornal nao cobriu.
-// Aqui nao ha texto nosso: titulo, veiculo e link de saida. E citacao com
-// credito, que a lei permite — e deixa obvio que so estamos apontando.
-async function circulandoPorAssunto(){
-  const cx = document.getElementById('as-circ');
-  if (!cx || !assuntos.length) return;
-
-  const blocos = await Promise.all(assuntos.map(async a => {
-    try {
-      const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ acao:'circulando', assunto: a.termo }) });
-      const itens = ((await r.json()).itens) || [];
-      return { termo: a.termo, itens: itens.slice(0, 8) };
-    } catch { return { termo: a.termo, itens: [] }; }
-  }));
-
-  const comAlgo = blocos.filter(b => b.itens.length);
-  if (!comAlgo.length) { cx.innerHTML = ''; return; }
-
-  // A data e calculada ANTES do template: expressao com chaves dentro de
-  // template aninhado confunde o parser e quebra o arquivo inteiro.
-  const dia = iso => { try { return new Date(iso).toLocaleDateString('pt-BR').slice(0,5); } catch { return ''; } };
-
-  const linhaCirc = i => '<a href="' + esc(i.link) + '" target="_blank" rel="noopener nofollow">'
-    + '<h4>' + esc(i.titulo) + '</h4>'
-    + '<div class="v"><span class="fora">' + esc(i.veiculo || 'imprensa') + '</span>'
-    + '<span>' + dia(i.iso) + '</span>'
-    + '<span>abre fora do Meridiano &nearr;</span></div></a>';
-
-  cx.innerHTML = comAlgo.map(b =>
-    '<div class="bloco circula">'
-    + '<div class="cab"><h3>Circulando · ' + esc(b.termo) + '</h3>'
-    + '<span class="exp">a imprensa está dando — não verificamos</span>'
-    + '<span class="n">' + b.itens.length + '</span></div>'
-    + '<p class="circ-aviso">O Meridiano não publicou nada sobre isto porque não encontrou registro em fonte oficial. Estes são títulos de outros veículos, com o link do original. Não reescrevemos nem verificamos nenhum deles.</p>'
-    + '<div class="circ-lista">' + b.itens.map(linhaCirc).join('') + '</div>'
-    + '</div>').join('');
-}
-
 function pintarDescarte(){
   const caixa = $('#boxDescarte'), lista = $('#listaDescarte');
   if (!caixa || !lista) return;

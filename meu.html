@@ -39,6 +39,39 @@ h1{font-family:var(--tit);font-size:clamp(28px,5.4vw,40px);font-weight:900;lette
 .novo{background:#EAF3EE;border-left:3px solid var(--verde);padding:12px 15px;margin-bottom:11px}
 .novo b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:5px}
 
+.assuntos{border:1px solid var(--linha);padding:18px 20px;margin-bottom:8px;background:var(--areia)}
+.assuntos .etq{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}
+.assuntos .etq span{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--tinta);
+  padding:7px 12px;font-family:var(--mono);font-size:11px;background:var(--papel)}
+.assuntos .etq span button{background:none;border:0;color:var(--fraco);cursor:pointer;font-size:14px;line-height:1;padding:0}
+.assuntos .etq span button:hover{color:var(--rosso)}
+.assuntos .add{display:flex;gap:8px;flex-wrap:wrap}
+.assuntos .add input{flex:1;min-width:190px;font-family:var(--txt);font-size:15px;border:1px solid var(--linha2);padding:10px 13px;background:var(--papel)}
+.assuntos .add input:focus{outline:none;border-color:var(--tinta)}
+.assuntos .add button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--tinta);color:var(--papel);border:0;padding:10px 17px;cursor:pointer}
+.assuntos .dica{font-size:13px;color:var(--fraco);margin-top:10px;line-height:1.5}
+.assuntos .erro{font-family:var(--mono);font-size:11.5px;color:var(--rosso);margin-top:9px;min-height:14px}
+.afina{border:1px solid var(--tinta);background:var(--papel);padding:15px 17px;margin-top:13px}
+.afina b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosso);display:block;margin-bottom:8px}
+.afina p{font-size:15.5px;line-height:1.5;margin-bottom:11px}
+.afina .resp,.afina .bts{display:flex;gap:8px;flex-wrap:wrap}
+.afina .resp input{flex:1;min-width:180px;font-family:var(--txt);font-size:15px;border:1px solid var(--linha2);padding:9px 12px}
+.afina button{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--tinta);color:var(--papel);border:0;padding:9px 15px;cursor:pointer}
+.afina button.nao{background:none;color:var(--tinta2);border:1px solid var(--linha2)}
+.afina .prop{background:var(--areia);padding:11px 14px;margin-bottom:11px;font-size:15px;line-height:1.5}
+.afina .prop code{font-family:var(--mono);font-size:14px;background:var(--papel);border:1px solid var(--linha);padding:2px 7px}
+.mat{display:block;padding:14px 0;border-bottom:1px solid var(--linha)}
+.mat:hover h3{color:var(--rosso)}
+.mat h3{font-family:var(--tit);font-size:18px;font-weight:700;line-height:1.25;margin-bottom:5px}
+.mat p{font-size:14.5px;color:var(--tinta2);line-height:1.45;margin-bottom:6px}
+.mat .pe{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fraco)}
+.circ{border:1px solid var(--linha2);padding:16px 19px;margin-top:14px;background:var(--areia)}
+.circ .av{font-size:14px;line-height:1.55;color:var(--tinta2);margin-bottom:12px}
+.circ a{display:block;padding:11px 0;border-top:1px dashed var(--linha);text-decoration:none}
+.circ a:hover h4{color:var(--rosso)}
+.circ h4{font-size:15.5px;font-weight:600;line-height:1.35}
+.circ .v{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fraco);margin-top:5px}
 .tags{display:flex;gap:9px;flex-wrap:wrap}
 .tags a{border:1px solid var(--linha2);padding:9px 14px;font-family:var(--mono);font-size:11px;
   letter-spacing:.09em;text-transform:uppercase;color:var(--tinta2);transition:.14s}
@@ -106,6 +139,21 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
         É o capítulo que a imprensa costuma publicar pequeno.</div>` : ''}
 
       <div class="bloco">
+        <h2>Assuntos que você acompanha</h2>
+        <div class="assuntos">
+          <div class="etq" id="as-etq"></div>
+          <div class="add">
+            <input id="as-novo" placeholder="escreva um assunto — Lula, projeções, licitação em Sinop…" maxlength="60">
+            <button id="as-add">acompanhar</button>
+          </div>
+          <p class="dica">Escreva o que está te interessando agora. Você tira quando quiser.</p>
+          <div id="as-afina"></div>
+          <p class="erro" id="as-erro"></p>
+        </div>
+        <div id="as-saida"></div>
+      </div>
+
+      <div class="bloco">
         <h2>Casos que você acompanha <span>${seg.length}</span></h2>
         ${seg.length ? seg.map(x => `<a class="caso" href="/caso.html?id=${encodeURIComponent(x.id)}">
             <h3>${esc(x.titulo)}</h3>
@@ -128,10 +176,168 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
       </div>
 
       <a class="volta" href="/">← Voltar para a capa</a>`;
+
+    montarAssuntos();
+
   } catch {
     alvo.innerHTML = '<p class="vazio">Não consegui carregar. Tente de novo.</p>';
   }
 })();
+
+/* ===================== ASSUNTOS =========================================
+   Vieram da capa, onde viviam numa aba com o mesmo nome desta pagina — dois
+   lugares chamados "Seu Meridiano", consequencia de terem nascido em momentos
+   diferentes. Agora e um so.                                              */
+
+let assuntos = [], acervo = null, edicao = [];
+let ap = ''; try { ap = localStorage.getItem('meridiano_apelido') || ''; } catch {}
+
+const bate = (texto, termo) => {
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const ps = sa(termo).split(/\s+/).filter(p => p.length >= 3);
+  if (!ps.length) return false;
+  const palavras = sa(texto).split(/[^a-z0-9]+/).filter(Boolean);
+  return ps.every(p => {
+    const raiz = p.length <= 5 ? p : p.slice(0, p.length - 2);
+    return palavras.some(w => w.startsWith(raiz));
+  });
+};
+
+const mesma = (a,b) => {
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const ch = x => [...new Set(sa(x).split(/[^a-z0-9]+/).filter(w=>w.length>=4).map(w=>w.slice(0,6)))];
+  const A=ch(a), B=ch(b);
+  if (A.length<3||B.length<3) return false;
+  return A.filter(w=>B.includes(w)).length / Math.min(A.length,B.length) >= 0.7;
+};
+const semRepetir = l => { const f=[];
+  for (const i of [...l].sort((a,b)=>Date.parse(a.iso)-Date.parse(b.iso)))
+    if (!f.some(j=>mesma(j.titulo,i.titulo))) f.push(i);
+  return f.sort((a,b)=>Date.parse(b.iso)-Date.parse(a.iso)); };
+
+async function carregarMaterias(){
+  if (acervo) return;
+  const meses = (() => { const o=[], d=new Date();
+    for (let i=0;i<2;i++){ o.push(d.toISOString().slice(0,7)); d.setMonth(d.getMonth()-1); } return o; })();
+  const ufs = ['br','mundo','mt','rs','rj'];
+
+  const ed = await Promise.all(ufs.map(u =>
+    fetch(`dados/edicao-${u}.json?t=${Date.now()}`,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)));
+  edicao = ed.filter(Boolean).flatMap(b => b.itens || []);
+
+  const arq = [];
+  for (const u of ufs) for (const m of meses)
+    arq.push(fetch(`dados/arquivo/${u}-${m}.json?t=${Date.now()}`,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null));
+  const corte = Date.now() - 7*86400000;
+  const vistos = new Set(edicao.map(i=>i.id));
+  acervo = (await Promise.all(arq)).filter(Boolean).flatMap(b=>b.itens||[])
+    .filter(i => i.titulo && i.iso && Date.parse(i.iso) > corte && !vistos.has(i.id) && !vistos.has(i.id) && vistos.add(i.id));
+}
+
+async function montarAssuntos(){
+  if (!ap) return;
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'assuntos', apelido: ap }) });
+    assuntos = ((await r.json()).assuntos) || [];
+  } catch { assuntos = []; }
+
+  const etq = document.getElementById('as-etq');
+  if (etq) {
+    etq.innerHTML = assuntos.length
+      ? assuntos.map(a => `<span>${esc(a.termo)}<button data-tirar="${esc(a.termo)}" title="deixar de acompanhar">×</button></span>`).join('')
+      : '<span style="border-style:dashed;color:var(--fraco)">nenhum ainda</span>';
+    etq.querySelectorAll('[data-tirar]').forEach(b =>
+      b.addEventListener('click', () => mexer('tirar', b.dataset.tirar)));
+  }
+  document.getElementById('as-add')?.addEventListener('click', () => {
+    const c = document.getElementById('as-novo');
+    if (c.value.trim()) { afinar(c.value.trim()); c.value = ''; }
+  }, { once:false });
+  document.getElementById('as-novo')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && e.target.value.trim()) { afinar(e.target.value.trim()); e.target.value = ''; }
+  });
+
+  await carregarMaterias();
+  mostrarAssuntos();
+}
+
+async function mexer(por, termo){
+  const er = document.getElementById('as-erro');
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'assuntos', apelido: ap, por, assunto: termo }) });
+    const j = await r.json();
+    if (j.ok) { if (er) er.textContent=''; montarAssuntos(); }
+    else if (er) er.textContent = j.msg || 'não deu certo';
+  } catch { if (er) er.textContent = 'falha de conexão'; }
+}
+
+async function afinar(bruto, resposta){
+  const cx = document.getElementById('as-afina');
+  cx.innerHTML = '<div class="afina"><b>pensando</b><p>Vendo como transformar isso em busca…</p></div>';
+  try {
+    const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'afinar', bruto, resposta: resposta || '' }) });
+    const j = await r.json();
+
+    if (j.pergunta) {
+      cx.innerHTML = `<div class="afina"><b>uma pergunta</b><p>${esc(j.pergunta)}</p>
+        <div class="resp"><input id="af-resp" placeholder="responda em poucas palavras"><button id="af-ok">responder</button></div></div>`;
+      const ir = () => { const v = document.getElementById('af-resp').value.trim(); if (v) afinar(bruto, v); };
+      document.getElementById('af-ok').addEventListener('click', ir);
+      document.getElementById('af-resp').addEventListener('keydown', e => { if (e.key==='Enter') ir(); });
+      return;
+    }
+
+    const base = [...edicao, ...(acervo||[])];
+    const n = base.filter(i => bate(i.titulo + ' ' + (i.resumo||''), j.termo)).length;
+    cx.innerHTML = `<div class="afina"><b>proposta</b>
+      <div class="prop">Acompanhar <code>${esc(j.termo)}</code>${j.explica ? ` — ${esc(j.explica)}` : ''}<br>
+      <span style="font-size:13.5px;color:var(--fraco)">${n ? `${n} ${n===1?'matéria encontrada':'matérias encontradas'} nos últimos sete dias.` : 'Nenhuma matéria nos últimos sete dias.'}</span></div>
+      <div class="bts"><button id="af-usar">acompanhar assim</button><button class="nao" id="af-outro">escrevo de novo</button></div></div>`;
+    document.getElementById('af-usar').addEventListener('click', () => { cx.innerHTML=''; mexer('somar', j.termo); });
+    document.getElementById('af-outro').addEventListener('click', () => { cx.innerHTML=''; document.getElementById('as-novo').focus(); });
+  } catch { cx.innerHTML=''; mexer('somar', bruto); }
+}
+
+async function mostrarAssuntos(){
+  const alvo = document.getElementById('as-saida');
+  if (!alvo || !assuntos.length) { if (alvo) alvo.innerHTML=''; return; }
+
+  const base = [...edicao, ...(acervo||[])];
+  let h = '';
+  for (const a of assuntos) {
+    const casam = semRepetir(base.filter(i => bate(i.titulo + ' ' + (i.resumo||''), a.termo))).slice(0, 10);
+    h += `<div style="margin-top:26px">
+      <h2 style="font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--tinta);padding-bottom:9px;margin-bottom:4px">
+        ${esc(a.termo)} <span style="margin-left:auto;font-size:9.5px;color:var(--fraco)">${casam.length || 'nada'}</span></h2>`;
+
+    if (casam.length) {
+      h += casam.map(i => { const d = Math.floor((Date.now()-Date.parse(i.iso))/86400000);
+        return `<a class="mat" href="${esc(i.link)}"><h3>${esc(i.titulo)}</h3>
+        <p>${esc(i.resumo||'')}</p>
+        <div class="pe">${esc(ROT[i.nivel]||i.nivel||'')} · ${d>=1?(d===1?'ontem':'há '+d+' dias'):(i.hora||'hoje')}</div></a>`; }).join('');
+    }
+    h += `<div id="circ-${encodeURIComponent(a.termo)}"></div></div>`;
+  }
+  alvo.innerHTML = h;
+
+  // O que circula e o jornal nao cobriu
+  for (const a of assuntos) {
+    try {
+      const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'circulando', assunto: a.termo }) });
+      const itens = (((await r.json()).itens) || []).slice(0, 6);
+      const cx = document.getElementById('circ-' + encodeURIComponent(a.termo));
+      if (!cx || !itens.length) continue;
+      cx.innerHTML = '<div class="circ"><p class="av">O Meridiano não publicou sobre isto porque não encontrou registro em fonte oficial. Estes são títulos de outros veículos, com o link do original — não reescrevemos nem verificamos nenhum.</p>'
+        + itens.map(i => `<a href="${esc(i.link)}" target="_blank" rel="noopener nofollow">
+            <h4>${esc(i.titulo)}</h4><div class="v">${esc(i.veiculo||'imprensa')} · abre fora do Meridiano</div></a>`).join('')
+        + '</div>';
+    } catch {}
+  }
+}
 </script>
 </body>
 </html>
