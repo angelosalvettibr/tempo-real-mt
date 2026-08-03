@@ -47,30 +47,35 @@ const esc = s => String(s || '').replace(/[<>]/g, '').trim();
 // o Meridiano deixa de ser o que e.
 const PROMPT = (titulo, resumo) => `Você escreve o bloco PARA ENTENDER do MERIDIANO, um jornal que só afirma o que consegue verificar.
 
-MÉTODO — siga nesta ordem:
+O QUE ESTE BLOCO É — E O QUE NÃO É
 
-PASSO 1. Leia o título e identifique os TERMOS FORTES: as palavras que o leitor pode não conhecer e sem as quais a notícia não faz sentido. Em geral são nomes de lugar, de instituição, de órgão, de operação, de processo ou de acordo. Palavras comuns não contam.
+Não é um verbete. "Ceuta é uma cidade espanhola de 84 mil habitantes no norte da África" está correto e não serve para nada: o leitor continua sem entender por que 60 mil pessoas cruzaram aquela fronteira.
 
-Exemplo: em "Entrada de 60 mil migrantes em Ceuta teria gerado crise migratória europeia", os termos fortes são "Ceuta" — que quase ninguém sabe situar — e "crise migratória europeia", que é um processo com história. "Migrantes" e "entrada" não são: todo mundo entende.
+O que ele precisa saber é que Ceuta é uma das duas únicas fronteiras terrestres da União Europeia com a África, que o controle dessa passagem depende de um acordo com Marrocos, e que em 2021 Marrocos afrouxou a vigilância em meio a uma crise diplomática — e cerca de 8 mil pessoas passaram em dois dias. Aí a notícia faz sentido, e o número ganha escala.
 
-Outro: em "Prefeitura de Cuiabá entrega creche no Coxipó", não há termo forte para quem lê aquela edição. Nesse caso a resposta é NAO.
+RESPONDA TRÊS PERGUNTAS, NESTA ORDEM
 
-PASSO 2. PROCURE cada termo forte. Use a busca para levantar o que é, onde fica, o que faz, e o que já aconteceu de relevante com ele.
+1. O QUE É ISSO — uma frase, o mínimo para o leitor não ficar perdido. Lugar, órgão, operação, acordo, processo. Sem enciclopédia: uma frase.
 
-PASSO 3. Escreva um parágrafo curto por termo forte — no máximo três. Cada parágrafo começa pelo termo e explica o que ele é. Nada mais.
+2. POR QUE ESTÁ ACONTECENDO AGORA — a parte que importa. O que mudou, qual é a disputa, qual acordo regula aquilo, o que aconteceu antes que explique o presente. Se houve episódio anterior parecido, diga quando e qual foi o tamanho.
+
+3. QUAL É A ESCALA — o número da notícia é grande ou pequeno para aquele contexto? Sessenta mil migrantes é muito? Quinze bilhões de reais é muito? Compare com algo verificável: o episódio anterior, a média do período, o total do orçamento. Número sem comparação não informa nada, e é onde quase todo jornal falha. Se a notícia não trouxer número, pule esta parte.
+
+PROCURE ANTES DE ESCREVER. Use a busca para levantar cada uma das três. Não escreva de memória.
 
 REGRAS QUE NÃO PODEM SER QUEBRADAS:
-1. NÃO recontar a notícia. Se um parágrafo puder ser resumido como "aconteceu X", está errado — apague e escreva sobre o termo.
-2. NÃO opinar, NÃO prever, NÃO avaliar. Nada de "isso indica", "especialistas avaliam", "deve levar a", "tende a".
-3. NÃO afirmar como certo o fato noticiado. Ele pode não estar confirmado. Você explica o entorno, não o fato.
-4. NÃO INVENTE número, data ou nome. Se a busca não trouxer, escreva sem.
+1. NÃO recontar a notícia. Se um parágrafo puder ser resumido como "aconteceu X", apague.
+2. NÃO opinar, NÃO prever, NÃO avaliar. Nada de "isso indica", "especialistas avaliam", "deve levar a", "tende a", "é um sinal de".
+3. NÃO afirmar como certo o fato noticiado — ele pode não estar confirmado. Você explica o entorno, não o fato.
+4. NÃO INVENTE número, data ou nome. Se a busca não trouxer, escreva sem. Comparação inventada é pior que nenhuma.
 5. Português correto, com todos os acentos.
+6. Se a notícia for corriqueira e não exigir contexto — uma entrega de obra municipal, um aviso de serviço, um resultado de sorteio —, responda NAO e pare.
 
 FORMATO — exatamente isto, sem markdown:
 PRECISA: (SIM ou NAO)
-TERMOS: (os termos fortes identificados, separados por vírgula — ou vazio se NAO)
+TERMOS: (os termos que você explicou, separados por vírgula — ou vazio se NAO)
 TEXTO:
-(um parágrafo por termo, separados por linha em branco, na ordem em que aparecem no título)
+(um parágrafo por pergunta respondida, separados por linha em branco, na ordem acima. Dois ou três parágrafos curtos. Se não houver material para a terceira, escreva duas.)
 FONTES:
 - (nome da fonte usada. 1 a 4 itens)
 
@@ -117,7 +122,7 @@ async function gerar(titulo, resumo){
 
   // Trava de saida: opiniao ou previsao invalidam o bloco inteiro. Melhor
   // nao ter contexto que ter analise disfarcada de contexto.
-  const proibido = /(indica que|sugere que|especialistas|analistas avaliam|deve levar|tende a|provavelmente|pode significar|e um sinal)/i;
+  const proibido = /(indica que|sugere que|especialistas|analistas avaliam|deve levar|tende a|provavelmente|pode significar|[ée] um sinal|aponta para|revela que|demonstra que)/i;
   if (proibido.test(paragrafos.join(' '))) return { precisa:false, recusado:true };
 
   // Os termos que o agente destrinchou. Mostrar isso ao leitor torna o bloco
