@@ -933,6 +933,34 @@ try {
   }
 } catch (e) { console.log('     aviso foto repetida: ' + String(e.message).slice(0,40)); }
 
+/* ------------------------- ESTADO DAS HISTORIAS -------------------------
+   O jornal sabe uma coisa que nenhum feed sabe: quando uma historia muda de
+   estado. Uma nota que era "sem confirmacao" e virou "confirmado
+   oficialmente" e o desfecho — justamente o capitulo que a imprensa publica
+   pequeno e o algoritmo de rede social nao mostra, porque desfecho nao
+   engaja.
+
+   Aqui o robo publica o estado atual de tudo que saiu nesta rodada. Quem
+   marcou "acompanhar este caso" e avisado ao voltar ao site.              */
+if (process.env.CHAVE_ROBO && process.env.URL_SITE) {
+  try {
+    const estados = {};
+    for (const p of publicados) estados[p.id] = { nivel: p.nivel || 'confirmado', titulo: p.titulo, link: p.link };
+    for (const c of circulando) estados[c.id] = { nivel: c.nivel || 'sem-confirmacao', titulo: c.titulo, link: c.link };
+
+    if (Object.keys(estados).length) {
+      const r = await fetch(process.env.URL_SITE.replace(/\/+$/,'') + '/api/leitor', {
+        method:'POST', headers:{ 'Content-Type':'application/json' },
+        body: JSON.stringify({ acao:'estados', chave: process.env.CHAVE_ROBO, estados })
+      });
+      const j = await r.json().catch(() => ({}));
+      console.log(`     estado de ${Object.keys(estados).length} historias publicado${j.total ? ` (${j.total} no total)` : ''}`);
+    }
+  } catch (e) {
+    console.log('     aviso estados: ' + String(e.message).slice(0, 50));
+  }
+}
+
 console.log(`\n  5. CIRCULANDO — ${candidatas.length} cacadas de ${soPautaFiltrada.length} pautas · ${circulando.length} notas escritas`);
 
 // O arquivo ficava AQUI EM CIMA, antes das notas de circulacao existirem.

@@ -303,6 +303,15 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .foto{margin:26px 0 8px}
 .foto img{width:100%;height:auto;display:block;border:1px solid var(--linha)}
 .foto figcaption{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--fraco);margin-top:8px;text-transform:uppercase}
+.crono{margin:26px 0 8px;border-top:1px solid var(--tinta)}
+.crono .lin{display:grid;grid-template-columns:150px 1fr;gap:0 22px;padding:17px 0;border-bottom:1px solid var(--linha)}
+.crono .q{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--sinal);padding-top:3px}
+.crono .t{font-family:'Source Serif 4',Georgia,serif;font-size:16.5px;line-height:1.6;color:var(--tinta)}
+.crono .f{display:block;margin-top:9px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em}
+.crono .f a{color:var(--sinal);text-decoration:none;border-bottom:1px solid var(--linha)}
+.crono .f a:hover{border-color:var(--sinal)}
+.crono .f .sem{color:var(--fraco)}
+@media(max-width:640px){.crono .lin{grid-template-columns:1fr;gap:7px}.crono .q{padding-top:0}}
 .relac{border-top:1px solid var(--tinta);padding-top:15px;margin:34px 0 4px}
 .relac b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta);display:block;margin-bottom:12px}
 .relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
@@ -312,6 +321,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
 .acoes button:hover{background:var(--tinta);color:var(--papel)}
 .acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
+.acoes button.seg:hover{background:var(--sinal);color:#fff}
+.acoes button.seg.on{background:var(--sinal);color:#fff}
 .acoes button.zap:hover{background:var(--verde);color:#fff}
 .saber{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:28px 0}
 .saber>div{padding:16px 19px}
@@ -446,6 +458,16 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ${m.checar?.length ? `<br><br><b>O que ainda precisa ser apurado</b><ul>${m.checar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : ''}
   </details>
 
+  ${m.cronologia?.length ? `<div class="crono">
+    ${m.cronologia.map(c => `<div class="lin">
+      <div class="q">${esc(c.quando)}</div>
+      <div class="t">${esc(c.texto)}
+        <span class="f">${c.link
+          ? `<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.fonte)} &nearr;</a>`
+          : `<span class="sem">${esc(c.fonte || 'sem registro localizado')}</span>`}</span>
+      </div></div>`).join('')}
+  </div>` : ''}
+
   ${m.relacionadas?.length ? `<div class="relac">
     <b>Já publicamos sobre isso</b>
     ${m.relacionadas.map(r => `<a href="${esc(r.link)}">${esc(r.titulo)}${r.dia ? `<span>${esc(r.dia.split('-').reverse().join('/'))}</span>` : ''}</a>`).join('')}
@@ -455,6 +477,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
     <button id="bt-link">Copiar link</button>
     <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="${esc(m.id || '')}" data-nivel="${esc(m.nivel || 'sem-confirmacao')}">Acompanhar este caso</button>
   </div>
 
   <a class="voltar" href="/">← Voltar para a capa</a>
@@ -490,6 +513,31 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       lendo = true; ov.textContent = 'Parar';
     });
   } else if (ov) { ov.style.display = 'none'; }
+
+  // Acompanhar o caso. Quando o nivel de evidencia mudar — de "sem
+  // confirmacao" para "confirmado oficialmente" — o leitor e avisado ao
+  // voltar. E o desfecho: o capitulo que sempre sai pequeno.
+  var sg = document.getElementById('bt-seguir');
+  var ap = null;
+  try { ap = JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido || null; } catch(e){}
+
+  if (sg && !sg.dataset.id) { sg.style.display = 'none'; }
+  else if (sg) {
+    sg.addEventListener('click', function(){
+      if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
+      sg.disabled = true;
+      fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
+          nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          sg.disabled = false;
+          if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
+          else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
+        })
+        .catch(function(){ sg.disabled = false; });
+    });
+  }
 })();
 </script>
 </body>
