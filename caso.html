@@ -29,6 +29,10 @@ h1 a:hover{color:var(--rosso)}
 .est.confirmado{color:var(--verde)} .est.atribuido{color:var(--oro)}
 .est.sem-confirmacao,.est.redacao{color:var(--fraco)}
 
+.resumo{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:22px 0}
+.resumo b{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:11px}
+.resumo p{font-size:16.5px;line-height:1.65;color:#2A3540}
+.resumo .carregando{font-family:var(--mono);font-size:12px;color:#5A6B7C}
 .aviso{background:#EAF3EE;border-left:3px solid var(--verde);padding:14px 17px;margin:20px 0}
 .aviso b{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:5px}
 .aviso p{font-size:15px;line-height:1.55;color:var(--tinta2)}
@@ -87,6 +91,8 @@ const ROT = { confirmado:'confirmado em documento', atribuido:'atribuído a font
       ${caso && caso.mudou ? `<div class="aviso"><b>desfecho</b>
         <p>Esta história mudou de estado desde que você começou a acompanhar. É o capítulo que costuma sair pequeno na imprensa — aqui ele tem o mesmo peso do primeiro.</p></div>` : ''}
 
+      <div id="resumo-caso"></div>
+
       <div class="tit">O que veio depois <span>${fila.length || 'nada ainda'}</span></div>
       ${fila.length
         ? fila.map(x => `<a class="item" href="${esc(x.link)}">
@@ -99,6 +105,32 @@ const ROT = { confirmado:'confirmado em documento', atribuido:'atribuído a font
 
       <p class="nota">Esta fila é montada sozinha: o jornal compara cada matéria nova com o caso que você marcou e, quando são a mesma história, acrescenta aqui. O critério de semelhança é rígido, para a lista não encher de coisa vagamente relacionada.</p>
       <a class="volta" href="/meu.html">← Todos os casos que você acompanha</a>`;
+
+    // O resumo do conjunto. O valor desta pagina e o TEMPO: se a historia
+    // comecou como acusacao e virou absolvicao, e isso que o leitor precisa
+    // ler antes de descer para a lista.
+    const paraResumo = [
+      ...(caso ? [{ titulo: caso.titulo, quando: 'início', nivel: caso.nivel || 'sem-confirmacao' }] : []),
+      ...fila.slice().reverse().map(x => ({
+        titulo: x.titulo,
+        quando: x.iso ? new Date(x.iso).toLocaleDateString('pt-BR') : '',
+        nivel: x.nivel || 'confirmado'
+      }))
+    ];
+
+    const cxR = document.getElementById('resumo-caso');
+    if (cxR && paraResumo.length >= 2) {
+      cxR.innerHTML = '<div class="resumo"><b>o que aconteceu neste caso</b><p class="carregando">montando o resumo…</p></div>';
+      try {
+        const rr = await fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ acao:'caso', id, itens: paraResumo }) });
+        const jr = await rr.json();
+        if (jr.ok && jr.resumo) {
+          cxR.innerHTML = '<div class="resumo"><b>o que aconteceu neste caso</b><p>'
+            + jr.resumo.replace(/[<>]/g,'') + '</p></div>';
+        } else { cxR.innerHTML = ''; }
+      } catch { cxR.innerHTML = ''; }
+    }
   } catch {
     alvo.innerHTML = '<p class="vazio">Não consegui carregar.</p>';
   }
