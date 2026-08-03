@@ -321,6 +321,17 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
 .acoes button:hover{background:var(--tinta);color:var(--papel)}
 .acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+/* O bloco de contexto tem cara propria de proposito: na mesma pagina convivem
+   um fato que pode nao estar confirmado e uma explicacao verificavel. Sao
+   graus de certeza diferentes, e a tela precisa mostrar isso. */
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
+.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
 .acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
 .acoes button.seg:hover{background:var(--sinal);color:#fff}
 .acoes button.seg.on{background:var(--sinal);color:#fff}
@@ -478,7 +489,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <button id="bt-link">Copiar link</button>
     <button id="bt-ouvir">Ouvir a matéria</button>
     <button class="seg" id="bt-seguir" data-id="${esc(m.id || '')}" data-nivel="${esc(m.nivel || 'sem-confirmacao')}">Acompanhar este caso</button>
+    <button class="ctx" id="bt-ctx">Entender o contexto</button>
   </div>
+  <div id="ctx-area"></div>
 
   <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
@@ -517,6 +530,37 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   // Acompanhar o caso. Quando o nivel de evidencia mudar — de "sem
   // confirmacao" para "confirmado oficialmente" — o leitor e avisado ao
   // voltar. E o desfecho: o capitulo que sempre sai pequeno.
+  // Entender o contexto: informacao de fundo que a materia nao traz. Quem le
+  // "60 mil migrantes em Ceuta" e nao sabe o que e Ceuta nao entende nada — e
+  // a materia nao pode explicar, porque nota nao confirmada e registro do que
+  // circula, nao reportagem.
+  var bc = document.getElementById('bt-ctx');
+  var ca = document.getElementById('ctx-area');
+  if (bc) bc.addEventListener('click', function(){
+    bc.disabled = true; bc.textContent = 'procurando…';
+    var res = document.querySelector('.linhafina');
+    fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/\.html$/,''),
+        titulo: t, resumo: res ? res.textContent : '' }) })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        bc.style.display = 'none';
+        if (j.ok && j.precisa) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
+            + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '')
+            + '</div>';
+        } else if (j.ok) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + '<p class="nada">Esta notícia não pede contexto adicional — o que ela informa se explica sozinho.</p></div>';
+        } else {
+          bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
+        }
+        ca.scrollIntoView({ behavior:'smooth', block:'nearest' });
+      })
+      .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
+  });
+
   var sg = document.getElementById('bt-seguir');
   var ap = null;
   try {
