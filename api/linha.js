@@ -119,8 +119,10 @@ TITULO: (uma linha, factual, até 90 caracteres)
 LINHA: (uma ou duas frases de apoio. Se o desfecho contradisser a repercussão inicial, CONSTATE isso sem julgar — ex.: "O caso teve desfecho oposto ao que a repercussão inicial indicava.")
 INTRO: (um parágrafo explicando que a página reúne os fatos em ordem, sem posição do jornal, e que cada marco traz sua origem)
 MARCOS:
-[data] | [o fato, em 1 a 3 frases] | [origem: nome da publicação, ou "relatado pelo próprio", ou "sem registro localizado"] | [link ou vazio]
-(uma linha por marco, do mais recente ao mais antigo)
+(uma linha por marco, do mais recente ao mais antigo, com barras verticais separando os quatro campos e SEM colchetes. Exemplo exato do formato:)
+18 de maio de 1988 | Morreu em Milão, aos 59 anos, menos de dois anos após a confirmação da absolvição. | Wikipédia | https://exemplo.com
+1987 | A Corte de Cassação confirmou definitivamente a absolvição. | sem registro localizado |
+(NÃO quebre um marco em várias linhas. NÃO use colchetes. Cada marco cabe em uma linha.)
 FALTA:
 - (o que seria preciso para confirmar o que hoje é só relato: número de processo, decisão, manifestação de órgão. 2 a 4 itens)
 
@@ -164,11 +166,38 @@ async function montarLinha(relato, links, buscar = true){
     return (t.match(re)?.[1] || '').trim();
   };
 
-  const marcos = bloco('MARCOS', 'FALTA').split(/\n/)
-    .map(l => l.split('|').map(x => x.trim()))
-    .filter(p => p.length >= 3 && p[0] && p[1] && p[1].length > 20)
-    .map(p => ({ quando:p[0], texto:p[1], fonte:p[2] || 'sem registro localizado',
-                 link: /^https?:\/\//.test(p[3] || '') ? p[3] : null }));
+  // Leitura tolerante. A versao anterior exigia exatamente
+  // "data | fato | origem | link" numa linha so, e com relato longo o modelo
+  // quebrava em paragrafos — o parser entao devolvia zero marcos e a montagem
+  // falhava inteira. Agora tentamos tres formatos, do mais ao menos rigido.
+  const cru = bloco('MARCOS', 'FALTA');
+
+  const porBarra = cru.split(/\n/)
+    .map(l => l.replace(/^[-•*\s]+/, '').split('|').map(x => x.trim()))
+    .filter(p => p.length >= 2 && p[0] && p[1] && p[1].length > 20)
+    .map(p => ({ quando:p[0].replace(/^\[|\]$/g,''), texto:p[1],
+                 fonte:(p[2] || '').replace(/^\[|\]$/g,'') || 'sem registro localizado',
+                 link: /^https?:\/\//.test(p[3] || '') ? p[3].trim() : null }));
+
+  // Formato alternativo: "1983 — fato... (fonte)" ou "17/06/1983: fato..."
+  const porTraco = cru.split(/\n+/)
+    .map(l => l.replace(/^[-•*\s]+/, '').trim())
+    .map(l => {
+      const m = l.match(/^(.{3,60}?)\s*(?:—|–|-{1,2}|:)\s+(.{25,})$/);
+      if (!m) return null;
+      const resto = m[2];
+      const url = (resto.match(/https?:\/\/\S+/) || [null])[0];
+      const fonteM = resto.match(/\(([^)]{3,90})\)\s*$/);
+      return {
+        quando: m[1].replace(/^\[|\]$/g,'').trim(),
+        texto: resto.replace(/https?:\/\/\S+/g,'').replace(/\(([^)]{3,90})\)\s*$/,'').trim(),
+        fonte: fonteM ? fonteM[1].trim() : 'sem registro localizado',
+        link: url ? url.replace(/[),.]+$/,'') : null
+      };
+    })
+    .filter(x => x && x.texto.length > 25 && /\d/.test(x.quando));
+
+  const marcos = (porBarra.length >= 2 ? porBarra : porTraco).slice(0, 40);
 
   return {
     titulo: (t.match(/T[IÍ]TULO\s*:\s*(.+)/i)?.[1] || '').trim(),
