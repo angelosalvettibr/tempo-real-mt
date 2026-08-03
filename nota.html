@@ -34,6 +34,7 @@ h1{font-family:var(--display);font-size:clamp(28px,5.6vw,40px);font-weight:700;l
 .acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
 .acoes button.ctx:hover{background:#1F4D7A;color:#fff}
 .ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:24px 0}
+.ctx-bloco .termos{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#5A6B7C;margin-bottom:13px;padding-bottom:11px;border-bottom:1px solid #CBD9E6}
 .ctx-bloco b.tit{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
 .ctx-bloco p{font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
 .ctx-bloco p:last-of-type{margin-bottom:0}
@@ -89,6 +90,7 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
         bc.style.display = 'none';
         if (j.ok && j.precisa) {
           ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + (j.termos ? `<div class="termos">${esc(j.termos.join(' · '))}</div>` : '')
             + j.paragrafos.map(p => `<p>${esc(p)}</p>`).join('')
             + (j.fontes ? `<div class="fontes">Levantado em: ${esc(j.fontes.join(' · '))}</div>` : '')
             + '</div>';
