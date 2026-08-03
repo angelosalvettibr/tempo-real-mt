@@ -839,7 +839,7 @@ function montarApelido(){
   if (!alvo) return;
   const a = leitor.apelido;
   alvo.innerHTML = a
-    ? `<span class="quem">olá, <b>${esc(a)}</b></span>
+    ? `<a class="quem" href="/meu.html" style="border-bottom:1px solid var(--linha2)">olá, <b>${esc(a)}</b></a>
        <button class="bt-mini" data-ap="abrir">trocar</button>`
     : `<button class="bt-mini" data-ap="abrir">quem é você?</button>`;
 }
