@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T17:06:21.960Z",
+  "gerado": "2026-08-04T18:01:08.971Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 211,
-    "fonteLivre": 50,
-    "confirmadas": 13,
-    "publicadas": 11,
+    "pauta": 215,
+    "fonteLivre": 52,
+    "confirmadas": 16,
+    "publicadas": 6,
     "resgatadas": 0,
-    "semFonte": 52
+    "semFonte": 43
   },
   "fontes": {
-    "checadas": 85,
-    "responderam": 34,
+    "checadas": 95,
+    "responderam": 61,
     "entregando": 28,
-    "itens": 257,
+    "itens": 263,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -30,15 +39,6 @@
         "tipo": "pauta",
         "id": "cnn",
         "nome": "CNN Brasil",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -127,8 +127,26 @@
       },
       {
         "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "g1politica",
         "nome": "g1 Política",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -139,15 +157,6 @@
         "id": "r7",
         "nome": "R7",
         "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -171,9 +180,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -189,19 +198,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
-        "id": "ab-geral",
+        "id": "ab-justica",
         "nome": "Agência Brasil",
-        "itens": 8,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -210,14 +210,14 @@
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 8,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "ab-justica",
+        "id": "ab-geral",
         "nome": "Agência Brasil",
         "itens": 8,
         "ok": true,
@@ -289,15 +289,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "valor",
         "nome": "Valor",
         "itens": 0,
@@ -316,8 +307,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "r7",
-        "nome": "R7",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -331,6 +322,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "r7",
+        "nome": "R7",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -361,17 +361,17 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
+        "id": "senado",
+        "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 405"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "senado",
-        "nome": "Agência Senado",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -383,17 +383,8 @@
         "nome": "gov.br",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "stj",
-        "nome": "STJ",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -401,8 +392,8 @@
         "nome": "Conab",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -421,6 +412,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "stj",
+        "nome": "STJ",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -460,21 +460,21 @@
       },
       {
         "tipo": "livre",
-        "id": "anp",
-        "nome": "ANP",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "mapa",
         "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "anp",
+        "nome": "ANP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -483,7 +483,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -491,8 +491,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -502,6 +502,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -523,12 +532,12 @@
       },
       {
         "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
+        "id": "prf",
+        "nome": "Polícia Rodoviária Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -537,16 +546,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "prf",
-        "nome": "Polícia Rodoviária Federal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -559,21 +559,48 @@
       },
       {
         "tipo": "livre",
-        "id": "cgu",
-        "nome": "CGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "ibama",
         "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "cgu",
+        "nome": "CGU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -582,52 +609,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "fazenda",
-        "nome": "Ministério da Fazenda",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -636,25 +627,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
+        "id": "fazenda",
+        "nome": "Ministério da Fazenda",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -663,16 +654,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "inss",
-        "nome": "INSS",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -680,8 +671,35 @@
         "nome": "Anvisa",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -690,52 +708,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "inss",
+        "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "ans",
-        "nome": "ANS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -743,8 +725,26 @@
         "nome": "ANTT",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ans",
+        "nome": "ANS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "tcu",
+        "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -752,8 +752,8 @@
         "nome": "Itamaraty",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -775,42 +775,134 @@
       },
       {
         "tipo": "livre",
+        "id": "cvm",
+        "nome": "CVM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "agu",
+        "nome": "AGU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "govbr",
         "nome": "gov.br",
         "itens": 0,
         "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "cnj",
+        "nome": "CNJ",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "planalto",
+        "nome": "Planalto",
+        "itens": 0,
+        "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
+        "id": "saude-fed",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "stm",
+        "nome": "STM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "cnmp",
+        "nome": "CNMP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "dpu",
+        "nome": "Defensoria Pública da União",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
   "cidades": [],
   "itens": [
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
-      "fotoAlt": null,
-      "fotoLarg": 0,
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_experimentocelulas.jpg",
+      "fotoAlt": "adicionar",
+      "fotoLarg": 1200,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pessoa-nascida-sem-patria-relata-medos-em-sua-trajetoria",
+      "id": "ilm:pesquisa-da-usp-testa-celulas-da-mucosa-olfatoria-para-tratar-lesao-na",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Pessoa nascida sem pátria relata medos em sua trajetória",
-      "resumo": "O depoimento aborda a jornada de um viajante apátrida diante da ignorância e da desinformação.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "Pesquisa da USP testa células da mucosa olfatória para tratar lesão na medula em ratos",
+      "resumo": "O estudo em fase preliminar injetou células do nariz nos animais após uma contusão e registrou evolução significativa no grupo testado.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/ciencias/terapia-experimental-com-celulas-tronco-do-nariz-pode-ser-caminho-para-tratar-lesao-na-medula/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [
+        "Migalhas"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "Uma pessoa nascida sem pátria afirmou ter aprendido a temer coisas que surgem de forma natural para outros indivíduos.",
-        "O relato apresenta a vivência de um viajante apátrida exposto à ignorância e à desinformação.",
-        "As informações constam na publicação original divulgada pelo veículo Global Voices."
+        "Uma pesquisa realizada em colaboração por diferentes centros da USP investigou um novo tratamento experimental para lesões agudas na medula espinhal em ratos. O estudo analisou a recuperação dos animais após sofrerem uma contusão e receberem injeções de células da mucosa olfatória.",
+        "O grupo testado apresentou evolução significativa. As células-tronco do nariz possuem alto potencial de regeneração neurológica e atuam no recrutamento de substâncias que favorecem a regeneração neuronal na região lesionada.",
+        "A medula espinhal integra o sistema nervoso central e transporta estímulos do cérebro para o resto do corpo. Lesões nesse tecido frágil são comuns em acidentes automobilísticos e quedas de alturas significativas registradas em centros de trauma hospitalares."
       ],
-      "link": "/materia/pessoa-nascida-sem-patria-relata-medos-em-sua-trajetoria.html",
-      "iso": "2026-08-04T07:37:20.000Z",
-      "hora": "03h37",
+      "link": "/materia/pesquisa-da-usp-testa-celulas-da-mucosa-olfatoria-para-tratar-lesao-na.html",
+      "iso": "2026-08-04T13:39:35.000Z",
+      "hora": "09h39",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -822,93 +914,33 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d",
+      "id": "ilm:pt-oficializa-candidatura-de-lula-a-presidencia-com-alckmin-na-vice",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "PT oficializa candidatura de Luiz Inácio Lula da Silva à Presidência da República",
-      "resumo": "Geraldo Alckmin, do PSB, compõe a chapa como vice no evento realizado no Expo Center Norte, em São Paulo.",
+      "titulo": "PT oficializa candidatura de Lula à Presidência com Alckmin na vice",
+      "resumo": "A chapa repete a formação vitoriosa de 2022 e terá o apoio dos partidos PSB, PCdoB, PV, PDT, PSOL e Rede nas eleições de 2026.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/pt-oficializa-candidatura-de-lula-presidencia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
+        "g1",
         "BBC Brasil",
-        "g1 Política",
-        "JOTA",
-        "CartaCapital"
+        "Folha",
+        "g1 Política"
       ],
-      "quentura": 8,
+      "quentura": 7,
       "uf": null,
       "corpo": [
-        "O PT formalizou a candidatura de Luiz Inácio Lula da Silva à Presidência da República em convenção realizada no Expo Center Norte, na zona norte de São Paulo. A chapa tem Geraldo Alckmin, do PSB, como candidato à Vice-Presidência, repetindo a chapa que foi vitoriosa em 2022.",
-        "Em 2026, o PT terá como aliados o PSB, PCdoB, PV, PDT, PSOL e Rede. Se for eleito, Lula cumprirá o quarto mandato e, aos 81 anos, será o presidente mais velho a ocupar o cargo.",
-        "O evento começou por volta das 11h com a presença de lideranças e aliados. No discurso de abertura, o presidente do partido, Edinho Silva, disse que as eleições terão impacto na América Latina e no mundo, definindo a soberania nacional frente a possíveis intervencionismos.",
-        "Também discursaram o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva. O presidente Lula falou por mais de uma hora no encerramento, afirmando que a lógica da campanha se baseia no legado do governo e que quem fez pode prometer mais."
+        "O PT formalizou a candidatura de Luiz Inácio Lula da Silva à Presidência da República neste domingo (2), em convenção realizada no Expo Center Norte, na zona norte de São Paulo. Geraldo Alckmin, do PSB, compõe a chapa como candidato à Vice-Presidência da República.",
+        "A chapa repete a coligação vitoriosa em 2022. Em 2026, o PT terá como aliados o PSB, PCdoB, PV, PDT, PSOL e Rede. Caso seja eleito aos 81 anos, Lula cumprirá o seu quarto mandato e se tornará o presidente mais velho a ocupar o cargo.",
+        "O evento começou por volta das 11h e teve a presença de lideranças e aliados. No discurso de abertura da Convenção Nacional do PT, o presidente do partido, Edinho Silva, afirmou que as próximas eleições brasileiras terão impacto na América Latina e no mundo e definirão a soberania nacional. Também discursaram o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva.",
+        "Para fechar o evento, o presidente Lula falou por mais de uma hora. Ele declarou que a motivação de um governo para ganhar as eleições é o legado merecedor de confiança e respeito, afirmando que quem fez pode prometer mais e quem não fez não tem o que prometer."
       ],
-      "link": "/materia/pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d.html",
+      "link": "/materia/pt-oficializa-candidatura-de-lula-a-presidencia-com-alckmin-na-vice.html",
       "iso": "2026-08-02T18:38:00.000Z",
       "hora": "14h38",
       "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260730_veganismonoesporte.jpg",
-      "fotoAlt": "Foto: drobotdean/Magnific e Magnific\n\n",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:dietas-veganas-e-onivoras-bem-planejadas-tem-o-mesmo-desempenho-no-esp",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Dietas veganas e onívoras bem planejadas têm o mesmo desempenho no esporte",
-      "resumo": "A afirmação é de Hamilton Roschel, professor da USP, que aponta a ausência de vantagem ou desvantagem no rendimento de atletas.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/radio-usp/veganismo-no-esporte-nao-oferece-vantagem-ou-desvantagem-mas-ainda-enfrenta-tabus/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Dietas à base de plantas bem planejadas apresentam o mesmo desempenho esportivo que dietas onívoras. A declaração é de Hamilton Roschel, professor da Escola de Educação Física e Esporte (EEFE) da USP e diretor científico e executivo do Centro de Medicina do Estilo de Vida da Faculdade de Medicina (FMUSP).",
-        "Atletas de elite e alguns clubes de futebol passaram a adotar dietas à base de plantas e obtiveram resultados expressivos. A adesão no universo esportivo acompanha a tendência do aumento de pessoas que adotam o veganismo como estilo de vida.",
-        "Ao contrário do que se acredita, não existe diferença de rendimento físico entre dietas veganas e onívoras quando bem estruturadas. Além disso, o consumo de proteínas não se constitui como um problema na alimentação à base de plantas."
-      ],
-      "link": "/materia/dietas-veganas-e-onivoras-bem-planejadas-tem-o-mesmo-desempenho-no-esp.html",
-      "iso": "2026-08-04T14:50:15.000Z",
-      "hora": "10h50",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2024/04/20240410_fachadafmrp.jpg",
-      "fotoAlt": "Foto: Acervo SCS",
-      "fotoLarg": 800,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:usp-busca-voluntarias-para-estudo-sobre-efeitos-de-ayahuasca-e-cetamin",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "USP busca voluntárias para estudo sobre efeitos de ayahuasca e cetamina",
-      "resumo": "A pesquisa da Faculdade de Medicina de Ribeirão Preto vai avaliar o impacto das substâncias no ciclo menstrual e nos sintomas de tensão pré-menstrual em mulheres de 18 a 45 anos.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/usp-precisa-de-voluntarias-para-estudo-sobre-ayahuasca-e-ciclo-menstrual/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Pesquisadores da Faculdade de Medicina de Ribeirão Preto (FMRP) da USP estão recrutando voluntárias para um estudo com ayahuasca e cetamina. A investigação busca avaliar o efeito das substâncias no ciclo menstrual e nos sintomas de TPM em voluntárias saudáveis.",
-        "A ayahuasca é uma bebida preparada a partir das plantas amazônicas chacrona (Psychotria viridis) e cipó-jagube ou mariri (Banisteriopsis caapi), enquanto a cetamina é um anestésico. Os critérios do estudo incluem ter entre 18 e 45 anos e ciclo menstrual regular.",
-        "Além disso, as participantes devem apresentar bom estado geral de saúde, residir em Ribeirão Preto ou região e não utilizar medicamentos psicotrópicos e/ou contraceptivos orais hormonais de uso contínuo. O contato deve ser feito pelo e-mail tainibellucci@gmail.com."
-      ],
-      "link": "/materia/usp-busca-voluntarias-para-estudo-sobre-efeitos-de-ayahuasca-e-cetamin.html",
-      "iso": "2026-08-04T14:52:22.000Z",
-      "hora": "10h52",
-      "original": true,
-      "contexto": "O estudo é voltado para mulheres de 18 a 45 anos com ciclo menstrual regular e moradoras de Ribeirão Preto ou região. As participantes devem apresentar bom estado de saúde e não utilizar medicamentos psicotrópicos nem contraceptivos orais hormonais de uso contínuo.",
+      "contexto": "A chapa formada entre PT e PSB para 2026 repete a coligação vitoriosa de 2022. No histórico do arquivo, o apoio do PV à candidatura de Lula foi registrado em 1º de agosto de 2026. Outra oficialização de candidatura presidencial no período ocorreu em 4 de agosto de 2026, com o partido Avante.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -918,11 +950,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes",
+      "id": "ilm:lingua-kam-tem-de-8-000-a-11-000-falantes-no-nordeste-da-nigeria",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Língua Kam no nordeste da Nigéria tem de 8.000 a 11.000 falantes",
-      "resumo": "O idioma não recebia atenção de pesquisadores até 2016, a exemplo de outras línguas da região.",
+      "titulo": "Língua Kam tem de 8.000 a 11.000 falantes no nordeste da Nigéria",
+      "resumo": "O idioma não recebia atenção de pesquisadores antes de 2016, a exemplo de outras línguas da região.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
@@ -930,103 +962,13 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000 pessoas. O idioma situa-se no nordeste da Nigéria.",
-        "Antes do ano de 2016, a língua Kam não recebia nenhuma atenção por parte de pesquisadores.",
-        "A ausência de atenção de pesquisadores antes desse período também ocorreu com muitas outras línguas do nordeste da Nigéria."
+        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000.",
+        "O Kam faz parte do grupo de línguas do nordeste da Nigéria.",
+        "Assim como muitas outras línguas do nordeste nigeriano, o Kam não recebeu atenção de pesquisadores antes de 2016."
       ],
-      "link": "/materia/lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes.html",
+      "link": "/materia/lingua-kam-tem-de-8-000-a-11-000-falantes-no-nordeste-da-nigeria.html",
       "iso": "2026-08-03T05:38:53.000Z",
       "hora": "01h38",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_experimentocelulas.jpg",
-      "fotoAlt": "adicionar",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesao-na-medula-",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "USP investiga células da mucosa olfatória para tratar lesão na medula em ratos",
-      "resumo": "Pesquisa preliminar em centros da universidade aplicou injeções em animais com contusão e registrou evolução significativa no tratamento.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/ciencias/terapia-experimental-com-celulas-tronco-do-nariz-pode-ser-caminho-para-tratar-lesao-na-medula/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Centros da USP investigaram um tratamento experimental para lesões agudas na medula espinhal em ratos. A pesquisa aplicou injeções de células da mucosa olfatória em animais após sofrerem contusão.",
-        "O trabalho analisou as respostas e a recuperação dos animais com o tratamento. No grupo testado, as células da mucosa olfatória apresentaram alto potencial de regeneração neurológica e demonstraram evolução significativa.",
-        "A medula espinhal é um tecido do sistema nervoso central responsável por transportar estímulos do cérebro para o resto do corpo. As lesões na medula são comuns em casos de acidentes automobilísticos e quedas de alturas significativas."
-      ],
-      "link": "/materia/usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesao-na-medula-.html",
-      "iso": "2026-08-04T13:39:35.000Z",
-      "hora": "09h39",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260803_00_livro_soja_hortalica_esalq_usp.jpg",
-      "fotoAlt": "três imagens lado a lado mostrando vagens de soja verde",
-      "fotoLarg": 800,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Esalq da USP lança e-book gratuito sobre cultivo e consumo de soja hortaliça",
-      "resumo": "A publicação reúne orientações sobre produção, benefícios nutricionais e oportunidades de negócios com o consumo do grão verde.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/universidade/e-book-explica-como-cultivar-e-consumir-soja-como-hortalica/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Escola Superior de Agricultura Luiz de Queiroz (Esalq), da USP, disponibilizou gratuitamente a publicação \"Soja hortaliça\". O material integra a Série Produtor Rural e reúne orientações práticas sobre produção, benefícios nutricionais e oportunidades de negócios no campo.",
-        "A publicação aborda o cultivo e o consumo do grão verde e fresco, também chamado de edamame. O uso é difundido na culinária oriental, mas pouco explorado no mercado brasileiro, onde a maioria da safra é destinada à exportação em grão seco para produção de ração animal e óleo vegetal.",
-        "A busca por escolhas alimentares saudáveis e a aceitação de derivados como tofu, shoyu e proteína texturizada abrem espaço para a consolidação da soja-hortaliça como alternativa rentável de cultivo no país."
-      ],
-      "link": "/materia/esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor.html",
-      "iso": "2026-08-04T12:53:29.000Z",
-      "hora": "08h53",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2023/03/20230310_00_multidao_cidade_centro.jpg",
-      "fotoAlt": "Multidão caminha numa rua do centro de São Paulo",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:inct-da-fau-usp-lanca-o-podcast-vivendo-a-cidade-sobre-urbanizacao-no-",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "INCT da FAU USP lança o podcast Vivendo a Cidade sobre urbanização no Brasil",
-      "resumo": "O primeiro episódio da série trata da formação das cidades brasileiras e aborda a realidade da autoconstrução nas periferias.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/universidade/urbanizacao-e-cotidiano-das-cidades-brasileiras-e-tema-de-novo-podcast-com-pesquisadores-da-usp/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Instituto Nacional de Ciência e Tecnologia (INCT) Produção da Casa e da Cidade lançou o podcast Vivendo a Cidade. O instituto está sediado na Faculdade de Arquitetura e Urbanismo e de Desing (FAU) da USP.",
-        "A produção tem formato narrativo e linguagem acessível. A série busca aproximar pesquisadores, estudantes e demais interessados nos principais debates sobre urbanização, habitação e produção do espaço urbano no Brasil.",
-        "O episódio de estreia do programa intitula-se Cotidiano nas cidades: vivendo a cidade real. O conteúdo aborda a formação das cidades brasileiras e a realidade da autoconstrução nas periferias."
-      ],
-      "link": "/materia/inct-da-fau-usp-lanca-o-podcast-vivendo-a-cidade-sobre-urbanizacao-no-.html",
-      "iso": "2026-08-04T12:53:07.000Z",
-      "hora": "08h53",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1038,27 +980,27 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:stf-derruba-restricao-sobre-isencao-de-impostos-na-compra-de-veiculos-",
+      "id": "ilm:stf-derruba-restricao-a-compra-de-veiculos-por-pessoas-com-deficiencia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "STF derruba restrição sobre isenção de impostos na compra de veículos por PCDs",
-      "resumo": "Por unanimidade, o plenário declarou inconstitucional a exclusão de pessoas com deficiência leve ou autismo nível 1 da alíquota zero dos impostos IBS e CBS.",
+      "titulo": "STF derruba restrição a compra de veículos por pessoas com deficiência",
+      "resumo": "Por unanimidade, o plenário considerou inconstitucional o trecho da Reforma Tributária que excluía pessoas com deficiência leve e autismo nível 1 da isenção fiscal.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/stf-derruba-restricao-compra-de-veiculos-por-pessoas-com-deficiencia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Valor Econômico",
+        "valor.globo.com",
         "Correio Braziliense"
       ],
       "quentura": 2,
       "uf": null,
       "corpo": [
-        "O Supremo Tribunal Federal (STF) decidiu, nesta segunda-feira (3), derrubar o trecho da Reforma Tributária, presente na Lei Complementar 214 de 2025, que restringia a isenção fiscal na compra de automóveis por pessoas com deficiência ou com Transtorno do Espectro Autista (TEA).",
-        "Por unanimidade, o plenário entendeu ser inconstitucional a regra que garantia a redução a zero das alíquotas do IBS e da CBS incidentes sobre a venda de automóveis nacionais apenas para pessoas com deficiência de grau moderado ou grave. A norma excluía pessoas com autismo de nível de suporte 1 ou com deficiência considerada leve.",
-        "A decisão foi tomada a partir de duas ações de inconstitucionalidade protocoladas pelo Instituto Nacional de Direitos da Pessoa com Deficiência Oceano Azul e pela Associação Nacional de Apoio às Pessoas com Deficiência (ANAPCD).",
-        "O relator, ministro Alexandre de Moraes, votou contra a restrição, afirmando que a exclusão total dessas pessoas é inconstitucional. O voto foi seguido pelos ministros Flávio Dino, Cristiano Zanin, André Mendonça, Nunes Marques, Luiz Fux, Dias Toffoli, Cármen Lúcia, Gilmar Mendes e pelo presidente, Edson Fachin."
+        "O Supremo Tribunal Federal (STF) decidiu, nesta segunda-feira (3), derrubar o trecho da Reforma Tributária (Lei Complementar 214 de 2025) que restringia a isenção fiscal para compra de automóveis por pessoas com deficiência ou com Transtorno do Espectro Autista (TEA).",
+        "Por unanimidade, o plenário julgou inconstitucional a norma que garantia a redução a zero das alíquotas do IBS e da CBS sobre automóveis nacionais somente para deficiências de grau moderado ou grave. A regra excluía do benefício pessoas com autismo de nível de suporte 1 ou com deficiência considerada leve.",
+        "O entendimento foi estabelecido a partir de duas ações de inconstitucionalidade protocoladas pelo Instituto Nacional de Direitos da Pessoa com Deficiência Oceano Azul e pela Associação Nacional de Apoio às Pessoas com Deficiência (ANAPCD). O relator do caso, ministro Alexandre de Moraes, votou pela inconstitucionalidade da restrição.",
+        "O voto do relator foi acompanhado pelos ministros Flávio Dino, Cristiano Zanin, André Mendonça, Nunes Marques, Luiz Fux, Dias Toffoli, Cármen Lúcia, Gilmar Mendes e pelo presidente do STF, Edson Fachin."
       ],
-      "link": "/materia/stf-derruba-restricao-sobre-isencao-de-impostos-na-compra-de-veiculos-.html",
+      "link": "/materia/stf-derruba-restricao-a-compra-de-veiculos-por-pessoas-com-deficiencia.html",
       "iso": "2026-08-03T20:47:00.000Z",
       "hora": "16h47",
       "original": true,
@@ -1072,44 +1014,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:mercado-reduz-estimativa-da-selic-para-13-75-em-2026-indica-boletim-fo",
+      "id": "ilm:tre-rj-apresenta-estrutura-da-urna-eletronica-e-detalha-seguranca-do-s",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Mercado reduz estimativa da Selic para 13,75% em 2026, indica Boletim Focus",
-      "resumo": "Projeção para a inflação de 2026 caiu pela quinta semana seguida e atingiu 5,03%, enquanto as previsões para o PIB e câmbio do período se mantiveram em 1,99% e R$ 5,20.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/pela-1a-vez-desde-marco-mercado-reduz-expectativa-para-selic-em-2026",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Correio Braziliense"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O mercado financeiro reduziu as expectativas para a taxa básica de juros e para a inflação em 2026, segundo o Boletim Focus divulgado nesta segunda-feira (3) pelo Banco Central (BC). A projeção para a Selic ao final de 2026 caiu de 14% para 13,75%, na primeira redução dessa estimativa desde março.",
-        "A última queda nas projeções da Selic havia ocorrido em março de 2026, quando a taxa estimada passou de 12,13% para 12%. A taxa atual, definida pelo Comitê de Política Monetária (Copom) em 17 de junho, é de 14,25%. A próxima reunião do Copom está prevista para os dias 4 e 5 de agosto. Para 2027 e 2028, as previsões se mantiveram em 12% e 10,5%.",
-        "A estimativa para o Índice Nacional de Preços ao Consumidor Amplo (IPCA) de 2026 recuou de 5,12% para 5,03%, marcando a quinta redução semanal seguida. Há quatro semanas, a projeção era de 5,30%. Para 2027 e 2028, as estimativas de inflação continuam em 4,22% e 3,80%, respectivamente.",
-        "As projeções para o Produto Interno Bruto (PIB) e para a cotação do dólar em 2026 seguem estáveis há cinco semanas, em 1,99% e R$ 5,20. Para 2027, a estimativa de crescimento do PIB variou de 1,60% para 1,57%, e a cotação da moeda norte-americana passou de R$ 5,29 para R$ 5,28."
-      ],
-      "link": "/materia/mercado-reduz-estimativa-da-selic-para-13-75-em-2026-indica-boletim-fo.html",
-      "iso": "2026-08-03T13:31:00.000Z",
-      "hora": "09h31",
-      "original": true,
-      "contexto": "A projeção da Selic para 2026 recuou de 14% para 13,75%, enquanto a taxa básica atual fixada em 17 de junho é de 14,25%. A última redução dessa estimativa havia ocorrido em março, quando a taxa projetada passou de 12,13% para 12%. A próxima reunião do Copom está marcada para os dias 4 e 5 de agosto.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:tre-rj-desmonta-urna-eletronica-em-apresentacao-para-imprensa-e-entida",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "TRE-RJ desmonta urna eletrônica em apresentação para imprensa e entidades",
-      "resumo": "Ação da Semana Nacional do Sistema Eletrônico de Votação detalhou mecanismos de segurança e barreiras contra fraudes nos equipamentos.",
+      "titulo": "TRE-RJ apresenta estrutura da urna eletrônica e detalha segurança do sistema",
+      "resumo": "Apresentação para a imprensa e entidades fiscalizadoras mostrou funcionamento dos circuitos, lacres da Casa da Moeda e o isolamento dos equipamentos em relação à internet.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tre-rj-abre-urna-para-o-publico-e-defende-seguranca-do-voto-eletronico",
       "origemNome": "Agência Brasil",
@@ -1119,14 +1028,47 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) apresentou e desmontou uma urna eletrônica para a imprensa e entidades fiscalizadoras nesta segunda-feira (3). A demonstração exibiu os circuitos eletrônicos e os mecanismos de segurança do equipamento, como parte da programação da Semana Nacional do Sistema Eletrônico de Votação.",
-        "O presidente do TRE-RJ, Claudio de Mello Tavares, declarou que a legitimidade do sistema é inquestionável e citou que o código-fonte é examinado por partidos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas.",
-        "O secretário de Tecnologia da Informação do TRE, Michel Kovacs, apresentou os componentes do aparelho. Ele explicou que o sistema utiliza lacres da Casa da Moeda, biometria, assinaturas digitais, auditorias e grava os dados tanto na memória interna quanto em mídias externas.",
-        "Kovacs informou que a máquina funciona de forma isolada da internet e que o projeto técnico é de responsabilidade da Justiça Eleitoral. O secretário também afirmou que a urna foi introduzida em 1996 para erradicar fraudes do voto impresso e que retirar o sistema eletrônico seria um retrocesso."
+        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realizou nesta segunda-feira (3) uma apresentação da urna eletrônica para a imprensa e entidades fiscalizadoras do processo eleitoral. O equipamento foi desmontado diante do público para explicar o funcionamento dos circuitos eletrônicos e dos mecanismos de segurança, como parte da programação da Semana Nacional do Sistema Eletrônico de Votação.",
+        "O presidente do TRE-RJ, Claudio de Mello Tavares, afirmou que a urna eletrônica é segura e que seu código-fonte é examinado por partidos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas. A apresentação ocorreu em meio a um contexto de ataques frequentes e campanhas de desinformação nas redes sociais contra o sistema eletrônico.",
+        "O secretário de Tecnologia da Informação do órgão, Michel Kovacs, apresentou os componentes internos e explicou que o sistema é isolado da internet. Ele citou barreiras como lacres da Casa da Moeda, assinaturas digitais, biometria e gravação simultânea dos dados na memória interna e em mídias externas. Em caso de falha técnica, os dados são transferidos para uma urna de reserva por meio de uma mídia de contingência.",
+        "Sobre a fabricação do equipamento, o TRE-RJ informou que a Justiça Eleitoral define todas as especificações técnicas e a empresa contratada apenas executa a produção. Questionado sobre o voto em papel, Kovacs declarou que o sistema eletrônico foi introduzido em 1996 para erradicar fraudes do modelo impresso e disse que a apuração em papel é custosa, demorada e suscetível a erros."
       ],
-      "link": "/materia/tre-rj-desmonta-urna-eletronica-em-apresentacao-para-imprensa-e-entida.html",
+      "link": "/materia/tre-rj-apresenta-estrutura-da-urna-eletronica-e-detalha-seguranca-do-s.html",
       "iso": "2026-08-03T22:28:00.000Z",
       "hora": "18h28",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mercado-reduz-estimativa-para-a-selic-em-2026-pela-primeira-vez-desde-",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Mercado reduz estimativa para a Selic em 2026 pela primeira vez desde março",
+      "resumo": "Segundo o Boletim Focus divulgado pelo Banco Central, a projeção para a inflação deste ano caiu para 5,03%, na quinta redução semanal seguida.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/pela-1a-vez-desde-marco-mercado-reduz-expectativa-para-selic-em-2026",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Correio Braziliense"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O mercado financeiro reduziu as expectativas para a inflação e para a taxa básica de juros, a Selic, para 2026. De acordo com o Boletim Focus, divulgado nesta segunda-feira (3) pelo Banco Central (BC), a estimativa para a Selic ao final de 2026 caiu de 14% para 13,75%, na primeira queda da projeção desde março.",
+        "A taxa atual de juros é de 14,25%, fixada pelo Comitê de Política Monetária (Copom) do BC em 17 de junho. A próxima reunião do Copom está prevista para os dias 4 e 5 de agosto. As previsões da Selic para 2027 e 2028 mantiveram-se em 12% e 10,5%, respectivamente.",
+        "A projeção para o Índice Nacional de Preços ao Consumidor Amplo (IPCA) de 2026 caiu de 5,12% para 5,03%, após estar em 5,30% há quatro semanas. Para os anos seguintes, as estimativas do IPCA continuam em 4,22% em 2027 e 3,80% em 2028.",
+        "As projeções deste ano para o Produto Interno Bruto (PIB) e para o dólar estão estáveis há pelo menos cinco semanas, em 1,99% e R$ 5,20. Para 2027, a estimativa do PIB mudou de 1,60% para 1,57%, e a cotação do dólar passou de R$ 5,29 para R$ 5,28."
+      ],
+      "link": "/materia/mercado-reduz-estimativa-para-a-selic-em-2026-pela-primeira-vez-desde-.html",
+      "iso": "2026-08-03T13:31:00.000Z",
+      "hora": "09h31",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1137,8 +1079,17 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
+      "seSabe": [
+        "Que os relatos circulam em quatro veículos da imprensa.",
+        "Que a Polícia e o São Paulo são órgãos citados nos textos.",
+        "Que as matérias tratam de um acidente e de dados sobre sarampo."
+      ],
+      "falta": [
+        "Manifestação oficial da Polícia referente ao registro do acidente e à prisão.",
+        "Posição oficial do São Paulo Futebol Clube sobre a situação do jogador.",
+        "Boletim epidemiológico oficial confirmando os 16 casos de sarampo.",
+        "Identificação oficial dos envolvidos e número do procedimento policial."
+      ],
       "ondeCirculou": [
         {
           "veiculo": "CartaCapital",
@@ -1147,182 +1098,123 @@
         },
         {
           "veiculo": "Exame",
-          "titulo": "Almoços que valem a pausa: menus executivos de até R$ 80 em São Paulo",
-          "link": "https://exame.com/casual/almocos-que-valem-a-pausa-menus-executivos-de-ate-r-80-em-sao-paulo/"
+          "titulo": "Nicolas Bosshardt poderá continuar jogando pelo São Paulo após atropelamento?",
+          "link": "https://exame.com/esporte/nicolas-bosshardt-podera-continuar-jogando-pelo-sao-paulo-apos-atropelamento/"
         },
         {
           "veiculo": "CNN Brasil",
-          "titulo": "Vídeo: veja momento em que Nicolas, do São Paulo, atropela idoso em SP",
-          "link": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/video-veja-momento-em-que-nicolas-do-sao-paulo-atropela-idoso-em-sp/"
+          "titulo": "Polícia registrou acidente com jogador do São Paulo como disputa de &#8220;racha&#8221;",
+          "link": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/policia-registrou-acidente-com-jogador-do-sao-paulo-como-disputa-de-racha/"
         },
         {
-          "veiculo": "Folha",
-          "titulo": "Lateral do São Paulo é detido sob suspeita de atropelar e matar idoso de 84 anos em Barueri (SP)",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/08/lateral-do-sao-paulo-e-detido-sob-suspeita-de-atropelar-e-matar-idoso-de-84-anos-em-barueri-sp.shtml"
+          "veiculo": "Metrópoles",
+          "titulo": "Quem é jogador do São Paulo preso por atropelar e matar idoso",
+          "link": "https://www.metropoles.com/sao-paulo/quem-jogador-sao-paulo-preso"
         }
       ],
-      "link": "/materia/nc-lateral-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri.html",
+      "link": "/materia/nc-jogador-teria-sido-preso-apos-atropelamento-e-sarampo-subiria-a-16-em-.html",
       "corpo": [
-        "Um lateral do São Paulo teria sido detido sob suspeita de atropelar e matar um idoso de 84 anos em Barueri. Um vídeo registraria o momento em que o atleta teria atingido a vítima na região de São Paulo. As manchetes publicadas pelos veículos apresentam divergências profundas sobre os temas relatados. Enquanto parte do material aborda a detenção do jogador, outros textos tratam de uma alta nos caso"
+        "Um jogador do São Paulo teria sido preso após atropelar e matar um idoso. A Polícia teria registrado o acidente como uma disputa de racha. Em outra alegação veiculada, os casos de sarampo em São Paulo teriam subido para 16.",
+        "As publicações levantariam dúvidas sobre a continuidade do atleta no time do São Paulo. A ocorrência policial e a suposta prisão estariam vinculadas ao atropelamento fatal. O aumento alegado nos registros de sarampo corresponderia a um total de 16 casos.",
+        "A permanência do profissional no clube estaria sob questionamento após o episódio. A Polícia e a agremiação esportiva seriam as entidades citadas nos relatos."
       ],
-      "id": "circ:lateral-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri",
+      "id": "circ:jogador-teria-sido-preso-apos-atropelamento-e-sarampo-subiria-a-16-em-",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Lateral do São Paulo teria sido detido após atropelamento em Barueri",
+      "titulo": "Jogador teria sido preso após atropelamento e sarampo subiria a 16 em SP",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:59:58.679Z",
-      "hora": "12h59"
+      "iso": "2026-08-04T17:54:34.550Z",
+      "hora": "13h54"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que cinco veículos publicaram informações sobre deliberações atribuídas ao CNJ.",
-        "Que a pauta envolve a exclusão da aposentadoria compulsória como punição máxima.",
-        "Que uma das matérias relata pedido de explicações dirigido ao TJ/GO."
+        "Que três veículos da imprensa estão veiculando a informação.",
+        "Que as publicações abordam alterações nas punições aplicadas pelo CNJ.",
+        "Que a pena de demissão é citada como nova sanção máxima."
       ],
       "falta": [
-        "Manifestação ou publicação oficial do CNJ confirmando a alteração no regimento.",
-        "Número do procedimento administrativo ou documento oficial que formalize as decisões.",
-        "Identificação oficial do caso específico citado em relação ao TJ/GO."
+        "Confirmação oficial ou nota pública divulgada pelo CNJ.",
+        "Publicação do texto da norma no Diário da Justiça Eletrônico.",
+        "Informação sobre a data e o número do procedimento ou resolução."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "InfoMoney",
-          "titulo": "CNJ aprova fim da aposentadoria compulsória para juízes que cometem infrações graves",
-          "link": "https://www.infomoney.com.br/politica/cnj-aprova-fim-da-aposentadoria-compulsoria-para-juizes-que-cometem-infracoes-graves/"
+          "veiculo": "JOTA",
+          "titulo": "CNJ aprova norma regulamentando fim da aposentadoria compulsória de juízes",
+          "link": "https://www.jota.info/justica/cnj-aprova-norma-regulamentando-fim-da-aposentadoria-compulsoria-de-juizes"
         },
         {
-          "veiculo": "CNN Brasil",
-          "titulo": "CNJ altera regimento e exclui aposentadoria compulsória como punição máxima",
-          "link": "https://www.cnnbrasil.com.br/politica/cnj-altera-regimento-e-exclui-aposentadoria-compulsoria-como-punicao-maxima/"
+          "veiculo": "Folha",
+          "titulo": "CNJ confirma fim da aposentadoria compulsória como punição para juízes que cometem infrações graves",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/cnj-confirma-fim-da-aposentadoria-compulsoria-como-punicao-para-juizes-que-cometem-infracoes-graves.shtml"
         },
         {
           "veiculo": "g1 Política",
-          "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-aprova-fim-da-aposentadoria-compulsoria-como-punicao-maxima-para-juizes-demissao-passa-a-ser-prevista.ghtml"
-        },
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "CNJ exclui aposentadoria compulsória como punição máxima a juízes",
-          "link": "https://www.metropoles.com/colunas/manoela-alcantara/cnj-exclui-aposentadoria-compulsoria-como-punicao-maxima-a-juizes"
-        },
-        {
-          "veiculo": "Migalhas",
-          "titulo": "CNJ cobra explicações do TJ/GO por aposentadoria compulsória imposta a juiz",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdWVZV3VWSjFZaDNEMXVSR1NqcVFrSnY0Z3JmTlA3Wno3Y3VHVmhmLU9JNlpaM0ViR2o3dll5RnF5d2wyWk44S3VNdUR4QUFaNGFhZlFza3dpSHRBYmFVdVlEUll0UlVLSGVXWE5kOGk3V19VUEdHeXUzX21CcFN1QWlUZUZhNVFLdmpIWUdveXVWajI2cy1pZ1RibnctYmdwVUNVQ3lnN1pZWDJvcHBMbFN1ZXd4ZmNVMmc?oc=5"
+          "titulo": "CNJ aprova demissão de juízes como pena máxima; entenda quais são as punições aplicadas a magistrados",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-aprova-demissao-de-juizes-como-pena-maxima-entenda-quais-sao-as-punicoes-aplicadas-a-magistrados.ghtml"
         }
       ],
       "link": "/materia/nc-cnj-teria-aprovado-o-fim-da-aposentadoria-compulsoria-para-juizes.html",
       "corpo": [
-        "O Conselho Nacional de Justiça teria aprovado o fim da aposentadoria compulsória como punição máxima a magistrados que cometem infrações graves. A medida alteraria o regimento do órgão e a sanção de demissão passaria a ser prevista.",
-        "As publicações sobre o tema divergem entre focar no ajuste regimental e noticiar uma medida pontual. Enquanto a maioria das matérias relata a mudança geral nas regras punitivas, uma das coberturas indica que o órgão teria cobrado explicações do Tribunal de Justiça de Goiás por uma aposentadoria compulsória imposta a um juiz."
+        "As publicações apontam ainda que a pena máxima para os magistrados passaria a ser a demissão. Enquanto um veículo cita a confirmação da medida, outros tratam o ato como aprovação de uma nova norma sobre as punições."
       ],
       "id": "circ:cnj-teria-aprovado-o-fim-da-aposentadoria-compulsoria-para-juizes",
       "editoria": "brasil",
       "uf": null,
       "titulo": "CNJ teria aprovado o fim da aposentadoria compulsória para juízes",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T17:00:50.750Z",
-      "hora": "13h00"
+      "iso": "2026-08-04T17:55:25.023Z",
+      "hora": "13h55"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto está sendo publicado por quatro veículos da imprensa.",
-        "As matérias citam Republicanos, Podemos, Flávio Bolsonaro, Caiado e Renata Abreu.",
-        "As publicações registram divergência sobre o status da decisão do Podemos."
+        "O tema está sendo publicado por quatro veículos de imprensa.",
+        "O levantamento do Real Time Big Data cita o cenário eleitoral no Pará.",
+        "Lula e Flávio Bolsonaro são citados no contexto da eleição de 2026."
       ],
       "falta": [
-        "Comunicado oficial dos partidos Republicanos e Podemos confirmando suas posições.",
-        "Declaração oficial da equipe de Flávio Bolsonaro sobre os impactos descritos.",
-        "Manifestação oficial de Renata Abreu a respeito da inviabilização de sua candidatura a vice."
+        "Posicionamento oficial da Polícia Federal sobre a suposta interferência.",
+        "Provas ou registros documentais da acusação realizada pelo senador.",
+        "Confirmação oficial dos nomes que disputarão a Presidência em 2026."
       ],
       "ondeCirculou": [
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "O cálculo na decisão pela neutralidade do Republicanos nas eleições",
-          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbXBmNEJLTXVqdzQ3YlVVb2hZdXVoREVtVlA1WVRCSDV5WmhqWWZBclFUaGRUMGQwRm1uSW04SkEwQjFFc0JPQ0JOaGE1X1kwRDJRUlkzNTg4bDlrZmlpbGozX1dxejhFQ0dtM1Jock9ueTR5bzhsVFZMdnotNGFfS0dQbEd3aEE4X3JldXM1ek9BY0VGOEV1ejNLYlRnQ3pzTVo5OW8zWDZ6ZzRRcFgtQzlhb0lpM3BFSTdYYS1yZ0R5S2sxZF9IaVNSVk55MWdm0gHWAUFVX3lxTE5GcUdaSHBGakgzZ19OOFJSa3dnMXQ2YjlrdnBTVEFGeW9lekRCTmdxa2xUR0dFSm9adGhWcnFHZUl1NDhXbEtwSmZmcTlJS2Q1R0o4U01pS3EwVWJaT3c2Wmx5eFN0c1o3dEIwRm8yWHowcXFKZHVjSW1nems3SjJpd1piSGxpQ3RtTzVKajNTRnZxTzlGM0lCUV9KdFIwQ0J4c01ycEtLN1E2RHdabEJXb0xiT04yUE9lR2diYnQ5ek42ZE95cWRGNVZ6bkdkYjNVSEFvZ1E?oc=5"
-        },
-        {
-          "veiculo": "Folha",
-          "titulo": "Podemos recusa apoio a Flávio Bolsonaro e também decide ficar neutro na eleição",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/podemos-recusa-apoio-a-flavio-bolsonaro-e-tambem-decide-ficar-neutro-na-eleicao.shtml"
-        },
-        {
-          "veiculo": "Poder360",
-          "titulo": "Caiado diz que neutralidade do Republicanos compromete Flávio",
-          "link": "https://www.poder360.com.br/poder-eleicoes/caiado-diz-que-neutralidade-do-republicanos-compromete-flavio/"
-        },
-        {
-          "veiculo": "estadao.com.br",
-          "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMGJ0QkV5dmxuelc2OXVmb0J3NUk0dnppOF9aX3F2c2lnZ2MzZ2N3TFhtSlZwbEY1V3pTM29uTDI1a2RTaUJaQ2ZpYVp1WW5wQW92TWJYaTJqMTZWaTg5a0xzTC1EWGJnV1A1Y0l6T0xfS2FqSVYzazdib25tY1JKMC1pdlhLZW8yQ2Fkai1nOTVQT2FBdWFzUlVlX2RxZzNWX05pdXdMSkdMVUVwMWhOTkEyTDcxNUVURXBFSjBOa2hXSEhpeXVwUm9kZHlhYWtpSDd0YnRldXMtSm8?oc=5"
-        }
-      ],
-      "link": "/materia/nc-republicanos-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes.html",
-      "corpo": [
-        "Os partidos Republicanos e Podemos teriam decidido adotar posicionamento neutro na disputa eleitoral. O Podemos estaria recusando o apoio direto à candidatura de Flávio Bolsonaro nas eleições.",
-        "As publicações veiculadas apresentariam divergências sobre o estágio da decisão do Podemos, variando entre uma escolha já tomada e um anúncio que ainda ocorreria. A neutralidade do Republicanos estaria sob análise interna e, segundo o governador Caiado, comprometeria a situação eleitoral de Flávio Bolsonaro.",
-        "A adoção da postura neutra pelo Podemos inviabilizaria a indicação de Renata Abreu para o posto de vice na chapa de Flávio Bolsonaro. A confirmação desse cenário dependeria da oficialização por parte das siglas e dos atores políticos citados."
-      ],
-      "id": "circ:republicanos-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Republicanos e Podemos teriam decidido pela neutralidade nas eleições",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T17:01:52.800Z",
-      "hora": "13h01"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que quatro veículos de imprensa publicaram matérias abordando as declarações atribuídas a políticos.",
-        "Que o STF e a Polícia Federal foram citados nos textos divulgados pela imprensa.",
-        "Que não foram apresentados registros em fontes oficiais sobre o caso até o momento."
-      ],
-      "falta": [
-        "Manifestação oficial da Polícia Federal e do STF sobre os fatos relatados.",
-        "Apresentação de provas concretas relativas à suposta interferência nas apurações.",
-        "Número e identificação oficial dos procedimentos de investigação citados."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Flávio acusa PF de proteger Lula em investigações sobre Lulinha",
-          "link": "https://www.infomoney.com.br/politica/flavio-acusa-pf-de-proteger-lula-em-investigacoes-sobre-lulinha/"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
-          "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
-        },
         {
           "veiculo": "g1 Política",
           "titulo": "Flávio Bolsonaro acusa, sem provas, PF de interferir em investigação sobre filho de Lula",
           "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/flavio-sabatina-sp-lulinha.ghtml"
         },
         {
+          "veiculo": "BBC Brasil",
+          "titulo": "Lula, Flávio Bolsonaro e os outros candidatos: quem está na disputa pela Presidência em 2026",
+          "link": "https://www.bbc.com/portuguese/articles/cly8vyqv06jo?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
           "veiculo": "JOTA",
           "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
           "link": "https://www.jota.info/eleicoes/eleicoes-2026/por-que-lula-e-flavio-evitam-debates"
+        },
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "O embate entre Lula e Flávio Bolsonaro no Pará, segundo o Real Time Big Data",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZEk2a3cxMzlRcEt1bHVOVmhpZ05haURMcE1hVmpsY0ViRnNkUFdJSEJ5T1RzR0h3OTFJcmMyY0V1aE5aeVhfRGNVbkl0Y3RLMGFjSS1vWFVYVzJlaXRNMFlCTlZzTW9iODdrRmhyYUtlaHkyZi1TT2FmYWVCVkRfMVlxV3BEVk9fYXphcmt0ZUNMeWQzTDF0bE56WlZUclVZRjMwQzZ1RWlQbVlQQU9naGZWc2lTUDZX?oc=5"
         }
       ],
-      "link": "/materia/nc-flavio-bolsonaro-teria-acusado-a-pf-de-interferir-em-apuracoes-sobre-f.html",
+      "link": "/materia/nc-flavio-bolsonaro-teria-acusado-pf-de-interferir-em-apuracao-sobre-filh.html",
       "corpo": [
-        "O senador Flávio Bolsonaro teria acusado a Polícia Federal de interferir e de proteger o presidente Lula em apurações relativas a um filho do presidente. Segundo as publicações, as acusações teriam sido feitas sem a apresentação de provas.",
-        "As apurações que envolveriam o filho de Lula teriam sido autorizadas pelo Supremo Tribunal Federal e somariam três investigações. Os relatos citam expressamente a atuação do STF e da Polícia Federal no caso.",
-        "Além das denúncias, os veículos teriam abordado os motivos pelos quais Lula e Flávio Bolsonaro estariam evitando debates. As publicações apresentam enfoques distintos, alternando entre as acusações contra o órgão policial e a existência de procedimentos judiciais."
+        "O senador Flávio Bolsonaro teria acusado a Polícia Federal de interferir em uma investigação sobre o filho do presidente Luiz Inácio Lula da Silva. A acusação teria ocorrido sem a apresentação de provas formais. O tema teria sido veiculado pela imprensa no âmbito da conjuntura política.",
+        "As publicações apontariam que ambos estariam na disputa pela Presidência em 2026 e estariam evitando debates. O embate entre os dois políticos também alcançaria o estado do Pará, conforme dados do Real Time Big Data. Outras candidaturas também estariam sendo consideradas para a sucessão presidencial."
       ],
-      "id": "circ:flavio-bolsonaro-teria-acusado-a-pf-de-interferir-em-apuracoes-sobre-f",
+      "id": "circ:flavio-bolsonaro-teria-acusado-pf-de-interferir-em-apuracao-sobre-filh",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Flávio Bolsonaro teria acusado a PF de interferir em apurações sobre filho de Lula",
+      "titulo": "Flávio Bolsonaro teria acusado PF de interferir em apuração sobre filho de Lula",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T17:02:23.311Z",
-      "hora": "13h02"
+      "iso": "2026-08-04T17:56:29.148Z",
+      "hora": "13h56"
     },
     {
       "municipio": null,
@@ -1331,9 +1223,9 @@
       "falta": [],
       "ondeCirculou": [
         {
-          "veiculo": "Poder360",
-          "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
-          "link": "https://www.poder360.com.br/poder-justica/mendonca-autoriza-buscas-contra-11-alvos-ligados-a-weverton-rocha/"
+          "veiculo": "Folha",
+          "titulo": "Lula manda assessor explicar empréstimo de amiga de Lulinha investigada pela PF",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/lula-manda-assessor-explicar-emprestimo-de-amiga-de-lulinha-investigada-pela-pf.shtml"
         },
         {
           "veiculo": "BBC Brasil",
@@ -1341,75 +1233,66 @@
           "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
         },
         {
-          "veiculo": "JOTA",
-          "titulo": "Fraude no INSS: Advogado e parentes do senador Weverton Rocha são alvos da PF",
-          "link": "https://www.jota.info/stf/do-supremo/fraude-no-inss-advogado-e-parentes-do-senador-weverton-rocha-sao-alvos-da-pf"
-        },
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Mulher de Weverton Rocha recebeu R$ 11 milhões de empresas ligadas a Willer Tomaz, aponta PF",
-          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRnF0WEhIbGdQTFFRWUtWaGZXUjc1V182dVFZS2tlVU54YTFrYUFlYmNtZ3hOVzVxeWRwbHRYcWtfNmNhYUVmMUc3TVZ1dGJMX1BvY0pPVzN5a3hMc3g0V1puLTBmclNSV0pRWWpkcUZ6QkVsXzQxcER0bkpOVHhVM1JwNzE0UkFtS3k4bnhJT1hGSVJBMl9NeGVlU205b3BaRUhQTkZ2VjY4QWlsdldNLVhoWXBYOFJoRWpscXpEUVppeEt0RDFjOUNkZmJ5enJxZHJQUDJnd3Z2M1dvTjFVZkVFOFd2b21xNkFBblJpYjTSAfYBQVVfeXFMTk5MaGwybWdzMko4ajdsS0F2T3daX1pVbjBVcktlRUNIMGVMYnVSZWM1OGxEWFR1VjRWay1nT3kwYk51RzBoRjNGQ3NqMkZ3RkpTaHduaU91Wl82SmRhYW0xSjJNZ05tcXJzOU9RYTJNTTlOVGNRelhUSEdQUGJ2M3F6TUtTa3ZvME92dW9vUFZIamVoQ081dXVTTFRzWXBxWTZtOXM5NmNpalgtMUdVaGZvQ05wam1Pa3Q2eFhnSkhEc2NoamtUNm14enhjcEZhaWt6MG1kU2poTFh1bjN1OG5ZSlRocjBXMjhDNElsc2dTMENPc053?oc=5"
+          "veiculo": "g1 Política",
+          "titulo": "PF identifica transferência de empresária amiga de Lulinha para Marcola, ex-chefe de gabinete do presidente da República",
+          "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/08/04/pf-identifica-transferencia-de-empresaria-amiga-de-lulinha-para-marcola-ex-chefe-de-gabinete-do-presidente-da-republica.ghtml"
         }
       ],
-      "link": "/materia/nc-stf-teria-autorizado-buscas-em-investigacao-sobre-fraudes-no-inss.html",
+      "link": "/materia/nc-stf-teria-autorizado-investigacoes-sobre-filho-do-presidente-dizem-mat.html",
       "corpo": [
-        "O ministro Mendonça, do STF, teria autorizado buscas contra 11 alvos ligados ao senador Weverton Rocha. A Polícia Federal estaria investigando uma suposta fraude no INSS envolvendo um advogado e parentes do parlamentar. As medidas fariam parte de apurações em andamento no tribunal. A mulher do senador teria recebido R$ 11 milhões de empresas vinculadas a um advogado, segundo apontaria a Polícia Fe"
+        "O presidente Lula teria determinado a um assessor que prestasse explicações sobre um empréstimo relativo a uma empresária apontada como próxima a seu filho. A mulher estaria sob investigação da Polícia Federal. A informação vem sendo divulgada por publicações da imprensa.",
+        "De acordo com os relatos, a Polícia Federal teria identificado a transferência de valores dessa empresária para o ex-chefe de gabinete da Presidência da República. Paralelamente, o Supremo Tribunal Federal teria autorizado três investigações voltadas ao filho do presidente. Não há menção nas matérias a números de processos, datas ou montantes envolvidos."
       ],
-      "id": "circ:stf-teria-autorizado-buscas-em-investigacao-sobre-fraudes-no-inss",
+      "id": "circ:stf-teria-autorizado-investigacoes-sobre-filho-do-presidente-dizem-mat",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "STF teria autorizado buscas em investigação sobre fraudes no INSS",
+      "titulo": "STF teria autorizado investigações sobre filho do presidente, dizem matérias",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T17:03:22.899Z",
-      "hora": "13h03"
+      "iso": "2026-08-04T17:58:41.480Z",
+      "hora": "13h58"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a indicação é noticiada por quatro veículos da imprensa.",
-        "Que o indicado seria um servidor de carreira para a CVM.",
-        "Que a indicação teria sido encaminhada para análise no Senado."
+        "Que o assunto está sendo publicado por veículos de imprensa.",
+        "Que Renan Santos é apresentado como candidato à Presidência da República.",
+        "Que uma entrevista estaria agendada para quarta-feira (5)."
       ],
       "falta": [
-        "Publicação oficial do ato no Diário Oficial da União.",
-        "Confirmar o recebimento oficial da indicação pelo Senado Federal.",
-        "Pronunciamento oficial da Comissão de Valores Mobiliários."
+        "Divulgação do áudio ou transcrição oficial da entrevista.",
+        "Manifestação direta da assessoria do candidato sobre as falas atribuídas.",
+        "Registro oficial em canal institucional que comprove a declaração."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "g1 Economia",
-          "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
-          "link": "https://g1.globo.com/politica/blog/julia-duailibi/post/2026/08/04/caso-master-otto-lobo-lula-indica-antonio-berwanger-diretoria-cvm.ghtml"
+          "veiculo": "Exame",
+          "titulo": "Renan Santos diz que próximo presidente precisará \"disciplinar\" o STF",
+          "link": "https://exame.com/brasil/renan-santos-diz-que-proximo-presidente-precisara-disciplinar-o-stf/"
         },
         {
-          "veiculo": "Congresso em Foco",
-          "titulo": "Lula indica Antonio Berwanger para vaga em diretoria da CVM",
-          "link": "https://www.congressoemfoco.com.br/noticia/120993/lula-indica-antonio-berwanger-para-vaga-em-diretoria-da-cvm"
+          "veiculo": "g1",
+          "titulo": "g1 e GloboNews entrevistam nesta quarta-feira (5) Renan Santos, candidato à Presidência da República",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/ao-vivo/renan-santos-entrevista-g1-globonews.ghtml"
         },
         {
-          "veiculo": "InfoMoney",
-          "titulo": "Lula envia ao Senado indicação de novo diretor da CVM",
-          "link": "https://www.infomoney.com.br/politica/lula-envia-ao-senado-indicacao-de-novo-diretor-da-cvm/"
-        },
-        {
-          "veiculo": "JOTA",
-          "titulo": "O que o caso Master ensina sobre regulamentação do lobby",
-          "link": "https://www.jota.info/opiniao-e-analise/artigos/o-que-o-caso-master-ensina-sobre-regulamentacao-do-lobby"
+          "veiculo": "g1 Política",
+          "titulo": "g1 e GloboNews entrevistam nesta quarta-feira (5) Renan Santos, candidato à Presidência da República",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/ao-vivo/renan-santos-entrevista-g1-globonews.ghtml"
         }
       ],
-      "link": "/materia/nc-lula-teria-indicado-servidor-de-carreira-para-a-diretoria-da-cvm-apos-.html",
+      "link": "/materia/nc-candidato-a-presidencia-teria-falado-em-disciplinar-o-stf.html",
       "corpo": [
-        "O presidente Lula teria escolhido um servidor de carreira para ocupar uma vaga na diretoria da Comissão de Valores Mobiliários (CVM). A mensagem com a indicação do novo diretor teria sido enviada para apreciação do Senado Federal.",
-        "A escolha do nome teria ocorrido após polêmicas associadas ao chamado caso Master. As publicações que noticiaram a escolha também relacionariam o episódio a discussões sobre a regulamentação do lobby."
+        "O candidato à Presidência da República Renan Santos teria afirmado que o próximo presidente precisaria \"disciplinar\" o STF. A declaração teria sido concedida no âmbito de uma entrevista agendada para esta quarta-feira (5).",
+        "A realização do compromisso com o candidato estaria sendo noticiada por veículos de imprensa. O teor divulgado atribuiria ao postulante posicionamentos sobre a condução da relação entre o Executivo e o tribunal."
       ],
-      "id": "circ:lula-teria-indicado-servidor-de-carreira-para-a-diretoria-da-cvm-apos-",
+      "id": "circ:candidato-a-presidencia-teria-falado-em-disciplinar-o-stf",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Lula teria indicado servidor de carreira para a diretoria da CVM após caso Master",
+      "titulo": "Candidato à Presidência teria falado em disciplinar o STF",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T17:04:16.170Z",
-      "hora": "13h04"
+      "iso": "2026-08-04T17:59:32.852Z",
+      "hora": "13h59"
     }
   ],
   "pautas": [
@@ -1417,150 +1300,41 @@
       "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 9,
+      "quentura": 8,
       "tambemEm": [
         "BBC Brasil",
         "Congresso em Foco",
-        "Folha"
+        "CNN Brasil"
       ]
     },
     {
       "titulo": "Casos de sarampo sobem para 16 em São Paulo",
       "veiculo": "CartaCapital",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
         "Exame",
         "CNN Brasil",
-        "Folha"
-      ]
-    },
-    {
-      "titulo": "CNJ aprova fim da aposentadoria compulsória para juízes que cometem infrações graves",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "CNN Brasil",
-        "g1 Política",
         "Metrópoles"
       ]
     },
     {
-      "titulo": "CNJ exclui aposentadoria compulsória como punição máxima a juízes",
+      "titulo": "CNJ aprova norma regulamentando fim da aposentadoria compulsória de juízes",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Folha",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Quem é jogador do São Paulo preso por atropelar e matar idoso",
       "veiculo": "Metrópoles",
       "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "CNN Brasil",
-        "g1 Política",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "CNN Brasil",
-        "InfoMoney",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "CNJ altera regimento e exclui aposentadoria compulsória como punição máxima",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "g1 Política",
-        "InfoMoney",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "CNJ cobra explicações do TJ/GO por aposentadoria compulsória imposta a juiz",
-      "veiculo": "Migalhas",
-      "quentura": 4,
-      "tambemEm": [
-        "CNN Brasil",
-        "g1 Política",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "O cálculo na decisão pela neutralidade do Republicanos nas eleições",
-      "veiculo": "Correio Braziliense",
-      "quentura": 4,
-      "tambemEm": [
-        "Folha",
-        "Poder360",
-        "estadao.com.br"
-      ]
-    },
-    {
-      "titulo": "Caiado diz que neutralidade do Republicanos compromete Flávio",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Política",
-        "InfoMoney",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Flávio acusa PF de proteger Lula em investigações sobre Lulinha",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Política",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Podemos recusa apoio a Flávio Bolsonaro e também decide ficar neutro na eleição",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "JOTA",
-        "Correio Braziliense",
-        "estadao.com.br"
-      ]
-    },
-    {
-      "titulo": "Lateral do São Paulo é detido sob suspeita de atropelar e matar idoso de 84 anos em Barueri (SP)",
-      "veiculo": "Folha",
-      "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
         "Exame",
         "CNN Brasil",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "JOTA",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Vídeo: veja momento em que Nicolas, do São Paulo, atropela idoso em SP",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "Folha",
         "CartaCapital"
       ]
     },
@@ -1571,40 +1345,136 @@
       "quentura": 3,
       "tambemEm": [
         "BBC Brasil",
-        "InfoMoney",
+        "JOTA",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "O embate entre Lula e Flávio Bolsonaro no Pará, segundo o Real Time Big Data",
+      "veiculo": "CartaCapital",
+      "quentura": 3,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Política",
         "JOTA"
       ]
     },
     {
-      "titulo": "Quem é Nicolas Bosshardt? Jogador do São Paulo atropela e mata pedestre em Barueri",
+      "titulo": "CNJ confirma fim da aposentadoria compulsória como punição para juízes que cometem infrações graves",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Palpite Remo x Santos - Copa do Brasil - 04/08/26",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Lula manda assessor explicar empréstimo de amiga de Lulinha investigada pela PF",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Polícia registrou acidente com jogador do São Paulo como disputa de &#8220;racha&#8221;",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Metrópoles",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
+      "veiculo": "BBC Brasil",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Advogado aciona Conselho de Ética contra Flávio por IA de Bolsonaro",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "JOTA",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "Nicolas Bosshardt poderá continuar jogando pelo São Paulo após atropelamento?",
       "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "CNN Brasil",
-        "Folha",
+        "Metrópoles",
         "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "Renan Santos diz que próximo presidente precisará \"disciplinar\" o STF",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Trabalho infantil nas redes sociais – Parte 1",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Economia",
+        "valor.globo.com"
+      ]
+    },
+    {
+      "titulo": "Quem é Willer Tomaz, advogado e amigo de Flávio Bolsonaro alvo da nova fase da Operação Sem Desconto",
+      "veiculo": "CartaCapital",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
+        "JOTA"
       ]
     },
     {
       "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
       "veiculo": "g1 Economia",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
         "Congresso em Foco",
-        "InfoMoney",
         "JOTA"
-      ]
-    },
-    {
-      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
-      "veiculo": "estadao.com.br",
-      "quentura": 3,
-      "tambemEm": [
-        "Folha",
-        "JOTA",
-        "Correio Braziliense"
       ]
     }
   ]
