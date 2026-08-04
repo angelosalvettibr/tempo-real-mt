@@ -301,7 +301,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .apura .mudo{color:#B00}
 .apura .fim{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.55;color:var(--fraco);margin-top:14px}
 .foto{margin:26px 0 8px}
-.foto img{width:100%;height:auto;display:block;border:1px solid var(--linha)}
+.foto img{max-width:100%;height:auto;display:block;border:1px solid var(--linha);margin:0 auto}
 .foto figcaption{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--fraco);margin-top:8px;text-transform:uppercase}
 .crono{margin:26px 0 8px;border-top:1px solid var(--tinta)}
 .crono .lin{display:grid;grid-template-columns:150px 1fr;gap:0 22px;padding:17px 0;border-bottom:1px solid var(--linha)}
@@ -432,7 +432,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <div class="assina">Redação Meridiano · ${new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Cuiaba'})}</div>
 
   ${m.foto ? `<figure class="foto">
-    <img src="${esc(m.foto.src)}" alt="${esc(m.foto.alt || m.titulo)}" loading="lazy">
+    <img src="${esc(m.foto.src)}" alt="${esc(m.foto.alt || m.titulo)}" loading="lazy"${m.foto.largura ? ` width="${m.foto.largura}"` : ''}${m.foto.altura ? ` height="${m.foto.altura}"` : ''}>
     <figcaption>Foto: ${esc(m.creditoFoto || m.origemNome || 'divulgação')}</figcaption>
   </figure>` : ''}
 

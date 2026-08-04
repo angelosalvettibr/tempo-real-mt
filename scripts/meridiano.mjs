@@ -687,6 +687,7 @@ if (temChave()) {
         { link:i.link, municipio: mun ? mun.nome : '' }, i.iso), 'utf8');
       publicados.push({
         foto: foto ? foto.src : null, fotoAlt: foto ? foto.alt : null,
+        fotoLarg: foto ? (foto.largura || 0) : 0,
         municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
         id:'ilm:'+slug(m.titulo), chapeu:'Nosso texto',
         ...(() => { const w = ondeMora(m.titulo + ' ' + (m.linhaFina||''), EDITORIA, GERAL ? null : UF);
@@ -909,6 +910,7 @@ if (temChave() && soPautaFiltrada.length) {
           const munR = GERAL ? null : detectarMunicipio(m.titulo + ' ' + m.corpo.join(' '), UF);
           publicados.push({
             foto: fotoR ? fotoR.src : null, fotoAlt: fotoR ? fotoR.alt : null,
+            fotoLarg: fotoR ? (fotoR.largura || 0) : 0,
             municipio: munR ? munR.id : null, municipioNome: munR ? munR.nome : null,
             id: 'ilm:' + slug(m.titulo), editoria: edNota, chapeu: 'Nosso texto',
             titulo: m.titulo, resumo: m.linhaFina,
