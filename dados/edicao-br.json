@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T16:34:12.705Z",
+  "gerado": "2026-08-04T17:06:21.960Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 212,
-    "fonteLivre": 51,
-    "confirmadas": 15,
-    "publicadas": 14,
+    "pauta": 211,
+    "fonteLivre": 50,
+    "confirmadas": 13,
+    "publicadas": 11,
     "resgatadas": 0,
-    "semFonte": 48
+    "semFonte": 52
   },
   "fontes": {
     "checadas": 85,
     "responderam": 34,
     "entregando": 28,
-    "itens": 259,
+    "itens": 257,
     "lista": [
       {
         "tipo": "pauta",
@@ -39,15 +39,6 @@
         "tipo": "pauta",
         "id": "folha",
         "nome": "Folha",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,15 +82,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "correiobraz",
         "nome": "Correio Braziliense",
         "itens": 12,
@@ -109,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -136,8 +118,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -145,9 +127,27 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
+        "id": "g1politica",
+        "nome": "g1 Política",
         "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -189,9 +189,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -210,7 +210,16 @@
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 7,
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -219,15 +228,6 @@
         "tipo": "livre",
         "id": "ab-economia",
         "nome": "Agência Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -237,7 +237,7 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -289,6 +289,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "valor",
         "nome": "Valor",
         "itens": 0,
@@ -307,8 +316,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "r7",
+        "nome": "R7",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -322,15 +331,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
-      },
-      {
-        "tipo": "pauta",
-        "id": "r7",
-        "nome": "R7",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -379,21 +379,21 @@
       },
       {
         "tipo": "livre",
-        "id": "stj",
-        "nome": "STJ",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "gov-br",
         "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "stj",
+        "nome": "STJ",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -792,11 +792,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:viajante-apatrida-relata-medo-de-situacoes-que-ocorrem-de-forma-natura",
+      "id": "ilm:pessoa-nascida-sem-patria-relata-medos-em-sua-trajetoria",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Viajante apátrida relata medo de situações que ocorrem de forma natural para outros",
-      "resumo": "A declaração foi divulgada pelo Global Voices em publicação sobre a trajetória de uma pessoa sem nacionalidade.",
+      "titulo": "Pessoa nascida sem pátria relata medos em sua trajetória",
+      "resumo": "O depoimento aborda a jornada de um viajante apátrida diante da ignorância e da desinformação.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
       "origemNome": "Global Voices (EN)",
@@ -804,11 +804,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Uma pessoa nascida apátrida declarou ter aprendido a temer situações que ocorrem de forma natural para outras pessoas.",
-        "A afirmação faz parte de uma publicação divulgada pelo veículo Global Voices.",
-        "O relato aborda a jornada de viagens de uma pessoa sem nacionalidade em um contexto de ignorância e desinformação."
+        "Uma pessoa nascida sem pátria afirmou ter aprendido a temer coisas que surgem de forma natural para outros indivíduos.",
+        "O relato apresenta a vivência de um viajante apátrida exposto à ignorância e à desinformação.",
+        "As informações constam na publicação original divulgada pelo veículo Global Voices."
       ],
-      "link": "/materia/viajante-apatrida-relata-medo-de-situacoes-que-ocorrem-de-forma-natura.html",
+      "link": "/materia/pessoa-nascida-sem-patria-relata-medos-em-sua-trajetoria.html",
       "iso": "2026-08-04T07:37:20.000Z",
       "hora": "03h37",
       "original": true,
@@ -822,11 +822,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-com-geraldo-alc",
+      "id": "ilm:pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "PT oficializa candidatura de Luiz Inácio Lula da Silva com Geraldo Alckmin de vice",
-      "resumo": "A chapa repete a união vitoriosa de 2022 e terá como aliados PSB, PCdoB, PV, PDT, PSOL e Rede nas eleições de 2026.",
+      "titulo": "PT oficializa candidatura de Luiz Inácio Lula da Silva à Presidência da República",
+      "resumo": "Geraldo Alckmin, do PSB, compõe a chapa como vice no evento realizado no Expo Center Norte, em São Paulo.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/pt-oficializa-candidatura-de-lula-presidencia",
       "origemNome": "Agência Brasil",
@@ -839,135 +839,14 @@
       "quentura": 8,
       "uf": null,
       "corpo": [
-        "O PT formalizou a candidatura de Luiz Inácio Lula da Silva à Presidência da República neste domingo (2), em convenção no Expo Center Norte, na zona norte de São Paulo. Geraldo Alckmin, do PSB, compõe a chapa como candidato à Vice-Presidência da República, repetindo a formação vitoriosa de 2022.",
-        "O evento começou por volta das 11h e reuniu lideranças e aliados. Discursaram no local o presidente do partido, Edinho Silva, o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva. Em 2026, o PT terá como aliados o PSB, PCdoB, PV, PDT, PSOL e Rede.",
-        "Para fechar o evento, Lula falou por mais de uma hora e declarou que a motivação de um governo para vencer eleições depende de ter um legado merecedor de confiança e respeito. Caso seja eleito, Lula cumprirá o quarto mandato e será o presidente mais velho a ocupar o cargo, aos 81 anos."
+        "O PT formalizou a candidatura de Luiz Inácio Lula da Silva à Presidência da República em convenção realizada no Expo Center Norte, na zona norte de São Paulo. A chapa tem Geraldo Alckmin, do PSB, como candidato à Vice-Presidência, repetindo a chapa que foi vitoriosa em 2022.",
+        "Em 2026, o PT terá como aliados o PSB, PCdoB, PV, PDT, PSOL e Rede. Se for eleito, Lula cumprirá o quarto mandato e, aos 81 anos, será o presidente mais velho a ocupar o cargo.",
+        "O evento começou por volta das 11h com a presença de lideranças e aliados. No discurso de abertura, o presidente do partido, Edinho Silva, disse que as eleições terão impacto na América Latina e no mundo, definindo a soberania nacional frente a possíveis intervencionismos.",
+        "Também discursaram o ex-ministro Fernando Haddad, o vice-presidente Geraldo Alckmin e a primeira-dama Janja Silva. O presidente Lula falou por mais de uma hora no encerramento, afirmando que a lógica da campanha se baseia no legado do governo e que quem fez pode prometer mais."
       ],
-      "link": "/materia/pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-com-geraldo-alc.html",
+      "link": "/materia/pt-oficializa-candidatura-de-luiz-inacio-lula-da-silva-a-presidencia-d.html",
       "iso": "2026-08-02T18:38:00.000Z",
       "hora": "14h38",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2024/04/20240410_fachadafmrp.jpg",
-      "fotoAlt": "Foto: Acervo SCS",
-      "fotoLarg": 800,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:usp-busca-voluntarias-para-estudo-sobre-ayahuasca-cetamina-e-ciclo-men",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "USP busca voluntárias para estudo sobre ayahuasca, cetamina e ciclo menstrual",
-      "resumo": "O trabalho da Faculdade de Medicina de Ribeirão Preto avalia o impacto das substâncias nos sintomas da TPM em mulheres de 18 a 45 anos.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/usp-precisa-de-voluntarias-para-estudo-sobre-ayahuasca-e-ciclo-menstrual/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Pesquisadores da Faculdade de Medicina de Ribeirão Preto (FMRP) da USP procuram voluntárias para um estudo realizado com ayahuasca e cetamina. O objetivo do trabalho é avaliar o efeito das substâncias no ciclo menstrual e nos sintomas de TPM (tensão pré-menstrual).",
-        "A ayahuasca é uma bebida produzida com duas plantas amazônicas, conhecidas como chacrona (Psychotria viridis) e cipó-jagube ou mariri (Banisteriopsis caapi). A cetamina é um anestésico.",
-        "As candidatas devem ter entre 18 e 45 anos, apresentar bom estado geral de saúde e possuir ciclo menstrual regular. O estudo exige que as participantes não utilizem medicamentos psicotrópicos nem contraceptivos orais hormonais de uso contínuo.",
-        "As interessadas precisam residir em Ribeirão Preto ou na região. O contato para participação deve ser feito pelo e-mail tainibellucci@gmail.com."
-      ],
-      "link": "/materia/usp-busca-voluntarias-para-estudo-sobre-ayahuasca-cetamina-e-ciclo-men.html",
-      "iso": "2026-08-04T14:52:22.000Z",
-      "hora": "10h52",
-      "original": true,
-      "contexto": "O estudo é voltado para mulheres de 18 a 45 anos, residentes em Ribeirão Preto ou região, que possuem ciclo menstrual regular e não usam psicotrópicos ou contraceptivos orais de uso contínuo. Não há registros no histórico de estudos semelhantes anteriores.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:lingua-kam-na-nigeria-tem-entre-8-000-e-11-000-falantes",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Língua Kam na Nigéria tem entre 8.000 e 11.000 falantes",
-      "resumo": "Idioma do nordeste da Nigéria não recebeu atenção de pesquisadores antes de 2016, a exemplo de outras línguas da região.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000 pessoas.",
-        "O idioma faz parte do conjunto de línguas faladas no nordeste da Nigéria.",
-        "Antes de 2016, a língua Kam não havia recebido atenção por parte de pesquisadores."
-      ],
-      "link": "/materia/lingua-kam-na-nigeria-tem-entre-8-000-e-11-000-falantes.html",
-      "iso": "2026-08-03T05:38:53.000Z",
-      "hora": "01h38",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por inteligência artificial",
-      "resumo": "Levantamento do Instituto de Estudos do Desenvolvimento mostra que a Nigéria respondeu por US$ 470 milhões e que câmeras se concentram em locais de oposição política e protestos.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
-      "origemNome": "Global Voices",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais indicou que onze governos africanos gastaram juntos mais de US$ 2 bilhões em sistemas de vigilância operados por inteligência artificial. A Nigéria respondeu por mais de US$ 470 milhões desse total.",
-        "Os equipamentos comprados incluem sistemas de CCTV de alta definição, leitores de placas, reconhecimento facial, camadas de identificação biométrica e salas de controle. O fornecimento e o financiamento são feitos principalmente por empresas e bancos chineses, além de empresas de Israel.",
-        "Os governos justificam as aquisições como medida para combater o crime, mas a pesquisa apontou que os índices de criminalidade não estão caindo. Mapeamentos do IDS mostram que as câmeras estão instaladas prioritariamente em locais de organização de partidos de oposição, áreas de protestos e pontos onde atua a imprensa.",
-        "O relatório relata que a tecnologia de inteligência artificial permite cruzar em segundos registros de comunicações, impostos, contas bancárias e relatórios administrativos guardados pelo Estado, gerando um efeito preventivo sobre as ações dos cidadãos nas cidades."
-      ],
-      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel.html",
-      "iso": "2026-08-03T11:47:40.000Z",
-      "hora": "07h47",
-      "original": true,
-      "contexto": "O tema constou do arquivo uma vez anterior, em 3 de agosto de 2026. Do total de mais de US$ 2 bilhões gastos por onze governos africanos em vigilância, a Nigéria responde por mais de US$ 470 milhões. As instalações afetam diretamente locais de organização da oposição política, áreas de protestos e pontos de atuação da imprensa.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_experimentocelulas.jpg",
-      "fotoAlt": "adicionar",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pesquisa-da-usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesa",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Pesquisa da USP investiga celulas da mucosa olfatoria para tratar lesao na medula",
-      "resumo": "O estudo testou o tratamento experimental em ratos com lesões agudas e registrou evolução significativa nos animais.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/ciencias/terapia-experimental-com-celulas-tronco-do-nariz-pode-ser-caminho-para-tratar-lesao-na-medula/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Pesquisadores de diferentes centros da USP investigaram um tratamento experimental para lesões agudas na medula espinhal utilizando ratos. O estudo analisou a recuperação dos animais após sofrerem contusão e receberem injeções de células da mucosa olfatória.",
-        "Os animais testados apresentaram evolução significativa após o procedimento. As células-tronco da mucosa olfatória recrutam substâncias que favorecem a regeneração neuronal na região afetada e apresentam alto potencial de regeneração neurológica.",
-        "A medula espinhal integra o sistema nervoso central e transporta estímulos do cérebro para o resto do corpo. Lesões no tecido são cenários comuns em acidentes automobilísticos e quedas de alturas significativas em centros de trauma hospitalares. A pesquisa está em fase preliminar em animais."
-      ],
-      "link": "/materia/pesquisa-da-usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesa.html",
-      "iso": "2026-08-04T13:39:35.000Z",
-      "hora": "09h39",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -979,11 +858,11 @@
       "fotoLarg": 1200,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:dietas-veganas-e-onivoras-bem-planejadas-tem-mesmo-desempenho-no-espor",
+      "id": "ilm:dietas-veganas-e-onivoras-bem-planejadas-tem-o-mesmo-desempenho-no-esp",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Dietas veganas e onívoras bem planejadas têm mesmo desempenho no esporte",
-      "resumo": "Hamilton Roschel afirma que a alimentação à base de plantas não oferece vantagem ou desvantagem no rendimento esportivo.",
+      "titulo": "Dietas veganas e onívoras bem planejadas têm o mesmo desempenho no esporte",
+      "resumo": "A afirmação é de Hamilton Roschel, professor da USP, que aponta a ausência de vantagem ou desvantagem no rendimento de atletas.",
       "fonte": "Meridiano, com informações de Jornal da USP",
       "origemLink": "https://jornal.usp.br/radio-usp/veganismo-no-esporte-nao-oferece-vantagem-ou-desvantagem-mas-ainda-enfrenta-tabus/",
       "origemNome": "Jornal da USP",
@@ -991,11 +870,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Dietas à base de plantas apresentam o mesmo desempenho esportivo que dietas onívoras quando são bem planejadas. A afirmação é de Hamilton Roschel, professor da Escola de Educação Física e Esporte (EEFE) e diretor científico e executivo do Centro de Medicina do Estilo de Vida da Faculdade de Medicina (FMUSP) da USP.",
-        "Atletas de elite e alguns clubes de futebol passaram a adotar dietas à base de plantas e obtiveram resultados expressivos. A tendência no meio esportivo acompanha o crescimento no número de pessoas que adotam o veganismo como estilo de vida.",
-        "Não há diferença no desempenho esportivo entre dietas bem planejadas, sejam elas veganas ou onívoras. O consumo de proteínas também não se caracteriza como um problema nesse tipo de alimentação."
+        "Dietas à base de plantas bem planejadas apresentam o mesmo desempenho esportivo que dietas onívoras. A declaração é de Hamilton Roschel, professor da Escola de Educação Física e Esporte (EEFE) da USP e diretor científico e executivo do Centro de Medicina do Estilo de Vida da Faculdade de Medicina (FMUSP).",
+        "Atletas de elite e alguns clubes de futebol passaram a adotar dietas à base de plantas e obtiveram resultados expressivos. A adesão no universo esportivo acompanha a tendência do aumento de pessoas que adotam o veganismo como estilo de vida.",
+        "Ao contrário do que se acredita, não existe diferença de rendimento físico entre dietas veganas e onívoras quando bem estruturadas. Além disso, o consumo de proteínas não se constitui como um problema na alimentação à base de plantas."
       ],
-      "link": "/materia/dietas-veganas-e-onivoras-bem-planejadas-tem-mesmo-desempenho-no-espor.html",
+      "link": "/materia/dietas-veganas-e-onivoras-bem-planejadas-tem-o-mesmo-desempenho-no-esp.html",
       "iso": "2026-08-04T14:50:15.000Z",
       "hora": "10h50",
       "original": true,
@@ -1004,30 +883,90 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Photo-courtesy-Apatride-Network-800x450.webp",
+      "foto": "https://jornal.usp.br/wp-content/uploads/2024/04/20240410_fachadafmrp.jpg",
+      "fotoAlt": "Foto: Acervo SCS",
+      "fotoLarg": 800,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:usp-busca-voluntarias-para-estudo-sobre-efeitos-de-ayahuasca-e-cetamin",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "USP busca voluntárias para estudo sobre efeitos de ayahuasca e cetamina",
+      "resumo": "A pesquisa da Faculdade de Medicina de Ribeirão Preto vai avaliar o impacto das substâncias no ciclo menstrual e nos sintomas de tensão pré-menstrual em mulheres de 18 a 45 anos.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/usp-precisa-de-voluntarias-para-estudo-sobre-ayahuasca-e-ciclo-menstrual/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Pesquisadores da Faculdade de Medicina de Ribeirão Preto (FMRP) da USP estão recrutando voluntárias para um estudo com ayahuasca e cetamina. A investigação busca avaliar o efeito das substâncias no ciclo menstrual e nos sintomas de TPM em voluntárias saudáveis.",
+        "A ayahuasca é uma bebida preparada a partir das plantas amazônicas chacrona (Psychotria viridis) e cipó-jagube ou mariri (Banisteriopsis caapi), enquanto a cetamina é um anestésico. Os critérios do estudo incluem ter entre 18 e 45 anos e ciclo menstrual regular.",
+        "Além disso, as participantes devem apresentar bom estado geral de saúde, residir em Ribeirão Preto ou região e não utilizar medicamentos psicotrópicos e/ou contraceptivos orais hormonais de uso contínuo. O contato deve ser feito pelo e-mail tainibellucci@gmail.com."
+      ],
+      "link": "/materia/usp-busca-voluntarias-para-estudo-sobre-efeitos-de-ayahuasca-e-cetamin.html",
+      "iso": "2026-08-04T14:52:22.000Z",
+      "hora": "10h52",
+      "original": true,
+      "contexto": "O estudo é voltado para mulheres de 18 a 45 anos com ciclo menstrual regular e moradoras de Ribeirão Preto ou região. As participantes devem apresentar bom estado de saúde e não utilizar medicamentos psicotrópicos nem contraceptivos orais hormonais de uso contínuo.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:documentos-confirmam-vinculo-legal-mas-nao-criam-nem-apagam-a-existenc",
+      "id": "ilm:lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Documentos confirmam vínculo legal mas não criam nem apagam a existência humana",
-      "resumo": "Registros oficiais não possuem a capacidade de alterar a história, a família e o pertencimento de uma pessoa.",
+      "titulo": "Língua Kam no nordeste da Nigéria tem de 8.000 a 11.000 falantes",
+      "resumo": "O idioma não recebia atenção de pesquisadores até 2016, a exemplo de outras línguas da região.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
+      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Documentos têm a função de confirmar uma relação jurídica entre uma pessoa e o Estado. Contudo, esses registros não são capazes de criar ou apagar a existência de um indivíduo.",
-        "A documentação estatal também não pode criar nem apagar a história vivida por uma pessoa, tampouco a sua família.",
-        "Da mesma forma, o sentimento de pertencimento de um indivíduo não é criado nem apagado por atos do Estado, mesmo diante da recusa de reconhecimento formal."
+        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000 pessoas. O idioma situa-se no nordeste da Nigéria.",
+        "Antes do ano de 2016, a língua Kam não recebia nenhuma atenção por parte de pesquisadores.",
+        "A ausência de atenção de pesquisadores antes desse período também ocorreu com muitas outras línguas do nordeste da Nigéria."
       ],
-      "link": "/materia/documentos-confirmam-vinculo-legal-mas-nao-criam-nem-apagam-a-existenc.html",
-      "iso": "2026-08-02T16:38:17.000Z",
-      "hora": "12h38",
+      "link": "/materia/lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes.html",
+      "iso": "2026-08-03T05:38:53.000Z",
+      "hora": "01h38",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_experimentocelulas.jpg",
+      "fotoAlt": "adicionar",
+      "fotoLarg": 1200,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesao-na-medula-",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "USP investiga células da mucosa olfatória para tratar lesão na medula em ratos",
+      "resumo": "Pesquisa preliminar em centros da universidade aplicou injeções em animais com contusão e registrou evolução significativa no tratamento.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/ciencias/terapia-experimental-com-celulas-tronco-do-nariz-pode-ser-caminho-para-tratar-lesao-na-medula/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Centros da USP investigaram um tratamento experimental para lesões agudas na medula espinhal em ratos. A pesquisa aplicou injeções de células da mucosa olfatória em animais após sofrerem contusão.",
+        "O trabalho analisou as respostas e a recuperação dos animais com o tratamento. No grupo testado, as células da mucosa olfatória apresentaram alto potencial de regeneração neurológica e demonstraram evolução significativa.",
+        "A medula espinhal é um tecido do sistema nervoso central responsável por transportar estímulos do cérebro para o resto do corpo. As lesões na medula são comuns em casos de acidentes automobilísticos e quedas de alturas significativas."
+      ],
+      "link": "/materia/usp-investiga-celulas-da-mucosa-olfatoria-para-tratar-lesao-na-medula-.html",
+      "iso": "2026-08-04T13:39:35.000Z",
+      "hora": "09h39",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1039,11 +978,11 @@
       "fotoLarg": 800,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:esalq-disponibiliza-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-ho",
+      "id": "ilm:esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Esalq disponibiliza e-book gratuito sobre cultivo e consumo de soja hortaliça",
-      "resumo": "Material da Série Produtor Rural reúne orientações sobre produção, benefícios nutricionais e oportunidades de negócios com o consumo do grão verde.",
+      "titulo": "Esalq da USP lança e-book gratuito sobre cultivo e consumo de soja hortaliça",
+      "resumo": "A publicação reúne orientações sobre produção, benefícios nutricionais e oportunidades de negócios com o consumo do grão verde.",
       "fonte": "Meridiano, com informações de Jornal da USP",
       "origemLink": "https://jornal.usp.br/universidade/e-book-explica-como-cultivar-e-consumir-soja-como-hortalica/",
       "origemNome": "Jornal da USP",
@@ -1051,12 +990,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Escola Superior de Agricultura Luiz de Queiroz (Esalq) da USP disponibiliza gratuitamente a publicação Soja hortaliça. O material integra a Série Produtor Rural e foi desenvolvido para orientar produtores.",
-        "O e-book reúne orientações práticas sobre produção, benefícios nutricionais e oportunidades de negócios no campo. O consumo do grão verde e fresco, conhecido como edamame e comum na culinária oriental, é pouco explorado no mercado brasileiro.",
-        "A maioria da safra nacional de soja é destinada à exportação em grão seco para a produção de ração animal e óleo vegetal, embora o Brasil figure entre os maiores produtores mundiais do grão.",
-        "A busca por escolhas alimentares mais saudáveis e a aceitação de derivados como tofu, shoyu e proteína texturizada criam espaço para a consolidação da soja-hortaliça como opção rentável de cultivo."
+        "A Escola Superior de Agricultura Luiz de Queiroz (Esalq), da USP, disponibilizou gratuitamente a publicação \"Soja hortaliça\". O material integra a Série Produtor Rural e reúne orientações práticas sobre produção, benefícios nutricionais e oportunidades de negócios no campo.",
+        "A publicação aborda o cultivo e o consumo do grão verde e fresco, também chamado de edamame. O uso é difundido na culinária oriental, mas pouco explorado no mercado brasileiro, onde a maioria da safra é destinada à exportação em grão seco para produção de ração animal e óleo vegetal.",
+        "A busca por escolhas alimentares saudáveis e a aceitação de derivados como tofu, shoyu e proteína texturizada abrem espaço para a consolidação da soja-hortaliça como alternativa rentável de cultivo no país."
       ],
-      "link": "/materia/esalq-disponibiliza-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-ho.html",
+      "link": "/materia/esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor.html",
       "iso": "2026-08-04T12:53:29.000Z",
       "hora": "08h53",
       "original": true,
@@ -1065,67 +1003,30 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/331A8785.jpeg",
-      "fotoAlt": "331A8785",
+      "foto": "https://jornal.usp.br/wp-content/uploads/2023/03/20230310_00_multidao_cidade_centro.jpg",
+      "fotoAlt": "Multidão caminha numa rua do centro de São Paulo",
       "fotoLarg": 1200,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:jornalista-alexander-heffner-ministra-palestra-sobre-desinformacao-na-",
+      "id": "ilm:inct-da-fau-usp-lanca-o-podcast-vivendo-a-cidade-sobre-urbanizacao-no-",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Jornalista Alexander Heffner ministra palestra sobre desinformação na USP",
-      "resumo": "O evento ocorre em 13 de agosto e é realizado pelo Instituto de Estudos Avançados em parceria com a Superintendência de Comunicação Social da universidade.",
+      "titulo": "INCT da FAU USP lança o podcast Vivendo a Cidade sobre urbanização no Brasil",
+      "resumo": "O primeiro episódio da série trata da formação das cidades brasileiras e aborda a realidade da autoconstrução nas periferias.",
       "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/comunicados/jornalista-alexander-heffner-ministra-palestra-na-usp-sobre-a-comunicacao-publica-no-combate-a-desinformacao/",
+      "origemLink": "https://jornal.usp.br/universidade/urbanizacao-e-cotidiano-das-cidades-brasileiras-e-tema-de-novo-podcast-com-pesquisadores-da-usp/",
       "origemNome": "Jornal da USP",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A USP recebe, no dia 13 de agosto, o jornalista norte-americano Alexander Heffner para a palestra \"The Role of Public Institutional Communication in Combating Disinformation\". O evento é uma iniciativa do Instituto de Estudos Avançados (IEA), em parceria com a Superintendência de Comunicação Social (SCS), por meio do programa IntegraCom.",
-        "O encontro abordará os desafios da comunicação institucional pública diante da crescente circulação de informações falsas.",
-        "Alexander Heffner é apresentador e pesquisador norte-americano especializado em democracia, comunicação pública e liberdade de imprensa. Ele apresenta o programa \"The Open Mind\" da PBS, principal televisão pública dos EUA.",
-        "Heffner também criou o programa \"Breaking Bread with Alexander\", na Bloomberg TV, e é coautor do livro \"A Documentary History of the United States\"."
+        "O Instituto Nacional de Ciência e Tecnologia (INCT) Produção da Casa e da Cidade lançou o podcast Vivendo a Cidade. O instituto está sediado na Faculdade de Arquitetura e Urbanismo e de Desing (FAU) da USP.",
+        "A produção tem formato narrativo e linguagem acessível. A série busca aproximar pesquisadores, estudantes e demais interessados nos principais debates sobre urbanização, habitação e produção do espaço urbano no Brasil.",
+        "O episódio de estreia do programa intitula-se Cotidiano nas cidades: vivendo a cidade real. O conteúdo aborda a formação das cidades brasileiras e a realidade da autoconstrução nas periferias."
       ],
-      "link": "/materia/jornalista-alexander-heffner-ministra-palestra-sobre-desinformacao-na-.html",
-      "iso": "2026-08-04T13:00:55.000Z",
-      "hora": "09h00",
-      "original": true,
-      "contexto": "A próxima etapa é a realização da palestra no dia 13 de agosto. As organizações envolvidas no evento são o Instituto de Estudos Avançados e a Superintendência de Comunicação Social da USP.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pf-investiga-senador-weverton-rocha-por-suspeita-de-fraudes-no-inss",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "PF investiga senador Weverton Rocha por suspeita de fraudes no INSS",
-      "resumo": "Ação autorizada pelo STF cumpriu 18 mandados de busca e apreensão no Distrito Federal e no Maranhão.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/pf-investiga-senador-weverton-rocha-por-suspeita-de-desvios-no-inss",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Congresso em Foco",
-        "Poder360",
-        "JOTA",
-        "correiobraziliense.com.br"
-      ],
-      "quentura": 5,
-      "uf": null,
-      "corpo": [
-        "A Polícia Federal deflagrou nesta terça-feira (4) uma nova fase da Operação Sem Desconto, que investiga suspeitas de lavagem de dinheiro e fraudes relacionadas a descontos indevidos em benefícios do Instituto Nacional do Seguro Social (INSS). Por determinação do ministro do Supremo Tribunal Federal (STF) André Mendonça, foram cumpridos 18 mandados de busca e apreensão no Distrito Federal e no Maranhão. O senador Weverton Rocha (PDT-MA) está entre os investigados.",
-        "De acordo com a Polícia Federal, as investigações apontam indícios de movimentações financeiras e patrimoniais por meio de pessoas físicas e jurídicas, contas bancárias de terceiros, estruturas empresariais e operações com dinheiro em espécie. Na representação enviada ao STF, os investigadores afirmam que Weverton Rocha seria responsável por formular demandas, indicar beneficiários, cobrar pagamentos, acompanhar repasses, tratar de imóveis, orientar providências e interferir em decisões patrimoniais. O advogado Willer Tomaz de Souza é citado como integrante central da estrutura investigada, ligada a empresas, imóveis, aeronaves, operadores financeiros e interlocutores políticos.",
-        "Entre os alvos das buscas estão familiares do senador, empresários, operadores financeiros e escritórios de advocacia. A esposa de Weverton Rocha, Samya Rocha, teria recebido mais de R$ 11 milhões de empresas relacionadas a Willer Tomaz.",
-        "Em sua decisão, o ministro André Mendonça declarou que o conjunto probatório supera o plano das conjecturas e apontou a existência de correlação temporal entre comunicações, aportes e cobranças. A Polícia Federal informou que as apurações continuam para esclarecer a origem e a destinação dos recursos, o objetivo dos repasses e a individualização das condutas. A Agência Brasil informou que aguarda manifestação dos acusados."
-      ],
-      "link": "/materia/pf-investiga-senador-weverton-rocha-por-suspeita-de-fraudes-no-inss.html",
-      "iso": "2026-08-04T15:13:00.000Z",
-      "hora": "11h13",
+      "link": "/materia/inct-da-fau-usp-lanca-o-podcast-vivendo-a-cidade-sobre-urbanizacao-no-.html",
+      "iso": "2026-08-04T12:53:07.000Z",
+      "hora": "08h53",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1137,30 +1038,64 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:paralisacao-parcial-na-cptm-causa-2-125-km-de-congestionamento-em-sp",
+      "id": "ilm:stf-derruba-restricao-sobre-isencao-de-impostos-na-compra-de-veiculos-",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Paralisação parcial na CPTM causa 2.125 km de congestionamento em SP",
-      "resumo": "Prefeitura de São Paulo cancelou o rodízio de carros e acionou ônibus do Paese, que enfrentam superlotação para atender os passageiros das linhas atingidas.",
+      "titulo": "STF derruba restrição sobre isenção de impostos na compra de veículos por PCDs",
+      "resumo": "Por unanimidade, o plenário declarou inconstitucional a exclusão de pessoas com deficiência leve ou autismo nível 1 da alíquota zero dos impostos IBS e CBS.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/greve-de-trens-em-sp-causa-congestionamento-de-mais-de-2-mil-km",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/stf-derruba-restricao-compra-de-veiculos-por-pessoas-com-deficiencia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Folha"
+        "Valor Econômico",
+        "Correio Braziliense"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "O Supremo Tribunal Federal (STF) decidiu, nesta segunda-feira (3), derrubar o trecho da Reforma Tributária, presente na Lei Complementar 214 de 2025, que restringia a isenção fiscal na compra de automóveis por pessoas com deficiência ou com Transtorno do Espectro Autista (TEA).",
+        "Por unanimidade, o plenário entendeu ser inconstitucional a regra que garantia a redução a zero das alíquotas do IBS e da CBS incidentes sobre a venda de automóveis nacionais apenas para pessoas com deficiência de grau moderado ou grave. A norma excluía pessoas com autismo de nível de suporte 1 ou com deficiência considerada leve.",
+        "A decisão foi tomada a partir de duas ações de inconstitucionalidade protocoladas pelo Instituto Nacional de Direitos da Pessoa com Deficiência Oceano Azul e pela Associação Nacional de Apoio às Pessoas com Deficiência (ANAPCD).",
+        "O relator, ministro Alexandre de Moraes, votou contra a restrição, afirmando que a exclusão total dessas pessoas é inconstitucional. O voto foi seguido pelos ministros Flávio Dino, Cristiano Zanin, André Mendonça, Nunes Marques, Luiz Fux, Dias Toffoli, Cármen Lúcia, Gilmar Mendes e pelo presidente, Edson Fachin."
+      ],
+      "link": "/materia/stf-derruba-restricao-sobre-isencao-de-impostos-na-compra-de-veiculos-.html",
+      "iso": "2026-08-03T20:47:00.000Z",
+      "hora": "16h47",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mercado-reduz-estimativa-da-selic-para-13-75-em-2026-indica-boletim-fo",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Mercado reduz estimativa da Selic para 13,75% em 2026, indica Boletim Focus",
+      "resumo": "Projeção para a inflação de 2026 caiu pela quinta semana seguida e atingiu 5,03%, enquanto as previsões para o PIB e câmbio do período se mantiveram em 1,99% e R$ 5,20.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/pela-1a-vez-desde-marco-mercado-reduz-expectativa-para-selic-em-2026",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Correio Braziliense"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "A paralisação parcial nas linhas 11, 12 e 13 da Companhia Paulista de Transportes Metropolitanos (CPTM), na manhã desta terça-feira (4), provocou 2.125 quilômetros de congestionamento em São Paulo. O índice de engarrafamento nas ruas e avenidas da cidade foi registrado às 10h23 pela Companhia de Engenharia de Tráfego (CET).",
-        "A zona sul é a região mais afetada, com 648 quilômetros de trânsito. A zona leste registra 537 km de engarrafamento, a zona oeste contabiliza 507 km, a zona norte apresenta 278 km e o centro tem 155 km de congestionamento.",
-        "Diante do anúncio da greve feito pelos trabalhadores na noite de segunda-feira (4), a prefeitura de São Paulo cancelou o rodízio de carros no dia de hoje. O Plano de Apoio entre Empresas de Transporte frente a Situação de Emergência (Paese) foi acionado com a oferta de ônibus para atender a população, mas os veículos enfrentam superlotação.",
-        "A linha 11-Coral opera parcialmente no trecho entre as estações Palmeiras-Barra Funda e Guaianases. A linha 12-Safira tem trens circulando entre Brás e Engenheiro Goulart. Já a linha 13-Jade permanece totalmente parada. O Paese atende os trechos paralisados de todas essas linhas."
+        "O mercado financeiro reduziu as expectativas para a taxa básica de juros e para a inflação em 2026, segundo o Boletim Focus divulgado nesta segunda-feira (3) pelo Banco Central (BC). A projeção para a Selic ao final de 2026 caiu de 14% para 13,75%, na primeira redução dessa estimativa desde março.",
+        "A última queda nas projeções da Selic havia ocorrido em março de 2026, quando a taxa estimada passou de 12,13% para 12%. A taxa atual, definida pelo Comitê de Política Monetária (Copom) em 17 de junho, é de 14,25%. A próxima reunião do Copom está prevista para os dias 4 e 5 de agosto. Para 2027 e 2028, as previsões se mantiveram em 12% e 10,5%.",
+        "A estimativa para o Índice Nacional de Preços ao Consumidor Amplo (IPCA) de 2026 recuou de 5,12% para 5,03%, marcando a quinta redução semanal seguida. Há quatro semanas, a projeção era de 5,30%. Para 2027 e 2028, as estimativas de inflação continuam em 4,22% e 3,80%, respectivamente.",
+        "As projeções para o Produto Interno Bruto (PIB) e para a cotação do dólar em 2026 seguem estáveis há cinco semanas, em 1,99% e R$ 5,20. Para 2027, a estimativa de crescimento do PIB variou de 1,60% para 1,57%, e a cotação da moeda norte-americana passou de R$ 5,29 para R$ 5,28."
       ],
-      "link": "/materia/paralisacao-parcial-na-cptm-causa-2-125-km-de-congestionamento-em-sp.html",
-      "iso": "2026-08-04T13:52:00.000Z",
-      "hora": "09h52",
+      "link": "/materia/mercado-reduz-estimativa-da-selic-para-13-75-em-2026-indica-boletim-fo.html",
+      "iso": "2026-08-03T13:31:00.000Z",
+      "hora": "09h31",
       "original": true,
-      "contexto": null,
+      "contexto": "A projeção da Selic para 2026 recuou de 14% para 13,75%, enquanto a taxa básica atual fixada em 17 de junho é de 14,25%. A última redução dessa estimativa havia ocorrido em março, quando a taxa projetada passou de 12,13% para 12%. A próxima reunião do Copom está marcada para os dias 4 e 5 de agosto.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1170,11 +1105,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-rj-desmonta-urna-eletronica-em-apresentacao-sobre-seguranca-do-sis",
+      "id": "ilm:tre-rj-desmonta-urna-eletronica-em-apresentacao-para-imprensa-e-entida",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "TRE-RJ desmonta urna eletrônica em apresentação sobre segurança do sistema",
-      "resumo": "O evento reuniu a imprensa e entidades fiscalizadoras para detalhar o funcionamento dos circuitos eletrônicos e os mecanismos que impedem fraudes no processo eleitoral.",
+      "titulo": "TRE-RJ desmonta urna eletrônica em apresentação para imprensa e entidades",
+      "resumo": "Ação da Semana Nacional do Sistema Eletrônico de Votação detalhou mecanismos de segurança e barreiras contra fraudes nos equipamentos.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tre-rj-abre-urna-para-o-publico-e-defende-seguranca-do-voto-eletronico",
       "origemNome": "Agência Brasil",
@@ -1184,48 +1119,14 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realizou nesta segunda-feira (3) uma apresentação da urna eletrônica para a imprensa e entidades fiscalizadoras. O equipamento foi desmontado diante do público para explicar o funcionamento dos circuitos eletrônicos e dos mecanismos de segurança, como parte da programação da Semana Nacional do Sistema Eletrônico de Votação.",
-        "O presidente do TRE-RJ, Claudio de Mello Tavares, afirmou que a legitimidade das urnas é inquestionável e declarou que o código-fonte é examinado por partidos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas. O secretário de Tecnologia da Informação do tribunal, Michel Kovacs, apresentou a estrutura interna e destacou a presença de lacres da Casa da Moeda, assinaturas digitais, biometria e auditorias.",
-        "Durante a votação, os dados são gravados na memória interna e em mídias externas. Kovacs explicou que, em caso de falha técnica, uma mídia de contingência transfere as informações para uma urna de reserva sem perda de votos. O secretário informou que o sistema é isolado da internet e atualizado simultaneamente em todo o país.",
-        "Sobre a produção do equipamento, a Justiça Eleitoral define as especificações técnicas, e a empresa contratada apenas fabrica os aparelhos. Ao ser questionado sobre o retorno do voto em papel, Kovacs disse que a máquina eletrônica foi introduzida no Brasil em 1996 para erradicar fraudes e afirmou que a apuração impressa é custosa, demorada e suscetível a erros ou adulterações."
+        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) apresentou e desmontou uma urna eletrônica para a imprensa e entidades fiscalizadoras nesta segunda-feira (3). A demonstração exibiu os circuitos eletrônicos e os mecanismos de segurança do equipamento, como parte da programação da Semana Nacional do Sistema Eletrônico de Votação.",
+        "O presidente do TRE-RJ, Claudio de Mello Tavares, declarou que a legitimidade do sistema é inquestionável e citou que o código-fonte é examinado por partidos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas.",
+        "O secretário de Tecnologia da Informação do TRE, Michel Kovacs, apresentou os componentes do aparelho. Ele explicou que o sistema utiliza lacres da Casa da Moeda, biometria, assinaturas digitais, auditorias e grava os dados tanto na memória interna quanto em mídias externas.",
+        "Kovacs informou que a máquina funciona de forma isolada da internet e que o projeto técnico é de responsabilidade da Justiça Eleitoral. O secretário também afirmou que a urna foi introduzida em 1996 para erradicar fraudes do voto impresso e que retirar o sistema eletrônico seria um retrocesso."
       ],
-      "link": "/materia/tre-rj-desmonta-urna-eletronica-em-apresentacao-sobre-seguranca-do-sis.html",
+      "link": "/materia/tre-rj-desmonta-urna-eletronica-em-apresentacao-para-imprensa-e-entida.html",
       "iso": "2026-08-03T22:28:00.000Z",
       "hora": "18h28",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:stf-derruba-restricao-para-isencao-de-impostos-na-compra-de-veiculos-p",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "STF derruba restrição para isenção de impostos na compra de veículos por PCDs",
-      "resumo": "Por unanimidade, plenário considerou inconstitucional a exclusão de pessoas com deficiência leve e com autismo nível 1 da alíquota zero de IBS e CBS.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/stf-derruba-restricao-compra-de-veiculos-por-pessoas-com-deficiencia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Valor Econômico",
-        "correiobraziliense.com.br"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "O Supremo Tribunal Federal (STF) decidiu derrubar a regra da Reforma Tributária, prevista na Lei Complementar 214 de 2025, que restringia a isenção fiscal para a compra de automóveis por pessoas com deficiência ou com Transtorno do Espectro Autista (TEA).",
-        "Por unanimidade, o plenário declarou inconstitucional o trecho da lei que garantia a redução a zero das alíquotas de IBS e CBS sobre a venda de automóveis nacionais apenas para pessoas com deficiência de grau moderado ou grave. A regra excluía pessoas com deficiência considerada leve e com autismo de nível de suporte 1.",
-        "O julgamento foi motivado por duas ações de inconstitucionalidade protocoladas pelo Instituto Nacional de Direitos da Pessoa com Deficiência Oceano Azul e pela Associação Nacional de Apoio às Pessoas com Deficiência (ANAPCD).",
-        "O relator, ministro Alexandre de Moraes, votou contra a limitação e afirmou ser inconstitucional a exclusão total de pessoas com deficiência leve ou autismo nível 1. O voto foi acompanhado pelos ministros Flávio Dino, Cristiano Zanin, André Mendonça, Nunes Marques, Luiz Fux, Dias Toffoli, Cármen Lúcia, Gilmar Mendes e pelo presidente da corte, Edson Fachin."
-      ],
-      "link": "/materia/stf-derruba-restricao-para-isencao-de-impostos-na-compra-de-veiculos-p.html",
-      "iso": "2026-08-03T20:47:00.000Z",
-      "hora": "16h47",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1245,6 +1146,11 @@
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOME5Rb0Y5dzNJNTdDSVgtdFF0cnlTeTY4eXBsVmRHX01aMW13VDByeTNiX2xkc05SdWpJSjZJdVVGdjVUZzV4SmItMHpici1QcmJKZ3g1WUJuYXQ5MlA5dmxGZHJpM2VsWTVoSVZPSzJvbGk0YlRTdGJ1WGN5Wl94b0gzeGtkM1Y4S1E?oc=5"
         },
         {
+          "veiculo": "Exame",
+          "titulo": "Almoços que valem a pausa: menus executivos de até R$ 80 em São Paulo",
+          "link": "https://exame.com/casual/almocos-que-valem-a-pausa-menus-executivos-de-ate-r-80-em-sao-paulo/"
+        },
+        {
           "veiculo": "CNN Brasil",
           "titulo": "Vídeo: veja momento em que Nicolas, do São Paulo, atropela idoso em SP",
           "link": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/video-veja-momento-em-que-nicolas-do-sao-paulo-atropela-idoso-em-sp/"
@@ -1253,142 +1159,38 @@
           "veiculo": "Folha",
           "titulo": "Lateral do São Paulo é detido sob suspeita de atropelar e matar idoso de 84 anos em Barueri (SP)",
           "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/08/lateral-do-sao-paulo-e-detido-sob-suspeita-de-atropelar-e-matar-idoso-de-84-anos-em-barueri-sp.shtml"
-        },
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "Veja momento em que jogador do São Paulo atropela e mata idoso",
-          "link": "https://www.metropoles.com/sao-paulo/veja-momento-em-que-jogador-do-sao-paulo-atropela-e-mata-idoso"
-        },
-        {
-          "veiculo": "Estadão",
-          "titulo": "Conheça a maior feira livre de São Paulo",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUUt3bjYzNzVHVTBRaU1ncnp0ZTUybVJ4dkVmZ2Q0eXM5R3FmU2J0ZjlRb0dVUmdQTUFQVm96eVp6Tmt3ZkZuaTJMaXlKOTcyNFlnaXYwTGF3VWlVWDBxVXNoOU42VVB6M2JUUGljQlhOZDFoZldMajdlMHN1dFdiZEwwS1ZqMklvc1HSAY8BQVVfeXFMUEZQZnNXajhXbW1iZmh5eEpoLTJrVWZzTk11ZVFBRzFjaXBNU3dvNUs3LXhST2cxdUhBUnFsRTNSZjZnN29TcHdVSHBpejZwTUNPUjg2Ml9XS1lLVDNNZ0Utdm5lTGwyMVdWaDN6Z1plYWhpVjFvTmtqVXVZbEJ6RlFMYkJxRVBJQXFRQ2pDRk0?oc=5"
         }
       ],
-      "link": "/materia/nc-jogador-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri.html",
+      "link": "/materia/nc-lateral-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri.html",
       "corpo": [
-        "Um jogador do São Paulo teria sido detido sob a suspeita de atropelar e matar um idoso. A ocorrência teria envolvido um lateral do clube paulista. Registros em vídeo estariam circulando com imagens do momento do acidente. As matérias veiculadas indicariam divergência quanto à localização exata do fato, mencionando o município de Barueri e a cidade de São Paulo. A vítima envolvida seria um homem de"
+        "Um lateral do São Paulo teria sido detido sob suspeita de atropelar e matar um idoso de 84 anos em Barueri. Um vídeo registraria o momento em que o atleta teria atingido a vítima na região de São Paulo. As manchetes publicadas pelos veículos apresentam divergências profundas sobre os temas relatados. Enquanto parte do material aborda a detenção do jogador, outros textos tratam de uma alta nos caso"
       ],
-      "id": "circ:jogador-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri",
+      "id": "circ:lateral-do-sao-paulo-teria-sido-detido-apos-atropelamento-em-barueri",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Jogador do São Paulo teria sido detido após atropelamento em Barueri",
+      "titulo": "Lateral do São Paulo teria sido detido após atropelamento em Barueri",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:27:17.358Z",
-      "hora": "12h27"
+      "iso": "2026-08-04T16:59:58.679Z",
+      "hora": "12h59"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que três veículos de imprensa publicaram informações sobre as decisões do STF.",
-        "Que as notícias atribuem determinações aos ministros Dino e Mendonça.",
-        "Que as matérias citam 11 alvos de buscas associados a Weverton Rocha.",
-        "Que é relatada a existência de três investigações no STF sobre o familiar."
+        "Que cinco veículos publicaram informações sobre deliberações atribuídas ao CNJ.",
+        "Que a pauta envolve a exclusão da aposentadoria compulsória como punição máxima.",
+        "Que uma das matérias relata pedido de explicações dirigido ao TJ/GO."
       ],
       "falta": [
-        "Manifestação oficial do Supremo Tribunal Federal sobre a abertura dos procedimentos.",
-        "Confirmação formal e identificação dos 11 alvos atingidos pelas ordens de busca.",
-        "Acesso aos autos ou aos números dos inquéritos citados nas publicações.",
-        "Posicionamento da Polícia Federal ou das"
+        "Manifestação ou publicação oficial do CNJ confirmando a alteração no regimento.",
+        "Número do procedimento administrativo ou documento oficial que formalize as decisões.",
+        "Identificação oficial do caso específico citado em relação ao TJ/GO."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "BBC Brasil",
-          "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
-          "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Dino autoriza abertura do terceiro inquérito envolvendo Lulinha",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/dino-autoriza-abertura-do-terceiro-inquerito-envolvendo-lulinha.ghtml"
-        },
-        {
-          "veiculo": "Poder360",
-          "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
-          "link": "https://www.poder360.com.br/poder-justica/mendonca-autoriza-buscas-contra-11-alvos-ligados-a-weverton-rocha/"
-        }
-      ],
-      "link": "/materia/nc-stf-teria-autorizado-inqueritos-e-buscas-a-alvos-ligados-a-senador-e-f.html",
-      "corpo": [
-        "O Supremo Tribunal Federal teria autorizado investigações e mandados de busca direcionados a um familiar do presidente da República e a pessoas ligadas ao senador Weverton Rocha. As determinações estariam divididas em apurações distintas sob a responsabilidade de ministros da corte.",
-        "O ministro Dino teria assinado a abertura de um terceiro inquérito relativo ao familiar do presidente, somando três frentes de investigação autorizadas pelo STF. Em outra decisão, o ministro Mendonça teria liberado mandados de busca contra 11 alvos associados ao parlamentar.",
-        "As publicações variam no foco principal das alegações, direcionando o relato para as ações atribuídas a Dino ou para as medidas relativas a Mendonça. Não há detalhamento nas manchetes sobre se os procedimentos teriam ligação direta entre si."
-      ],
-      "id": "circ:stf-teria-autorizado-inqueritos-e-buscas-a-alvos-ligados-a-senador-e-f",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "STF teria autorizado inquéritos e buscas a alvos ligados a senador e familiar",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:29:21.727Z",
-      "hora": "12h29"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por quatro veículos da imprensa internacional.",
-        "Que as matérias citam discussões sobre o comércio bilateral e a guerra na Ucrânia.",
-        "Que o nome de Volodymyr Zelensky é mencionado em uma das publicações."
-      ],
-      "falta": [
-        "Manifestação oficial do Palácio do Planalto ou do Kremlin confirmando o telefonema.",
-        "Registro da data e do horário em que a ligação teria ocorrido.",
-        "Detalhamento sobre os acordos ou pautas comerciais especificamente discutidos."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1",
-          "titulo": "Em telefonema, Lula e Putin falam em aumentar comércio bilateral e discutem guerra da Ucrânia",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/em-telefonema-lula-e-putin-falam-em-aumentar-comercio-bilateral-e-discutem-guerra-da-ucrania.ghtml"
-        },
-        {
-          "veiculo": "Exame",
-          "titulo": "Lula telefona para Putin e discute comércio entre Brasil e Rússia",
-          "link": "https://exame.com/mundo/lula-telefona-para-putin-e-discute-comercio-entre-brasil-e-russia/"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Lula trata de guerra na Ucrânia com Putin após pedido de Zelensky",
-          "link": "https://www.cnnbrasil.com.br/politica/lula-trata-de-guerra-na-ucrania-com-putin-apos-pedido-de-zelensky/"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Em telefonema, Lula e Putin falam em aumentar comércio bilateral e discutem guerra da Ucrânia",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/em-telefonema-lula-e-putin-falam-em-aumentar-comercio-bilateral-e-discutem-guerra-da-ucrania.ghtml"
-        }
-      ],
-      "link": "/materia/nc-lula-e-putin-teriam-conversado-por-telefone-sobre-comercio-e-guerra-na.html",
-      "corpo": [
-        "O presidente Luiz Inácio Lula da Silva e o presidente russo Vladimir Putin teriam conversado por telefone. Segundo veículos que publicaram a informação, os líderes teriam abordado o aumento do comércio bilateral entre Brasil e Rússia.",
-        "As matérias divulgadas apontam que a guerra na Ucrânia também teria integrado a pauta do diálogo. Uma das publicações afirma que a ligação teria sido feita por Lula após um pedido do presidente ucraniano Volodymyr Zelensky.",
-        "As notícias divergem sobre a iniciativa do contato, uma vez que uma publicação atribui a chamada diretamente a Lula, enquanto as demais não especificam quem ligou. Não foram apresentados detalhes sobre o conteúdo específico das negociações comerciais."
-      ],
-      "id": "circ:lula-e-putin-teriam-conversado-por-telefone-sobre-comercio-e-guerra-na",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Lula e Putin teriam conversado por telefone sobre comércio e guerra na Ucrânia",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:30:15.645Z",
-      "hora": "12h30"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que ao menos três veículos veicularam relatos sobre decisões recentes do CNJ.",
-        "Que as publicações abordam alterações nas sanções a magistrados e cobranças ao TJ/GO."
-      ],
-      "falta": [
-        "Manifestação oficial do CNJ sobre a alteração regimental.",
-        "Posicionamento oficial do TJ/GO referente às explicações solicitadas.",
-        "Número de portaria, acórdão ou processo administrativo no CNJ."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1 Política",
-          "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-aprova-fim-da-aposentadoria-compulsoria-como-punicao-maxima-para-juizes-demissao-passa-a-ser-prevista.ghtml"
+          "veiculo": "InfoMoney",
+          "titulo": "CNJ aprova fim da aposentadoria compulsória para juízes que cometem infrações graves",
+          "link": "https://www.infomoney.com.br/politica/cnj-aprova-fim-da-aposentadoria-compulsoria-para-juizes-que-cometem-infracoes-graves/"
         },
         {
           "veiculo": "CNN Brasil",
@@ -1396,24 +1198,131 @@
           "link": "https://www.cnnbrasil.com.br/politica/cnj-altera-regimento-e-exclui-aposentadoria-compulsoria-como-punicao-maxima/"
         },
         {
+          "veiculo": "g1 Política",
+          "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-aprova-fim-da-aposentadoria-compulsoria-como-punicao-maxima-para-juizes-demissao-passa-a-ser-prevista.ghtml"
+        },
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "CNJ exclui aposentadoria compulsória como punição máxima a juízes",
+          "link": "https://www.metropoles.com/colunas/manoela-alcantara/cnj-exclui-aposentadoria-compulsoria-como-punicao-maxima-a-juizes"
+        },
+        {
           "veiculo": "Migalhas",
           "titulo": "CNJ cobra explicações do TJ/GO por aposentadoria compulsória imposta a juiz",
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdWVZV3VWSjFZaDNEMXVSR1NqcVFrSnY0Z3JmTlA3Wno3Y3VHVmhmLU9JNlpaM0ViR2o3dll5RnF5d2wyWk44S3VNdUR4QUFaNGFhZlFza3dpSHRBYmFVdVlEUll0UlVLSGVXWE5kOGk3V19VUEdHeXUzX21CcFN1QWlUZUZhNVFLdmpIWUdveXVWajI2cy1pZ1RibnctYmdwVUNVQ3lnN1pZWDJvcHBMbFN1ZXd4ZmNVMmc?oc=5"
         }
       ],
-      "link": "/materia/nc-cnj-teria-alterado-regimento-sobre-aposentadoria-de-juizes-e-cobrado-t.html",
+      "link": "/materia/nc-cnj-teria-aprovado-o-fim-da-aposentadoria-compulsoria-para-juizes.html",
       "corpo": [
-        "O Conselho Nacional de Justiça (CNJ) teria aprovado o fim da aposentadoria compulsória como punição máxima aplicável a juízes. A pena de demissão passaria a ser prevista entre as sanções do órgão.",
-        "As publicações também relatam que o CNJ teria alterado seu regimento interno para excluir essa modalidade de punição. Em outra frente, o órgão teria cobrado explicações do Tribunal de Justiça de Goiás (TJ/GO). A cobrança estaria relacionada à imposição de aposentadoria compulsória a um juiz.",
-        "As notícias divergem entre tratar o fato como alteração regimental ampla ou como cobrança pontual ao tribunal goiano. A tramitação formal de ambos os processos estaria pendente de validação nos canais oficiais."
+        "O Conselho Nacional de Justiça teria aprovado o fim da aposentadoria compulsória como punição máxima a magistrados que cometem infrações graves. A medida alteraria o regimento do órgão e a sanção de demissão passaria a ser prevista.",
+        "As publicações sobre o tema divergem entre focar no ajuste regimental e noticiar uma medida pontual. Enquanto a maioria das matérias relata a mudança geral nas regras punitivas, uma das coberturas indica que o órgão teria cobrado explicações do Tribunal de Justiça de Goiás por uma aposentadoria compulsória imposta a um juiz."
       ],
-      "id": "circ:cnj-teria-alterado-regimento-sobre-aposentadoria-de-juizes-e-cobrado-t",
+      "id": "circ:cnj-teria-aprovado-o-fim-da-aposentadoria-compulsoria-para-juizes",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "CNJ teria alterado regimento sobre aposentadoria de juízes e cobrado TJ/GO",
+      "titulo": "CNJ teria aprovado o fim da aposentadoria compulsória para juízes",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:31:11.093Z",
-      "hora": "12h31"
+      "iso": "2026-08-04T17:00:50.750Z",
+      "hora": "13h00"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "O assunto está sendo publicado por quatro veículos da imprensa.",
+        "As matérias citam Republicanos, Podemos, Flávio Bolsonaro, Caiado e Renata Abreu.",
+        "As publicações registram divergência sobre o status da decisão do Podemos."
+      ],
+      "falta": [
+        "Comunicado oficial dos partidos Republicanos e Podemos confirmando suas posições.",
+        "Declaração oficial da equipe de Flávio Bolsonaro sobre os impactos descritos.",
+        "Manifestação oficial de Renata Abreu a respeito da inviabilização de sua candidatura a vice."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Correio Braziliense",
+          "titulo": "O cálculo na decisão pela neutralidade do Republicanos nas eleições",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbXBmNEJLTXVqdzQ3YlVVb2hZdXVoREVtVlA1WVRCSDV5WmhqWWZBclFUaGRUMGQwRm1uSW04SkEwQjFFc0JPQ0JOaGE1X1kwRDJRUlkzNTg4bDlrZmlpbGozX1dxejhFQ0dtM1Jock9ueTR5bzhsVFZMdnotNGFfS0dQbEd3aEE4X3JldXM1ek9BY0VGOEV1ejNLYlRnQ3pzTVo5OW8zWDZ6ZzRRcFgtQzlhb0lpM3BFSTdYYS1yZ0R5S2sxZF9IaVNSVk55MWdm0gHWAUFVX3lxTE5GcUdaSHBGakgzZ19OOFJSa3dnMXQ2YjlrdnBTVEFGeW9lekRCTmdxa2xUR0dFSm9adGhWcnFHZUl1NDhXbEtwSmZmcTlJS2Q1R0o4U01pS3EwVWJaT3c2Wmx5eFN0c1o3dEIwRm8yWHowcXFKZHVjSW1nems3SjJpd1piSGxpQ3RtTzVKajNTRnZxTzlGM0lCUV9KdFIwQ0J4c01ycEtLN1E2RHdabEJXb0xiT04yUE9lR2diYnQ5ek42ZE95cWRGNVZ6bkdkYjNVSEFvZ1E?oc=5"
+        },
+        {
+          "veiculo": "Folha",
+          "titulo": "Podemos recusa apoio a Flávio Bolsonaro e também decide ficar neutro na eleição",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/podemos-recusa-apoio-a-flavio-bolsonaro-e-tambem-decide-ficar-neutro-na-eleicao.shtml"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Caiado diz que neutralidade do Republicanos compromete Flávio",
+          "link": "https://www.poder360.com.br/poder-eleicoes/caiado-diz-que-neutralidade-do-republicanos-compromete-flavio/"
+        },
+        {
+          "veiculo": "estadao.com.br",
+          "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMGJ0QkV5dmxuelc2OXVmb0J3NUk0dnppOF9aX3F2c2lnZ2MzZ2N3TFhtSlZwbEY1V3pTM29uTDI1a2RTaUJaQ2ZpYVp1WW5wQW92TWJYaTJqMTZWaTg5a0xzTC1EWGJnV1A1Y0l6T0xfS2FqSVYzazdib25tY1JKMC1pdlhLZW8yQ2Fkai1nOTVQT2FBdWFzUlVlX2RxZzNWX05pdXdMSkdMVUVwMWhOTkEyTDcxNUVURXBFSjBOa2hXSEhpeXVwUm9kZHlhYWtpSDd0YnRldXMtSm8?oc=5"
+        }
+      ],
+      "link": "/materia/nc-republicanos-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes.html",
+      "corpo": [
+        "Os partidos Republicanos e Podemos teriam decidido adotar posicionamento neutro na disputa eleitoral. O Podemos estaria recusando o apoio direto à candidatura de Flávio Bolsonaro nas eleições.",
+        "As publicações veiculadas apresentariam divergências sobre o estágio da decisão do Podemos, variando entre uma escolha já tomada e um anúncio que ainda ocorreria. A neutralidade do Republicanos estaria sob análise interna e, segundo o governador Caiado, comprometeria a situação eleitoral de Flávio Bolsonaro.",
+        "A adoção da postura neutra pelo Podemos inviabilizaria a indicação de Renata Abreu para o posto de vice na chapa de Flávio Bolsonaro. A confirmação desse cenário dependeria da oficialização por parte das siglas e dos atores políticos citados."
+      ],
+      "id": "circ:republicanos-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Republicanos e Podemos teriam decidido pela neutralidade nas eleições",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T17:01:52.800Z",
+      "hora": "13h01"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que quatro veículos de imprensa publicaram matérias abordando as declarações atribuídas a políticos.",
+        "Que o STF e a Polícia Federal foram citados nos textos divulgados pela imprensa.",
+        "Que não foram apresentados registros em fontes oficiais sobre o caso até o momento."
+      ],
+      "falta": [
+        "Manifestação oficial da Polícia Federal e do STF sobre os fatos relatados.",
+        "Apresentação de provas concretas relativas à suposta interferência nas apurações.",
+        "Número e identificação oficial dos procedimentos de investigação citados."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Flávio acusa PF de proteger Lula em investigações sobre Lulinha",
+          "link": "https://www.infomoney.com.br/politica/flavio-acusa-pf-de-proteger-lula-em-investigacoes-sobre-lulinha/"
+        },
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
+          "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Flávio Bolsonaro acusa, sem provas, PF de interferir em investigação sobre filho de Lula",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/flavio-sabatina-sp-lulinha.ghtml"
+        },
+        {
+          "veiculo": "JOTA",
+          "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
+          "link": "https://www.jota.info/eleicoes/eleicoes-2026/por-que-lula-e-flavio-evitam-debates"
+        }
+      ],
+      "link": "/materia/nc-flavio-bolsonaro-teria-acusado-a-pf-de-interferir-em-apuracoes-sobre-f.html",
+      "corpo": [
+        "O senador Flávio Bolsonaro teria acusado a Polícia Federal de interferir e de proteger o presidente Lula em apurações relativas a um filho do presidente. Segundo as publicações, as acusações teriam sido feitas sem a apresentação de provas.",
+        "As apurações que envolveriam o filho de Lula teriam sido autorizadas pelo Supremo Tribunal Federal e somariam três investigações. Os relatos citam expressamente a atuação do STF e da Polícia Federal no caso.",
+        "Além das denúncias, os veículos teriam abordado os motivos pelos quais Lula e Flávio Bolsonaro estariam evitando debates. As publicações apresentam enfoques distintos, alternando entre as acusações contra o órgão policial e a existência de procedimentos judiciais."
+      ],
+      "id": "circ:flavio-bolsonaro-teria-acusado-a-pf-de-interferir-em-apuracoes-sobre-f",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Flávio Bolsonaro teria acusado a PF de interferir em apurações sobre filho de Lula",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T17:02:23.311Z",
+      "hora": "13h02"
     },
     {
       "municipio": null,
@@ -1422,32 +1331,85 @@
       "falta": [],
       "ondeCirculou": [
         {
+          "veiculo": "Poder360",
+          "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
+          "link": "https://www.poder360.com.br/poder-justica/mendonca-autoriza-buscas-contra-11-alvos-ligados-a-weverton-rocha/"
+        },
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
+          "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
           "veiculo": "JOTA",
-          "titulo": "Trabalho infantil nas redes sociais – Parte 1",
-          "link": "https://www.jota.info/opiniao-e-analise/colunas/juizo-de-valor/trabalho-infantil-nas-redes-sociais-parte-1"
+          "titulo": "Fraude no INSS: Advogado e parentes do senador Weverton Rocha são alvos da PF",
+          "link": "https://www.jota.info/stf/do-supremo/fraude-no-inss-advogado-e-parentes-do-senador-weverton-rocha-sao-alvos-da-pf"
         },
         {
-          "veiculo": "g1 Economia",
-          "titulo": "TikTok faz acordo em três processos sobre vício em redes sociais entre jovens antes de julgamento",
-          "link": "https://g1.globo.com/tecnologia/noticia/2026/08/03/tiktok-faz-acordo-em-tres-processos-sobre-vicio-em-redes-sociais-entre-jovens-antes-de-julgamento.ghtml"
-        },
-        {
-          "veiculo": "Valor Econômico",
-          "titulo": "Como notícias falsas nas redes sociais provocaram corrida de migrantes ao enclave espanhol de Ceuta",
-          "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQMWtJUjFUcGlGU3F1aC04TjNTWkR6T0hmUlRMWlFKc0dmSnI3UUZJQ21peEJBV09FWVBkV0JrM1Vyc3U1NGpvZXJ2eTNDMUMzaGJxbzVnUXRUODkzR2g2aUVoZ2tQaG1HSWJhNUgta0RnM1NicUljSW91cTN3S1JUUDVwVWhZaDhLVkhEWEZZMFJaMllacHdhRVNnek0tTlhQVkl6WmxaZ3NTaHk0ckRUaHhUVHdBSV9lVDBZR0ZRUGpYRXZSWG1VZnltcEZjdFkwdGJnakxUWWdYSENUTkdwUXpCR0ttUWlxaHfSAfgBQVVfeXFMT0VQUFNOV1k2cnZValZJUFhVYVl5T2NMdWgyOEc0ZGFqX3hjMktoaTJTQV9YWjFwU29EdUZpX0R4WGlodnp3STdIY0FFT0tfQ2tfNjcwZHZBaFFfQ1NOaXk2a0F0UTZLYTlmMzV1QklkT2NLT3FQaTViYWFaaVBCVEhJMV93TEk1YjRfYzUydmEzR0pReVFRYnlRNnVZUkk2eWFxYTBwaGpLUFpURk9JOHRJdlNXa2VaWGZNV041UlNzNkRLQlVFV2pEajhCRVpiSEJZbGF1OTNqOEpvNDBMR1FwYlNpWWY1MVQwVDUzTmNKUTdpZ3NLR2o?oc=5"
+          "veiculo": "Correio Braziliense",
+          "titulo": "Mulher de Weverton Rocha recebeu R$ 11 milhões de empresas ligadas a Willer Tomaz, aponta PF",
+          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRnF0WEhIbGdQTFFRWUtWaGZXUjc1V182dVFZS2tlVU54YTFrYUFlYmNtZ3hOVzVxeWRwbHRYcWtfNmNhYUVmMUc3TVZ1dGJMX1BvY0pPVzN5a3hMc3g0V1puLTBmclNSV0pRWWpkcUZ6QkVsXzQxcER0bkpOVHhVM1JwNzE0UkFtS3k4bnhJT1hGSVJBMl9NeGVlU205b3BaRUhQTkZ2VjY4QWlsdldNLVhoWXBYOFJoRWpscXpEUVppeEt0RDFjOUNkZmJ5enJxZHJQUDJnd3Z2M1dvTjFVZkVFOFd2b21xNkFBblJpYjTSAfYBQVVfeXFMTk5MaGwybWdzMko4ajdsS0F2T3daX1pVbjBVcktlRUNIMGVMYnVSZWM1OGxEWFR1VjRWay1nT3kwYk51RzBoRjNGQ3NqMkZ3RkpTaHduaU91Wl82SmRhYW0xSjJNZ05tcXJzOU9RYTJNTTlOVGNRelhUSEdQUGJ2M3F6TUtTa3ZvME92dW9vUFZIamVoQ081dXVTTFRzWXBxWTZtOXM5NmNpalgtMUdVaGZvQ05wam1Pa3Q2eFhnSkhEc2NoamtUNm14enhjcEZhaWt6MG1kU2poTFh1bjN1OG5ZSlRocjBXMjhDNElsc2dTMENPc053?oc=5"
         }
       ],
-      "link": "/materia/nc-relatos-apontariam-impactos-do-uso-de-redes-sociais-em-diferentes-cena.html",
+      "link": "/materia/nc-stf-teria-autorizado-buscas-em-investigacao-sobre-fraudes-no-inss.html",
       "corpo": [
-        "Publicações da imprensa tratariam de alegados impactos do uso de redes sociais em diferentes contextos. As alegações incluiriam a ocorrência de trabalho infantil nessas plataformas e os efeitos do uso de redes virtuais por jovens. As matérias divergiriam quanto aos temas específicos relatados. Um dos textos indicaria que o TikTok teria feito acordo em três processos sobre vício entre jovens antes "
+        "O ministro Mendonça, do STF, teria autorizado buscas contra 11 alvos ligados ao senador Weverton Rocha. A Polícia Federal estaria investigando uma suposta fraude no INSS envolvendo um advogado e parentes do parlamentar. As medidas fariam parte de apurações em andamento no tribunal. A mulher do senador teria recebido R$ 11 milhões de empresas vinculadas a um advogado, segundo apontaria a Polícia Fe"
       ],
-      "id": "circ:relatos-apontariam-impactos-do-uso-de-redes-sociais-em-diferentes-cena",
+      "id": "circ:stf-teria-autorizado-buscas-em-investigacao-sobre-fraudes-no-inss",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Relatos apontariam impactos do uso de redes sociais em diferentes cenários",
+      "titulo": "STF teria autorizado buscas em investigação sobre fraudes no INSS",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T16:32:10.320Z",
-      "hora": "12h32"
+      "iso": "2026-08-04T17:03:22.899Z",
+      "hora": "13h03"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a indicação é noticiada por quatro veículos da imprensa.",
+        "Que o indicado seria um servidor de carreira para a CVM.",
+        "Que a indicação teria sido encaminhada para análise no Senado."
+      ],
+      "falta": [
+        "Publicação oficial do ato no Diário Oficial da União.",
+        "Confirmar o recebimento oficial da indicação pelo Senado Federal.",
+        "Pronunciamento oficial da Comissão de Valores Mobiliários."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "g1 Economia",
+          "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
+          "link": "https://g1.globo.com/politica/blog/julia-duailibi/post/2026/08/04/caso-master-otto-lobo-lula-indica-antonio-berwanger-diretoria-cvm.ghtml"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Lula indica Antonio Berwanger para vaga em diretoria da CVM",
+          "link": "https://www.congressoemfoco.com.br/noticia/120993/lula-indica-antonio-berwanger-para-vaga-em-diretoria-da-cvm"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Lula envia ao Senado indicação de novo diretor da CVM",
+          "link": "https://www.infomoney.com.br/politica/lula-envia-ao-senado-indicacao-de-novo-diretor-da-cvm/"
+        },
+        {
+          "veiculo": "JOTA",
+          "titulo": "O que o caso Master ensina sobre regulamentação do lobby",
+          "link": "https://www.jota.info/opiniao-e-analise/artigos/o-que-o-caso-master-ensina-sobre-regulamentacao-do-lobby"
+        }
+      ],
+      "link": "/materia/nc-lula-teria-indicado-servidor-de-carreira-para-a-diretoria-da-cvm-apos-.html",
+      "corpo": [
+        "O presidente Lula teria escolhido um servidor de carreira para ocupar uma vaga na diretoria da Comissão de Valores Mobiliários (CVM). A mensagem com a indicação do novo diretor teria sido enviada para apreciação do Senado Federal.",
+        "A escolha do nome teria ocorrido após polêmicas associadas ao chamado caso Master. As publicações que noticiaram a escolha também relacionariam o episódio a discussões sobre a regulamentação do lobby."
+      ],
+      "id": "circ:lula-teria-indicado-servidor-de-carreira-para-a-diretoria-da-cvm-apos-",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Lula teria indicado servidor de carreira para a diretoria da CVM após caso Master",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T17:04:16.170Z",
+      "hora": "13h04"
     }
   ],
   "pautas": [
@@ -1455,11 +1417,11 @@
       "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 9,
       "tambemEm": [
         "BBC Brasil",
-        "Exame",
-        "Congresso em Foco"
+        "Congresso em Foco",
+        "Folha"
       ]
     },
     {
@@ -1467,20 +1429,106 @@
       "veiculo": "CartaCapital",
       "quentura": 5,
       "tambemEm": [
+        "Exame",
         "CNN Brasil",
-        "Folha",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "CNJ aprova fim da aposentadoria compulsória para juízes que cometem infrações graves",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "CNN Brasil",
+        "g1 Política",
         "Metrópoles"
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro diz que definirá vice até 15 de agosto",
-      "veiculo": "Exame",
+      "titulo": "CNJ exclui aposentadoria compulsória como punição máxima a juízes",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "CNN Brasil",
+        "g1 Política",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "CNN Brasil",
+        "InfoMoney",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "CNJ altera regimento e exclui aposentadoria compulsória como punição máxima",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
         "g1 Política",
+        "InfoMoney",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "CNJ cobra explicações do TJ/GO por aposentadoria compulsória imposta a juiz",
+      "veiculo": "Migalhas",
+      "quentura": 4,
+      "tambemEm": [
+        "CNN Brasil",
+        "g1 Política",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "O cálculo na decisão pela neutralidade do Republicanos nas eleições",
+      "veiculo": "Correio Braziliense",
+      "quentura": 4,
+      "tambemEm": [
+        "Folha",
         "Poder360",
+        "estadao.com.br"
+      ]
+    },
+    {
+      "titulo": "Caiado diz que neutralidade do Republicanos compromete Flávio",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Política",
+        "InfoMoney",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Flávio acusa PF de proteger Lula em investigações sobre Lulinha",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Política",
         "JOTA"
+      ]
+    },
+    {
+      "titulo": "Podemos recusa apoio a Flávio Bolsonaro e também decide ficar neutro na eleição",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "JOTA",
+        "Correio Braziliense",
+        "estadao.com.br"
       ]
     },
     {
@@ -1489,41 +1537,20 @@
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
+        "Exame",
         "CNN Brasil",
-        "Metrópoles",
         "CartaCapital"
       ]
     },
     {
-      "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
-      "veiculo": "BBC Brasil",
+      "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
+      "veiculo": "Poder360",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Em telefonema, Lula e Putin falam em aumentar comércio bilateral e discutem guerra da Ucrânia",
-      "veiculo": "g1",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "CNN Brasil",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Em telefonema, Lula e Putin falam em aumentar comércio bilateral e discutem guerra da Ucrânia",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "CNN Brasil"
+        "BBC Brasil",
+        "JOTA",
+        "Correio Braziliense"
       ]
     },
     {
@@ -1532,109 +1559,52 @@
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "Folha",
-        "Metrópoles",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Veja momento em que jogador do São Paulo atropela e mata idoso",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "CNN Brasil",
+        "Exame",
         "Folha",
         "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Fraudes no INSS: Advogado e família de senador são alvos de operação da PF",
-      "veiculo": "Migalhas",
-      "quentura": 3,
-      "tambemEm": [
-        "Poder360",
-        "JOTA",
-        "correiobraziliense.com.br"
-      ]
-    },
-    {
-      "titulo": "Mendonça autoriza buscas contra 11 alvos ligados a Weverton Rocha",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima a juízes; demissão passa a ser prevista",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "CNN Brasil",
-        "Migalhas"
-      ]
-    },
-    {
-      "titulo": "Dino autoriza 3º inquérito contra Lulinha por tráfico de influência",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "CNJ altera regimento e exclui aposentadoria compulsória como punição máxima",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Migalhas"
-      ]
-    },
-    {
-      "titulo": "CNJ cobra explicações do TJ/GO por aposentadoria compulsória imposta a juiz",
-      "veiculo": "Migalhas",
-      "quentura": 2,
-      "tambemEm": [
-        "CNN Brasil",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Lula trata de guerra na Ucrânia com Putin após pedido de Zelensky",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1",
-        "g1 Política"
       ]
     },
     {
       "titulo": "Flávio Bolsonaro acusa, sem provas, PF de interferir em investigação sobre filho de Lula",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
         "BBC Brasil",
+        "InfoMoney",
         "JOTA"
       ]
     },
     {
-      "titulo": "'Já me viram envolvido com rachadinha? Mensalão?', diz Caiado em referência a casos de corrupção que citam Flávio Bolsonaro e PT",
-      "veiculo": "g1 Política",
+      "titulo": "Quem é Nicolas Bosshardt? Jogador do São Paulo atropela e mata pedestre em Barueri",
+      "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Exame",
+        "CNN Brasil",
+        "Folha",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
+      "veiculo": "g1 Economia",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Congresso em Foco",
+        "InfoMoney",
         "JOTA"
+      ]
+    },
+    {
+      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
+      "veiculo": "estadao.com.br",
+      "quentura": 3,
+      "tambemEm": [
+        "Folha",
+        "JOTA",
+        "Correio Braziliense"
       ]
     }
   ]
