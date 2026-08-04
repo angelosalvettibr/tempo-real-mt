@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T19:09:22.187Z",
-  "modelo": "gemini-2.0-flash-lite",
+  "gerado": "2026-08-04T19:51:22.766Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 214,
+    "pauta": 216,
     "fonteLivre": 53,
-    "confirmadas": 20,
-    "publicadas": 11,
-    "resgatadas": 1,
-    "semFonte": 28
+    "confirmadas": 17,
+    "publicadas": 12,
+    "resgatadas": 0,
+    "semFonte": 39
   },
   "fontes": {
     "checadas": 95,
-    "responderam": 62,
+    "responderam": 53,
     "entregando": 28,
-    "itens": 263,
+    "itens": 265,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -39,6 +48,15 @@
         "tipo": "pauta",
         "id": "folha",
         "nome": "Folha",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1politica",
+        "nome": "g1 Política",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,8 +109,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -118,15 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "bbcbr",
         "nome": "BBC Brasil",
         "itens": 11,
@@ -144,24 +153,6 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "resgate",
         "id": "r7",
         "nome": "R7",
@@ -172,8 +163,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "poder360",
-        "nome": "Poder360",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -190,17 +190,26 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
-        "itens": 8,
+        "id": "poder360",
+        "nome": "Poder360",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-geral",
+        "nome": "Agência Brasil",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
+        "id": "g1economia",
+        "nome": "g1 Economia",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -210,16 +219,7 @@
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-geral",
-        "nome": "Agência Brasil",
-        "itens": 8,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -289,8 +289,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +298,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -361,15 +361,6 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 405"
-      },
-      {
-        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
@@ -379,12 +370,12 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -408,6 +399,15 @@
         "tipo": "livre",
         "id": "tse",
         "nome": "TSE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -460,8 +460,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anp",
-        "nome": "ANP",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -469,8 +469,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "anp",
+        "nome": "ANP",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -505,24 +505,6 @@
       },
       {
         "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
         "itens": 0,
@@ -541,8 +523,17 @@
       },
       {
         "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,26 +550,17 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
+        "id": "pf",
+        "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
         "id": "mec",
         "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -595,8 +577,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -604,12 +586,30 @@
       },
       {
         "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "ibama",
+        "nome": "Ibama",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "icmbio",
+        "nome": "ICMBio",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -622,26 +622,17 @@
       },
       {
         "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "fazenda",
         "nome": "Ministério da Fazenda",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -658,8 +649,17 @@
       },
       {
         "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -689,22 +689,22 @@
         "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
         "id": "funai",
         "nome": "Funai",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -739,8 +739,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ans",
-        "nome": "ANS",
+        "id": "tcu",
+        "nome": "TCU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -748,12 +748,12 @@
       },
       {
         "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
+        "id": "ans",
+        "nome": "ANS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -775,17 +775,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "defesa",
-        "nome": "Ministério da Defesa",
+        "id": "planalto",
+        "nome": "Planalto",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -802,15 +793,6 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "cnj",
         "nome": "CNJ",
         "itens": 0,
@@ -820,30 +802,30 @@
       },
       {
         "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 429"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "saude-fed",
-        "nome": "Ministério da Saúde",
+        "id": "cvm",
+        "nome": "CVM",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "justica",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -856,12 +838,30 @@
       },
       {
         "tipo": "livre",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "saude-fed",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "cnmp",
         "nome": "CNMP",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -877,84 +877,16 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_experimentocelulas.jpg",
-      "fotoAlt": "adicionar",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pesquisa-da-usp-testa-celulas-da-mucosa-olfatoria-em-lesoes-de-medula",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Pesquisa da USP testa células da mucosa olfatória em lesões de medula",
-      "resumo": "Estudo preliminar em ratos mostrou evolução significativa após a injeção do material na região lesionada.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/ciencias/terapia-experimental-com-celulas-tronco-do-nariz-pode-ser-caminho-para-tratar-lesao-na-medula/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [
-        "Migalhas"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "Centros da USP realizaram uma pesquisa colaborativa para investigar um novo tratamento de lesões agudas na medula espinhal em ratos. Os animais foram injetados com células da mucosa olfatória após sofrerem contusão e apresentaram evolução significativa.",
-        "O trabalho está em fase preliminar e analisa a recuperação dos animais. As células da mucosa olfatória apresentam potencial de regeneração neurológica e recrutam substâncias que favorecem a regeneração neuronal na região atingida.",
-        "A medula espinhal integra o sistema nervoso central e transporta estímulos do cérebro para o resto do corpo. Lesões nesse tecido ocorrem de forma comum em centros de trauma hospitalares devido a acidentes automobilísticos e quedas de alturas significativas."
-      ],
-      "link": "/materia/pesquisa-da-usp-testa-celulas-da-mucosa-olfatoria-em-lesoes-de-medula.html",
-      "iso": "2026-08-04T13:39:35.000Z",
-      "hora": "09h39",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:cnj-encerra-aposentadoria-compulsoria-como-pena-maxima-a-juizes",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "CNJ encerra aposentadoria compulsória como pena máxima a juízes",
-      "resumo": "Pela nova regra, magistrados condenados por infrações graves poderão perder o cargo por meio de ação judicial da AGU, conforme decisão do STF.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juiz",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Exame",
-        "g1 Política",
-        "Poder360",
-        "JOTA"
-      ],
-      "quentura": 6,
-      "uf": null,
-      "corpo": [
-        "O Conselho Nacional de Justiça (CNJ) aprovou nesta terça-feira (4) o fim da aposentadoria compulsória e a adoção da perda do cargo como punição disciplinar máxima para juízes que cometerem infrações graves, como venda de sentenças e assédio sexual e moral.",
-        "Com a nova resolução disciplinar, a condenação em Processo Administrativo Disciplinar (PAD) permite colocar o juiz em disponibilidade para a perda do cargo, mas a exoneração depende de decisão judicial. O procedimento cumpre determinação do Supremo Tribunal Federal (STF), que acabou com a aposentadoria compulsória com vencimentos proporcionais e condicionou a perda do cargo, sem remuneração, ao ajuizamento de ação judicial pela Advocacia-Geral da União (AGU). Antes da decisão do STF, os magistrados continuavam recebendo vencimentos mensais após a condenação pelo CNJ.",
-        "Durante a sessão, o presidente do CNJ, ministro Edson Fachin, afirmou que a medida representa uma mudança significativa no tratamento da matéria e que o tema é trabalhado com atenção, considerando os desafios e complexidades existentes.",
-        "Criado em 2005 para julgar faltas disciplinares de juízes e desembargadores, o CNJ aplicava a Lei Orgânica da Magistratura Nacional (Loman). A norma previa advertência, censura, remoção compulsória, disponibilidade e aposentadoria compulsória com vencimentos proporcionais ao tempo de serviço, que era a pena mais severa. Em 20 anos, o conselho aplicou a aposentadoria compulsória a 126 magistrados."
-      ],
-      "link": "/materia/cnj-encerra-aposentadoria-compulsoria-como-pena-maxima-a-juizes.html",
-      "iso": "2026-08-04T18:13:00.000Z",
-      "hora": "14h13",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:relato-aborda-jornada-de-viajante-apatrida",
+      "id": "ilm:relato-no-global-voices-aborda-a-vivencia-de-pessoa-nascida-apatrida",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Relato aborda jornada de viajante apátrida",
-      "resumo": "Declaração aponta que a vivência sem nacionalidade gera medo diante de situações que ocorrem naturalmente para outras pessoas.",
+      "titulo": "Relato no Global Voices aborda a vivência de pessoa nascida apátrida",
+      "resumo": "Em depoimento publicado, o indivíduo declara ter aprendido a temer coisas que acontecem naturalmente para outras pessoas por ter nascido sem pátria.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
       "origemNome": "Global Voices (EN)",
@@ -962,48 +894,13 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Uma pessoa nascida apátrida relatou sua jornada de viagem em meio a cenários de ignorância e desinformação.",
-        "O relato aborda as experiências vividas por um viajante sem estado.",
-        "Na declaração, o indivíduo afirmou que aprendeu a temer coisas que acontecem naturalmente para outras pessoas."
+        "O veículo Global Voices publicou o texto intitulado \"A stateless traveler’s journey through ignorance and misinformation\", centrado na jornada de uma pessoa apátrida.",
+        "Na declaração reproduzida no texto, a pessoa afirma que, por ter nascido apátrida, aprendeu a temer coisas que acontecem naturalmente para outros indivíduos.",
+        "O conteúdo foi veiculado em língua inglesa pela plataforma Global Voices sob a identificação globalvoices_en_856534."
       ],
-      "link": "/materia/relato-aborda-jornada-de-viajante-apatrida.html",
+      "link": "/materia/relato-no-global-voices-aborda-a-vivencia-de-pessoa-nascida-apatrida.html",
       "iso": "2026-08-04T07:37:20.000Z",
       "hora": "03h37",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:moraes-da-prazo-de-cinco-dias-para-pgr-se-manifestar-sobre-recurso-de-",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Moraes dá prazo de cinco dias para PGR se manifestar sobre recurso de Bolsonaro",
-      "resumo": "O ex-presidente recorreu ao STF contra a decisão que o proibiu de receber visitas por 30 dias na prisão domiciliar.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/moraes-pede-parecer-da-pgr-sobre-proibicao-de-visitas-bolsonaro",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Exame",
-        "g1 Política",
-        "Poder360"
-      ],
-      "quentura": 3,
-      "uf": null,
-      "corpo": [
-        "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), estabeleceu o prazo de cinco dias para a Procuradoria-Geral da República (PGR) se manifestar sobre um recurso do ex-presidente Jair Bolsonaro. A defesa contesta a decisão que o proibiu de receber visitas na prisão domiciliar pelo período de 30 dias.",
-        "A proibição das visitas foi determinada no mês passado por Moraes, depois que o senador Flávio Bolsonaro (PL-RJ) publicou nas redes sociais uma carta do ex-presidente. Jair Bolsonaro já possuía uma restrição que o proíbe de utilizar a internet, inclusive por meio de terceiros.",
-        "Na mesma decisão, Moraes proibiu o ex-presidente de receber visitas com finalidade político-eleitoral até o fim das eleições de outubro e de divulgar manifestos político-eleitorais por qualquer meio, também inclusive por terceiros. No recurso ao STF, a defesa alega que as liberdades de pensamento e de manifestação de ideias de Bolsonaro não podem ser restringidas por causa de sua condenação.",
-        "Jair Bolsonaro foi condenado no ano passado a 27 anos e três meses de prisão no processo sobre trama golpista. Após passar por cirurgia, ele obteve o direito de cumprir prisão domiciliar para se recuperar de uma pneumonia bacteriana."
-      ],
-      "link": "/materia/moraes-da-prazo-de-cinco-dias-para-pgr-se-manifestar-sobre-recurso-de-.html",
-      "iso": "2026-08-04T18:30:00.000Z",
-      "hora": "14h30",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1015,11 +912,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia",
+      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por IA",
-      "resumo": "Estudo aponta que câmeras com reconhecimento facial são concentradas em áreas de atuação da oposição política e não em locais com maior taxa de criminalidade comum.",
+      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por inteligência artificial",
+      "resumo": "Mapeamento do IDS aponta câmeras concentradas em locais de atuação da oposição e da imprensa, e não em áreas com maiores índices de criminalidade.",
       "fonte": "Meridiano, com informações de Global Voices",
       "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
       "origemNome": "Global Voices",
@@ -1027,16 +924,16 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Um levantamento feito em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais revelou que 11 governos africanos gastaram mais de US$ 2 bilhões em sistemas de vigilância por inteligência artificial. A Nigéria foi responsável por mais de US$ 470 milhões desse total.",
-        "Os sistemas adquiridos incluem câmeras CCTV de alta definição, leitores de placas, reconhecimento facial, camadas de identificação biométrica e salas de controle. Grande parte dos equipamentos é fornecida ou financiada por empresas e bancos chineses, além de empresas israelenses.",
-        "A justificativa governamental para a compra das tecnologias é o combate à criminalidade, mas os dados não indicam redução nos índices de crime. O mapeamento do IDS apontou pouca evidência de eficácia contra crimes comuns e mostrou que as câmeras estão concentradas em locais onde a oposição se organiza, onde ocorreram protestos e onde a imprensa causa problemas aos governos.",
-        "A inteligência artificial transformou dados já coletados pelo Estado, como registros de comunicações e contas bancárias, em arquivos pesquisáveis em segundos. As ferramentas operam de forma preventiva, inibindo ações públicas sem a necessidade direta de realizar prisões."
+        "Um levantamento realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais apontou que 11 governos africanos investiram conjuntamente mais de US$ 2 bilhões em sistemas de vigilância baseados em inteligência artificial. A Nigéria concentrou a maior fatia desse valor, com mais de US$ 470 milhões.",
+        "Os recursos tecnológicos adquiridos englobam câmeras CCTV de alta definição, leitores de placas veiculares, reconhecimento facial, identificação biométrica e salas de controle. A infraestrutura é fornecida e financiada predominantemente por empresas e bancos chineses, além de companhias de Israel.",
+        "Embora os governos aleguem que os equipamentos visam o combate ao crime, os índices de criminalidade não apresentaram queda. Pesquisadores do IDS identificaram que a instalação das câmeras ocorre de forma concentrada em bairros onde partidos de oposição se organizam, em locais de protestos e em áreas frequentadas pela imprensa.",
+        "A inteligência artificial permitiu converter registros estatais antigos de comunicações, impostos e contas bancárias em arquivos pesquisáveis em poucos segundos. O estudo indica que a presença desses sistemas atua para inibir a organização de movimentos de contestação política."
       ],
-      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-ia.html",
+      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel.html",
       "iso": "2026-08-03T11:47:40.000Z",
       "hora": "07h47",
       "original": true,
-      "contexto": "Os investimentos em vigilância por inteligência artificial afetam a população de 11 países africanos, sendo a Nigéria responsável por mais de US$ 470 milhões do total de US$ 2 bilhões mapeados. Os sistemas impactam diretamente locais de atuação da oposição política, de realização de protestos e de veículos da imprensa.",
+      "contexto": "O tema foi registrado uma vez no histórico, em 3 de agosto de 2026. Os sistemas afetam 11 países africanos, com presença concentrada em áreas frequentadas pela imprensa, locais de protestos e bairros de oposição. Do total de mais de US$ 2 bilhões gastos pelos governos, a Nigéria concentrou a maior fatia, com mais de US$ 470 milhões.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1046,62 +943,62 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
+      "id": "ilm:usp-promove-roda-de-conversa-sobre-agricultura-familiar-e-agroecologia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
-      "resumo": "Resultado representa a segunda queda seguida do indicador, que acumula alta de 1,5% no ano e de 0,7% em 12 meses.",
+      "titulo": "USP promove roda de conversa sobre agricultura familiar e agroecologia",
+      "resumo": "O evento gratuito da Escola de Enfermagem de Ribeirão Preto ocorre em 29 de agosto e integra as comemorações dos dez anos do Cemiti.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/roda-de-conversa-discutira-o-desenvolvimento-rural-agricultura-familiar-e-politicas-publicas/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Centro de Mindfulness e Terapias Integrativas (Cemiti) da Escola de Enfermagem de Ribeirão Preto (EERP) da USP vai realizar a roda de conversa \"Agroecologia: Cultivando a Terra e o Ser\" no dia 29 de agosto, sábado, a partir das 9h30. O encontro tem apoio da Faculdade de Filosofia, Ciências e Letras (FFCLRP) da USP.",
+        "A atividade será sediada no Anfiteatro Lucien Lison, localizado na FFCLRP, com entrada gratuita. A programação faz parte da série \"Diálogos que Transformam\", desenvolvida em comemoração aos dez anos do Cemiti.",
+        "O evento vai reunir agricultores, pesquisadores, estudantes e interessados em sustentabilidade e desenvolvimento rural. Os participantes discutirão o papel dos conhecimentos técnicos e saberes ancestrais no futuro da agricultura familiar e no equilíbrio entre seres humanos e a natureza.",
+        "Entre as presenças no encontro está o engenheiro agrônomo Claudio Nadaleto."
+      ],
+      "link": "/materia/usp-promove-roda-de-conversa-sobre-agricultura-familiar-e-agroecologia.html",
+      "iso": "2026-08-04T18:51:56.000Z",
+      "hora": "14h51",
+      "original": true,
+      "contexto": "O evento é voltado para agricultores, pesquisadores, estudantes e interessados em sustentabilidade e desenvolvimento rural. A atividade está agendada para o dia 29 de agosto, sábado, a partir das 9h30, no Anfiteatro Lucien Lison.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:moraes-pede-manifestacao-da-pgr-sobre-recurso-de-bolsonaro-contra-veto",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Moraes pede manifestação da PGR sobre recurso de Bolsonaro contra veto a visitas",
+      "resumo": "A defesa contestou no STF a proibição de 30 dias imposta ao ex-presidente, que cumpre prisão domiciliar para se recuperar de pneumonia bacteriana após condenação a 27 anos e três meses.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/moraes-pede-parecer-da-pgr-sobre-proibicao-de-visitas-bolsonaro",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Folha",
+        "Exame",
+        "g1 Política",
+        "Poder360",
         "InfoMoney"
       ],
-      "quentura": 2,
+      "quentura": 4,
       "uf": null,
       "corpo": [
-        "A produção industrial brasileira caiu 1,8% em junho deste ano na comparação com maio, segundo dados da Pesquisa Industrial Mensal divulgados nesta terça-feira (4) pelo Instituto Brasileiro de Geografia e Estatística (IBGE). O indicador já havia registrado recuo de 0,9% de abril para maio.",
-        "O gerente da Pesquisa Industrial Mensal (PIM-BR), André Macedo, declarou que a perda acumulada de 2,7% nesses dois meses de queda eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026. Na média móvel trimestral, houve retração de 0,5%. Na comparação com junho do ano passado, a indústria teve crescimento de 1,7%.",
-        "Na passagem de maio para junho, 16 dos 25 ramos industriais pesquisados apresentaram queda. Registraram recuo as atividades de coque, produtos derivados de petróleo e biocombustíveis (-5,9%), produtos químicos (-4,3%), produtos alimentícios (-1,9%), produtos farmoquímicos e farmacêuticos (-11%), confecção de artigos do vestuário e acessórios (-11%), equipamentos de informática, produtos eletrônicos e ópticos (-8,9%), outros equipamentos de transporte (-8,6%), produtos de borracha e de material plástico (-2,8%) e indústrias extrativas (-0,6%).",
-        "Das nove atividades com alta, destacam-se celulose, papel e produtos de papel (5,4%), impressão e reprodução de gravações (20,2%) e metalurgia (1,4%). As quatro grandes categorias econômicas tiveram queda: bens de consumo semi e não duráveis (-4,1%), bens de consumo duráveis (-3,2%), bens de capital (-1,1%) e bens intermediários (-1,1%)."
+        "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), determinou o prazo de cinco dias para a Procuradoria-Geral da República (PGR) apresentar parecer sobre o recurso do ex-presidente Jair Bolsonaro. A contestação da defesa é contra a decisão que proibiu o ex-presidente de receber visitas na prisão domiciliar pelo período de 30 dias.",
+        "A restrição foi fixada por Moraes no mês passado, após o senador Flávio Bolsonaro (PL-RJ) publicar em redes sociais uma carta escrita por Jair Bolsonaro, que já tinha proibição de usar a internet, inclusive por meio de terceiros. A medida também vedou visitas com finalidade político-eleitoral até o fim das eleições de outubro e a divulgação de manifestos político-eleitorais por qualquer meio.",
+        "No recurso apresentado ao STF, a defesa sustenta que a condenação de Jair Bolsonaro não pode motivar a restrição das suas liberdades de pensamento e de manifestação de ideias.",
+        "O ex-presidente foi condenado no ano passado a 27 anos e três meses de prisão no processo de trama golpista. Jair Bolsonaro conseguiu o direito de cumprir a pena em prisão domiciliar para se recuperar de uma pneumonia bacteriana após passar por uma cirurgia."
       ],
-      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
-      "iso": "2026-08-04T12:44:00.000Z",
-      "hora": "08h44",
-      "original": true,
-      "contexto": "A queda de 1,8% em junho é maior que o recuo de 0,9% registrado no mês anterior. A retração afeta 16 dos 25 ramos industriais pesquisados, incluindo os setores de derivados de petróleo, produtos químicos e alimentícios. Não há registro de caso parecido no histórico.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:republicanos-anuncia-que-nao-apoiara-nenhum-candidato-a-presidencia",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Republicanos anuncia que não apoiará nenhum candidato à Presidência",
-      "resumo": "A sigla adotará independência institucional e deixará diretórios regionais livres para formarem coligações locais.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "Estadão"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "O Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. O partido também definiu que não lançará um nome para a disputa e adotará o que chamou de posição de independência institucional.",
-        "Em nota, a legenda justificou a decisão no respeito às alianças estaduais e citou sua presença de forma significativa em vários estados. O texto explicou que essa capilaridade exige considerar as particularidades de cada estado, respeitando as estratégias políticas locais e as composições construídas nos últimos anos.",
-        "Dessa forma, os diretórios regionais do partido poderão realizar as coligações que quiserem, sem orientação do diretório nacional. O partido realizou sua convenção nacional pela manhã, mas a nota com a decisão já havia sido publicada em seu site antes do início do evento."
-      ],
-      "link": "/materia/republicanos-anuncia-que-nao-apoiara-nenhum-candidato-a-presidencia.html",
-      "iso": "2026-08-04T16:57:00.000Z",
-      "hora": "12h57",
+      "link": "/materia/moraes-pede-manifestacao-da-pgr-sobre-recurso-de-bolsonaro-contra-veto.html",
+      "iso": "2026-08-04T18:30:00.000Z",
+      "hora": "14h30",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1113,11 +1010,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lingua-kam-do-nordeste-da-nigeria-registra-entre-8-000-e-11-000-falant",
+      "id": "ilm:lingua-kam-tem-aproximadamente-8-000-a-11-000-falantes-na-nigeria",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Língua Kam do nordeste da Nigéria registra entre 8.000 e 11.000 falantes",
-      "resumo": "O idioma Kam não recebeu atenção de pesquisadores antes de 2016, assim como muitas outras línguas do nordeste da Nigéria.",
+      "titulo": "Língua Kam tem aproximadamente 8.000 a 11.000 falantes na Nigéria",
+      "resumo": "Assim como outras línguas do nordeste da Nigéria, o idioma não recebeu atenção de pesquisadores antes de 2016.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
@@ -1125,11 +1022,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O número atual de falantes da língua Kam é de aproximadamente 8.000 – 11.000 no nordeste da Nigéria.",
-        "Antes de 2016, a língua Kam não recebeu atenção por parte de pesquisadores.",
-        "A ausência de atenção de pesquisadores antes de 2016 também ocorreu com muitas outras línguas do nordeste da Nigéria."
+        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000.",
+        "O idioma é falado no nordeste da Nigéria.",
+        "Assim como muitas outras línguas do nordeste da Nigéria, o Kam não recebeu atenção de pesquisadores antes de 2016."
       ],
-      "link": "/materia/lingua-kam-do-nordeste-da-nigeria-registra-entre-8-000-e-11-000-falant.html",
+      "link": "/materia/lingua-kam-tem-aproximadamente-8-000-a-11-000-falantes-na-nigeria.html",
       "iso": "2026-08-03T05:38:53.000Z",
       "hora": "01h38",
       "original": true,
@@ -1143,11 +1040,110 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
+      "id": "ilm:republicanos-anuncia-neutralidade-na-eleicao-para-a-presidencia",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Republicanos anuncia neutralidade na eleição para a Presidência",
+      "resumo": "Os diretórios regionais da legenda poderão fazer as coligações que quiserem, sem receber uma orientação do diretório nacional.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1 Política",
+        "estadao.com.br"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "O partido Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda, que também não lançará nome próprio para a disputa, adotará uma posição descrita como independência institucional.",
+        "Em nota, o partido justificou a decisão no respeito às alianças estaduais e à sua presença significativa em vários estados. A publicação explicou que essa capilaridade impõe o dever de considerar as particularidades locais e as composições construídas ao longo dos últimos anos.",
+        "Dessa forma, os diretórios regionais poderão fazer as coligações que quiserem, sem orientação do diretório nacional. O comunicado com a decisão foi publicado no site da agremiação antes do início da convenção nacional do partido, realizada no período da manhã."
+      ],
+      "link": "/materia/republicanos-anuncia-neutralidade-na-eleicao-para-a-presidencia.html",
+      "iso": "2026-08-04T16:57:00.000Z",
+      "hora": "12h57",
+      "original": true,
+      "contexto": "A medida afeta os diretórios regionais do Republicanos, que têm autonomia para definir suas coligações locais. A decisão vale para as eleições deste ano e foi comunicada nesta terça-feira (4), antes da convenção nacional do partido.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:cnj-aprova-fim-da-aposentadoria-compulsoria-como-punicao-maxima-para-j",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "CNJ aprova fim da aposentadoria compulsória como punição máxima para juízes",
+      "resumo": "Nova resolução prevê a perda de cargo por decisão judicial após ação da Advocacia-Geral da União em casos de infrações graves.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juiz",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1 Política",
+        "Poder360",
+        "JOTA"
+      ],
+      "quentura": 3,
+      "uf": null,
+      "corpo": [
+        "O Conselho Nacional de Justiça (CNJ) aprovou nesta terça-feira (4) o fim da aposentadoria compulsória e a previsão da perda de cargo como punição disciplinar máxima para juízes que cometerem infrações graves, como venda de sentenças e assédio sexual e moral.",
+        "Pela nova resolução disciplinar, em caso de condenação em Processo Administrativo Disciplinar (PAD), o juiz poderá ser colocado em disponibilidade para a perda do cargo. A eventual exoneração somente poderá ser determinada por decisão judicial, em ação a ser aberta pela Advocacia-Geral da União (AGU), conforme decisão do Supremo Tribunal Federal (STF).",
+        "O presidente do CNJ, ministro Edson Fachin, afirmou durante a sessão que a medida representa uma mudança significativa na forma de tratar a questão. Antes do entendimento do STF, magistrados mantinham o recebimento mensal de vencimentos após a condenação aplicável pelo órgão.",
+        "Criado em 2005 para julgar faltas disciplinares de juízes e desembargadores, o CNJ aplicava as sanções da Lei Orgânica da Magistratura Nacional (Loman). Em 20 anos, o conselho condenou 126 magistrados à aposentadoria compulsória."
+      ],
+      "link": "/materia/cnj-aprova-fim-da-aposentadoria-compulsoria-como-punicao-maxima-para-j.html",
+      "iso": "2026-08-04T18:13:00.000Z",
+      "hora": "14h13",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2022/10/20221024_cinema_vazio.jpg",
+      "fotoAlt": "Projeto CineCiência traz filme &quot;A Origem&quot; nesta semana - Foto: Reprodução/Freepik",
+      "fotoLarg": 1200,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:cine-cult-usp-exibe-gratuitamente-o-filme-manas-no-teatro-do-campus",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Cine Cult USP exibe gratuitamente o filme Manas no Teatro do Campus",
+      "resumo": "A sessão ocorre no dia 12 de agosto, às 19h, e será seguida por um debate com a psicanalista Cenise Monte Vicente.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/cine-cult-usp-exibe-filme-manas-de-mariana-brennand/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Cine Cult USP exibe no dia 12 de agosto, às 19h, o filme Manas, dirigido por Mariana Brennand. A exibição será no Teatro do Campus, em Ribeirão Preto, com entrada gratuita e sem necessidade de inscrição prévia.",
+        "Após a exibição, será realizado um debate com Cenise Monte Vicente, psicanalista e integrante de conselhos de defesa dos direitos humanos e da criança e do adolescente.",
+        "Lançada em 2025, a obra conta a história de Marcielle, uma jovem de 13 anos que mora na Ilha de Marajó. A personagem cresce idealizando a trajetória da irmã mais velha, que deixou a comunidade ribeirinha para construir uma nova vida em busca de liberdade.",
+        "Com o amadurecimento, Marcielle passa a enxergar as realidades da região e as agressões veladas que cercam sua própria família. Ao perceber que a irmã mais nova corre o risco de seguir o mesmo caminho, ela decide enfrentar as estruturas para romper o ciclo de opressão."
+      ],
+      "link": "/materia/cine-cult-usp-exibe-gratuitamente-o-filme-manas-no-teatro-do-campus.html",
+      "iso": "2026-08-04T18:31:42.000Z",
+      "hora": "14h31",
+      "original": true,
+      "contexto": "A exibição do filme está agendada para o dia 12 de agosto, às 19h, no Teatro do Campus em Ribeirão Preto. A próxima etapa da programação é a realização de um debate com a psicanalista Cenise Monte Vicente logo após a sessão. O acesso é voltado ao público geral, com entrada gratuita e sem necessidade de inscrição prévia.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
       "id": "ilm:tre-rj-desmonta-urna-eletronica-em-apresentacao-sobre-seguranca-do-sis",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
       "titulo": "TRE-RJ desmonta urna eletrônica em apresentação sobre segurança do sistema",
-      "resumo": "Apresentação para imprensa e fiscalizadores detalhou mecanismos de segurança, barreiras físicas e funcionamento interno do equipamento para as Eleições de 2026.",
+      "resumo": "Ação mostrou componentes internos do equipamento e explicou mecanismos físicos e digitais que impedem fraudes nas eleições.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tre-rj-abre-urna-para-o-publico-e-defende-seguranca-do-voto-eletronico",
       "origemNome": "Agência Brasil",
@@ -1157,10 +1153,10 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realizou nesta segunda-feira (3) uma apresentação da urna eletrônica para a imprensa e entidades fiscalizadoras do processo eleitoral. O equipamento foi desmontado diante do público para explicar o funcionamento dos circuitos eletrônicos e dos mecanismos de segurança.",
-        "A iniciativa integra a programação da Semana Nacional do Sistema Eletrônico de Votação. O presidente do TRE-RJ, Claudio de Mello Tavares, afirmou que a urna é segura e que o código-fonte é examinado por partidos políticos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas.",
-        "O secretário de Tecnologia da Informação do TRE, Michel Kovacs, apresentou os componentes internos do aparelho. Ele destacou a existência de lacres da Casa da Moeda, assinaturas digitais, biometria e auditorias, além de explicar que o sistema opera sem conexão com a internet e grava dados na memória interna e em mídias externas.",
-        "Kovacs também explicou que a Justiça Eleitoral define todas as especificações técnicas e de segurança, cabendo à empresa contratada apenas a fabricação. Ao ser questionado sobre o voto em papel, o secretário declarou que a máquina foi introduzida em 1996 para erradicar fraudes do voto impresso e que retirar o equipamento eletrônico seria um retrocesso."
+        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realizou nesta segunda-feira (3) uma apresentação da urna eletrônica para a imprensa e entidades fiscalizadoras. O equipamento foi desmontado diante do público para a explicação detalhada dos circuitos eletrônicos e dos mecanismos de segurança.",
+        "A iniciativa faz parte da Semana Nacional do Sistema Eletrônico de Votação. Durante o evento, o presidente do TRE-RJ, Claudio de Mello Tavares, afirmou que a urna é segura e destacou que o código-fonte é examinado por partidos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas.",
+        "O funcionamento interno foi detalhado pelo secretário de Tecnologia da Informação do órgão, Michel Kovacs. Ele apresentou os mecanismos de proteção, que incluem lacres da Casa da Moeda, assinaturas digitais, biometria, auditorias e armazenamento dos dados na memória interna e em mídias externas. Kovacs explicou que o sistema opera sem conexão com a internet.",
+        "A Justiça Eleitoral desenvolve o projeto técnico e de segurança, cabendo à empresa contratada apenas a fabricação. Ao ser questionado sobre o voto em papel, Kovacs declarou que a máquina foi introduzida em 1996 para erradicar fraudes da época do voto impresso e que abandonar o sistema eletrônico seria um retrocesso."
       ],
       "link": "/materia/tre-rj-desmonta-urna-eletronica-em-apresentacao-sobre-seguranca-do-sis.html",
       "iso": "2026-08-03T22:28:00.000Z",
@@ -1176,26 +1172,27 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:democrata-oficializa-wilson-grassi-junior-para-a-presidencia-da-republ",
+      "id": "ilm:democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Democrata oficializa Wilson Grassi Júnior para a Presidência da República",
-      "resumo": "A escolha do candidato a vice-presidente ficou aberta para a Comissão Executiva Nacional, que pode definir uma coligação.",
+      "titulo": "Democrata oficializa Wilson Grassi Júnior como candidato à Presidência",
+      "resumo": "A vaga para o cargo de vice-presidente permaneceu aberta para definição da Comissão Executiva Nacional da legenda, que realizou convenção no Rio de Janeiro.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/democrata-define-wilson-grassi-junior-candidato-presidencia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
+        "Poder360",
         "CartaCapital"
       ],
-      "quentura": 1,
+      "quentura": 2,
       "uf": null,
       "corpo": [
-        "O partido Democrata oficializou a candidatura de Wilson Grassi Júnior à Presidência da República em convenção realizada no domingo (2), no Rio de Janeiro. A definição do nome para vice-presidente permaneceu aberta pela Comissão Executiva Nacional da legenda, com possibilidade de formação de coligação.",
-        "Nascido em São Paulo, Wilson Grassi Júnior é veterinário de formação. Ele atuou como conselheiro da Associação Nacional de Clínicos Veterinários de Pequenos Animais de São Paulo (Anclivepa-SP) no projeto de implantação e gestão do primeiro hospital público para cães e gatos do país, no Tatuapé, zona leste de São Paulo.",
-        "Esta foi a primeira convenção do Democrata desde a mudança de nome, em dezembro de 2025, quando deixou de se chamar Partido da Mulher Brasileira (PMB). É a primeira vez que a legenda lança candidato à Presidência da República desde sua criação, em 2008.",
-        "As próximas convenções nacionais previstas são do União Brasil, em 4 de agosto, e do PRD e Solidariedade, em 5 de agosto. Oito partidos ainda não definiram a data de suas convenções: Avante, Cidadania, Podemos, PP, PSDB, PSOL, Rede e Republicanos."
+        "O partido Democrata oficializou a candidatura de Wilson Grassi Júnior à Presidência da República em convenção realizada no domingo (2), no Rio de Janeiro. A indicação para a vice-presidência continuou em aberto para decisão da Comissão Executiva Nacional, com possibilidade de formação de coligação.",
+        "Nascido em São Paulo, Grassi Júnior é veterinário de formação e atuou como conselheiro da Associação Nacional de Clínicos Veterinários de Pequenos Animais de São Paulo (Anclivepa-SP). Nessa função, trabalhou no projeto de implantação e gestão do primeiro hospital público para cães e gatos do país, no Tatuapé, zona leste de São Paulo.",
+        "Esta é a primeira vez que a legenda lança candidato à Presidência da República desde sua criação, em 2008. Trata-se também da primeira convenção do partido após a mudança de nome realizada em dezembro de 2025, quando deixou de ser chamado Partido da Mulher Brasileira (PMB).",
+        "As próximas oficializações de candidaturas previstas são as do União Brasil, em 4 de agosto, e do PRD e Solidariedade, em 5 de agosto. Outros oito partidos ainda não definiram a data de suas convenções nacionais: Avante, Cidadania, Podemos, PP, PSDB, PSOL, Rede e Republicanos."
       ],
-      "link": "/materia/democrata-oficializa-wilson-grassi-junior-para-a-presidencia-da-republ.html",
+      "link": "/materia/democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia.html",
       "iso": "2026-08-02T19:58:00.000Z",
       "hora": "15h58",
       "original": true,
@@ -1209,30 +1206,28 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:sexta-edicao-do-rio-innovation-week-reune-ciencia-e-tecnologia-no-rio-",
+      "id": "ilm:nunes-marques-afirma-que-urna-eletronica-e-patrimonio-da-democracia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Sexta edição do Rio Innovation Week reúne ciência e tecnologia no Rio de Janeiro",
-      "resumo": "Com o tema Simbiose, o evento ocorre de 4 a 7 de agosto no Pier Mauá e tem expectativa de movimentar R$ 4 bilhões em negócios.",
+      "titulo": "Nunes Marques afirma que urna eletrônica é patrimônio da democracia",
+      "resumo": "Declaração ocorreu na abertura da sessão que marcou o retorno das reuniões presenciais do TSE e o anúncio de ações sobre o sistema de votação.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/rio-innovation-week-traz-diversidade-para-o-centro-da-inovacao",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/urna-eletronica-e-patrimonio-da-democracia-diz-presidente-do-tse",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "CNN Brasil"
-      ],
-      "quentura": 1,
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Rio de Janeiro sedia, de 4 a 7 de agosto, no Pier Mauá, a sexta edição do Rio Innovation Week (RIW). A conferência global de ciência, tecnologia e negócios reúne expositores brasileiros e estrangeiros com o tema \"Simbiose – o futuro não acontece isolado\".",
-        "A programação tem expectativa de movimentar R$ 4 bilhões em negócios, receber cerca de 180 mil pessoas e gerar cerca de 22 mil empregos diretos e indiretos. O evento conta com 2 mil startups, centenas de expositores, 60 conferências, 16 trilhas e cerca de 40 palcos voltados a temas como inteligência artificial, inovação social, educação e saúde.",
-        "Entre os palestrantes estão a ativista Malala Yousafzai, o vencedor do Nobel de medicina Edvard Moser, a cientista brasileira Tatiana Sampaio, a deputada e ex-ministra Sonia Guajajara e a ativista indígena Txai Suruí. Participam também os escritores Djamila Ribeiro, Itamar Vieira Junior, Ondjaki e Luiz Antonio Simas, além das apresentadoras Regina Casé e Bella Gil, dos cantores Seu Jorge e Zélia Duncan e da banda Os Garotin.",
-        "Nesta edição, o Startup Program foi ampliado para incluir pequenas e médias empresas, além de contar com a presença de mais de 50 empresas de Venture Capital. O evento também sedia o Fórum Internacional de Negócios Aeroespaciais, realizado pela Agência Espacial Brasileira em parceria com a Organização das Nações Unidas, e a Conferência Cocreators."
+        "O presidente do Tribunal Superior Eleitoral, ministro Kassio Nunes Marques, defendeu o sistema eletrônico de votação e afirmou que a urna representa um patrimônio da democracia brasileira. As declarações foram feitas durante a abertura da sessão do TSE que marcou o retorno das reuniões presenciais após o recesso de julho.",
+        "O ministro convidou os eleitores a participarem das atividades da Semana Nacional do Sistema Eletrônico de Votação, que terá demonstrações de uso da urna, palestras, exposições e ações de combate à desinformação. A iniciativa busca ampliar o conhecimento público sobre as etapas do processo eleitoral e reforçar a transparência e a evolução tecnológica do sistema.",
+        "Nunes Marques afirmou que as portas da Justiça Eleitoral seguem abertas para a fiscalização e o acompanhamento do processo por quem tiver interesse. Ele declarou que a transparência é um dos pilares que sustentam a confiança da sociedade nas eleições do país.",
+        "O primeiro turno da votação será no dia 4 de outubro, data em que serão votados deputados federais, estaduais, distritais, governadores, senadores e o presidente da República. O segundo turno está agendado para 25 de outubro para os cargos de governador e presidente, caso nenhum candidato alcance mais de 50% dos votos válidos, excluídos brancos e nulos, na primeira etapa."
       ],
-      "link": "/materia/sexta-edicao-do-rio-innovation-week-reune-ciencia-e-tecnologia-no-rio-.html",
-      "iso": "2026-08-03T10:43:00.000Z",
-      "hora": "06h43",
+      "link": "/materia/nunes-marques-afirma-que-urna-eletronica-e-patrimonio-da-democracia.html",
+      "iso": "2026-08-03T23:25:00.000Z",
+      "hora": "19h25",
       "original": true,
-      "contexto": null,
+      "contexto": "A votação afeta os eleitores que escolherão deputados, governadores, senadores e o presidente da República. O primeiro turno das eleições está marcado para o dia 4 de outubro e o segundo turno está agendado para 25 de outubro.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1242,29 +1237,28 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lula-conversa-com-putin-sobre-comercio-e-geopolitica",
-      "editoria": "brasil",
+      "id": "ilm:assedio-eleitoral-no-ambiente-de-trabalho-e-crime-e-gera-punicoes-trab",
       "chapeu": "Nosso texto",
-      "titulo": "Lula conversa com Putin sobre comércio e geopolítica",
-      "resumo": "O bloco econômico Brics também fez parte da pauta, ocorrendo consenso para trabalho conjunto em foros internacionais.",
-      "fonte": "Meridiano, com informacoes de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional",
+      "editoria": "brasil",
+      "titulo": "Assédio eleitoral no ambiente de trabalho é crime e gera punições trabalhistas e penais",
+      "resumo": "Prática ocorre quando empregadores usam cargos de poder para influenciar votos e pode ser denunciada ao Tribunal Superior do Trabalho, ao CSJT e ao MPT.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/assedio-eleitoral-no-trabalho-e-crime-saiba-como-identificar",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política"
-      ],
-      "quentura": 1,
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "Lula e Putin conversaram sobre comércio e geopolítica.",
-        "O Brics também foi tema da conversa. O grupo é um bloco econômico que conta com Brasil e Rússia entre seus integrantes.",
-        "Houve consenso para seguir trabalhando em conjunto nos foros internacionais."
+        "A Justiça do Trabalho faz um alerta sobre a ocorrência de assédio eleitoral no ambiente profissional com a chegada do período eleitoral. A prática consiste no uso de posições de poder para influenciar, constranger ou pressionar trabalhadores a votar, deixar de votar ou apoiar determinado candidato, partido ou posicionamento político.",
+        "Processos na Justiça do Trabalho já resultaram em condenações por essa conduta. Em Rio Verde (GO), uma indústria de embalagens foi condenada a indenizar em R$1.000,00 cada trabalhador ativo no período da campanha das eleições de 2022 por realizar reuniões de pressão e prometer folgas. Em Vitória (ES), uma empresa de coaching teve que pagar R$ 8 mil a uma vendedora dispensada às vésperas do segundo turno de 2022 por não declarar apoio ao candidato apoiado pela firma.",
+        "O assédio eleitoral se caracteriza por atitudes como promessa de benefícios ou aumentos, ameaça de demissão, exigência de postagens em redes sociais pessoais, constrangimento para revelação do voto e obrigação de participar de reuniões ou atos políticos. O descumprimento da lei sujeita o empregador a multas, indenização por danos morais, rescisão indireta do contrato de trabalho e sanções penais que podem chegar à prisão.",
+        "As denúncias podem ser apresentadas ao Tribunal Superior do Trabalho, ao Conselho Superior da Justiça do Trabalho (CSJT) e ao Ministério Público do Trabalho (MPT), sendo possível solicitar o sigilo da identidade. A orientação é reunir elementos como áudios, vídeos, e-mails, mensagens e identificação de testemunhas para auxiliar na apuração das infrações."
       ],
-      "link": "/materia/lula-conversa-com-putin-sobre-comercio-e-geopolitica.html",
-      "iso": "2026-08-04T19:08:47.165Z",
-      "hora": "15h08",
+      "link": "/materia/assedio-eleitoral-no-ambiente-de-trabalho-e-crime-e-gera-punicoes-trab.html",
+      "iso": "2026-08-04T10:02:00.000Z",
+      "hora": "06h02",
       "original": true,
-      "resgatada": true,
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -1273,18 +1267,27 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
+      "seSabe": [
+        "Que as informações estão sendo veiculadas por quatro veículos da imprensa.",
+        "Que as manchetes citam a Polícia Federal, o INSS e o Conselho de Ética.",
+        "Que os políticos Lula, Flávio Bolsonaro e senador Weverton são nominalmente citados."
+      ],
+      "falta": [
+        "Confirmação oficial da Polícia Federal sobre a nova fase da operação no INSS.",
+        "Registro formal e número do procedimento acionado no Conselho de Ética.",
+        "Manifestação das defesas do advogado e dos familiares do senador Weverton.",
+        "Posicionamento oficial das assessorias de Lula e Flávio Bolsonaro sobre a ausência em debates."
+      ],
       "ondeCirculou": [
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "Quem é Willer Tomaz, advogado e amigo de Flávio Bolsonaro alvo da nova fase da Operação Sem Desconto",
+          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS1Zhb0Q1MkRabFdTWjJFbEVfMWVEM1NsTUdZLTdVaGoySm03VVd0aUoyWUhHT3RRa1h0emVKRjNDdFQ2M2tVQkZzMFI3NHRBY2Z0cUEtbVBrd2JwamFRXzBXSWZ0TVZpOVFraUF1SG5mbDlGSHRtMkZLNHpUYWFHb2I0Nkd3cUl4SWxNN1B0cW5FODBJS3ZYRTBnWk5SczMyNzZ0OEQ3cFRnQXQxMVF1M3hTNS14NmtlaExoUkxZZUxJYzVzdHVyODlZVkp0bEIydTlXZDlHZlI?oc=5"
+        },
         {
           "veiculo": "Congresso em Foco",
           "titulo": "Advogado aciona Conselho de Ética contra Flávio por IA de Bolsonaro",
           "link": "https://www.congressoemfoco.com.br/noticia/120997/advogado-aciona-conselho-de-etica-contra-flavio-por-ia-de-bolsonaro"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Moraes pede que PGR se manifeste sobre recursos da defesa de Bolsonaro contra proibição de visitas de Flávio",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/moraes-pede-que-pgr-se-manifesta-sobre-recursos-da-defesa-de-bolsonaro-contra-proibicao-de-visitas-de-flavio.ghtml"
         },
         {
           "veiculo": "JOTA",
@@ -1292,35 +1295,38 @@
           "link": "https://www.jota.info/eleicoes/eleicoes-2026/por-que-lula-e-flavio-evitam-debates"
         },
         {
-          "veiculo": "CartaCapital",
-          "titulo": "Quem é Willer Tomaz, advogado e amigo de Flávio Bolsonaro alvo da nova fase da Operação Sem Desconto",
-          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS1Zhb0Q1MkRabFdTWjJFbEVfMWVEM1NsTUdZLTdVaGoySm03VVd0aUoyWUhHT3RRa1h0emVKRjNDdFQ2M2tVQkZzMFI3NHRBY2Z0cUEtbVBrd2JwamFRXzBXSWZ0TVZpOVFraUF1SG5mbDlGSHRtMkZLNHpUYWFHb2I0Nkd3cUl4SWxNN1B0cW5FODBJS3ZYRTBnWk5SczMyNzZ0OEQ3cFRnQXQxMVF1M3hTNS14NmtlaExoUkxZZUxJYzVzdHVyODlZVkp0bEIydTlXZDlHZlI?oc=5"
+          "veiculo": "Correio Braziliense",
+          "titulo": "PF mira familiares do senador Weverton e o advogado Willer Tomaz em nova ação do INSS",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNHhRaXU4Y0VxeUtWaUJrRmJpVzQtRk5sVVZieGRYV0ZVZUY0NXoweDljSmdySUlFMzdOSFZ1VGU4ZXR0end0bU5xNjBob19JTkJiQTRvSU5qME5Fako2MXozZnozZjJMdzFrVFNEMUpoZVp2TGR6ZlZtREJOcHBmSEtJajBrMVVtaWtxZVZkRm1fMmZTdGY3LXZENDA5aEhTY08yVnFTeDlWczZGS1Z1R29PalVwRV9ZOHBtTzVRUUlKOHJ0Z1hicmRXSTdCVDlKY2dJ0gHYAUFVX3lxTE1FM2lacEs0NXpSNkJJN0E3aldmTVgybkkwNXUxcjAwMEZOamVSVzQ0cVVHcXUyWjVzLURObkd0MzF4Nmp5VXJITld3LVQ0S2JTdmxRV1lRQ0VXdFFpYTBaTzUyVjJGcl9VWDd5UFZWMmwtRTdsUHRkeTRnbHFkQ3FrZjlFQ1VLT1R0RVBSVTNYeFp3RmxCVHRab2dieUdvU0FKOU1zMmRhX1NQeDJVaG9hSkVwUHF3bmdJNHBmN2QxUFJaNDludEdGYUFudW9iMjFQWTJtZkdEaw?oc=5"
         }
       ],
-      "link": "/materia/nc-flavio-bolsonaro-e-aliados-estariam-no-centro-de-acionamentos-juridico.html",
+      "link": "/materia/nc-pf-teria-nova-operacao-envolvendo-familiares-de-senador-e-advogado.html",
       "corpo": [
-        "Veículos da imprensa estariam veiculando apurações e medidas judiciais relativas ao senador Flávio Bolsonaro. Um advogado teria acionado o Conselho de Ética contra o parlamentar devido ao uso de inteligência artificial envolvendo o ex-presidente Bolsonaro. Em outra frente, o ministro Moraes teria pedido que a Procuradoria-Geral da República se manifestasse sobre recursos contra a proibição de visi"
+        "As publicações veiculariam apurações sobre a Polícia Federal e movimentações políticas. Uma nova ação da PF relacionada ao INSS e à Operação Sem Desconto teria como alvo familiares do senador Weverton e um advogado. Este profissional seria apontado como amigo do senador Flávio Bolsonaro.",
+        "Outro relato indicaria que um advogado teria acionado o Conselho de Ética contra Flávio Bolsonaro devido ao uso de inteligência artificial de Bolsonaro. Adicionalmente, noticiar-se-ia que o presidente Lula e o senador Flávio Bolsonaro estariam evitando a participação em debates. As matérias citariam órgãos como a PF, o INSS e o Conselho de Ética em contextos variados.",
+        "As manchetes veiculadas divergiriam nos temas centrais, dividindo-se entre investigações policiais e dinâmicas eleitorais. Não haveria detalhamento nas publicações sobre datas exatas, locais ou formalização das ações citadas. O material reuniria diferentes frentes de apuração sem confirmação por documento público unificado."
       ],
-      "id": "circ:flavio-bolsonaro-e-aliados-estariam-no-centro-de-acionamentos-juridico",
+      "id": "circ:pf-teria-nova-operacao-envolvendo-familiares-de-senador-e-advogado",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Flávio Bolsonaro e aliados estariam no centro de acionamentos jurídicos e apurações",
+      "titulo": "PF teria nova operação envolvendo familiares de senador e advogado",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T19:06:46.945Z",
-      "hora": "15h06"
+      "iso": "2026-08-04T19:44:38.252Z",
+      "hora": "15h44"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que as matérias citam a Polícia Federal e o STF.",
-        "Que Flávio Dino é ministro do Supremo Tribunal Federal."
+        "Que ao menos três veículos de imprensa vêm publicando informações sobre o assunto.",
+        "Que as matérias mencionam nominalmente o STF, a Polícia Federal e o ministro Flávio Dino.",
+        "Que o caso trata da suposta abertura de três apurações."
       ],
       "falta": [
-        "Confirmação oficial emitida pela Polícia Federal ou pelo STF.",
-        "Divulgação do número de registro dos inquéritos mencionados.",
-        "Esclarecimento oficial sobre a divergência no número de investigações."
+        "Confirmação oficial do STF ou da Polícia Federal sobre os inquéritos.",
+        "Números dos procedimentos ou acesso aos autos correspondentes.",
+        "Manifestação oficial do ministro Flávio Dino sobre a decisão citada.",
+        "Identificação oficial das partes envolvidas por parte dos órgãos investigativos."
       ],
       "ondeCirculou": [
         {
@@ -1335,133 +1341,171 @@
         },
         {
           "veiculo": "CNN Brasil",
-          "titulo": "Lulinha entra no centro de quatro investigações da Polícia Federal",
-          "link": "https://www.cnnbrasil.com.br/politica/lulinha-entra-no-centro-de-quatro-investigacoes-da-policia-federal/"
+          "titulo": "Defesa de Lulinha pede acesso a investigações e planeja depoimentos",
+          "link": "https://www.cnnbrasil.com.br/politica/defesa-de-lulinha-pede-acesso-a-investigacoes-e-planeja-depoimentos/"
         }
       ],
-      "link": "/materia/nc-empresario-estaria-no-centro-de-ate-quatro-investigacoes-da-policia-fe.html",
+      "link": "/materia/nc-stf-teria-autorizado-tres-investigacoes-da-pf-contra-empresario.html",
       "corpo": [
-        "Um empresário estaria sendo alvo de apurações conduzidas pela Polícia Federal com autorização do Supremo Tribunal Federal. O ministro Flávio Dino teria assinado a abertura de um terceiro inquérito referente ao investigado.",
-        "As publicações que veiculam o relato divergem quanto ao total de procedimentos abertos. Enquanto textos apontam três investigações autorizadas na corte, outra matéria afirma que seriam quatro inquéritos em andamento."
+        "O Supremo Tribunal Federal teria autorizado três investigações voltadas a um empresário. O ministro Flávio Dino teria assinado a autorização para a abertura de um terceiro inquérito a ser conduzido pela Polícia Federal.",
+        "As informações veiculadas pelas publicações apontam que a Polícia Federal estaria à frente das apurações. Segundo o conjunto das reportagens, seriam três procedimentos distintos autorizados pela Corte.",
+        "Diante do cenário, a defesa do citado teria solicitado acesso formal ao teor das investigações. Os advogados também estariam planejando a prestação de depoimentos no âmbito desses processos."
       ],
-      "id": "circ:empresario-estaria-no-centro-de-ate-quatro-investigacoes-da-policia-fe",
+      "id": "circ:stf-teria-autorizado-tres-investigacoes-da-pf-contra-empresario",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Empresário estaria no centro de até quatro investigações da Polícia Federal",
+      "titulo": "STF teria autorizado tres investigacoes da PF contra empresario",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T19:07:16.459Z",
-      "hora": "15h07"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Efetivo de guardas civis cresce 13% em dois anos e supera 100 mil agentes, diz estudo; apenas a PM tem tropa maior",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/efetivo-de-guardas-civis-cresce-diz-estudo.ghtml"
-        },
-        {
-          "veiculo": "g1",
-          "titulo": "Sergipe tem mais de 10 mil agentes de segurança pública na ativa, diz Fórum Brasileiro de Segurança Pública",
-          "link": "https://g1.globo.com/se/sergipe/noticia/2026/08/04/sergipe-tem-mais-de-10-mil-agentes-de-seguranca-publica-na-ativa-diz-forum-brasileiro-de-seguranca-publica.ghtml"
-        },
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Superávit dos EUA com Brasil cresce em junho; país é o 13º maior comprador",
-          "link": "https://www.infomoney.com.br/economia/superavit-dos-eua-com-brasil-cresce-em-junho-pais-e-o-13o-maior-comprador/"
-        }
-      ],
-      "link": "/materia/nc-efetivo-de-guardas-e-superavit-dos-eua-com-o-brasil-teriam-registrado-.html",
-      "corpo": [
-        "As publicações veiculariam dados sobre o crescimento do efetivo de guardas civis no país e sobre o comércio exterior. Segundo os relatos, o número de guardas municipais teria subido 13% em dois anos, superando 100 mil agentes. Com esse resultado, apenas a Polícia Militar teria uma tropa maior no território nacional. Em relação à segurança estadual, Sergipe contaria com mais de 10 mil agentes na at"
-      ],
-      "id": "circ:efetivo-de-guardas-e-superavit-dos-eua-com-o-brasil-teriam-registrado-",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Efetivo de guardas e superávit dos EUA com o Brasil teriam registrado alta",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T19:07:43.947Z",
-      "hora": "15h07"
+      "iso": "2026-08-04T19:45:43.225Z",
+      "hora": "15h45"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a informação é veiculada por dois veículos da imprensa.",
-        "Que as publicações apontam o Catar como fonte sobre os diálogos.",
-        "Que são citados avanços nas conversas e distribuição de rascunhos."
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que as manchetes divulgadas contêm exatamente o mesmo teor."
       ],
       "falta": [
-        "Confirmação oficial do governo do Catar sobre o teor divulgado.",
-        "Manifestação dos governos dos Estados Unidos e do Irã.",
-        "Divulgação da data e do conteúdo dos rascunhos citados."
+        "Manifestação de órgão oficial sobre a existência do procedimento.",
+        "Identificação oficial do homem e do advogado contratado.",
+        "Detalhamento sobre data, local ou número de processo."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Valor Econômico",
-          "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW1pMXdCUktaREszZm44Z3NlS3JuM1UtYjhoUGdJZWpNbHd0WWlBbjR4NXVtTWlqS1VZUWU1WGM4VU9yU0FaQmdwZjA3QmdxQlhBdWVqRmpuZXl6Nmp3blRud1lQQ1RadmE2R0FCOW1HNTRTbkliQWRZQS0xdUhMVU53emYwSUhjNjktcWRCWDhCdFRDNi1tVXlXUXlzb2hhOTl5anJWbmRJWXd4d2FvdGpR0gHAAUFVX3lxTE1FYXNPRG5JVC1EQ2NRcHpCTEJtc1FlWkItRVN0dGc3ZWZmTHRSdEs3bXFEdUIyTFVvTTF3VjRTRWR0cERTUG5Xemdxa29EVVhwdFI1c2lEajg1VnZ2WElYdDM2ZGZHVGREZXRWUlVkMEh4YWd1YjdPUFJnVmVlTEV2cWtLWmE5d0J5Qm5MUUpHOEN0R2Vka3pVUWwxZS1Sdzk4RnZkdG9hcm5NVlJmeXVjUmp4X2RWTHJVeFVhSnNQRw?oc=5"
+          "veiculo": "g1",
+          "titulo": "Vorcaro contrata novo advogado na tentativa de retomar negociação para fechar delação premiada",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/vorcaro-contrata-novo-advogado-na-tentativa-de-retomar-negociacao-para-fechar-delacao-premiada.ghtml"
         },
         {
-          "veiculo": "Estadão",
-          "titulo": "Rascunhos de um possível acordo entre EUA e Irã estão sendo distribuídos, afirma Catar",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTU1QandwNXpDNEZVUnJoTlVjM0EwUHVhX1N5WHJGUnNvUExLSWtjbnNjV0RrMkFlaDg5NjNJcXY4YTl0elFWODVEMEFLNmFMbExwdE1oSE9zakdNT1RVOFdXamduMUZHVWpNTWZ1cE5QOHFjaWFKS0FXZXRtLU9KY3BIRG5VZmhMUlkyNFJta2hjYkRtMkZ3RC1mNk9yZFJoV201STBDQU9naldsZXAxOVk1My1leUFnSmoxOGhfYkVENzZHSU04NzdjMNIB0AFBVV95cUxQZlNPeFVzMXlGc2ZKME1wNk1qMnhWcUk1eVd4NTZuTU1ia3J5NWttM2FmVU9fRDhCTGF2TTdFeVpiT3pmZzhwY1FxNGdVYnY4QUdPN3lMN3B4THpMM2ZwTUdlWVlCRTNsNUhPdk4zWWRhZ2NvOU54N3FkN2tsU1d5SGtWdmdlX0h5U0ZWd29sLWMxY0pRaVZlT2xhLU96ZW5hV1M5X0huTkR1V2ltcDV5MV9xdXQ5VEtTdTFqeS05ZDVhcGxwM3R2WWdBRzREcU13?oc=5"
+          "veiculo": "g1 Política",
+          "titulo": "Vorcaro contrata novo advogado na tentativa de retomar negociação para fechar delação premiada",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/vorcaro-contrata-novo-advogado-na-tentativa-de-retomar-negociacao-para-fechar-delacao-premiada.ghtml"
         }
       ],
-      "link": "/materia/nc-catar-teria-sinalizado-progresso-e-rascunhos-de-acordo-entre-eua-e-ira.html",
+      "link": "/materia/nc-homem-teria-contratado-novo-advogado-para-tentar-retomar-acordo-de-del.html",
       "corpo": [
-        "O governo do Catar teria afirmado a existência de avanços rumo a negociações entre os Estados Unidos e o Irã. A informação estaria sendo veiculada por meios de imprensa a partir de declarações atribuídas ao país árabe.",
-        "Segundo as publicações, rascunhos de um eventual acordo entre as duas nações já estariam sendo distribuídos. Os relatos divergem na abordagem principal, alternando entre a menção ao progresso diplomático e a circulação de documentos preliminares.",
-        "A eventual aproximação indicaria o início de tratativas formais para um entendimento entre os países envolvidos. O teor exato das conversas e a extensão dos papéis citados não foram especificados."
+        "Um homem teria contratado um novo advogado na tentativa de retomar negociações para fechar um acordo de delação premiada. A informação estaria sendo veiculada pela imprensa sem a existência de registros em fontes oficiais.",
+        "As publicações que divulgaram o caso apresentariam a mesma narrativa sobre a suposta contratação. Não existiriam detalhes sobre datas, locais ou órgãos citados nas manchetes veiculadas."
       ],
-      "id": "circ:catar-teria-sinalizado-progresso-e-rascunhos-de-acordo-entre-eua-e-ira",
-      "editoria": "internacional",
+      "id": "circ:homem-teria-contratado-novo-advogado-para-tentar-retomar-acordo-de-del",
+      "editoria": "brasil",
       "uf": null,
-      "titulo": "Catar teria sinalizado progresso e rascunhos de acordo entre EUA e Irã",
+      "titulo": "Homem teria contratado novo advogado para tentar retomar acordo de delação",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T19:08:05.196Z",
-      "hora": "15h08"
+      "iso": "2026-08-04T19:46:43.837Z",
+      "hora": "15h46"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
         "Que o assunto está sendo veiculado por dois veículos de imprensa.",
-        "Que as matérias mencionam Lula, Flávio Bolsonaro e o INSS."
+        "Que as chamadas tratam da campanha de Caiado e de Arnaldo Jardim."
       ],
       "falta": [
-        "Manifestação oficial de Lula ou do INSS sobre as acusações de fraudes.",
-        "Confirmação e justificativa oficial sobre a recusa dos políticos em participar de debates.",
-        "Apresentação de documentos ou provas que fundamentem as alegações citadas."
+        "Confirmação oficial por parte de Caiado ou de Arnaldo Jardim.",
+        "Esclarecimento sobre a função exata a ser ocupada na campanha."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Folha",
-          "titulo": "Campanha e aliados de Flávio elevam tom e ligam Lula a fraudes no INSS",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/08/campanha-e-aliados-de-flavio-elevam-tom-e-ligam-lula-a-fraudes-no-inss.shtml"
+          "veiculo": "Metrópoles",
+          "titulo": "Caiado anuncia Arnaldo Jardim para integrar coordenação da campanha",
+          "link": "https://www.metropoles.com/brasil/caiado-anuncia-arnaldo-jardim-para-integrar-coordenacao-da-campanha"
         },
         {
-          "veiculo": "JOTA",
-          "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/por-que-lula-e-flavio-evitam-debates"
+          "veiculo": "Poder360",
+          "titulo": "Arnaldo Jardim será coordenador de mobilização da campanha de Caiado",
+          "link": "https://www.poder360.com.br/poder-eleicoes-2026/arnaldo-jardim-sera-coordenador-de-mobilizacao-da-campanha-de-caiado/"
         }
       ],
-      "link": "/materia/nc-campanha-de-flavio-ligaria-lula-a-fraudes-e-candidatos-evitariam-debat.html",
+      "link": "/materia/nc-caiado-teria-anunciado-arnaldo-jardim-para-a-coordenacao-de-sua-campan.html",
       "corpo": [
-        "A campanha e aliados de Flávio teriam elevado o tom da disputa e estariam associando Lula a supostas fraudes no INSS. A alegação estaria sendo veiculada em matérias da imprensa.",
-        "Além disso, as publicações apontariam que tanto Lula quanto Flávio Bolsonaro estariam evitando participar de debates. A postura de ambos estaria associada a articulações de suas respectivas campanhas.",
-        "Não teriam sido apresentados dados detalhados sobre as acusações relativas ao órgão previdenciário nem justificativas formais sobre a ausência nos encontros. Os relatos limitar-se-iam às informações divulgadas pelas matérias."
+        "As publicações divergem sobre o papel exato a ser desempenhado. Enquanto uma das chamadas indica que ele integraria a coordenação da campanha, a outra aponta que ele seria o coordenador de mobilização.",
+        "Não haveria registro de confirmação oficial do anúncio até o momento. Detalhes sobre datas, locais ou pronunciamentos oficiais também não teriam sido divulgados."
       ],
-      "id": "circ:campanha-de-flavio-ligaria-lula-a-fraudes-e-candidatos-evitariam-debat",
+      "id": "circ:caiado-teria-anunciado-arnaldo-jardim-para-a-coordenacao-de-sua-campan",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Campanha de Flávio ligaria Lula a fraudes e candidatos evitariam debates",
+      "titulo": "Caiado teria anunciado Arnaldo Jardim para a coordenação de sua campanha",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T19:08:27.253Z",
-      "hora": "15h08"
+      "iso": "2026-08-04T19:47:37.522Z",
+      "hora": "15h47"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a informação está sendo publicada por dois veículos da imprensa.",
+        "Que as matérias atribuem ao TCU o envio de uma lista ao TSE.",
+        "Que a contagem mencionada envolve mais de 6 mil pessoas."
+      ],
+      "falta": [
+        "Manifestação ou confirmação oficial sobre a entrega por parte do TCU ou do TSE.",
+        "Data exata e registro formal de protocolo da entrega da lista.",
+        "Disponibilização pública da relação nominal mencionada nas matérias."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "g1",
+          "titulo": "TCU entrega ao TSE lista com mais de 6 mil pessoas que tiveram contas julgadas como irregulares nos últimos 8 anos",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/tcu-entrega-ao-tse-lista-com-mais-de-6-mil-pessoas-que-tiveram-contas-julgadas-como-irregulares-nos-ultimos-8-anos.ghtml"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "TCU entrega ao TSE lista com mais de 6 mil pessoas que tiveram contas julgadas como irregulares nos últimos 8 anos",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/tcu-entrega-ao-tse-lista-com-mais-de-6-mil-pessoas-que-tiveram-contas-julgadas-como-irregulares-nos-ultimos-8-anos.ghtml"
+        }
+      ],
+      "link": "/materia/nc-tcu-teria-entregue-ao-tse-lista-com-mais-de-6-mil-nomes-com-contas-irr.html",
+      "corpo": [
+        "O Tribunal de Contas da União teria entregue ao Tribunal Superior Eleitoral uma lista com pessoas que tiveram contas julgadas como irregulares. A medida envolveria decisões proferidas pelo órgão no período dos últimos 8 anos. A contagem somaria mais de 6 mil pessoas que teriam recebido julgamento desfavorável da corte de contas.",
+        "As publicações veiculadas sobre o tema apresentariam o mesmo teor em relação ao repasse da relação entre os órgãos. Os relatos indicariam que o documento reuniria dados acumulados ao longo do período citado. Não haveria divergências de informações entre os veículos que publicaram o conteúdo."
+      ],
+      "id": "circ:tcu-teria-entregue-ao-tse-lista-com-mais-de-6-mil-nomes-com-contas-irr",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "TCU teria entregue ao TSE lista com mais de 6 mil nomes com contas irregulares",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T19:48:33.542Z",
+      "hora": "15h48"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a notícia é veiculada por dois veículos de imprensa.",
+        "Que o relato menciona a ida de um goleiro ao Colo-Colo."
+      ],
+      "falta": [
+        "Confirmação oficial emitida pela direção do Colo-Colo.",
+        "Manifestação direta registrada do atleta sobre o acordo.",
+        "Registro formal ou contrato publicado pelas partes envolvidas."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "Destaque da Copa, Vozinha é apresentado como novo goleiro do Colo-Colo",
+          "link": "https://www.metropoles.com/esportes/destaque-da-copa-vozinha-e-apresentado-como-novo-goleiro-do-colo-colo"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Apresentado, Vozinha revela motivo de escolher Colo-Colo: &#8220;Maior do Chile&#8221;",
+          "link": "https://www.cnnbrasil.com.br/esportes/futebol/futebol-internacional/apresentado-vozinha-revela-motivo-de-escolher-colo-colo-maior-do-chile/"
+        }
+      ],
+      "link": "/materia/nc-goleiro-destaque-de-copa-teria-sido-apresentado-pelo-colo-colo.html",
+      "corpo": [
+        "Um goleiro apontado como destaque de uma Copa teria sido apresentado como novo reforço do Colo-Colo. A alegação estaria circulando na imprensa sem confirmação em canais oficiais.",
+        "As publicações acrescentariam que o atleta teria explicado a escolha pelo clube. Ele teria afirmado que consideraria a equipe a maior do Chile."
+      ],
+      "id": "circ:goleiro-destaque-de-copa-teria-sido-apresentado-pelo-colo-colo",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Goleiro destaque de Copa teria sido apresentado pelo Colo-Colo",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T19:49:28.229Z",
+      "hora": "15h49"
     }
   ],
   "pautas": [
@@ -1469,7 +1513,7 @@
       "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 9,
+      "quentura": 10,
       "tambemEm": [
         "BBC Brasil",
         "Congresso em Foco",
@@ -1480,11 +1524,11 @@
       "titulo": "Flávio Bolsonaro diz que definição sobre vice sairá até o dia 15 de agosto",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 5,
       "tambemEm": [
         "Congresso em Foco",
-        "JOTA",
-        "Estadão"
+        "Folha",
+        "JOTA"
       ]
     },
     {
@@ -1505,7 +1549,36 @@
       "tambemEm": [
         "Congresso em Foco",
         "JOTA",
-        "correiobraziliense.com.br"
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
+      "veiculo": "estadao.com.br",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Política",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "PL define chapa pura no RJ após desembarque em palanque de Flávio Bolsonaro",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Podemos opta pela neutralidade e Renata Abreu não será vice de Flávio Bolsonaro",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "estadao.com.br"
       ]
     },
     {
@@ -1529,24 +1602,6 @@
       ]
     },
     {
-      "titulo": "Efetivo de guardas civis cresce 13% em dois anos e supera 100 mil agentes, diz estudo; apenas a PM tem tropa maior",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
-      "veiculo": "Valor Econômico",
-      "quentura": 2,
-      "tambemEm": [
-        "Estadão"
-      ]
-    },
-    {
       "titulo": "O embate entre Lula e Flávio Bolsonaro no Pará, segundo o Real Time Big Data",
       "veiculo": "CartaCapital",
       "quentura": 2,
@@ -1556,16 +1611,7 @@
       ]
     },
     {
-      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
-      "veiculo": "Estadão",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Sergipe tem mais de 10 mil agentes de segurança pública na ativa, diz Fórum Brasileiro de Segurança Pública",
+      "titulo": "Vorcaro contrata novo advogado na tentativa de retomar negociação para fechar delação premiada",
       "veiculo": "g1",
       "editoria": "brasil",
       "quentura": 1,
@@ -1574,17 +1620,26 @@
       ]
     },
     {
-      "titulo": "Campanha e aliados de Flávio elevam tom e ligam Lula a fraudes no INSS",
-      "veiculo": "Folha",
+      "titulo": "Vorcaro contrata novo advogado na tentativa de retomar negociação para fechar delação premiada",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "JOTA"
+        "g1"
       ]
     },
     {
-      "titulo": "Lula conversa com Putin e discute fornecimento de diesel e fertilizantes",
-      "veiculo": "Folha",
+      "titulo": "Caiado anuncia Arnaldo Jardim para integrar coordenação da campanha",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "TCU entrega ao TSE lista com mais de 6 mil pessoas que tiveram contas julgadas como irregulares nos últimos 8 anos",
+      "veiculo": "g1",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
@@ -1592,47 +1647,39 @@
       ]
     },
     {
-      "titulo": "Entenda liberdade provisória de jogador do São Paulo após acidente",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Lulinha entra no centro de quatro investigações da Polícia Federal",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Flávio Dino autoriza terceiro inquérito da PF contra Lulinha",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Em telefonema, Lula e Putin falam em aumentar comércio bilateral e discutem guerra da Ucrânia",
+      "titulo": "TCU entrega ao TSE lista com mais de 6 mil pessoas que tiveram contas julgadas como irregulares nos últimos 8 anos",
       "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "Folha"
+        "g1"
       ]
     },
     {
-      "titulo": "Rascunhos de um possível acordo entre EUA e Irã estão sendo distribuídos, afirma Catar",
-      "veiculo": "Estadão",
+      "titulo": "Destaque da Copa, Vozinha é apresentado como novo goleiro do Colo-Colo",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "CNN Brasil"
+      ]
+    },
+    {
+      "titulo": "Putin agradece esforços de Lula para solucionar guerra da Ucrânia",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
         "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Lava Jato: CNJ tem três votos para afastar juíza Gabriela Hardt do cargo por dois anos",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Política"
       ]
     }
   ]
