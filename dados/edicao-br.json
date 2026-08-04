@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T20:09:49.195Z",
+  "gerado": "2026-08-04T20:46:05.836Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 212,
-    "fonteLivre": 61,
-    "confirmadas": 20,
+    "pauta": 211,
+    "fonteLivre": 53,
+    "confirmadas": 15,
     "publicadas": 13,
     "resgatadas": 0,
-    "semFonte": 36
+    "semFonte": 41
   },
   "fontes": {
-    "checadas": 95,
-    "responderam": 54,
-    "entregando": 29,
-    "itens": 269,
+    "checadas": 98,
+    "responderam": 40,
+    "entregando": 28,
+    "itens": 260,
     "lista": [
       {
         "tipo": "pauta",
@@ -28,8 +28,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
+        "id": "cnn",
+        "nome": "CNN Brasil",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,8 +73,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,17 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -118,8 +109,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "congresso",
-        "nome": "Congresso em Foco",
+        "id": "g1",
+        "nome": "g1",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -136,8 +127,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "cnn",
-        "nome": "CNN Brasil",
+        "id": "congresso",
+        "nome": "Congresso em Foco",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -162,10 +162,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 10,
+        "tipo": "resgate",
+        "id": "estadao",
+        "nome": "Estadão",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -207,28 +207,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "g1economia",
         "nome": "g1 Economia",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
-        "itens": 7,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -238,6 +220,24 @@
         "id": "ab-economia",
         "nome": "Agência Brasil",
         "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-politica",
+        "nome": "Agência Brasil",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unesp",
+        "nome": "Jornal da Unesp",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -255,15 +255,6 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "unesp",
-        "nome": "Jornal da Unesp",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -298,8 +289,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -307,8 +298,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,30 +361,21 @@
       },
       {
         "tipo": "livre",
-        "id": "senado",
-        "nome": "Agência Senado",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "camara",
         "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 405"
       },
       {
         "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
+        "id": "senado",
+        "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -406,17 +388,26 @@
       },
       {
         "tipo": "livre",
-        "id": "tse",
-        "nome": "TSE",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "tse",
+        "nome": "TSE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -474,7 +465,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -483,7 +474,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -492,7 +483,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -514,6 +505,15 @@
       },
       {
         "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -528,7 +528,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -537,7 +537,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -546,7 +546,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -559,39 +559,12 @@
       },
       {
         "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "cgu",
         "nome": "CGU",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -600,7 +573,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "icmbio",
+        "nome": "ICMBio",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -609,34 +609,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
+        "id": "fazenda",
+        "nome": "Ministério da Fazenda",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -645,7 +627,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -653,44 +644,26 @@
         "nome": "Ministério dos Transportes",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "fazenda",
-        "nome": "Ministério da Fazenda",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -699,7 +672,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "anvisa",
+        "nome": "Anvisa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -708,7 +690,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -716,26 +716,8 @@
         "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "itamaraty",
-        "nome": "Itamaraty",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "antt",
-        "nome": "ANTT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -743,8 +725,8 @@
         "nome": "TCU",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -753,7 +735,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "antt",
+        "nome": "ANTT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "itamaraty",
+        "nome": "Itamaraty",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -771,34 +771,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "defesa",
-        "nome": "Ministério da Defesa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -811,21 +784,48 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "govbr",
         "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "planalto",
+        "nome": "Planalto",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "agu",
+        "nome": "AGU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "cvm",
+        "nome": "CVM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -843,7 +843,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -852,7 +852,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -870,23 +870,115 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "tse",
+        "nome": "TSE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "stf",
+        "nome": "STF",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
   "cidades": [],
   "itens": [
     {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por inteligência artificial",
+      "resumo": "Estudo revela que as tecnologias são direcionadas para monitorar a oposição e protestos, e não para reduzir os índices de criminalidade.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
+      "origemNome": "Global Voices",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais apontou que 11 governos africanos gastaram mais de US$ 2 bilhões em sistemas de vigilância baseados em inteligência artificial. A Nigéria respondeu por mais de US$ 470 milhões desse total.",
+        "Os pacotes de vigilância incluem câmeras de alta definição, leitores de placas, reconhecimento facial e camadas de identificação biométrica reunidos em salas de controle. O fornecimento e o financiamento das tecnologias vêm principalmente de empresas e bancos chineses, além de empresas israelenses.",
+        "Embora a justificativa dos governos seja o combate ao crime, os números de criminalidade não estão caindo. Pesquisadores do IDS identificaram que a infraestrutura é instalada prioritariamente em locais de organização de partidos de oposição, pontos de protesto e áreas onde a imprensa atua.",
+        "A inteligência artificial transformou dados já coletados pelo Estado, como registros de comunicações, impostos e contas bancárias, em arquivos rapidamente consultáveis. A presença dessa vigilância atua de forma preventiva ao gerar a consciência de monitoramento na população."
+      ],
+      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel.html",
+      "iso": "2026-08-03T11:47:40.000Z",
+      "hora": "07h47",
+      "original": true,
+      "contexto": "Esta é a segunda vez que o tema do gasto de governos africanos em vigilância por inteligência artificial é registrado no histórico, após publicação em 3 de agosto de 2026. Do montante de mais de US$ 2 bilhões aplicado por 11 países, a Nigéria respondeu por mais de US$ 470 milhões. O monitoramento afeta a população de forma geral e atinge prioritariamente locais de organização da oposição, pontos de protesto e áreas.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.unesp.br/wp-content/uploads/2026/08/Ceuta2capa.jpg",
+      "fotoAlt": "Ceuta2capa",
+      "fotoLarg": 554,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:entre-50-e-60-mil-migrantes-atravessam-a-fronteira-em-ceuta-em-apenas-",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Entre 50 e 60 mil migrantes atravessam a fronteira em Ceuta em apenas dois dias",
+      "resumo": "A movimentação registrada entre 30 e 31 de julho no território espanhol no Norte da África deixou dezenas de mortos e resultou em centenas de atendimentos médicos.",
+      "fonte": "Meridiano, com informações de Jornal da Unesp",
+      "origemLink": "https://jornal.unesp.br/2026/08/04/crise-em-ceuta-evidencia-necessidade-de-rever-politicas-de-migracao-avalia-pesquisador-da-unesp/",
+      "origemNome": "Jornal da Unesp",
+      "pautadoPor": [
+        "Poder360",
+        "CartaCapital"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "Entre 30 e 31 de julho, estima-se que entre 50 e 60 mil migrantes atravessaram a fronteira do Marrocos em direção a Ceuta, território espanhol no Norte da África e integrante da União Europeia. A maioria era composta por marroquinos, além de pessoas oriundas de países da África Subsaariana e um número expressivo de menores desacompanhados. A travessia foi realizada a nado ou com o uso de boias e objetos improvisados, resultando em dezenas de mortes e centenas de atendimentos médicos.",
+        "A crise esteve associada à circulação de informações distorcidas em redes sociais sobre um processo de regularização migratória iniciado na Espanha em janeiro de 2026, sob o governo do primeiro-ministro Pedro Sánchez. De acordo com o doutorando Lucas Damasceno Tomazella, do Programa de Pós-Graduação em Relações Internacionais San Tiago Dantas, vinculado ao Instituto de Políticas Públicas e Relações Internacionais (IPPRI) da Unesp, organizações envolvidas no tráfico de pessoas exploraram essas interpretações para incentivar a travessia. Parte da imprensa internacional atribuiu o episódio à redução da fiscalização marroquina, hipótese rejeitada pelo governo do Marrocos.",
+        "O fluxo migratório também é motivado por conflitos armados, instabilidade política, impactos das mudanças climáticas, desemprego elevado entre jovens e desigualdades socioeconômicas no Marrocos e em outras regiões do continente africano. Como resposta, Pedro Sánchez reforçou o controle da fronteira, ampliou a cooperação com o Marrocos e defendeu o retorno dos migrantes que ingressaram em Ceuta, enquanto governos europeus liderados por grupos de extrema-direita responsabilizaram as políticas migratórias espanholas pelo ocorrido.",
+        "Segundo Tomazella, os desafios migratórios atuais possuem raízes históricas ligadas a processos de colonização e exploração. O pesquisador indica que o controle de fronteiras e o combate ao tráfico de pessoas, quando aplicados isoladamente, administram as consequências da migração sem resolver suas causas, exigindo a combinação de gestão de fronteiras, cooperação internacional, desenvolvimento e ampliação de oportunidades nos países de origem."
+      ],
+      "link": "/materia/entre-50-e-60-mil-migrantes-atravessam-a-fronteira-em-ceuta-em-apenas-.html",
+      "iso": "2026-08-04T20:17:20.000Z",
+      "hora": "16h17",
+      "original": true,
+      "contexto": "A travessia afeta marroquinos, pessoas oriundas da África Subsaariana e menores desacompanhados. O histórico do MERIDIANO registra um caso semelhante ocorrido em 1º de agosto de 2026. O processo de regularização migratória mencionado na matéria foi iniciado na Espanha em janeiro de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
       "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outros",
+      "id": "ilm:pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outras-pes",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Pessoa nascida apátrida relata medo de coisas naturais para outros",
-      "resumo": "A declaração reflete a experiência de ter nascido sem nacionalidade.",
+      "titulo": "Pessoa nascida apátrida relata medo de coisas naturais para outras pessoas",
+      "resumo": "O depoimento aborda a jornada de um viajante sem nacionalidade.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
       "origemNome": "Global Voices (EN)",
@@ -894,11 +986,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Uma pessoa declarou ter aprendido a temer coisas que vêm naturalmente para outros indivíduos por ter nascido apátrida.",
-        "A afirmação relata a vivência de alguém que nasceu sem o reconhecimento de uma nacionalidade.",
-        "O depoimento associa a condição de apátrida ao desenvolvimento de temores sobre situações que acontecem naturalmente com outras pessoas."
+        "Uma pessoa que nasceu apátrida afirmou ter aprendido a temer situações que ocorrem de forma natural para outros indivíduos.",
+        "A declaração faz parte de um relato sobre a vivência de um viajante sem pátria.",
+        "A publicação foi divulgada pela fonte Global Voices."
       ],
-      "link": "/materia/pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outros.html",
+      "link": "/materia/pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outras-pes.html",
       "iso": "2026-08-04T07:37:20.000Z",
       "hora": "03h37",
       "original": true,
@@ -907,33 +999,68 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
+      "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:onze-governos-africanos-gastaram-mais-de-us-2-bilhoes-em-vigilancia-po",
+      "id": "ilm:republicanos-declara-neutralidade-e-nao-lancara-candidato-a-presidenci",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Onze governos africanos gastaram mais de US$ 2 bilhões em vigilância por IA",
-      "resumo": "Pesquisa indica que as câmeras foram instaladas em locais de atuação da oposição e de protestos, sem redução nos índices de criminalidade.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
-      "origemNome": "Global Voices",
+      "titulo": "Republicanos declara neutralidade e não lançará candidato à Presidência da República",
+      "resumo": "Com a adoção da independência institucional, os diretórios regionais do partido poderão formar as coligações que quiserem sem orientação nacional.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1",
+        "CNN Brasil",
+        "g1 Política",
+        "estadao.com.br"
+      ],
+      "quentura": 4,
+      "uf": null,
+      "corpo": [
+        "O partido Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também definiu que não lançará um nome para a disputa e adotará uma posição de independência institucional.",
+        "Em nota, a sigla explicou a decisão com base no respeito às alianças estaduais e na sua presença significativa em diversos estados. O texto informou que essa capilaridade impõe o dever de considerar as particularidades de cada estado e as composições políticas construídas nos últimos anos.",
+        "Dessa forma, os diretórios regionais do partido poderão realizar a coligação que quiserem, sem a necessidade de seguir uma orientação vinda do diretório nacional.",
+        "A agremiação realizou sua convenção nacional no período da manhã. A nota oficial com a decisão sobre a neutralidade na corrida presidencial foi publicada no site da legenda antes do início do evento."
+      ],
+      "link": "/materia/republicanos-declara-neutralidade-e-nao-lancara-candidato-a-presidenci.html",
+      "iso": "2026-08-04T16:57:00.000Z",
+      "hora": "12h57",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:usp-promove-roda-de-conversa-sobre-agroecologia-e-agricultura-familiar",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "USP promove roda de conversa sobre agroecologia e agricultura familiar",
+      "resumo": "Evento gratuito do Cemiti e da FFCLRP será realizado no dia 29 de agosto, a partir das 9h30, no Anfiteatro Lucien Lison.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/roda-de-conversa-discutira-o-desenvolvimento-rural-agricultura-familiar-e-politicas-publicas/",
+      "origemNome": "Jornal da USP",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Um estudo de março de 2026, realizado pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais, apontou que onze governos africanos gastaram mais de US$ 2 bilhões em sistemas de vigilância operados por inteligência artificial. A Nigéria foi responsável por mais de US$ 470 milhões do valor total.",
-        "Os sistemas incluem câmeras CCTV de alta definição, leitores de placas, reconhecimento facial, identificação biométrica e salas de controle. A tecnologia é fornecida e financiada por empresas e bancos chineses, além de sistemas vindos de empresas israelenses.",
-        "Apesar de a justificativa oficial ser o combate ao crime, os números da criminalidade não caíram. Os pesquisadores do IDS identificaram poucas evidências de redução de crimes e constataram a concentração de equipamentos em bairros onde a oposição se organiza, onde ocorreram protestos e onde a imprensa atua.",
-        "A inteligência artificial transformou dados já coletados pelo Estado há décadas — como registros bancários e de comunicações — em arquivos consultáveis em segundos. As ferramentas permitem cruzar nomes, históricos de transações e padrões de viagem de forma contínua."
+        "O Centro de Mindfulness e Terapias Integrativas da Escola de Enfermagem de Ribeirão Preto da USP realiza no dia 29 de agosto, a partir das 9h30, a roda de conversa Agroecologia: Cultivando a Terra e o Ser. O evento tem o apoio da Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto da USP e ocorrerá no Anfiteatro Lucien Lison.",
+        "A atividade é gratuita e faz parte da série Diálogos que Transformam, criada em comemoração aos dez anos do Cemiti. As inscrições podem ser feitas por meio de link disponibilizado pelos organizadores.",
+        "O encontro reunirá agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural. Os participantes discutirão conhecimentos técnicos e saberes ancestrais no futuro da agricultura familiar e no equilíbrio entre seres humanos e a natureza. O engenheiro agrônomo Claudio Nadaleto está entre os participantes confirmados."
       ],
-      "link": "/materia/onze-governos-africanos-gastaram-mais-de-us-2-bilhoes-em-vigilancia-po.html",
-      "iso": "2026-08-03T11:47:40.000Z",
-      "hora": "07h47",
+      "link": "/materia/usp-promove-roda-de-conversa-sobre-agroecologia-e-agricultura-familiar.html",
+      "iso": "2026-08-04T18:51:56.000Z",
+      "hora": "14h51",
       "original": true,
-      "contexto": "Os equipamentos de vigilância afetam moradores de bairros onde a oposição se organiza, onde ocorrem protestos e onde a imprensa atua. Do valor total de mais de US$ 2 bilhões investidos pelos onze países africanos, a Nigéria respondeu por mais de US$ 470 milhões.",
+      "contexto": "A roda de conversa está marcada para o dia 29 de agosto, a partir das 9h30, no Anfiteatro Lucien Lison. O encontro é voltado para agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -943,11 +1070,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lingua-kam-no-nordeste-da-nigeria-nao-teve-atencao-de-pesquisadores-an",
+      "id": "ilm:lingua-kam-na-nigeria-tem-entre-aproximadamente-8-000-e-11-000-falante",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Língua Kam no nordeste da Nigéria não teve atenção de pesquisadores antes de 2016",
-      "resumo": "O número atual de falantes do idioma Kam é de aproximadamente 8.000 a 11.000 pessoas.",
+      "titulo": "Língua Kam na Nigéria tem entre aproximadamente 8.000 e 11.000 falantes",
+      "resumo": "O idioma localizado no nordeste do país não recebeu atenção de pesquisadores antes de 2016, a exemplo de outras línguas da região.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
@@ -955,11 +1082,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A língua Kam, falada no nordeste da Nigéria, não recebeu atenção de pesquisadores antes do ano de 2016.",
-        "Atualmente, o número de falantes da língua Kam é de aproximadamente 8.000 a 11.000.",
-        "A ausência de atenção por parte de pesquisadores antes de 2016 também afetou muitas outras línguas localizadas no nordeste da Nigéria."
+        "A língua Kam possui atualmente um número de falantes de aproximadamente 8.000 – 11.000 pessoas. O idioma é falado no nordeste da Nigéria.",
+        "Antes de 2016, a língua Kam não recebeu atenção por parte de pesquisadores.",
+        "A ausência de atenção de pesquisadores antes do ano de 2016 também ocorreu com muitas outras línguas do nordeste da Nigéria."
       ],
-      "link": "/materia/lingua-kam-no-nordeste-da-nigeria-nao-teve-atencao-de-pesquisadores-an.html",
+      "link": "/materia/lingua-kam-na-nigeria-tem-entre-aproximadamente-8-000-e-11-000-falante.html",
       "iso": "2026-08-03T05:38:53.000Z",
       "hora": "01h38",
       "original": true,
@@ -973,64 +1100,32 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:cemiti-realiza-roda-de-conversa-sobre-agroecologia-e-agricultura-famil",
+      "id": "ilm:cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juize",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Cemiti realiza roda de conversa sobre agroecologia e agricultura familiar",
-      "resumo": "O evento gratuito ocorre no dia 29 de agosto, no Anfiteatro Lucien Lison, e celebra os dez anos do centro pertencente à USP.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/roda-de-conversa-discutira-o-desenvolvimento-rural-agricultura-familiar-e-politicas-publicas/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Centro de Mindfulness e Terapias Integrativas (Cemiti) da Escola de Enfermagem de Ribeirão Preto (EERP) da USP promove, no dia 29 de agosto, a partir das 9h30, a roda de conversa com o tema Agroecologia: Cultivando a Terra e o Ser.",
-        "O encontro tem entrada gratuita e será realizado no Anfiteatro Lucien Lison, na Faculdade de Filosofia, Ciências e Letras (FFCLRP) da USP, instituição que apoia o evento. A atividade integra a série Diálogos que Transformam, alusiva aos dez anos do Cemiti.",
-        "A programação reunirá agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural. O objetivo é discutir conhecimentos técnicos e saberes ancestrais no futuro da agricultura familiar e no equilíbrio entre seres humanos e natureza.",
-        "Entre os participantes do evento estará o engenheiro agrônomo Claudio Nadaleto. As inscrições podem ser feitas por meio de link."
-      ],
-      "link": "/materia/cemiti-realiza-roda-de-conversa-sobre-agroecologia-e-agricultura-famil.html",
-      "iso": "2026-08-04T18:51:56.000Z",
-      "hora": "14h51",
-      "original": true,
-      "contexto": "O encontro está agendado para o dia 29 de agosto, às 9h30, no Anfiteatro Lucien Lison da USP. A atividade é voltada para agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:cnj-aprova-fim-da-aposentadoria-compulsoria-e-preve-perda-de-cargo-par",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "CNJ aprova fim da aposentadoria compulsória e prevê perda de cargo para juízes",
-      "resumo": "A medida atinge magistrados que cometerem infrações graves, como venda de sentenças e assédio, e segue determinação do Supremo Tribunal Federal.",
+      "titulo": "CNJ acaba com aposentadoria compulsória como punição máxima para juízes",
+      "resumo": "Com a nova regra, o magistrado poderá perder o cargo em casos de infrações graves, conforme procedimento que segue decisão do Supremo Tribunal Federal.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juiz",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
         "g1 Política",
-        "Poder360",
         "JOTA",
         "Migalhas"
       ],
-      "quentura": 4,
+      "quentura": 3,
       "uf": null,
       "corpo": [
-        "O Conselho Nacional de Justiça (CNJ) aprovou nesta terça-feira (4) o fim da aposentadoria compulsória e a previsão da perda de cargo como punição disciplinar máxima para juízes que cometerem infrações graves, como venda de sentenças, assédio sexual e moral, entre outras.",
-        "Pela nova resolução disciplinar, em caso de condenação em Processo Administrativo Disciplinar (PAD), o juiz poderá ser colocado em disponibilidade para a perda do cargo. Contudo, a eventual exoneração, sem vencimentos, somente poderá ser determinada por decisão judicial, após a abertura de ação pela Advocacia-Geral da União (AGU), conforme procedimento fixado pelo Supremo Tribunal Federal (STF).",
-        "Durante a votação, o presidente do CNJ, ministro Edson Fachin, declarou que a decisão representa \"uma mudança significativa na forma de enxergar e tratar essa questão\" e que o assunto é trabalhado \"com atenção, levando em conta os desafios e as complexidades que ele apresenta\".",
-        "Criado em 2005 para o julgamento de faltas disciplinares de juízes e desembargadores, o CNJ baseava-se na Lei Orgânica da Magistratura Nacional (Loman), que previa a aposentadoria compulsória com vencimentos proporcioneis ao tempo de serviço como a punição mais grave. Em 20 anos, o conselho condenou 126 magistrados a essa pena, mantendo o recebimento mensal dos valores até a decisão do Supremo."
+        "O Conselho Nacional de Justiça (CNJ) aprovou nesta terça-feira (4) o fim da aposentadoria compulsória e estabeleceu a perda do cargo como a punição disciplinar máxima para juízes que cometerem infrações graves, como venda de sentenças e assédio sexual ou moral.",
+        "Pela nova resolução, em caso de condenação em Processo Administrativo Disciplinar (PAD), o magistrado poderá ser colocado em disponibilidade para a perda do cargo. A exoneração definitiva depende de decisão judicial a partir de ação a ser movida pela Advocacia-Geral da União (AGU), seguindo entendimento do Supremo Tribunal Federal (STF).",
+        "O CNJ foi criado em 2005 para julgar faltas disciplinares de juízes e desembargadores, aplicando as penas previstas na Lei Orgânica da Magistratura Nacional (Loman). Em 20 anos de atuação, o órgão aplicou a punição de aposentadoria compulsória a 126 magistrados, que mantinham o recebimento proporcional de seus vencimentos mensais.",
+        "Durante a votação, o presidente do CNJ, ministro Edson Fachin, afirmou que a medida representa uma mudança significativa na forma de tratar a questão e que o tema é trabalhado com atenção ao considerar seus desafios e complexidades."
       ],
-      "link": "/materia/cnj-aprova-fim-da-aposentadoria-compulsoria-e-preve-perda-de-cargo-par.html",
+      "link": "/materia/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juize.html",
       "iso": "2026-08-04T18:13:00.000Z",
       "hora": "14h13",
       "original": true,
-      "contexto": null,
+      "contexto": "A medida afeta magistrados que cometerem infrações graves, como venda de sentenças e assédio moral ou sexual. Desde a criação do CNJ em 2005, a pena de aposentadoria compulsória havia sido aplicada a 126 juízes. A próxima etapa para a perda definitiva do cargo exige uma ação judicial a ser movida pela Advocacia-Geral da União.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1044,22 +1139,20 @@
       "chapeu": "Nosso texto",
       "editoria": "brasil",
       "titulo": "Moraes concede cinco dias para PGR se manifestar sobre recurso de Bolsonaro",
-      "resumo": "O ex-presidente questiona a proibição de receber visitas por 30 dias na prisão domiciliar, medida adotada após a divulgação de uma carta nas redes sociais.",
+      "resumo": "O ex-presidente recorre contra a proibição de receber visitas na prisão domiciliar, medida imposta após a divulgação de uma carta em redes sociais.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/moraes-pede-parecer-da-pgr-sobre-proibicao-de-visitas-bolsonaro",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Exame",
-        "g1 Política",
-        "InfoMoney"
+        "g1 Política"
       ],
-      "quentura": 3,
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), deu prazo de cinco dias para a Procuradoria-Geral da República (PGR) se manifestar sobre o recurso do ex-presidente Jair Bolsonaro. A ação da defesa contesta a decisão que o proibiu de receber visitas na prisão domiciliar pelo período de 30 dias.",
-        "A medida foi determinada no mês passado por Alexandre de Moraes, depois que o senador Flávio Bolsonaro (PL-RJ) publicou nas redes sociais uma carta escrita pelo ex-presidente. Jair Bolsonaro possui uma restrição que o proíbe de utilizar a internet, inclusive por intermédio de terceiros.",
-        "Na decisão, Moraes também proibiu o ex-presidente de receber visitas com finalidade político-eleitoral até o fim das eleições de outubro e de divulgar manifestos político-eleitorais. No recurso ao STF, a defesa sustenta que Bolsonaro não pode ter suas liberdades de pensamento e de manifestação de ideias restringidas devido à sua condenação.",
-        "No ano passado, Jair Bolsonaro foi condenado a 27 anos e três meses de prisão no processo de trama golpista. Após realizar uma cirurgia, obteve o direito de cumprir a pena em prisão domiciliar para se recuperar de uma pneumonia bacteriana."
+        "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), deu prazo de cinco dias para a Procuradoria-Geral da República (PGR) se manifestar sobre o recurso do ex-presidente Jair Bolsonaro. A defesa contesta a decisão que o proibiu de receber visitas na prisão domiciliar pelo período de 30 dias.",
+        "A medida foi determinada no mês passado por Moraes, depois que o senador Flávio Bolsonaro (PL-RJ) publicou em redes sociais uma carta redigida pelo ex-presidente. Jair Bolsonaro tem uma restrição que o proíbe de usar a internet, inclusive por meio de terceiros. A decisão também veda visitas com finalidade político-eleitoral até o fim das eleições de outubro e a divulgação de manifestos político-eleitorais.",
+        "No recurso apresentado ao STF, a defesa sustenta que o ex-presidente não pode ter suas liberdades de pensamento e de manifestação de ideias restringidas em função de sua condenação.",
+        "No ano passado, Jair Bolsonaro foi condenado a 27 anos e três meses de prisão no processo de trama golpista. Ele obteve o direito de cumprir prisão domiciliar para se recuperar de uma pneumonia bacteriana após passar por uma cirurgia."
       ],
       "link": "/materia/moraes-concede-cinco-dias-para-pgr-se-manifestar-sobre-recurso-de-bols.html",
       "iso": "2026-08-04T18:30:00.000Z",
@@ -1075,62 +1168,28 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:republicanos-anuncia-independencia-e-nao-apoiara-candidato-a-presidenc",
+      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Republicanos anuncia independência e não apoiará candidato à Presidência da República",
-      "resumo": "Partido também não lançará nome próprio para a disputa e liberará diretórios regionais para realizarem as coligações que quiserem.",
+      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
+      "resumo": "O resultado representa a segunda queda seguida do indicador, que acumula perda de 2,7% entre maio e junho deste ano.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "Estadão"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "O partido Republicanos anunciou nesta terça-feira (4) que adotará uma posição de independência institucional e não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também confirmou que não lançará um nome para a disputa nacional.",
-        "Em nota divulgada em seu site, o partido justificou a decisão no respeito às alianças estaduais. O texto explicou que a presença da sigla nos estados exige considerar as particularidades locais e as composições políticas construídas ao longo dos últimos anos.",
-        "Com a determinação, os diretórios regionais do partido têm permissão para realizar as coligações que desejarem, sem a necessidade de seguir uma orientação do diretório nacional.",
-        "O comunicado oficial com a decisão foi publicado na página do partido antes mesmo do início da sua convenção nacional, realizada no período da manhã."
-      ],
-      "link": "/materia/republicanos-anuncia-independencia-e-nao-apoiara-candidato-a-presidenc.html",
-      "iso": "2026-08-04T16:57:00.000Z",
-      "hora": "12h57",
-      "original": true,
-      "contexto": "A decisão afeta os diretórios regionais do Republicanos, que passam a ter permissão para fazer as coligações locais que desejarem sem seguir orientação do diretório nacional. O anúncio oficial do partido foi publicado antes do início da convenção nacional da legenda, realizada na manhã de terça-feira.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2022/10/20221024_cinema_vazio.jpg",
-      "fotoAlt": "Projeto CineCiência traz filme &quot;A Origem&quot; nesta semana - Foto: Reprodução/Freepik",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:cine-cult-usp-exibe-gratuitamente-o-filme-manas-de-mariana-brennand",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Cine Cult USP exibe gratuitamente o filme Manas de Mariana Brennand",
-      "resumo": "Sessão ocorre no Teatro do Campus em Ribeirão Preto e inclui debate com a psicanalista Cenise Monte Vicente sem necessidade de inscrição.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/cine-cult-usp-exibe-filme-manas-de-mariana-brennand/",
-      "origemNome": "Jornal da USP",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Cine Cult USP exibe o filme Manas, dirigido por Mariana Brennand, no dia 12 de agosto, a partir das 19h. A exibição acontece no Teatro do Campus, localizado no Campus Ribeirão Preto, com entrada gratuita e sem a necessidade de inscrição prévia.",
-        "Após a exibição da obra, será realizado um debate com Cenise Monte Vicente. Ela é psicanalista e participante de conselhos de defesa de direitos humanos e da criança e do adolescente. A iniciativa é coordenada por psicólogos.",
-        "Lançado em 2025, o filme narra a história de Marcielle, uma jovem de 13 anos moradora da Ilha de Marajó. A personagem cresce idealizando a irmã mais velha, que deixou a comunidade ribeirinha para construir uma nova vida em busca de liberdade.",
-        "Ao amadurecer, Marcielle passa a enxergar as realidades da região e as agressões veladas que cercam a própria família. Ao notar que sua irmã mais nova corre o risco de seguir o mesmo caminho, ela decide enfrentar as estruturas e romper o ciclo de opressão para proteger a si e a quem ama."
+        "A produção industrial brasileira registrou queda de 1,8% em junho deste ano na comparação com o mês anterior. Os dados da Pesquisa Industrial Mensal foram divulgados nesta terça-feira pelo Instituto Brasileiro de Geografia e Estatística (IBGE).",
+        "Esta é a segunda queda consecutiva do indicador, que já havia recuado 0,9% de abril para maio. Segundo o gerente da pesquisa, André Macedo, a perda acumulada de 2,7% nesses dois meses eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026.",
+        "Na média móvel trimestral, houve retração de 0,5%. Na comparação com junho do ano passado, a indústria apresentou crescimento de 1,7%. Com o resultado, a produção industrial acumula altas de 1,5% no ano e de 0,7% em 12 meses.",
+        "Na passagem de maio para junho, 16 dos 25 ramos pesquisados registraram queda. Todas as quatro grandes categorias econômicas apresentaram resultado negativo, com recuos de 4,1% nos bens de consumo semi e não duráveis, 3,2% nos bens de consumo duráveis, e 1,1% tanto em bens de capital quanto em bens intermediários."
       ],
-      "link": "/materia/cine-cult-usp-exibe-gratuitamente-o-filme-manas-de-mariana-brennand.html",
-      "iso": "2026-08-04T18:31:42.000Z",
-      "hora": "14h31",
+      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
+      "iso": "2026-08-04T12:44:00.000Z",
+      "hora": "08h44",
       "original": true,
-      "contexto": null,
+      "contexto": "A queda de 1,8% em junho é o segundo recuo consecutivo do indicador, após a retração de 0,9% registrada em maio. Na comparação com junho do ano passado, houve crescimento de 1,7%. O resultado na passagem de maio para junho afetou 16 dos 25 ramos pesquisados e todas as quatro grandes categorias econômicas.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1140,59 +1199,88 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia",
+      "id": "ilm:congresso-nacional-retoma-trabalhos-apos-duas-semanas-de-recesso-parla",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Democrata oficializa Wilson Grassi Júnior como candidato à Presidência",
-      "resumo": "A definição do candidato a vice-presidente ficou aberta à Comissão Executiva Nacional, com possibilidade de coligação.",
+      "titulo": "Congresso Nacional retoma trabalhos após duas semanas de recesso parlamentar",
+      "resumo": "Votações nos plenários da Câmara e do Senado ficarão concentradas em duas semanas específicas antes das eleições gerais de outubro.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/democrata-define-wilson-grassi-junior-candidato-presidencia",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/apos-recesso-congresso-retoma-trabalhos-nesta-semana",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Poder360",
-        "CartaCapital"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "O partido Democrata oficializou neste domingo (2), em convenção realizada no Rio de Janeiro, a candidatura de Wilson Grassi Júnior ao cargo de presidente da República. A escolha do nome para vice-presidente permaneceu aberta para definição da Comissão Executiva Nacional da legenda, que pode formar uma coligação.",
-        "Nascido em São Paulo, Wilson Grassi Júnior é veterinário de formação. Ele atuou como conselheiro da Associação Nacional de Clínicos Veterinários de Pequenos Animais de São Paulo (Anclivepa-SP) no projeto de implantação e gestão do primeiro hospital público para cães e gatos do país, no Tatuapé, zona leste de São Paulo.",
-        "Esta foi a primeira convenção do Democrata desde que alterou seu nome, em dezembro de 2025, quando deixou de ser chamado Partido da Mulher Brasileira (PMB). Desde a sua criação, em 2008, é a primeira vez que a legenda lança candidato à Presidência da República.",
-        "As próximas convenções nacionais previstas são do União Brasil, em 4 de agosto, e do PRD e Solidariedade, em 5 de agosto. Oito partidos ainda não definiram as datas de suas convenções: Avante, Cidadania, Podemos, PP, PSDB, PSOL, Rede e Republicanos."
-      ],
-      "link": "/materia/democrata-oficializa-wilson-grassi-junior-como-candidato-a-presidencia.html",
-      "iso": "2026-08-02T19:58:00.000Z",
-      "hora": "15h58",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:operacao-da-policia-civil-investiga-rede-que-induzia-jovens-ao-suicidi",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Operação da Polícia Civil investiga rede que induzia jovens ao suicídio na internet",
-      "resumo": "Ação cumpriu mandados em cinco estados após a morte de uma adolescente de 13 anos e resultou na apreensão de cinco menores e na prisão de um adulto",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/operacao-livia-combate-rede-que-induzia-jovens-suicidio-na-internet",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Folha"
+        "Valor Econômico"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Ministério da Justiça e Segurança Pública apresentou os resultados da Operação Lívia, conduzida pela Polícia Civil de Mato Grosso do Sul com apoio do Laboratório de Operações Cibernéticas. A ação investiga uma organização criminosa que atraía crianças e adolescentes para grupos virtuais, promovendo coerção psicológica, violência contra animais, automutilação e indução ao suicídio.",
-        "A apuração começou após o suicídio transmitido ao vivo de uma adolescente de 13 anos em Naviraí, em Mato Grosso do Sul. Na operação, foram cumpridos oito mandados de busca e apreensão nos estados de Mato Grosso do Sul, Ceará, Minas Gerais, Pará e Rio de Janeiro. A ação resultou na apreensão de cinco adolescentes com idades entre 13 e 17 anos e na prisão de um homem de 18 anos. Um adolescente de 14 anos, apreendido no Rio de Janeiro, é suspeito de liderar o grupo.",
-        "A investigação identificou que os suspeitos abriram uma chave PIX no nome da vítima para enviar dinheiro utilizado na compra de lâminas para automutilação. A atuação policial também impediu o suicídio de outra vítima que estava com uma transmissão agendada. O Ministério da Justiça solicitará à Agência Nacional de Proteção de Dados uma investigação contra as plataformas Discord e Telegram por descumprimento de legislações de proteção no ambiente digital."
+        "O Congresso Nacional retomou os trabalhos nesta segunda-feira (3), após duas semanas de recesso parlamentar, sem previsão de sessão plenária deliberativa na Câmara dos Deputados e no Senado. Os presidentes das Casas concordaram em limitar as votações em plenário a dois períodos de esforço concentrado antes das eleições de outubro: de 10 a 14 de agosto e de 31 de agosto a 3 de setembro.",
+        "Nesta primeira semana, a agenda conta apenas com sessões solenes e reuniões de comissões. A Câmara tem homenagem à Assembleia de Deus – Ministério de Madureira na terça-feira (4), e o Senado faz sessão sobre o Agosto Lilás na sexta-feira (7). A Comissão de Direitos Humanos debate a campanha Agosto Dourado nesta segunda-feira (3), enquanto a Comissão Mista do Orçamento realiza audiência sobre educação infantil na quarta-feira (5).",
+        "Entre as propostas não votadas no primeiro semestre está a PEC do fim da escala 6x1, mantida com o presidente do Senado, Davi Alcolumbre (União-AP), e a PEC da Segurança Pública, cobrada pelo presidente Luiz Inácio Lula da Silva. O Senado também tem pendente o projeto de regulação dos minerais críticos, já aprovado pela Câmara, além do recebimento dos projetos da LDO e da LOA de 2027, previstos para serem enviados pelo governo até 31 de agosto.",
+        "O Legislativo possui 87 vetos trancando a pauta, incluindo vetos à regulamentação da reforma tributária, ao Estatuto do Pantanal, às LDO e LOA de 2026, ao marco do setor elétrico e à Lei da Dosimetria. Outros projetos aguardando plenário são o PL da Misoginia e o PL da Inteligência Artificial, apresentado como uma das prioridades pelo presidente da Câmara, deputado Hugo Motta (Republicanos-PB)."
       ],
-      "link": "/materia/operacao-da-policia-civil-investiga-rede-que-induzia-jovens-ao-suicidi.html",
+      "link": "/materia/congresso-nacional-retoma-trabalhos-apos-duas-semanas-de-recesso-parla.html",
+      "iso": "2026-08-03T12:45:00.000Z",
+      "hora": "08h45",
+      "original": true,
+      "contexto": "O acervo registra três casos parecidos sobre a retomada dos trabalhos do Congresso e a realização de esforço concentrado em agosto de 2026. As próximas etapas com votações deliberativas em plenário estão agendadas para os períodos de 10 a 14 de agosto e de 31 de agosto a 3 de setembro. A medida afeta a tramitação de propostas pendentes na Câmara dos Deputados e no Senado antes das eleições de outubro.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:copom-inicia-quinta-reuniao-de-2026-para-definir-taxa-selic",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Copom inicia quinta reunião de 2026 para definir taxa Selic",
+      "resumo": "A decisão sobre a taxa básica de juros será anunciada no dia 5 de agosto, após dois dias de avaliações sobre o cenário econômico nacional e internacional.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/copom-inicia-reuniao-que-definira-taxa-basica-de-juros",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Comitê de Política Monetária (Copom) do Banco Central iniciou nesta terça-feira (4) a sua quinta reunião de 2026. A decisão sobre a Taxa Selic está prevista para ser anunciada no dia 5 de agosto, após dois dias de discussões do grupo sobre a conjuntura econômica do Brasil e do exterior.",
+        "A taxa básica de juros está atualmente em 14,25% ao ano, o menor nível de 2026, após três reduções consecutivas de 0,25 ponto percentual promovidas nas reuniões de março, abril e junho. No Boletim Focus divulgado na segunda-feira (3), o mercado financeiro reduziu pela primeira vez desde março a estimativa da Selic para 2026, de 14% para 13,75%.",
+        "O mesmo boletim registrou a quinta redução seguida na projeção para o IPCA de 2026, que passou de 5,12% para 5,03%. O número continua acima do limite superior de 4,5% da meta de inflação estabelecida pelo Conselho Monetário Nacional, cujo centro é de 3% com intervalo de tolerância de 1,5 ponto percentual.",
+        "Nas reuniões anteriores, o Copom indicou a possibilidade de corte na Selic, mas passou a adotar cautela devido às incertezas de preços provocadas pelo conflito entre Estados Unidos e Irã, principalmente nos combustíveis. Usada nas negociações de títulos do Tesouro Nacional, a Selic é a referência para as demais taxas e o instrumento central do Banco Central para o controle da inflação."
+      ],
+      "link": "/materia/copom-inicia-quinta-reuniao-de-2026-para-definir-taxa-selic.html",
+      "iso": "2026-08-04T09:40:00.000Z",
+      "hora": "05h40",
+      "original": true,
+      "contexto": "A decisão sobre a taxa Selic está prevista para ser anunciada no dia 5 de agosto, ao fim da quinta reunião do comitê em 2026. A taxa atual de 14,25% ao ano é o menor nível do ano, após três reduções consecutivas de 0,25 ponto percentual realizadas em março, abril e junho. O histórico registra um caso parecido em 3 de agosto de 2026, quando a estimativa do mercado para a Selic caiu de 14% para 13,75%.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:operacao-livia-combate-rede-acusada-de-induzir-jovens-ao-suicidio",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Operação Lívia combate rede acusada de induzir jovens ao suicídio",
+      "resumo": "Ação policial cumpriu mandados em cinco estados e resultou na apreensão de cinco adolescentes e na prisão de um adulto.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/operacao-livia-combate-rede-que-induzia-jovens-suicidio-na-internet",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Ministério da Justiça e Segurança Pública apresentou os resultados da Operação Lívia, conduzida pela Polícia Civil de Mato Grosso do Sul com apoio do Laboratório de Operações Cibernéticas. A ação investiga uma organização criminosa que atraía crianças e adolescentes para comunidades virtuais, submetendo as vítimas a coerção psicológica, automutilação, violência contra animais e induzimento ao suicídio. A apuração começou após a morte de uma adolescente de 13 anos em Naviraí, ocorrida em 22 de julho e transmitida ao vivo na rede social Discord.",
+        "Foram cumpridos oito mandados de busca e apreensão nos estados do Ceará, Minas Gerais, Pará e Rio de Janeiro. As autoridades confirmaram a prisão de um homem de 18 anos e a apreensão de cinco adolescentes com idades entre 13 e 17 anos. O suspeito de ser o chefe do grupo é um adolescente de 14 anos apreendido no Rio de Janeiro. Outro integrante investigado é um estudante seminarista de um mosteiro em Pernambuco.",
+        "Conforme a investigação, o grupo abriu uma chave PIX em nome da vítima para enviar dinheiro usado na compra de lâminas. O Ministério da Justiça informou que enviará um pedido de investigação contra as plataformas Discord e Telegram à Agência Nacional de Proteção de Dados por descumprimento do Estatuto Digital da Criança e do Adolescente e falhas na verificação de idade dos usuários.",
+        "A atuação policial também identificou outra vítima em diferente unidade da federação e evitou que ela tirasse a própria vida em uma transmissão agendada. Todo o material recolhido será analisado para identificar a possibilidade de outros envolvidos no caso."
+      ],
+      "link": "/materia/operacao-livia-combate-rede-acusada-de-induzir-jovens-ao-suicidio.html",
       "iso": "2026-08-04T19:40:00.000Z",
       "hora": "15h40",
       "original": true,
@@ -1206,95 +1294,26 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:congresso-retoma-trabalhos-e-limita-votacoes-a-duas-semanas-de-esforco",
+      "id": "ilm:petrobras-descobre-novo-poco-de-gas-na-bacia-de-guajira-na-colombia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Congresso retoma trabalhos e limita votações a duas semanas de esforço concentrado",
-      "resumo": "Sessões deliberativas na Câmara e no Senado devem ocorrer entre 10 e 14 de agosto e de 31 de agosto a 3 de setembro, antes das eleições gerais de outubro.",
+      "titulo": "Petrobras descobre novo poço de gás na Bacia de Guajira na Colômbia",
+      "resumo": "A concentração foi localizada no poço exploratório Sandia-1, perfurado em consórcio com a estatal Ecopetrol a 42 quilômetros da costa.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/apos-recesso-congresso-retoma-trabalhos-nesta-semana",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/petrobras-descobre-novo-poco-de-gas-na-margem-equatorial-da-colombia",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "CNN Brasil",
-        "Valor Econômico"
-      ],
-      "quentura": 2,
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Congresso Nacional retomou os trabalhos nesta segunda-feira (3), após duas semanas de recesso parlamentar, sem a previsão de sessões plenárias deliberativas na Câmara dos Deputados e no Senado nesta primeira semana. Os presidentes de ambas as Casas concordaram em restringir as votações a dois períodos de esforço concentrado antes das eleições gerais de outubro.",
-        "A primeira semana de esforço concentrado está marcada para os dias 10 a 14 de agosto, enquanto a segunda será realizada de 31 de agosto a 3 de setembro. Nestes primeiros dias do retorno, a agenda conta apenas com sessões solenes, como a homenagem à Assembleia de Deus – Ministério de Madureira na terça-feira (4) e o Agosto Lilás na sexta-feira (7), além de audiências nas comissões.",
-        "Entre as propostas pendentes de análise está a PEC do fim da escala 6x1, sob análise do presidente do Senado, Davi Alcolumbre (União-AP). O governo busca a votação do texto antes da eleição, enquanto a oposição apoia uma PEC alternativa. O presidente Luiz Inácio Lula da Silva também tem cobrado Alcolumbre para votar a PEC da Segurança Pública, aprovada na Câmara.",
-        "A pauta do Legislativo conta ainda com 87 vetos trancados, como os aplicados ao Estatuto do Pantanal, à regulação da reforma tributária e à Lei da Dosimetria. O Congresso também aguarda o projeto da Lei Orçamentária Anual de 2027 até 31 de agosto, além de matérias como o projeto de minerais críticos, o PL da Misoginia e o PL da Inteligência Artificial, apresentado como prioridade do presidente da Câmara, Hugo Motta (Republicanos-PB)."
+        "A Petrobras anunciou nesta segunda-feira (3) a descoberta de um poço de gás em águas profundas na Colômbia. A concentração de gás foi localizada no poço exploratório Sandia-1, situado no bloco GUA-OFF-0, na Bacia de Guajira.",
+        "O poço Sandia-1 fica a 42 quilômetros da costa, com lâmina d’água de 1.251 metros, e a 70,7 km da cidade de Santa Marta. A perfuração começou em 12 de junho e alcançou a profundidade final em 29 do mesmo mês. A localização fica a 18 km do poço Sirius-1 e a 9 km do poço Copoazu-1.",
+        "A exploração é feita em consórcio entre a estatal colombiana Ecopetrol, que detém 55,56%, e a Petrobras, com 44,44%, por meio da subsidiária Petrobras International Braspetro B.V – Sucursal Colômbia (PIB-COL). A empresa brasileira é a operadora da exploração no bloco. O gás encontrado passa por avaliação detalhada com perfis de poço e análises laboratoriais.",
+        "Em 5 de dezembro de 2024, a diretora de Exploração e Produção da Petrobras, Sylvia Anjos, afirmou que a Bacia de Guajira integra a margem equatorial. Na ocasião, a estatal informou a descoberta do maior reservatório de gás natural da história da Colômbia. Além do Brasil e do território colombiano, a Petrobras atua na Namíbia, São Tomé e Príncipe, África do Sul, Bolívia, Argentina e Estados Unidos."
       ],
-      "link": "/materia/congresso-retoma-trabalhos-e-limita-votacoes-a-duas-semanas-de-esforco.html",
-      "iso": "2026-08-03T12:45:00.000Z",
-      "hora": "08h45",
-      "original": true,
-      "contexto": "O histórico do arquivo registra três matérias semelhantes sobre a retomada dos trabalhos parlamentares entre os dias 2 e 3 de agosto. As próximas votações em plenário ocorrem nos esforços concentrados marcados para os períodos de 10 a 14 de agosto e de 31 de agosto a 3 de setembro, antes das eleições de outubro. A pauta a ser analisada pelos congressistas inclui a PEC da escala 6x1, a PEC da Segurança Pública e 87.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:trabalhadores-da-cptm-realizam-assembleia-para-decidir-continuidade-da",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Trabalhadores da CPTM realizam assembleia para decidir continuidade da greve",
-      "resumo": "Paralisação atinge três linhas e o Expresso Aeroporto enquanto categoria pede garantia para 4 mil empregos.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/trabalhadores-da-cptm-realizam-assembleia-sobre-continuidade-da-greve",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "CartaCapital"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "Trabalhadores da Companhia Paulista de Trens Metropolitanos, a CPTM, realizam nova assembleia a partir das 17h desta terça-feira para decidir sobre a continuidade da greve. A paralisação atinge as linhas 11, 12 e 13, além do serviço Expresso Aeroporto, desde a meia-noite.",
-        "A mobilização pede a garantia de emprego para 4 mil trabalhadores e a reversão da concessão das mesmas linhas, que foram privatizadas. As linhas 11 e 12 operaram parcialmente desde a manhã, enquanto a Linha 13 e o Expresso não operaram.",
-        "A privatização foi efetivada em julho, mas problemas como atrasos sucessivos e um incêndio em um trem levaram o governo estadual a retomar a operação das linhas por 90 dias. A gestão do serviço estava com a empresa Trivia.",
-        "As linhas atingidas atendem à Zona Leste, definida como a região mais extensa e populosa da cidade de São Paulo, além do município de Guarulhos e de outras cidades do ABC Paulista."
-      ],
-      "link": "/materia/trabalhadores-da-cptm-realizam-assembleia-para-decidir-continuidade-da.html",
-      "iso": "2026-08-04T19:34:00.000Z",
-      "hora": "15h34",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:justica-do-trabalho-alerta-para-punicoes-por-assedio-eleitoral-em-empr",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Justiça do Trabalho alerta para punições por assédio eleitoral em empregos",
-      "resumo": "Conduta que tenta interferir no voto do trabalhador pode gerar multas, rescisão indireta, indenizações por danos morais e prisão do empregador.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/assedio-eleitoral-no-trabalho-e-crime-saiba-como-identificar",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A Justiça do Trabalho chamou a atenção para o assédio eleitoral no ambiente profissional, prática em que pessoas em posição de poder constrangem, pressionam ou induzem empregados a votar, deixar de votar ou apoiar determinado candidato ou partido. A conduta é proibida e pode motivar ações nas esferas trabalhista, eleitoral e criminal.",
-        "Em julgamentos sobre o tema, uma indústria de embalagens de Rio Verde (GO) foi condenada a indenizar em R$1.000,00 cada trabalhador ativo no período de campanha das eleições de 2022 por ter prometido folga caso o candidato apoiado pela empresa vencesse. Já uma empresa de coaching de Vitória (ES) foi condenada a pagar R$ 8 mil a uma vendedora dispensada às vésperas do segundo turno de 2022 por não manifestar apoio ao candidato da empresa.",
-        "O assédio eleitoral se caracteriza por ameaças de demissão ou transferência, promessas de benefícios em troca de voto, obrigação de participar de atos políticos e exigência de divulgação de candidatos nas redes sociais pessoais dos empregados. Também configuram a prática o constrangimento para revelar o voto, a humilhação, a perseguição e a discriminação por opiniões políticas.",
-        "O empregador que praticar assédio eleitoral pode enfrentar multas, rescisão indireta do contrato de trabalho, indenização por danos morais e sanções penais que podem chegar à prisão. As denúncias podem ser encaminhadas ao Tribunal Superior do Trabalho, ao Conselho Superior da Justiça do Trabalho (CSJT) e ao Ministério Público do Trabalho, com a possibilidade de solicitar sigilo da identidade."
-      ],
-      "link": "/materia/justica-do-trabalho-alerta-para-punicoes-por-assedio-eleitoral-em-empr.html",
-      "iso": "2026-08-04T10:02:00.000Z",
-      "hora": "06h02",
+      "link": "/materia/petrobras-descobre-novo-poco-de-gas-na-bacia-de-guajira-na-colombia.html",
+      "iso": "2026-08-03T14:08:00.000Z",
+      "hora": "10h08",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1306,70 +1325,130 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que os temas foram veiculados por quatro publicações da imprensa.",
-        "Que as matérias mencionam atuações no STF e no Conselho de Ética.",
-        "Que há citação a uma nova fase da Operação Sem Desconto."
+        "Que seis veículos de imprensa noticiaram a neutralidade de partidos para 2026.",
+        "Que o assunto envolve os partidos União Brasil e Podemos e o político Flávio Bolsonaro.",
+        "Que é atribuída a Flávio Bolsonaro uma declaração sobre vacinas em eventual governo."
       ],
       "falta": [
-        "Confirmação oficial da manifestação solicitada à PGR pelo ministro Moraes.",
-        "Registro formal e número do procedimento junto ao Conselho de Ética.",
-        "Documento oficial da operação policial confirmando os alvos investigados.",
-        "Declaração formal das assessorias sobre a participação em debates."
+        "Manifestação oficial e formal do União Brasil e do Podemos confirmando as decisões.",
+        "Registro de atas ou deliberações partidárias nos órgãos da Justiça Eleitoral.",
+        "Declaração oficial ou nota pública expedida por Flávio Bolsonaro ou por Renata Abreu.",
+        "Registro em vídeo, áudio ou documento da declaração sobre fornecimento de vacinas."
       ],
       "ondeCirculou": [
         {
+          "veiculo": "Metrópoles",
+          "titulo": "União Brasil oficializa neutralidade e não vai apoiar Flávio Bolsonaro",
+          "link": "https://www.metropoles.com/brasil/uniao-brasil-oficializa-neutralidade-e-nao-vai-apoiar-flavio-bolsonaro"
+        },
+        {
+          "veiculo": "g1",
+          "titulo": "União Brasil decide ficar neutro na disputa presidencial nas Eleições 2026",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/uniao-brasil-confirma-neutralidade-nas-eleicoes.ghtml"
+        },
+        {
           "veiculo": "Congresso em Foco",
-          "titulo": "Advogado aciona Conselho de Ética contra Flávio por IA de Bolsonaro",
-          "link": "https://www.congressoemfoco.com.br/noticia/120997/advogado-aciona-conselho-de-etica-contra-flavio-por-ia-de-bolsonaro"
+          "titulo": "\"Não vai faltar vacina\", diz Flávio Bolsonaro sobre eventual governo",
+          "link": "https://www.congressoemfoco.com.br/noticia/121005/nao-vai-faltar-vacina--diz-flavio-bolsonaro-sobre-eventual-governo"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "União Brasil confirma neutralidade nas eleições presidenciais",
+          "link": "https://www.cnnbrasil.com.br/eleicoes/uniao-brasil-confirma-neutralidade-nas-eleicoes-presidenciais/"
         },
         {
           "veiculo": "g1 Política",
-          "titulo": "Moraes pede que PGR se manifeste sobre recursos da defesa de Bolsonaro contra proibição de visitas de Flávio",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/moraes-pede-que-pgr-se-manifesta-sobre-recursos-da-defesa-de-bolsonaro-contra-proibicao-de-visitas-de-flavio.ghtml"
+          "titulo": "União Brasil confirma neutralidade nas eleições",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/uniao-brasil-confirma-neutralidade-nas-eleicoes.ghtml"
         },
         {
           "veiculo": "JOTA",
-          "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/por-que-lula-e-flavio-evitam-debates"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "Quem é Willer Tomaz, advogado e amigo de Flávio Bolsonaro alvo da nova fase da Operação Sem Desconto",
-          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS1Zhb0Q1MkRabFdTWjJFbEVfMWVEM1NsTUdZLTdVaGoySm03VVd0aUoyWUhHT3RRa1h0emVKRjNDdFQ2M2tVQkZzMFI3NHRBY2Z0cUEtbVBrd2JwamFRXzBXSWZ0TVZpOVFraUF1SG5mbDlGSHRtMkZLNHpUYWFHb2I0Nkd3cUl4SWxNN1B0cW5FODBJS3ZYRTBnWk5SczMyNzZ0OEQ3cFRnQXQxMVF1M3hTNS14NmtlaExoUkxZZUxJYzVzdHVyODlZVkp0bEIydTlXZDlHZlI?oc=5"
+          "titulo": "Podemos opta pela neutralidade e Renata Abreu não será vice de Flávio Bolsonaro",
+          "link": "https://www.jota.info/eleicoes/eleicoes-2026/podemos-opta-pela-neutralidade-e-renata-abreu-nao-sera-vice-de-flavio-bolsonaro"
         }
       ],
-      "link": "/materia/nc-decisoes-e-representacoes-envolvendo-flavio-bolsonaro-estariam-em-anda.html",
+      "link": "/materia/nc-uniao-brasil-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes-.html",
       "corpo": [
-        "Um advogado teria acionado o Conselho de Ética contra o senador Flávio Bolsonaro devido ao uso de inteligência artificial ligada a Bolsonaro. O ministro Moraes teria solicitado que a PGR se manifeste sobre recursos da defesa de Bolsonaro contra a proibição de visitas do senador.",
-        "Em outros relatos, Lula e Flávio Bolsonaro estariam evitando a participação em debates. Além disso, um advogado e amigo do senador teria se tornado alvo de uma nova fase da Operação Sem Desconto.",
-        "As matérias abordam procedimentos no STF, no Congresso e em apurações policiais. As informações tratam de fatos diversos veiculados pelas publicações sem documento público unificado."
+        "Os partidos União Brasil e Podemos teriam optado pela neutralidade nas eleições presidenciais de 2026. A postura atribuída às legendas indicaria que não haveria apoio formal a Flávio Bolsonaro. Além disso, Renata Abreu não seria candidata a vice-presidente na chapa.",
+        "Os veículos que publicaram as matérias apontariam que o União Brasil teria oficializado a decisão. O Podemos também teria adotado posicionamento neutro quanto à disputa presidencial. Em paralelo, Flávio Bolsonaro teria afirmado que não faltaria vacina em um eventual governo.",
+        "As matérias veiculadas trariam informações sobre dois partidos diferentes e seus alinhamentos eleitorais. Parte dos textos focaria apenas na neutralidade confirmada pelo União Brasil. Outra publicação mencionaria a escolha do Podemos e a situação do nome de Renata Abreu."
       ],
-      "id": "circ:decisoes-e-representacoes-envolvendo-flavio-bolsonaro-estariam-em-anda",
+      "id": "circ:uniao-brasil-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes-",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Decisões e representações envolvendo Flávio Bolsonaro estariam em andamento",
+      "titulo": "União Brasil e Podemos teriam decidido pela neutralidade nas eleições de 2026",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:02:42.319Z",
-      "hora": "16h02"
+      "iso": "2026-08-04T20:39:08.484Z",
+      "hora": "16h39"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o tema está sendo veiculado por três publicações da imprensa.",
-        "Que a indicação envolve Zema e Eduardo Girão.",
-        "Que o partido Novo é citado como a legenda envolvida."
+        "Que o assunto está sendo veiculado por quatro veículos de imprensa.",
+        "Que as publicações relatam o dólar a R$ 5,13 e o petróleo em queda.",
+        "Que declarações atribuídas a Trump citam negociações e novo ultimato ao Irã."
       ],
       "falta": [
-        "Confirmação oficial por parte de Zema ou de Eduardo Girão.",
-        "Pronunciamento oficial ou nota emitida pelo partido Novo.",
-        "Registro formal ou ata partidária oficializando a chapa."
+        "Confirmação oficial por parte dos governos dos Estados Unidos ou do Irã.",
+        "Detalhes e registro oficial sobre o navio supostamente atingido em Ormuz.",
+        "Manifestação das autoridades sobre os termos e o andamento real das negociações."
       ],
       "ondeCirculou": [
         {
+          "veiculo": "CNN Brasil",
+          "titulo": "Petróleo fecha com queda de 5% após avanços nas negociações entre EUA e Irã",
+          "link": "https://www.cnnbrasil.com.br/economia/mercado/petroleo-fecha-com-queda-de-5-apos-avancos-nas-negociacoes-entre-eua-e-ira/"
+        },
+        {
           "veiculo": "Metrópoles",
-          "titulo": "Eduardo Girão, também do Novo, será vice de Zema",
-          "link": "https://www.metropoles.com/minas-gerais/eduardo-girao-tambem-do-novo-sera-vice-de-zema"
+          "titulo": "Dólar dispara a R$ 5,13, apesar de queda do petróleo e alívio no Irã",
+          "link": "https://www.metropoles.com/negocios/dolar-dispara-a-r-513-apesar-de-queda-do-petroleo-e-alivio-no-ira"
+        },
+        {
+          "veiculo": "Valor Econômico",
+          "titulo": "Futuro das negociações entre EUA e Irã é incerto após navio ser atingido em Ormuz",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeUhFdDlpaG9fUmRhU0VsdUpFMlRVXzkzbUpEYTFTbm5GekM3Q1VsVGRpTVduYk5kcXpVcHpkT2Y3Uld1TzA4X2czdXdGam1kcjl1cG5vckVEb0Y4SzJhWkhWN2NGUFFCMVhfTk1ZUDc4MHRrcEhwa3NsU2hKTW5nT2FMNTZ2TFJsdVVMZEJ3aG1NUXRwZXNZMXlOZ0owZjBxMkI4NUNCUmFlVFFHcjlRZGxvVzBWUDZUTWdyYlY3YW02ZjU0RXJKV0l30gHYAUFVX3lxTE11QURpN3VVd0R1ajBLZEt3bkZobnVZQlc3YVlNSWd5QTRTalRTaFdRQnVDOVFrb0hLUXlVNkRWdTJYRlpBT1M2R25ZYWlpM2lwdnZWaURlSi1uUnBOOHlFcWZIS0NRY1AzVnlmbnNfOUZKcU54dW85RDlTOU5GeFpjV3FnNmRaSlZXNXAzLUM2eVFRd3pRTmlIUll4Y0JkbWZ1Wko4Sm5vcDdMY3lzVjU0Rnk1YmZJaUVGLW5Jb3BCd2RXOEsxX1JkSzNWak1VSC1zangxemh3bw?oc=5"
+        },
+        {
+          "veiculo": "estadao.com.br",
+          "titulo": "Trump afirma que EUA e Irã estão em negociações e faz novo ultimato ao regime iraniano",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZ1kxU0lFVnR1dnhaVmRfYUNidGM1MXl0Qjd5MFhHdW05aWtla0Q0NThEWmFRSjBrWXc2aEJvS0s1Q3lfOFk2dTgwQktEV3RYT2E2cGpVZkFZVnBoRU95UDlibl93WkwzdFJiaVBTQmZ6M2xBUUFpN3BJNUhPd3dRZ3dFTC1ibTdlaG5XQWJiS2dVXzl4WlB6S3dMVTZlZjdzMHVwU0VBMk1YdlpwVWpWTU5PbzY1TWxHejZ0Z2xJSDdoUmRLUWRFYTJsUW7SAdIBQVVfeXFMT2JKNGZ5cGJHb09Md1hsYWtGclcyM2wzTTBlZWNfMlFZWXBGMVBtbFc0NmU4VHkwZzZ1MktUVFZwbDg2NUlkT2FGNG5pMGJzS0V1RG83N2NEUDZGc0ZORUc0Qk9xYmlpMDRxUnQzYllXRUdITWNjc1JlMjNBUXJGMlVZR2pLQU5CdkJsTXg2Q0p4TExST2FnX3Z6RnR5QVhJbjlWMzAtN3Y2RjEyZjV1bVl4LU92amRoSlN6R2VtSUl3R2ZTVTdKU01rNURQLWVPcVNR?oc=5"
+        }
+      ],
+      "link": "/materia/nc-petroleo-teria-caido-e-dolar-subido-em-meio-a-negociacoes-entre-eua-e-.html",
+      "corpo": [
+        "Estados Unidos e Irã estariam em negociações diplomáticas, segundo relatos publicados pela imprensa. O avanço nas conversas entre os países teria motivado o fechamento do petróleo com queda de 5%.",
+        "Apesar da redução no preço do petróleo, o dólar teria disparado para a cotação de R$ 5,13. O futuro dos entendimentos estaria incerto após um navio ter sido atingido no Estreito de Ormuz.",
+        "Em meio aos relatos, Trump teria afirmado que os governos mantêm negociações e teria feito um novo ultimato ao regime iraniano. As publicações retratam um cenário dividido entre avanço diplomático e indefinição geopolítica."
+      ],
+      "id": "circ:petroleo-teria-caido-e-dolar-subido-em-meio-a-negociacoes-entre-eua-e-",
+      "editoria": "internacional",
+      "uf": null,
+      "titulo": "Petróleo teria caído e dólar subido em meio a negociações entre EUA e Irã",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T20:40:03.054Z",
+      "hora": "16h40"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que quatro veículos publicaram a indicação de Eduardo Girão como vice de Romeu Zema.",
+        "Que as matérias mencionam a formação de uma chapa puro-sangue no partido Novo.",
+        "Que Eduardo Girão é identificado pelas publicações como senador."
+      ],
+      "falta": [
+        "Confirmação oficial por meio de nota ou ata do partido Novo.",
+        "Declaracao oficial de Romeu Zema ratificando a escolha do vice.",
+        "Pronunciamento do senador Eduardo Girão confirmando o aceite.",
+        "Registro formal da chapa perante a Justiça Eleitoral."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Zema escolhe Eduardo Girão para vice e fecha chapa do Novo na corrida ao Planalto",
+          "link": "https://www.infomoney.com.br/politica/zema-escolhe-eduardo-girao-para-vice-e-fecha-chapa-do-novo-na-corrida-ao-planalto/"
         },
         {
           "veiculo": "Exame",
@@ -1377,35 +1456,87 @@
           "link": "https://exame.com/brasil/zema-escolhe-eduardo-girao-para-vice-e-tera-chapa-puro-sangue/"
         },
         {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Novo anuncia senador Eduardo Girão como vice em chapa de Romeu Zema",
+          "link": "https://www.congressoemfoco.com.br/noticia/121012/novo-anuncia-senador-eduardo-girao-como-vice-em-chapa-de-romeu-zema"
+        },
+        {
           "veiculo": "g1 Política",
-          "titulo": "Eduardo Girão, do Novo, será candidato a vice-presidente com Zema",
-          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/eduardo-girao-do-novo-sera-candidato-a-vice-presidente-com-zema.ghtml"
+          "titulo": "Quem é Eduardo Girão, senador escolhido como vice na chapa de Romeu Zema",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/quem-e-eduardo-girao.ghtml"
         }
       ],
-      "link": "/materia/nc-zema-teria-escolhido-eduardo-girao-como-vice-em-chapa-do-novo.html",
+      "link": "/materia/nc-romeu-zema-teria-escolhido-o-senador-eduardo-girao-para-vice-em-chapa-.html",
       "corpo": [
-        "O político Zema teria escolhido Eduardo Girão para a posição de vice em sua chapa eleitoral. A informação estaria sendo veiculada por veículos da imprensa, sem que haja confirmação por registros oficiais.",
-        "De acordo com as publicações, a composição formaria uma chapa puro-sangue por reunir dois integrantes do partido Novo. Os textos divergem discretamente entre si, visto que uma das matérias especifica a candidatura a vice-presidente, enquanto as demais mencionam apenas a vaga de vice."
+        "As publicações teriam divergido sobre a origem da indicação, atribuída ora a uma decisão direta de Zema, ora a um anúncio do próprio Novo. As matérias também teriam apontado que a aliança configuraria uma chapa puro-sangue.",
+        "A medida definiria a estrutura da candidatura do partido Novo ao comando do Executivo. A confirmação consolidaria a presença do senador na chapa liderada por Zema."
       ],
-      "id": "circ:zema-teria-escolhido-eduardo-girao-como-vice-em-chapa-do-novo",
+      "id": "circ:romeu-zema-teria-escolhido-o-senador-eduardo-girao-para-vice-em-chapa-",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Zema teria escolhido Eduardo Girão como vice em chapa do Novo",
+      "titulo": "Romeu Zema teria escolhido o senador Eduardo Girão para vice em chapa do Novo",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:03:34.869Z",
-      "hora": "16h03"
+      "iso": "2026-08-04T20:40:58.054Z",
+      "hora": "16h40"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que três veículos de imprensa noticiaram a abertura de investigações no STF.",
-        "Que as apurações citadas envolvem a PF, Dataprev, Saúde e tráfico de influência."
+        "Que o assunto está sendo publicado por três veículos da imprensa.",
+        "Que as matérias atribuem os dados a apurações da Polícia Federal.",
+        "Que o valor citado nas reportagens é de 11 milhões de reais."
       ],
       "falta": [
-        "Confirmação oficial por parte do Supremo Tribunal Federal ou da Polícia Federal.",
-        "Número de registro do procedimento ou teor do ato de autorização.",
-        "Manifestação oficial da defesa do investigado ou dos órgãos citados."
+        "Número do inquérito ou procedimento oficial da Polícia Federal.",
+        "Pronunciamento oficial dos órgãos de investigação citados nas matérias.",
+        "Identificação oficial das empresas citadas e do imóvel mencionado.",
+        "Posição oficial do senador Weverton Rocha ou de sua defesa."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Poder360",
+          "titulo": "Mulher de Weverton recebeu R$ 11 mi de advogado, diz PF",
+          "link": "https://www.poder360.com.br/poder-justica/mulher-de-weverton-recebeu-r-11-mi-de-advogado-diz-pf/"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "PF diz que advogado enviou R$ 11 mi a mulher de senador e comprou casa para ele",
+          "link": "https://www.infomoney.com.br/politica/pf-diz-que-advogado-enviou-r-11-mi-a-mulher-de-senador-e-comprou-casa-para-ele/"
+        },
+        {
+          "veiculo": "Correio Braziliense",
+          "titulo": "Mulher de Weverton Rocha recebeu R$ 11 milhões de empresas ligadas a Willer Tomaz, aponta PF",
+          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRnF0WEhIbGdQTFFRWUtWaGZXUjc1V182dVFZS2tlVU54YTFrYUFlYmNtZ3hOVzVxeWRwbHRYcWtfNmNhYUVmMUc3TVZ1dGJMX1BvY0pPVzN5a3hMc3g0V1puLTBmclNSV0pRWWpkcUZ6QkVsXzQxcER0bkpOVHhVM1JwNzE0UkFtS3k4bnhJT1hGSVJBMl9NeGVlU205b3BaRUhQTkZ2VjY4QWlsdldNLVhoWXBYOFJoRWpscXpEUVppeEt0RDFjOUNkZmJ5enJxZHJQUDJnd3Z2M1dvTjFVZkVFOFd2b21xNkFBblJpYjTSAfYBQVVfeXFMTk5MaGwybWdzMko4ajdsS0F2T3daX1pVbjBVcktlRUNIMGVMYnVSZWM1OGxEWFR1VjRWay1nT3kwYk51RzBoRjNGQ3NqMkZ3RkpTaHduaU91Wl82SmRhYW0xSjJNZ05tcXJzOU9RYTJNTTlOVGNRelhUSEdQUGJ2M3F6TUtTa3ZvME92dW9vUFZIamVoQ081dXVTTFRzWXBxWTZtOXM5NmNpalgtMUdVaGZvQ05wam1Pa3Q2eFhnSkhEc2NoamtUNm14enhjcEZhaWt6MG1kU2poTFh1bjN1OG5ZSlRocjBXMjhDNElsc2dTMENPc053?oc=5"
+        }
+      ],
+      "link": "/materia/nc-pf-teria-apontado-repasse-de-r-11-milhoes-a-esposa-do-senador-weverton.html",
+      "corpo": [
+        "A Polícia Federal teria apontado que a mulher do senador Weverton Rocha teria recebido 11 milhões de reais de um advogado. Segundo as alegações veiculadas, o profissional também teria comprado uma casa para o parlamentar.",
+        "Três veículos de imprensa atribuem as informações a investigações da Polícia Federal. As publicações divergem sobre a origem dos recursos, citando ora repasses diretos do advogado, ora transferências por meio de empresas ligadas a ele.",
+        "A apuração citada envolveria a transferência de verbas e a aquisição do imóvel residencial. Os relatos veiculados pelas publicações ainda carecem de validação em registros ou documentos oficiais."
+      ],
+      "id": "circ:pf-teria-apontado-repasse-de-r-11-milhoes-a-esposa-do-senador-weverton",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "PF teria apontado repasse de R$ 11 milhões à esposa do senador Weverton Rocha",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T20:41:55.304Z",
+      "hora": "16h41"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "O assunto e publicado por tres veiculos da imprensa.",
+        "Flavio Dino e o STF sao citados como autores das autorizacoes.",
+        "As mencoes envolvem alegacoes de trafico de influencia na Dataprev e Saude."
+      ],
+      "falta": [
+        "Confirmacao oficial do STF ou da Policia Federal sobre a existencia dos inqueritos.",
+        "Numero dos procedimentos ou processos judiciais citados.",
+        "Manifestacao oficial da defesa do individuo citado nas reportagens.",
+        "Detalhamento formal dos atos investigados na Dataprev e no setor de Saude."
       ],
       "ondeCirculou": [
         {
@@ -1424,131 +1555,58 @@
           "link": "https://www.infomoney.com.br/politica/trafico-de-influencia-dataprev-e-saude-entenda-as-acusacoes-contra-lulinha/"
         }
       ],
-      "link": "/materia/nc-stf-teria-autorizado-tres-investigacoes-da-pf-envolvendo-filho-do-pres.html",
+      "link": "/materia/nc-flavio-dino-teria-autorizado-terceiro-inquerito-da-pf-contra-investiga.html",
       "corpo": [
-        "O ministro Flávio Dino, do Supremo Tribunal Federal, teria autorizado a abertura de investigações da Polícia Federal contra o filho do presidente da República. A decisão contemplaria a autorização de um terceiro inquérito para apurar as condutas relatadas.",
-        "As apurações estariam centradas em supostas práticas de tráfico de influência. Os fatos mencionados pelas publicações envolveriam procedimentos relacionados à Dataprev e à área da Saúde.",
-        "As matérias veiculadas apresentam variações de ênfase, citando o total de três investigações na Corte e a decisão específica do relator. Até o momento, o trâmite formal dos procedimentos não foi localizado em bases oficiais."
+        "O Supremo Tribunal Federal teria autorizado a abertura de tres investigacoes conduzidas pela Policia Federal contra um mesmo individuo. O ministro Flavio Dino teria assinado a autorizacao para a instalacao de um terceiro inquerito. As medidas estariam atreladas a apuracoes sobre a conduta do citado homem.",
+        "As publicacoes que veicularam o caso indicam que os procedimentos apurariam a suposta pratica de trafico de influencia. Os fatos relatados teriam relacao com acoes envolvendo a Dataprev e a area da Saude. O conjunto de apuracoes estaria sob a responsabilidade dos investigadores da Policia Federal.",
+        "As reportagens apresentam diferencas de enfoque entre si quanto ao detalhamento do caso. Enquanto uma das publicacoes destaca especificamente a decisao individual do ministro Flavio Dino, outras enfatizam os setores governamentais que teriam sido atingidos."
       ],
-      "id": "circ:stf-teria-autorizado-tres-investigacoes-da-pf-envolvendo-filho-do-pres",
+      "id": "circ:flavio-dino-teria-autorizado-terceiro-inquerito-da-pf-contra-investiga",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "STF teria autorizado três investigações da PF envolvendo filho do presidente",
+      "titulo": "Flavio Dino teria autorizado terceiro inquerito da PF contra investigado",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:04:38.116Z",
-      "hora": "16h04"
+      "iso": "2026-08-04T20:42:31.460Z",
+      "hora": "16h42"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a informação está sendo veiculada por dois veículos de imprensa.",
-        "Que as alegações atribuem ao Catar o relato de progresso nas negociações.",
-        "Que há menção à distribuição de rascunhos de um eventual acordo."
+        "Que dois veículos de imprensa publicaram informações sobre a decisão.",
+        "Que o Conselho Nacional de Justiça é o órgão apontado nas matérias.",
+        "Que os relatos associam o caso ao contexto da Lava Jato."
       ],
       "falta": [
-        "Confirmação oficial por parte dos governos dos Estados Unidos, Irã ou Catar.",
-        "Disponibilização ou registro oficial dos rascunhos de acordo mencionados.",
-        "Informações concretas sobre datas, locais e interlocutores das supostas negociações."
+        "Confirmação ou posicionamento oficial por parte do Conselho Nacional de Justiça.",
+        "Identificação do número do processo ou procedimento administrativo correspondente.",
+        "Informação sobre o motivo formal que justificaria o eventual afastamento.",
+        "Citação oficial confirmando o nome da magistrada atingida pelo posicionamento."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Valor Econômico",
-          "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW1pMXdCUktaREszZm44Z3NlS3JuM1UtYjhoUGdJZWpNbHd0WWlBbjR4NXVtTWlqS1VZUWU1WGM4VU9yU0FaQmdwZjA3QmdxQlhBdWVqRmpuZXl6Nmp3blRud1lQQ1RadmE2R0FCOW1HNTRTbkliQWRZQS0xdUhMVU53emYwSUhjNjktcWRCWDhCdFRDNi1tVXlXUXlzb2hhOTl5anJWbmRJWXd4d2FvdGpR0gHAAUFVX3lxTE1FYXNPRG5JVC1EQ2NRcHpCTEJtc1FlWkItRVN0dGc3ZWZmTHRSdEs3bXFEdUIyTFVvTTF3VjRTRWR0cERTUG5Xemdxa29EVVhwdFI1c2lEajg1VnZ2WElYdDM2ZGZHVGREZXRWUlVkMEh4YWd1YjdPUFJnVmVlTEV2cWtLWmE5d0J5Qm5MUUpHOEN0R2Vka3pVUWwxZS1Sdzk4RnZkdG9hcm5NVlJmeXVjUmp4X2RWTHJVeFVhSnNQRw?oc=5"
+          "veiculo": "CNN Brasil",
+          "titulo": "Lava Jato: CNJ forma maioria para afastar juíza substituta de Moro do cargo",
+          "link": "https://www.cnnbrasil.com.br/politica/cnj-julgamento-afastamento-juiza-substituta-de-moro/"
         },
         {
-          "veiculo": "Estadão",
-          "titulo": "Rascunhos de um possível acordo entre EUA e Irã estão sendo distribuídos, afirma Catar",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTU1QandwNXpDNEZVUnJoTlVjM0EwUHVhX1N5WHJGUnNvUExLSWtjbnNjV0RrMkFlaDg5NjNJcXY4YTl0elFWODVEMEFLNmFMbExwdE1oSE9zakdNT1RVOFdXamduMUZHVWpNTWZ1cE5QOHFjaWFKS0FXZXRtLU9KY3BIRG5VZmhMUlkyNFJta2hjYkRtMkZ3RC1mNk9yZFJoV201STBDQU9naldsZXAxOVk1My1leUFnSmoxOGhfYkVENzZHSU04NzdjMNIB0AFBVV95cUxQZlNPeFVzMXlGc2ZKME1wNk1qMnhWcUk1eVd4NTZuTU1ia3J5NWttM2FmVU9fRDhCTGF2TTdFeVpiT3pmZzhwY1FxNGdVYnY4QUdPN3lMN3B4THpMM2ZwTUdlWVlCRTNsNUhPdk4zWWRhZ2NvOU54N3FkN2tsU1d5SGtWdmdlX0h5U0ZWd29sLWMxY0pRaVZlT2xhLU96ZW5hV1M5X0huTkR1V2ltcDV5MV9xdXQ5VEtTdTFqeS05ZDVhcGxwM3R2WWdBRzREcU13?oc=5"
+          "veiculo": "g1 Política",
+          "titulo": "Lava Jato: CNJ tem maioria para afastar juíza Gabriela Hardt do cargo",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-caso-gabriela-hardt-lava-jato.ghtml"
         }
       ],
-      "link": "/materia/nc-catar-teria-indicado-progresso-e-rascunho-de-acordo-entre-eua-e-ira.html",
+      "link": "/materia/nc-cnj-teria-maioria-para-afastar-juiza-ligada-a-operacao-lava-jato.html",
       "corpo": [
-        "O governo do Catar teria afirmado que haveria progresso rumo a negociações entre os Estados Unidos e o Irã. Segundo as alegações veiculadas, rascunhos de um possível acordo entre as partes já estariam sendo distribuídos.",
-        "As publicações apontam o Catar como fonte das declarações, sem detalhar datas, locais ou os termos contidos nos documentos. Os relatos divulgados se somam ao mencionar tanto o avanço do diálogo quanto a circulação de propostas escritas.",
-        "Até o momento, não foram registradas manifestações públicas dos governos envolvidos para confirmar o teor dos relatos. A evolução das tratativas permanece restrita ao que foi noticiado pela imprensa."
+        "O Conselho Nacional de Justiça estaria com maioria formada para determinar o afastamento de uma magistrada de suas funções. A deliberação estaria inserida no âmbito de apurações relacionadas à Operação Lava Jato.",
+        "As publicações que veiculam o relato apresentam variações na identificação da investigada. Um dos veículos cita a juíza Gabriela Hardt, enquanto o outro a descreve como juíza substituta de Moro. Ambos os textos concordam que o plenário do órgão já teria alcançado o número de votos necessário para a medida."
       ],
-      "id": "circ:catar-teria-indicado-progresso-e-rascunho-de-acordo-entre-eua-e-ira",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Catar teria indicado progresso e rascunho de acordo entre EUA e Irã",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:05:30.240Z",
-      "hora": "16h05"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a alegação sobre a defesa de Romário é veiculada por veículos de imprensa.",
-        "Que as matérias divergem entre bloqueio de valores e penhora sobre pagamentos."
-      ],
-      "falta": [
-        "Confirmação oficial do órgão judiciário onde o recurso teria sido protocolado.",
-        "O número do processo judicial e as datas das decisões.",
-        "Manifestação oficial da defesa do senador ou dos responsáveis pela CazéTV."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Poder360",
-          "titulo": "Defesa de Romário recorre contra bloqueio de valores da &#8220;CazéTV&#8221;",
-          "link": "https://www.poder360.com.br/poder-congresso/defesa-de-romario-recorre-contra-bloqueio-de-valores-da-cazetv/"
-        },
-        {
-          "veiculo": "Congresso em Foco",
-          "titulo": "Defesa de Romário tenta suspender penhora sobre pagamentos da CazéTV",
-          "link": "https://www.congressoemfoco.com.br/noticia/120998/defesa-de-romario-tenta-suspender-penhora-sobre-pagamentos-da-cazetv"
-        }
-      ],
-      "link": "/materia/nc-defesa-de-romario-teria-recorrido-contra-bloqueio-de-valores-da-cazetv.html",
-      "corpo": [
-        "A defesa de Romário teria recorrido de uma decisão judicial para tentar liberar recursos vinculados à CazéTV. O pedido visaria anular restrições financeiras impostas sobre esses montantes.",
-        "As publicações sobre o caso divergiram quanto à classificação da medida questionada. Uma das manchetes citaria um recurso contra o bloqueio de valores, enquanto a outra mencionaria a suspensão de penhora sobre pagamentos. Não existiriam detalhes sobre datas, valores envolvidos ou o tribunal do processo nas chamadas."
-      ],
-      "id": "circ:defesa-de-romario-teria-recorrido-contra-bloqueio-de-valores-da-cazetv",
+      "id": "circ:cnj-teria-maioria-para-afastar-juiza-ligada-a-operacao-lava-jato",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Defesa de Romário teria recorrido contra bloqueio de valores da CazéTV",
+      "titulo": "CNJ teria maioria para afastar juíza ligada à Operação Lava Jato",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:07:01.790Z",
-      "hora": "16h07"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que as alegações sobre o episódio estão sendo publicadas por dois veículos de imprensa.",
-        "Que os relatos divulgados divergem entre a ocorrência de advertência e o afastamento da profissional."
-      ],
-      "falta": [
-        "Manifestação ou nota oficial da emissora SBT sobre o caso.",
-        "Confirmação oficial dos envolvidos quanto à advertência, ao pedido de desculpas ou ao afastamento."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Folha",
-          "titulo": "SBT adverte Carol Lekker, do Fofocalizando, que pede desculpas a Eliana após deboche",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/colunistas/outro-canal/2026/08/sbt-adverte-carol-lekker-do-fofocalizando-que-pede-desculpas-a-eliana-apos-deboche.shtml"
-        },
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "Após detonar Eliana, Carol Lekker é afastada do Fofocalizando",
-          "link": "https://www.metropoles.com/entretenimento/apos-detonar-eliana-carol-lekker-e-afastada-do-fofocalizando"
-        }
-      ],
-      "link": "/materia/nc-integrante-do-sbt-teria-sido-advertida-ou-afastada-apos-criticas-a-apr.html",
-      "corpo": [
-        "Uma integrante do programa Fofocalizando teria feito declarações críticas e debochadas contra uma apresentadora. Em razão do episódio, a profissional estaria no centro de sanções disciplinares aplicadas pela emissora.",
-        "As notícias veiculadas apresentam divergências em relação aos desdobramentos do caso. Enquanto uma das publicações relata que a profissional teria recebido advertência e pedido desculpas, outra sustenta que ela teria sido afastada da atração."
-      ],
-      "id": "circ:integrante-do-sbt-teria-sido-advertida-ou-afastada-apos-criticas-a-apr",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Integrante do SBT teria sido advertida ou afastada após críticas a apresentadora",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:07:54.662Z",
-      "hora": "16h07"
+      "iso": "2026-08-04T20:43:30.593Z",
+      "hora": "16h43"
     }
   ],
   "pautas": [
@@ -1556,72 +1614,128 @@
       "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 9,
+      "quentura": 7,
+      "tambemEm": [
+        "BBC Brasil",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "União Brasil oficializa neutralidade e não vai apoiar Flávio Bolsonaro",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 6,
+      "tambemEm": [
+        "g1",
+        "Congresso em Foco",
+        "CNN Brasil"
+      ]
+    },
+    {
+      "titulo": "Petróleo fecha com queda de 5% após avanços nas negociações entre EUA e Irã",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 6,
+      "tambemEm": [
+        "Metrópoles",
+        "Valor Econômico",
+        "estadao.com.br"
+      ]
+    },
+    {
+      "titulo": "União Brasil confirma neutralidade nas eleições",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1",
+        "CNN Brasil",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Zema escolhe Eduardo Girão para vice e fecha chapa do Novo na corrida ao Planalto",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Novo anuncia senador Eduardo Girão como vice em chapa de Romeu Zema",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "g1 Política",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Zema escolhe Eduardo Girão para vice e terá chapa puro-sangue",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 4,
       "tambemEm": [
         "Congresso em Foco",
-        "BBC Brasil",
-        "Folha"
+        "g1 Política",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Quem é Eduardo Girão, senador escolhido como vice na chapa de Romeu Zema",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "InfoMoney"
       ]
     },
     {
       "titulo": "Flávio Bolsonaro diz que definição sobre vice sairá até o dia 15 de agosto",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 5,
+      "quentura": 3,
       "tambemEm": [
         "Congresso em Foco",
-        "Folha",
         "JOTA"
       ]
     },
     {
-      "titulo": "Advogado aciona Conselho de Ética contra Flávio por IA de Bolsonaro",
+      "titulo": "\"Não vai faltar vacina\", diz Flávio Bolsonaro sobre eventual governo",
       "veiculo": "Congresso em Foco",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
         "g1 Política",
-        "JOTA",
-        "CartaCapital"
+        "Metrópoles",
+        "JOTA"
       ]
     },
     {
-      "titulo": "Quem é Willer Tomaz, advogado e amigo de Flávio Bolsonaro alvo da nova fase da Operação Sem Desconto",
-      "veiculo": "CartaCapital",
+      "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
+      "veiculo": "Valor Econômico",
       "quentura": 3,
       "tambemEm": [
-        "Congresso em Foco",
-        "JOTA",
+        "CNN Brasil",
+        "estadao.com.br"
+      ]
+    },
+    {
+      "titulo": "Mulher de Weverton recebeu R$ 11 mi de advogado, diz PF",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "InfoMoney",
         "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
-      "veiculo": "Estadão",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Política",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Eduardo Girão, também do Novo, será vice de Zema",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "PL define chapa pura no RJ após desembarque em palanque de Flávio Bolsonaro",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "JOTA"
       ]
     },
     {
@@ -1631,7 +1745,7 @@
       "quentura": 2,
       "tambemEm": [
         "g1 Política",
-        "Estadão"
+        "Metrópoles"
       ]
     },
     {
@@ -1645,34 +1759,6 @@
       ]
     },
     {
-      "titulo": "\"Não vai faltar vacina\", diz Flávio Bolsonaro sobre eventual governo",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Zema escolhe Eduardo Girão para vice e terá chapa puro-sangue",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
-      "veiculo": "Valor Econômico",
-      "quentura": 2,
-      "tambemEm": [
-        "Estadão"
-      ]
-    },
-    {
       "titulo": "O embate entre Lula e Flávio Bolsonaro no Pará, segundo o Real Time Big Data",
       "veiculo": "CartaCapital",
       "quentura": 2,
@@ -1682,48 +1768,30 @@
       ]
     },
     {
-      "titulo": "Tráfico de influência, Dataprev e Saúde: entenda as acusações contra Lulinha",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 1,
+      "titulo": "Trump afirma que EUA e Irã estão em negociações e faz novo ultimato ao regime iraniano",
+      "veiculo": "estadao.com.br",
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil"
+        "CNN Brasil",
+        "Valor Econômico"
       ]
     },
     {
-      "titulo": "Defesa de Romário recorre contra bloqueio de valores da &#8220;CazéTV&#8221;",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "Congresso em Foco"
-      ]
-    },
-    {
-      "titulo": "SBT adverte Carol Lekker, do Fofocalizando, que pede desculpas a Eliana após deboche",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Grupo suspeito de induzir menina ao suicídio fez mais vítimas e forçava outras violências",
-      "veiculo": "g1",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha"
-      ]
-    },
-    {
-      "titulo": "Após detonar Eliana, Carol Lekker é afastada do Fofocalizando",
+      "titulo": "Dólar dispara a R$ 5,13, apesar de queda do petróleo e alívio no Irã",
       "veiculo": "Metrópoles",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "Folha"
+        "CNN Brasil"
+      ]
+    },
+    {
+      "titulo": "Lava Jato: CNJ forma maioria para afastar juíza substituta de Moro do cargo",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Política"
       ]
     }
   ]
