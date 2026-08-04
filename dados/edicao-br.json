@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T13:32:33.462Z",
+  "gerado": "2026-08-04T13:48:53.438Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
     "pauta": 211,
-    "fonteLivre": 51,
-    "confirmadas": 16,
-    "publicadas": 15,
+    "fonteLivre": 57,
+    "confirmadas": 20,
+    "publicadas": 9,
     "resgatadas": 0,
-    "semFonte": 41
+    "semFonte": 49
   },
   "fontes": {
-    "checadas": 81,
-    "responderam": 50,
-    "entregando": 28,
-    "itens": 258,
+    "checadas": 85,
+    "responderam": 35,
+    "entregando": 29,
+    "itens": 264,
     "lista": [
       {
         "tipo": "pauta",
@@ -82,15 +82,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "zh",
         "nome": "Zero Hora",
         "itens": 12,
@@ -109,8 +100,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -121,6 +112,24 @@
         "id": "estadao",
         "nome": "Estadão",
         "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -148,15 +157,6 @@
         "id": "usp",
         "nome": "Jornal da USP",
         "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -207,9 +207,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
+        "tipo": "livre",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -225,10 +225,19 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
-        "itens": 7,
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -325,8 +334,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "migalhas",
-        "nome": "Migalhas",
+        "id": "r7",
+        "nome": "R7",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -334,8 +343,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "r7",
-        "nome": "R7",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -361,39 +370,21 @@
       },
       {
         "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 405"
+      },
+      {
+        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       },
       {
         "tipo": "livre",
@@ -406,12 +397,30 @@
       },
       {
         "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "tse",
         "nome": "TSE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -460,21 +469,21 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "anp",
         "nome": "ANP",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -483,7 +492,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -491,8 +500,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -502,24 +511,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 429"
       },
       {
         "tipo": "livre",
@@ -541,12 +532,21 @@
       },
       {
         "tipo": "livre",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "pf",
         "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -555,34 +555,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -590,17 +563,17 @@
         "nome": "CGU",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -609,25 +582,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -636,16 +618,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -654,7 +627,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -663,16 +663,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -680,26 +671,17 @@
         "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "anvisa",
+        "nome": "Anvisa",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -708,7 +690,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -716,8 +716,8 @@
         "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -730,12 +730,39 @@
       },
       {
         "tipo": "livre",
-        "id": "fapesp",
-        "nome": "Agência FAPESP",
+        "id": "ans",
+        "nome": "ANS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "antt",
+        "nome": "ANTT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "itamaraty",
+        "nome": "Itamaraty",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mpf",
+        "nome": "MPF",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -744,53 +771,32 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "govbr",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       }
     ]
   },
   "cidades": [],
   "itens": [
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260803_00_livro_soja_hortalica_esalq_usp.jpg",
-      "fotoAlt": "três imagens lado a lado mostrando vagens de soja verde",
-      "fotoLarg": 800,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Esalq da USP lança e-book gratuito sobre cultivo e consumo de soja hortaliça",
-      "resumo": "A publicação reúne orientações práticas sobre produção, benefícios nutricionais e oportunidades de negócios no campo para produtores, técnicos e consumidores.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/universidade/e-book-explica-como-cultivar-e-consumir-soja-como-hortalica/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Escola Superior de Agricultura Luiz de Queiroz, da USP, disponibilizou gratuitamente a publicação \"Soja hortaliça\". O e-book integra a Série Produtor Rural e reúne orientações técnicas sobre o cultivo e o consumo do grão verde e fresco, conhecido como edamame.",
-        "A maior parte da safra de soja do Brasil é destinada à exportação em grão seco para a produção de ração animal e óleo vegetal. O consumo direto do grão como hortaliça ainda é pouco explorado no mercado nacional, apesar de ser amplamente difundido na culinária oriental.",
-        "O avanço na busca por escolhas alimentares mais saudáveis e a aceitação de derivados como tofu, shoyu e proteína texturizada abrem espaço para essa alternativa rentável de cultivo. O e-book foi desenvolvido para orientar produtores rurais, técnicos do setor agrário e consumidores."
-      ],
-      "link": "/materia/esalq-da-usp-lanca-e-book-gratuito-sobre-cultivo-e-consumo-de-soja-hor.html",
-      "iso": "2026-08-04T12:53:29.000Z",
-      "hora": "08h53",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:relato-aborda-viagem-de-pessoa-apatrida-diante-da-ignorancia-e-desinfo",
+      "id": "ilm:publicacao-aborda-a-trajetoria-de-viajante-que-nasceu-sem-nacionalidad",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Relato aborda viagem de pessoa apátrida diante da ignorância e desinformação",
-      "resumo": "Uma pessoa nascida sem nacionalidade afirmou que aprendeu a temer situações que ocorrem de forma natural para outros indivíduos.",
+      "titulo": "Publicação aborda a trajetória de viajante que nasceu sem nacionalidade",
+      "resumo": "O relato apresenta o depoimento de uma pessoa apátrida que afirma ter aprendido a temer coisas que acontecem de forma natural para outros indivíduos.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
       "origemNome": "Global Voices (EN)",
@@ -798,13 +804,74 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Uma pessoa que nasceu apátrida declarou ter aprendido a temer coisas que surgem de maneira natural para as outras pessoas.",
-        "A fala integra um relato sobre a jornada de um viajante sem pátria em meio ao desconhecimento e à desinformação.",
-        "O depoimento descreve as vivências e os receios de uma pessoa sem nacionalidade ao realizar viagens."
+        "Uma publicação retrata a jornada de um viajante apátrida ao lidar com ignorância e desinformação.",
+        "O relato traz a declaração de uma pessoa que nasceu sem pátria.",
+        "No depoimento, a pessoa afirma que aprendeu a temer coisas que acontecem de maneira natural para outras pessoas."
       ],
-      "link": "/materia/relato-aborda-viagem-de-pessoa-apatrida-diante-da-ignorancia-e-desinfo.html",
+      "link": "/materia/publicacao-aborda-a-trajetoria-de-viajante-que-nasceu-sem-nacionalidad.html",
       "iso": "2026-08-04T07:37:20.000Z",
       "hora": "03h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:governos-africanos-gastaram-mais-de-us-2-bilhoes-em-vigilancia-por-ia",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Governos africanos gastaram mais de US$ 2 bilhões em vigilância por IA",
+      "resumo": "Estudo do Instituto de Estudos do Desenvolvimento aponta que equipamentos são instalados em áreas de organização da oposição e não onde há maior criminalidade.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
+      "origemNome": "Global Voices",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais identificou que onze governos africanos gastaram, em conjunto, mais de US$ 2 bilhões em sistemas de vigilância baseados em inteligência artificial. Apenas a Nigéria foi responsável por mais de US$ 470 milhões desse total.",
+        "Os equipamentos adquiridos incluem sistemas CCTV de alta definição, leitores de placas, reconhecimento facial, camadas de identificação biométrica e salas de controle para reunião de informações. Grande parte da tecnologia é fornecida ou financiada por empresas e bancos chineses, além de sistemas vindos de empresas israelenses.",
+        "A justificativa apresentada pelos governos africanos para a aquisição do material é o combate ao crime, embora os números da criminalidade não estejam diminuindo. Pesquisadores do IDS constataram poucas evidências de que as câmeras reduzem crimes comuns, identificando a concentração dos aparelhos em bairros onde partidos de oposição se organizam, onde ocorreram protestos e onde a imprensa atua.",
+        "A análise indica que a inteligência artificial transformou dados antes armazenados pelo Estado em arquivos consultáveis de forma rápida, permitindo cruzar nomes, canais, padrões de viagem e histórico de transações em segundos."
+      ],
+      "link": "/materia/governos-africanos-gastaram-mais-de-us-2-bilhoes-em-vigilancia-por-ia.html",
+      "iso": "2026-08-03T11:47:40.000Z",
+      "hora": "07h47",
+      "original": true,
+      "contexto": "Do total de mais de US$ 2 bilhões gastos por onze governos africanos em tecnologia de vigilância, mais de US$ 470 milhões foram aplicados apenas pela Nigéria. A implementação dos sistemas afeta moradores de áreas onde se organizam partidos de oposição, ocorrem protestos e atua a imprensa.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Photo-courtesy-Apatride-Network-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:documentos-confirmam-vinculo-legal-com-estado-mas-nao-criam-existencia",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Documentos confirmam vínculo legal com Estado mas não criam existência",
+      "resumo": "Registros oficiais também não têm a capacidade de apagar a história, a família ou o sentimento de pertencimento de uma pessoa.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Documentos podem confirmar uma relação jurídica de uma pessoa com um Estado. No entanto, esses registros não têm a capacidade de criar ou apagar a existência de um indivíduo.",
+        "A história e a família de uma pessoa também não podem ser criadas ou apagadas por meio da documentação estatal.",
+        "O sentimento de pertencimento de um indivíduo igualmente permanece sem poder ser criado ou eliminado por esses papéis oficiais."
+      ],
+      "link": "/materia/documentos-confirmam-vinculo-legal-com-estado-mas-nao-criam-existencia.html",
+      "iso": "2026-08-02T16:38:17.000Z",
+      "hora": "12h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -816,11 +883,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:numero-de-falantes-da-lingua-kam-e-de-aproximadamente-8-000-a-11-000",
+      "id": "ilm:lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Número de falantes da língua Kam é de aproximadamente 8.000 a 11.000",
-      "resumo": "Assim como muitas outras línguas do nordeste da Nigéria, o idioma não recebeu atenção de pesquisadores antes de 2016.",
+      "titulo": "Língua Kam no nordeste da Nigéria tem de 8.000 a 11.000 falantes",
+      "resumo": "O idioma não recebia atenção de pesquisadores até o ano de 2016, situação semelhante à de outras línguas da mesma região.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
@@ -828,11 +895,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O número atual de falantes da língua Kam é de aproximadamente 8.000 – 11.000. O idioma está localizado no nordeste da Nigéria.",
-        "Antes de 2016, a língua Kam não recebia atenção por parte de pesquisadores.",
-        "A ausência de atenção de pesquisadores antes de 2016 ocorreu também com muitas outras línguas do nordeste da Nigéria."
+        "A língua Kam, localizada no nordeste da Nigéria, registra atualmente um total de aproximadamente 8.000 a 11.000 falantes.",
+        "O idioma não recebeu atenção por parte de pesquisadores antes de 2016.",
+        "Assim como a língua Kam, muitas outras línguas do nordeste da Nigéria também não tinham recebido atenção de pesquisadores antes de 2016."
       ],
-      "link": "/materia/numero-de-falantes-da-lingua-kam-e-de-aproximadamente-8-000-a-11-000.html",
+      "link": "/materia/lingua-kam-no-nordeste-da-nigeria-tem-de-8-000-a-11-000-falantes.html",
       "iso": "2026-08-03T05:38:53.000Z",
       "hora": "01h38",
       "original": true,
@@ -841,235 +908,16 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Photo-courtesy-Apatride-Network-800x450.webp",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:documentos-confirmam-vinculo-legal-com-estado-mas-nao-apagam-existenci",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Documentos confirmam vínculo legal com Estado mas não apagam existência",
-      "resumo": "Registros oficiais não têm o poder de criar ou apagar a história, a família e o sentimento de pertencimento de uma pessoa.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Documentos podem confirmar uma relação jurídica entre uma pessoa e um Estado. No entanto, eles não são capazes de criar ou apagar a existência de um indivíduo.",
-        "Além da existência, os registros não conseguem criar ou apagar a história e a família de uma pessoa.",
-        "Os documentos também não têm o poder de criar ou apagar o sentimento de pertencimento."
-      ],
-      "link": "/materia/documentos-confirmam-vinculo-legal-com-estado-mas-nao-apagam-existenci.html",
-      "iso": "2026-08-02T16:38:17.000Z",
-      "hora": "12h38",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_adulta-estudando.jpg",
-      "fotoAlt": "Apenas 5% dos jovens brasileiros de 15 anos desejam seguir a carreira docente, segundo o relatório Global Status of Teachers 2024. Especialistas da USP apontam que a baixa atrativi",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:mais-de-260-mil-futuros-professores-nao-atingem-proficiencia-minima-em",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Mais de 260 mil futuros professores não atingem proficiência mínima em exame",
-      "resumo": "Resultado da Prova Nacional Docente de 2025 indica cenário em que apenas 5% dos jovens brasileiros de 15 anos desejam seguir a carreira.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/prova-nacional-docente-expoe-desafios-na-formacao-de-futuros-professores/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A primeira edição da Prova Nacional Docente, aplicada em 2025, revelou que mais de 260 mil futuros professores não alcançaram o nível mínimo de proficiência no exame.",
-        "Segundo o relatório Global Status of Teachers 2024, apenas 5% dos jovens brasileiros de 15 anos querem seguir a carreira docente. A Organização para a Cooperação e Desenvolvimento Econômico (OCDE) aponta que os professores representam o fator escolar com maior impacto na aprendizagem dos estudantes.",
-        "Especialistas da USP indicam que a baixa atratividade da profissão compromete a formação dos docentes e afirmam que as dificuldades começam antes da universidade. Eles defendem mudanças na formação inicial e na valorização da carreira."
-      ],
-      "link": "/materia/mais-de-260-mil-futuros-professores-nao-atingem-proficiencia-minima-em.html",
-      "iso": "2026-08-04T12:30:46.000Z",
-      "hora": "08h30",
-      "original": true,
-      "contexto": "Esta foi a primeira edição da Prova Nacional Docente, realizada em 2025, e não há registros anteriores no histórico. O resultado afeta mais de 260 mil futuros professores que não atingiram a proficiência mínima exigida no exame. Os dados sobre o interesse na carreira dizem respeito a jovens brasileiros de 15 anos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2023/03/20230310_00_multidao_cidade_centro.jpg",
-      "fotoAlt": "Multidão caminha numa rua do centro de São Paulo",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:inct-producao-da-casa-e-da-cidade-lanca-o-podcast-vivendo-a-cidade",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "INCT Produção da Casa e da Cidade lança o podcast Vivendo a Cidade",
-      "resumo": "A produção aborda a formação das cidades brasileiras e a autoconstrução nas periferias no primeiro episódio, intitulado Cotidiano nas cidades: vivendo a cidade real.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/universidade/urbanizacao-e-cotidiano-das-cidades-brasileiras-e-tema-de-novo-podcast-com-pesquisadores-da-usp/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Instituto Nacional de Ciência e Tecnologia (INCT) Produção da Casa e da Cidade lançou o podcast Vivendo a Cidade. A instituição é sediada na Faculdade de Arquitetura e Urbanismo e de Desing (FAU) da USP.",
-        "A série utiliza formato narrativo e linguagem acessível. O objetivo é aproximar pesquisadores, estudantes e demais interessados dos debates sobre urbanização, habitação e produção do espaço urbano no Brasil.",
-        "O primeiro episódio do podcast chama-se Cotidiano nas cidades: vivendo a cidade real. O programa aborda a formação das cidades brasileiras e a realidade da autoconstrução em áreas periféricas."
-      ],
-      "link": "/materia/inct-producao-da-casa-e-da-cidade-lanca-o-podcast-vivendo-a-cidade.html",
-      "iso": "2026-08-04T12:53:07.000Z",
-      "hora": "08h53",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/20260727_00_equipe_warthog_robotics_robotica_usp.jpg",
-      "fotoAlt": "Quatro homens jovens e brancos em pé olhando para a frente e no chão à frente um robô",
-      "fotoLarg": 800,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:equipe-warthog-robotics-e-vice-campea-da-robocup-2026-na-coreia-do-sul",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Equipe Warthog Robotics é vice-campeã da RoboCup 2026 na Coreia do Sul",
-      "resumo": "O resultado foi conquistado na Divisão B da categoria Small Size League por estudantes que disputaram partidas de futebol de robôs autônomos.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/uspnews/usp-team-is-runner-up-at-robocup-one-of-the-worlds-leading-robotics-competitions/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A equipe Warthog Robotics ficou com o vice-campeonato na RoboCup 2026, competição internacional realizada na Coreia do Sul. O evento reúne times para o desenvolvimento de robôs capazes de executar tarefas autônomas em diferentes categorias.",
-        "A conquista ocorreu na Divisão B da categoria Small Size League (SSL). Nessa disputa, 14 equipes projetam robôs autônomos de pequeno porte que jogam partidas de futebol utilizando visão computacional, inteligência artificial, estratégia e sistemas de controle em tempo real.",
-        "O time foi representado na Coreia do Sul por Rafael Lang, um dos fundadores do Warthog, Pedro Pizarro, Fábio Frias Júnior e João Vitor Benedetti.",
-        "Na primeira fase, a equipe ficou no Grupo 3 ao lado do time Traps, do Japão, e do The A-Team, dos Estados Unidos. O jogo contra os japoneses terminou em 0 a 0, e a classificação para a etapa seguinte ocorreu após o placar de 10 a 0 contra a equipe norte-americana."
-      ],
-      "link": "/materia/equipe-warthog-robotics-e-vice-campea-da-robocup-2026-na-coreia-do-sul.html",
-      "iso": "2026-08-04T12:12:53.000Z",
-      "hora": "08h12",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-rj-desmonta-urna-eletronica-e-apresenta-mecanismos-de-seguranca-pa",
+      "id": "ilm:pf-publica-nova-norma-sobre-controle-e-fiscalizacao-de-produtos-quimic",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "TRE-RJ desmonta urna eletrônica e apresenta mecanismos de segurança para o público",
-      "resumo": "A apresentação integra a Semana Nacional do Sistema Eletrônico de Votação e busca reforçar a confiança no processo eleitoral após frequentes campanhas de desinformação.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tre-rj-abre-urna-para-o-publico-e-defende-seguranca-do-voto-eletronico",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "CartaCapital",
-        "Correio Braziliense"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realizou nesta segunda-feira (3) uma apresentação da urna eletrônica para a imprensa e entidades fiscalizadoras. O equipamento foi desmontado para demonstrar os componentes eletrônicos e os mecanismos de segurança do sistema.",
-        "O presidente do TRE-RJ, Claudio de Mello Tavares, afirmou que a urna eletrônica é segura e que o código-fonte é examinado por entidades como partidos políticos, Ordem dos Advogados, Ministério Público, universidades e Forças Armadas.",
-        "O funcionamento interno foi detalhado pelo secretário de Tecnologia da Informação do TRE, Michel Kovacs. Ele explicou que o equipamento utiliza lacres da Casa da Moeda, biometria, assinaturas digitais e mídias externas para gravação dos votos, sem qualquer conexão com a internet. Em caso de falhas técnicas, uma mídia de contingência transfere os dados para uma urna reserva sem perda de votos.",
-        "Sobre a fabricação, o secretário pontuou que a Justiça Eleitoral estabelece as especificações técnicas e a empresa contratada apenas produz o aparelho. Kovacs também se manifestou contra o retorno do voto em papel, argumentando que a urna eletrônica foi introduzida em 1996 para erradicar fraudes e que a apuração impressa é demorada e suscetível a erros ou adulterações."
-      ],
-      "link": "/materia/tre-rj-desmonta-urna-eletronica-e-apresenta-mecanismos-de-seguranca-pa.html",
-      "iso": "2026-08-03T22:28:00.000Z",
-      "hora": "18h28",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/04/20260415_solo.jpg",
-      "fotoAlt": "Foto das mãos de uma pessoa segurando uma porção de terra marrom retirada do solo para ser analisada.",
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pesquisadores-desenvolvem-fertilizante-para-regenerar-solos-degradados",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Pesquisadores desenvolvem fertilizante para regenerar solos degradados",
-      "resumo": "A tecnologia reconhecida no Prêmio Nobel de Química de 2025 foi criada em parceria entre a USP, a Unesp e as startups Quanticom e MOF Tech.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/atualidades/novo-fertilizante-inteligente-pode-regenerar-solos-degradados-no-brasil/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Pesquisadores da USP desenvolveram um novo fertilizante capaz de ajudar na recuperação de solos degradados no País. O produto atua na agricultura ao fornecer componentes minerais ao solo e caracteriza-se por uma degradação rápida e controlada.",
-        "O desenvolvimento da tecnologia é fruto de uma parceria entre especialistas da USP, da Unesp e de duas startups da USP, a Quanticom e a MOF Tech. A inovação foi reconhecida no Prêmio Nobel de Química de 2025.",
-        "De acordo com análise do MapBiomas, cerca de 25% da vegetação do Brasil pode estar em processo de degradação entre 1986 e 2021. Essa área corresponde a cerca de 135 milhões de hectares, tendo a atividade agropecuária como um de seus principais causadores.",
-        "A professora Liane Rossi, do Instituto de Química da USP e uma das responsáveis pelo dispositivo, afirmou que o fertilizante pode ter potencial ambiental e econômico."
-      ],
-      "link": "/materia/pesquisadores-desenvolvem-fertilizante-para-regenerar-solos-degradados.html",
-      "iso": "2026-08-04T12:23:35.000Z",
-      "hora": "08h23",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
-      "resumo": "Esta é a segunda queda seguida do indicador, que acumula perda de 2,7% nos últimos dois meses após ter caído 0,9% de abril para maio.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Poder360"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A produção industrial brasileira recuou 1,8% em junho deste ano na comparação com o mês anterior, registrando a segunda queda consecutiva do indicador. Os dados da Pesquisa Industrial Mensal (PIM-BR) foram divulgados nesta terça-feira (4) pelo Instituto Brasileiro de Geografia e Estatística (IBGE).",
-        "De acordo com o gerente da PIM-BR, André Macedo, a perda acumulada de 2,7% registrada nos meses de maio e junho eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026. Na média móvel trimestral, a queda foi de 0,5%. Perante junho do ano passado, a indústria cresceu 1,7%, acumulando altas de 1,5% no ano e de 0,7% em 12 meses.",
-        "Na passagem de maio para junho, 16 dos 25 ramos pesquisados tiveram resultado negativo. As principais quedas ocorreram em produtos farmoquímicos e farmacêuticos (-11%), confecção de artigos do vestuário e acessórios (-11%), equipamentos de informática, produtos eletrônicos e ópticos (-8,9%), outros equipamentos de transporte (-8,6%), coque, produtos derivados de petróleo e biocombustíveis (-5,9%), produtos químicos (-4,3%), produtos de borracha e de material plástico (-2,8%), produtos alimentícios (-1,9%) e indústrias extrativas (-0,6%). Das nove atividades em alta, sobressaíram-se impressão e reprodução de gravações (20,2%), celulose, papel e produtos de papel (5,4%) e metalurgia (1,4%).",
-        "As quatro grandes categorias econômicas do setor registraram retração no período. Bens de consumo semi e não duráveis recuaram 4,1%, enquanto bens de consumo duráveis caíram 3,2%. As categorias de bens de capital e de bens intermediários apresentaram, ambas, queda de 1,1%."
-      ],
-      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
-      "iso": "2026-08-04T12:44:00.000Z",
-      "hora": "08h44",
-      "original": true,
-      "contexto": "A queda de 1,8% em junho representa o segundo resultado negativo consecutivo da produção industrial brasileira. O recuo acumulado de 2,7% entre maio e junho reduz o ganho de 4,4% registrado nos quatro primeiros meses de 2026. O resultado atinge 16 dos 25 setores pesquisados pelo IBGE, com as maiores retrações registradas nos ramos de produtos farmoquímicos e de vestuário.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pf-publica-norma-para-fiscalizacao-de-produtos-quimicos",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "PF publica norma para fiscalização de produtos químicos",
-      "resumo": "Regra abrange substâncias usadas na produção ilícita de drogas e exige cadastro de pessoas físicas e empresas no Sistema de Controle de Produtos Químicos.",
+      "titulo": "PF publica nova norma sobre controle e fiscalização de produtos químicos",
+      "resumo": "Medida atualiza regras de monitoramento de substâncias que podem ser usadas na produção ilícita de drogas e exige cadastro no Sistema de Controle de Produtos Químicos.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/brasil-passa-ter-controle-maior-sobre-produtos-quimicos",
       "origemNome": "Agência Brasil",
@@ -1079,12 +927,12 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "A Polícia Federal publicou uma nova instrução normativa para regulamentar o controle e a fiscalização de produtos químicos que podem ser utilizados na fabricação ilícita de drogas. A medida foi publicada no Diário Oficial da União nesta segunda-feira (3) e revoga normas anteriores de 2020 e 2021.",
-        "A norma estabelece regras para cadastro, licenciamento e fiscalização de pessoas físicas e jurídicas que produzem, comercializam, transportam, armazenam ou usam substâncias presentes em lista definida pelo Ministério da Justiça e Segurança Pública. Os envolvidos devem obter licença por meio do Sistema de Controle de Produtos Químicos e enviar os Mapas Mensais de Controle até o dia 15 de cada mês, inclusive nos períodos sem movimentação.",
-        "Equipes poderão inspecionar estabelecimentos e apreender produtos irregulares. Condutas menos graves sujeitam o infrator a advertência e, em caso de reincidência, multa entre R$ 2.128,20 e R$ 20 mil. Para irregularidades mais severas, as multas variam de R$ 20 mil a R$ 350 mil. Reincidentes podem ter a licença suspensa por até 180 dias, e a autorização pode ser cancelada em casos como o desvio de produtos para fins ilícitos.",
-        "De acordo com a Polícia Federal, o objetivo da regulamentação é ampliar o rastreamento das operações e a capacidade de fiscalização sobre substâncias químicas. Entre as infrações listadas estão a falta de cadastro, a omissão de informações, a realização de atividades sem autorização e a adulteração de documentos e rótulos."
+        "A Polícia Federal publicou uma nova instrução normativa no Diário Oficial da União nesta segunda-feira (3) para regulamentar o controle e a fiscalização de produtos químicos que podem ser utilizados na fabricação ilícita de drogas e entorpecentes. A medida atualiza os procedimentos de monitoramento previstos na legislação federal.",
+        "A norma estabelece regras para cadastro, licenciamento, fiscalização e responsabilização de pessoas físicas e jurídicas que operem com substâncias constantes na lista do Ministério da Justiça e Segurança Pública. As empresas e profissionais deverão realizar cadastro e pedir licença de funcionamento no Sistema de Controle de Produtos Químicos, além de enviar os Mapas Mensais de Controle até o dia 15 de cada mês, mesmo nos períodos sem movimentação.",
+        "O texto prevê que equipes de fiscalização poderão inspecionar estabelecimentos e apreender produtos irregulares. Para infrações menos graves, a punição é advertência ou multa entre R$ 2.128,20 e R$ 20 mil em caso de reincidência. Irregularidades mais severas preveem multas de R$ 20 mil a R$ 350 mil, suspensão da licença por até 180 dias e cancelamento da autorização em situações como o desvio de produtos para fins ilícitos.",
+        "Segundo a Polícia Federal, as medidas visam fortalecer o controle sobre substâncias químicas usadas na produção ilegal de drogas, amplificando o rastreamento das operações e a capacidade de fiscalização. A nova instrução normativa revoga regulamentações anteriores publicadas em 2020 e 2021."
       ],
-      "link": "/materia/pf-publica-norma-para-fiscalizacao-de-produtos-quimicos.html",
+      "link": "/materia/pf-publica-nova-norma-sobre-controle-e-fiscalizacao-de-produtos-quimic.html",
       "iso": "2026-08-03T11:35:00.000Z",
       "hora": "07h35",
       "original": true,
@@ -1098,42 +946,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:inmet-preve-chuva-no-sul-norte-e-nordeste-e-alerta-para-baixa-umidade-",
+      "id": "ilm:legislacao-permite-a-realizacao-de-concursos-publicos-durante-o-period",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Inmet prevê chuva no Sul, Norte e Nordeste e alerta para baixa umidade no interior",
-      "resumo": "O estado do Rio Grande do Sul está sob alerta de perigo potencial para chuvas, ventos intensos e granizo nesta terça-feira, enquanto o nordeste de Mato Grosso registra umidade abaixo de 20%.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/regiao-sul-tem-previsao-de-chuva-e-granizo-para-esta-terca-feira",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Instituto Nacional de Meteorologia (Inmet) indica que o Rio Grande do Sul está sob alerta de perigo potencial para chuvas, ventos intensos e queda de granizo nesta terça-feira (4). Para Santa Catarina e Paraná, há previsão de chuvas isoladas, com perda de força das instabilidades à noite. Na quarta-feira (5), chuvas e trovoadas voltam a ganhar intensidade nos três estados da Região Sul, com possibilidade de granizo no oeste e sudoeste do Paraná, centro-oeste de Santa Catarina e norte do Rio Grande do Sul.",
-        "Na Região Nordeste, o litoral que vai do sul do Rio Grande do Norte a Alagoas apresenta aviso amarelo de perigo potencial para chuvas intensas. Há aviso de perigo potencial para vendaval em áreas do Ceará, Rio Grande do Norte, centro-oeste da Paraíba, Pernambuco, Alagoas, Sergipe, norte da Bahia, grande parte do Piauí e sul do Maranhão. No interior nordestino, o tempo segue seco, com aviso laranja para umidade relativa do ar abaixo de 20% à tarde no oeste da Bahia e na região de Luís Eduardo Magalhães.",
-        "A Região Norte tem previsão de chuva isolada em Rondônia, Acre, Roraima, Amapá e norte do Pará nesta terça-feira, com ganho de intensidade no oeste do Amazonas à tarde. Na quarta-feira, Amazonas e Roraima continuam com chuvas e trovoadas isoladas, e mantém-se a chance de chuvas isoladas em Rondônia, Acre, norte do Pará e Amapá. A capital Palmas deve registrar mínima de 20°C e máxima de 36°C.",
-        "O tempo permanece seco em grande parte do interior do país, com baixos índices de umidade no Sudeste e Centro-Oeste. Há aviso laranja de perigo para umidade relativa do ar abaixo de 20% na tarde desta terça-feira no nordeste de Mato Grosso e no norte de Goiás. Na Região Sul, a temperatura mínima prevista para os dois dias é de 15°C em Florianópolis e a máxima alcança 26°C em Curitiba. No Nordeste, a menor temperatura prevista é de 21°C em Salvador, Maceió e Aracaju, e a máxima chega a 35°C em Teresina."
-      ],
-      "link": "/materia/inmet-preve-chuva-no-sul-norte-e-nordeste-e-alerta-para-baixa-umidade-.html",
-      "iso": "2026-08-04T12:53:00.000Z",
-      "hora": "08h53",
-      "original": true,
-      "contexto": "Os avisos meteorológicos afetam moradores de áreas das regiões Sul, Nordeste e Norte. As previsões de chuva, ventos e baixa umidade concentram-se nesta terça-feira (4) e na quarta-feira (5).",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:legislacao-brasileira-permite-realizacao-de-concursos-publicos-em-ano-",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Legislação brasileira permite realização de concursos públicos em ano eleitoral",
-      "resumo": "As restrições previstas em lei dizem respeito apenas à nomeação e ao provimento de cargos nos três meses anteriores à eleição até a posse dos eleitos.",
+      "titulo": "Legislação permite a realização de concursos públicos durante o período eleitoral",
+      "resumo": "Regras do Tribunal Superior Eleitoral impõem restrições apenas para a nomeação de aprovados nos três meses que antecedem o pleito até a posse dos eleitos.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/concursos-publicos-seguem-previstos-durante-periodo-eleitoral",
       "origemNome": "Agência Brasil",
@@ -1141,16 +958,16 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A realização de concursos públicos é permitida no Brasil durante o ano eleitoral. Segundo o Tribunal Superior Eleitoral (TSE), a legislação não impõe restrições para a publicação de editais ou aplicação de provas, limitando apenas a nomeação e o provimento de cargos públicos no período de campanha.",
-        "Nos três meses que antecedem as eleições até a posse dos eleitos, ressalvadas algumas exceções, os governantes não podem convocar aprovados para preencher cargos públicos. Até o fim de 2026, há dois concursos com edital publicado e cinco com banca organizadora já definida.",
-        "Com edital publicado, a Empresa de Tecnologia e Informações da Previdência (Dataprev) recebe inscrições até 6 de agosto no site da Fundação Getulio Vargas. A Agência Brasileira Gestora de Fundos Garantidores (ABGF) também tem inscrições até 6 de agosto, na página da Fundação Carlos Chagas.",
-        "Possuem banca definida, mas ainda não publicaram edital, a Petrobras, Indústrias Nucleares do Brasil, Conselho Federal de Enfermagem, Conselho Federal de Contabilidade e Agência Nacional de Assistência Técnica e Extensão Rural (Anater). O coordenador do Gran Concursos, Eduardo Cambuy, recomenda iniciar os estudos pelas matérias básicas."
+        "A legislação brasileira e o Tribunal Superior Eleitoral (TSE) permitem a realização de concursos públicos durante o ano eleitoral. Até o final de 2026, o país registra dois certames com edital publicado e outros cinco com banca organizadora definida.",
+        "A Empresa de Tecnologia e Informações da Previdência (Dataprev) e a Agência Brasileira Gestora de Fundos Garantidores (ABGF) estão com inscrições abertas até o dia 6 de agosto. Os cadastros devem ser feitos nos sites da Fundação Getulio Vargas e da Fundação Carlos Chagas, respectivamente.",
+        "Outras cinco seleções possuem banca definida, mas ainda não publicaram edital: Petrobras, Indústrias Nucleares do Brasil, Conselho Federal de Enfermagem, Conselho Federal de Contabilidade e Agência Nacional de Assistência Técnica e Extensão Rural (Anater).",
+        "Segundo o TSE, as restrições da lei voltam-se ao provimento de cargos entre os três meses anteriores às eleições e a posse dos eleitos, salvo exceções. O coordenador do Gran Concursos, Eduardo Cambuy, avaliou que o período não deve desanimar os concorrentes e recomendou iniciar a preparação pelas matérias básicas."
       ],
-      "link": "/materia/legislacao-brasileira-permite-realizacao-de-concursos-publicos-em-ano-.html",
+      "link": "/materia/legislacao-permite-a-realizacao-de-concursos-publicos-durante-o-period.html",
       "iso": "2026-08-03T10:24:00.000Z",
       "hora": "06h24",
       "original": true,
-      "contexto": "A restrição de nomeação afeta governantes e candidatos aprovados durante os três meses anteriores às eleições até a posse dos eleitos. Até o fim de 2026, dois concursos recebem inscrições até 6 de agosto e outros cinco órgãos têm banca organizadora definida para a publicação dos editais.",
+      "contexto": "Candidatos aos concursos da Dataprev e da ABGF têm até o dia 6 de agosto para realizar as inscrições. A próxima etapa para as seleções da Petrobras, INB, Cofen, CFC e Anater é a publicação dos editais pelas bancas organizadoras já definidas. Não há registro de caso parecido no histórico, e as restrições para a posse nos cargos valem nos três meses anteriores às eleições.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1160,26 +977,26 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:rio-de-janeiro-sedia-a-sexta-edicao-do-rio-innovation-week-no-pier-mau",
+      "id": "ilm:cidades-brasileiras-tem-atos-pela-aprovacao-do-pl-da-misoginia",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Rio de Janeiro sedia a sexta edição do Rio Innovation Week no Pier Mauá",
-      "resumo": "Com o tema Simbiose, a conferência de ciência e tecnologia reúne expositores brasileiros e estrangeiros e projeta movimentar R$ 4 bilhões em negócios.",
+      "titulo": "Cidades brasileiras têm atos pela aprovação do PL da Misoginia",
+      "resumo": "O projeto de lei prevê pena de dois a cinco anos de reclusão para crimes motivados por discriminação e preconceito contra as mulheres",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/rio-innovation-week-traz-diversidade-para-o-centro-da-inovacao",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/mulheres-vao-ruas-pela-votacao-do-pl-da-misoginia",
       "origemNome": "Agência Brasil",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A sexta edição do Rio Innovation Week ocorre de 4 a 7 de agosto, no Pier Mauá, no Rio de Janeiro. A conferência global de ciência, tecnologia e negócios traz o tema “Simbiose – o futuro não acontece isolado” e reúne expositores brasileiros e estrangeiros.",
-        "O evento tem expectativa de movimentar R$ 4 bilhões em negócios, receber cerca de 180 mil pessoas e gerar cerca de 22 mil empregos diretos e indiretos. A estrutura conta com 2 mil startups, centenas de expositores, 60 conferências, 16 trilhas e cerca de 40 palcos dedicados a temas como inteligência artificial, soft power brasileiro, ESG 2.0, inovação social, educação, saúde e futuro do trabalho.",
-        "A programação conta com conferencistas como a ativista Malala Yousafzai, o vencedor do Nobel de medicina Edvard Moser, a cientista Tatiana Sampaio, a deputada Sonia Guajajara e a ativista indígena Txai Suruí, além de escritores, historiadores, apresentadoras e músicos.",
-        "Nesta edição, o Startup Program foi ampliado para incluir pequenas e médias empresas e conta com a participação de mais de 50 empresas de Venture Capital. A conferência também abriga o Fórum Internacional de Negócios Aeroespaciais, realizado pela Agência Espacial Brasileira em parceria com a Organização das Nações Unidas, e a Conferência Cocreators."
+        "O Levante Mulheres Vivas realizou mobilizações neste domingo (2) em cidades de todas as regiões do país para pressionar a Câmara dos Deputados pela aprovação do Projeto de Lei 896/2023. O texto já foi aprovado pelo Senado e aguarda despacho do presidente da Casa, Hugo Motta (Republicanos-PB), em regime de urgência, para votação em plenário.",
+        "A proposta altera a Lei 7.716/1989 e estabelece pena de dois a cinco anos de reclusão para os crimes de misoginia. O texto define a prática como a indução, incitação de violência, restrição ao pleno exercício de direitos ou ofensa à dignidade da mulher em razão de sua condição.",
+        "As ações ocorreram em municípios como Belo Horizonte, Boa Vista, Brasília, Campo Grande, Curitiba, Rio de Janeiro e São Paulo. Segundo a cofundadora do Levante Mulheres Vivas, Rachel Ripani, a mobilização reuniu integrantes do movimento feminista, da sociedade civil e homens contra o avanço dos feminicídios e do ódio digital.",
+        "Os grupos buscam que a matéria seja colocada em pauta após a retomada das sessões plenárias deliberativas, adiada para a semana do dia 10 de agosto. A reportagem da Agência Brasil procurou a assessoria de Hugo Motta, mas não obteve resposta até a publicação da matéria."
       ],
-      "link": "/materia/rio-de-janeiro-sedia-a-sexta-edicao-do-rio-innovation-week-no-pier-mau.html",
-      "iso": "2026-08-03T10:43:00.000Z",
-      "hora": "06h43",
+      "link": "/materia/cidades-brasileiras-tem-atos-pela-aprovacao-do-pl-da-misoginia.html",
+      "iso": "2026-08-02T19:17:00.000Z",
+      "hora": "15h17",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1191,28 +1008,59 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:mp-denuncia-motorista-que-atropelou-e-matou-gari-por-homicidio-qualifi",
+      "id": "ilm:cnj-analisa-proposta-de-fachin-para-criar-regras-de-conduta-para-juize",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "MP denuncia motorista que atropelou e matou gari por homicídio qualificado em SP",
-      "resumo": "O MPSP acusa o condutor de dirigir embriagado e fugir do local, pedindo indenização de R$ 500 mil para os parentes de Diego Rafael da Silva, de 19 anos.",
+      "titulo": "CNJ analisa proposta de Fachin para criar regras de conduta para juízes",
+      "resumo": "O conselho também deve deliberar sobre o fim da aposentadoria compulsória como punição máxima administrativa para magistrados condenados por faltas graves.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/motorista-que-matou-gari-em-sp-vai-responder-por-homicidio-qualificado",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/fachin-vai-propor-no-cnj-regras-de-conduta-para-juizes",
       "origemNome": "Agência Brasil",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Ministério Público de São Paulo denunciou por homicídio duplamente qualificado o motorista que atropelou e matou o gari Diego Rafael da Silva, de 19 anos. O crime ocorreu na noite de 26 de julho, no bairro da Barra Funda, zona oeste da capital paulista, enquanto o funcionário da concessionária Loga trabalhava na coleta de lixo.",
-        "A denúncia foi levada ao Judiciário na última sexta-feira (31) pela promotora Mônica Nogueira Rodrigues. O motorista também foi acusado de conduzir veículo sob influência de álcool e de fugir do local, atos previstos nos artigos 305 e 306 do Código de Trânsito Brasileiro. O exame de bafômetro registrou a concentração de 0,73 miligramas de álcool.",
-        "Segundo a acusação, o homem ingeriu bebida alcoólica, assumiu a direção e trafegou em velocidade incompatível com a via. Ele lançou o automóvel contra o trecho onde estavam a equipe de coleta, outros veículos e motocicletas. A promotoria afirmou que a vítima foi surpreendida durante o trabalho, sem possibilidade de perceber o risco, reagir ou desviar do carro.",
-        "Junto à ação penal, o MPSP solicitou que seja mantida a prisão preventiva do denunciado. O órgão pediu ainda a suspensão da habilitação para dirigir, caso haja condenação por embriaguez ao volante, e o pagamento de indenização mínima de R$ 500 mil aos parentes da vítima."
+        "O Conselho Nacional de Justiça analisa nesta terça-feira (4), a partir das 10h, a proposta de criação da Política Nacional de Prevenção e Gestão de Conflitos de Interesses no âmbito do Poder Judiciário. O texto, de autoria do presidente do CNJ e do Supremo Tribunal Federal, ministro Edson Fachin, busca disciplinar a participação de juízes em eventos privados, o recebimento de presentes e a atuação de escritórios de advocacia de parentes de magistrados nos tribunais.",
+        "No STF, uma proposta de regras de conduta também está em tramitação. Em fevereiro deste ano, Fachin definiu a adoção de um Código de Ética para os ministros da Corte como uma das prioridades de sua gestão e indicou a ministra Cármen Lúcia para relatar a norma. O anúncio ocorreu em meio às investigações sobre o Banco Master e às citações aos nomes dos ministros Alexandre de Moraes e Dias Toffoli.",
+        "Na mesma sessão, o CNJ deve deliberar sobre o fim da aposentadoria compulsória como pena máxima administrativa a magistrados condenados por faltas disciplinares graves, como venda de sentenças e assédio sexual e moral. A deliberação ocorre após julgamento do STF que determinou que, depois da condenação pelo conselho, a Advocacia-Geral da União deverá entrar com uma ação no Supremo para que a perda do cargo seja analisada pela Corte.",
+        "Criado em 2005 para julgar faltas disciplinares cometidas por juízes e desembargadores, o CNJ condenou 126 magistrados à aposentadoria compulsória em 20 anos. Com base na Lei Orgânica da Magistratura Nacional, essa era a punição mais grave aplicada pelo conselho, e permitia que os magistrados mantivessem o recebimento mensal dos vencimentos após a condenação."
       ],
-      "link": "/materia/mp-denuncia-motorista-que-atropelou-e-matou-gari-por-homicidio-qualifi.html",
-      "iso": "2026-08-04T12:20:00.000Z",
-      "hora": "08h20",
+      "link": "/materia/cnj-analisa-proposta-de-fachin-para-criar-regras-de-conduta-para-juize.html",
+      "iso": "2026-08-03T22:47:00.000Z",
+      "hora": "18h47",
       "original": true,
-      "contexto": "Não há registros de casos semelhantes no histórico arquivado. A medida afeta o motorista denunciado e os funcionários da concessionária Loga. A próxima etapa cabe ao Judiciário, que deve analisar a denúncia apresentada no dia 31 e decidir sobre a manutenção da prisão preventiva e a suspensão da habilitação.",
+      "contexto": "A proposta afeta magistrados de todo o Poder Judiciário e regulamenta a atuação de escritórios de advocacia de seus parentes. A deliberação sobre o texto e sobre o fim da aposentadoria compulsória ocorre nesta terça-feira (4), às 10h, no CNJ. No STF, a elaboração de regras de conduta para os ministros teve relatora definida em fevereiro deste ano.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:brasil-e-o-quarto-pais-com-maior-alta-no-turismo-internacional-aponta-",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Brasil é o quarto país com maior alta no turismo internacional, aponta OCDE",
+      "resumo": "O fluxo de visitantes estrangeiros no país cresceu 46% entre 2019 e 2025, subindo de 6,3 milhões para 9,3 milhões de pessoas.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/brasil-e-quarto-pais-que-mais-ampliou-turismo-internacional-diz-ocde",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Brasil ficou em quarto lugar entre os países que mais expandiram o turismo internacional entre 2019 e 2025, segundo o relatório Tendências e Políticas do Turismo 2026, da Organização para a Cooperação e Desenvolvimento Econômico (OCDE). No período, o fluxo de visitantes estrangeiros no país cresceu 46%, passando de 6,3 milhões para 9,3 milhões.",
+        "Com o resultado de 46%, o país ficou à frente de destinos como Japão (34%), Portugal (20%), Espanha (16%) e França (12%). Na América do Sul, enquanto o Brasil registrou alta, a Argentina teve retração de -23% e o Peru apresentou queda de -22% no mesmo intervalo.",
+        "Dados da Agência Brasileira de Promoção Internacional do Turismo (Embratur) apontam que, nos primeiros seis meses de 2026, o Brasil recebeu 5,2 milhões de turistas internacionais, o segundo maior volume para um primeiro semestre na série histórica. Os visitantes deixaram US$ 5,6 bilhões na economia brasileira, valor 12% superior ao registrado no mesmo período de 2025.",
+        "Segundo a Embratur, o crescimento reflete o aumento das ações de promoção no exterior, como participação em feiras internacionais, viagens de imprensa (press trips), viagens de familiarização (famtours) e campanhas em mercados estratégicos. A OCDE pontua que a recuperação do setor é impulsionada pela demanda por viagens, retomada da conectividade e expansão dos investimentos, contribuindo para a geração de empregos e o desenvolvimento regional."
+      ],
+      "link": "/materia/brasil-e-o-quarto-pais-com-maior-alta-no-turismo-internacional-aponta-.html",
+      "iso": "2026-08-02T15:34:00.000Z",
+      "hora": "11h34",
+      "original": true,
+      "contexto": "O crescimento de 46% do Brasil no turismo internacional entre 2019 e 2025 contrasta com as retrações registradas na Argentina (-23%) e no Peru (-22%) no mesmo período. Nos primeiros seis meses de 2026, os gastos de visitantes estrangeiros somaram US$ 5,6 bilhões, valor 12% superior ao do primeiro semestre de 2025. O total de 5,2 milhões de turistas recebidos nesse intervalo é o segundo maior volume para um primeiro.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -1221,18 +1069,21 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
+      "seSabe": [
+        "Que a neutralidade do Republicanos está sendo noticiada por seis veículos de imprensa.",
+        "Que as publicações mencionam consulta aos diretórios estaduais da legenda.",
+        "Que seis partidos teriam escolhido a neutralidade na eleição presidencial."
+      ],
+      "falta": [
+        "Declaração oficial ou nota pública expedida pelo partido Republicanos.",
+        "Manifestação formal da assessoria do político Flávio Bolsonaro.",
+        "Divulgação oficial dos nomes dos seis partidos citados nas reportagens."
+      ],
       "ondeCirculou": [
         {
-          "veiculo": "Folha",
-          "titulo": "Republicanos confirma neutralidade na eleição e amplia isolamento de Flávio",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/republicanos-confirma-neutralidade-na-eleicao-e-amplia-isolamento-de-flavio.shtml"
-        },
-        {
-          "veiculo": "g1",
-          "titulo": "Republicanos confirma neutralidade nas eleições após consulta a diretórios estaduais",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/republicanos-confirma-neutralidade-na-corrida-presidencial-de-2026-apos-consulta-a-diretorios-estaduais.ghtml"
+          "veiculo": "Poder360",
+          "titulo": "Republicanos declara neutralidade na eleição presidencial",
+          "link": "https://www.poder360.com.br/poder-eleicoes-2026/republicanos-declara-neutralidade-na-eleicao-presidencial/"
         },
         {
           "veiculo": "Exame",
@@ -1246,8 +1097,13 @@
         },
         {
           "veiculo": "CNN Brasil",
-          "titulo": "Convenção do Republicanos confirma neutralidade na corrida presidencial",
-          "link": "https://www.cnnbrasil.com.br/eleicoes/convencao-do-republicanos-confirma-neutralidade-na-corrida-presidencial/"
+          "titulo": "Seis partidos optaram por neutralidade na disputa presidencial; entenda",
+          "link": "https://www.cnnbrasil.com.br/eleicoes/seis-partidos-optaram-por-neutralidade-na-disputa-presidencial-entenda/"
+        },
+        {
+          "veiculo": "Folha",
+          "titulo": "Republicanos confirma neutralidade na eleição e amplia isolamento de Flávio",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/08/republicanos-confirma-neutralidade-na-eleicao-e-amplia-isolamento-de-flavio.shtml"
         },
         {
           "veiculo": "g1 Política",
@@ -1255,74 +1111,132 @@
           "link": "https://g1.globo.com/politica/noticia/2026/08/04/republicanos-confirma-neutralidade-na-corrida-presidencial-de-2026-apos-consulta-a-diretorios-estaduais.ghtml"
         }
       ],
-      "link": "/materia/nc-republicanos-teria-confirmado-neutralidade-e-rejeitado-apoio-a-flavio.html",
+      "link": "/materia/nc-republicanos-teria-declarado-neutralidade-e-isolado-flavio-bolsonaro-n.html",
       "corpo": [
-        "ão de apoio a Flávio Bolsonaro. (9 words) Check FALTA items: - Divulgação de ata ou documento oficial do partido Republicanos. - Confirmação formal do resultado da consulta aos diretórios estaduais. - Manifestação oficial da assessoria ou do político Flávio Bolsonaro. Let's check TITULO character count: ` Total length including ` Is there any markdown anywhere? No ``, no `*`, no `_`. Just standard"
+        "O partido Republicanos teria decidido adotar postura de neutralidade na eleição presidencial. A legenda teria rejeitado a formalização de apoio à candidatura de Flávio Bolsonaro para a disputa nacional.",
+        "A decisão teria ocorrido após a realização de consultas aos diretórios estaduais da sigla. Publicações informam que um total de seis partidos teriam optado pela neutralidade no pleito, o que ampliaria o isolamento político de Flávio Bolsonaro.",
+        "A medida envolveria a ala do partido ligada a Tarcísio e alteraria articulações políticas da eleição. A confirmação do posicionamento ainda dependeria de validação por instâncias oficiais da legenda."
       ],
-      "id": "circ:republicanos-teria-confirmado-neutralidade-e-rejeitado-apoio-a-flavio",
+      "id": "circ:republicanos-teria-declarado-neutralidade-e-isolado-flavio-bolsonaro-n",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Republicanos teria confirmado neutralidade e rejeitado apoio a Flávio`",
+      "titulo": "Republicanos teria declarado neutralidade e isolado Flávio Bolsonaro na eleição",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T13:25:36.567Z",
-      "hora": "09h25"
+      "iso": "2026-08-04T13:43:36.899Z",
+      "hora": "09h43"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que ao menos três veículos de imprensa publicaram matérias sobre o cenário eleitoral.",
-        "Que os textos citam os partidos PL e Democrata e três políticos diferentes.",
-        "Que as informações tratam de disputas ao Senado e à Presidência da República."
+        "Que o assunto vem sendo veiculado por cinco veículos de imprensa.",
+        "Que as publicações citam Cleitinho, Marcos Pereira e o Republicanos.",
+        "Que há divergência nas manchetes entre reuniões e convenção partidária."
       ],
       "falta": [
-        "Confirmação oficial das atas partidárias ou manifestação direta dos partidos citados.",
-        "Pronunciamento oficial de Álvaro Dias confirmando a desistência da candidatura.",
-        "Registro formal das candidaturas perante a Justiça Eleitoral."
+        "Confirmação oficial do partido Republicanos sobre o pedido e a negação.",
+        "Pronunciamento oficial de Cleitinho ou de Marcos Pereira sobre o caso.",
+        "Registros formais de reuniões ou ata de convenção que comprovem os relatos."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "g1",
-          "titulo": "PL lança Éder Mauro como candidato ao senado pelo Pará",
-          "link": "https://g1.globo.com/pa/para/eleicoes/2026/noticia/2026/08/04/pl-lanca-eder-mauro-como-candidato-ao-senado-pelo-para.ghtml"
+          "veiculo": "CNN Brasil",
+          "titulo": "Cleitinho volta atrás e insiste em ser candidato ao governo de MG",
+          "link": "https://www.cnnbrasil.com.br/eleicoes/cleitinho-volta-atras-e-insiste-em-ser-candidato-ao-governo-de-mg/"
         },
         {
-          "veiculo": "Congresso em Foco",
-          "titulo": "Democrata, antigo PMB, lança candidatura de Wilson Grassi ao Planalto",
-          "link": "https://www.congressoemfoco.com.br/noticia/120990/democrata-antigo-pmb-lanca-candidatura-de-wilson-grassi-ao-planalto"
+          "veiculo": "g1 Política",
+          "titulo": "Em convenção do Republicanos, Cleitinho pede para ser candidato ao governo de Minas; Marcos Pereira nega pedido",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cleitinho-pede-em-convencao-do-republicanos-para-ser-candidato-a-governador-de-minas-gerais.ghtml"
         },
         {
-          "veiculo": "CartaCapital",
-          "titulo": "Favorito nas pesquisas, Álvaro Dias desiste de candidatura ao Senado pelo Paraná",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPalhDTkg0UW9qWUhHeGVjZlZkLXREbFYzLWUzRlZYR1FGb2xPOWp5UFdEbWtGQXJaUk1CYlBPTmJTXzh6UWMtbjZQQ2VpaENTejAwVUJMdmZZdUJzQlVuNngyLWVpYU1Id3lDVVdsOVZpQmpiSnhmQ3Qyc3h5bHlIMjFBdnpYUC0zRXRMazJGWGo0RWZtQWtfSkxSbGN3aWZSWWctYUZnR3hrZF9hWDJmczhwTkM1NkN3SF9jakVUOHk?oc=5"
+          "veiculo": "Metrópoles",
+          "titulo": "Cleitinho volta atrás e diz que ainda quer disputar governo de Minas",
+          "link": "https://www.metropoles.com/minas-gerais/cleitinho-volta-atras-e-diz-que-ainda-quer-disputar-governo-de-minas"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Quem nunca foi e voltou?: Cleitinho faz apelo para voltar a disputa do governo de MG",
+          "link": "https://www.infomoney.com.br/politica/quem-nunca-foi-e-voltou-cleitinho-faz-apelo-para-voltar-a-disputa-do-governo-de-mg/"
+        },
+        {
+          "veiculo": "Correio Braziliense",
+          "titulo": "Cleitinho se reúne com Republicanos para definir candidatura",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUHlYZEtNbmU5T2o1NmFHQnNJZEhFNHlCZHBLNlY0YTgydUZZVEw3SjdrMUFLaGlZUzJOakM1dWxDTzJQazlqb2d1UFl1QkNMa1BuU3RJVllMMWlEMU5jbElMSG42ZDhLRGo2R001dDlacEFsbUVsS2Y1MXNuRGs4cWRiVi1LTDFBdVdMZWN2X3I3OG9NcnRVUUhRS0NyVWxLSVVHVTEya0tEM2FZU2dlY3NkRU1idndwUlFXb01nZ3R6SHY1YlBz0gHMAUFVX3lxTFBVWksxOG5NcXBuWDNOSXlWd2h5blVYZGlkS1VuRk4ybHBpWFNQVjBLSURqY01TcEI4MURvTUVQQUg4eXdWNkN6Z3VwNTJaa0lLRkdKanlHLVdZbFFneTA1NkpWRk90YkNmbFRXbHAzMFFkS2RZRW9qRWl2Y2pfZ05TVnpkVVJCcDhySmlDcklOOV9fTGg3ZU9qRFhzRHdNVjRVQ3Q4b0lORXVKNzEzRTEzd0xDT3RZdjdsWVhESTRySlFweUZRekNFdWxKWA?oc=5"
         }
       ],
-      "link": "/materia/nc-partidos-teriam-lancado-candidaturas-e-politico-teria-desistido-de-dis.html",
+      "link": "/materia/nc-cleitinho-teria-voltado-atras-e-insistido-em-candidatura-ao-governo-de.html",
       "corpo": [
-        "Publicações da imprensa estariam veiculando movimentações partidárias e decisões relativas ao cenário eleitoral. O PL teria lançado Éder Mauro como candidato ao Senado pelo Pará, enquanto o Democrata, antigo PMB, teria lançado Wilson Grassi ao Planalto. Paralelamente, Álvaro Dias teria desistido de disputar uma vaga no Senado pelo Paraná.",
-        "As informações envolveriam disputas nos estados do Pará e do Paraná, além da corrida presidencial. O político Álvaro Dias seria apontado como favorito nas pesquisas locais antes de optar pela desistência. As siglas citadas seriam o PL e o Democrata, antigo PMB.",
-        "Os relatos abordariam atos políticos distintos e não apresentariam divergências diretas entre si. As alegações envolveriam tanto lançamentos de candidaturas por partidos quanto desistências no pleito."
+        "Cleitinho teria mudado de ideia e voltado a insistir na candidatura ao governo de Minas Gerais. A intenção estaria sendo tratada no âmbito do partido Republicanos.",
+        "As publicações divergiriam entre reuniões de definição e um pedido formal feito em convenção da legenda. Segundo os veículos que publicaram a notícia, Marcos Pereira teria negado o pleito.",
+        "Entre as alegações veiculadas, constaria a frase \"Quem nunca foi e voltou?\", atribuída a Cleitinho durante o apelo. O caso envolveria a definição da disputa eleitoral no estado."
       ],
-      "id": "circ:partidos-teriam-lancado-candidaturas-e-politico-teria-desistido-de-dis",
+      "id": "circ:cleitinho-teria-voltado-atras-e-insistido-em-candidatura-ao-governo-de",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Partidos teriam lançado candidaturas e político teria desistido de disputa",
+      "titulo": "Cleitinho teria voltado atrás e insistido em candidatura ao governo de MG",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T13:26:33.378Z",
-      "hora": "09h26"
+      "iso": "2026-08-04T13:44:00.094Z",
+      "hora": "09h44"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por quatro veículos de imprensa.",
-        "Que as publicações tratam de benefício fiscal na compra de carros por PCDs e autistas.",
-        "Que uma das chamadas menciona especificamente a inclusão de autistas de nível 1."
+        "Que a informação é veiculada por quatro veículos de imprensa.",
+        "Que a escolha citada refere-se à diretoria da Comissão de Valores Mobiliários."
       ],
       "falta": [
-        "A confirmação ou divulgação de registro oficial por parte do Supremo Tribunal Federal.",
-        "O número do processo, da ação ou da decisão julgada pela Corte.",
-        "A data de publicação do acórdão e as regras exatas de aplicação do benefício."
+        "A confirmação oficial da indicação pela Presidência da República.",
+        "O documento oficial atestando o envio da mensagem ao Senado Federal.",
+        "O posicionamento oficial da CVM sobre o anúncio da escolha."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Lula indica Antonio Berwanger para vaga em diretoria da CVM",
+          "link": "https://www.congressoemfoco.com.br/noticia/120993/lula-indica-antonio-berwanger-para-vaga-em-diretoria-da-cvm"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Lula envia ao Senado indicação de Antônio Carlos Berwanger para a CVM",
+          "link": "https://www.cnnbrasil.com.br/economia/lula-envia-ao-senado-indicacao-de-antonio-carlos-berwanger-para-a-cvm/"
+        },
+        {
+          "veiculo": "g1 Economia",
+          "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
+          "link": "https://g1.globo.com/politica/blog/julia-duailibi/post/2026/08/04/caso-master-otto-lobo-lula-indica-antonio-berwanger-diretoria-cvm.ghtml"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
+          "link": "https://g1.globo.com/politica/blog/julia-duailibi/post/2026/08/04/caso-master-otto-lobo-lula-indica-antonio-berwanger-diretoria-cvm.ghtml"
+        }
+      ],
+      "link": "/materia/nc-lula-teria-indicado-servidor-de-carreira-para-diretoria-da-cvm.html",
+      "corpo": [
+        "Segundo os veículos que publicaram a informação, a indicação teria ocorrido após repercussões sobre o caso Master. As publicações apontam que a decisão envolveria o preenchimento do cargo por um integrante de carreira do órgão."
+      ],
+      "id": "circ:lula-teria-indicado-servidor-de-carreira-para-diretoria-da-cvm",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Lula teria indicado servidor de carreira para diretoria da CVM",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T13:45:51.447Z",
+      "hora": "09h45"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que quatro veículos de imprensa publicaram matérias sobre a decisão do STF.",
+        "Que os relatos abordam a isenção tributária para PCDs e autistas na compra de carros.",
+        "Que uma das publicações cita a inclusão de autistas nível 1 na alíquota zero."
+      ],
+      "falta": [
+        "Registro do acórdão ou nota oficial no portal do STF.",
+        "Identificação do número do processo ou da classe da ação julgada.",
+        "Data exata da deliberação e manifestação formal do tribunal."
       ],
       "ondeCirculou": [
         {
@@ -1346,96 +1260,128 @@
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTGU0SXFtZXlpcUxfTXhDQ1RGOF9Qb2dGQVpFSkVzaERKU2FhYUJjQUl2S1BWa1o2a05LX0g5ODVWd0RnZnJfeUJMRWJJQlYzd0NWSTN5UXhFU084U1lQdlJuVnQzUUxfS3JVdjV6WXBGbzgwWXpacXlKcjVrZFgyZk5KWmZxWlQxR1M0SUFmYVpGckY0a2xyeDJrMGZPSzBMUTEtTGdqNEVGcWRG?oc=5"
         }
       ],
-      "link": "/materia/nc-stf-teria-ampliado-isencao-fiscal-na-compra-de-carros-por-pcds-e-autis.html",
+      "link": "/materia/nc-stf-teria-ampliado-isencao-fiscal-na-compra-de-veiculos-por-pcds-e-aut.html",
       "corpo": [
-        "O Supremo Tribunal Federal teria decidido ampliar o benefício fiscal concedido a pessoas com deficiência e autistas na aquisição de veículos. As publicações apontam que a medida teria derrubado restrições existentes para garantir o direito de isenção na compra.",
-        "Uma das notícias veiculadas especifica que a decisão teria incluído autistas de nível 1 na regra de alíquota zero. As manchetes apresentam variações nos termos utilizados, alternando entre ampliação do benefício, derrubada de restrições e direito à isenção.",
-        "A extensão exata do entendimento do tribunal e os critérios para aplicação do benefício não constam das chamadas. O tema estaria sendo repercutido sem que os detalhes formais fossem explicitados nos títulos."
+        "O Supremo Tribunal Federal teria tomado uma decisão sobre a ampliação de benefícios fiscais na compra de veículos por pessoas com deficiência. A medida também estenderia o direito à isenção tributária para autistas. As informações foram veiculadas por publicações da imprensa, sem confirmação em registros oficiais até o momento.",
+        "As matérias publicadas apresentavam divergências nos detalhes da suposta decisão. Enquanto um veículo mencionava a derrubada de restrições a benefícios para PCDs, outro especificava a inclusão de autistas de nível 1 no regime de alíquota zero. Não havia consenso nos relatos sobre se o ato trataria de uma nova concessão ou da remoção de limitações vigentes.",
+        "A eventual confirmação da medida alteraria as regras para a concessão de incentivos fiscais na aquisição de automóveis. O impacto prático das mudanças e os critérios de aplicação dependeriam do teor exato do texto final fixado pela Corte."
       ],
-      "id": "circ:stf-teria-ampliado-isencao-fiscal-na-compra-de-carros-por-pcds-e-autis",
+      "id": "circ:stf-teria-ampliado-isencao-fiscal-na-compra-de-veiculos-por-pcds-e-aut",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "STF teria ampliado isenção fiscal na compra de carros por PCDs e autistas",
+      "titulo": "STF teria ampliado isenção fiscal na compra de veículos por PCDs e autistas",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T13:28:30.961Z",
-      "hora": "09h28"
+      "iso": "2026-08-04T13:46:27.105Z",
+      "hora": "09h46"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [
-        "Que três veículos publicaram matérias sobre tratativas entre Cleitinho e o Republicanos.",
-        "Que duas publicações citam candidatura ao governo de Minas Gerais em convenção.",
-        "Que uma publicação menciona reunião com o partido sem especificar o cargo."
-      ],
-      "falta": [
-        "Nota oficial ou ata do Republicanos confirmando a convenção ou a reunião.",
-        "Declaração do político Cleitinho sobre o pedido de candidatura.",
-        "Informações sobre data, local e deliberação formal do evento partidário."
-      ],
+      "seSabe": [],
+      "falta": [],
       "ondeCirculou": [
         {
-          "veiculo": "g1",
-          "titulo": "Cleitinho pede em convenção do Republicanos para ser candidato a governador de Minas Gerais",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cleitinho-pede-em-convencao-do-republicanos-para-ser-candidato-a-governador-de-minas-gerais.ghtml"
+          "veiculo": "JOTA",
+          "titulo": "Trabalho infantil nas redes sociais – Parte 1",
+          "link": "https://www.jota.info/opiniao-e-analise/colunas/juizo-de-valor/trabalho-infantil-nas-redes-sociais-parte-1"
         },
         {
-          "veiculo": "g1 Política",
-          "titulo": "Cleitinho pede em convenção do Republicanos para ser candidato a governador de Minas Gerais",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cleitinho-pede-em-convencao-do-republicanos-para-ser-candidato-a-governador-de-minas-gerais.ghtml"
+          "veiculo": "g1 Economia",
+          "titulo": "TikTok faz acordo em três processos sobre vício em redes sociais entre jovens antes de julgamento",
+          "link": "https://g1.globo.com/tecnologia/noticia/2026/08/03/tiktok-faz-acordo-em-tres-processos-sobre-vicio-em-redes-sociais-entre-jovens-antes-de-julgamento.ghtml"
         },
         {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Cleitinho se reúne com Republicanos para definir candidatura",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUHlYZEtNbmU5T2o1NmFHQnNJZEhFNHlCZHBLNlY0YTgydUZZVEw3SjdrMUFLaGlZUzJOakM1dWxDTzJQazlqb2d1UFl1QkNMa1BuU3RJVllMMWlEMU5jbElMSG42ZDhLRGo2R001dDlacEFsbUVsS2Y1MXNuRGs4cWRiVi1LTDFBdVdMZWN2X3I3OG9NcnRVUUhRS0NyVWxLSVVHVTEya0tEM2FZU2dlY3NkRU1idndwUlFXb01nZ3R6SHY1YlBz0gHMAUFVX3lxTFBVWksxOG5NcXBuWDNOSXlWd2h5blVYZGlkS1VuRk4ybHBpWFNQVjBLSURqY01TcEI4MURvTUVQQUg4eXdWNkN6Z3VwNTJaa0lLRkdKanlHLVdZbFFneTA1NkpWRk90YkNmbFRXbHAzMFFkS2RZRW9qRWl2Y2pfZ05TVnpkVVJCcDhySmlDcklOOV9fTGg3ZU9qRFhzRHdNVjRVQ3Q4b0lORXVKNzEzRTEzd0xDT3RZdjdsWVhESTRySlFweUZRekNFdWxKWA?oc=5"
+          "veiculo": "GZH",
+          "titulo": "Polícia investiga caso de importunação sexual que repercutiu em Porto Alegre após relato em redes sociais",
+          "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOcm5BbWpvakhsU3YtbzNSQ3lMSnZ4dmpuY2VqT25MVDFjMjdTWllaRXRVUHN1V0wyUWhiME1oa0pDSU0xLTYwcVp4Nm8xTTA1dVhxSEdKRUQtUXRuNzN6SVI5SHptWVpiR1dtSE9vTFBRd01nTjh4RUc0VVhKbjhmdlBqVlN3MndkRlJoRTExWmV0T0k4Yk9IOUJFT3pSSE5hbnJQbnNFWWUzRHozSjZJTmxVN1k2R2gtd2hkSTRYbGhxYWRZcnc3dV90Qmt3V3hVMmZYMXI2QzkxenRTdUZMcVVIcW9wZ3d1NG4xM1ZvYVlWdlFMdUU1S3c2SHJDOE1tN0ZJNHNJa2J5ZDRiZFFSQm5qQVJ5TUd1ekNibkJZYw?oc=5"
         }
       ],
-      "link": "/materia/nc-cleitinho-teria-pedido-ao-republicanos-candidatura-ao-governo-de-minas.html",
+      "link": "/materia/nc-publicacoes-relatariam-apuracoes-e-acordos-envolvendo-redes-sociais.html",
       "corpo": [
-        "Cleitinho teria pedido ao Republicanos para ser candidato a governador de Minas Gerais. A alegação consta em relatos publicados sobre a movimentação partidária do político.",
-        "As publicações que veicularam a informação apresentam divergências de conteúdo. Duas reportagens sustentam que o pedido teria ocorrido em uma convenção partidária, enquanto outra aponta apenas uma reunião para definir a candidatura.",
-        "As chamadas registradas não apresentam a data ou o local exato do ato citado. A confirmação da postulação dependeria de posicionamento ou registro oficial da legenda."
+        "Veículos de imprensa estariam veiculando matérias com pautas distintas sobre o uso de redes sociais. As publicações abordariam hipóteses de trabalho infantil, acordos judiciais sobre vício de jovens em plataformas e investigações policiais. As manchetes apresentariam divergências sobre o assunto principal e os locais citados. Uma das matérias apontaria que a empresa TikTok teria firmado acordo em "
       ],
-      "id": "circ:cleitinho-teria-pedido-ao-republicanos-candidatura-ao-governo-de-minas",
+      "id": "circ:publicacoes-relatariam-apuracoes-e-acordos-envolvendo-redes-sociais",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Cleitinho teria pedido ao Republicanos candidatura ao governo de Minas Gerais",
+      "titulo": "Publicações relatariam apurações e acordos envolvendo redes sociais",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T13:30:55.220Z",
-      "hora": "09h30"
+      "iso": "2026-08-04T13:46:59.873Z",
+      "hora": "09h46"
     }
   ],
   "pautas": [
     {
-      "titulo": "Republicanos confirma neutralidade na eleição e amplia isolamento de Flávio",
-      "veiculo": "Folha",
+      "titulo": "Republicanos declara neutralidade na eleição presidencial",
+      "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 9,
       "tambemEm": [
-        "g1",
         "Exame",
-        "Congresso em Foco"
+        "Congresso em Foco",
+        "CNN Brasil"
       ]
     },
     {
       "titulo": "Republicanos rejeita apoio a Flávio e adota neutralidade na eleição",
       "veiculo": "Congresso em Foco",
       "editoria": "brasil",
-      "quentura": 5,
+      "quentura": 6,
       "tambemEm": [
-        "g1",
         "Exame",
-        "Folha"
+        "Folha",
+        "g1 Política"
       ]
     },
     {
-      "titulo": "Republicanos confirma neutralidade nas eleições após consulta a diretórios estaduais",
-      "veiculo": "g1",
+      "titulo": "Republicanos confirma neutralidade na eleição e amplia isolamento de Flávio",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Cleitinho volta atrás e insiste em ser candidato ao governo de MG",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 Política",
+        "Metrópoles",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Republicanos de Tarcísio declara neutralidade e isola Flávio Bolsonaro",
+      "veiculo": "Exame",
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
         "Congresso em Foco",
-        "CNN Brasil",
+        "Folha",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Casos de sarampo sobem para 16 em São Paulo",
+      "veiculo": "CartaCapital",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "Folha",
+        "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
+      "veiculo": "estadao.com.br",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
         "Folha"
       ]
     },
@@ -1443,32 +1389,11 @@
       "titulo": "Republicanos confirma neutralidade nas eleições após consulta a diretórios estaduais",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "g1",
-        "Congresso em Foco",
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "PL lança Éder Mauro como candidato ao senado pelo Pará",
-      "veiculo": "g1",
-      "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
         "Congresso em Foco",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Convenção do Republicanos confirma neutralidade na corrida presidencial",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1",
         "Folha",
-        "g1 Política"
+        "Poder360"
       ]
     },
     {
@@ -1477,40 +1402,7 @@
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "g1 Economia",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
-      "veiculo": "g1 Economia",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Após polêmica no caso Master, Lula escolhe servidor de carreira para diretoria da CVM",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Economia",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Lula indica Antônio Carlos Berwanger para diretoria da CVM",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
+        "CNN Brasil",
         "g1 Economia",
         "g1 Política"
       ]
@@ -1527,27 +1419,6 @@
       ]
     },
     {
-      "titulo": "Republicanos de Tarcísio declara neutralidade e isola Flávio Bolsonaro",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "Folha",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Casos de sarampo sobem para 16 em São Paulo",
-      "veiculo": "CartaCapital",
-      "quentura": 3,
-      "tambemEm": [
-        "Folha",
-        "Valor Econômico",
-        "Estadão"
-      ]
-    },
-    {
       "titulo": "STF decide que autistas e PCD’s têm direito a isenção para comprar carros",
       "veiculo": "CartaCapital",
       "quentura": 3,
@@ -1555,16 +1426,6 @@
         "JOTA",
         "Correio Braziliense",
         "Migalhas"
-      ]
-    },
-    {
-      "titulo": "Podemos deve anunciar neutralidade na eleição e inviabilizar Renata Abreu vice de Flávio Bolsonaro",
-      "veiculo": "Estadão",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "Folha"
       ]
     },
     {
@@ -1578,22 +1439,62 @@
       ]
     },
     {
-      "titulo": "Cleitinho pede em convenção do Republicanos para ser candidato a governador de Minas Gerais",
-      "veiculo": "g1",
+      "titulo": "Quem nunca foi e voltou?: Cleitinho faz apelo para voltar a disputa do governo de MG",
+      "veiculo": "InfoMoney",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "g1 Política",
-        "Correio Braziliense"
+        "CNN Brasil",
+        "Metrópoles"
       ]
     },
     {
-      "titulo": "Cleitinho pede em convenção do Republicanos para ser candidato a governador de Minas Gerais",
+      "titulo": "Por que Lula e Flávio evitam debates",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Trabalho infantil nas redes sociais – Parte 1",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Economia",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Republicanos: apoio a Lula teve só 1 voto; legenda adota neutralidade",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Cleitinho volta atrás e diz que ainda quer disputar governo de Minas",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "CNN Brasil",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Em convenção do Republicanos, Cleitinho pede para ser candidato ao governo de Minas; Marcos Pereira nega pedido",
       "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "g1",
+        "CNN Brasil",
         "Correio Braziliense"
       ]
     }
