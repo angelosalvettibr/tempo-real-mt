@@ -41,6 +41,30 @@ const JANELA_HORAS = 24;
 // por cidade, que e para isso que existem.
 const QUANTAS_REESCREVER = Number(process.env.QUANTAS_REESCREVER || 40);
 
+/* --------------------------- TETOS POR EDIÇÃO ---------------------------
+   Os tetos eram iguais para todas as edicoes, e o resultado foi desigual:
+   Mundo publicou 20 com 4 documentos, Mato Grosso publicou 1 com 15.
+
+   Edicoes diferentes tem realidades diferentes. Mundo tem poucas fontes que
+   entregam muito; MT tem muitas fontes que entregam pouco, e o teto por fonte
+   sufoca. Ajustar por edicao e mais honesto que uma regra unica.
+
+   Tudo por variavel de ambiente: TETO_MT, TETO_RS, TETO_RJ, TETO_BR, TETO_MUNDO
+   sobrescrevem sem mexer no codigo.                                         */
+const TETOS = {
+  br:    { fonte: 5, materias: 40 },
+  mundo: { fonte: 4, materias: 24 },   // poucas fontes, muito volume: segura
+  mt:    { fonte: 8, materias: 40 },   // muitas fontes, pouco volume: solta
+  rs:    { fonte: 7, materias: 40 },
+  rj:    { fonte: 7, materias: 40 }
+};
+
+function tetoDaEdicao(chave){
+  const base = TETOS[chave] || { fonte: 5, materias: 40 };
+  const env = Number(process.env['TETO_' + String(chave).toUpperCase()] || 0);
+  return env ? { ...base, fonte: env } : base;
+}
+
 /* ===================== 1. PAUTA — termômetro, não publica ================= */
 
 const gnews = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q + ' when:1d')}&hl=pt-BR&gl=BR&ceid=BR:pt-419`;
@@ -717,7 +741,12 @@ if (temChave()) {
   // sofre por so ter 4 ou 7 orgaos respondendo. O teto protege contra a edicao
   // virar boletim de um orgao so, mas nao pode ser o motivo de a edicao ficar
   // vazia.
-  const TETO_POR_FONTE = fontesDistintas <= 3 ? 7 : fontesDistintas <= 6 ? 5 : 4;
+  // O teto da edicao manda; a contagem de fontes vivas so afrouxa quando ha
+  // pouquissima fonte, para a edicao nao ficar vazia.
+  const doTeto = tetoDaEdicao(GERAL ? (GERAL.chave || 'br') : UF);
+  const TETO_POR_FONTE = fontesDistintas <= 3
+    ? Math.max(doTeto.fonte, 7)
+    : doTeto.fonte;
 
   // Reveza entre as fontes antes de repetir: uma de cada, depois a segunda de
   // cada. Assim uma prefeitura falante nao ocupa a edicao inteira, e as fontes
@@ -755,7 +784,9 @@ if (temChave()) {
 
   // Titulos das ultimas 72 horas, do arquivo. E a memoria entre rodadas.
   const jaSaiuAntes = (() => {
-    const corteMem = Date.now() - 72 * 3600 * 1000;
+    // 36h em vez de 72h: acima disso o assunto ja pode ter voltado com fato
+    // novo, e barrar seria esconder desdobramento.
+    const corteMem = Date.now() - 36 * 3600 * 1000;
     return (arquivoMemoria.itens || [])
       .filter(x => x.iso && Date.parse(x.iso) > corteMem)
       .map(x => x.titulo)
@@ -776,13 +807,22 @@ if (temChave()) {
     }
     // mesma historia com titulo diferente: "MT AgroFestival lanca programacao"
     // e "Prefeitura lanca programacao do AgroFestival" sao a mesma coisa
-    // Repetida DENTRO da rodada
+    // Repetida DENTRO da rodada: 0.55 e o certo aqui, porque sao variacoes
+    // escritas no mesmo momento a partir do mesmo release.
     if (titulosJaFeitos.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
     // ...e repetida em rodadas ANTERIORES. Sem isto o robo nao sabia o que
     // publicou ha tres horas, e a mesma historia saia tres vezes com o titulo
     // ligeiramente diferente — "NASA apresenta", "NASA exibe na", "NASA exibe
     // no". Dentro da rodada o filtro pegava; entre rodadas, nao existia.
-    if (jaSaiuAntes.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
+    // Contra o ARQUIVO o limiar tem que ser bem mais alto. Usar 0.55 aqui foi
+    // erro meu: MT tem 280 materias arquivadas em 72h, todas das mesmas
+    // fontes — Prefeitura de Cuiaba, Defesa Civil, Sema —, e nesse corte 43%
+    // das noticias novas eram barradas por "parecer" com alguma antiga. Foi
+    // por isso que MT publicou 1 materia com 15 historias confirmadas.
+    //
+    // A 0.85 o filtro barra 8%: pega republicacao de verdade e deixa passar
+    // noticia legitima da mesma fonte sobre assunto diferente.
+    if (jaSaiuAntes.some(t => parecidas(t, i.titulo) >= 0.85)) return false;
     usos.set(i.veiculo, n + 1);
     titulosJaFeitos.push(i.titulo);
     return true;
