@@ -14,6 +14,7 @@ import { cacarDocumento } from './cacador.mjs';
 import { detectarMunicipio, destaques, foraDaPraca, ehNacional } from './municipios.mjs';
 import { lerDiario, ASSOCIACOES } from './diario.mjs';
 import { focus, comoTexto } from './bancocentral.mjs';
+import { resolver, lerDescobertas, gravarDescobertas } from './descobridor.mjs';
 import { OFICIAIS } from './oficiais.mjs';
 
 // A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
@@ -376,13 +377,61 @@ if (caiu.length) {
 }
 
 console.log('\n  2. FONTE LIVRE — de onde o texto pode sair');
+/* ------------------------- FONTE QUE NAO RESPONDE ------------------------
+   Oitenta por cento dos orgaos publicos nao respondem no endereco cadastrado.
+   Nao porque nao publiquem — publicam todo dia — mas porque cada um guarda as
+   noticias num caminho diferente.
+
+   Eu tentei tres padroes so para o gov.br e errei os tres. Aqui o robo faz o
+   que um humano faria: abre a home do orgao, procura o link que leva as
+   noticias, e segue. O que descobre fica guardado por catorze dias.        */
+const descobertas = await lerDescobertas();
+let redescobertas = 0;
+
 const listaLivre = GERAL
   ? semDuplicar(GERAL.livres).map(f => ({ ...f, editoria: EDITORIA }))
   : [];   // nas estaduais o texto vem das assessorias, no passo 2b
 
-const F = listaLivre.length ? await colher(listaLivre, 'livre') : { itens: [], rel: [] };
+let F = listaLivre.length ? await colher(listaLivre, 'livre') : { itens: [], rel: [] };
 F.rel.forEach(l=>console.log('  '+l));
 console.log(`     ${F.itens.length} itens de fonte livre`);
+
+/* --------------------- SEGUNDA CHANCE: DESCOBRIR O CAMINHO --------------
+   As fontes que nao entregaram nada ganham uma tentativa: o robo abre a home
+   do orgao e procura o link de noticias. So as que falharam, e no maximo
+   doze por rodada — descobrir custa rede, e o job tem 25 minutos.          */
+if (listaLivre.length) {
+  const mudas = listaLivre.filter(f => !F.itens.some(i => (i.veiculo || '') === f.nome));
+  const alvos = mudas.slice(0, 12);
+
+  if (alvos.length) {
+    console.log(`\n  2a. DESCOBERTA — ${alvos.length} de ${mudas.length} fontes mudas`);
+    const novas = [];
+    for (const f of alvos) {
+      const base = f.base || (() => { try { return new URL(f.url).origin + new URL(f.url).pathname.split('/').slice(0,2).join('/'); } catch { return null; } })();
+      if (!base) continue;
+      try {
+        const r = await resolver(f.id, base, descobertas);
+        if (r && r.url && r.url !== f.url) {
+          novas.push({ ...f, url: r.url, ehHtml: Boolean(r.html) });
+          redescobertas++;
+          console.log(`  ok    ${f.id.padEnd(14)} ${r.daMemoria ? 'da memoria' : r.via.padEnd(28)} ${String(r.url).slice(0, 52)}`);
+        } else if (!r) {
+          console.log(`  aviso ${f.id.padEnd(14)} nao achei onde publica`);
+        }
+      } catch { }
+    }
+
+    if (novas.length) {
+      const extra = await colher(novas, 'livre');
+      if (extra.itens.length) {
+        F = { itens: [...F.itens, ...extra.itens], rel: [...F.rel, ...extra.rel] };
+        console.log(`     +${extra.itens.length} itens das fontes redescobertas · ${F.itens.length} no total`);
+      }
+    }
+  }
+}
+await gravarDescobertas(descobertas);
 
 if (!GERAL) {
 console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');
