@@ -23,7 +23,21 @@ export const semDuplicar = lista => {
   });
 };
 
-export const FEDERAIS_LIVRES = [
+/* LICENÇA DO GOV.BR: CC BY-ND — NÃO PODE REESCREVER
+   O rodape de todo portal gov.br diz: "Todo o conteudo deste site esta
+   publicado sob a licenca Creative Commons Atribuicao-SemDerivacoes 3.0".
+
+   SemDerivacoes significa que a republicacao e livre, com credito, mas
+   ALTERAR o texto nao e permitido — e reescrever e exatamente o que o
+   Meridiano faz. Entao estes orgaos nao podem alimentar a reescrita.
+
+   Continuam valendo no cacador, onde servem para CONFIRMAR uma historia sem
+   que nenhuma palavra deles seja usada. E entrarao como esteira 2 —
+   republicacao integral com credito — quando esse caminho existir.
+
+   Isto e coerencia, nao juridiquice: um jornal que registra qual orgao nao
+   responde nao pode ignorar a licenca da propria fonte.                    */
+export const FEDERAIS_ESTEIRA2 = [
   { id:'pf',        nome:'Polícia Federal',         url:'https://www.gov.br/pf/pt-br/assuntos/noticias', base:'https://www.gov.br/pf' },
   { id:'prf',       nome:'Polícia Rodoviária Federal', url:'https://www.gov.br/prf/pt-br/noticias', base:'https://www.gov.br/prf' },
   { id:'mpf',       nome:'MPF',                     url:'https://www.mpf.mp.br/pgr/noticias-pgr', base:'https://www.mpf.mp.br' },
@@ -455,10 +469,9 @@ export const EDICOES_GERAIS = {
       { id:'ipea',        nome:'Ipea', url:'https://www.ipea.gov.br/portal/rss', base:'https://www.ipea.gov.br/portal' },
       { id:'fapesp',      nome:'Agência FAPESP', url:'https://agencia.fapesp.br/rss', base:'https://agencia.fapesp.br' }
     ,
-      // Orgaos federais: estavam so no cacador e agora tambem geram materia.
-      // Varios ja existiam na lista com o mesmo id — a deduplicacao acontece
-      // depois, na montagem da edicao, para nao depender da ordem daqui.
-      ...FEDERAIS_LIVRES
+      // Os federais voltam — agora pela esteira 2. O robo detecta a licenca
+      // pelo dominio e manda para republicacao integral em vez de reescrita.
+      ...FEDERAIS_ESTEIRA2
     ]
   },
   mundo: {

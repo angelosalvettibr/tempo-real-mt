@@ -383,6 +383,14 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .circulou .vc{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sinal);display:block}
 .circulou a{color:#3C3C3C;text-decoration:none;border-bottom:1px solid var(--linha2,#E4E1D8)}
 .circulou a:hover{border-bottom-color:var(--tinta)}
+/* REPUBLICAÇÃO INTEGRAL
+   Materia reescrita e "nosso texto"; esta e o texto do orgao, palavra por
+   palavra. Confundir as duas seria pior que nao publicar — e por isso o
+   bloco vem ANTES do corpo, nao depois. */
+.republicado{border:1px solid var(--tinta);background:var(--areia,#F7F6F3);padding:15px 19px;margin:22px 0 4px}
+.republicado b{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+.republicado p{font-family:'Source Serif 4',Georgia,serif;font-size:14.5px;line-height:1.55;color:var(--tinta2)}
+.republicado a{color:var(--sinal)}
 .resgate{border-left:3px solid var(--verde);background:#F4F8F5;padding:15px 19px;margin:26px 0;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.62}
 .resgate b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);display:block;margin-bottom:8px}
 .resgate p{color:#33403A}
@@ -435,6 +443,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <img src="${esc(m.foto.src)}" alt="${esc(m.foto.alt || m.titulo)}" loading="lazy"${m.foto.largura ? ` width="${m.foto.largura}"` : ''}${m.foto.altura ? ` height="${m.foto.altura}"` : ''}>
     <figcaption>Foto: ${esc(m.creditoFoto || m.origemNome || 'divulgação')}</figcaption>
   </figure>` : ''}
+
+  ${m.republicado ? `<div class="republicado">
+    <b>Texto original de ${esc(m.republicado.orgao)}</b>
+    <p>O texto abaixo não foi escrito nem editado por nós: é a publicação do órgão, reproduzida na íntegra. A licença da fonte — ${esc(m.republicado.licenca)} — permite a cópia com crédito, mas não a alteração. Por isso não reescrevemos.</p>
+  </div>` : ''}
 
   <div class="corpo">${corpoHtml}</div>
 

@@ -150,6 +150,27 @@ function ondeMora(texto, editoriaPadrao, ufPadrao){
   return { editoria: editoriaPadrao, uf: ufPadrao };
 }
 
+/* ---------------------- LICENÇA CC BY-ND: SÓ REPUBLICAR ------------------
+   O rodape de todo portal gov.br diz que o conteudo esta sob Creative
+   Commons Atribuicao-SemDerivacoes 3.0. "SemDerivacoes" significa que a
+   republicacao integral com credito e livre, mas ALTERAR o texto nao e — e
+   reescrever e exatamente o que o Meridiano faz.
+
+   Ate a esteira 2 existir — republicacao integral, sem uma palavra mudada —
+   estas fontes ficam fora da reescrita. Continuam no cacador, onde servem
+   para CONFIRMAR uma historia sem que nada delas seja publicado.
+
+   Excecoes que NAO sao BY-ND e continuam valendo:
+     · Agencia Brasil (EBC): CC BY 3.0, permite adaptacao
+     · Dados publicos do Banco Central: dado nao tem direito autoral
+     · IBGE Agencia de Noticias: licenca propria, permite uso com credito   */
+const SEM_DERIVACAO = /(^|\/\/)(www\.)?gov\.br|\/\/www\.gov\.br|portal\.tcu\.gov\.br|ipea\.gov\.br|conab\.gov\.br|portal\.inmet\.gov\.br/i;
+
+const EXCECAO_BYND = /(agenciabrasil\.ebc\.com\.br|bcb\.gov\.br|olinda\.bcb|agenciadenoticias\.ibge\.gov\.br)/i;
+
+export const podeAdaptar = url =>
+  EXCECAO_BYND.test(String(url)) || !SEM_DERIVACAO.test(String(url));
+
 const PODE_REESCREVER = new RegExp([
   // agencias e organismos que autorizam por escrito
   'agenciabrasil\\.ebc\\.com\\.br', 'news\\.un\\.org', 'theconversation\\.com', 'vaticannews\\.va',
@@ -682,8 +703,82 @@ if (temChave()) {
     }
   }
 
+  /* ============================ ESTEIRA 2 ================================
+     Republicacao integral, para fonte que autoriza copia mas proibe adaptacao
+     — as CC BY-ND, que e o caso de todo portal gov.br.
+
+     Aqui NAO ha Gemini. O texto sai como o orgao escreveu, palavra por
+     palavra, com credito e link. Isso e o que a licenca permite, e tem uma
+     vantagem que nao esperavamos: nao custa nada de IA.
+
+     E a pagina precisa dizer o que e. Materia reescrita e "nosso texto";
+     esta e "texto original de tal orgao". Confundir as duas seria pior que
+     nao publicar.                                                          */
+  async function republicar(i){
+    try {
+      const bruto = await textoCompleto(i.link, 12000);
+      if (!bruto || bruto.length < 300) return;
+
+      const paragrafos = String(bruto)
+        .replace(/\s+/g, ' ')
+        .split(/(?<=[.!?])\s+(?=[A-ZÀ-Ú])/)
+        .reduce((acc, frase) => {
+          const ult = acc[acc.length - 1];
+          if (ult && (ult + ' ' + frase).length < 420) acc[acc.length - 1] = ult + ' ' + frase;
+          else acc.push(frase);
+          return acc;
+        }, [])
+        .map(x => x.trim())
+        .filter(x => x.length > 60)
+        .slice(0, 8);
+
+      if (paragrafos.length < 2) return;
+
+      const titulo = String(i.titulo || '').trim();
+      if (titulo.length < 15) return;
+      if (jaSaiuAntes.some(t => parecidas(t, titulo) >= 0.85)) return;
+      if (titulosJaFeitos.some(t => parecidas(t, titulo) >= 0.55)) return;
+      titulosJaFeitos.push(titulo);
+
+      const arq = 'materia/rp-' + slug(titulo) + '.html';
+      const mun = detectarMunicipio(titulo + ' ' + paragrafos[0], GERAL ? null : UF);
+      const onde = ondeMora(titulo, EDITORIA, GERAL ? null : UF);
+
+      await writeFile('materia/' + arq.replace('materia/',''), pagina({
+        id: 'rp:' + slug(titulo),
+        nivel: 'confirmado',
+        chapeu: 'Texto original',
+        titulo,
+        linhaFina: paragrafos[0].slice(0, 190),
+        corpo: paragrafos,
+        // O bloco que separa isto de uma materia nossa.
+        republicado: {
+          orgao: i.veiculo || i.fonte || 'órgão público',
+          licenca: 'Creative Commons Atribuição-SemDerivações 3.0'
+        },
+        origemNome: i.veiculo, radar: false, checar: []
+      }, { link: i.link, municipio: mun ? mun.nome : '' }, new Date().toISOString()), 'utf8');
+
+      publicados.push({
+        id: 'rp:' + slug(titulo),
+        editoria: onde.editoria, uf: onde.uf,
+        municipio: mun ? mun.id : null, municipioNome: mun ? mun.nome : null,
+        titulo, resumo: paragrafos[0].slice(0, 190),
+        fonte: i.veiculo, origemNome: i.veiculo, origemLink: i.link,
+        link: 'materia/' + arq.replace('materia/',''),
+        nivel: 'confirmado', selo: 'Texto original do órgão',
+        iso: new Date().toISOString(), hora: horaBR(new Date().toISOString())
+      });
+      escritas++;
+      console.log(`     rep   ${String(i.veiculo || '').slice(0,22).padEnd(24)} ${titulo.slice(0,44)}`);
+    } catch { /* uma que falha nao derruba a rodada */ }
+  }
+
   async function escreverUma(i){
     if (carteiraAcabou()) return;
+    // Fonte CC BY-ND vai pela esteira 2: republicacao integral, sem uma
+    // palavra mudada, com credito e link. E o que a licenca permite.
+    if (!podeAdaptar(i.link)) return republicar(i);
     try {
       const texto = await textoCompleto(i.link, 12000);
       // Foto so de fonte que autoriza reproducao. E a mesma regra do texto:
