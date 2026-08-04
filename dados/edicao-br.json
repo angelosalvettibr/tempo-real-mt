@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-03T22:00:37.182Z",
-  "modelo": "gemini-flash-latest",
+  "gerado": "2026-08-04T07:58:44.468Z",
+  "modelo": "gemini-2.0-flash-lite-001",
   "numeros": {
-    "pauta": 203,
-    "fonteLivre": 51,
-    "confirmadas": 13,
-    "publicadas": 13,
+    "pauta": 210,
+    "fonteLivre": 53,
+    "confirmadas": 18,
+    "publicadas": 7,
     "resgatadas": 0,
-    "semFonte": 60
+    "semFonte": 44
   },
   "fontes": {
     "checadas": 81,
-    "responderam": 51,
+    "responderam": 35,
     "entregando": 29,
-    "itens": 250,
+    "itens": 259,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -91,15 +100,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "valor",
         "nome": "Valor",
         "itens": 12,
@@ -109,8 +109,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -126,10 +126,37 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1politica",
+        "nome": "g1 Política",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "usp",
         "nome": "Jornal da USP",
-        "itens": 12,
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -144,45 +171,18 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -192,25 +192,7 @@
         "tipo": "livre",
         "id": "ab-economia",
         "nome": "Agência Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
         "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -219,7 +201,7 @@
         "tipo": "pauta",
         "id": "g1economia",
         "nome": "g1 Economia",
-        "itens": 4,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -228,7 +210,25 @@
         "tipo": "livre",
         "id": "ab-justica",
         "nome": "Agência Brasil",
-        "itens": 4,
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "migalhas",
+        "nome": "Migalhas",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -237,7 +237,7 @@
         "tipo": "pauta",
         "id": "globorural",
         "nome": "Agro",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -246,7 +246,7 @@
         "tipo": "livre",
         "id": "ab-geral",
         "nome": "Agência Brasil",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -298,15 +298,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "valor",
         "nome": "Valor",
         "itens": 0,
@@ -325,6 +316,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "cartacapital",
         "nome": "CartaCapital",
         "itens": 0,
@@ -334,8 +334,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "r7",
-        "nome": "R7",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -343,8 +343,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "migalhas",
-        "nome": "Migalhas",
+        "id": "r7",
+        "nome": "R7",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -384,25 +384,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -412,6 +394,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -474,7 +474,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -483,7 +483,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -492,7 +492,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -500,8 +500,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -518,17 +518,8 @@
         "nome": "Ministério da Saúde",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -537,12 +528,21 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,48 +559,21 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "cgu",
         "nome": "CGU",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -609,25 +582,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -636,7 +618,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -645,16 +627,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -663,34 +654,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -698,8 +671,17 @@
         "nome": "INSS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "anvisa",
+        "nome": "Anvisa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -708,7 +690,25 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -716,17 +716,8 @@
         "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -739,12 +730,21 @@
       },
       {
         "tipo": "livre",
+        "id": "tcu",
+        "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "ipea",
         "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       }
     ]
   },
@@ -759,7 +759,7 @@
       "chapeu": "Nosso texto",
       "editoria": "brasil",
       "titulo": "Governos africanos gastam mais de US$ 2 bilhões em sistemas de vigilância por IA",
-      "resumo": "Estudo do IDS aponta que a Nigéria respondeu por US$ 470 milhões dos gastos e que câmeras são instaladas em locais de organização da oposição.",
+      "resumo": "Estudo aponta que equipamentos são instalados em locais de organização da oposição e protestos, em vez de áreas com maior taxa de criminalidade.",
       "fonte": "Meridiano, com informações de Global Voices",
       "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
       "origemNome": "Global Voices",
@@ -767,16 +767,110 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Um estudo de março de 2026, realizado pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais, constatou que 11 governos africanos gastaram, em conjunto, mais de US$ 2 bilhões em sistemas de vigilância operados por inteligência artificial. A Nigéria foi responsável por mais de US$ 470 milhões desse total.",
-        "Os kits de vigilância adquiridos incluem câmeras CCTV de alta definição, leitores de placas, sistemas de reconhecimento facial, camadas de identificação biométrica e salas de controle. Grande parte desse material é fornecida ou financiada por empresas e bancos chineses, enquanto outros sistemas vêm de empresas israelenses.",
-        "A justificativa dada pelos governos para a compra dos equipamentos é o combate ao crime, embora os índices de criminalidade não estejam diminuindo. Pesquisadores do IDS constataram poucas evidências de que a presença das câmeras reduza os crimes.",
-        "O mapeamento realizado pelo estudo mostrou que as instalações de câmeras se concentram em bairros onde partidos de oposição se organizam, em locais que registraram protestos e onde a imprensa tem causado problemas para os regimes governamentais, em vez de áreas com maior incidência de crimes comuns."
+        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais constatou que 11 governos africanos gastaram, em conjunto, mais de US$ 2 bilhões em sistemas de vigilância operados por inteligência artificial. A Nigéria foi responsável por mais de US$ 470 milhões desse total.",
+        "Os equipamentos incluem câmeras de CCTV de alta definição, leitores de placas, reconhecimento facial, identificação biométrica e salas de controle. Grande parte do material é fornecida ou financiada por empresas e bancos chineses, enquanto outros sistemas vêm de empresas israelenses.",
+        "A justificativa apresentada pelos governos para adquirir a tecnologia é o combate ao crime, mas os números da criminalidade não apresentam queda. Os pesquisadores do IDS identificaram que as câmeras estão concentradas em bairros onde partidos de oposição se organizam, onde ocorreram protestos e onde a imprensa causou problemas para os regimes no poder.",
+        "A inteligência artificial transforma dados já coletados há décadas pelo Estado — como registros de comunicações, impostos e contas bancárias — em arquivos consultáveis. Com a ferramenta, informações como nomes, padrões de viagem e histórico de transações são recuperadas em segundos."
       ],
       "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-sistemas-de-vigilanc.html",
       "iso": "2026-08-03T11:47:40.000Z",
       "hora": "07h47",
       "original": true,
-      "contexto": "O tema dos gastos em vigilância por inteligência artificial em países africanos consta quatro vezes no arquivo, com registros em 3 de agosto de 2026. As instalações descritas no levantamento abrangem 11 governos do continente e concentram-se em áreas com presença da imprensa, partidos de oposição e protestos, sendo a Nigéria responsável por mais de US$ 470 milhões do montante total.",
+      "contexto": "O valor de mais de US$ 2 bilhões abrange 11 governos africanos, dos quais a Nigéria responde por mais de US$ 470 milhões. O sistema afeta moradores de bairros onde se organizam partidos de oposição, ocorrem protestos e atua a imprensa nesses países. O histórico do MERIDIANO registra quatro casos semelhantes sobre o tema em 3 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:trabalhadores-das-linhas-11-12-e-13-da-cptm-aprovam-greve-a-partir-de-",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Trabalhadores das linhas 11, 12 e 13 da CPTM aprovam greve a partir de segunda-feira",
+      "resumo": "A categoria protesta contra a privatização do serviço e reivindica a garantia de emprego para 4 mil trabalhadores.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/Trabalhadores-das-linhas-11-12-13-da-CPTM-entram-em-greve",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1",
+        "Exame",
+        "Metrópoles",
+        "Poder360"
+      ],
+      "quentura": 9,
+      "uf": null,
+      "corpo": [
+        "A assembleia dos trabalhadores da Companhia Paulista de Trens Metropolitanos (CPTM) aprovou greve a partir da meia-noite desta segunda-feira (3) nas linhas 11, 12 e 13. O movimento não afeta as demais linhas de trem paulistas.",
+        "Filiado ao Sindicato dos Trabalhadores(as) em Empresas Ferroviárias da Zona Central do Brasil, o grupo havia aprovado a mobilização há duas semanas, quando estabeleceu um prazo de negociação com o governo estadual.",
+        "Entre as reivindicações da categoria estão a garantia de emprego para 4 mil trabalhadores e o cancelamento da privatização, considerada pelo grupo pouco transparente e lesiva aos interesses dos paulistas e dos trabalhadores. A concessão das linhas foi concluída em julho e suspensa temporariamente após um incêndio na primeira semana de atividades da empresa Trívia, que assumiu o serviço.",
+        "A concessão foi considerada essencial para a expansão e modernização do atendimento na região metropolitana pelo governador Tarcísio de Freitas, além de comemorada como um modelo para futuras concessões em outros serviços públicos."
+      ],
+      "link": "/materia/trabalhadores-das-linhas-11-12-e-13-da-cptm-aprovam-greve-a-partir-de-.html",
+      "iso": "2026-08-04T00:26:00.000Z",
+      "hora": "20h26",
+      "original": true,
+      "contexto": "A paralisação afeta o serviço nas linhas 11, 12 e 13 da CPTM a partir da meia-noite de segunda-feira (3), sem atingir as demais linhas paulistas. A mobilização reúne reivindicações de garantia de emprego para 4 mil trabalhadores da categoria. Não há registros de casos parecidos no histórico.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:marcos-buckeridge-analisa-a-relacao-entre-instituicoes-e-aprendizado-c",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Marcos Buckeridge analisa a relação entre instituições e aprendizado coletivo humano",
+      "resumo": "O professor do Instituto de Biociências da USP aponta que adaptações sociais e reorganizações institucionais acompanharam transformações históricas como as revoluções Agrícola e Industrial.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/articulistas/marcos-buckeridge/as-instituicoes-e-o-aprendizado-coletivo/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Em artigo, Marcos Buckeridge, professor do Instituto de Biociências da USP, analisa a história da humanidade como uma sucessão de processos de acúmulo de experiência. O texto aborda como transformações ambientais, tecnológicas e econômicas exigiram adaptações sociais profundas ao longo do tempo.",
+        "Conforme o autor, a Revolução Agrícola levou ao aparecimento das primeiras cidades e dos primeiros sistemas legais. Posteriormente, a Revolução Industrial alterou as relações de trabalho, gerando a legislação trabalhista moderna.",
+        "O texto aponta que cada etapa histórica foi acompanhada de reorganizações institucionais motivadas pelo aprendizado das sociedades diante de novos desafios. De acordo com o artigo, esse processo ocorreu de forma lenta e conflituosa, sem um planejamento prévio individual.",
+        "Buckeridge indica que o diferencial evolutivo da espécie humana reside na capacidade de acumular conhecimento ao longo das gerações e transformá-lo em cultura e ciência, considerando que nenhum indivíduo detém sozinho todo o conhecimento que sustenta uma civilização."
+      ],
+      "link": "/materia/marcos-buckeridge-analisa-a-relacao-entre-instituicoes-e-aprendizado-c.html",
+      "iso": "2026-08-03T22:35:15.000Z",
+      "hora": "18h35",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
+      "fotoAlt": null,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:relato-aborda-a-experiencia-de-pessoa-nascida-apatrida",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Relato aborda a experiência de pessoa nascida apátrida",
+      "resumo": "Em depoimento publicado pelo Global Voices, indivíduo nascido sem pátria declarou ter aprendido a temer coisas que acontecem naturalmente para os demais.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Uma pessoa que nasceu apátrida afirmou ter aprendido a temer coisas que ocorrem de forma natural para outras pessoas. A declaração foi divulgada pelo veículo Global Voices.",
+        "O relato trata da jornada de um viajante apátrida. A publicação aborda o percurso feito pelo indivíduo em meio à ignorância e à desinformação.",
+        "A declaração registra a vivência descrita pelo viajante nascido sem nacionalidade. O texto apresenta o depoimento sobre o aprendizado de temer situações naturais para outros."
+      ],
+      "link": "/materia/relato-aborda-a-experiencia-de-pessoa-nascida-apatrida.html",
+      "iso": "2026-08-04T07:37:20.000Z",
+      "hora": "03h37",
+      "original": true,
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -785,11 +879,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lingua-kam-da-nigeria-registra-entre-8-000-e-11-000-falantes",
+      "id": "ilm:lingua-kam-na-nigeria-tem-entre-8-000-e-11-000-falantes",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Língua Kam da Nigéria registra entre 8.000 e 11.000 falantes",
-      "resumo": "O idioma do nordeste da Nigéria não recebeu atenção de pesquisadores antes do ano de 2016.",
+      "titulo": "Língua Kam na Nigéria tem entre 8.000 e 11.000 falantes",
+      "resumo": "O idioma do nordeste do país não recebia atenção de pesquisadores antes de 2016, assim como outras línguas da região.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
       "origemNome": "Global Voices (EN)",
@@ -797,11 +891,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O número atual de falantes da língua Kam é de aproximadamente 8.000 a 11.000.",
-        "A língua está localizada no nordeste da Nigéria e não recebeu atenção de pesquisadores antes de 2016.",
-        "A falta de atenção por parte de pesquisadores antes de 2016 também afetou muitas outras línguas da região nordeste da Nigéria."
+        "A língua Kam, situada no nordeste da Nigéria, possui atualmente um número aproximado de 8.000 a 11.000 falantes.",
+        "O idioma não recebeu atenção por parte de pesquisadores antes de 2016.",
+        "A falta de atenção de pesquisadores antes desse período também ocorreu com muitas outras línguas do nordeste da Nigéria."
       ],
-      "link": "/materia/lingua-kam-da-nigeria-registra-entre-8-000-e-11-000-falantes.html",
+      "link": "/materia/lingua-kam-na-nigeria-tem-entre-8-000-e-11-000-falantes.html",
       "iso": "2026-08-03T05:38:53.000Z",
       "hora": "01h38",
       "original": true,
@@ -810,30 +904,29 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260803_gaudencio-torquato-2.jpg",
-      "fotoAlt": "Gaudêncio Torquato – Foto: Divulgação/Grupo Summus Editorial",
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/03/20260325_ivan-maglio.jpg",
+      "fotoAlt": "Ivan Carlos Maglio - Foto: Arquivo pessoal",
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:gaudencio-torquato-lanca-livro-sobre-sua-trajetoria-e-a-politica-nacio",
+      "id": "ilm:parques-urbanos-passam-a-integrar-infraestrutura-ecologica-das-cidades",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Gaudêncio Torquato lança livro sobre sua trajetória e a política nacional",
-      "resumo": "A obra Memórias em Quatro Atos será lançada no dia 10 de agosto, a partir das 18 horas, na Livraria da Vila, em São Paulo.",
+      "titulo": "Parques urbanos passam a integrar infraestrutura ecológica das cidades",
+      "resumo": "Mudança no papel das áreas verdes decorre de impactos das mudanças climáticas e da urbanização intensiva, segundo Ivan Maglio, da USP.",
       "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/cultura/biografia-de-gaudencio-torquato-retrata-eventos-politicos-do-pais/",
+      "origemLink": "https://jornal.usp.br/artigos/parques-urbanos-no-seculo-21-da-gestao-do-lazer-a-gestao-da-infraestrutura-ecologica/",
       "origemNome": "Jornal da USP",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O jornalista e professor Gaudêncio Torquato lança o livro Memórias em Quatro Atos (Família, Jornalismo, Ensino e Pesquisa, Consultoria). O lançamento ocorre no dia 10, segunda-feira, a partir das 18 horas, na Livraria da Vila, localizada na Avenida Paulista, 1.063, em São Paulo.",
-        "Com 347 páginas, a obra é uma publicação da Editora Topbooks. O conteúdo do livro mistura histórias da vida particular do autor com os principais momentos da política nacional nas últimas décadas.",
-        "Torquato nasceu em 1945 na cidade de Luís Gomes, no Rio Grande do Norte, e ingressou no curso de Jornalismo da Universidade Católica de Pernambuco em 1964. O autor é pioneiro nas áreas de comunicação empresarial e marketing político.",
-        "O jornalista é Professor Emérito da Escola de Comunicações e Artes (ECA) da USP, instituição onde atuou entre os anos de 1969 e 1985. Ele também é articulista do Jornal da USP."
+        "As discussões sobre parques urbanos deixaram de focar apenas em segurança, horários de funcionamento, concessões ou grandes eventos e passaram a abordar a integração dessas áreas à infraestrutura ecológica das cidades. O tema é tratado por Ivan Maglio, coorientador no Doutorado Profissional em Ambiente, Saúde e Sustentabilidade da Faculdade de Saúde Pública da USP.",
+        "Essa transformação decorre das evidências produzidas nas últimas décadas sobre os efeitos das mudanças climáticas e da urbanização intensiva. Questões como ondas de calor, impermeabilização crescente do solo, enchentes, perda de biodiversidade e degradação da qualidade do ar exigem uma nova compreensão sobre as áreas verdes.",
+        "Além dos parques, outros espaços como praças arborizadas, corredores verdes, rios urbanos e demais áreas livres vegetadas também desempenham papéis na infraestrutura ecológica urbana."
       ],
-      "link": "/materia/gaudencio-torquato-lanca-livro-sobre-sua-trajetoria-e-a-politica-nacio.html",
-      "iso": "2026-08-03T19:47:29.000Z",
-      "hora": "15h47",
+      "link": "/materia/parques-urbanos-passam-a-integrar-infraestrutura-ecologica-das-cidades.html",
+      "iso": "2026-08-03T22:12:42.000Z",
+      "hora": "18h12",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -844,11 +937,11 @@
       "fotoAlt": null,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:documentos-confirmam-relacao-com-estado-mas-nao-alteram-historia-pesso",
+      "id": "ilm:documentos-confirmam-vinculo-legal-sem-alterar-existencia-ou-historia-",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Documentos confirmam relação com Estado mas não alteram história pessoal",
-      "resumo": "Registros legais não conseguem criar ou apagar a existência, a família e o sentimento de pertencimento de um indivíduo.",
+      "titulo": "Documentos confirmam vínculo legal sem alterar existência ou história de uma pessoa",
+      "resumo": "Registros não têm a capacidade de criar ou eliminar a família e o sentimento de pertencimento de um indivíduo.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/02/identity-beyond-citizenship-what-remains-when-the-state-refuses-to-recognise-you/",
       "origemNome": "Global Voices (EN)",
@@ -856,703 +949,125 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Documentos podem confirmar uma relação jurídica entre uma pessoa e o Estado.",
-        "No entanto, os registros estatais não têm a capacidade de criar ou apagar a existência e a história de um indivíduo.",
-        "A documentação legal também não é capaz de gerar ou eliminar os laços familiares e o sentimento de pertencimento de uma pessoa."
+        "A confirmação de uma relação legal com um Estado é feita por meio de documentos.",
+        "Os documentos não têm o poder de criar ou apagar a existência e a história de uma pessoa.",
+        "A família e o sentimento de pertencimento de um indivíduo tampouco são criados ou apagados por documentos."
       ],
-      "link": "/materia/documentos-confirmam-relacao-com-estado-mas-nao-alteram-historia-pesso.html",
+      "link": "/materia/documentos-confirmam-vinculo-legal-sem-alterar-existencia-ou-historia-.html",
       "iso": "2026-08-02T16:38:17.000Z",
       "hora": "12h38",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/04/20260424_bet.jpg",
-      "fotoAlt": "Patrocínios esportivos e publicidade ampliaram a presença das casas de apostas no cotidiano dos brasileiros.\n - Foto: rawpixel.com/Freepik\n\n",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pesquisa-da-usp-indica-que-expansao-das-bets-e-problema-de-saude-publi",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Pesquisa da USP indica que expansão das bets é problema de saúde pública no Brasil",
-      "resumo": "A tese de Leonardo Sena do Carmo, defendida na FFLCH em abril de 2026, aponta que a digitalização do mercado de jogos intensificou o transtorno do vício em apostas.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/radio-usp/tecnologia-digital-impulsionou-a-expansao-do-mercado-de-apostas/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A expansão das apostas esportivas no Brasil configura um problema de saúde pública, segundo pesquisa desenvolvida na Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH) da USP.",
-        "A tese \"Evolução e modernização recente dos jogos de azar e apostas: difusão das bets e usos do território brasileiro\", de autoria de Leonardo Sena do Carmo, foi defendida em abril de 2026. O estudo aponta que a digitalização do mercado intensificou a ludopatia, transtorno caracterizado pelo vício em apostas.",
-        "No trabalho, Carmo analisa a evolução dos jogos de azar no País, desde o jogo do bicho até a disseminação das bets.",
-        "A presença das casas de apostas no cotidiano dos brasileiros foi ampliada por meio de patrocínios esportivos, estratégias de comunicação e publicidade."
-      ],
-      "link": "/materia/pesquisa-da-usp-indica-que-expansao-das-bets-e-problema-de-saude-publi.html",
-      "iso": "2026-08-03T19:28:41.000Z",
-      "hora": "15h28",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/%E0%A4%A6%E0%A5%81%E0%A4%A8%E0%A4%BE_%E0%A4%9F%E0%A4%AA%E0%A4%B0%E0%A5%801-800x450.webp",
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:mulheres-no-nepal-produzem-pratos-de-folhas-em-florestas-comunitarias",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Mulheres no Nepal produzem pratos de folhas em florestas comunitárias",
-      "resumo": "A produção busca transformar a vulnerabilidade em subsistência sustentável, além de apoiar a conservação ambiental, a resiliência climática e o desenvolvimento econômico local.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/02/nepals-community-forests-offer-climate-solutions-one-leaf-at-a-time/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Mulheres integrantes de grupos de florestas comunitárias no Nepal estão produzindo pratos de folhas ecológicos. A ação transforma a vulnerabilidade em meios de subsistência sustentáveis.",
-        "A fabricação desses itens ecológicos atua no suporte à conservação do meio ambiente e no fortalecimento da resiliência climática.",
-        "A atividade desenvolvida junto às florestas comunitárias também atua no apoio ao desenvolvimento econômico local."
-      ],
-      "link": "/materia/mulheres-no-nepal-produzem-pratos-de-folhas-em-florestas-comunitarias.html",
-      "iso": "2026-08-02T00:00:00.000Z",
-      "hora": "20h00",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2025/03/20250328_cafe_graos.jpg",
-      "fotoAlt": "A imagem mostra duas mãos segurando grãos de café torrados sobre uma máquina de torrefação cheia de grãos",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:donald-trump-impoe-duas-novas-tarifas-sobre-produtos-brasileiros-nos-e",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Donald Trump impõe duas novas tarifas sobre produtos brasileiros nos Estados Unidos",
-      "resumo": "As medidas aplicadas no mês de julho incluem alíquota de 25% por práticas consideradas desleais e outra de 12,5% ligada a trabalho forçado.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/atualidades/do-pix-ao-cafe-por-que-o-tarifaco-dos-eua-atingiu-a-industria-brasileira-mas-poupou-as-commodities/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O presidente dos Estados Unidos, Donald Trump, impôs duas tarifas diferentes sobre os produtos do Brasil no mês de julho. A primeira ação resultou em uma alíquota de 25%, decorrente de uma investigação dos Estados Unidos contra o Brasil sobre práticas classificadas pelo governo americano como desleais.",
-        "A segunda taxa aplicável aos produtos brasileiros consiste em 12,5% e é voltada a países considerados pelo governo americano como possuidores de trabalho forçado.",
-        "O professor Paulo Feldmann, do Departamento de Administração da Faculdade de Economia, Administração, Contabilidade e Atuária (FEA) da USP, declarou que a medida não é inédita, mas afirmou ter sido surpreendente por partir dos Estados Unidos, até então defensores do livre comércio.",
-        "Professores da USP comentam que a ação dos Estados Unidos pode acelerar a relação entre o Brasil e a China, mas afirmam que é necessário cuidado."
-      ],
-      "link": "/materia/donald-trump-impoe-duas-novas-tarifas-sobre-produtos-brasileiros-nos-e.html",
-      "iso": "2026-08-03T13:55:45.000Z",
-      "hora": "09h55",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2023/04/20230414_transpiracao.jpg",
-      "fotoAlt": "O rim processa os eletrólitos responsáveis pelo funcionamento do coração. Se a capacidade dos rins estiver comprometida, o nível de ureia no sangue aumenta, e isso pode ser monitor",
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:hematidrose-e-condicao-rara-em-que-a-pessoa-elimina-sangue-pela-pele",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Hematidrose é condição rara em que a pessoa elimina sangue pela pele",
-      "resumo": "O fenômeno costuma surgir em episódios de estresse, medo e ansiedade extremos, contando com pouco mais de 40 relatos em artigos científicos.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/noticias/hematidrose-por-que-algumas-pessoas-suam-sangue/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A hematidrose é uma condição médica na qual o indivíduo elimina sangue pela pele, processo que costuma ser associado ao suor. A manifestação do fenômeno surge em situações de medo, ansiedade e estresse extremos.",
-        "A condição foi descrita por Aristóteles no século III a.C. e possui registros no período medieval. Apesar do histórico antigo, revisões recentes da literatura científica identificaram pouco mais de 40 casos descritos em artigos.",
-        "De acordo com Marco Andrey Cipriani Frade, professor titular e chefe da Dermatologia da Faculdade de Medicina da USP de Ribeirão Preto, o mecanismo responsável pelo sangramento ainda não está totalmente esclarecido."
-      ],
-      "link": "/materia/hematidrose-e-condicao-rara-em-que-a-pessoa-elimina-sangue-pela-pele.html",
-      "iso": "2026-08-03T16:51:39.000Z",
-      "hora": "12h51",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:rio-de-janeiro-sedia-a-sexta-edicao-do-rio-innovation-week-no-pier-mau",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Rio de Janeiro sedia a sexta edição do Rio Innovation Week no Pier Mauá",
-      "resumo": "Com o tema Simbiose, a conferência tem expectativa de movimentar R$ 4 bilhões em negócios e receber cerca de 180 mil pessoas.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/rio-innovation-week-traz-diversidade-para-o-centro-da-inovacao",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Rio de Janeiro sedia, de 4 a 7 de agosto, no Pier Mauá, a sexta edição do Rio Innovation Week. O evento de ciência, tecnologia e negócios reúne expositores brasileiros e estrangeiros sob o tema \"Simbiose – o futuro não acontece isolado\".",
-        "Com expectativa de movimentar R$ 4 bilhões em negócios e receber cerca de 180 mil pessoas, a conferência reunirá 2 mil startups, centenas de expositores e 60 conferências. Espera-se a geração de cerca de 22 mil empregos diretos e indiretos, com estrutura de 16 trilhas e cerca de 40 palcos.",
-        "A programação conta com a ativista Malala Yousafzai, o vencedor do Nobel de medicina Edvard Moser, a cientista brasileira Tatiana Sampaio, a deputada e ex-ministra Sonia Guajajara e a ativista indígena Txai Suruí. Também participam os escritores Djamila Ribeiro, Itamar Vieira Junior, Ondjaki e Luiz Antonio Simas.",
-        "Nesta edição, o Startup Program foi ampliado e traz mais de 50 empresas de Venture Capital, além de abrir espaço para pequenas e médias empresas. O evento abrigará ainda o Fórum Internacional de Negócios Aeroespaciais, promovido pela Agência Espacial Brasileira e pela Organização das Nações Unidas, e a Conferência Cocreators."
-      ],
-      "link": "/materia/rio-de-janeiro-sedia-a-sexta-edicao-do-rio-innovation-week-no-pier-mau.html",
-      "iso": "2026-08-03T10:43:00.000Z",
-      "hora": "06h43",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:legislacao-permite-a-realizacao-de-concursos-publicos-em-ano-eleitoral",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Legislação permite a realização de concursos públicos em ano eleitoral",
-      "resumo": "As restrições da lei aplicam-se apenas à nomeação e ao provimento de cargos no período entre os três meses que antecedem o pleito e a posse dos eleitos.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/concursos-publicos-seguem-previstos-durante-periodo-eleitoral",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A legislação brasileira permite a realização de concursos públicos durante o ano de eleições. De acordo com informações do Tribunal Superior Eleitoral, não existe restrição para a aplicação de provas, ocorrendo limitações exclusivamente sobre a nomeação e o provimento de cargos durante a campanha eleitoral.",
-        "Conforme o tribunal, nos três meses anteriores ao pleito até a posse dos eleitos, os governantes não podem convocar os aprovados para preencher as vagas públicas, ressalvadas algumas exceções.",
-        "Até o fim de 2026, a Empresa de Tecnologia e Informações da Previdência e a Agência Brasileira Gestora de Fundos Garantidores estão com editais publicados e inscrições abertas até 6 de agosto, nos sites da Fundação Getulio Vargas e da Fundação Carlos Chagas, respectivamente.",
-        "Além disso, Petrobras, Indústrias Nucleares do Brasil, Conselho Federal de Enfermagem, Conselho Federal de Contabilidade e Agência Nacional de Assistência Técnica e Extensão Rural já possuem banca definida. O coordenador do Gran Concursos, Eduardo Cambuy, recomenda que os candidatos comecem os estudos pelas matérias básicas."
-      ],
-      "link": "/materia/legislacao-permite-a-realizacao-de-concursos-publicos-em-ano-eleitoral.html",
-      "iso": "2026-08-03T10:24:00.000Z",
-      "hora": "06h24",
-      "original": true,
-      "contexto": "O histórico registra dois casos parecidos em 3 de agosto de 2026. Os candidatos a vagas públicas têm até o dia 6 de agosto para se inscrever nos editais da Dataprev e da ABGF. As restrições para a nomeação de aprovados vigoram no período entre os três meses anteriores ao pleito e a posse dos eleitos.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:pf-publica-instrucao-normativa-para-controle-e-fiscalizacao-de-produto",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "PF publica instrução normativa para controle e fiscalização de produtos químicos",
-      "resumo": "As novas regras exigem cadastro no Sistema de Controle de Produtos Químicos e o envio de mapas mensais de movimentação até o dia 15 de cada mês.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/brasil-passa-ter-controle-maior-sobre-produtos-quimicos",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Polícia Federal publicou nesta segunda-feira (3), no Diário Oficial da União, uma nova instrução normativa para regulamentar o controle e a fiscalização de produtos químicos passíveis de uso na fabricação ilícita de drogas. A medida atualiza procedimentos de monitoramento previstos na legislação federal e estabelece regras de cadastro, licenciamento, fiscalização e responsabilização de pessoas físicas e jurídicas.",
-        "Empresas e profissionais que realizam atividades com produtos químicos controlados, conforme lista do Ministério da Justiça e Segurança Pública, devem fazer cadastro e solicitar licença de funcionamento por meio do Sistema de Controle de Produtos Químicos. A norma também estabelece a obrigatoriedade do envio dos Mapas Mensais de Controle até o dia 15 de cada mês, informando as movimentações do mês anterior, inclusive quando não houver movimentação.",
-        "O texto autoriza as equipes a inspecionar estabelecimentos e apreender produtos em situação irregular. Para infrações menos graves, a punição é advertência e, em reincidência, multa entre R$ 2.128,20 e R$ 20 mil. Irregularidades mais severas preveem multas de R$ 20 mil a R$ 350 mil, suspensão da licença de funcionamento por até 180 dias para reincidentes e cancelamento da autorização em casos graves, como a participação no desvio de produtos para fins ilícitos.",
-        "De acordo com a Polícia Federal, as medidas visam fortalecer o rastreamento das operações e a capacidade de fiscalização sobre substâncias químicas usadas na produção ilegal de drogas. A publicação revoga normas anteriores editadas em 2020 e 2021."
-      ],
-      "link": "/materia/pf-publica-instrucao-normativa-para-controle-e-fiscalizacao-de-produto.html",
-      "iso": "2026-08-03T11:35:00.000Z",
-      "hora": "07h35",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:rio-grande-do-norte-foi-pioneiro-no-voto-e-na-eleicao-de-mulheres-no-b",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Rio Grande do Norte foi pioneiro no voto e na eleição de mulheres no Brasil",
-      "resumo": "Uma lei de 1927 garantiu o direito ao voto a 15 mulheres no estado em 1928 e permitiu a eleição da primeira prefeita do país na cidade de Lajes.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/historia-do-voto-mulheres-do-rn-tiveram-feitos-ineditos",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Rio Grande do Norte foi o estado pioneiro no Brasil e na América do Sul a garantir o direito ao voto feminino. A conquista ocorreu a partir da Lei estadual nº 660, aprovada em 25 de outubro de 1927 pelo então presidente do estado, Juvenal Lamartine, que estabeleceu que não haveria distinção de sexo para o exercício do sufrágio.",
-        "Com a legislação, Celina Guimarães Viana solicitou seu alistamento em novembro de 1927 em Mossoró, tornando-se a primeira eleitora do Brasil e da América do Sul, e votou em 5 de abril de 1928. Na mesma data do pedido de Celina, Júlia Alves Barbosa Cavalcante requereu o alistamento em Natal, tornando-se a segunda eleitora. No total, 15 mulheres votaram no estado naquele ano.",
-        "O estado também registrou a primeira candidatura feminina do país. Em 1928, Alzira Soriano de Nóbrega Teixeira candidatou-se à prefeitura de Lajes e foi eleita com 60% dos votos, tornando-se a primeira prefeita do Brasil e da América Latina após enfrentar uma campanha com ataques misóginos.",
-        "Segundo as pesquisadoras Fernanda Abreu, da Universidade Estadual do Rio Grande do Norte, e Cibele Tenório, da Universidade de Brasília, a articulação da sufragista Bertha Lutz com o governo estadual ajudou a viabilizar as conquistas locais, que ocorreram antes do marco nacional do voto feminino em 1932."
-      ],
-      "link": "/materia/rio-grande-do-norte-foi-pioneiro-no-voto-e-na-eleicao-de-mulheres-no-b.html",
-      "iso": "2026-08-02T11:05:00.000Z",
-      "hora": "07h05",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:atos-em-diversas-cidades-pressionam-a-camara-a-votar-o-pl-da-misoginia",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Atos em diversas cidades pressionam a Câmara a votar o PL da Misoginia",
-      "resumo": "Texto prevê pena de dois a cinco anos de reclusão para crimes contra a mulher e aguarda despacho do presidente da Casa, Hugo Motta.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/mulheres-vao-ruas-pela-votacao-do-pl-da-misoginia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Levante Mulheres Vivas realizou mobilizações em cidades de todas as regiões do Brasil neste domingo (2) para pressionar a Câmara dos Deputados pela aprovação do Projeto de Lei 896/2023, o PL da Misoginia. A matéria já foi aprovada no Senado e aguarda despacho do presidente da Câmara, Hugo Motta (Republicanos-PB), para votação em plenário sob regime de urgência.",
-        "O projeto altera a Lei 7.716/1989 e inclui os crimes motivados por misoginia na legislação que pune a discriminação e o preconceito, fixando pena de dois a cinco anos de reclusão. A proposta define misoginia como a prática, indução ou incitação de violência, restrição de direitos ou ofensa à dignidade da mulher por sua condição de mulher, termo que também foi incluído no artigo referente à injúria.",
-        "Os protestos ocorreram ao longo de todo o dia em localidades como Belo Horizonte, Boa Vista, Brasília, Campo Grande, Capão da Canoa (RS), Cataguases (MG), Curitiba, João Pessoa, Juazeiro (BA), Parnaíba (PI), Pelotas (RS), Ponta Grossa (PR), Rio de Janeiro, Salvador, São José (SC), São Paulo e Sorocaba (SP). Integrantes levaram cartazes com frases como \"Brasil sem misoginia\" e ocuparam espaços públicos antes da retomada das sessões deliberativas da Casa, adiada para a semana do dia 10 de agosto.",
-        "Segundo a cofundadora do movimento, Rachel Ripani, a mobilização da sociedade civil busca conter o avanço do feminicídio e do ódio digital contra as mulheres, além de buscar consenso entre parlamentares para barrar a violência nas redes sociais. A assessoria de Hugo Motta foi procurada pela Agência Brasil, mas não respondeu até o momento da publicação do texto original."
-      ],
-      "link": "/materia/atos-em-diversas-cidades-pressionam-a-camara-a-votar-o-pl-da-misoginia.html",
-      "iso": "2026-08-02T19:17:00.000Z",
-      "hora": "15h17",
-      "original": true,
-      "contexto": "A próxima etapa da matéria é a votação no plenário da Câmara dos Deputados sob regime de urgência, após o despacho do presidente da Casa, Hugo Motta. A proposta afeta mulheres ao prever penas de dois a cinco anos de reclusão para crimes de violência, restrição de direitos ou ofensa motivados pela condição de mulher.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
-      "ondeCirculou": [
-        {
-          "veiculo": "Exame",
-          "titulo": "Real Time Big Data: Lula tem 60% e Flávio Bolsonaro, 23%, no 1º turno em Sergipe",
-          "link": "https://exame.com/brasil/real-time-big-data-lula-tem-60-e-flavio-bolsonaro-23-no-1o-turno-em-sergipe/"
-        },
-        {
-          "veiculo": "Congresso em Foco",
-          "titulo": "IA de Bolsonaro, Lula e os desafios do TSE em 2026",
-          "link": "https://www.congressoemfoco.com.br/artigo/120972/ia-de-bolsonaro-lula-e-os-desafios-do-tse-em-2026"
-        },
-        {
-          "veiculo": "Poder360",
-          "titulo": "Flávio e Lula empatam em 1º turno no RJ, diz pesquisa",
-          "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-e-lula-empatam-em-1o-turno-no-rj-diz-pesquisa/"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "A disputa entre Lula e Flávio Bolsonaro no segundo turno, segundo a nova pesquisa Nexus/BTG",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUC1aeVVDbG1NNktfb0VldExybUlGREhoUklraGRob1FaYTV6QVltZGliaGFsZlhMSjJEdVdBZlFzZjNwaW9zdVhmenQxWXowLVd0QVY0d2h3cHhxVEV6WUlyRlUwOGhOVUw3c1UxUk5RSFI4UUdZQkd5U2QyN1dCY1R1M2FlaXh1MzhucS0wVVptcHRoSHRUbEIzR3N2R0Z4aXVmaDdGR1AwZ0FzVGRCRFBRZE1kY2FoekV5cG5iUm4xWXlBY1FLaGpmSzQ?oc=5"
-        },
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Lula tem reunião com médica que recusou assumir ministério de Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSklLTDFIWGU0eVRUQ2F0RmgzT29RU3N6Z203Q2FaRW5pb1VtQUtwRG5GX1p4a0ZvX3NKUHp3dDc4cTZyRjhCTlY1RjdJT3k3SDQxNHBoZWcyMHlPUGU5OVZ5ODRYUzEwbjhTMlkwcEx4T3pmWmEwTWxYd3FYQVozcTZ4dVBMRENvN29zdzV5Rm1VRVd2TGdFbVcyczRfR2xIam05ZkJTUHdQX2JaQjA3VzdLNDdjTE5qbUlwQmVyM2VKQUFNYjFEZGdrRdIB0AFBVV95cUxQOE5rb1A1dzFycC1jN2pHZUNaYXdHMGJHV01ZUFJCdG9UY3B4M0puYVNyeFowSl9ELXQ2TFZSMEpoS0FjS1hzeUI4ZUNrTDRnMmZKeVBaS054dExISEVKcVZZSGNGLXI2UkdZX2Rwd0pPa2hHbWkxZTBPS2FXTE5ZVW5jNEEyMjNkQ0w2OVhTMUFGcUFQaFdrUE10Y2tDTFRWUm1RYkhJa1ZQdjI4dnRVR2lkRGRFMFVhUVpQb292VHB0dnkyU1AtaFl0dk9PODRN?oc=5"
-        }
-      ],
-      "link": "/materia/nc-pesquisas-indicariam-cenarios-para-2026-e-lula-teria-reuniao-com-medic.html",
-      "corpo": [
-        "Veículos de imprensa estariam divulgando levantamentos sobre intenções de voto envolvendo o presidente Lula e o senador Flávio Bolsonaro para 2026. As publicações abordariam também os desafios do Tribunal Superior Eleitoral referentes à inteligência artificial envolvendo os políticos. Além disso, haveria relatos sobre uma reunião de Lula com uma médica que teria recusado assumir um ministério no g"
-      ],
-      "id": "circ:pesquisas-indicariam-cenarios-para-2026-e-lula-teria-reuniao-com-medic",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Pesquisas indicariam cenários para 2026 e Lula teria reunião com médica",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:57:07.114Z",
-      "hora": "17h57"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Quatro veículos da imprensa relatam que usuários estariam enfrentando bloqueio no WhatsApp.",
-        "Relatos de insatisfação estariam sendo publicados por usuários em redes sociais.",
-        "Um especialista teria se manifestado sobre a possibilidade de um bug no aplicativo."
-      ],
-      "falta": [
-        "Posicionamento oficial da empresa responsável pelo WhatsApp sobre a suposta falha.",
-        "Confirmação técnica da ocorrência de bloqueios ou erro no sistema.",
-        "Dados oficiais sobre a quantidade de usuários afetados no país."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Usuários relatam bloqueio de contas do WhatsApp",
-          "link": "https://www.infomoney.com.br/consumo/usuarios-relatam-bloqueio-de-contas-do-whatsapp-plataforma-promete-analise-em-24h/"
-        },
-        {
-          "veiculo": "Exame",
-          "titulo": "Contas do WhatsApp são bloqueadas sem aviso; usuários reclamam nas redes",
-          "link": "https://exame.com/tecnologia/contas-do-whatsapp-sao-bloqueadas-sem-aviso-usuarios-reclamam-nas-redes/"
-        },
-        {
-          "veiculo": "g1 Economia",
-          "titulo": "Usuários do WhatsApp relatam conta bloqueada pela plataforma",
-          "link": "https://g1.globo.com/tecnologia/noticia/2026/08/03/usuarios-do-whatsapp-relatam-conta-bloqueada-pela-plataforma.ghtml"
-        },
-        {
-          "veiculo": "GZH",
-          "titulo": "WHATSAPP BANIDO? Especialista fala sobre o \"bug\" que BLOQUEOU contas em todo país | Gaúcha+",
-          "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNb09KTTFqN3ZZX1ZzN1A0Q3ozTmtvX0VvXzB5dExNRk5OYkJnQXRDaEY2UDBtVWs0WUFpSzJEUDNfVmt4WW1QZ2hzR1RCM1lIdGNweUc4aUhZTGp0T2xMcHg5VFN5dXM5a202RDd1Mm9Cendlc1RzNDJEN2FVZHlxOTk4MzIzbTdYVHUzTjhxRmd6TzFTWVVoN3ZTclB5QVVSaEx6a2d3by1PdnJjSnlrSHUzdk9XM0NJWEZCR3VPT1dDN0ExOGx4OEQzUUFaZ0gwMTVGRk94S2I1NnZRcmhnS2hSSE1PeWprU2c?oc=5"
-        }
-      ],
-      "link": "/materia/nc-contas-do-whatsapp-teriam-sido-bloqueadas-sem-aviso-previo-no-pais.html",
-      "corpo": [
-        "Usuários da plataforma WhatsApp estariam relatando o bloqueio de suas contas sem aviso prévio. As queixas teriam sido compartilhadas em redes sociais por pessoas afetadas pela suspensão do acesso.",
-        "Segundo as publicações, a interrupção no serviço teria atingido usuários em todo o país. O problema estaria sendo associado a um possível erro de sistema no aplicativo.",
-        "Um especialista teria abordado a hipótese de uma falha generalizada na plataforma. Não foram divulgados dados oficiais da empresa responsável pelo aplicativo sobre a extensão dos bloqueios."
-      ],
-      "id": "circ:contas-do-whatsapp-teriam-sido-bloqueadas-sem-aviso-previo-no-pais",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Contas do WhatsApp teriam sido bloqueadas sem aviso prévio no país",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:57:28.011Z",
-      "hora": "17h57"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a indicação partidária está sendo veiculada por três veículos de imprensa.",
-        "Que o nome de Michelle Bolsonaro é citado para o Senado pelo DF."
-      ],
-      "falta": [
-        "Documento ou ata oficial do PL que comprove o registro da candidatura.",
-        "Manifestação oficial da assessoria de Michelle Bolsonaro sobre a ausência e o anúncio.",
-        "Data exata da realização da convenção citada nas reportagens."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "Michelle Bolsonaro falta a convenção, mas é confirmada como candidata do PL ao Senado no DF",
-          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZWkwaGU4SW1xZktOSWlCWUYxa1h5dHAwSzZoLVp6bGV5YnhySHFoZkUyajdxZV91M1UyN3VZVTNyV1NMaXNOM2RxRm52c0xXLTRIdUtZUmlEUDhHc05ERnVSSmdXSWh3SmdPblZ2SWNYSU9WWFQ1clZWeDhsQ3J2LWlsQmxTWG5OWGJRZ2JvYlpSMUEtal9OUFdJa2E1QjFyUkR6MDB0cWl1bmdhNDE0RmpIdzJsa2xFRE0zeWxrekN0ZDFoZGtTNV9qdjA4UkJqYnRj?oc=5"
-        },
-        {
-          "veiculo": "JOTA",
-          "titulo": "PL confirma pré-candidatura de Michelle Bolsonaro ao Senado pelo DF",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/pl-confirma-pre-candidatura-de-michelle-bolsonaro-ao-senado-pelo-df"
-        },
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Flávio Bolsonaro faz aceno a Michelle em convenção do PL-DF",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWjJzYVhWcDJwSWRONEdVODBjdFRDVXA4YjhyWWpvd3otS0JmSVVqWkRYdW02MnZXa2NjTFJsZ0c4S0JPa0ZSRWpTOXJzeFRBbF9wY1VUMXc1RnB4X3NBTllIblpoOFRBTVc4X1NzTFZUY2hpTVF1UGZwcERJaFBWaENWVy13WW9qRzlqQXBRX2h2cm41cEJhMUNzdG1COGR3Q1M4YXNyTVZFd3gtQUZ1bDl1MWp5UzZLMEF2ZlpraHl0cnVaTXfSAcsBQVVfeXFMT0I3WWtwcDg5T1ZDdjRfa0FzdXBOMUstSUJ2ZUVtX2Z6VVFHaEJ1b05OVUs4LXI5UmNXTnBEaGFmVm1OQUIxVGlVY3FMaTZhMnpyYW4zZG1IUDN4dldKYmZJWVV4UnI2WVR5WDB3YlplcTVQeGlObnBSd3BURlNjSERZLXRqdjIyZFFDSktFWnJrb242RmppYnpTSnMzNU10aFdOa0pfWlkzd2tQYjc4eFc4RTgxdHlMVUV2T3FQMDhENXo2YU9GazBBeDQ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-michelle-bolsonaro-teria-sido-confirmada-como-candidata-do-pl-ao-senad.html",
-      "corpo": [
-        "O Partido Liberal teria confirmado a indicação de Michelle Bolsonaro para disputar o Senado pelo Distrito Federal. A ex-primeira-dama teria estado ausente da convenção partidária onde a decisão teria sido anunciada.",
-        "As publicações que veiculam a informação divergem ao tratar a indicação ora como candidatura, ora como pré-candidatura. O senador Flávio Bolsonaro também teria feito um aceno a Michelle Bolsonaro durante o encontro do PL-DF."
-      ],
-      "id": "circ:michelle-bolsonaro-teria-sido-confirmada-como-candidata-do-pl-ao-senad",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Michelle Bolsonaro teria sido confirmada como candidata do PL ao Senado pelo DF",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:58:00.235Z",
-      "hora": "17h58"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que quatro veículos de imprensa veicularam informações sobre a relação entre EUA e Irã.",
-        "Que o Irã nega publicamente a ocorrência de negociações com o governo americano.",
-        "Que matérias jornalísticas relatam divergência no status das conversações diplomáticas.",
-        "Que os veículos relataram redução nos preços do petróleo associada aos episódios."
-      ],
-      "falta": [
-        "Manifestação oficial do governo americano confirmando a ordem de cancelamento dos ataques.",
-        "Posicionamento oficial conjunto definindo se há ou não negociações em andamento.",
-        "Identificação oficial de datas e registros dos atos diplomáticos citados."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Valor Econômico",
-          "titulo": "Irã nega estar negociando com os EUA após Trump cancelar ataques",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONldiQ0hobjJodlBkU3RBdjc1WHJSU1pLVWlsS3VoeHlNcVo0Y296OXlPZlZfY0JvWVRCS3Vsck95cDlCb3AtbVVNWXpDUEM0TjRvbDRMZkgtUm5JN29nN3A5YlNqR3NkLVlpY0ZmYU04blZ5WDVmRHZZQmhIOGRYdWMtLWRRTDNjb1JEUGdfOGpNQjhjOUVWclVqbFBSVkl2ZHd1VHMwal9vdzBs0gG7AUFVX3lxTE16MGlwRUViby1zQVFlc04tWkJuWUJMekhXQlRaNHJJZ1E1dUExTGdvRjR0VU9zNWVXOFFfYV94NEgtWjIzZUo0YmJGQTBnSWJiSG5JQ3A1OXpQUWxpRW82SEdhNkdGU1FuOU5TUkE0a2tWZ19tNFRHQVNwRXl6M1JMY3N5UHp1eE9TZ1JNanU0YkxjQmFhbm92MnhfOTlfMTZuVnVKUjNKMGc1SHlRSUZHY003WVVmaUJMcmc?oc=5"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Análise: Trump e Irã divergem sobre estado das negociações",
-          "link": "https://www.cnnbrasil.com.br/internacional/analise-trump-e-ira-divergem-sobre-estado-das-negociacoes/"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "Irã nega negociações com EUA após anúncio de Trump sobre novas conversações",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTlA5Vmlpd2JBRXc1QU5vWlNja05pVkVTenQwU0xoSDg4RlpoclVuN2ZjdjkxaXZ3Z3lNejFCbVJiZ290anllWHg0UmozUGJHemw5ay13Rk4yMlFMLVNlMnRCbTNJUzk1NGMteVk3TDI1MHNwRk5oWVY5cW5KT3pFdmpDRGQxaVotZ1dlbW1aUWE5Y3JvbkVBMHZDWEJzVXpRa2FxRzUzeE5Gc3BpTUR4NUJzd2s?oc=5"
-        },
-        {
-          "veiculo": "noticias.r7.com",
-          "titulo": "Preços do petróleo caem após Trump cancelar ataque ao Irã para buscar acordo",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORk9zTnRSUHE1dXJaUWgwNW1wdHRTdkF6X0dST284Uzdsb0FzM3VRLUdIVDZoNVdaUFB3aFhpZXNFMjZCbGNVY2hRTVlIOFRjQ09fQ0dLZDJFS1JPeV9xSWJpUm81NWxNem1TVFJWd0llMERBVUFGVnZHcDdhWHltYWZVQjJVeFNsSWNqWjVMZnhsUmxJOGpWUzBpeWszNkpPeWRXS3o4dGZpT0o4NldFbGE2WHY0ZXRVVHVv?oc=5"
-        }
-      ],
-      "link": "/materia/nc-ira-teria-negado-negociacoes-com-os-eua-apos-trump-cancelar-ataques.html",
-      "corpo": [
-        "O governo do Irã teria negado a existência de negociações com os Estados Unidos. A negativa ocorreria após declarações atribuídas ao presidente Donald Trump sobre o anúncio de novas conversações entre os dois países.",
-        "Segundo os veículos que publicaram as informações, Trump e o governo iraniano divergiriam sobre o estado atual dos diálogos. As publicações apontariam ainda que o presidente americano teria decidido cancelar um ataque militar ao Irã para buscar um acordo.",
-        "Diante do suposto cancelamento das ações militares para a abertura de conversações, os preços do petróleo teriam registrado queda. As matérias divulgadas indicariam que as partes continuariam em desacordo sobre o real andamento das tratativas."
-      ],
-      "id": "circ:ira-teria-negado-negociacoes-com-os-eua-apos-trump-cancelar-ataques",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Irã teria negado negociações com os EUA após Trump cancelar ataques",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:58:21.572Z",
-      "hora": "17h58"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto sobre as eleições de 2026 é veiculado por dois meios de comunicação.",
-        "Que o político Renan Santos é citado como pré-candidato à Presidência da República.",
-        "Que existe publicação sobre pretendentes ao governo do Distrito Federal para 2026."
-      ],
-      "falta": [
-        "Confirmação oficial de registro de candidaturas perante a Justiça Eleitoral.",
-        "Ata oficial da convenção partidária citada na publicação.",
-        "Posicionamento oficial das agremiações partidárias envolvidas."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "JOTA",
-          "titulo": "Quem são os candidatos ao governo do Distrito Federal (DF) nas eleições 2026",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/quem-sao-os-candidatos-ao-governo-do-distrito-federal-eleicoes-2026-agosto"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Eleições 2026: íntegra do discurso de Renan Santos na convenção que o lançou candidato à Presidência",
-          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/03/eleicoes-2026-integra-do-discurso-de-renan-santos-convencao.ghtml"
-        }
-      ],
-      "link": "/materia/nc-veiculos-divulgariam-pre-candidaturas-e-discursos-para-as-eleicoes-de-.html",
-      "corpo": [
-        "As publicações estariam divulgando informações sobre as eleições de 2026 em diferentes esferas. Uma das pautas traria o levantamento dos nomes cotados para o governo do Distrito Federal.",
-        "Outra matéria apresentaria a íntegra de um discurso proferido por Renan Santos. O texto estaria associado a uma convenção que teria lançado sua candidatura à Presidência da República.",
-        "As reportagens divergiriam quanto ao foco do pleito de 2026, cobrindo frentes distintas. Enquanto um texto focaria na disputa distrital, o outro abordaria o cenário eleitoral nacional."
-      ],
-      "id": "circ:veiculos-divulgariam-pre-candidaturas-e-discursos-para-as-eleicoes-de-",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Veículos divulgariam pré-candidaturas e discursos para as eleições de 2026",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:58:46.392Z",
-      "hora": "17h58"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [],
-      "falta": [],
-      "ondeCirculou": [
-        {
-          "veiculo": "Poder360",
-          "titulo": "Benedita da Silva lidera disputa pelo Senado no RJ, diz pesquisa",
-          "link": "https://www.poder360.com.br/poder-eleicoes-2026/benedita-da-silva-lidera-disputa-pelo-senado-no-rj-diz-pesquisa/"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "A disputa pelo governo e o Senado em Sergipe, segundo nova pesquisa",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQajU4d1NpbzJfQkxmSGZuYUt1N2tvQkhKZ0U4VTZNbWV2VnZwVC1MZXY4NDdPRTQzc0cyWVVFa2pkQ251dy1PTjBRcldqbXk4S0FqM19PTnc1N1FHOVRZOGRBZF9NbFRiY0hvZ25KT1RILUk4Y2dfVVZIWUFlRUZLaTNrTGk1YVJ2bnNMbHNVRXpRSlJKTllFbXlLRjlZSmRQcUYwSUZwNWFxSlpD?oc=5"
-        }
-      ],
-      "link": "/materia/nc-pesquisas-indicariam-cenarios-para-o-senado-no-rio-e-em-sergipe.html",
-      "corpo": [
-        "Novas pesquisas eleitorais estariam apresentando cenarios para disputas estaduais. Segundo uma das publicacoes, Benedita da Silva lideraria a corrida para o Senado no Rio de Janeiro. Em outro levantamento, estariam sendo avaliadas as intencoes de voto para o governo e o Senado em Sergipe. As publicacoes divergem quanto a localizacao e aos cargos abrangidos pelas sondagens. O primeiro relato focari"
-      ],
-      "id": "circ:pesquisas-indicariam-cenarios-para-o-senado-no-rio-e-em-sergipe",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Pesquisas indicariam cenarios para o Senado no Rio e em Sergipe",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-03T21:59:13.739Z",
-      "hora": "17h59"
-    }
-  ],
+  "circulando": [],
   "pautas": [
     {
-      "titulo": "Real Time Big Data: Lula tem 60% e Flávio Bolsonaro, 23%, no 1º turno em Sergipe",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 6,
+      "titulo": "Lula tem 46% e Flávio Bolsonaro 45% em cenário de 2º turno, mostra pesquisa BTG/Nexus",
+      "veiculo": "Estadão",
+      "quentura": 8,
       "tambemEm": [
         "Congresso em Foco",
-        "Poder360",
-        "CartaCapital"
+        "Metrópoles",
+        "JOTA"
       ]
     },
     {
-      "titulo": "IA de Bolsonaro, Lula e os desafios do TSE em 2026",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 6,
-      "tambemEm": [
-        "Exame",
-        "g1 Política",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "BTG/Nexus aponta Lula e Flávio Bolsonaro em empate técnico no 1º turno",
-      "veiculo": "Correio Braziliense",
-      "quentura": 6,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "A disputa entre Lula e Flávio Bolsonaro no segundo turno, segundo a nova pesquisa Nexus/BTG",
+      "titulo": "STF decide que autistas e PCD’s têm direito a isenção para comprar carros",
       "veiculo": "CartaCapital",
       "quentura": 6,
       "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "Poder360"
+        "g1 Política",
+        "InfoMoney",
+        "JOTA"
       ]
     },
     {
-      "titulo": "Flávio e Lula empatam em 1º turno no RJ, diz pesquisa",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
+      "titulo": "STF inclui autistas nível 1 na alíquota zero para compra de carro",
+      "veiculo": "Migalhas",
       "quentura": 4,
       "tambemEm": [
-        "Exame",
-        "CartaCapital",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro sobe e empata com Lula em nova pesquisa eleitoral | Gaúcha Atualidade",
-      "veiculo": "GZH",
-      "quentura": 4,
-      "tambemEm": [
-        "Congresso em Foco",
-        "Poder360",
+        "g1 Política",
+        "InfoMoney",
         "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro se reúne com Republicanos e reforça oferta de vaga de vice, mas partido ainda resiste",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Metrópoles",
-        "JOTA",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Análise: Trump e Irã divergem sobre estado das negociações",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "Valor Econômico",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Usuários relatam bloqueio de contas do WhatsApp",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "g1 Economia",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "WHATSAPP BANIDO? Especialista fala sobre o \"bug\" que BLOQUEOU contas em todo país | Gaúcha+",
-      "veiculo": "GZH",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "g1 Economia",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Contas do WhatsApp são bloqueadas sem aviso; usuários reclamam nas redes",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Economia",
-        "InfoMoney",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Usuários do WhatsApp relatam conta bloqueada pela plataforma",
-      "veiculo": "g1 Economia",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "InfoMoney",
-        "GZH"
       ]
     },
     {
       "titulo": "BTG/Nexus registra avanço de Flávio Bolsonaro e disputa mais competitiva",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
         "CartaCapital",
-        "Correio Braziliense"
+        "Correio Braziliense",
+        "Estadão"
       ]
     },
     {
-      "titulo": "Michelle Bolsonaro falta a convenção, mas é confirmada como candidata do PL ao Senado no DF",
-      "veiculo": "CartaCapital",
-      "quentura": 3,
+      "titulo": "BTG/Nexus aponta Lula e Flávio Bolsonaro em empate técnico no 1º turno",
+      "veiculo": "Correio Braziliense",
+      "quentura": 4,
       "tambemEm": [
         "JOTA",
+        "CartaCapital",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "A disputa entre Lula e Flávio Bolsonaro no segundo turno, segundo a nova pesquisa Nexus/BTG",
+      "veiculo": "CartaCapital",
+      "quentura": 4,
+      "tambemEm": [
+        "JOTA",
+        "GZH",
         "Correio Braziliense"
       ]
     },
     {
-      "titulo": "Irã nega estar negociando com os EUA após Trump cancelar ataques",
-      "veiculo": "Valor Econômico",
+      "titulo": "Flávio Bolsonaro sobe e empata com Lula em nova pesquisa eleitoral | Gaúcha Atualidade",
+      "veiculo": "GZH",
       "quentura": 3,
       "tambemEm": [
-        "CNN Brasil",
         "CartaCapital",
-        "noticias.r7.com"
+        "Correio Braziliense",
+        "Estadão"
       ]
     },
     {
-      "titulo": "Quem são os candidatos ao governo do Distrito Federal (DF) nas eleições 2026",
-      "veiculo": "JOTA",
+      "titulo": "Pesquisa Nexus/BTG divulga cenário atualizado para a Presidência; veja os números",
+      "veiculo": "GZH",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Política",
+        "CartaCapital",
+        "Estadão"
+      ]
+    },
+    {
+      "titulo": "Lula x Flávio: cenário é acirrado nos maiores colégios a 2 meses da eleição",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "Estadão"
+      ]
+    },
+    {
+      "titulo": "Prêmio Grande Otelo 2026: veja como assistir à premiação nesta terça (4)",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Economia",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "CNJ começa a analisar proposta sobre conflito de interesses em tribunais",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
@@ -1560,21 +1075,70 @@
       ]
     },
     {
-      "titulo": "Benedita da Silva lidera disputa pelo Senado no RJ, diz pesquisa",
-      "veiculo": "Poder360",
+      "titulo": "Presidente do Republicanos diz a Flávio Bolsonaro que maioria do partido apoia neutralidade na eleição presidencial",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "CartaCapital"
+        "Metrópoles",
+        "InfoMoney"
       ]
     },
     {
-      "titulo": "Lula tem reunião com médica que recusou assumir ministério de Bolsonaro",
+      "titulo": "Nunes Marques defende votação eletrônica na reabertura do TSE",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Presidente do Republicanos diz a Flávio que maioria do partido quer neutralidade",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "'Homem-Aranha: Um Novo Dia' supera 'Vingadores' e faz maior estreia da história nos EUA",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Valor Econômico",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Redes de cinema dos EUA batem recordes de bilheteria com estreia de ‘Homem-Aranha: Um Novo Dia’",
+      "veiculo": "Valor Econômico",
+      "quentura": 2,
+      "tambemEm": [
+        "Exame",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Novo 'Homem-Aranha' tem 2ª maior estreia da história com quase $ 1 bi",
       "veiculo": "Correio Braziliense",
       "quentura": 2,
       "tambemEm": [
         "Exame",
-        "Congresso em Foco"
+        "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Havanna entra em recuperação extrajudicial no Brasil",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "Agro"
       ]
     }
   ]

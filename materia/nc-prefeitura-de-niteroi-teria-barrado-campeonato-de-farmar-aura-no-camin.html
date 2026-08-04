@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer">
+<meta property="og:title" content="Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no Caminho Niemeyer">
 <meta property="og:description" content="Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está">
 
 <meta name="twitter:card" content="summary">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer — MERIDIANO</title>
+<title>Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no Caminho Niemeyer — MERIDIANO</title>
 <meta name="description" content="Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer">
+<meta property="og:title" content="Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no Caminho Niemeyer">
 <meta property="og:description" content="Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa">
-<meta property="article:published_time" content="2026-08-03T18:05:06.247Z">
+<meta property="article:published_time" content="2026-08-04T07:55:47.332Z">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle",
-"headline":"Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer",
+"headline":"Prefeitura de Niterói teria barrado campeonato de \"farmar aura\" no Caminho Niemeyer",
 "description":"Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-"datePublished":"2026-08-03T18:05:06.247Z","inLanguage":"pt-BR",
+"datePublished":"2026-08-04T07:55:47.332Z","inLanguage":"pt-BR",
 "articleSection":"Rio de Janeiro",
 "publisher":{"@type":"NewsMediaOrganization","name":"MERIDIANO"},
 "isBasedOn":""}
@@ -79,13 +79,54 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .relac a{display:block;text-decoration:none;color:var(--tinta);padding:9px 0;border-bottom:1px solid var(--linha);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.32}
 .relac a:hover{color:var(--sinal)}
 .relac span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--fraco);margin-top:4px}
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
+/* QUATRO CAMADAS: ler, agir, verificar, explorar.
+   Antes o leitor atravessava nove blocos de bastidor — onde circulou, resgate,
+   apuracao, fonte, cronologia — para so entao encontrar os botoes. A ordem
+   estava invertida: o que o leitor faz vem antes do que a redacao registra. */
+.proced{border:1px solid var(--linha);margin:30px 0;background:var(--areia,#F7F6F3)}
+.proced summary{cursor:pointer;padding:15px 20px;list-style:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.proced summary::-webkit-details-marker{display:none}
+.proced summary::after{content:'ver';font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fraco);margin-left:auto;border-bottom:1px solid var(--linha2)}
+.proced[open] summary::after{content:'ocultar'}
+.proced summary b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta)}
+.proced summary span{font-family:'Source Serif 4',Georgia,serif;font-size:13.5px;color:var(--fraco)}
+.proced summary:hover b{color:var(--sinal)}
+.proced .dentro{padding:0 20px 6px;border-top:1px solid var(--linha)}
+.proced .dentro>div,.proced .dentro>details{margin-top:20px}
+.proced .fonte-box{margin-bottom:20px}
+.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0 4px;padding:16px 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
 .acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
 .acoes button:hover{background:var(--tinta);color:var(--papel)}
 .acoes button.zap{border-color:var(--verde);color:var(--verde)}
+.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
+.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
+/* O bloco de contexto tem cara propria de proposito: na mesma pagina convivem
+   um fato que pode nao estar confirmado e uma explicacao verificavel. Sao
+   graus de certeza diferentes, e a tela precisa mostrar isso. */
+.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
+.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
+.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
+.ctx-bloco p:last-of-type{margin-bottom:0}
+.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
+.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
+.ctx-perg{border-top:1px solid #CBD9E6;margin-top:16px;padding-top:15px}
+.ctx-perg label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:9px}
+.ctx-perg .campo{display:flex;gap:8px;flex-wrap:wrap}
+.ctx-perg input{flex:1;min-width:200px;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;
+  border:1px solid #CBD9E6;background:#fff;padding:11px 13px}
+.ctx-perg input:focus{outline:none;border-color:#1F4D7A}
+.ctx-perg button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  background:#1F4D7A;color:#fff;border:0;padding:11px 17px;cursor:pointer}
+.ctx-perg button:disabled{opacity:.5;cursor:default}
+.ctx-resp{margin-top:15px;padding-top:14px;border-top:1px dashed #CBD9E6}
+.ctx-resp .q{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#1F4D7A;margin-bottom:10px}
+.ctx-resp p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:11px}
 .acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
 .acoes button.seg:hover{background:var(--sinal);color:#fff}
 .acoes button.seg.on{background:var(--sinal);color:#fff}
+.seg-nota{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.55;
+  color:var(--tinta2);margin:12px 0 0;padding-left:13px;border-left:2px solid var(--sinal)}
+.seg-nota a{color:var(--sinal)}
 .acoes button.zap:hover{background:var(--verde);color:#fff}
 .saber{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linha);margin:28px 0}
 .saber>div{padding:16px 19px}
@@ -131,150 +172,6 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .fonte-box ul{margin:10px 0 0 18px}
 .voltar{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--tinta);padding:10px 15px;text-decoration:none;margin:10px 0 50px}
 .voltar:hover{background:var(--tinta);color:var(--papel)}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-
-.acoes{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0 6px;padding-top:16px;border-top:1px solid var(--linha)}
-.acoes button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--tinta);color:var(--tinta);padding:10px 15px;cursor:pointer;transition:.14s}
-.acoes button:hover{background:var(--tinta);color:var(--papel)}
-.acoes button.zap{border-color:var(--verde);color:var(--verde)}
-.acoes button.zap:hover{background:var(--verde);color:#fff}
-.acoes button.seg{border-color:var(--sinal);color:var(--sinal)}
-.acoes button.seg:hover{background:var(--sinal);color:#fff}
-.acoes button.seg.on{background:var(--sinal);color:#fff}
-.acoes button.ctx{border-color:#1F4D7A;color:#1F4D7A}
-.acoes button.ctx:hover{background:#1F4D7A;color:#fff}
-.ctx-bloco{border:1px solid #1F4D7A;background:#F4F8FC;padding:19px 22px;margin:26px 0}
-.ctx-bloco b.tit{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:12px}
-.ctx-bloco p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:12px}
-.ctx-bloco p:last-of-type{margin-bottom:0}
-.ctx-bloco .fontes{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6B7C;margin-top:14px;padding-top:12px;border-top:1px solid #CBD9E6;line-height:1.6}
-.ctx-bloco .nada{font-family:'Source Serif 4',Georgia,serif;font-size:15px;color:#5A6B7C}
-.ctx-perg{border-top:1px solid #CBD9E6;margin-top:16px;padding-top:15px}
-.ctx-perg label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F4D7A;display:block;margin-bottom:9px}
-.ctx-perg .campo{display:flex;gap:8px;flex-wrap:wrap}
-.ctx-perg input{flex:1;min-width:200px;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;border:1px solid #CBD9E6;background:#fff;padding:11px 13px}
-.ctx-perg button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:#1F4D7A;color:#fff;border:0;padding:11px 17px;cursor:pointer}
-.ctx-resp{margin-top:15px;padding-top:14px;border-top:1px dashed #CBD9E6}
-.ctx-resp .q{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#1F4D7A;margin-bottom:10px}
-.ctx-resp p{font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.65;color:#2A3540;margin-bottom:11px}
 </style>
 </head>
 <body>
@@ -286,37 +183,46 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 <article class="wrap">
   <span class="selo nc">Sem confirmação oficial</span>
   <span class="chapeu">Rio de Janeiro</span>
-  <h1>Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer</h1>
+  <h1>Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no Caminho Niemeyer</h1>
   <div class="nc-aviso">Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.</div>
-  <div class="assina">Redação Meridiano · 03/08/2026, 14:05:06</div>
+  <div class="assina">Redação Meridiano · 04/08/2026, 03:55:47</div>
 
   
 
-  <div class="corpo"><p>A Prefeitura de Niterói teria barrado a realização de um campeonato centrado no meme &quot;farmar aura&quot;. A informação estaria circulando em veículos de imprensa que caracterizam o evento como uma atividade do público jovem.</p>
-<p>O encontro estaria previsto para ocorrer no Caminho Niemeyer, no estado do Rio de Janeiro. De acordo com as publicações, a intervenção municipal teria sido motivada pela ausência de autorização e de licença formal.</p>
-<p>As manchetes divulgadas explicariam a origem da expressão e informariam sobre o impedimento da atividade. Contudo, os títulos não detalhariam os procedimentos administrativos adotados pelas autoridades locais.</p></div>
+  <div class="corpo"><p>Um evento denominado campeonato de &quot;farmar aura&quot;, associado a um meme jovem, teria sido barrado pela Prefeitura de Niterói. A atração prometeria prêmio em dinheiro e a presença de influenciadores no município fluminense.</p>
+<p>As publicações indicam que o encontro ocorreria no Caminho Niemeyer, no Estado do Rio de Janeiro. Segundo os veículos que divulgaram a notícia, a administração municipal teria informado que a atividade não estaria autorizada ou não possuiria licença.</p>
+<p>Enquanto parte dos relatos indica a ausência de autorização prévia, outros apontam que a iniciativa já teria sido efetivamente vetada pelo órgão público. A expressão que dá nome à competição estaria ligada a uma tendência popular entre o público jovem.</p></div>
 
   <div class="saber">
-    <div class="sim"><b>O que se sabe</b><ul><li>Que a informação sobre o bloqueio do evento é veiculada por seis publicações.</li><li>Que o caso é localizado no município de Niterói e no Caminho Niemeyer.</li><li>Que a ausência de licença prévia é apontada como a causa da medida.</li></ul></div>
-    <div class="nao"><b>O que falta para confirmar</b><ul><li>Pronunciamento oficial direto da</li></ul></div>
+    <div class="sim"><b>O que se sabe</b><ul><li>Que o assunto vem sendo noticiado por cinco veículos da imprensa.</li><li>Que as notícias citam a Prefeitura de Niterói e o Caminho Niemeyer.</li><li>Que o evento envolveria premiação em dinheiro e presença de influenciadores.</li></ul></div>
+    <div class="nao"><b>O que falta para confirmar</b><ul><li>Confirmação direta ou nota oficial publicada pela Prefeitura de Niterói sobre o veto.</li><li>Data e horário específicos em que o campeonato ocorreria.</li><li>Identificação oficial dos organizadores da competição e dos influenciadores citados.</li></ul></div>
   </div>
 
-  <div class="circulou">
-    <b>Onde esta informação circulou</b>
-    <p class="obs">Não reproduzimos o texto de ninguém. Listamos quem publicou, com o endereço original, para você conferir na fonte.</p>
-    <ol><li><span class="vc">Portal iG</span><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQVnVBWWR6RTI0bU1odzVudVZZOG1wVVlfSF9LLXZsQklYdDF5RlJOYUc4MFY3cEpfZnpRT3hDaXJMR1pwY2NLbGVTYnVnNThTRlJxLUhuYWQ3S2JVWktpQnJfVEw5dElpT1EtZ2JaRHFKLURoNEsyM2RTVzF5cXZxNVpmbVEyZ29HYnc2TVlvNTlFMWpvR0lpSDd1QWlyeGVfd05Od05ack9raUhmeF9uWnBn0gG3AUFVX3lxTE5XRjhrdzJ3RXNhbmN1MXA1cWllVVktcjUyMUdyOFA3UkxYUlV0X3F6VU1qVWNPM3NXWmtDSGpTWDYzdVZjSVFuekVWOW9YcW9TeWRYM3M2dWxpUjY0Ykl6UVNYUFFTTmdqd1VzVms4NjJCTUo5QjZqR0RLWC1rdDJmek94Mnh1TERpRVVEd0JTakw2ZTdvdjVRVV9icmFEa2hUa085RUYteURNeEVKRmtJMWY4VkRmMA?oc=5" target="_blank" rel="noopener nofollow">Campeonato de 'farmar aura' é barrado pela Prefeitura de Niterói</a></li><li><span class="vc">G1</span><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOUVNYRXlWb08yRm54WHd5bWtFS0d0NF9tbHd2STA5Z1c1eG1LMlhpUzY5bWloOFpkSUtnYl9aZHdmNWIzblBXM2NwXzdyNzMwOW1od1RCU3BrVnMxdnQ3YTJ6MmdhWHRmVkVaSDRLbUxSNjNmVDdHNHdpbzdLRG9uMTZjU1VEWGNDMGNqWk53SzVhTUprajEtdU5CU1dsUmJaOU5zRV9HUDk5cHhzMGhmbk9fVTl1a1prTm5YTXgwT2t0bGZs0gHTAUFVX3lxTE42TXotLXQ0Q3NhVnlrXzJFZWx1Y2xGV1lKYkhnTk83TmgyekJVaXo2dWNJQ2pJX2UxM1lvZ1pLNm94dm1rTkU2ZVpVVVhHUUEwaU5UU1pmYkdOQ3R1MDlTUDJQRXBQVjhMOVhYXy1qTk8xOFBya1YxLUM1WURqd0gweTltU3VWVjdQN2FocmdUNktkYW94eDNtaGtQWkpXaUNHZGtMaXAzWUVkei14Q0R5U2Vmek4wemNtMDhpTm9kT0JoZlFnaV92d0V5eTQzNXZ3VVk?oc=5" target="_blank" rel="noopener nofollow">Campeonato de ‘farmar aura’ em Niterói é barrado pela prefeitura; saiba o que é a expressão</a></li><li><span class="vc">CNN Brasil</span><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb29vcGxwc0tKOGZZanV5S21uZVNtYXNiajFqdEVsZ04tZEwwbmxKS0djUXNWdXI5clJsZU5lUF9WcGdManpCMkQ2TG1BTTBPOExwN0Rob1Nmd3RNY0hRZzNxeGpDWFVlbDZHYUNvRjM4SlRfY29ZZUp6RDZOR1VKQ3c3V0tMU1dKZkhxYjAwMFpOQzdiYzgyclVSMjhEYXByLTg1V2hoQ2FJYjhLemc?oc=5" target="_blank" rel="noopener nofollow">Prefeitura de Niterói barra campeonato de &quot;farmar aura&quot; no RJ</a></li><li><span class="vc">Tempo Real RJ</span><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5lTGVmVks2d0dNVTdlcVdBa0J0S2d2aWhJUjliVVZQR1hxVFlKOGMxM1ZROTNnLUFvaE1RMXhwSEhTVlVSZDZxejFaUDhYb3RCdXRjUV9OOTItREJTYnpCOXJ1N2tlUWZfX19SZlJhODZXa1RL?oc=5" target="_blank" rel="noopener nofollow">Prefeitura de Niterói barra campeonato de 'farmar aura' no Caminho Niemeyer; evento não tinha autorização</a></li><li><span class="vc">Diário do Rio</span><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNdTllcFhvdkZQaVFScmMyRjV2M2xNVmJDVnhQY0RnQzVUWXQ4UmRRQXlIRmpTajJ5TEFlMGtkT1NqYkVNcjhrLXFIMUo3X1l3VlBHdzZvVzljYnZGSWVuSFJlYU13d0Q5YXpRcEx0US10S2kyWkhzQjdVbDBmb1ZvQlg0OFRWajdmSGY2eVVha3U4NXdlQndxMU90bUEzZW5zVG9hNlhMb1l6QUFoMnBnWkVKUE5Ray14X05rQlJxWlZQbTJM?oc=5" target="_blank" rel="noopener nofollow">Sem Licença para &quot;Farmar aura&quot;: Prefeitura de Niterói barra campeonato de meme jovem no Caminho Niemeyer</a></li><li><span class="vc">Rádio Manchete Rio</span><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbUsxTkZGclN1VFhkenhCZ2tiSkJsQ21MQVJPYkFqWmFvMWRNZEExTlAzbXR1dUJ3emlBSVlNUXh2aUZ2ZG5hb2JfbWx5R2RSX3VSQ0V4TU1YWE44dTNfOGxoeDkzVXhMZlVSUWM2QVlOTmtMSVM1YklxMFZRWkdmQzN2X1B2UEJp?oc=5" target="_blank" rel="noopener nofollow">Prefeitura de Niterói barra campeonato de ‘farmar aura’</a></li></ol>
+  <div class="acoes">
+    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
+    <button id="bt-link">Copiar link</button>
+    <button id="bt-ouvir">Ouvir a matéria</button>
+    <button class="seg" id="bt-seguir" data-id="" data-nivel="sem-confirmacao">Acompanhar este caso</button>
+    <button class="ctx" id="bt-ctx">Entender o contexto</button>
   </div>
+  <div id="ctx-area"></div>
 
+
+  
+
+  <details class="proced">
+    <summary><b>Como esta matéria foi apurada</b><span>procedência, checagem e documento</span></summary>
+    <div class="dentro">
   
 
   <div class="apura">
     <div class="cab">O que procuramos antes de publicar</div>
     <div class="miolo">
-      <p class="raciocinio">Esta informação apareceu em 10 veículos da imprensa e não afirmamos que seja verdadeira. O teor é de <b>relações internacionais</b>, então o registro oficial, se existir, estaria em Operação EUNAVFOR MED Irini, Serviço Diplomático da UE, Comissão Europeia — foi por aí que começamos. Varremos as publicações das últimas 96 horas de cada órgão e comparamos uma a uma com o teor que circula. Nenhuma bateu.</p>
+      <p class="raciocinio">Esta informação apareceu em 5 veículos da imprensa e não afirmamos que seja verdadeira. O teor é de <b>relações internacionais</b>, então o registro oficial, se existir, estaria em Operação EUNAVFOR MED Irini, Serviço Diplomático da UE, Comissão Europeia — foi por aí que começamos. Varremos as publicações das últimas 96 horas de cada órgão e comparamos uma a uma com o teor que circula. Nenhuma bateu.</p>
 
       <div class="num">
         <div><b>6</b><span>órgãos consultados</span></div>
-        <div><b>4</b><span>publicações lidas</span></div>
+        <div><b>7</b><span>publicações lidas</span></div>
         <div><b>4</b><span>responderam</span></div>
       </div>
 
@@ -337,16 +243,20 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
         <td><span class="mudo">não respondeu</span></td>
       </tr><tr>
         <td>Otan<span class="pt">porta certa</span></td>
-        <td>1 publicação lida</td>
+        <td>4 publicações lidas</td>
       </tr></table>
 
       <p class="fim">Não conseguimos ler Conselho da UE, Frontex nesta checagem. Órgão público que não publica de forma legível é, por si só, um problema — e registramos isso aqui em vez de esconder.</p>
 
-      <p class="fim">Checagem feita em 03/08/2026, 14:05:06. Se você souber de registro oficial que não encontramos, escreva para a redação: corrigimos e transformamos em matéria confirmada, com o documento à vista.</p>
+      <p class="fim">Checagem feita em 04/08/2026, 03:55:47. Se você souber de registro oficial que não encontramos, escreva para a redação: corrigimos e transformamos em matéria confirmada, com o documento à vista.</p>
     </div>
   </div>
 
-  
+  <div class="circulou">
+    <b>Onde esta informação circulou</b>
+    <p class="obs">Não reproduzimos o texto de ninguém. Listamos quem publicou, com o endereço original, para você conferir na fonte.</p>
+    <ol><li><span class="vc">O GLOBO</span><a href="https://news.google.com/rss/articles/CBMimAJBVV95cUxQVmZhY2ZGY21jdkxMZ0RpLTBhMTdvbE5RcFd0blp1dVY2THBJNFVKaW1Za3B2amZHcW5XMHpfSVZuSHRvYWt3T3k3NWprZG5YMnhmcmYzaUpFcWQ1WHNlZVNfa28wemNMVFhMX0JfTkZfcFNkSFRfOERoUjJ0VmdKWTNTcWVaemFGaVJsMklQQWlZVW5VTEZXQ3cxWG15V0d3YUlkYnRNMlMtWWFfMk8tS2d5bVBBRzdlMVdGZ0ttczVMRzFEVDVKVDQ3Rlk1OVlIUnVNd0tmN0dValNHS1N2a3BMb19JMzFYYnVhdk8tUEFaUzNkRG9ZYno4QUtSU1FremQzNUI5amF6MER2Z2l4b0M3cjRiQVFB0gGnAkFVX3lxTFBmbm9aQTVDeE5oTk1XUnc5bkxMRHNpNkI1WXg5dlI5cmlGbnM4UHVQVVdlM2kyVTRmZXFQSHRkeU5MbUNXa0h4ODdRNF9CT0ZiZndsSVBFQTU5b2h5M3EzUVBkekdOQm9hbXd6bk41aXVKTmNrczVfOEhMdnBndU4yTFgwVVc0QlVCc0VZYnBxNjhjV2l1RkJQYVltTXhzNGlNN2VBTVNKcUl3b0xRcGNXdXpqQm1hemR5aHV3SVJyZXFoYVpXbTA4RmgzS1VXdmNRQmJNUE9iWTFQanhDelNVM0s1bG1JYlFhZDhkbnNTdmxJV0RMckdtemFTck5HdHRCTk42dE10cE8wTGhHSjJ3LWFvcG51dFk0TlZ6ZzlnVWljRVRiVm8?oc=5" target="_blank" rel="noopener nofollow">Campeonato de 'farmar aura' em Niterói promete prêmio em dinheiro e influenciadores, mas prefeitura diz que evento não está autorizado</a></li><li><span class="vc">G1</span><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOUVNYRXlWb08yRm54WHd5bWtFS0d0NF9tbHd2STA5Z1c1eG1LMlhpUzY5bWloOFpkSUtnYl9aZHdmNWIzblBXM2NwXzdyNzMwOW1od1RCU3BrVnMxdnQ3YTJ6MmdhWHRmVkVaSDRLbUxSNjNmVDdHNHdpbzdLRG9uMTZjU1VEWGNDMGNqWk53SzVhTUprajEtdU5CU1dsUmJaOU5zRV9HUDk5cHhzMGhmbk9fVTl1a1prTm5YTXgwT2t0bGZs0gHTAUFVX3lxTE42TXotLXQ0Q3NhVnlrXzJFZWx1Y2xGV1lKYkhnTk83TmgyekJVaXo2dWNJQ2pJX2UxM1lvZ1pLNm94dm1rTkU2ZVpVVVhHUUEwaU5UU1pmYkdOQ3R1MDlTUDJQRXBQVjhMOVhYXy1qTk8xOFBya1YxLUM1WURqd0gweTltU3VWVjdQN2FocmdUNktkYW94eDNtaGtQWkpXaUNHZGtMaXAzWUVkei14Q0R5U2Vmek4wemNtMDhpTm9kT0JoZlFnaV92d0V5eTQzNXZ3VVk?oc=5" target="_blank" rel="noopener nofollow">Campeonato de ‘farmar aura’ em Niterói é barrado pela prefeitura; saiba o que é a expressão</a></li><li><span class="vc">ultimosegundo.ig.com.br</span><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQVnVBWWR6RTI0bU1odzVudVZZOG1wVVlfSF9LLXZsQklYdDF5RlJOYUc4MFY3cEpfZnpRT3hDaXJMR1pwY2NLbGVTYnVnNThTRlJxLUhuYWQ3S2JVWktpQnJfVEw5dElpT1EtZ2JaRHFKLURoNEsyM2RTVzF5cXZxNVpmbVEyZ29HYnc2TVlvNTlFMWpvR0lpSDd1QWlyeGVfd05Od05ack9raUhmeF9uWnBn0gG3AUFVX3lxTE5XRjhrdzJ3RXNhbmN1MXA1cWllVVktcjUyMUdyOFA3UkxYUlV0X3F6VU1qVWNPM3NXWmtDSGpTWDYzdVZjSVFuekVWOW9YcW9TeWRYM3M2dWxpUjY0Ykl6UVNYUFFTTmdqd1VzVms4NjJCTUo5QjZqR0RLWC1rdDJmek94Mnh1TERpRVVEd0JTakw2ZTdvdjVRVV9icmFEa2hUa085RUYteURNeEVKRmtJMWY4VkRmMA?oc=5" target="_blank" rel="noopener nofollow">Campeonato de 'farmar aura' é barrado pela Prefeitura de Niterói</a></li><li><span class="vc">CNN Brasil</span><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb29vcGxwc0tKOGZZanV5S21uZVNtYXNiajFqdEVsZ04tZEwwbmxKS0djUXNWdXI5clJsZU5lUF9WcGdManpCMkQ2TG1BTTBPOExwN0Rob1Nmd3RNY0hRZzNxeGpDWFVlbDZHYUNvRjM4SlRfY29ZZUp6RDZOR1VKQ3c3V0tMU1dKZkhxYjAwMFpOQzdiYzgyclVSMjhEYXByLTg1V2hoQ2FJYjhLemc?oc=5" target="_blank" rel="noopener nofollow">RJ: Prefeitura de Niterói barra campeonato de &quot;farmar aura&quot;</a></li><li><span class="vc">Diário do Rio</span><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNdTllcFhvdkZQaVFScmMyRjV2M2xNVmJDVnhQY0RnQzVUWXQ4UmRRQXlIRmpTajJ5TEFlMGtkT1NqYkVNcjhrLXFIMUo3X1l3VlBHdzZvVzljYnZGSWVuSFJlYU13d0Q5YXpRcEx0US10S2kyWkhzQjdVbDBmb1ZvQlg0OFRWajdmSGY2eVVha3U4NXdlQndxMU90bUEzZW5zVG9hNlhMb1l6QUFoMnBnWkVKUE5Ray14X05rQlJxWlZQbTJM?oc=5" target="_blank" rel="noopener nofollow">Sem Licença para &quot;Farmar aura&quot;: Prefeitura de Niterói barra campeonato de meme jovem no Caminho Niemeyer</a></li></ol>
+  </div>
 
   <details class="fonte-box">
     <summary><b>De onde vem esta informação</b></summary>
@@ -355,38 +265,18 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     <br><br><b>O que ainda precisa ser apurado</b><ul><li>Procurar o registro no órgão competente</li><li>Confirmar data, local e envolvidos</li><li>Ouvir o outro lado antes de publicar como confirmada</li></ul>
   </details>
 
+    </div>
+  </details>
+
   
 
   <div class="relac">
     <b>Já publicamos sobre isso</b>
-    <a href="/materia/nc-prefeitura-de-niteroi-teria-barrado-campeonato-de-farmar-aura-no-rj.html">Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no RJ<span>03/08/2026</span></a><a href="/materia/nc-prefeitura-de-niteroi-teria-barrado-evento-de-farmar-aura-por-falta-de.html">Prefeitura de Niterói teria barrado evento de 'farmar aura' por falta de licença<span>03/08/2026</span></a>
+    <a href="/materia/nc-prefeitura-de-niteroi-teria-barrado-campeonato-de-farmar-aura.html">Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura<span>03/08/2026</span></a><a href="/materia/nc-prefeitura-de-niteroi-teria-barrado-campeonato-de-farmar-aura-no-camin.html">Prefeitura de Niterói teria barrado campeonato de 'farmar aura' no Caminho Niemeyer<span>03/08/2026</span></a><a href="/materia/nc-prefeitura-de-niteroi-teria-barrado-campeonato-de-farmar-aura-no-rj.html">Prefeitura de Niterói teria barrado campeonato de &quot;farmar aura&quot; no RJ<span>03/08/2026</span></a>
   </div>
 
-  
-  
-  
-  
-  
-  
-  
-  <div class="acoes">
-    <button class="zap" id="bt-zap">Enviar no WhatsApp</button>
-    <button id="bt-link">Copiar link</button>
-    <button id="bt-ouvir">Ouvir a matéria</button>
-    <button class="seg" id="bt-seguir" data-id="mat:nc-prefeitura-de-niteroi-teria-barrado-campeonato-de-farmar-aura-no-camin" data-nivel="confirmado">Acompanhar este caso</button>
-    <button class="ctx" id="bt-ctx">Entender o contexto</button>
-  </div>
-  <div id="ctx-area"></div>
-
-<a class="voltar" href="/">← Voltar para a capa</a>
+  <a class="voltar" href="/">← Voltar para a capa</a>
 </article>
-
-
-
-
-
-
-
 <script>
 (function(){
   var t = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
@@ -419,13 +309,20 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     });
   } else if (ov) { ov.style.display = 'none'; }
 
+  // Acompanhar o caso. Quando o nivel de evidencia mudar — de "sem
+  // confirmacao" para "confirmado oficialmente" — o leitor e avisado ao
+  // voltar. E o desfecho: o capitulo que sempre sai pequeno.
+  // Entender o contexto: informacao de fundo que a materia nao traz. Quem le
+  // "60 mil migrantes em Ceuta" e nao sabe o que e Ceuta nao entende nada — e
+  // a materia nao pode explicar, porque nota nao confirmada e registro do que
+  // circula, nao reportagem.
   var bc = document.getElementById('bt-ctx');
   var ca = document.getElementById('ctx-area');
   if (bc) bc.addEventListener('click', function(){
     bc.disabled = true; bc.textContent = 'procurando…';
     var res = document.querySelector('.linhafina');
     fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/\.html$/,''),
+      body: JSON.stringify({ id: location.pathname.split('/').pop().replace(/.html$/,''),
         titulo: t, resumo: res ? res.textContent : '' }) })
       .then(function(r){ return r.json(); })
       .then(function(j){
@@ -441,7 +338,11 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
         } else {
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
+        // A caixa de pergunta aparece SEMPRE — inclusive quando o agente
+        // decide que nao ha o que explicar. Antes disso, quem ficava com
+        // duvida ficava sem saida.
         montarPergunta();
+        ca.scrollIntoView({ behavior:'smooth', block:'nearest' });
       })
       .catch(function(){ bc.disabled = false; bc.textContent = 'Entender o contexto'; });
   });
@@ -455,6 +356,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       + '<div class="campo"><input id="cp-q" placeholder="o que é isso? por que aconteceu? isso é muito?" maxlength="300">'
       + '<button id="cp-ok">perguntar</button></div><div id="cp-saida"></div>';
     b.appendChild(d);
+
     var ir = function(){
       var q = document.getElementById('cp-q').value.trim();
       if (q.length < 5) return;
@@ -463,15 +365,20 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
       fetch('/api/contexto', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ acao:'perguntar', pergunta:q, titulo:t,
           resumo: document.querySelector('.linhafina') ? document.querySelector('.linhafina').textContent : '',
-          id: location.pathname.split('/').pop().replace(/\.html$/,'') }) })
+          nivel: sg && sg.dataset ? sg.dataset.nivel : '',
+          id: location.pathname.split('/').pop().replace(/.html$/,'') }) })
         .then(function(r){ return r.json(); })
         .then(function(j){
           bt.disabled = false; bt.textContent = 'perguntar';
-          sa.innerHTML = j.ok
-            ? '<div class="ctx-resp"><div class="q">' + q.replace(/[<>]/g,'') + '</div>'
+          if (j.ok) {
+            sa.innerHTML = '<div class="ctx-resp"><div class="q">' + q.replace(/[<>]/g,'') + '</div>'
               + j.paragrafos.map(function(p){ return '<p>' + p.replace(/[<>]/g,'') + '</p>'; }).join('')
-              + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '') + '</div>'
-            : '<div class="ctx-resp"><p>' + (j.msg || 'não consegui responder').replace(/[<>]/g,'') + '</p></div>';
+              + (j.fontes ? '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '')
+              + '</div>';
+            document.getElementById('cp-q').value = '';
+          } else {
+            sa.innerHTML = '<div class="ctx-resp"><p>' + (j.msg || 'não consegui responder').replace(/[<>]/g,'') + '</p></div>';
+          }
         })
         .catch(function(){ bt.disabled = false; bt.textContent = 'perguntar'; });
     };
@@ -489,20 +396,39 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
     ap = localStorage.getItem('meridiano_apelido') || null;
     if (!ap) ap = (JSON.parse(localStorage.getItem('meridiano-leitor') || '{}').apelido) || null;
   } catch(e){}
-  if (sg) sg.addEventListener('click', function(){
-    if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
-    sg.disabled = true;
-    fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
-        nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
-      .then(function(r){ return r.json(); })
-      .then(function(j){
-        sg.disabled = false;
-        if (j && j.seguindo) { sg.classList.add('on'); sg.textContent = 'Acompanhando'; }
-        else { sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso'; }
-      })
-      .catch(function(){ sg.disabled = false; });
-  });
+
+  // Quando o id nao vem do robo, o proprio endereco da pagina serve: e unico e
+  // estavel. A versao anterior escondia o botao nesse caso — e o id chegava
+  // vazio em toda materia, entao o botao sumia sempre.
+  if (sg) {
+    if (!sg.dataset.id) sg.dataset.id = 'mat:' + location.pathname.split('/').pop().replace(/.html$/,'');
+    sg.addEventListener('click', function(){
+      if (!ap) { sg.textContent = 'Escolha um apelido na capa'; return; }
+      sg.disabled = true;
+      fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ acao:'acompanhar', apelido: ap, id: sg.dataset.id,
+          nivel: sg.dataset.nivel, titulo: t, link: location.pathname }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          sg.disabled = false;
+          if (j && j.seguindo) {
+            sg.classList.add('on'); sg.textContent = 'Acompanhando';
+            // Sem isto o leitor clica e nao sabe o que vai acontecer depois.
+            if (!document.getElementById('seg-nota')) {
+              var n = document.createElement('p');
+              n.id = 'seg-nota'; n.className = 'seg-nota';
+              n.innerHTML = 'Avisamos quando esta história mudar — quando aparecer o documento oficial, quando sair a decisão. Fica em <a href="/meu.html">Seu Meridiano</a>.';
+              sg.parentNode.insertAdjacentElement('afterend', n);
+            }
+          }
+          else {
+            sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso';
+            var v = document.getElementById('seg-nota'); if (v) v.remove();
+          }
+        })
+        .catch(function(){ sg.disabled = false; });
+    });
+  }
 })();
 </script>
 </body>
