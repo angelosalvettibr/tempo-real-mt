@@ -304,6 +304,15 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
           bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
         }
         // A caixa de pergunta aparece SEMPRE — inclusive quando o agente
+        // decide que nao ha o que explicar. Antes disso, quem fi '<div class="fontes">Levantado em: ' + j.fontes.join(' · ').replace(/[<>]/g,'') + '</div>' : '')
+            + '</div>';
+        } else if (j.ok) {
+          ca.innerHTML = '<div class="ctx-bloco"><b class="tit">Para entender</b>'
+            + '<p class="nada">Nada aqui exige explicação de fundo. Mas se você ficou com alguma dúvida, pergunte:</p></div>';
+        } else {
+          bc.style.display = ''; bc.disabled = false; bc.textContent = 'Entender o contexto';
+        }
+        // A caixa de pergunta aparece SEMPRE — inclusive quando o agente
         // decide que nao ha o que explicar. Antes disso, quem ficava com
         // duvida ficava sem saida.
         montarPergunta();

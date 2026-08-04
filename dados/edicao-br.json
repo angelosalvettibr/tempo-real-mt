@@ -1,26 +1,35 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-04T20:46:05.836Z",
+  "gerado": "2026-08-04T22:30:00.993Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 211,
-    "fonteLivre": 53,
-    "confirmadas": 15,
-    "publicadas": 13,
+    "pauta": 210,
+    "fonteLivre": 77,
+    "confirmadas": 22,
+    "publicadas": 11,
     "resgatadas": 0,
-    "semFonte": 41
+    "semFonte": 48
   },
   "fontes": {
-    "checadas": 98,
-    "responderam": 40,
-    "entregando": 28,
-    "itens": 260,
+    "checadas": 101,
+    "responderam": 60,
+    "entregando": 30,
+    "itens": 283,
     "lista": [
       {
         "tipo": "pauta",
         "id": "exame",
         "nome": "Exame",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "congresso",
+        "nome": "Congresso em Foco",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -37,8 +46,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
+        "id": "folha",
+        "nome": "Folha",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,6 +82,15 @@
       },
       {
         "tipo": "resgate",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "valor",
         "nome": "Valor",
         "itens": 12,
@@ -91,8 +109,26 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "migalhas",
+        "nome": "Migalhas",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "estadao",
+        "nome": "Estadão",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -102,6 +138,15 @@
         "tipo": "livre",
         "id": "usp",
         "nome": "Jornal da USP",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "senado",
+        "nome": "Agência Senado",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -120,52 +165,25 @@
         "tipo": "pauta",
         "id": "bbcbr",
         "nome": "BBC Brasil",
-        "itens": 11,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "congresso",
-        "nome": "Congresso em Foco",
-        "itens": 11,
+        "id": "poder360",
+        "nome": "Poder360",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
-        "itens": 11,
+        "tipo": "livre",
+        "id": "ab-geral",
+        "nome": "Agência Brasil",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -181,17 +199,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "poder360",
-        "nome": "Poder360",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
+        "id": "g1politica",
+        "nome": "g1 Política",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -199,9 +208,27 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-geral",
+        "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 9,
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-economia",
+        "nome": "Agência Brasil",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -216,18 +243,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-economia",
-        "nome": "Agência Brasil",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -375,7 +393,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "conab",
+        "nome": "Conab",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -388,26 +415,17 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "tse",
         "nome": "TSE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -460,21 +478,21 @@
       },
       {
         "tipo": "livre",
-        "id": "anp",
-        "nome": "ANP",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "mapa",
         "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "anp",
+        "nome": "ANP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -483,7 +501,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -505,15 +523,6 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 429"
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -528,7 +537,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -546,7 +555,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -563,35 +572,8 @@
         "nome": "CGU",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -599,8 +581,26 @@
         "nome": "Ministério da Educação",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "icmbio",
+        "nome": "ICMBio",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -609,7 +609,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "ibama",
+        "nome": "Ibama",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -617,8 +626,17 @@
         "nome": "Ministério da Fazenda",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -627,7 +645,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -636,25 +654,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -663,7 +663,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "inpe",
+        "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "anvisa",
+        "nome": "Anvisa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -672,25 +699,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "anvisa",
-        "nome": "Anvisa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -699,16 +708,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "inpe",
-        "nome": "Inpe",
+        "id": "funai",
+        "nome": "Funai",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -716,8 +725,26 @@
         "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "itamaraty",
+        "nome": "Itamaraty",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "antt",
+        "nome": "ANTT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -725,8 +752,8 @@
         "nome": "TCU",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -735,25 +762,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "antt",
-        "nome": "ANTT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "itamaraty",
-        "nome": "Itamaraty",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -771,7 +780,34 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "planalto",
+        "nome": "Planalto",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "agu",
+        "nome": "AGU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -784,48 +820,21 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "cvm",
         "nome": "CVM",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "defesa",
-        "nome": "Ministério da Defesa",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -843,7 +852,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -852,7 +861,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "cnmp",
+        "nome": "CNMP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -865,12 +883,12 @@
       },
       {
         "tipo": "livre",
-        "id": "cnmp",
-        "nome": "CNMP",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -892,6 +910,15 @@
       },
       {
         "tipo": "livre",
+        "id": "inmet",
+        "nome": "Inmet",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "stf",
         "nome": "STF",
         "itens": 0,
@@ -904,33 +931,34 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/05/Dictator_illustration-800x450.webp",
+      "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel",
+      "id": "ilm:lei-define-criterios-para-parcerias-entre-pontos-de-cultura-e-ensino",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Governos africanos gastam mais de US$ 2 bilhões em vigilância por inteligência artificial",
-      "resumo": "Estudo revela que as tecnologias são direcionadas para monitorar a oposição e protestos, e não para reduzir os índices de criminalidade.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/03/como-a-ia-esta-beneficiando-o-regime-ditatorial-na-africa/",
-      "origemNome": "Global Voices",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "Lei define critérios para parcerias entre pontos de cultura e ensino",
+      "resumo": "Publicada na segunda-feira (3) no Diário Oficial da União, a Lei 15.481, de 2026, regulamenta o intercâmbio com estabelecimentos de educação e pesquisa.",
+      "fonte": "Meridiano, com informações de Senado Federal",
+      "origemLink": "https://www12.senado.leg.br/noticias/audios/2026/08/lei-consolida-parceria-entre-escolas-e-pontos-de-cultura",
+      "origemNome": "Senado Federal",
+      "pautadoPor": [
+        "estadao.com.br"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "Um estudo realizado em março de 2026 pelo Instituto de Estudos do Desenvolvimento (IDS) e pela Rede Africana de Direitos Digitais apontou que 11 governos africanos gastaram mais de US$ 2 bilhões em sistemas de vigilância baseados em inteligência artificial. A Nigéria respondeu por mais de US$ 470 milhões desse total.",
-        "Os pacotes de vigilância incluem câmeras de alta definição, leitores de placas, reconhecimento facial e camadas de identificação biométrica reunidos em salas de controle. O fornecimento e o financiamento das tecnologias vêm principalmente de empresas e bancos chineses, além de empresas israelenses.",
-        "Embora a justificativa dos governos seja o combate ao crime, os números de criminalidade não estão caindo. Pesquisadores do IDS identificaram que a infraestrutura é instalada prioritariamente em locais de organização de partidos de oposição, pontos de protesto e áreas onde a imprensa atua.",
-        "A inteligência artificial transformou dados já coletados pelo Estado, como registros de comunicações, impostos e contas bancárias, em arquivos rapidamente consultáveis. A presença dessa vigilância atua de forma preventiva ao gerar a consciência de monitoramento na população."
+        "A Lei 15.481, de 2026, foi publicada na segunda-feira (3) no Diário Oficial da União. O texto define critérios para parceria e intercâmbio entre pontos e pontões de cultura e instituições de ensino e pesquisa.",
+        "Os pontos e pontões de cultura são associações sem fins lucrativos que desenvolvem atividades culturais dentro de suas próprias comunidades.",
+        "A legislação abrange a integração desses grupos com estabelecimentos de educação básica, ensino superior, ensino técnico e entidades voltadas à pesquisa e extensão."
       ],
-      "link": "/materia/governos-africanos-gastam-mais-de-us-2-bilhoes-em-vigilancia-por-intel.html",
-      "iso": "2026-08-03T11:47:40.000Z",
-      "hora": "07h47",
+      "link": "/materia/lei-define-criterios-para-parcerias-entre-pontos-de-cultura-e-ensino.html",
+      "iso": "2026-08-04T15:30:55.000Z",
+      "hora": "11h30",
       "original": true,
-      "contexto": "Esta é a segunda vez que o tema do gasto de governos africanos em vigilância por inteligência artificial é registrado no histórico, após publicação em 3 de agosto de 2026. Do montante de mais de US$ 2 bilhões aplicado por 11 países, a Nigéria respondeu por mais de US$ 470 milhões. O monitoramento afeta a população de forma geral e atinge prioritariamente locais de organização da oposição, pontos de protesto e áreas.",
+      "contexto": "A medida atinge os pontos e pontões de cultura, caracterizados como associações sem fins lucrativos que desenvolvem atividades em suas comunidades. A legislação também abrange estabelecimentos de educação básica, ensino técnico, ensino superior e entidades de pesquisa e extensão.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -940,61 +968,65 @@
       "fotoLarg": 554,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:entre-50-e-60-mil-migrantes-atravessam-a-fronteira-em-ceuta-em-apenas-",
+      "id": "ilm:travessia-de-mais-de-50-mil-migrantes-em-ceuta-expoe-crise-na-fronteir",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Entre 50 e 60 mil migrantes atravessam a fronteira em Ceuta em apenas dois dias",
-      "resumo": "A movimentação registrada entre 30 e 31 de julho no território espanhol no Norte da África deixou dezenas de mortos e resultou em centenas de atendimentos médicos.",
+      "titulo": "Travessia de mais de 50 mil migrantes em Ceuta expõe crise na fronteira espanhola",
+      "resumo": "Entre 30 e 31 de julho, pessoas oriundas do Marrocos e da África Subsaariana cruzaram a divisa a nado e com boias, deixando dezenas de mortos e centenas de atendidos.",
       "fonte": "Meridiano, com informações de Jornal da Unesp",
       "origemLink": "https://jornal.unesp.br/2026/08/04/crise-em-ceuta-evidencia-necessidade-de-rever-politicas-de-migracao-avalia-pesquisador-da-unesp/",
       "origemNome": "Jornal da Unesp",
       "pautadoPor": [
-        "Poder360",
-        "CartaCapital"
+        "cartacapital.com.br"
       ],
-      "quentura": 2,
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "Entre 30 e 31 de julho, estima-se que entre 50 e 60 mil migrantes atravessaram a fronteira do Marrocos em direção a Ceuta, território espanhol no Norte da África e integrante da União Europeia. A maioria era composta por marroquinos, além de pessoas oriundas de países da África Subsaariana e um número expressivo de menores desacompanhados. A travessia foi realizada a nado ou com o uso de boias e objetos improvisados, resultando em dezenas de mortes e centenas de atendimentos médicos.",
-        "A crise esteve associada à circulação de informações distorcidas em redes sociais sobre um processo de regularização migratória iniciado na Espanha em janeiro de 2026, sob o governo do primeiro-ministro Pedro Sánchez. De acordo com o doutorando Lucas Damasceno Tomazella, do Programa de Pós-Graduação em Relações Internacionais San Tiago Dantas, vinculado ao Instituto de Políticas Públicas e Relações Internacionais (IPPRI) da Unesp, organizações envolvidas no tráfico de pessoas exploraram essas interpretações para incentivar a travessia. Parte da imprensa internacional atribuiu o episódio à redução da fiscalização marroquina, hipótese rejeitada pelo governo do Marrocos.",
-        "O fluxo migratório também é motivado por conflitos armados, instabilidade política, impactos das mudanças climáticas, desemprego elevado entre jovens e desigualdades socioeconômicas no Marrocos e em outras regiões do continente africano. Como resposta, Pedro Sánchez reforçou o controle da fronteira, ampliou a cooperação com o Marrocos e defendeu o retorno dos migrantes que ingressaram em Ceuta, enquanto governos europeus liderados por grupos de extrema-direita responsabilizaram as políticas migratórias espanholas pelo ocorrido.",
-        "Segundo Tomazella, os desafios migratórios atuais possuem raízes históricas ligadas a processos de colonização e exploração. O pesquisador indica que o controle de fronteiras e o combate ao tráfico de pessoas, quando aplicados isoladamente, administram as consequências da migração sem resolver suas causas, exigindo a combinação de gestão de fronteiras, cooperação internacional, desenvolvimento e ampliação de oportunidades nos países de origem."
+        "Entre os dias 30 e 31 de julho, uma estimativa de 50 a 60 mil migrantes atravessaram a fronteira do Marrocos em direção a Ceuta, território espanhol no Norte da África que integra a União Europeia. A maioria dos que realizaram o trajeto a nado ou com objetos improvisados era composta por marroquinos e cidadãos de países da África Subsaariana, incluindo menores desacompanhados. A movimentação resultou em dezenas de mortes e centenas de atendimentos médicos.",
+        "De acordo com Lucas Damasceno Tomazella, doutorando do Programa de Pós-Graduação em Relações Internacionais San Tiago Dantas, do IPPRI da Unesp, a crise foi potencializada pela circulação de informações distorcidas em redes sociais sobre um processo de regularização migratória iniciado pelo primeiro-ministro espanhol, Pedro Sánchez, em janeiro de 2026. As mensagens foram exploradas por redes de tráfico de pessoas para incentivar a travessia.",
+        "O pesquisador afirma que o cenário envolve também fatores estruturais, como desemprego entre os jovens marroquinos, desigualdades, seca, conflitos armados e impactos das mudanças climáticas no continente africano. Parte da imprensa internacional atribuiu o episódio à menor fiscalização na fronteira por parte do Marrocos, acusação que o governo marroquino rejeita.",
+        "Diante do ocorrido, Pedro Sánchez aumentou o controle fronteiriço, ampliou a cooperação com o governo marroquino e defendeu o retorno dos migrantes que entraram em Ceuta. Ao mesmo tempo, governos europeus liderados por grupos de extrema-direita responsabilizaram as políticas da Espanha. Para Tomazella, medidas isoladas de fiscalização tratam apenas as consequências da migração, e não as suas causas."
       ],
-      "link": "/materia/entre-50-e-60-mil-migrantes-atravessam-a-fronteira-em-ceuta-em-apenas-.html",
+      "link": "/materia/travessia-de-mais-de-50-mil-migrantes-em-ceuta-expoe-crise-na-fronteir.html",
       "iso": "2026-08-04T20:17:20.000Z",
       "hora": "16h17",
       "original": true,
-      "contexto": "A travessia afeta marroquinos, pessoas oriundas da África Subsaariana e menores desacompanhados. O histórico do MERIDIANO registra um caso semelhante ocorrido em 1º de agosto de 2026. O processo de regularização migratória mencionado na matéria foi iniciado na Espanha em janeiro de 2026.",
+      "contexto": "Os afetados pela travessia são marroquinos e cidadãos de países da África Subsaariana, incluindo menores desacompanhados. O histórico registra quatro casos parecidos relacionados à crise em Ceuta entre 31 de julho e 4 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
+      "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outras-pes",
+      "id": "ilm:uniao-brasil-decide-por-neutralidade-na-corrida-presidencial-deste-ano",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Pessoa nascida apátrida relata medo de coisas naturais para outras pessoas",
-      "resumo": "O depoimento aborda a jornada de um viajante sem nacionalidade.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
+      "titulo": "União Brasil decide por neutralidade na corrida presidencial deste ano",
+      "resumo": "Com a decisão tomada em convenção nacional, candidatos do partido foram liberados para fazer coligações estaduais nas eleições.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/uniao-brasil-decide-pela-neutralidade-na-eleicao-presidencial",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1",
+        "Exame",
+        "g1 Política"
+      ],
+      "quentura": 4,
       "uf": null,
       "corpo": [
-        "Uma pessoa que nasceu apátrida afirmou ter aprendido a temer situações que ocorrem de forma natural para outros indivíduos.",
-        "A declaração faz parte de um relato sobre a vivência de um viajante sem pátria.",
-        "A publicação foi divulgada pela fonte Global Voices."
+        "O União Brasil definiu a adoção de neutralidade na eleição presidencial deste ano. A decisão foi tomada em convenção nacional realizada pelo partido nesta terça-feira (4).",
+        "A determinação libera os candidatos da legenda para formarem, em âmbito estadual, as coligações que melhor atenderem aos seus objetivos nas eleições deste ano.",
+        "Em março deste ano, o União Brasil formou uma federação com o Progressistas (PP). As duas siglas são apontadas como duas das maiores do chamado “centrão”, e o Progressistas já havia oficializado o mesmo posicionamento de neutralidade em 31 de julho.",
+        "Em nota divulgada nas redes sociais, o presidente do União Brasil, Antonio Rueda, declarou que a decisão reflete maturidade política e ressaltou o peso político da Federação União Progressista em âmbito nacional."
       ],
-      "link": "/materia/pessoa-nascida-apatrida-relata-medo-de-coisas-naturais-para-outras-pes.html",
-      "iso": "2026-08-04T07:37:20.000Z",
-      "hora": "03h37",
+      "link": "/materia/uniao-brasil-decide-por-neutralidade-na-corrida-presidencial-deste-ano.html",
+      "iso": "2026-08-04T21:48:00.000Z",
+      "hora": "17h48",
       "original": true,
-      "contexto": null,
+      "contexto": "A decisão afeta os candidatos estaduais do União Brasil, que ficam liberados para definir suas coligações locais nas eleições deste ano. O histórico recente registra uma decisão semelhante adotada pelo Progressistas (PP), integrante da mesma federação, em 31 de julho.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1007,24 +1039,24 @@
       "id": "ilm:republicanos-declara-neutralidade-e-nao-lancara-candidato-a-presidenci",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Republicanos declara neutralidade e não lançará candidato à Presidência da República",
-      "resumo": "Com a adoção da independência institucional, os diretórios regionais do partido poderão formar as coligações que quiserem sem orientação nacional.",
+      "titulo": "Republicanos declara neutralidade e não lançará candidato à Presidência",
+      "resumo": "Com a adoção da independência institucional, os diretórios regionais da legenda poderão fazer coligações sem uma orientação do diretório nacional.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
         "g1",
-        "CNN Brasil",
+        "Exame",
         "g1 Política",
         "estadao.com.br"
       ],
-      "quentura": 4,
+      "quentura": 5,
       "uf": null,
       "corpo": [
-        "O partido Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também definiu que não lançará um nome para a disputa e adotará uma posição de independência institucional.",
-        "Em nota, a sigla explicou a decisão com base no respeito às alianças estaduais e na sua presença significativa em diversos estados. O texto informou que essa capilaridade impõe o dever de considerar as particularidades de cada estado e as composições políticas construídas nos últimos anos.",
-        "Dessa forma, os diretórios regionais do partido poderão realizar a coligação que quiserem, sem a necessidade de seguir uma orientação vinda do diretório nacional.",
-        "A agremiação realizou sua convenção nacional no período da manhã. A nota oficial com a decisão sobre a neutralidade na corrida presidencial foi publicada no site da legenda antes do início do evento."
+        "O Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também informou que não lançará um nome para a disputa e adotará uma posição de independência institucional.",
+        "Em nota, o partido justificou a decisão no respeito às alianças estaduais e na sua presença significativa em vários estados. A sigla declarou que essa capilaridade impõe o dever de considerar as particularidades de cada estado e respeitar as estratégias políticas locais construídas nos últimos anos.",
+        "Com isso, os diretórios regionais do partido estão liberados para fazer as coligações que desejarem, sem a necessidade de seguir orientação do diretório nacional.",
+        "A decisão foi divulgada em nota publicada no site do partido pela manhã, antes do início da convenção nacional realizada pela agremiação."
       ],
       "link": "/materia/republicanos-declara-neutralidade-e-nao-lancara-candidato-a-presidenci.html",
       "iso": "2026-08-04T16:57:00.000Z",
@@ -1035,128 +1067,33 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
+      "foto": "https://jornal.unesp.br/wp-content/uploads/2026/07/Serie-50-anos-50-historias-Jornal-900x507-1.jpg",
+      "fotoAlt": "Serie-50-anos-50-historias-Jornal-900&#215;507-1",
+      "fotoLarg": 900,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:usp-promove-roda-de-conversa-sobre-agroecologia-e-agricultura-familiar",
+      "id": "ilm:antonio-candido-migrou-para-a-literatura-durante-atuacao-docente-em-as",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "USP promove roda de conversa sobre agroecologia e agricultura familiar",
-      "resumo": "Evento gratuito do Cemiti e da FFCLRP será realizado no dia 29 de agosto, a partir das 9h30, no Anfiteatro Lucien Lison.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/campus-ribeirao-preto/roda-de-conversa-discutira-o-desenvolvimento-rural-agricultura-familiar-e-politicas-publicas/",
-      "origemNome": "Jornal da USP",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Centro de Mindfulness e Terapias Integrativas da Escola de Enfermagem de Ribeirão Preto da USP realiza no dia 29 de agosto, a partir das 9h30, a roda de conversa Agroecologia: Cultivando a Terra e o Ser. O evento tem o apoio da Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto da USP e ocorrerá no Anfiteatro Lucien Lison.",
-        "A atividade é gratuita e faz parte da série Diálogos que Transformam, criada em comemoração aos dez anos do Cemiti. As inscrições podem ser feitas por meio de link disponibilizado pelos organizadores.",
-        "O encontro reunirá agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural. Os participantes discutirão conhecimentos técnicos e saberes ancestrais no futuro da agricultura familiar e no equilíbrio entre seres humanos e a natureza. O engenheiro agrônomo Claudio Nadaleto está entre os participantes confirmados."
-      ],
-      "link": "/materia/usp-promove-roda-de-conversa-sobre-agroecologia-e-agricultura-familiar.html",
-      "iso": "2026-08-04T18:51:56.000Z",
-      "hora": "14h51",
-      "original": true,
-      "contexto": "A roda de conversa está marcada para o dia 29 de agosto, a partir das 9h30, no Anfiteatro Lucien Lison. O encontro é voltado para agricultores, pesquisadores, estudantes e pessoas interessadas em sustentabilidade e desenvolvimento rural.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/06/IMG-20260405-WA0024-800x450.jpg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:lingua-kam-na-nigeria-tem-entre-aproximadamente-8-000-e-11-000-falante",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Língua Kam na Nigéria tem entre aproximadamente 8.000 e 11.000 falantes",
-      "resumo": "O idioma localizado no nordeste do país não recebeu atenção de pesquisadores antes de 2016, a exemplo de outras línguas da região.",
-      "fonte": "Meridiano, com informações de Global Voices (EN)",
-      "origemLink": "https://globalvoices.org/2026/08/03/how-a-community-led-campaign-is-helping-save-nigerias-kam-language/",
-      "origemNome": "Global Voices (EN)",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A língua Kam possui atualmente um número de falantes de aproximadamente 8.000 – 11.000 pessoas. O idioma é falado no nordeste da Nigéria.",
-        "Antes de 2016, a língua Kam não recebeu atenção por parte de pesquisadores.",
-        "A ausência de atenção de pesquisadores antes do ano de 2016 também ocorreu com muitas outras línguas do nordeste da Nigéria."
-      ],
-      "link": "/materia/lingua-kam-na-nigeria-tem-entre-aproximadamente-8-000-e-11-000-falante.html",
-      "iso": "2026-08-03T05:38:53.000Z",
-      "hora": "01h38",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juize",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "CNJ acaba com aposentadoria compulsória como punição máxima para juízes",
-      "resumo": "Com a nova regra, o magistrado poderá perder o cargo em casos de infrações graves, conforme procedimento que segue decisão do Supremo Tribunal Federal.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juiz",
-      "origemNome": "Agência Brasil",
+      "titulo": "Antonio Candido migrou para a literatura durante atuação docente em Assis",
+      "resumo": "O intelectual lecionou na faculdade paulista entre 1958 e 1960, período apontado por ele como decisivo para sua transição do ensino de sociologia para a área literária.",
+      "fonte": "Meridiano, com informações de Jornal da Unesp",
+      "origemLink": "https://jornal.unesp.br/2026/08/04/antonio-candido-viveu-renascimento-intelectual-durante-periodo-como-professor-da-faculdade-de-letras-de-assis/",
+      "origemNome": "Jornal da Unesp",
       "pautadoPor": [
-        "g1 Política",
-        "JOTA",
-        "Migalhas"
-      ],
-      "quentura": 3,
-      "uf": null,
-      "corpo": [
-        "O Conselho Nacional de Justiça (CNJ) aprovou nesta terça-feira (4) o fim da aposentadoria compulsória e estabeleceu a perda do cargo como a punição disciplinar máxima para juízes que cometerem infrações graves, como venda de sentenças e assédio sexual ou moral.",
-        "Pela nova resolução, em caso de condenação em Processo Administrativo Disciplinar (PAD), o magistrado poderá ser colocado em disponibilidade para a perda do cargo. A exoneração definitiva depende de decisão judicial a partir de ação a ser movida pela Advocacia-Geral da União (AGU), seguindo entendimento do Supremo Tribunal Federal (STF).",
-        "O CNJ foi criado em 2005 para julgar faltas disciplinares de juízes e desembargadores, aplicando as penas previstas na Lei Orgânica da Magistratura Nacional (Loman). Em 20 anos de atuação, o órgão aplicou a punição de aposentadoria compulsória a 126 magistrados, que mantinham o recebimento proporcional de seus vencimentos mensais.",
-        "Durante a votação, o presidente do CNJ, ministro Edson Fachin, afirmou que a medida representa uma mudança significativa na forma de tratar a questão e que o tema é trabalhado com atenção ao considerar seus desafios e complexidades."
-      ],
-      "link": "/materia/cnj-acaba-com-aposentadoria-compulsoria-como-punicao-maxima-para-juize.html",
-      "iso": "2026-08-04T18:13:00.000Z",
-      "hora": "14h13",
-      "original": true,
-      "contexto": "A medida afeta magistrados que cometerem infrações graves, como venda de sentenças e assédio moral ou sexual. Desde a criação do CNJ em 2005, a pena de aposentadoria compulsória havia sido aplicada a 126 juízes. A próxima etapa para a perda definitiva do cargo exige uma ação judicial a ser movida pela Advocacia-Geral da União.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:moraes-concede-cinco-dias-para-pgr-se-manifestar-sobre-recurso-de-bols",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Moraes concede cinco dias para PGR se manifestar sobre recurso de Bolsonaro",
-      "resumo": "O ex-presidente recorre contra a proibição de receber visitas na prisão domiciliar, medida imposta após a divulgação de uma carta em redes sociais.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/moraes-pede-parecer-da-pgr-sobre-proibicao-de-visitas-bolsonaro",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política"
+        "g1"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), deu prazo de cinco dias para a Procuradoria-Geral da República (PGR) se manifestar sobre o recurso do ex-presidente Jair Bolsonaro. A defesa contesta a decisão que o proibiu de receber visitas na prisão domiciliar pelo período de 30 dias.",
-        "A medida foi determinada no mês passado por Moraes, depois que o senador Flávio Bolsonaro (PL-RJ) publicou em redes sociais uma carta redigida pelo ex-presidente. Jair Bolsonaro tem uma restrição que o proíbe de usar a internet, inclusive por meio de terceiros. A decisão também veda visitas com finalidade político-eleitoral até o fim das eleições de outubro e a divulgação de manifestos político-eleitorais.",
-        "No recurso apresentado ao STF, a defesa sustenta que o ex-presidente não pode ter suas liberdades de pensamento e de manifestação de ideias restringidas em função de sua condenação.",
-        "No ano passado, Jair Bolsonaro foi condenado a 27 anos e três meses de prisão no processo de trama golpista. Ele obteve o direito de cumprir prisão domiciliar para se recuperar de uma pneumonia bacteriana após passar por uma cirurgia."
+        "O intelectual Antonio Candido atuou como professor na Faculdade de Filosofia, Ciências e Letras de Assis entre 1958 e 1960, marcando sua transição do ensino de sociologia para os estudos literários. A instituição foi criada como Instituto Isolado de Ensino Superior do Estado de São Paulo e acabou incorporada pela Unesp em 1976.",
+        "Em 1957, Candido estava em licença da Universidade de São Paulo, onde lecionava sociologia desde 1942, quando recebeu o convite do então diretor Antonio Soares Amora. O docente mudou-se para Assis no segundo semestre de 1958, e sua esposa, Gilda de Mello e Souza, e suas filhas juntaram-se a ele em 1959, ano em que a faculdade começou a funcionar.",
+        "Durante a rotina na nova cidade, Candido propôs o \"Pacto do Silêncio\", reservando quatro horas diárias na parte da manhã para os estudos e trabalhos dos professores, enquanto o período da tarde era destinado ao ministério de aulas e atendimento aos estudantes.",
+        "Em 1988, ao receber o título de Professor Emérito da instituição, Antonio Candido afirmou em discurso que o período vivida em Assis representou uma oportunidade decisiva e um renascimento intelectual. O texto da declaração foi publicado pela Editora Unesp em 1992, na reedição especial do livro \"Brigada ligeira\"."
       ],
-      "link": "/materia/moraes-concede-cinco-dias-para-pgr-se-manifestar-sobre-recurso-de-bols.html",
-      "iso": "2026-08-04T18:30:00.000Z",
-      "hora": "14h30",
+      "link": "/materia/antonio-candido-migrou-para-a-literatura-durante-atuacao-docente-em-as.html",
+      "iso": "2026-08-04T18:29:27.000Z",
+      "hora": "14h29",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1168,28 +1105,30 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
+      "id": "ilm:incendio-de-grandes-proporcoes-atinge-industria-em-itaquaquecetuba",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
-      "resumo": "O resultado representa a segunda queda seguida do indicador, que acumula perda de 2,7% entre maio e junho deste ano.",
+      "titulo": "Incêndio de grandes proporções atinge indústria em Itaquaquecetuba",
+      "resumo": "O Corpo de Bombeiros mobilizou 18 viaturas para combater as chamas e foca em conter o avanço sobre 26 tanques de solventes.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/bombeiros-combatem-incendio-de-grandes-proporcoes-em-itaquaquecetuba",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
+      "pautadoPor": [
+        "g1"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "A produção industrial brasileira registrou queda de 1,8% em junho deste ano na comparação com o mês anterior. Os dados da Pesquisa Industrial Mensal foram divulgados nesta terça-feira pelo Instituto Brasileiro de Geografia e Estatística (IBGE).",
-        "Esta é a segunda queda consecutiva do indicador, que já havia recuado 0,9% de abril para maio. Segundo o gerente da pesquisa, André Macedo, a perda acumulada de 2,7% nesses dois meses eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026.",
-        "Na média móvel trimestral, houve retração de 0,5%. Na comparação com junho do ano passado, a indústria apresentou crescimento de 1,7%. Com o resultado, a produção industrial acumula altas de 1,5% no ano e de 0,7% em 12 meses.",
-        "Na passagem de maio para junho, 16 dos 25 ramos pesquisados registraram queda. Todas as quatro grandes categorias econômicas apresentaram resultado negativo, com recuos de 4,1% nos bens de consumo semi e não duráveis, 3,2% nos bens de consumo duráveis, e 1,1% tanto em bens de capital quanto em bens intermediários."
+        "Um incêndio de grandes proporções atinge nesta terça-feira (4) uma indústria de reciclagem de metais em Itaquaquecetuba, na Região Metropolitana de São Paulo. Não há informações sobre vítimas.",
+        "O Corpo de Bombeiros de São Paulo trabalha em três frentes de combate e confirmou o envio de 18 viaturas. O foco da corporação é evitar que o fogo atinja 26 tanques de solventes localizados na empresa.",
+        "O imóvel fica em uma região industrial, a mais de 500 metros das residências mais próximas. A Defesa Civil estadual confirmou a evacuação de outras indústrias nos arredores, enquanto a Defesa Civil do município acompanha a contenção do incêndio.",
+        "Técnicos da Companhia Ambiental do Estado de São Paulo (Cetesb) também se deslocam para a região."
       ],
-      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
-      "iso": "2026-08-04T12:44:00.000Z",
-      "hora": "08h44",
+      "link": "/materia/incendio-de-grandes-proporcoes-atinge-industria-em-itaquaquecetuba.html",
+      "iso": "2026-08-04T21:29:00.000Z",
+      "hora": "17h29",
       "original": true,
-      "contexto": "A queda de 1,8% em junho é o segundo recuo consecutivo do indicador, após a retração de 0,9% registrada em maio. Na comparação com junho do ano passado, houve crescimento de 1,7%. O resultado na passagem de maio para junho afetou 16 dos 25 ramos pesquisados e todas as quatro grandes categorias econômicas.",
+      "contexto": "Não há registros de casos parecidos no histórico. A evacuação preventiva afetou outras indústrias localizadas nos arredores do imóvel. Como próxima etapa do atendimento à ocorrência, técnicos da Companhia Ambiental do Estado de São Paulo se deslocam para a região.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1199,11 +1138,112 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:congresso-nacional-retoma-trabalhos-apos-duas-semanas-de-recesso-parla",
+      "id": "ilm:inmet-alerta-para-chuva-no-sul-e-baixa-umidade-em-mato-grosso-e-goias",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Congresso Nacional retoma trabalhos após duas semanas de recesso parlamentar",
-      "resumo": "Votações nos plenários da Câmara e do Senado ficarão concentradas em duas semanas específicas antes das eleições gerais de outubro.",
+      "titulo": "Inmet alerta para chuva no Sul e baixa umidade em Mato Grosso e Goiás",
+      "resumo": "O Rio Grande do Sul está sob alerta de perigo potencial nesta terça-feira, enquanto o interior do país registra umidade relativa do ar abaixo de 20%.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/regiao-sul-tem-previsao-de-chuva-e-granizo-para-esta-terca-feira",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O Instituto Nacional de Meteorologia colocou o estado do Rio Grande do Sul sob alerta de perigo potencial para chuvas, ventos intensos e queda de granizo nesta terça-feira (4). Santa Catarina e Paraná têm previsão de chuvas isoladas, e as instabilidades perdem força no período da noite.",
+        "Na quarta-feira (5), chuvas e trovoadas voltam a ganhar intensidade na Região Sul, com possibilidade de granizo no oeste e sudoeste do Paraná, centro-oeste de Santa Catarina e norte do Rio Grande do Sul. Na Região Nordeste, há alerta amarelo para chuvas intensas no litoral e perigo potencial de vendaval em áreas do Ceará ao Maranhão, com tempo seco no interior.",
+        "Na Região Norte, a previsão é de chuvas isoladas em Rondônia, Acre, Roraima, Amapá e no norte do Pará, com maior intensidade no oeste do Amazonas à tarde. No interior do país, o tempo segue seco nas regiões Centro-Oeste e Sudeste, com aviso laranja para umidade relativa do ar abaixo de 20% no nordeste de Mato Grosso e no norte de Goiás durante a tarde desta terça-feira.",
+        "A temperatura mínima na Região Sul é de 15°C em Florianópolis e a máxima de 26°C em Curitiba. No Nordeste, a menor temperatura é de 21°C em Salvador, Maceió e Aracaju, com máxima de 35°C em Teresina, enquanto Palmas registra a mínima de 20°C e a máxima de 36°C da Região Norte."
+      ],
+      "link": "/materia/inmet-alerta-para-chuva-no-sul-e-baixa-umidade-em-mato-grosso-e-goias.html",
+      "iso": "2026-08-04T12:53:00.000Z",
+      "hora": "08h53",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:cnj-decide-afastar-a-juiza-gabriela-hardt-pelo-prazo-de-dois-anos",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "CNJ decide afastar a juíza Gabriela Hardt pelo prazo de dois anos",
+      "resumo": "A penalidade de disponibilidade com vencimentos proporcionais foi motivada pela homologação de um acordo entre a Força-Tarefa da Lava Jato e a Petrobras em 2019.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/cnj-afasta-ex-juiza-da-lava-jato-por-dois-anos",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Congresso em Foco",
+        "CNN Brasil",
+        "Poder360",
+        "JOTA"
+      ],
+      "quentura": 4,
+      "uf": null,
+      "corpo": [
+        "O Conselho Nacional de Justiça determinou a punição da juíza Gabriela Hardt com o afastamento do cargo pelo período de dois anos. A magistrada, ex-substituta do ex-juiz Sergio Moro na 13ª Vara Federal de Curitiba e atual substituta na 23ª Vara Federal, recebeu a pena de disponibilidade com vencimentos proporcionais.",
+        "A decisão ocorreu em processo administrativo disciplinar decorrente da homologação, em 2019, de um acordo entre a Força-Tarefa da Lava Jato e a Petrobras. A maioria do plenário seguiu o voto do relator, conselheiro Rodrigo Badaró, segundo o qual a juíza não adotou cuidados mínimos ao autorizar repasses a uma fundação privada. O presidente do conselho, ministro Edson Fachin, afirmou no julgamento que não se combate irregularidade cometendo irregularidade.",
+        "O acordo previa a destinação de R$ 2 bilhões a uma fundação gerida por integrantes da força-tarefa, ligada ao ex-procurador Deltan Dallagnol. Em 2019, a homologação foi suspensa pelo ministro Alexandre de Moraes, do Supremo Tribunal Federal, a pedido da Procuradoria-Geral da República. A advogada Ana Luísa Vogado de Oliveira defendeu que a juíza não cometeu irregularidades nem atuou motivada por interesses."
+      ],
+      "link": "/materia/cnj-decide-afastar-a-juiza-gabriela-hardt-pelo-prazo-de-dois-anos.html",
+      "iso": "2026-08-04T21:23:00.000Z",
+      "hora": "17h23",
+      "original": true,
+      "contexto": "A decisão afeta a juíza Gabriela Hardt, atual substituta na 23ª Vara Federal, que cumprirá a pena de afastamento pelo prazo de dois anos. Não há registro de caso parecido no histórico.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:flavio-dino-autoriza-novo-inquerito-da-pf-para-investigar-lulinha",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Flávio Dino autoriza novo inquérito da PF para investigar Lulinha",
+      "resumo": "Com a decisão, o empresário passa a ser alvo de três investigações na corporação, que também apurará o vazamento de informações sigilosas.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/flavio-dino-autoriza-novo-inquerito-da-pf-para-investigar-lulinha",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "BBC Brasil"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O ministro Flávio Dino, do Supremo Tribunal Federal (STF), autorizou nesta terça-feira (4) a abertura de uma nova investigação da Polícia Federal (PF) contra o empresário Fábio Luís Lula da Silva, conhecido como Lulinha, filho do presidente Luiz Inácio Lula da Silva. Dino atendeu a um pedido da PF para apurar a suposta atuação de um grupo em negócios ilícitos com órgãos do governo federal.",
+        "Os detalhes do caso estão mantidos em segredo de Justiça. A pedido da defesa do empresário, o ministro também determinou a abertura de outro inquérito para investigar o vazamento de informações sigilosas relativas ao processo.",
+        "Com a nova determinação, Lulinha passa a ser investigado em três inquéritos na PF. O primeiro trata de um suposto tráfico de influência no Ministério da Saúde envolvendo uma empresa do ramo de cannabis medicinal ligada a Antonio Carlos Camilo Antunes, conhecido como Careca do INSS, sem relação com descontos ilegais de benefícios. O segundo inquérito apura supostas ilegalidades na Dataprev.",
+        "Em nota, os advogados Guilherme Suguimori e Marco Aurélio de Carvalho informaram que receberam a decisão com \"absoluta serenidade\" e afirmaram que Lulinha comprovará não ter ligação com irregularidades. A defesa solicitou providências contra vazamentos e criticou o uso de setores da PF para fins políticos e eleitorais."
+      ],
+      "link": "/materia/flavio-dino-autoriza-novo-inquerito-da-pf-para-investigar-lulinha.html",
+      "iso": "2026-08-04T20:56:00.000Z",
+      "hora": "16h56",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:congresso-retoma-os-trabalhos-e-tera-duas-semanas-de-esforco-concentra",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Congresso retoma os trabalhos e terá duas semanas de esforço concentrado",
+      "resumo": "Nesta primeira semana após o recesso parlamentar, não há previsão de votações deliberativas nos plenários da Câmara dos Deputados e do Senado.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/apos-recesso-congresso-retoma-trabalhos-nesta-semana",
       "origemNome": "Agência Brasil",
@@ -1213,16 +1253,16 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Congresso Nacional retomou os trabalhos nesta segunda-feira (3), após duas semanas de recesso parlamentar, sem previsão de sessão plenária deliberativa na Câmara dos Deputados e no Senado. Os presidentes das Casas concordaram em limitar as votações em plenário a dois períodos de esforço concentrado antes das eleições de outubro: de 10 a 14 de agosto e de 31 de agosto a 3 de setembro.",
-        "Nesta primeira semana, a agenda conta apenas com sessões solenes e reuniões de comissões. A Câmara tem homenagem à Assembleia de Deus – Ministério de Madureira na terça-feira (4), e o Senado faz sessão sobre o Agosto Lilás na sexta-feira (7). A Comissão de Direitos Humanos debate a campanha Agosto Dourado nesta segunda-feira (3), enquanto a Comissão Mista do Orçamento realiza audiência sobre educação infantil na quarta-feira (5).",
-        "Entre as propostas não votadas no primeiro semestre está a PEC do fim da escala 6x1, mantida com o presidente do Senado, Davi Alcolumbre (União-AP), e a PEC da Segurança Pública, cobrada pelo presidente Luiz Inácio Lula da Silva. O Senado também tem pendente o projeto de regulação dos minerais críticos, já aprovado pela Câmara, além do recebimento dos projetos da LDO e da LOA de 2027, previstos para serem enviados pelo governo até 31 de agosto.",
-        "O Legislativo possui 87 vetos trancando a pauta, incluindo vetos à regulamentação da reforma tributária, ao Estatuto do Pantanal, às LDO e LOA de 2026, ao marco do setor elétrico e à Lei da Dosimetria. Outros projetos aguardando plenário são o PL da Misoginia e o PL da Inteligência Artificial, apresentado como uma das prioridades pelo presidente da Câmara, deputado Hugo Motta (Republicanos-PB)."
+        "O Congresso Nacional retomou os trabalhos nesta segunda-feira (3), após duas semanas de recesso parlamentar. Não há previsão de sessões plenárias deliberativas na Câmara dos Deputados e no Senado durante a semana. Os presidentes das Casas concordaram em limitar os trabalhos a duas semanas de esforço concentrado devido às eleições: entre 10 e 14 de agosto, e entre 31 de agosto e 3 de setembro.",
+        "Nesta primeira semana, a programação conta com sessões solenes e reuniões de comissões. Na Câmara, haverá homenagem à fundação da Assembleia de Deus – Ministério de Madureira na terça-feira (4). No Senado, ocorre uma sessão na sexta-feira (7) sobre o Agosto Lilás. Nas comissões, a Comissão de Direitos Humanos (CDH) do Senado debate a campanha Agosto Dourado nesta segunda-feira (3), e a Comissão Mista do Orçamento (CMO) discute o financiamento da educação infantil na quarta-feira (5).",
+        "Entre as propostas pendentes que podem ser debatidas está a Proposta de Emenda à Constituição (PEC) do fim da escala 6x1, que está com o presidente do Senado, Davi Alcolumbre (União-AP), sem indicativo de envio à Comissão de Constituição e Justiça (CCJ). A oposição defende uma PEC alternativa que mantém a escala 6x1. O presidente Luiz Inácio Lula da Silva tem cobrado Alcolumbre para votar a PEC da Segurança Pública, já aprovada na Câmara. O Senado também tem pendente o projeto sobre minerais críticos e a votação da LDO e da LOA de 2027, que deve ser enviada pelo governo até 31 de agosto.",
+        "O Congresso soma 87 vetos trancando a pauta, incluindo o projeto de regulamentação da reforma tributária, o Estatuto do Pantanal, as LDO e LOA de 2026, o marco do setor elétrico e o veto integral à Lei da Dosimetria. Outros temas em debate são o PL da Misoginia e o PL da Inteligência Artificial (IA), este último apresentado como prioridade pelo presidente da Câmara, deputado Hugo Motta (Republicanos-PB)."
       ],
-      "link": "/materia/congresso-nacional-retoma-trabalhos-apos-duas-semanas-de-recesso-parla.html",
+      "link": "/materia/congresso-retoma-os-trabalhos-e-tera-duas-semanas-de-esforco-concentra.html",
       "iso": "2026-08-03T12:45:00.000Z",
       "hora": "08h45",
       "original": true,
-      "contexto": "O acervo registra três casos parecidos sobre a retomada dos trabalhos do Congresso e a realização de esforço concentrado em agosto de 2026. As próximas etapas com votações deliberativas em plenário estão agendadas para os períodos de 10 a 14 de agosto e de 31 de agosto a 3 de setembro. A medida afeta a tramitação de propostas pendentes na Câmara dos Deputados e no Senado antes das eleições de outubro.",
+      "contexto": "O histórico do arquivo registra casos parecidos em três ocasiões, nas datas de 2 e 3 de agosto de 2026. As próximas etapas com sessões de esforço concentrado no Congresso Nacional estão agendadas para os períodos de 10 a 14 de agosto e de 31 de agosto a 3 de setembro.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1232,90 +1272,30 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:copom-inicia-quinta-reuniao-de-2026-para-definir-taxa-selic",
+      "id": "ilm:ministerio-da-justica-detalha-operacao-contra-grupo-que-planejava-ataq",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Copom inicia quinta reunião de 2026 para definir taxa Selic",
-      "resumo": "A decisão sobre a taxa básica de juros será anunciada no dia 5 de agosto, após dois dias de avaliações sobre o cenário econômico nacional e internacional.",
+      "titulo": "Ministério da Justiça detalha operação contra grupo que planejava ataques em Brasília",
+      "resumo": "A ação cumpriu oito mandados de busca e apreensão contra investigados que planejavam invasões a prédios públicos e atentado a bomba durante o período eleitoral.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/copom-inicia-reuniao-que-definira-taxa-basica-de-juros",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/mj-detalha-operacao-para-desarticular-ataques-brasilia",
       "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
+      "pautadoPor": [
+        "Folha"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Comitê de Política Monetária (Copom) do Banco Central iniciou nesta terça-feira (4) a sua quinta reunião de 2026. A decisão sobre a Taxa Selic está prevista para ser anunciada no dia 5 de agosto, após dois dias de discussões do grupo sobre a conjuntura econômica do Brasil e do exterior.",
-        "A taxa básica de juros está atualmente em 14,25% ao ano, o menor nível de 2026, após três reduções consecutivas de 0,25 ponto percentual promovidas nas reuniões de março, abril e junho. No Boletim Focus divulgado na segunda-feira (3), o mercado financeiro reduziu pela primeira vez desde março a estimativa da Selic para 2026, de 14% para 13,75%.",
-        "O mesmo boletim registrou a quinta redução seguida na projeção para o IPCA de 2026, que passou de 5,12% para 5,03%. O número continua acima do limite superior de 4,5% da meta de inflação estabelecida pelo Conselho Monetário Nacional, cujo centro é de 3% com intervalo de tolerância de 1,5 ponto percentual.",
-        "Nas reuniões anteriores, o Copom indicou a possibilidade de corte na Selic, mas passou a adotar cautela devido às incertezas de preços provocadas pelo conflito entre Estados Unidos e Irã, principalmente nos combustíveis. Usada nas negociações de títulos do Tesouro Nacional, a Selic é a referência para as demais taxas e o instrumento central do Banco Central para o controle da inflação."
+        "O Ministério da Justiça e Segurança Pública e a Polícia Civil do Distrito Federal detalharam os resultados da Operação Rede Interrompida, deflagrada para desarticular o planejamento de atos violentos em Brasília. A investigação começou na primeira quinzena de junho a partir de dados do Laboratório de Operações Cibernéticas, que monitorou conversas no Telegram.",
+        "O grupo analisado planejava invasões a prédios da Esplanada dos Ministérios e do Supremo Tribunal Federal no período eleitoral de outubro, além de um atentado a bomba em debates. Foram cumpridos oito mandados de busca e apreensão em Santa Catarina, Paraná, São Paulo, Pernambuco e Rio Grande do Sul.",
+        "Nas buscas, as forças policiais apreenderam manuais para fabricar explosivos, mapas da região central da capital e a planta baixa do Palácio do Planalto. A investigação optou por cumprir apenas mandados de busca, sem solicitar prisões neste primeiro momento.",
+        "Os oito investigados têm entre 19 e 31 anos, não possuem antecedentes criminais e não se conhecem pessoalmente. As conversas no aplicativo também eram utilizadas para o recrutamento de integrantes e para a disseminação de conteúdos neonazistas, antissemitas e misóginos."
       ],
-      "link": "/materia/copom-inicia-quinta-reuniao-de-2026-para-definir-taxa-selic.html",
-      "iso": "2026-08-04T09:40:00.000Z",
-      "hora": "05h40",
+      "link": "/materia/ministerio-da-justica-detalha-operacao-contra-grupo-que-planejava-ataq.html",
+      "iso": "2026-08-04T22:09:00.000Z",
+      "hora": "18h09",
       "original": true,
-      "contexto": "A decisão sobre a taxa Selic está prevista para ser anunciada no dia 5 de agosto, ao fim da quinta reunião do comitê em 2026. A taxa atual de 14,25% ao ano é o menor nível do ano, após três reduções consecutivas de 0,25 ponto percentual realizadas em março, abril e junho. O histórico registra um caso parecido em 3 de agosto de 2026, quando a estimativa do mercado para a Selic caiu de 14% para 13,75%.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:operacao-livia-combate-rede-acusada-de-induzir-jovens-ao-suicidio",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Operação Lívia combate rede acusada de induzir jovens ao suicídio",
-      "resumo": "Ação policial cumpriu mandados em cinco estados e resultou na apreensão de cinco adolescentes e na prisão de um adulto.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/operacao-livia-combate-rede-que-induzia-jovens-suicidio-na-internet",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Ministério da Justiça e Segurança Pública apresentou os resultados da Operação Lívia, conduzida pela Polícia Civil de Mato Grosso do Sul com apoio do Laboratório de Operações Cibernéticas. A ação investiga uma organização criminosa que atraía crianças e adolescentes para comunidades virtuais, submetendo as vítimas a coerção psicológica, automutilação, violência contra animais e induzimento ao suicídio. A apuração começou após a morte de uma adolescente de 13 anos em Naviraí, ocorrida em 22 de julho e transmitida ao vivo na rede social Discord.",
-        "Foram cumpridos oito mandados de busca e apreensão nos estados do Ceará, Minas Gerais, Pará e Rio de Janeiro. As autoridades confirmaram a prisão de um homem de 18 anos e a apreensão de cinco adolescentes com idades entre 13 e 17 anos. O suspeito de ser o chefe do grupo é um adolescente de 14 anos apreendido no Rio de Janeiro. Outro integrante investigado é um estudante seminarista de um mosteiro em Pernambuco.",
-        "Conforme a investigação, o grupo abriu uma chave PIX em nome da vítima para enviar dinheiro usado na compra de lâminas. O Ministério da Justiça informou que enviará um pedido de investigação contra as plataformas Discord e Telegram à Agência Nacional de Proteção de Dados por descumprimento do Estatuto Digital da Criança e do Adolescente e falhas na verificação de idade dos usuários.",
-        "A atuação policial também identificou outra vítima em diferente unidade da federação e evitou que ela tirasse a própria vida em uma transmissão agendada. Todo o material recolhido será analisado para identificar a possibilidade de outros envolvidos no caso."
-      ],
-      "link": "/materia/operacao-livia-combate-rede-acusada-de-induzir-jovens-ao-suicidio.html",
-      "iso": "2026-08-04T19:40:00.000Z",
-      "hora": "15h40",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:petrobras-descobre-novo-poco-de-gas-na-bacia-de-guajira-na-colombia",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Petrobras descobre novo poço de gás na Bacia de Guajira na Colômbia",
-      "resumo": "A concentração foi localizada no poço exploratório Sandia-1, perfurado em consórcio com a estatal Ecopetrol a 42 quilômetros da costa.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/petrobras-descobre-novo-poco-de-gas-na-margem-equatorial-da-colombia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Petrobras anunciou nesta segunda-feira (3) a descoberta de um poço de gás em águas profundas na Colômbia. A concentração de gás foi localizada no poço exploratório Sandia-1, situado no bloco GUA-OFF-0, na Bacia de Guajira.",
-        "O poço Sandia-1 fica a 42 quilômetros da costa, com lâmina d’água de 1.251 metros, e a 70,7 km da cidade de Santa Marta. A perfuração começou em 12 de junho e alcançou a profundidade final em 29 do mesmo mês. A localização fica a 18 km do poço Sirius-1 e a 9 km do poço Copoazu-1.",
-        "A exploração é feita em consórcio entre a estatal colombiana Ecopetrol, que detém 55,56%, e a Petrobras, com 44,44%, por meio da subsidiária Petrobras International Braspetro B.V – Sucursal Colômbia (PIB-COL). A empresa brasileira é a operadora da exploração no bloco. O gás encontrado passa por avaliação detalhada com perfis de poço e análises laboratoriais.",
-        "Em 5 de dezembro de 2024, a diretora de Exploração e Produção da Petrobras, Sylvia Anjos, afirmou que a Bacia de Guajira integra a margem equatorial. Na ocasião, a estatal informou a descoberta do maior reservatório de gás natural da história da Colômbia. Além do Brasil e do território colombiano, a Petrobras atua na Namíbia, São Tomé e Príncipe, África do Sul, Bolívia, Argentina e Estados Unidos."
-      ],
-      "link": "/materia/petrobras-descobre-novo-poco-de-gas-na-bacia-de-guajira-na-colombia.html",
-      "iso": "2026-08-03T14:08:00.000Z",
-      "hora": "10h08",
-      "original": true,
-      "contexto": null,
+      "contexto": "Não há registro de caso parecido no histórico. Os alvos informados do planejamento eram os prédios da Esplanada dos Ministérios, do Supremo Tribunal Federal e os debates eleitorais. A investigação executou apenas mandados de busca nesta primeira etapa e não solicitou prisões até o momento.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -1325,140 +1305,82 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que seis veículos de imprensa noticiaram a neutralidade de partidos para 2026.",
-        "Que o assunto envolve os partidos União Brasil e Podemos e o político Flávio Bolsonaro.",
-        "Que é atribuída a Flávio Bolsonaro uma declaração sobre vacinas em eventual governo."
+        "Que seis veículos de imprensa publicaram matérias sobre a revogação do visto.",
+        "Que a medida é atribuída ao governo Trump e ao Departamento de Estado.",
+        "Que diplomatas e o ex-diplomata Ricupero teriam comentado a suposta decisão."
       ],
       "falta": [
-        "Manifestação oficial e formal do União Brasil e do Podemos confirmando as decisões.",
-        "Registro de atas ou deliberações partidárias nos órgãos da Justiça Eleitoral.",
-        "Declaração oficial ou nota pública expedida por Flávio Bolsonaro ou por Renata Abreu.",
-        "Registro em vídeo, áudio ou documento da declaração sobre fornecimento de vacinas."
+        "Confirmação oficial emitida pelo Departamento de Estado dos Estados Unidos.",
+        "Manifestação do Ministério das Relações Exteriores do Brasil ou da embaixadora citada.",
+        "Registro ou documento formal da decisão nos órgãos oficiais envolvidos."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Metrópoles",
-          "titulo": "União Brasil oficializa neutralidade e não vai apoiar Flávio Bolsonaro",
-          "link": "https://www.metropoles.com/brasil/uniao-brasil-oficializa-neutralidade-e-nao-vai-apoiar-flavio-bolsonaro"
-        },
-        {
-          "veiculo": "g1",
-          "titulo": "União Brasil decide ficar neutro na disputa presidencial nas Eleições 2026",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/uniao-brasil-confirma-neutralidade-nas-eleicoes.ghtml"
-        },
-        {
-          "veiculo": "Congresso em Foco",
-          "titulo": "\"Não vai faltar vacina\", diz Flávio Bolsonaro sobre eventual governo",
-          "link": "https://www.congressoemfoco.com.br/noticia/121005/nao-vai-faltar-vacina--diz-flavio-bolsonaro-sobre-eventual-governo"
-        },
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "União Brasil confirma neutralidade nas eleições presidenciais",
-          "link": "https://www.cnnbrasil.com.br/eleicoes/uniao-brasil-confirma-neutralidade-nas-eleicoes-presidenciais/"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "União Brasil confirma neutralidade nas eleições",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/uniao-brasil-confirma-neutralidade-nas-eleicoes.ghtml"
-        },
-        {
-          "veiculo": "JOTA",
-          "titulo": "Podemos opta pela neutralidade e Renata Abreu não será vice de Flávio Bolsonaro",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/podemos-opta-pela-neutralidade-e-renata-abreu-nao-sera-vice-de-flavio-bolsonaro"
-        }
-      ],
-      "link": "/materia/nc-uniao-brasil-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes-.html",
-      "corpo": [
-        "Os partidos União Brasil e Podemos teriam optado pela neutralidade nas eleições presidenciais de 2026. A postura atribuída às legendas indicaria que não haveria apoio formal a Flávio Bolsonaro. Além disso, Renata Abreu não seria candidata a vice-presidente na chapa.",
-        "Os veículos que publicaram as matérias apontariam que o União Brasil teria oficializado a decisão. O Podemos também teria adotado posicionamento neutro quanto à disputa presidencial. Em paralelo, Flávio Bolsonaro teria afirmado que não faltaria vacina em um eventual governo.",
-        "As matérias veiculadas trariam informações sobre dois partidos diferentes e seus alinhamentos eleitorais. Parte dos textos focaria apenas na neutralidade confirmada pelo União Brasil. Outra publicação mencionaria a escolha do Podemos e a situação do nome de Renata Abreu."
-      ],
-      "id": "circ:uniao-brasil-e-podemos-teriam-decidido-pela-neutralidade-nas-eleicoes-",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "União Brasil e Podemos teriam decidido pela neutralidade nas eleições de 2026",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:39:08.484Z",
-      "hora": "16h39"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo veiculado por quatro veículos de imprensa.",
-        "Que as publicações relatam o dólar a R$ 5,13 e o petróleo em queda.",
-        "Que declarações atribuídas a Trump citam negociações e novo ultimato ao Irã."
-      ],
-      "falta": [
-        "Confirmação oficial por parte dos governos dos Estados Unidos ou do Irã.",
-        "Detalhes e registro oficial sobre o navio supostamente atingido em Ormuz.",
-        "Manifestação das autoridades sobre os termos e o andamento real das negociações."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Petróleo fecha com queda de 5% após avanços nas negociações entre EUA e Irã",
-          "link": "https://www.cnnbrasil.com.br/economia/mercado/petroleo-fecha-com-queda-de-5-apos-avancos-nas-negociacoes-entre-eua-e-ira/"
-        },
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "Dólar dispara a R$ 5,13, apesar de queda do petróleo e alívio no Irã",
-          "link": "https://www.metropoles.com/negocios/dolar-dispara-a-r-513-apesar-de-queda-do-petroleo-e-alivio-no-ira"
-        },
-        {
-          "veiculo": "Valor Econômico",
-          "titulo": "Futuro das negociações entre EUA e Irã é incerto após navio ser atingido em Ormuz",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeUhFdDlpaG9fUmRhU0VsdUpFMlRVXzkzbUpEYTFTbm5GekM3Q1VsVGRpTVduYk5kcXpVcHpkT2Y3Uld1TzA4X2czdXdGam1kcjl1cG5vckVEb0Y4SzJhWkhWN2NGUFFCMVhfTk1ZUDc4MHRrcEhwa3NsU2hKTW5nT2FMNTZ2TFJsdVVMZEJ3aG1NUXRwZXNZMXlOZ0owZjBxMkI4NUNCUmFlVFFHcjlRZGxvVzBWUDZUTWdyYlY3YW02ZjU0RXJKV0l30gHYAUFVX3lxTE11QURpN3VVd0R1ajBLZEt3bkZobnVZQlc3YVlNSWd5QTRTalRTaFdRQnVDOVFrb0hLUXlVNkRWdTJYRlpBT1M2R25ZYWlpM2lwdnZWaURlSi1uUnBOOHlFcWZIS0NRY1AzVnlmbnNfOUZKcU54dW85RDlTOU5GeFpjV3FnNmRaSlZXNXAzLUM2eVFRd3pRTmlIUll4Y0JkbWZ1Wko4Sm5vcDdMY3lzVjU0Rnk1YmZJaUVGLW5Jb3BCd2RXOEsxX1JkSzNWak1VSC1zangxemh3bw?oc=5"
-        },
-        {
-          "veiculo": "estadao.com.br",
-          "titulo": "Trump afirma que EUA e Irã estão em negociações e faz novo ultimato ao regime iraniano",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZ1kxU0lFVnR1dnhaVmRfYUNidGM1MXl0Qjd5MFhHdW05aWtla0Q0NThEWmFRSjBrWXc2aEJvS0s1Q3lfOFk2dTgwQktEV3RYT2E2cGpVZkFZVnBoRU95UDlibl93WkwzdFJiaVBTQmZ6M2xBUUFpN3BJNUhPd3dRZ3dFTC1ibTdlaG5XQWJiS2dVXzl4WlB6S3dMVTZlZjdzMHVwU0VBMk1YdlpwVWpWTU5PbzY1TWxHejZ0Z2xJSDdoUmRLUWRFYTJsUW7SAdIBQVVfeXFMT2JKNGZ5cGJHb09Md1hsYWtGclcyM2wzTTBlZWNfMlFZWXBGMVBtbFc0NmU4VHkwZzZ1MktUVFZwbDg2NUlkT2FGNG5pMGJzS0V1RG83N2NEUDZGc0ZORUc0Qk9xYmlpMDRxUnQzYllXRUdITWNjc1JlMjNBUXJGMlVZR2pLQU5CdkJsTXg2Q0p4TExST2FnX3Z6RnR5QVhJbjlWMzAtN3Y2RjEyZjV1bVl4LU92amRoSlN6R2VtSUl3R2ZTVTdKU01rNURQLWVPcVNR?oc=5"
-        }
-      ],
-      "link": "/materia/nc-petroleo-teria-caido-e-dolar-subido-em-meio-a-negociacoes-entre-eua-e-.html",
-      "corpo": [
-        "Estados Unidos e Irã estariam em negociações diplomáticas, segundo relatos publicados pela imprensa. O avanço nas conversas entre os países teria motivado o fechamento do petróleo com queda de 5%.",
-        "Apesar da redução no preço do petróleo, o dólar teria disparado para a cotação de R$ 5,13. O futuro dos entendimentos estaria incerto após um navio ter sido atingido no Estreito de Ormuz.",
-        "Em meio aos relatos, Trump teria afirmado que os governos mantêm negociações e teria feito um novo ultimato ao regime iraniano. As publicações retratam um cenário dividido entre avanço diplomático e indefinição geopolítica."
-      ],
-      "id": "circ:petroleo-teria-caido-e-dolar-subido-em-meio-a-negociacoes-entre-eua-e-",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Petróleo teria caído e dólar subido em meio a negociações entre EUA e Irã",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:40:03.054Z",
-      "hora": "16h40"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que quatro veículos publicaram a indicação de Eduardo Girão como vice de Romeu Zema.",
-        "Que as matérias mencionam a formação de uma chapa puro-sangue no partido Novo.",
-        "Que Eduardo Girão é identificado pelas publicações como senador."
-      ],
-      "falta": [
-        "Confirmação oficial por meio de nota ou ata do partido Novo.",
-        "Declaracao oficial de Romeu Zema ratificando a escolha do vice.",
-        "Pronunciamento do senador Eduardo Girão confirmando o aceite.",
-        "Registro formal da chapa perante a Justiça Eleitoral."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Zema escolhe Eduardo Girão para vice e fecha chapa do Novo na corrida ao Planalto",
-          "link": "https://www.infomoney.com.br/politica/zema-escolhe-eduardo-girao-para-vice-e-fecha-chapa-do-novo-na-corrida-ao-planalto/"
+          "veiculo": "BBC Brasil",
+          "titulo": "Governo Trump revoga visto da embaixadora do Brasil nos EUA em nova escalada na crise entre os dois países",
+          "link": "https://www.bbc.com/portuguese/articles/cwyepe1lz0ro?at_medium=RSS&amp;at_campaign=rss"
         },
         {
           "veiculo": "Exame",
-          "titulo": "Zema escolhe Eduardo Girão para vice e terá chapa puro-sangue",
-          "link": "https://exame.com/brasil/zema-escolhe-eduardo-girao-para-vice-e-tera-chapa-puro-sangue/"
+          "titulo": "Visto da embaixadora brasileira nos EUA é revogado pelo Departamento de Estado",
+          "link": "https://exame.com/mundo/visto-da-embaixadora-brasileira-nos-eua-e-revogado-pelo-departamento-de-estado/"
         },
         {
           "veiculo": "Congresso em Foco",
-          "titulo": "Novo anuncia senador Eduardo Girão como vice em chapa de Romeu Zema",
-          "link": "https://www.congressoemfoco.com.br/noticia/121012/novo-anuncia-senador-eduardo-girao-como-vice-em-chapa-de-romeu-zema"
+          "titulo": "Governo Trump anuncia revogação de visto de embaixadora brasileira",
+          "link": "https://www.congressoemfoco.com.br/noticia/121015/governo-trump-anuncia-revogacao-de-visto-de-embaixadora-brasileira"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Diplomatas classificam como 'chantagem' decisão do governo Trump de revogar visto de embaixadora do Brasil nos EUA",
+          "link": "https://g1.globo.com/politica/blog/valdo-cruz/noticia/2026/08/04/diplomatas-classificam-como-chantagem-decisao-do-governto-trump-de-revogar-visto-de-embaixadora-do-brasil-nos-eua.ghtml"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Sem precedentes, diz Ricupero após EUA revogar visto de embaixadora",
+          "link": "https://www.poder360.com.br/poder-internacional/sem-precedentes-diz-ricupero-apos-eua-revogar-visto-de-embaixadora/"
+        },
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "Governo Trump ignorou tradição diplomática ao indicar embaixador",
+          "link": "https://www.metropoles.com/mundo/governo-trump-ignorou-tradicao-diplomatica-ao-indicar-embaixador"
+        }
+      ],
+      "link": "/materia/nc-governo-trump-teria-revogado-visto-da-embaixadora-do-brasil-nos-eua.html",
+      "corpo": [
+        "A suposta medida estaria sendo classificada por diplomatas como chantagem. O ex-diplomata Ricupero teria avaliado a revogação do visto da embaixadora como um ato sem precedentes. As publicações relatam ainda que o governo americano teria ignorado a tradição diplomática ao fazer a indicação de embaixador."
+      ],
+      "id": "circ:governo-trump-teria-revogado-visto-da-embaixadora-do-brasil-nos-eua",
+      "editoria": "internacional",
+      "uf": null,
+      "titulo": "Governo Trump teria revogado visto da embaixadora do Brasil nos EUA",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T22:27:30.023Z",
+      "hora": "18h27"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que três veículos da imprensa estão veiculando a formação da chapa presidencial.",
+        "Que o senador Eduardo Girão é citado nas matérias como vice de Romeu Zema.",
+        "Que a formação citada pelas publicações seria de chapa pura do Partido Novo."
+      ],
+      "falta": [
+        "Confirmação oficial emitida pela direção nacional do Partido Novo.",
+        "Manifestação oficial das assessorias dos políticos citados validando o anúncio.",
+        "Formalização da chapa ou ata partidária que comprove a indicação."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "JOTA",
+          "titulo": "Com Girão na vice de Zema, Novo terá chapa pura para a Presidência",
+          "link": "https://www.jota.info/eleicoes/eleicoes-2026/com-girao-na-vice-de-zema-novo-tera-chapa-pura-para-a-presidencia"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Girão e Zema celebram chapa: \"Brasil não está preparado para a dupla\"",
+          "link": "https://www.congressoemfoco.com.br/noticia/121016/girao-e-zema-celebram-chapa--brasil-nao-esta-preparado-para-a-dupla"
         },
         {
           "veiculo": "g1 Política",
@@ -1466,332 +1388,383 @@
           "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/quem-e-eduardo-girao.ghtml"
         }
       ],
-      "link": "/materia/nc-romeu-zema-teria-escolhido-o-senador-eduardo-girao-para-vice-em-chapa-.html",
+      "link": "/materia/nc-partido-novo-teria-chapa-pura-com-zema-e-girao-para-a-presidencia.html",
       "corpo": [
-        "As publicações teriam divergido sobre a origem da indicação, atribuída ora a uma decisão direta de Zema, ora a um anúncio do próprio Novo. As matérias também teriam apontado que a aliança configuraria uma chapa puro-sangue.",
-        "A medida definiria a estrutura da candidatura do partido Novo ao comando do Executivo. A confirmação consolidaria a presença do senador na chapa liderada por Zema."
+        "As matérias apontariam a escolha de Eduardo Girão para compor o grupo político ao lado de Zema. O arranjo consolidaria uma candidatura formada exclusivamente por quadros do próprio partido.",
+        "Segundo as publicações, os dois políticos teriam celebrado a definição da aliança. Ambos teriam declarado conjuntamente que o Brasil não estaria preparado para a dupla."
       ],
-      "id": "circ:romeu-zema-teria-escolhido-o-senador-eduardo-girao-para-vice-em-chapa-",
+      "id": "circ:partido-novo-teria-chapa-pura-com-zema-e-girao-para-a-presidencia",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Romeu Zema teria escolhido o senador Eduardo Girão para vice em chapa do Novo",
+      "titulo": "Partido Novo teria chapa pura com Zema e Girão para a Presidência",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:40:58.054Z",
-      "hora": "16h40"
+      "iso": "2026-08-04T22:27:50.961Z",
+      "hora": "18h27"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que as matérias atribuem os dados a apurações da Polícia Federal.",
-        "Que o valor citado nas reportagens é de 11 milhões de reais."
+        "Que o assunto estaria sendo publicado por três veículos da imprensa.",
+        "Que duas manchetes abordariam o lucro do Itaú no segundo trimestre.",
+        "Que uma manchete trataria do lucro líquido da empresa Vulcabras."
       ],
       "falta": [
-        "Número do inquérito ou procedimento oficial da Polícia Federal.",
-        "Pronunciamento oficial dos órgãos de investigação citados nas matérias.",
-        "Identificação oficial das empresas citadas e do imóvel mencionado.",
-        "Posição oficial do senador Weverton Rocha ou de sua defesa."
+        "Publicação dos balanços oficiais pelas companhias citadas nas notícias.",
+        "Registro formal dos dados financeiros na Comissão de Valores Mobiliários.",
+        "Manifestação oficial dos órgãos de fiscalização ou das próprias empresas."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Poder360",
-          "titulo": "Mulher de Weverton recebeu R$ 11 mi de advogado, diz PF",
-          "link": "https://www.poder360.com.br/poder-justica/mulher-de-weverton-recebeu-r-11-mi-de-advogado-diz-pf/"
+          "veiculo": "Folha",
+          "titulo": "Lucro do Itaú sobe para R$ 12,4 bilhões no 2º tri",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/08/lucro-do-itau-sobe-para-r-124-bilhoes-no-2o-tri.shtml"
+        },
+        {
+          "veiculo": "Exame",
+          "titulo": "Itaú registra lucro de R$ 12,4 bilhões no trimestre, alta de 7,8%",
+          "link": "https://exame.com/invest/mercados/itau-unibanco-registra-lucro-de-r-124-bilhoes-no-trimestre/"
         },
         {
           "veiculo": "InfoMoney",
-          "titulo": "PF diz que advogado enviou R$ 11 mi a mulher de senador e comprou casa para ele",
-          "link": "https://www.infomoney.com.br/politica/pf-diz-que-advogado-enviou-r-11-mi-a-mulher-de-senador-e-comprou-casa-para-ele/"
-        },
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Mulher de Weverton Rocha recebeu R$ 11 milhões de empresas ligadas a Willer Tomaz, aponta PF",
-          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRnF0WEhIbGdQTFFRWUtWaGZXUjc1V182dVFZS2tlVU54YTFrYUFlYmNtZ3hOVzVxeWRwbHRYcWtfNmNhYUVmMUc3TVZ1dGJMX1BvY0pPVzN5a3hMc3g0V1puLTBmclNSV0pRWWpkcUZ6QkVsXzQxcER0bkpOVHhVM1JwNzE0UkFtS3k4bnhJT1hGSVJBMl9NeGVlU205b3BaRUhQTkZ2VjY4QWlsdldNLVhoWXBYOFJoRWpscXpEUVppeEt0RDFjOUNkZmJ5enJxZHJQUDJnd3Z2M1dvTjFVZkVFOFd2b21xNkFBblJpYjTSAfYBQVVfeXFMTk5MaGwybWdzMko4ajdsS0F2T3daX1pVbjBVcktlRUNIMGVMYnVSZWM1OGxEWFR1VjRWay1nT3kwYk51RzBoRjNGQ3NqMkZ3RkpTaHduaU91Wl82SmRhYW0xSjJNZ05tcXJzOU9RYTJNTTlOVGNRelhUSEdQUGJ2M3F6TUtTa3ZvME92dW9vUFZIamVoQ081dXVTTFRzWXBxWTZtOXM5NmNpalgtMUdVaGZvQ05wam1Pa3Q2eFhnSkhEc2NoamtUNm14enhjcEZhaWt6MG1kU2poTFh1bjN1OG5ZSlRocjBXMjhDNElsc2dTMENPc053?oc=5"
+          "titulo": "Vulcabras (VULC3) encerra 2º tri com lucro líquido recorrente estável, a R$ 143,7 mi",
+          "link": "https://www.infomoney.com.br/mercados/vulcabras-vulc3-resultados-segundo-trimestre-2026/"
         }
       ],
-      "link": "/materia/nc-pf-teria-apontado-repasse-de-r-11-milhoes-a-esposa-do-senador-weverton.html",
+      "link": "/materia/nc-itau-e-vulcabras-teriam-divulgado-balancos-do-segundo-trimestre.html",
       "corpo": [
-        "A Polícia Federal teria apontado que a mulher do senador Weverton Rocha teria recebido 11 milhões de reais de um advogado. Segundo as alegações veiculadas, o profissional também teria comprado uma casa para o parlamentar.",
-        "Três veículos de imprensa atribuem as informações a investigações da Polícia Federal. As publicações divergem sobre a origem dos recursos, citando ora repasses diretos do advogado, ora transferências por meio de empresas ligadas a ele.",
-        "A apuração citada envolveria a transferência de verbas e a aquisição do imóvel residencial. Os relatos veiculados pelas publicações ainda carecem de validação em registros ou documentos oficiais."
+        "Publicações na imprensa apontariam que o Itaú teria alcançado lucro de 12,4 bilhões de reais no segundo trimestre. Ao mesmo tempo, notícias veiculadas trariam informações relativas à empresa Vulcabras.",
+        "Em relação ao Itaú, o valor informaria uma alta de 7,8% no período. As manchetes divergiriam entre si ao apresentar dados de companhias diferentes no mesmo conjunto de matérias. No caso da Vulcabras, o lucro líquido recorrente teria ficado estável em 143,7 milhões de reais.",
+        "Os dados estariam vinculados aos resultados financeiros referentes ao segundo trimestre do ano. A confirmação dos valores dependeria da verificação dos demonstrativos oficiais de cada instituição."
       ],
-      "id": "circ:pf-teria-apontado-repasse-de-r-11-milhoes-a-esposa-do-senador-weverton",
+      "id": "circ:itau-e-vulcabras-teriam-divulgado-balancos-do-segundo-trimestre",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "PF teria apontado repasse de R$ 11 milhões à esposa do senador Weverton Rocha",
+      "titulo": "Itaú e Vulcabras teriam divulgado balanços do segundo trimestre",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:41:55.304Z",
-      "hora": "16h41"
+      "iso": "2026-08-04T22:28:11.732Z",
+      "hora": "18h28"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto e publicado por tres veiculos da imprensa.",
-        "Flavio Dino e o STF sao citados como autores das autorizacoes.",
-        "As mencoes envolvem alegacoes de trafico de influencia na Dataprev e Saude."
+        "Que a informação está sendo veiculada por quatro veículos da imprensa.",
+        "Que as manchetes citam o partido Podemos, Renata Abreu e Flávio Bolsonaro.",
+        "Que a pauta envolve o alinhamento para as eleições presidenciais."
       ],
       "falta": [
-        "Confirmacao oficial do STF ou da Policia Federal sobre a existencia dos inqueritos.",
-        "Numero dos procedimentos ou processos judiciais citados.",
-        "Manifestacao oficial da defesa do individuo citado nas reportagens.",
-        "Detalhamento formal dos atos investigados na Dataprev e no setor de Saude."
+        "Nota oficial do partido Podemos confirmando a opção pela neutralidade.",
+        "Manifestação formal de Renata Abreu ou de Flávio Bolsonaro.",
+        "Documento ou ata partidária que comprove o resultado da deliberação."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "BBC Brasil",
-          "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
-          "link": "https://www.bbc.com/portuguese/articles/c74gj7mer80o?at_medium=RSS&amp;at_campaign=rss"
+          "veiculo": "JOTA",
+          "titulo": "Podemos opta pela neutralidade e Renata Abreu não será vice de Flávio Bolsonaro",
+          "link": "https://www.jota.info/eleicoes/eleicoes-2026/podemos-opta-pela-neutralidade-e-renata-abreu-nao-sera-vice-de-flavio-bolsonaro"
         },
         {
-          "veiculo": "Congresso em Foco",
-          "titulo": "Flávio Dino autoriza terceiro inquérito da PF contra Lulinha",
-          "link": "https://www.congressoemfoco.com.br/noticia/121004/flavio-dino-autoriza-terceiro-inquerito-da-pf-contra-lulinha"
-        },
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Tráfico de influência, Dataprev e Saúde: entenda as acusações contra Lulinha",
-          "link": "https://www.infomoney.com.br/politica/trafico-de-influencia-dataprev-e-saude-entenda-as-acusacoes-contra-lulinha/"
-        }
-      ],
-      "link": "/materia/nc-flavio-dino-teria-autorizado-terceiro-inquerito-da-pf-contra-investiga.html",
-      "corpo": [
-        "O Supremo Tribunal Federal teria autorizado a abertura de tres investigacoes conduzidas pela Policia Federal contra um mesmo individuo. O ministro Flavio Dino teria assinado a autorizacao para a instalacao de um terceiro inquerito. As medidas estariam atreladas a apuracoes sobre a conduta do citado homem.",
-        "As publicacoes que veicularam o caso indicam que os procedimentos apurariam a suposta pratica de trafico de influencia. Os fatos relatados teriam relacao com acoes envolvendo a Dataprev e a area da Saude. O conjunto de apuracoes estaria sob a responsabilidade dos investigadores da Policia Federal.",
-        "As reportagens apresentam diferencas de enfoque entre si quanto ao detalhamento do caso. Enquanto uma das publicacoes destaca especificamente a decisao individual do ministro Flavio Dino, outras enfatizam os setores governamentais que teriam sido atingidos."
-      ],
-      "id": "circ:flavio-dino-teria-autorizado-terceiro-inquerito-da-pf-contra-investiga",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Flavio Dino teria autorizado terceiro inquerito da PF contra investigado",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:42:31.460Z",
-      "hora": "16h42"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que dois veículos de imprensa publicaram informações sobre a decisão.",
-        "Que o Conselho Nacional de Justiça é o órgão apontado nas matérias.",
-        "Que os relatos associam o caso ao contexto da Lava Jato."
-      ],
-      "falta": [
-        "Confirmação ou posicionamento oficial por parte do Conselho Nacional de Justiça.",
-        "Identificação do número do processo ou procedimento administrativo correspondente.",
-        "Informação sobre o motivo formal que justificaria o eventual afastamento.",
-        "Citação oficial confirmando o nome da magistrada atingida pelo posicionamento."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Lava Jato: CNJ forma maioria para afastar juíza substituta de Moro do cargo",
-          "link": "https://www.cnnbrasil.com.br/politica/cnj-julgamento-afastamento-juiza-substituta-de-moro/"
+          "veiculo": "g1",
+          "titulo": "Podemos decide por neutralidade nas eleições presidenciais",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/podemos-decide-por-neutralidade-nas-eleicoes-presidenciais.ghtml"
         },
         {
           "veiculo": "g1 Política",
-          "titulo": "Lava Jato: CNJ tem maioria para afastar juíza Gabriela Hardt do cargo",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/04/cnj-caso-gabriela-hardt-lava-jato.ghtml"
+          "titulo": "Podemos decide por neutralidade nas eleições presidenciais",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/04/podemos-decide-por-neutralidade-nas-eleicoes-presidenciais.ghtml"
+        },
+        {
+          "veiculo": "cartacapital.com.br",
+          "titulo": "Podemos rejeita aliança e amplia fila de derrotas de Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMllWRGRWMUZhNUt2MmhXSmd4dTJZV0Q1YVpsZllqbE9xNVg0THNZT01oMDhOSzQ1WTBwdFVBS1RReERHVmIwRVVvbHdHMVVTclBwY0MtTW9mM096ejByTDMxR3VmRUJyQzg4QUxEdnBCRkRqNFIwVGR2aVdWZFdmekMwZDlCRGxSOHludHFVQl9CQnhGdUZTZGZSRFd5cUFoYmc5OXpDTm5oNm9Rc2ZPSQ?oc=5"
         }
       ],
-      "link": "/materia/nc-cnj-teria-maioria-para-afastar-juiza-ligada-a-operacao-lava-jato.html",
+      "link": "/materia/nc-podemos-teria-decidido-por-neutralidade-e-rejeitado-alianca-com-flavio.html",
       "corpo": [
-        "O Conselho Nacional de Justiça estaria com maioria formada para determinar o afastamento de uma magistrada de suas funções. A deliberação estaria inserida no âmbito de apurações relacionadas à Operação Lava Jato.",
-        "As publicações que veiculam o relato apresentam variações na identificação da investigada. Um dos veículos cita a juíza Gabriela Hardt, enquanto o outro a descreve como juíza substituta de Moro. Ambos os textos concordam que o plenário do órgão já teria alcançado o número de votos necessário para a medida."
+        "O partido Podemos teria optado pela neutralidade nas eleições presidenciais. A decisão envolveria a rejeição de uma aliança política com o senador Flávio Bolsonaro.",
+        "Com essa definição, Renata Abreu não ocuparia a vaga de vice-presidente na chapa citada. As publicações apontam ainda que o posicionamento da legenda ampliaria um histórico de derrotas políticas atribuídas ao parlamentar."
       ],
-      "id": "circ:cnj-teria-maioria-para-afastar-juiza-ligada-a-operacao-lava-jato",
+      "id": "circ:podemos-teria-decidido-por-neutralidade-e-rejeitado-alianca-com-flavio",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "CNJ teria maioria para afastar juíza ligada à Operação Lava Jato",
+      "titulo": "Podemos teria decidido por neutralidade e rejeitado aliança com Flávio Bolsonaro",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T20:43:30.593Z",
-      "hora": "16h43"
+      "iso": "2026-08-04T22:28:33.653Z",
+      "hora": "18h28"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Três veículos de imprensa veicularam matérias sobre a sanção da lei do STJ.",
+        "As publicações citam alterações no acesso e na suspensão de recursos no tribunal."
+      ],
+      "falta": [
+        "Publicação oficial do ato no Diário Oficial da União.",
+        "Confirmação do conteúdo por meio de nota da Presidência da República ou do STJ.",
+        "Número oficial da lei e data de sua promulgação."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Lula sanciona lei que autoriza o STJ a suspender todos os processos sobre o mesmo tema até julgar o assunto",
+          "link": "https://g1.globo.com/politica/noticia/2026/08/04/lula-sanciona-lei-que-autoriza-o-stj-a-suspender-todos-os-processos-sobre-o-mesmo-tema-ate-julgar-o-assunto.ghtml"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Lula sanciona filtro de relevância para recursos especiais no STJ",
+          "link": "https://www.congressoemfoco.com.br/noticia/121008/lula-sanciona-filtro-de-relevancia-para-recursos-especiais-no-stj"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Ao vivo: Lula sanciona lei que restringe acesso ao STJ",
+          "link": "https://www.poder360.com.br/poder-governo/ao-vivo-lula-sanciona-lei-que-restringe-acesso-ao-stj/"
+        }
+      ],
+      "link": "/materia/nc-lula-teria-sancionado-lei-que-altera-acesso-e-recursos-no-stj.html",
+      "corpo": [
+        "O presidente Luiz Inácio Lula da Silva teria sancionado uma lei que altera regras relativas ao Superior Tribunal de Justiça. A medida estaria relacionada ao processamento de ações direcionadas ao tribunal.",
+        "As publicações divergem quanto ao teor principal da mudança legislativa. Enquanto um veículo aponta a instituição de um filtro de relevância para recursos especiais, outro indica a autorização para a corte suspender processos sobre um mesmo tema até seu julgamento, e um terceiro relata restrição de acesso ao órgão.",
+        "A sanção do texto teria ocorrido com transmissão ao vivo, segundo uma das matérias veiculadas. A delimitação exata do alcance da norma dependeria do detalhamento do texto legal."
+      ],
+      "id": "circ:lula-teria-sancionado-lei-que-altera-acesso-e-recursos-no-stj",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Lula teria sancionado lei que altera acesso e recursos no STJ",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T22:28:56.696Z",
+      "hora": "18h28"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a informação está sendo veiculada por dois veículos da imprensa.",
+        "Que o Catar é citado pelas publicações como a fonte das afirmações."
+      ],
+      "falta": [
+        "Manifestação ou registro em fonte oficial dos órgãos envolvidos.",
+        "Informações sobre o conteúdo e os termos dos rascunhos do acordo.",
+        "Identificação de quando ou em que contexto as declarações teriam ocorrido."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Valor Econômico",
+          "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW1pMXdCUktaREszZm44Z3NlS3JuM1UtYjhoUGdJZWpNbHd0WWlBbjR4NXVtTWlqS1VZUWU1WGM4VU9yU0FaQmdwZjA3QmdxQlhBdWVqRmpuZXl6Nmp3blRud1lQQ1RadmE2R0FCOW1HNTRTbkliQWRZQS0xdUhMVU53emYwSUhjNjktcWRCWDhCdFRDNi1tVXlXUXlzb2hhOTl5anJWbmRJWXd4d2FvdGpR0gHAAUFVX3lxTE1FYXNPRG5JVC1EQ2NRcHpCTEJtc1FlWkItRVN0dGc3ZWZmTHRSdEs3bXFEdUIyTFVvTTF3VjRTRWR0cERTUG5Xemdxa29EVVhwdFI1c2lEajg1VnZ2WElYdDM2ZGZHVGREZXRWUlVkMEh4YWd1YjdPUFJnVmVlTEV2cWtLWmE5d0J5Qm5MUUpHOEN0R2Vka3pVUWwxZS1Sdzk4RnZkdG9hcm5NVlJmeXVjUmp4X2RWTHJVeFVhSnNQRw?oc=5"
+        },
+        {
+          "veiculo": "estadao.com.br",
+          "titulo": "Rascunhos de um possível acordo entre EUA e Irã estão sendo distribuídos, afirma Catar",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTU1QandwNXpDNEZVUnJoTlVjM0EwUHVhX1N5WHJGUnNvUExLSWtjbnNjV0RrMkFlaDg5NjNJcXY4YTl0elFWODVEMEFLNmFMbExwdE1oSE9zakdNT1RVOFdXamduMUZHVWpNTWZ1cE5QOHFjaWFKS0FXZXRtLU9KY3BIRG5VZmhMUlkyNFJta2hjYkRtMkZ3RC1mNk9yZFJoV201STBDQU9naldsZXAxOVk1My1leUFnSmoxOGhfYkVENzZHSU04NzdjMNIB0AFBVV95cUxQZlNPeFVzMXlGc2ZKME1wNk1qMnhWcUk1eVd4NTZuTU1ia3J5NWttM2FmVU9fRDhCTGF2TTdFeVpiT3pmZzhwY1FxNGdVYnY4QUdPN3lMN3B4THpMM2ZwTUdlWVlCRTNsNUhPdk4zWWRhZ2NvOU54N3FkN2tsU1d5SGtWdmdlX0h5U0ZWd29sLWMxY0pRaVZlT2xhLU96ZW5hV1M5X0huTkR1V2ltcDV5MV9xdXQ5VEtTdTFqeS05ZDVhcGxwM3R2WWdBRzREcU13?oc=5"
+        }
+      ],
+      "link": "/materia/nc-catar-teria-apontado-progresso-para-negociacoes-entre-eua-e-ira.html",
+      "corpo": [
+        "O Catar teria afirmado que haveria progresso rumo a negociações diplomáticas entre os Estados Unidos e o Irã. A alegação descreveria um avanço no diálogo entre as partes.",
+        "Segundo os veículos que publicaram a notícia, rascunhos de um possível acordo também estariam sendo distribuídos. O repasse desses documentos teria sido indicado pelo próprio Catar."
+      ],
+      "id": "circ:catar-teria-apontado-progresso-para-negociacoes-entre-eua-e-ira",
+      "editoria": "internacional",
+      "uf": null,
+      "titulo": "Catar teria apontado progresso para negociações entre EUA e Irã",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-04T22:29:16.538Z",
+      "hora": "18h29"
     }
   ],
   "pautas": [
     {
-      "titulo": "Por que Lula e Flávio Bolsonaro evitam debates",
-      "veiculo": "JOTA",
+      "titulo": "Governo Trump revoga visto da embaixadora do Brasil nos EUA em nova escalada na crise entre os dois países",
+      "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 10,
       "tambemEm": [
-        "BBC Brasil",
+        "Exame",
         "Congresso em Foco",
         "g1 Política"
       ]
     },
     {
-      "titulo": "União Brasil oficializa neutralidade e não vai apoiar Flávio Bolsonaro",
+      "titulo": "EUA alega \"ação recíproca\" ao cancelar visto de embaixadora do Brasil",
       "veiculo": "Metrópoles",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 9,
       "tambemEm": [
-        "g1",
+        "Exame",
         "Congresso em Foco",
-        "CNN Brasil"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Petróleo fecha com queda de 5% após avanços nas negociações entre EUA e Irã",
-      "veiculo": "CNN Brasil",
+      "titulo": "Governo Trump anuncia revogação de visto de embaixadora brasileira",
+      "veiculo": "Congresso em Foco",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 9,
       "tambemEm": [
-        "Metrópoles",
-        "Valor Econômico",
-        "estadao.com.br"
+        "Exame",
+        "BBC Brasil",
+        "g1 Política"
       ]
     },
     {
-      "titulo": "União Brasil confirma neutralidade nas eleições",
+      "titulo": "Visto da embaixadora brasileira nos EUA é revogado pelo Departamento de Estado",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "Congresso em Foco",
+        "BBC Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Trump dobra aposta em interferência e revoga visto de embaixadora do Brasil em Washington",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Diplomatas classificam como 'chantagem' decisão do governo Trump de revogar visto de embaixadora do Brasil nos EUA",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Quem é Maria Luiza Ribeiro Viotti, embaixadora do Brasil nos EUA que teve visto revogado pelo governo Trump",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Sem precedentes, diz Ricupero após EUA revogar visto de embaixadora",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 7,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Revogar visto de embaixadora nos EUA é incomum, diz Senado",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 7,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Governo Trump ignorou tradição diplomática ao indicar embaixador",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "Congresso em Foco",
+        "BBC Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Com Girão na vice de Zema, Novo terá chapa pura para a Presidência",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Quem é Daniel Perez, o indicado para a embaixada no Brasil que está no centro de nova crise diplomática com os EUA",
       "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "g1",
-        "CNN Brasil",
+        "Exame",
+        "BBC Brasil",
         "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Zema escolhe Eduardo Girão para vice e fecha chapa do Novo na corrida ao Planalto",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Novo anuncia senador Eduardo Girão como vice em chapa de Romeu Zema",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "Exame",
-        "g1 Política",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Zema escolhe Eduardo Girão para vice e terá chapa puro-sangue",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "InfoMoney"
       ]
     },
     {
       "titulo": "Quem é Eduardo Girão, senador escolhido como vice na chapa de Romeu Zema",
       "veiculo": "g1 Política",
       "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Congresso em Foco",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Lucro do Itaú sobe para R$ 12,4 bilhões no 2º tri",
+      "veiculo": "Folha",
+      "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
         "Exame",
-        "Congresso em Foco",
         "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro diz que definição sobre vice sairá até o dia 15 de agosto",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "\"Não vai faltar vacina\", diz Flávio Bolsonaro sobre eventual governo",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Política",
-        "Metrópoles",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Catar diz que há progresso rumo a negociações entre EUA e Irã",
-      "veiculo": "Valor Econômico",
-      "quentura": 3,
-      "tambemEm": [
-        "CNN Brasil",
-        "estadao.com.br"
-      ]
-    },
-    {
-      "titulo": "Mulher de Weverton recebeu R$ 11 mi de advogado, diz PF",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "InfoMoney",
-        "Correio Braziliense"
       ]
     },
     {
       "titulo": "Podemos opta pela neutralidade e Renata Abreu não será vice de Flávio Bolsonaro",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
+        "g1",
         "g1 Política",
-        "Metrópoles"
+        "cartacapital.com.br"
       ]
     },
     {
-      "titulo": "As 3 investigações contra Lulinha autorizadas pelo STF",
-      "veiculo": "BBC Brasil",
+      "titulo": "Lula sanciona lei que autoriza o STJ a suspender todos os processos sobre o mesmo tema até julgar o assunto",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
         "Congresso em Foco",
-        "InfoMoney"
+        "Poder360"
       ]
     },
     {
-      "titulo": "O embate entre Lula e Flávio Bolsonaro no Pará, segundo o Real Time Big Data",
-      "veiculo": "CartaCapital",
+      "titulo": "Ao vivo: Lula sanciona lei que restringe acesso ao STJ",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "BBC Brasil",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Trump afirma que EUA e Irã estão em negociações e faz novo ultimato ao regime iraniano",
-      "veiculo": "estadao.com.br",
-      "quentura": 2,
-      "tambemEm": [
-        "CNN Brasil",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Dólar dispara a R$ 5,13, apesar de queda do petróleo e alívio no Irã",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "Lava Jato: CNJ forma maioria para afastar juíza substituta de Moro do cargo",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
+        "Congresso em Foco",
         "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Girão e Zema celebram chapa: \"Brasil não está preparado para a dupla\"",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "JOTA"
       ]
     }
   ]
