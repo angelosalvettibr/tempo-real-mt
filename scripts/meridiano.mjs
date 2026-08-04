@@ -52,7 +52,11 @@ const QUANTAS_REESCREVER = Number(process.env.QUANTAS_REESCREVER || 40);
    Tudo por variavel de ambiente: TETO_MT, TETO_RS, TETO_RJ, TETO_BR, TETO_MUNDO
    sobrescrevem sem mexer no codigo.                                         */
 const TETOS = {
-  br:    { fonte: 5, materias: 40 },
+  // Brasil tem 85 fontes e 257 itens colhidos, e publicava 11 — a edicao com
+  // mais material e menos materia. Com 28 fontes entregando, teto 5 por fonte
+  // sufoca: os 22 orgaos federais recem-promovidos publicam pouco cada um, e
+  // o teto baixo corta justamente a variedade que eles trazem.
+  br:    { fonte: 8, materias: 48 },
   mundo: { fonte: 4, materias: 24 },   // poucas fontes, muito volume: segura
   mt:    { fonte: 8, materias: 40 },   // muitas fontes, pouco volume: solta
   rs:    { fonte: 7, materias: 40 },
@@ -743,6 +747,16 @@ if (temChave()) {
   // vazia.
   // O teto da edicao manda; a contagem de fontes vivas so afrouxa quando ha
   // pouquissima fonte, para a edicao nao ficar vazia.
+  /* Fonte academica e de divulgacao cientifica entrega MUITO e com facilidade
+     — o Jornal da USP sozinho ocupou cinco das onze materias da edicao Brasil
+     num dia em que CNJ, STF e CVM ficaram como nao confirmadas. Nao e culpa
+     da fonte: ela publica bem e responde sempre. Mas edicao nacional feita de
+     dieta vegana e podcast de arquitetura nao e edicao nacional.
+
+     Teto proprio, mais baixo. O que sobra vai para quem cobre a pauta do dia. */
+  const ACADEMICA = /(usp|unicamp|unesp|fapesp|fiocruz|scidev|conversation|ipea)/i;
+  const TETO_ACADEMICA = 2;
+
   const doTeto = tetoDaEdicao(GERAL ? (GERAL.chave || 'br') : UF);
   const TETO_POR_FONTE = fontesDistintas <= 3
     ? Math.max(doTeto.fonte, 7)
@@ -810,6 +824,13 @@ if (temChave()) {
     // Repetida DENTRO da rodada: 0.55 e o certo aqui, porque sao variacoes
     // escritas no mesmo momento a partir do mesmo release.
     if (titulosJaFeitos.some(t => parecidas(t, i.titulo) >= 0.55)) return false;
+
+    // Teto proprio para fonte academica na edicao nacional
+    if (GERAL && ACADEMICA.test(String(i.veiculo || '') + String(i.link || ''))) {
+      const jaDela = usos.get('__academica__') || 0;
+      if (jaDela >= TETO_ACADEMICA) return false;
+      usos.set('__academica__', jaDela + 1);
+    }
     // ...e repetida em rodadas ANTERIORES. Sem isto o robo nao sabia o que
     // publicou ha tres horas, e a mesma historia saia tres vezes com o titulo
     // ligeiramente diferente — "NASA apresenta", "NASA exibe na", "NASA exibe

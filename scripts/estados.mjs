@@ -45,7 +45,23 @@ export const FEDERAIS_LIVRES = [
   { id:'ibge',      nome:'IBGE',                    url:'https://agenciadenoticias.ibge.gov.br', base:'https://agenciadenoticias.ibge.gov.br' },
   { id:'itamaraty', nome:'Itamaraty',               url:'https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa', base:'https://www.gov.br/mre' },
   { id:'bc',        nome:'Banco Central',           url:'https://www.bcb.gov.br/detalhenoticia', base:'https://www.bcb.gov.br' },
-  { id:'govbr',     nome:'gov.br',                  url:'https://www.gov.br/pt-br/noticias', base:'https://www.gov.br' }
+  { id:'govbr',     nome:'gov.br',                  url:'https://www.gov.br/pt-br/noticias', base:'https://www.gov.br' },
+
+  // Onde mora a pauta nacional do dia. Na rodada em que o jornal registrou
+  // "CNJ teria aprovado", "STF teria autorizado buscas" e "Lula teria
+  // indicado para a CVM" como NAO confirmadas, o documento de cada uma
+  // existia — so nao havia fonte cadastrada para busca-lo.
+  { id:'cnj',       nome:'CNJ',                     url:'https://www.cnj.jus.br/noticias/', base:'https://www.cnj.jus.br' },
+  { id:'planalto',  nome:'Planalto',                url:'https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias', base:'https://www.gov.br/planalto' },
+  { id:'agu',       nome:'AGU',                     url:'https://www.gov.br/agu/pt-br/comunicacao/noticias', base:'https://www.gov.br/agu' },
+  { id:'cvm',       nome:'CVM',                     url:'https://www.gov.br/cvm/pt-br/assuntos/noticias', base:'https://www.gov.br/cvm' },
+  { id:'defesa',    nome:'Ministério da Defesa',    url:'https://www.gov.br/defesa/pt-br/centrais-de-conteudo/noticias', base:'https://www.gov.br/defesa' },
+  { id:'justica',   nome:'Ministério da Justiça',   url:'https://www.gov.br/mj/pt-br/assuntos/noticias', base:'https://www.gov.br/mj' },
+  { id:'fazenda',   nome:'Ministério da Fazenda',   url:'https://www.gov.br/fazenda/pt-br/assuntos/noticias', base:'https://www.gov.br/fazenda' },
+  { id:'saude-fed', nome:'Ministério da Saúde',     url:'https://www.gov.br/saude/pt-br/assuntos/noticias', base:'https://www.gov.br/saude' },
+  { id:'stm',       nome:'STM',                     url:'https://www.stm.jus.br/informacao/agencia-de-noticias', base:'https://www.stm.jus.br' },
+  { id:'cnmp',      nome:'CNMP',                    url:'https://www.cnmp.mp.br/portal/todas-as-noticias', base:'https://www.cnmp.mp.br' },
+  { id:'dpu',       nome:'Defensoria Pública da União', url:'https://www.dpu.def.br/noticias', base:'https://www.dpu.def.br' }
 ];
 
 // ESTADOS — a configuração que torna o modelo replicável.
