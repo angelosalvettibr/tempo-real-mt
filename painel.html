@@ -70,6 +70,28 @@ tr:hover td{background:var(--painel)}
 .vazio{text-align:center;padding:60px 20px;color:var(--fraco);font-family:var(--mono);font-size:12px}
 .aviso{background:#2A1F0B;border:1px solid #4A3A14;color:#E8C46A;padding:13px 16px;margin:16px 0;font-family:var(--mono);font-size:11.5px;line-height:1.6}
 @media (max-width:800px){ .esconde{display:none} .filtros input{margin-left:0;width:100%} }
+.pubs{background:var(--painel);border:1px solid var(--borda);border-radius:3px;padding:20px 22px;margin:0 0 20px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.pubs h2{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--texto);font-weight:600;margin:0 0 14px;padding-bottom:11px;border-bottom:2px solid var(--texto);display:flex;align-items:baseline;gap:10px}
+.pubs h2 span{margin-left:auto;font-size:9.5px;color:var(--fraco);letter-spacing:.1em}
+.pubs .abas{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.pubs .abas button{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  background:#fff;border:1px solid var(--borda);color:var(--texto2);padding:7px 12px;cursor:pointer;border-radius:2px}
+.pubs .abas button:hover{border-color:var(--texto)}
+.pubs .abas button[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:#fff}
+.pubs .abas button i{font-style:normal;opacity:.65;margin-left:6px}
+.pubs .lista{max-height:520px;overflow-y:auto}
+.pubs .it{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--borda);font-size:13.5px}
+.pubs .it time{font-family:var(--mono);font-size:10px;color:var(--fraco);flex:none;width:44px}
+.pubs .it .ev{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;flex:none;
+  padding:2px 7px;border:1px solid;border-radius:2px}
+.pubs .it .ev.confirmado{color:var(--viva);border-color:var(--viva)}
+.pubs .it .ev.atribuido{color:var(--instavel);border-color:var(--instavel)}
+.pubs .it .ev.sem-confirmacao{color:var(--fraco);border-color:var(--borda)}
+.pubs .it .ev.redacao{color:var(--bloq);border-color:var(--bloq)}
+.pubs .it a{flex:1;color:var(--texto);text-decoration:none;line-height:1.4}
+.pubs .it a:hover{color:var(--quar);text-decoration:underline}
+.pubs .it small{font-family:var(--mono);font-size:9.5px;color:var(--fraco);flex:none}
+.pubs .vazio{font-family:var(--mono);font-size:12px;color:var(--fraco);padding:24px 0;text-align:center}
 .edicoes,.desemp,.red,.lt{background:var(--painel);border:1px solid var(--borda);border-radius:3px;
   padding:0 0 4px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .edicoes,.desemp{padding:20px 22px}
@@ -81,7 +103,8 @@ tr:hover td{background:var(--painel)}
 .edicoes td{padding:10px;border-bottom:1px solid var(--borda);text-align:right;font-family:var(--mono);font-size:12.5px}
 .edicoes td:first-child{text-align:left;font-family:var(--sans);font-weight:600;font-size:13px}
 .edicoes tr:hover{background:var(--painel)}
-.edicoes .pc{font-size:11px;color:var(--fraco);margin-left:5px}
+.edicoes /* O percentual saia colado no numero absoluto — "2934%" em vez de "29 · 34%". */
+.pc{margin-left:8px;padding-left:8px;border-left:1px solid var(--borda);font-size:10px;opacity:.75}
 .edicoes .bom{color:#1F7A3D}.edicoes .meio{color:#9A6B0C}.edicoes .ruim{color:#B3261E}
 .edicoes tfoot td{border-top:2px solid var(--borda);border-bottom:0;font-weight:700}
 .edicoes .nota{font-family:var(--sans);font-size:12px;color:var(--fraco);margin-top:9px;line-height:1.5}
@@ -228,6 +251,7 @@ tr:hover td{background:var(--painel)}
 
 <main class="wrap">
   <div class="edicoes" id="edicoes"></div>
+  <div class="pubs" id="pubs"></div>
   <div class="desemp" id="desemp"></div>
   <div class="red" id="redacao"></div>
   <div class="lt" id="linhatempo"></div>
@@ -915,6 +939,65 @@ async function listaNotas(){
   } catch {}
 }
 trava();
+
+/* --------------------- O QUE FOI PUBLICADO EM CADA EDIÇÃO ---------------
+   A tabela dizia quantas materias sairam por edicao, mas nao QUAIS. Sem isso
+   nao da para perceber que uma edicao esta publicando tres versoes da mesma
+   coisa, ou que o selo esta errado — que foi como descobrimos os problemas de
+   hoje, olhando o site em vez do painel.                                    */
+let pubAba = 'todas', pubDados = {};
+
+async function publicadas(){
+  const alvo = document.getElementById('pubs');
+  const eds = await Promise.all(EDS.map(async ([uf, nome]) => {
+    try {
+      const r = await fetch(`dados/edicao-${uf}.json?t=${Date.now()}`, { cache:'no-store' });
+      if (!r.ok) return [uf, nome, []];
+      const j = await r.json();
+      const tudo = [...(j.itens || []), ...(j.circulando || [])]
+        .filter(i => i.titulo)
+        .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+      return [uf, nome, tudo];
+    } catch { return [uf, nome, []]; }
+  }));
+
+  pubDados = Object.fromEntries(eds.map(([uf, nome, itens]) => [uf, { nome, itens }]));
+  desenharPub();
+}
+
+function desenharPub(){
+  const alvo = document.getElementById('pubs');
+  const ROT = { confirmado:'doc', atribuido:'atrib', 'sem-confirmacao':'sem', redacao:'red' };
+
+  const todas = Object.entries(pubDados).flatMap(([uf, d]) => d.itens.map(i => ({ ...i, _uf: uf })));
+  const vistos = new Set();
+  const lista = (pubAba === 'todas'
+    ? todas.filter(i => { const k = i.id || i.titulo; if (vistos.has(k)) return false; vistos.add(k); return true; })
+    : (pubDados[pubAba]?.itens || []).map(i => ({ ...i, _uf: pubAba })))
+    .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
+
+  alvo.innerHTML = `
+    <h2>O que foi publicado <span>${lista.length} ${lista.length === 1 ? 'matéria' : 'matérias'}</span></h2>
+    <div class="abas">
+      <button data-p="todas" aria-pressed="${pubAba === 'todas'}">Todas <i>${todas.length}</i></button>
+      ${Object.entries(pubDados).map(([uf, d]) =>
+        `<button data-p="${uf}" aria-pressed="${pubAba === uf}">${d.nome} <i>${d.itens.length}</i></button>`).join('')}
+    </div>
+    <div class="lista">${lista.length ? lista.map(i => {
+      const n = i.nivel || 'confirmado';
+      return `<div class="it">
+        <time>${(i.hora || '').replace('h',':')}</time>
+        <span class="ev ${n}">${ROT[n] || n}</span>
+        <a href="${i.link || '#'}" target="_blank" rel="noopener">${(i.titulo||'').replace(/[<>]/g,'')}</a>
+        <small>${(i.municipioNome || i.origemNome || '').replace(/[<>]/g,'').slice(0,26)}</small>
+      </div>`;
+    }).join('') : '<p class="vazio">nada nesta edição</p>'}</div>`;
+
+  alvo.querySelectorAll('[data-p]').forEach(b => b.addEventListener('click', () => {
+    pubAba = b.dataset.p; desenharPub();
+  }));
+}
+publicadas();
 
 async function desempenho(){
   const alvo = document.getElementById('desemp');
