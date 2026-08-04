@@ -72,7 +72,16 @@ async function chamarUmaVez(prompt, ms = 35000){
         body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }], generationConfig: cfg })
       });
       if (r.status === 400 && comThinking) continue;
-      if (!r.ok) throw new Error(`${modeloBom}: HTTP ${r.status} ${(await r.text()).slice(0,120)}`);
+      if (!r.ok) {
+        // A resposta de erro do Google vem em JSON formatado, com quebras de
+        // linha. Cortar os primeiros 120 caracteres mostrava so o comeco da
+        // chave "error" e escondia justamente o motivo — foi por isso que o
+        // log dizia apenas 'HTTP 400 { "error": { "code": 4'.
+        const cru = await r.text();
+        let motivo = cru.replace(/\s+/g, ' ').slice(0, 200);
+        try { motivo = JSON.parse(cru)?.error?.message || motivo; } catch {}
+        throw new Error(`${modeloBom}: HTTP ${r.status} — ${String(motivo).slice(0, 220)}`);
+      }
       const j = await r.json();
       const txt = j?.candidates?.[0]?.content?.parts?.map(p=>p.text).join('') || '';
       if (!txt) throw new Error(`${modeloBom}: resposta vazia`);
@@ -292,6 +301,18 @@ ${texto}`;
 export async function reescrever({ fonte, titulo, texto }){
   if (!temChave()) throw new Error('sem GEMINI_API_KEY');
   if (!texto || texto.length < 220) throw new Error('texto original curto demais');
+
+  // Quando textoCompleto nao reconhece a estrutura da pagina, ele devolve o
+  // corpo cru — que pode vir cheio de menu, script residual e lixo. O corte de
+  // 6000 ja existe, mas caractere de controle e sequencia invalida atravessam
+  // e sao candidatos a recusa da API.
+  texto = String(texto)
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ' ')
+    .replace(/\uFFFD/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 6000);
+  if (texto.length < 220) throw new Error('texto original curto demais');
 
   const bruto = await chamar(PROMPT(fonte, titulo, texto));
 
