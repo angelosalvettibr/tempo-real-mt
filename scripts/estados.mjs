@@ -1,3 +1,53 @@
+
+/* ================= ÓRGÃOS FEDERAIS COMO FONTE DE TEXTO ===================
+   Vinte e oito orgaos federais ja estavam cadastrados — mas so no cacador,
+   onde servem para CONFIRMAR uma historia que a imprensa deu. Nenhum podia
+   gerar materia propria.
+
+   Na pratica isso significava que a Policia Federal, que publica comunicado
+   de operacao todo dia, nao rendia uma linha no Meridiano. E operacao da PF e
+   metade da capa dos jornais.
+
+   O motivo era historico: quando as fontes livres foram montadas, o foco era
+   regional, e os federais entraram so no cacador. Aqui eles viram fonte de
+   texto tambem — sao todos gov.br e jus.br, ja autorizados pelo filtro de
+   licenca, e publicam diariamente.                                         */
+// Fonte repetida na lista faz o robo ler o mesmo site duas vezes e contar
+// errado no painel. A limpeza e feita uma vez, na saida.
+export const semDuplicar = lista => {
+  const vistos = new Set();
+  return (lista || []).filter(f => {
+    const k = String(f.id || f.url || '').toLowerCase();
+    if (!k || vistos.has(k)) return false;
+    vistos.add(k); return true;
+  });
+};
+
+export const FEDERAIS_LIVRES = [
+  { id:'pf',        nome:'Polícia Federal',         url:'https://www.gov.br/pf/pt-br/assuntos/noticias', base:'https://www.gov.br/pf' },
+  { id:'prf',       nome:'Polícia Rodoviária Federal', url:'https://www.gov.br/prf/pt-br/noticias', base:'https://www.gov.br/prf' },
+  { id:'mpf',       nome:'MPF',                     url:'https://www.mpf.mp.br/pgr/noticias-pgr', base:'https://www.mpf.mp.br' },
+  { id:'cgu',       nome:'CGU',                     url:'https://www.gov.br/cgu/pt-br/assuntos/noticias', base:'https://www.gov.br/cgu' },
+  { id:'tcu',       nome:'TCU',                     url:'https://portal.tcu.gov.br/imprensa/noticias', base:'https://portal.tcu.gov.br' },
+  { id:'inss',      nome:'INSS',                    url:'https://www.gov.br/inss/pt-br/noticias', base:'https://www.gov.br/inss' },
+  { id:'anvisa',    nome:'Anvisa',                  url:'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa', base:'https://www.gov.br/anvisa' },
+  { id:'ans',       nome:'ANS',                     url:'https://www.gov.br/ans/pt-br/assuntos/noticias', base:'https://www.gov.br/ans' },
+  { id:'fiocruz',   nome:'Fiocruz',                 url:'https://portal.fiocruz.br/noticias', base:'https://portal.fiocruz.br' },
+  { id:'ibama',     nome:'Ibama',                   url:'https://www.gov.br/ibama/pt-br/assuntos/noticias', base:'https://www.gov.br/ibama' },
+  { id:'icmbio',    nome:'ICMBio',                  url:'https://www.gov.br/icmbio/pt-br/assuntos/noticias', base:'https://www.gov.br/icmbio' },
+  { id:'inpe',      nome:'Inpe',                    url:'https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias', base:'https://www.gov.br/inpe' },
+  { id:'mec',       nome:'Ministério da Educação',  url:'https://www.gov.br/mec/pt-br/assuntos/noticias', base:'https://www.gov.br/mec' },
+  { id:'trabalho',  nome:'Ministério do Trabalho',  url:'https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudos', base:'https://www.gov.br/trabalho-e-emprego' },
+  { id:'dnit',      nome:'Dnit',                    url:'https://www.gov.br/dnit/pt-br/assuntos/noticias', base:'https://www.gov.br/dnit' },
+  { id:'antt',      nome:'ANTT',                    url:'https://www.gov.br/antt/pt-br/assuntos/noticias', base:'https://www.gov.br/antt' },
+  { id:'funai',     nome:'Funai',                   url:'https://www.gov.br/funai/pt-br/assuntos/noticias', base:'https://www.gov.br/funai' },
+  { id:'ipea',      nome:'Ipea',                    url:'https://www.ipea.gov.br/portal/imprensa', base:'https://www.ipea.gov.br' },
+  { id:'ibge',      nome:'IBGE',                    url:'https://agenciadenoticias.ibge.gov.br', base:'https://agenciadenoticias.ibge.gov.br' },
+  { id:'itamaraty', nome:'Itamaraty',               url:'https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa', base:'https://www.gov.br/mre' },
+  { id:'bc',        nome:'Banco Central',           url:'https://www.bcb.gov.br/detalhenoticia', base:'https://www.bcb.gov.br' },
+  { id:'govbr',     nome:'gov.br',                  url:'https://www.gov.br/pt-br/noticias', base:'https://www.gov.br' }
+];
+
 // ESTADOS — a configuração que torna o modelo replicável.
 //
 // Nacional e internacional são compartilhados por todos. O que muda de estado
@@ -388,6 +438,11 @@ export const EDICOES_GERAIS = {
       { id:'tcu',         nome:'TCU', url:'https://portal.tcu.gov.br/imprensa/noticias/rss.xml', base:'https://portal.tcu.gov.br/imprensa/noticias' },
       { id:'ipea',        nome:'Ipea', url:'https://www.ipea.gov.br/portal/rss', base:'https://www.ipea.gov.br/portal' },
       { id:'fapesp',      nome:'Agência FAPESP', url:'https://agencia.fapesp.br/rss', base:'https://agencia.fapesp.br' }
+    ,
+      // Orgaos federais: estavam so no cacador e agora tambem geram materia.
+      // Varios ja existiam na lista com o mesmo id — a deduplicacao acontece
+      // depois, na montagem da edicao, para nao depender da ordem daqui.
+      ...FEDERAIS_LIVRES
     ]
   },
   mundo: {

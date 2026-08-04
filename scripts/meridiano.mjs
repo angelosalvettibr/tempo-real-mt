@@ -28,7 +28,7 @@ const anotarFonte = (tipo, id, nome, itens, erro) =>
   SAUDE.push({ tipo, id, nome: nome || id, itens: itens || 0, ok: !erro && itens > 0,
                respondeu: !erro, erro: erro ? String(erro).slice(0, 60) : null });
 import { lerListagem, CAMINHOS_SITEMAP, lerSitemap, ehIndice, filtrarNoticias, tituloDaPagina } from './assessorias.mjs';
-import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS } from './estados.mjs';
+import { ESTADOS, EDICOES_GERAIS, NACIONAL, PAUTA_GERAL, CAMINHOS_ASSESSORIA, BLOQUEADOS, semDuplicar } from './estados.mjs';
 
 const JANELA_HORAS = 24;
 // Teto de seguranca, nao de selecao. Ele existia em 8 e cortava a fila ANTES
@@ -328,7 +328,7 @@ if (caiu.length) {
 
 console.log('\n  2. FONTE LIVRE — de onde o texto pode sair');
 const listaLivre = GERAL
-  ? GERAL.livres.map(f => ({ ...f, editoria: EDITORIA }))
+  ? semDuplicar(GERAL.livres).map(f => ({ ...f, editoria: EDITORIA }))
   : [];   // nas estaduais o texto vem das assessorias, no passo 2b
 
 const F = listaLivre.length ? await colher(listaLivre, 'livre') : { itens: [], rel: [] };
@@ -951,7 +951,7 @@ if (temChave() && soPautaFiltrada.length) {
       const ondeBuscamos = (caca.procuradoEm && caca.procuradoEm.length)
         ? caca.procuradoEm
         : (GERAL
-            ? (GERAL.livres || []).map(f => f.nome)
+            ? semDuplicar(GERAL.livres || []).map(f => f.nome)
             : [...(E.assessorias || []).map(o => o.nome), ...(E.setoriais || []).map(o => o.nome)]);
       const provenencia = {
         circulaEm: (c.quentura || 0) + 1,
