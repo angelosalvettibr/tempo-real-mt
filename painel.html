@@ -1112,7 +1112,7 @@ async function edicoes(){
     <h2>Fontes por edição · última rodada</h2>
     <table>
       <thead><tr><th>edição</th><th>checadas</th><th>responderam</th><th>entregando</th>
-      <th>itens colhidos</th><th>com documento</th><th>publicadas</th></tr></thead>
+      <th>itens colhidos</th><th>cruzadas</th><th>publicadas</th></tr></thead>
       <tbody>${L.map(x => `<tr>
         <td>${x.nome}</td><td>${x.ch || '—'}</td><td>${x.resp || '—'}</td>
         <td class="${cor(x.pc)}">${x.ent || '—'}${x.ch ? `<span class="pc">${x.pc}%</span>` : ''}</td>
@@ -1123,7 +1123,7 @@ async function edicoes(){
     </table>
     <p class="nota">${semDados
       ? 'As colunas de fontes aparecem depois da próxima rodada do Meridiano — é ela que grava esses números.'
-      : '<b>Checadas</b> é toda fonte que o robô tentou ler. <b>Responderam</b> devolveram alguma coisa. <b>Entregando</b> devolveram artigo aproveitável — dessas sai o texto. <b>Com documento</b> são histórias da pauta confirmadas em fonte oficial; <b>publicadas</b> é o que virou matéria.'}</p>`;
+      : '<b>Checadas</b> é toda fonte que o robô tentou ler. <b>Responderam</b> devolveram alguma coisa. <b>Entregando</b> devolveram artigo aproveitável — dessas sai o texto. <b>Cruzadas</b> são histórias que a imprensa deu e o robô achou em fonte oficial. <b>Publicadas</b> é maior porque inclui o que veio direto do órgão público sem nenhum jornal ter noticiado — release de prefeitura que só o Meridiano publica.'}</p>`;
 }
 edicoes();
 
