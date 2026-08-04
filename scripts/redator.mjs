@@ -139,8 +139,21 @@ export function acharFoto(html, urlBase){
 
   // Onde a imagem MORA entrega muita coisa: brasao fica na estrutura do site,
   // foto de materia fica na pasta de conteudo enviado.
-  const caminho = (() => { try { return new URL(src).pathname.toLowerCase(); } catch { return ''; } })();
-  if (/\/(tema|temas|assets|layout|template|estatico|static|skin|css|design|institucional|identidade)\//.test(caminho)) return null;
+  const u = (() => { try { return new URL(src); } catch { return null; } })();
+  if (!u) return null;
+  const caminho = u.pathname.toLowerCase();
+  const host = u.hostname.toLowerCase();
+
+  // Pasta de estrutura do site, nao de conteudo enviado.
+  if (/\/(tema|temas|assets|asset|layout|template|estatico|static|skin|css|design|institucional|identidade|thumbs|thumbnail|placeholder|padrao|default|generico)\//.test(caminho)) return null;
+
+  // Arte padrao servida por CDN de repositorio de codigo. A Agencia Brasil usa
+  // "cdn.jsdelivr.net/gh/.../assets-ebc/public/thumbs/thumb_1200x600_..." — o
+  // nome nao tem "logo", a proporcao e larga, e numa rodada aparece uma vez
+  // so, entao escapava dos tres filtros anteriores. Foto de materia nao mora
+  // em repositorio de assets.
+  if (/(jsdelivr\.net|raw\.githubusercontent\.com|githubusercontent|unpkg\.com|cdnjs)/.test(host)) return null;
+  if (/thumb[_-]?\d{3,4}x\d{3,4}/.test(caminho)) return null;
 
   // Proporcao e o criterio mais confiavel: brasao e selo sao quadrados ou
   // verticais; foto de noticia e larga. Quando as dimensoes vem declaradas,
@@ -535,15 +548,31 @@ export function acharParecidos(arquivo, titulo, limite = 4){
   const A = chaves(titulo);
   if (A.length < 2) return [];
 
-  return (arquivo.itens || [])
+  const pontuadas = (arquivo.itens || [])
     .map(i => {
       const B = chaves(i.titulo);
       const nota = B.length < 2 ? 0 : A.filter(p => B.includes(p)).length / Math.min(A.length, B.length);
       return { ...i, nota };
     })
-    .filter(i => i.nota >= 0.35 && sa(i.titulo) !== sa(titulo))
-    .sort((a,b) => b.nota - a.nota)
-    .slice(0, limite);
+    // Acima de 0.80 nao e "relacionada": e a MESMA historia com o titulo um
+    // pouco diferente. A versao anterior so excluia titulo identico, entao o
+    // bloco "ja publicamos sobre isso" virava vitrine da duplicacao — quatro
+    // variacoes da mesma materia da Comissao Europeia, todas do mesmo dia.
+    .filter(i => i.nota >= 0.35 && i.nota < 0.80 && sa(i.titulo) !== sa(titulo))
+    .sort((a,b) => b.nota - a.nota);
+
+  // E as relacionadas nao podem repetir entre si pelo mesmo motivo.
+  const fora = [];
+  for (const i of pontuadas) {
+    const B = chaves(i.titulo);
+    const repete = fora.some(j => {
+      const C = chaves(j.titulo);
+      return C.length >= 2 && B.filter(p => C.includes(p)).length / Math.min(B.length, C.length) >= 0.70;
+    });
+    if (!repete) fora.push(i);
+    if (fora.length >= limite) break;
+  }
+  return fora;
 }
 
 
