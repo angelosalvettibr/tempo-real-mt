@@ -1100,10 +1100,22 @@ async function carregar(){
       itens.push({ ...n, link: '/nota.html?id=' + encodeURIComponent(n.id), original: false });
       vistos.add(n.id);
     }
+    // As cinco edicoes rodam como jobs PARALELOS e independentes. Global
+    // Voices, Agencia Brasil e outras sao fonte de mais de uma delas — e cada
+    // job escreveu a mesma materia sem saber da outra, com palavras
+    // ligeiramente diferentes. Nao da para compartilhar memoria entre jobs
+    // paralelos; a juncao aqui e o lugar certo para resolver.
     for (const p of partes) {
       for (const i of (p.itens || [])) {
         const k = (i.editoria === 'regional' ? i.uf + ':' : '') + i.id;
         if (vistos.has(k)) continue;
+
+        // Materia regional pode legitimamente repetir titulo de outra praca;
+        // fora disso, titulo muito parecido e a mesma materia escrita duas
+        // vezes. Fica a que chegou primeiro.
+        if (i.editoria !== 'regional' &&
+            itens.some(j => j.editoria !== 'regional' && mesmaHistoria(j.titulo, i.titulo))) continue;
+
         vistos.add(k);
         itens.push(i);
       }
@@ -1115,6 +1127,7 @@ async function carregar(){
       for (const c of (p.circulando || [])) {
         const k = (c.uf || '') + ':' + c.id;
         if (vistosC.has(k)) continue;
+        if (!c.uf && circulando.some(j => !j.uf && mesmaHistoria(j.titulo, c.titulo))) continue;
         vistosC.add(k);
         circulando.push(c);
       }

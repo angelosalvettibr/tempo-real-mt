@@ -954,8 +954,14 @@ async function publicadas(){
       const r = await fetch(`dados/edicao-${uf}.json?t=${Date.now()}`, { cache:'no-store' });
       if (!r.ok) return [uf, nome, []];
       const j = await r.json();
-      const tudo = [...(j.itens || []), ...(j.circulando || [])]
-        .filter(i => i.titulo)
+      // O nivel precisa ser marcado NA JUNCAO. Os itens de circulando nao
+      // trazem o campo, e o padrao "confirmado" fazia toda nota nao
+      // confirmada aparecer com selo de documento — a promessa central do
+      // jornal quebrada dentro do proprio painel.
+      const tudo = [
+        ...(j.itens || []).map(i => ({ ...i, nivel: i.nivel || 'confirmado' })),
+        ...(j.circulando || []).map(i => ({ ...i, nivel: i.nivel || 'sem-confirmacao' }))
+      ].filter(i => i.titulo)
         .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
       return [uf, nome, tudo];
     } catch { return [uf, nome, []]; }
@@ -970,9 +976,23 @@ function desenharPub(){
   const ROT = { confirmado:'doc', atribuido:'atrib', 'sem-confirmacao':'sem', redacao:'red' };
 
   const todas = Object.entries(pubDados).flatMap(([uf, d]) => d.itens.map(i => ({ ...i, _uf: uf })));
+
+  // Mesma logica da capa: edicoes rodam em paralelo e escrevem a mesma
+  // materia duas vezes quando compartilham fonte.
+  const sa = x => String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const chv = x => [...new Set(sa(x).split(/[^a-z0-9]+/).filter(w=>w.length>=4).map(w=>w.slice(0,6)))];
+  const mesma = (a,b) => { const A=chv(a),B=chv(b);
+    if (A.length<3||B.length<3) return false;
+    return A.filter(w=>B.includes(w)).length / Math.min(A.length,B.length) >= 0.8; };
+
   const vistos = new Set();
   const lista = (pubAba === 'todas'
-    ? todas.filter(i => { const k = i.id || i.titulo; if (vistos.has(k)) return false; vistos.add(k); return true; })
+    ? todas.filter((i, n, arr) => {
+        const k = i.id || i.titulo;
+        if (vistos.has(k)) return false;
+        if (arr.slice(0, n).some(j => mesma(j.titulo, i.titulo))) return false;
+        vistos.add(k); return true;
+      })
     : (pubDados[pubAba]?.itens || []).map(i => ({ ...i, _uf: pubAba })))
     .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso));
 
@@ -984,7 +1004,7 @@ function desenharPub(){
         `<button data-p="${uf}" aria-pressed="${pubAba === uf}">${d.nome} <i>${d.itens.length}</i></button>`).join('')}
     </div>
     <div class="lista">${lista.length ? lista.map(i => {
-      const n = i.nivel || 'confirmado';
+      const n = i.nivel || 'sem-confirmacao';   // na duvida, o selo mais fraco
       return `<div class="it">
         <time>${(i.hora || '').replace('h',':')}</time>
         <span class="ev ${n}">${ROT[n] || n}</span>
