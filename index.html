@@ -40,7 +40,11 @@ header{border-bottom:1px solid var(--tinta)}
 .masthead h1 em{font-style:normal;font-weight:900;color:var(--rosso);letter-spacing:-.01em}
 .masthead .sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--fraco);margin-top:12px}
 
+/* Foto so ocupa a largura da abertura quando o original aguenta. Antes
+   qualquer imagem de 400px era esticada para o dobro e saia borrada — o que
+   voce viu na materia de Porto Alegre. */
 .abre .capa{display:block;width:100%;height:auto;border:1px solid var(--linha);margin-bottom:14px;background:var(--areia)}
+.segunda .dest img{max-width:100%}
 .cartao .mini{float:right;width:104px;height:78px;object-fit:cover;margin:2px 0 8px 14px;border:1px solid var(--linha);background:var(--areia)}
 @media(max-width:600px){.cartao .mini{width:82px;height:62px;margin-left:10px}}
 .ultimas{border-bottom:1px solid var(--linha);background:var(--areia)}
@@ -918,7 +922,7 @@ function pintar(){
 
   let h = `<div class="abertura">
     <a class="abre" href="${esc(d.link)}" data-id="${esc(d.id)}">
-      ${d.foto ? `<img class="capa" src="${esc(d.foto)}" alt="${esc(d.fotoAlt || d.titulo)}" loading="lazy" onerror="this.remove()">` : ''}
+      ${(d.foto && (d.fotoLarg || 0) >= 900) ? `<img class="capa" src="${esc(d.foto)}" alt="${esc(d.fotoAlt || d.titulo)}" loading="lazy" onerror="this.remove()">` : ''}
       <span class="chapeu">${esc(chapeuDe(d))}</span>
       <h2>${esc(d.titulo)}</h2>
       <p class="linhafina">${esc(d.resumo)}</p>
@@ -939,7 +943,7 @@ function pintar(){
   if (segunda) {
     h += `<div class="segunda">
       <a class="dest" href="${esc(segunda.link)}" data-id="${esc(segunda.id)}">
-        ${segunda.foto ? `<img src="${esc(segunda.foto)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+        ${(segunda.foto && (segunda.fotoLarg || 0) >= 600) ? `<img src="${esc(segunda.foto)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
         <span class="chapeu">${esc(segunda.municipioNome || chapeuDe(segunda))}</span>
         <h3>${esc(segunda.titulo)}</h3>
         <p>${esc(segunda.resumo)}</p>
