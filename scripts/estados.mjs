@@ -72,7 +72,39 @@ export const INFRAESTRUTURA = [
 
   // onde o dinheiro aparece antes da noticia
   { id:'pncp',    nome:'Portal Nacional de Contratações Públicas', url:'https://www.gov.br/pncp/pt-br/noticias', base:'https://www.gov.br/pncp' },
-  { id:'in-dou',  nome:'Imprensa Nacional',  url:'https://www.in.gov.br/leiturajornal', base:'https://www.in.gov.br' }
+  { id:'in-dou',  nome:'Imprensa Nacional',  url:'https://www.in.gov.br/leiturajornal', base:'https://www.in.gov.br' },
+
+  /* SEGUNDA CAMADA: o que a Agencia iNFRA cobre e um observatorio novo nao
+     alcanca sem redacao.
+
+     Ela tem oito anos e jornalistas contratados. O que poe a NORA no mesmo
+     nivel de cobertura sem folha de pagamento e ter as MESMAS fontes
+     primarias — e algumas que jornalista nao le por falta de tempo.        */
+
+  // Quem decide o litigio e a concorrencia — onde concessao trava
+  { id:'cade',     nome:'Cade',       url:'https://www.gov.br/cade/pt-br/assuntos/noticias', base:'https://www.gov.br/cade' },
+  { id:'stj-inf',  nome:'STJ',        url:'https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias', base:'https://www.stj.jus.br' },
+  { id:'tst',      nome:'TST',        url:'https://www.tst.jus.br/noticias', base:'https://www.tst.jus.br' },
+
+  // Onde a lei nasce antes de virar marco regulatorio
+  { id:'camara-inf', nome:'Câmara dos Deputados', url:'https://www.camara.leg.br/noticias/ultimas', base:'https://www.camara.leg.br' },
+  { id:'senado-inf', nome:'Senado Federal',       url:'https://www12.senado.leg.br/noticias/RSS', base:'https://www12.senado.leg.br' },
+
+  // Territorio e obra: quem executa e quem financia regionalmente
+  { id:'cidades',  nome:'Ministério das Cidades', url:'https://www.gov.br/cidades/pt-br/assuntos/noticias', base:'https://www.gov.br/cidades' },
+  { id:'integra',  nome:'Ministério da Integração', url:'https://www.gov.br/mdr/pt-br/noticias', base:'https://www.gov.br/mdr' },
+  { id:'sudene',   nome:'Sudene',     url:'https://www.gov.br/sudene/pt-br/assuntos/noticias', base:'https://www.gov.br/sudene' },
+  { id:'sudam',    nome:'Sudam',      url:'https://www.gov.br/sudam/pt-br/assuntos/noticias', base:'https://www.gov.br/sudam' },
+  { id:'codevasf', nome:'Codevasf',   url:'https://www.gov.br/codevasf/pt-br/assuntos/noticias', base:'https://www.gov.br/codevasf' },
+
+  // Saneamento, energia e ambiente — setores que a NORA cita e nao cobrimos
+  { id:'ons',      nome:'ONS',        url:'https://www.ons.org.br/paginas/sala-de-imprensa', base:'https://www.ons.org.br' },
+  { id:'ccee',     nome:'CCEE',       url:'https://www.ccee.org.br/imprensa', base:'https://www.ccee.org.br' },
+  { id:'ibama-inf', nome:'Ibama — licenciamento', url:'https://www.gov.br/ibama/pt-br/assuntos/noticias', base:'https://www.gov.br/ibama' },
+
+  // Dado economico que sustenta analise setorial
+  { id:'ipea-inf', nome:'Ipea',       url:'https://www.ipea.gov.br/portal/imprensa', base:'https://www.ipea.gov.br' },
+  { id:'ipeadata', nome:'Ipea — Carta de Conjuntura', url:'https://www.ipea.gov.br/cartadeconjuntura', base:'https://www.ipea.gov.br' }
 ];
 
 export const FEDERAIS_ESTEIRA2 = [
