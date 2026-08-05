@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-04T22:23:50.541Z",
-  "modelo": "gemini-2.0-flash-lite-001",
+  "gerado": "2026-08-05T12:01:56.170Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 59,
-    "confirmadas": 5,
-    "publicadas": 9,
+    "pauta": 36,
+    "fonteLivre": 60,
+    "confirmadas": 3,
+    "publicadas": 21,
     "resgatadas": 0,
-    "semFonte": 8
+    "semFonte": 11
   },
   "fontes": {
-    "checadas": 28,
-    "responderam": 23,
+    "checadas": 30,
+    "responderam": 22,
     "entregando": 15,
-    "itens": 100,
+    "itens": 96,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -27,9 +36,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -54,19 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,16 +84,7 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -109,9 +100,27 @@
       },
       {
         "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 4,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,16 +129,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 2,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -158,6 +158,15 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
         "respondeu": true,
         "erro": null
       },
@@ -167,8 +176,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -231,21 +240,12 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,12 +262,30 @@
       },
       {
         "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       }
     ]
   },
@@ -279,11 +297,105 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:wfp-alerta-para-nivel-critico-de-desnutricao-infantil-em-12-provincias",
+      "id": "ilm:omm-lanca-primeiro-projeto-regional-de-previsao-de-tempo-severo-na-ame",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "WFP alerta para nível crítico de desnutrição infantil em 12 províncias do Afeganistão",
-      "resumo": "Cerca de 3,7 milhões de crianças sofrem de desnutrição aguda no país, onde 14 milhões de pessoas vivem em situação de fome aguda.",
+      "titulo": "OMM lança primeiro projeto regional de previsão de tempo severo na América do Sul",
+      "resumo": "O Inmet sediará o centro regional em Brasília para atender a Bacia do Prata, com fase pré-operacional prevista para 2027.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853923",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [
+        "BBC Brasil"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "A Organização Meteorológica Mundial, OMM, lançou o primeiro projeto do Programa de Previsão de Tempo Severo, Swfp, para a América do Sul. A iniciativa reúne Brasil, Argentina, Bolívia, Paraguai e Uruguai para fortalecer os serviços meteorológicos e hidrológicos nacionais e acelerar os alertas precoces na Bacia do Prata.",
+        "O encontro de lançamento ocorreu na sede do Instituto Nacional de Meteorologia, Inmet, em Brasília. O Inmet sediará o Centro Regional de Suporte à Previsão, enquanto o Serviço Meteorológico Nacional, SMN, da Argentina atuará como centro de suporte secundário. A fase pré-operacional do subprograma Swfp-Bacia do Prata está prevista para começar em 2027.",
+        "O programa opera por meio do processo de previsão em cascata, concatenando dados globais, regionais e nacionais. No Brasil, o Instituto Nacional de Pesquisas Espaciais, Inpe, contribuirá com modelagem de alta resolução e produtos de previsão imediata. O suporte técnico contará com os Centros Meteorológicos Mundiais de Montreal e Washington e o Centro Europeu de Previsões Meteorológicas a Médio Prazo.",
+        "A região da Bacia do Prata enfrenta chuvas intensas, inundações, ventos fortes, tornados e temperaturas extremas. O projeto Swfp teve início em 2006 como iniciativa de demonstração no Sudeste da África e expandiu-se para mais de 100 países."
+      ],
+      "link": "/materia/omm-lanca-primeiro-projeto-regional-de-previsao-de-tempo-severo-na-ame.html",
+      "iso": "2026-08-03T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://images.theconversation.com/files/752097/original/file-20260620-63-qtidyf.jpg?ixlib=rb-4.1.1&amp;rect=0%2C1856%2C3712%2C1856&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:pesquisa-aponta-causas-da-perda-florestal-no-ecossistema-de-batang-tor",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Pesquisa aponta causas da perda florestal no ecossistema de Batang Toru na Indonésia",
+      "resumo": "Entre 2000 e 2023, a região habitat do orangotango de Tapanuli perdeu 7.659 hectares de floresta devido a empreendimentos industriais, expansão agrícola e exploração madeireira.",
+      "fonte": "Meridiano, com informações de The Conversation",
+      "origemLink": "https://theconversation.com/as-multiplas-ameacas-ao-orangotango-de-tapanuli-o-grande-primata-mais-raro-do-mundo-289126",
+      "origemNome": "The Conversation",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Um estudo publicado na revista Biological Conservation analisou a perda florestal no ecossistema de Batang Toru, no Norte de Sumatra, na Indonésia, local onde vivem os menos de 800 indivíduos restantes do orangotango de Tapanuli (Pongo tapanuliensis). A pesquisa apontou que grandes projetos de infraestrutura, a expansão agrícola e a exploração madeireira atuam de forma simultânea sobre a região.",
+        "Entre os anos de 2000 e 2023, Batang Toru perdeu 7.659 hectares de floresta, o equivalente a cerca de 5% de sua cobertura florestal total. O desmatamento acelerou após 2012, período de início de três grandes projetos extrativistas de usinas hidrelétricas, mineração de ouro e energia geotérmica. Com o método de controle sintético, estimou-se que a área perdeu aproximadamente 3.472 hectares a mais do que o esperado sem esses empreendimentos.",
+        "A análise espacial indicou que cerca de 70% da perda florestal total esteve associada à agricultura de pequena escala e à exploração de madeira. Enquanto os projetos industriais causaram aumentos repentinos no desmatamento, as atividades agrícolas e a extração madeireira exerceram uma pressão contínua e crescente ao longo do tempo.",
+        "Para avaliar os fatores sociais e econômicos, os pesquisadores colaboraram com a ONG indonésia Tangguh Hutan Khatulistiwa (TAHUKAH) e a Sumatran Orangutan Society (SOS), parceiras desde 2021. Entrevistas e observações com comunidades locais apontaram que a queda nos preços da borracha levou moradores a substituir seringais por cultivos de banana, em um cenário de fraca fiscalização e sobreposição de direitos de posse da terra."
+      ],
+      "link": "/materia/pesquisa-aponta-causas-da-perda-florestal-no-ecossistema-de-batang-tor.html",
+      "iso": "2026-08-05T06:46:32.000Z",
+      "hora": "02h46",
+      "original": true,
+      "contexto": "A perda florestal afeta o ecossistema de Batang Toru, na Indonésia, onde vivem os menos de 800 indivíduos restantes do orangotango de Tapanuli. Do total de 7.659 hectares perdidos entre 2000 e 2023, a área perdeu aproximadamente 3.472 hectares a mais do que o esperado após o início de grandes projetos em 2012. Não há registro de casos parecidos no histórico.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Assyrian_refugees_on_wagon-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mulheres-indigenas-assirias-passam-por-processo-de-apagamento-em-tres-",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Mulheres indígenas assírias passam por processo de apagamento em três etapas",
+      "resumo": "O sumiço ocorreu por sua identidade, por violência sexual e pela história, enquanto o mecanismo que provocou o desaparecimento continua em funcionamento.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/05/the-anatomy-of-erasure-indigenous-assyrian-women-and-forgotten-genocide/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "As mulheres indígenas assírias foram alvo de um processo de apagamento ocorrido em três momentos.",
+        "A eliminação aconteceu primeiro por sua condição de assírias. Em seguida, o processo se deu por meio de violência sexual e, por fim, pela própria história.",
+        "O mecanismo responsável por fazer essas mulheres desaparecerem permanece em funcionamento."
+      ],
+      "link": "/materia/mulheres-indigenas-assirias-passam-por-processo-de-apagamento-em-tres-.html",
+      "iso": "2026-08-05T06:12:13.000Z",
+      "hora": "02h12",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:desnutricao-infantil-atinge-niveis-criticos-em-12-provincias-do-afegan",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Desnutrição infantil atinge níveis críticos em 12 províncias do Afeganistão",
+      "resumo": "Cerca de 3,7 milhões de crianças sofrem de desnutrição aguda e 14 milhões de pessoas vivem em fome aguda no país, segundo alerta do Programa Mundial de Alimentos.",
       "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
       "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853937",
       "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
@@ -291,205 +403,167 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Programa Mundial de Alimentos, WFP, alertou nesta terça-feira que o aumento da insegurança alimentar no Afeganistão pode ultrapassar todas as projeções. Segundo o diretor da agência no país, John Ayliffe, a malnutrição infantil atingiu níveis críticos em 12 das 34 províncias afegãs, o que corresponde a quase um terço do território nacional.",
-        "No momento, cerca de 3,7 milhões de crianças sofrem de desnutrição aguda e 1,2 milhão de mulheres grávidas enfrentam insuficiência nutricional no país. O WFP informou que 80% das internações mais graves nos centros de saúde correspondem a crianças com menos de 2 anos. O pico da desnutrição ocorreu semanas mais cedo este ano devido à sobreposição de conflitos, desemprego, preços elevados de alimentos e redução do financiamento humanitário.",
-        "Apenas em 2025, os cortes na ajuda humanitária provocaram o fechamento de 142 centros de saúde em todo o país, privando mais de 13 mil crianças de tratamento nutricional. A crise no Médio Oriente e o fechamento da fronteira com o Paquistão também interromperam cadeias de abastecimento e deixaram perto de 1 milhão de mães e crianças sem acesso a serviços essenciais de nutrição.",
-        "A porta-voz do Gabinete das Nações Unidas para a Coordenação dos Assuntos Humanitários, Ocha, Olga Cherevko, afirmou a jornalistas que as restrições aplicadas pelas autoridades de facto do Afeganistão a mulheres e meninas continuam a limitar o acesso à educação, saúde e trabalho, gerando impactos que se estendem às famílias e comunidades."
+        "O Programa Mundial de Alimentos (WFP) alertou que a desnutrição infantil atingiu níveis críticos em 12 das 34 províncias do Afeganistão. Cerca de 3,7 milhões de crianças sofrem de desnutrição aguda e 1,2 milhão de mulheres grávidas enfrentam insuficiência nutricional no país.",
+        "Segundo o diretor da agência no Afeganistão, John Ayliffe, 14 milhões de afegãos vivem em situação de fome aguda. Além disso, 80% das entradas mais graves nos centros de saúde correspondem a crianças com menos de 2 anos de idade, com a previsão de que o número de casos continue a aumentar até outubro.",
+        "A porta-voz do Gabinete das Nações Unidas para a Coordenação dos Assuntos Humanitários (Ocha), Olga Cherevko, relatou que o pico da desnutrição ocorreu semanas mais cedo este ano devido à sobreposição de crises. Apenas em 2025, cortes na ajuda humanitária causaram o encerramento de 142 centros de saúde no país, privando mais de 13 mil crianças de tratamento nutricional.",
+        "A crise no Médio Oriente e o encerramento da fronteira com o Paquistão interromperam cadeias de abastecimento e deixaram perto de 1 milhão de mães e crianças sem serviços essenciais de nutrição. Adicionalmente, as restrições impostas pelas autoridades de facto do Afeganistão continuam a limitar o acesso de mulheres e meninas à saúde, educação e trabalho."
       ],
-      "link": "/materia/wfp-alerta-para-nivel-critico-de-desnutricao-infantil-em-12-provincias.html",
+      "link": "/materia/desnutricao-infantil-atinge-niveis-criticos-em-12-provincias-do-afegan.html",
       "iso": "2026-08-04T12:00:00.000Z",
       "hora": "08h00",
-      "original": true,
-      "contexto": "Não há registro de caso parecido no histórico. A crise atinge 3,7 milhões de crianças com desnutrição aguda e 1,2 milhão de mulheres grávidas em 12 províncias do Afeganistão. Além disso, os cortes de ajuda e o fechamento da fronteira com o Paquistão deixaram cerca de 1 milhão de mães e crianças sem acesso a serviços essenciais de nutrição.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:comissao-europeia-conclui-etapas-juridicas-do-fundo-scaleup-europe",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "Comissão Europeia conclui etapas jurídicas do Fundo Scaleup Europe",
-      "resumo": "A medida finaliza a criação da estrutura que busca intensificar o Fundo Europa para a realização de investimentos em empresas.",
-      "fonte": "Meridiano, com informações de Comissão Europeia",
-      "origemLink": "https://ec.europa.eu/commission/presscorner/detail/pt/mex_26_1720",
-      "origemNome": "Comissão Europeia",
-      "pautadoPor": [
-        "BBC Brasil",
-        "Euronews"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "A Comissão Europeia concluiu as medidas jurídicas finais para a criação do Fundo Scaleup Europe.",
-        "O objetivo do avanço legal é intensificar o Fundo Europa para iniciar a realização de investimentos.",
-        "Com a conclusão do processo, a iniciativa começará a impulsionar as empresas."
-      ],
-      "link": "/materia/comissao-europeia-conclui-etapas-juridicas-do-fundo-scaleup-europe.html",
-      "iso": "2026-08-04T08:20:23.000Z",
-      "hora": "04h20",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://images.theconversation.com/files/751993/original/file-20260804-50-3zypon.png?ixlib=rb-4.1.1&amp;rect=0%2C205%2C2466%2C1233&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/03/porpora-1.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:uso-de-micrornas-surge-como-ferramenta-para-monitorar-contaminacao-em-",
+      "id": "ilm:cardeal-dom-julio-duarte-langa-morre-em-maputo-e-recebe-homenagens-em-",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Uso de microRNAs surge como ferramenta para monitorar contaminação em rios",
-      "resumo": "Moléculas presentes no sangue e no muco de peixes ajudam a identificar respostas biológicas de organismos aquáticos expostos a poluentes como metais tóxicos.",
-      "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/micrornas-as-pequenas-moleculas-que-podem-revelar-a-saude-dos-rios-288476",
-      "origemNome": "The Conversation",
-      "pautadoPor": [
-        "Euronews"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O uso de microRNAs circulantes surge como uma ferramenta para identificar se organismos aquáticos apresentam respostas biológicas à exposição a contaminação por metais tóxicos em rios. A técnica acrescenta informações sobre os efeitos negativos dos poluentes nos animais, sem substituir as análises tradicionais que medem a presença de contaminantes na água, no sedimento ou nos tecidos.",
-        "Em janeiro de 2026, um relatório do Instituto da Universidade das Nações Unidas para Água, Meio Ambiente e Saúde (UNU-INWEH) propôs o termo \"falência hídrica\" para definir a perda de função dos ecossistemas em prover água. Na Amazônia, capitais como Manaus e Belém tratavam 22,78% e 24,95% do esgoto em 2026, respectivamente, enquanto estudos no rio Tapajós relacionam garimpo e desmatamento à contaminação por mercúrio em peixes e populações locais.",
-        "Os microRNAs são pequenos pedaços de material genético que regulam a atividade celular ao se ligarem ao RNA mensageiro para silenciar a produção de proteínas. Em casos de intoxicação por metais como mercúrio, cádmio ou chumbo, a alteração na atividade dessas moléculas indica que o organismo tenta responder a estresses como inflamação, dano celular, estresse oxidativo ou alteração metabólica.",
-        "Essas moléculas circulam em fluidos como sangue e urina e são encontradas no sangue, no muco e na água ao redor de peixes. Além de seu uso na medicina para diagnóstico de doenças, o monitoramento de microRNAs é testado em laboratório e em campo para aplicação na ecotoxicologia e no acompanhamento da saúde dos ecossistemas aquáticos."
-      ],
-      "link": "/materia/uso-de-micrornas-surge-como-ferramenta-para-monitorar-contaminacao-em-.html",
-      "iso": "2026-08-04T12:38:14.000Z",
-      "hora": "08h38",
-      "original": true,
-      "contexto": "O histórico registra quatro casos semelhantes em 4 de agosto de 2026. A contaminação por metais atinge organismos aquáticos, peixes e populações locais. O texto compara que Manaus tratava 22,78% do esgoto em 2026, enquanto Belém tratava 24,95%.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/srv/2025/08/06/2025-08-06-udienza-generale/1754469781502.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-envia-mensagem-em-video-para-convencao-dos-cavaleiros-de",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "Papa Leão XIV envia mensagem em vídeo para convenção dos Cavaleiros de Colombo",
-      "resumo": "Pontífice defendeu a busca pela unidade e o fortalecimento das obras de caridade durante o evento internacional realizado em Denver.",
+      "titulo": "Cardeal Dom Júlio Duarte Langa morre em Maputo e recebe homenagens em Moçambique",
+      "resumo": "O Bispo Emérito de Xai-Xai faleceu no dia 3 de agosto e terá cerimônias fúnebres realizadas até o dia 8 de agosto.",
       "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-xiv-mensagem-video-cavaleiros-colombo-denver-eua-26.html",
+      "origemLink": "https://www.vaticannews.va/pt/africa/news/2026-08/card-julio-duarte-langa-legado-serenidade-humildade-integridade.html",
       "origemNome": "Vatican News",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV participou do primeiro dia de atividades da 144ª Convenção Suprema dos Cavaleiros de Colombo por meio de uma mensagem em vídeo nesta terça-feira, 4 de agosto. O evento internacional é realizado em Denver, no Colorado, reunindo membros, delegados, líderes fraternos, cardeais e bispos.",
-        "Na mensagem, o Pontífice abordou o lema \"Nele que é Um, nós somos um\" e refletiu sobre as virtudes da unidade e da caridade. Leão XIV afirmou que, em uma época marcada por divisão e retórica agressiva, há necessidade de profetas de harmonia para construir pontes e reconciliar posições opostas nas famílias, paróquias e comunidades.",
-        "O Papa expressou gratidão pelo trabalho da organização, fundada pelo beato Pe. Michael McGivney (1852-1890). Ele pontuou as ações de caridade voltadas ao atendimento de órfãos, gestantes, cristãos perseguidos, vítimas de guerra ou do tráfico de pessoas, pobres e vulneráveis.",
-        "O evento conta também com o Ladies Program, voltado para as esposas dos oficiais do Conselho Supremo e do Conselho Diretor. A programação tem transmissões ao vivo nos idiomas inglês, espanhol, francês e polonês, com gravações disponibilizadas sob demanda após as sessões."
+        "O Cardeal Dom Júlio Duarte Langa, Bispo Emérito de Xai-Xai, morreu no dia 3 de agosto, em Maputo, Moçambique. A morte do religioso motivou manifestações de pesar direcionadas à Diocese de Xai-Xai e aos membros da Conferência Episcopal.",
+        "O presidente moçambicano, Daniel Francisco Chapo, lamentou o falecimento em publicação em sua conta numa rede social. O Reitor da Universidade Católica de Moçambique, Professor Doutor Padre Filipe Sungo, enviou carta de condolências ao Administrador Apostólico de Xai-Xai, Dom Francisco Chimoio. Também emitiram notas a Conferência dos Institutos Religiosos de Moçambique, assinada pelo presidente Padre José Joaquim, e a IMBISA.",
+        "As cerimônias do funeral começam no dia 6 de agosto, em Maputo, com Missa na Sé Catedral. Em seguida, o corpo será levado para Xai-Xai, onde haverá celebração eucarística durante a tarde e orações no dia seguinte. O sepultamento será no dia 8, sábado, no Santuário Nossa Senhora de Lourdes em Xongoene, antecedido por uma Missa.",
+        "Dom Júlio Duarte Langa nasceu na província de Gaza, foi ordenado sacerdote em 1957 e nomeado Bispo de João Belo, atual Diocese de Xai-Xai, em 1976, servindo no local até sua resignação em 2004. Ele foi criado Cardeal pelo Papa Francisco em 14 de fevereiro de 2015."
       ],
-      "link": "/materia/papa-leao-xiv-envia-mensagem-em-video-para-convencao-dos-cavaleiros-de.html",
-      "iso": "2026-08-04T20:00:00.000Z",
-      "hora": "16h00",
+      "link": "/materia/cardeal-dom-julio-duarte-langa-morre-em-maputo-e-recebe-homenagens-em-.html",
+      "iso": "2026-08-05T10:50:00.000Z",
+      "hora": "06h50",
+      "original": true,
+      "contexto": "As manifestações de pesar são direcionadas aos membros da Diocese de Xai-Xai e da Conferência Episcopal. As cerimônias fúnebres começam em 6 de agosto em Maputo e o sepultamento está marcado para o dia 8 de agosto no Santuário Nossa Senhora de Lourdes, em Xongoene.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/1784199434ijf9a_1600x900-800x450.jpg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:tribunais-e-sindicatos-falham-em-proteger-trabalhadores-no-kazakhstan",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Tribunais e sindicatos falham em proteger trabalhadores no Kazakhstan",
+      "resumo": "Principal instituição de defesa trabalhista no papel, organizações sindicais sofrem pressão constante no Kazakhstan há mais de três décadas.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/courts-and-unions-fail-to-protect-workers-in-kazakhstan/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Os tribunais e os sindicatos no Kazakhstan falham em proteger os trabalhadores.",
+        "No papel, os sindicatos funcionam como a principal instituição de proteção dos direitos trabalhistas.",
+        "No entanto, há mais de três décadas no Kazakhstan, essas entidades vivem sob pressão constante."
+      ],
+      "link": "/materia/tribunais-e-sindicatos-falham-em-proteger-trabalhadores-no-kazakhstan.html",
+      "iso": "2026-08-04T22:22:39.000Z",
+      "hora": "18h22",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://images.theconversation.com/files/752004/original/file-20260701-57-twslow.jpg?ixlib=rb-4.1.1&amp;rect=0%2C500%2C6000%2C3000&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2019/06/26/Dom-Ray-Damasceno-1200x762_c%20(1).jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:chatbots-de-inteligencia-artificial-sao-usados-como-apoio-nao-oficial-",
+      "id": "ilm:cardeal-raymundo-damasceno-assis-celebra-40-anos-de-ordenacao-episcopa",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Chatbots de inteligência artificial são usados como apoio não oficial em saúde mental",
-      "resumo": "Pesquisadores do grupo 2DN da Universidade de Auckland investigam a IA para triagem e detecção precoce de sinais de depressão sem substituir profissionais da área.",
+      "titulo": "Cardeal Raymundo Damasceno Assis celebra 40 anos de ordenação episcopal",
+      "resumo": "A trajetória do arcebispo emérito de Aparecida foi relembrada pelo Cardeal Orani João Tempesta neste dia 5 de agosto de 2026.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/quarenta-anos-ordenacao-episcopal-cardeal-raymundo-damasceno.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Santuário Nacional de Nossa Senhora Aparecida celebra os quarenta anos de ordenação episcopal do Cardeal Raymundo Damasceno Assis neste dia 5 de agosto de 2026. A data da trajetória do arcebispo emérito foi registrada em mensagem do Cardeal Orani João Tempesta, Arcebispo Metropolitano de São Sebastião do Rio de Janeiro.",
+        "Dom Raymundo recebeu o sacramento da Ordem em 15 de setembro de 1986, na cidade de Conselheiro Lafayete. A ordenação foi realizada pela imposição das mãos do Cardeal Dom José Freire Falcão, segundo Arcebispo de Brasília, e teve como consagrantes Dom José Newton de Almeida Baptista, primeiro Arcebispo de Brasília, e Dom Geraldo do Espírito Santo Ávila, Bispo Auxiliar de Brasília.",
+        "A trajetória do religioso, vindo de Capela Nova, inclui atuações como bispo auxiliar em Brasília, Secretário Geral e presidente da Conferência Nacional dos Bispos do Brasil (CNBB), além de Secretário Geral e presidente do Conselho Episcopal Latino-Americano (CELAM) e Arcebispo de Aparecida.",
+        "No ano de 2007, o Cardeal trabalhou na organização da V Conferência Geral do Episcopado Latino-Americano, realizada em Aparecida. Na condição de arcebispo local e presidente do CELAM, ele preparou a visita do Papa Bento XVI para a abertura presencial dos trabalhos daquele evento."
+      ],
+      "link": "/materia/cardeal-raymundo-damasceno-assis-celebra-40-anos-de-ordenacao-episcopa.html",
+      "iso": "2026-08-05T10:05:00.000Z",
+      "hora": "06h05",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://images.theconversation.com/files/750082/original/file-20260717-118-n8ukmg.jpg?ixlib=rb-4.1.1&amp;rect=0%2C242%2C1998%2C999&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:fatores-culturais-e-de-conveniencia-determinam-quais-animais-sao-consi",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Fatores culturais e de conveniência determinam quais animais são considerados pragas",
+      "resumo": "O ataque de perus selvagens a uma mulher de 83 anos na Califórnia, em maio de 2026, motivou alertas da polícia e exemplifica como a definição de praga varia segundo o contexto.",
       "fonte": "Meridiano, com informações de The Conversation",
-      "origemLink": "https://theconversation.com/ia-nao-pode-substituir-profissionais-de-saude-mental-mas-ainda-pode-fazer-a-diferenca-289078",
+      "origemLink": "https://theconversation.com/questoes-culturais-e-de-conveniencia-determinam-quais-animais-sao-considerados-pragas-288341",
       "origemNome": "The Conversation",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Chatbots de inteligência artificial, como o ChatGPT, estão sendo utilizados por pessoas para apoio emocional, reflexão sobre sentimentos e busca de auxílio em saúde mental. Em países como Nova Zelândia e Austrália, a busca por essas ferramentas ocorre diante de serviços de saúde sobrecarregados e com longas listas de espera.",
-        "Estudos indicam que ferramentas de inteligência artificial adequadamente projetadas podem ajudar a reduzir sintomas de ansiedade e depressão, além de auxiliar no reenquadramento cognitivo. No grupo de pesquisa 2DN, da Universidade de Auckland, pesquisadores investigam o uso da tecnologia para identificar biomarcadores digitais na fala e no texto, visando apoiar a triagem e o monitoramento precoce da depressão.",
-        "Apesar do potencial para ampliar o acesso e personalizar terapias, a utilização da tecnologia apresenta limitações. Pesquisadores, profissionais clínicos e órgãos reguladores apontam riscos de conselhos imprecisos, falhas no reconhecimento de sinais de crise e reforço de crenças prejudiciais, além de desafios de privacidade, segurança de dados, preconceitos em algoritmos e dependência excessiva dos usuários.",
-        "Ao contrário dos profissionais de saúde mental, a inteligência artificial não está sujeita aos mesmos padrões profissionais ou regulatórios, além de não possuir empatia, conexão humana, confiança ou julgamento clínico. Por isso, a tecnologia é vista por especialistas como um instrumento para apoiar os cuidados, e não para substituir a atuação profissional."
+        "Em maio de 2026, a polícia de Alameda, na Califórnia, alertou os moradores para evitar a interação com perus selvagens, após uma mulher de 83 anos ser atacada e levar pontos no pronto-socorro. Os perus podem agir com agressividade no período de acasalamento e causar danos a propriedades, escavando jardins, sujando decks com excrementos e atacando veículos ao confundirem reflexos com rivais.",
+        "A rotulação de espécies como pragas justifica a aplicação de métodos prejudiciais ou letais para sua remoção dos espaços humanos. A palavra deriva do latim \"pestis\" e associa-se historicamente a eventos como a Peste Negra, pandemia transmitida no século XIV por roedores com pulgas infectadas, que matou cerca de 25 milhões de pessoas na Europa e deu origem à profissão de caçador de ratos.",
+        "Diversos animais vistos como pragas são sinantrópicos e adaptaram-se aos ambientes humanos, como roedores, coiotes e pombos — estes descendentes dos pombos-das-rochas (Columba livia). A dispersão humana também levou porcos selvagens e roedores a ecossistemas insulares por meio de viagens marítimas, além da introdução de sapos-da-cana na Austrália para tentar combater insetos em plantações de cana-de-açúcar.",
+        "Outras espécies inofensivas ou benéficas, como aranhas e toupeiras, também são tratadas como pragas devido ao conceito de matéria fora do lugar, abordado pela antropóloga Mary Douglas no livro \"Pureza e Perigo\", de 1966. O enquadramento ocorre quando os animais passam a ocupar locais onde as pessoas consideram que eles não deveriam estar."
       ],
-      "link": "/materia/chatbots-de-inteligencia-artificial-sao-usados-como-apoio-nao-oficial-.html",
-      "iso": "2026-08-04T14:15:01.000Z",
-      "hora": "10h15",
+      "link": "/materia/fatores-culturais-e-de-conveniencia-determinam-quais-animais-sao-consi.html",
+      "iso": "2026-08-05T06:39:11.000Z",
+      "hora": "02h39",
       "original": true,
-      "contexto": null,
+      "contexto": "O alerta emitido pela polícia de Alameda, na Califórnia, afeta os moradores da cidade. A recomendação para evitar a interação com perus selvagens foi divulgada em maio de 2026, após uma moradora de 83 anos ter sido atacada por uma das aves.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:entrada-de-mais-de-50-mil-imigrantes-em-ceuta-gera-divergencias-sobre-",
+      "id": "ilm:pessoa-que-nasceu-apatrida-relata-medo-de-situacoes-naturais-para-outr",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Entrada de mais de 50 mil imigrantes em Ceuta gera divergências sobre papel de Marrocos",
-      "resumo": "Cidade espanhola na África registrou cerca de 100 mortos após a travessia recente, motivando diferentes avaliações sobre a conduta do governo marroquino.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-08/especialistas-divergem-sobre-anuencia-de-marrocos-em-migracao-ceuta",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Euronews"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O enclave espanhol de Ceuta, em território africano, recebeu uma onda de mais de 50 mil imigrantes nos últimos dias, em episódio que deixou cerca de 100 mortos. O acontecimento gerou explicações opostas sobre a participação do governo de Marrocos no fluxo migratório em direção à Espanha.",
-        "O professor da Universidade Federal do Rio de Janeiro, Nuno Carlos de Fragoso Vidal, avalia que o deslocamento em massa dependeu de anuência marroquina, associando o fato à aproximação espanhola de grupos defensores da independência do Saara Ocidental. O ex-senador pela Itália José Luís Del Roio também apontou conivência de Rabat devido ao rigor do controle territorial no país e citou a hipótese de ação programada por forças externas como Israel.",
-        "De forma diversa, o professor da Universidade Federal do ABC, Mohammed Nadir, declarou que o movimento se deve ao aumento do custo de vida, à falta de oportunidades e aos problemas na saúde pública enfrentados pelos jovens marroquinos. Além disso, apuração referente aos serviços de inteligência espanhóis concluiu que Marrocos não planejou a"
-      ],
-      "link": "/materia/entrada-de-mais-de-50-mil-imigrantes-em-ceuta-gera-divergencias-sobre-.html",
-      "iso": "2026-08-04T12:45:00.000Z",
-      "hora": "08h45",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:general-brasileiro-comanda-missao-da-onu-na-rd-congo-em-meio-a-surto-d",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "General brasileiro comanda missão da ONU na RD Congo em meio a surto de ebola e conflitos",
-      "resumo": "A epidemia no país africano já registra 3.748 casos confirmados e 1.657 mortes, enquanto restrições de segurança e grupos armados como o M23 dificultam o acesso a áreas críticas.",
-      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
-      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853928",
-      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "titulo": "Pessoa que nasceu apátrida relata medo de situações naturais para outros",
+      "resumo": "O depoimento aponta que a ausência de pátria desde o nascimento gerou receio diante de fatos que ocorrem de forma natural para as demais pessoas.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
+      "origemNome": "Global Voices (EN)",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O general brasileiro Ulisses Mesquita Gomes está à frente das forças da Missão das Nações Unidas na República Democrática do Congo, a Monusco, atuando na proteção de civis durante o surto de ebola e conflitos armados no país. A epidemia atinge 49 zonas de saúde em cinco províncias congolesas, tendo a província de Ituri como epicentro.",
-        "A atuação das tropas ocorre em cooperação com o Governo da República Democrática do Congo e a Organização Mundial da Saúde, a OMS. Juntas, as entidades garantem apoio logístico e a segurança de instalações médicas, tendo transportado por terra e ar cerca de 35 toneladas de medicamentos e equipamentos para áreas como Mangualu e Bunia.",
-        "O acesso às regiões afetadas enfrenta obstáculos como estradas em ruínas, ausência de voos comerciais para Beni e Bunia e o controle da área de Goma pelo grupo armado M23. Além da insegurança e dos deslocamentos populacionais em massa, o uso do aeroporto de Goma também está impedido devido ao ebola.",
-        "As equipes enfrentam dificuldades relacionadas a rituais fúnebres locais, moradias com famílias numerosas e a semelhança dos sintomas iniciais do ebola com os da malária, cólera e febre amarela. Para combater a desinformação, a Monusco realiza conversas diretas com líderes comunitários e utiliza a Rádio Okapi, financiada pelas Nações Unidas, além das redes sociais."
+        "Uma pessoa afirmou ter nascido apátrida e relatou ter aprendido a temer coisas que surgem de forma natural para outros indivíduos.",
+        "A declaração indica que nascer sem uma pátria fez com que a pessoa desenvolvesse medo de situações que acontecem naturalmente para os demais.",
+        "O depoimento registra a relação entre a falta de pátria desde o nascimento e o aprendizado do temor perante fatos naturais para outras pessoas."
       ],
-      "link": "/materia/general-brasileiro-comanda-missao-da-onu-na-rd-congo-em-meio-a-surto-d.html",
-      "iso": "2026-08-04T12:00:00.000Z",
-      "hora": "08h00",
+      "link": "/materia/pessoa-que-nasceu-apatrida-relata-medo-de-situacoes-naturais-para-outr.html",
+      "iso": "2026-08-04T07:37:20.000Z",
+      "hora": "03h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -501,41 +575,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:amdh-responsabiliza-estado-do-marrocos-por-migracao-de-mais-de-50-mil-",
+      "id": "ilm:operacoes-internacionais-com-apoio-do-iccwc-realizam-mais-de-4-7-mil-a",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "AMDH responsabiliza Estado do Marrocos por migração de mais de 50 mil pessoas",
-      "resumo": "Quase 100 pessoas morreram no percurso rumo aos enclaves espanhóis de Ceuta e Melilla, segundo dados do governo ceuta.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-08/ong-culpa-marrocos-por-desespero-de-imigrantes-rumo-a-Europa",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Associação Marroquina de Direitos Humanos (AMDH) responsabilizou o Estado do Marrocos pelo deslocamento migratório de mais de 50 mil pessoas rumo a Ceuta e Melilla, enclaves espanhóis no continente africano. O movimento gerou a morte de quase 100 pessoas no trajeto, segundo dados do governo ceuta.",
-        "Em documento aprovado pelo seu Bureau Central, a organização atribuiu a crise à falta de perspectivas, ao agravamento da frustração entre os jovens e ao fracasso das políticas estatais. A entidade também criticou a desigualdade social, a corrupção, o autoritarismo e o uso da migração como pressão política com a Espanha e a Europa, além de condenar a retórica da extrema-direita na Europa e nos EUA.",
-        "O Marrocos é uma monarquia constitucional e parlamentar sob liderança do rei Mohammed VI, que completou 2"
-      ],
-      "link": "/materia/amdh-responsabiliza-estado-do-marrocos-por-migracao-de-mais-de-50-mil-.html",
-      "iso": "2026-08-04T14:42:00.000Z",
-      "hora": "10h42",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:operacoes-com-apoio-do-iccwc-resultam-em-mais-de-4-7-mil-apreensoes",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "Operações com apoio do Iccwc resultam em mais de 4,7 mil apreensões",
-      "resumo": "Ações em 2025 resgataram quase 30 mil animais vivos e resultaram na identificação de mais de 1,2 mil suspeitos em diversos países.",
+      "titulo": "Operações internacionais com apoio do Iccwc realizam mais de 4,7 mil apreensões",
+      "resumo": "As ações em 130 países resultaram no resgate de quase 30 mil animais vivos e na identificação de mais de 1,2 mil suspeitos de tráfico de fauna e flora.",
       "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
       "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853934",
       "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
@@ -543,64 +587,497 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Operações realizadas em 2025 com apoio do Consórcio Internacional para o Combate ao Crime contra a Vida Selvagem (Iccwc) resultaram em mais de 4,7 mil apreensões em 130 países e na identificação de mais de 1,2 mil suspeitos. A maior das ações foi a Operação Trovão, coordenada pela Interpol e pela Organização Mundial das Alfândegas com apoio do Iccwc, que resgatou quase 30 mil animais vivos e dezenas de milhares de espécies de plantas protegidas.",
-        "As investigações envolveram a repressão ao comércio ilegal em locais como Índia, México e Tanzânia. Na Índia, autoridades realizaram uma prisão ligada a uma das maiores investigações de caça ilegal e tráfico de tigres do país. No Aeroporto da Cidade do México, foram apreendidas 299 espécies ameaçadas de extinção. Na Tanzânia, uma investigação internacional de dois anos culminou na repatriação de 116 tartarugas e na identificação e prisão de 15 suspeitos.",
-        "O comércio ilegal de chifres de rinoceronte permanece como uma das prioridades por representar o maior volume de tráfico relacionado à fauna. A secretária-geral da Convenção sobre o Comércio Internacional de Espécies Ameaçadas de Flora e Fauna Selvagens (Cites), Ivonne Higuero, afirmou que o objetivo do consórcio é fortalecer a fiscalização, avançar o Estado de Direito e proteger a biodiversidade.",
-        "O Iccwc é uma parceria colaborativa integrada por cinco organizações intergovernamentais: a Cites, a Organização Internacional de Polícia Criminal (Interpol), o Escritório das Nações Unidas sobre Drogas e Crime (Unodc), o Banco Mundial e a Organização Mundial das Alfândegas (OMA)."
+        "Operações apoiadas pelo Consórcio Internacional para o Combate ao Crime contra a Vida Selvagem, o Iccwc, resultaram em mais de 4,7 mil apreensões em 130 países em 2025. As intervenções levaram ao resgate de quase 30 mil animais vivos e dezenas de milhares de plantas protegidas, além da identificação de mais de 1,2 mil suspeitos.",
+        "Coordenada pela Interpol e pela Organização Mundial das Alfândegas, a Operação Trovão reuniu agências de aplicação da lei de 134 localidades. Entre os casos registrados pelo consórcio estão a apreensão de 299 espécies ameaçadas no Aeroporto da Cidade do México, uma prisão na Índia ligada ao tráfico de tigres e a repatriação de 116 tartarugas na Tanzânia, onde 15 suspeitos foram presos após dois anos de investigação.",
+        "O combate ao comércio ilegal de chifres de rinoceronte permanece como prioridade por representar o maior volume de tráfico relacionado à fauna. Em 2025, a Força-Tarefa de Fiscalização de Rinocerontes da Cites realizou uma reunião com apoio do Iccwc para tratar da caça ilegal e do contrabando desses itens.",
+        "A secretária-geral da Cites, Ivonne Higuero, afirmou que o objetivo do consórcio é fortalecer a fiscalização, avançar o Estado de Direito e proteger a biodiversidade. A parceria completou 15 anos e reúne a Cites, a Interpol, o Escritório das Nações Unidas sobre Drogas e Crime, o Banco Mundial e a Organização Mundial das Alfândegas."
       ],
-      "link": "/materia/operacoes-com-apoio-do-iccwc-resultam-em-mais-de-4-7-mil-apreensoes.html",
+      "link": "/materia/operacoes-internacionais-com-apoio-do-iccwc-realizam-mais-de-4-7-mil-a.html",
       "iso": "2026-08-04T12:00:00.000Z",
       "hora": "08h00",
       "original": true,
-      "contexto": "As operações afetaram mais de 1,2 mil suspeitos identificados em 130 países. Não há registros de casos parecidos no histórico.",
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/srv/2026/06/24/2026-06-24-udienza-generale/1782290789801.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:papa-leao-xiv-visitara-uruguai-argentina-e-peru-de-6-a-17-de-novembro-",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Papa Leão XIV visitará Uruguai, Argentina e Peru de 6 a 17 de novembro de 2026",
+      "resumo": "A quinta viagem internacional do Pontífice atende a convites de Chefes de Estado e autoridades eclesiásticas locais, e o detalhamento do programa será divulgado posteriormente.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-viagem-apostolica-uruguai-argentina-peru-america-latina.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Papa Leão XIV realizará uma viagem apostólica à América Latina entre os dias 6 e 17 de novembro de 2026. A informação foi anunciada pela Sala de Imprensa da Santa Sé pelo diretor Matteo Bruni. O Pontífice visitará o Uruguai, a Argentina e o Peru a convite dos Chefes de Estado e das autoridades eclesiásticas desses países.",
+        "A visita começará pelo Uruguai, onde Leão XIV estará de 6 a 8 de novembro. O roteiro inclui a capital Montevidéu, Paysandú, no leste do país, e Florida, localizada a 80 quilômetros ao norte de Montevidéu. A última visita de um Sucessor de Pedro ao país ocorreu há 38 anos, quando o Papa João Paulo II esteve no local em 1987 e 1988.",
+        "Em seguida, de 8 a 11 de novembro, o Pontífice seguirá para a Argentina, terra natal do Papa Francisco. O país receberá Leão XIV em Buenos Aires no dia 8 de novembro, além de passagens por Córdoba, na região centro-norte, e Luján, onde fica o maior santuário mariano do país, a 70 quilômetros a leste de Buenos Aires. A Argentina não recebia um Papa desde a Jornada Mundial da Juventude em 1987.",
+        "A etapa final ocorrerá no Peru, de 11 a 17 de novembro, país onde o Papa trabalhou como missionário por mais de vinte anos. As cidades visitadas serão Lima, Chiclayo, Cusco e Pucallpa. Esta será a quinta viagem apostólica internacional de Leão XIV, e o programa da viagem será divulgado mais adiante."
+      ],
+      "link": "/materia/papa-leao-xiv-visitara-uruguai-argentina-e-peru-de-6-a-17-de-novembro-.html",
+      "iso": "2026-08-05T10:00:00.000Z",
+      "hora": "06h00",
+      "original": true,
+      "contexto": "A viagem apostólica ao Uruguai, Argentina e Peru ocorrerá entre os dias 6 e 17 de novembro de 2026. A Argentina não recebia uma visita papal desde 1987, e a última ida de um pontífice ao Uruguai ocorreu em 1988. No histórico, constam três registros do Papa Leão XIV em agosto de 2026, incluindo duas visitas a Assis e uma videomensagem enviada ao Peru.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/05/2026-08-05-parolin-messa-guatemala-5.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:pietro-parolin-exorta-sacerdotes-a-serem-sentinelas-vigilantes-na-guat",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Pietro Parolin exorta sacerdotes a serem sentinelas vigilantes na Guatemala",
+      "resumo": "O secretário de Estado da Santa Sé presidiu celebração no Santuário Arquidiocesano de Adoração Perpétua de Mixco no encerramento de sua viagem ao país.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/parolin-missa-guatemala-encontro-nacional-sacerdotes.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O cardeal Pietro Parolin, secretário de Estado da Santa Sé, presidiu nesta terça-feira, 4 de agosto, uma celebração eucarística no Santuário Arquidiocesano de Adoração Perpétua de Mixco, na Guatemala. No último dia de sua viagem ao país, ele exortou os sacerdotes a renovarem sua vocação e atuarem como \"sentinelas vigilantes\".",
+        "Na homilia por ocasião da memória litúrgica de São João Maria Vianney, padroeiro dos sacerdotes, Parolin utilizou a imagem do sentinela, do livro do profeta Ezequiel. Ele explicou que o papel do sacerdote é proteger o povo, transmitir a palavra recebida e buscar a salvação das pessoas confiadas a ele, sem almejar reconhecimento pessoal.",
+        "O cardeal alertou para o risco de reduzir o ministério a uma sucessão de reuniões, projetos e atividades, com prejuízo da vigilância interior e da escuta de Deus. Recordando o exemplo do Cura d’Ars e uma exortação do Papa Leão XIV para uma vida eucarística, defendeu a centralidade da oração, da Eucaristia e da compaixão diante da secularização e do cansaço ministerial.",
+        "A agenda do secretário de Estado na Guatemala ocorre no contexto dos 90 anos de relações diplomáticas com a Santa Sé. Em pronunciamento ao Corpo Diplomático, Parolin afirmou que o diálogo está sendo substituído pela força."
+      ],
+      "link": "/materia/pietro-parolin-exorta-sacerdotes-a-serem-sentinelas-vigilantes-na-guat.html",
+      "iso": "2026-08-05T09:28:00.000Z",
+      "hora": "05h28",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:general-brasileiro-comanda-missao-da-onu-diante-de-surto-de-ebola-na-r",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "General brasileiro comanda missão da ONU diante de surto de ebola na RD Congo",
+      "resumo": "A epidemia na República Democrática do Congo registra 3.748 casos confirmados e 1.657 mortes, espalhadas por 49 zonas de saúde em cinco províncias.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853928",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Missão das Nações Unidas na República Democrática do Congo, a Monusco, comandada pelo general brasileiro Ulisses Mesquita Gomes, atua no combate ao surto de ebola e no apoio de segurança no país. A força internacional opera junto com a Organização Mundial da Saúde e o governo congolês para proteger civis e fornecer suporte logístico em meio a conflitos armados.",
+        "As operações enfrentam restrições em locais como Goma, Beni e Bunia devido à ausência de voos comerciais, aos riscos de propagação do ebola e ao controle territorial do grupo armado M23. Para manter o atendimento de saúde, a Monusco e os parceiros transportaram por terra e ar cerca de 35 toneladas de medicamentos e equipamentos para áreas como Mangualu e Bunia, além de intensificar patrulhas em centros de tratamento.",
+        "Entre as dificuldades de contenção do vírus estão rituais fúnebres locais que envolvem o toque, habitações com famílias numerosas e a semelhança dos sintomas iniciais do ebola com malária, cólera e febre amarela. Para combater a desinformação, a missão atua no diálogo direto com lideranças comunitárias e utiliza redes sociais e a Rádio Okapi, veículo financiado pela ONU."
+      ],
+      "link": "/materia/general-brasileiro-comanda-missao-da-onu-diante-de-surto-de-ebola-na-r.html",
+      "iso": "2026-08-04T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/03/porpora-2.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:papa-leao-xiv-manifesta-pesar-pela-morte-do-cardeal-dom-julio-duarte-l",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Papa Leão XIV manifesta pesar pela morte do cardeal dom Júlio Duarte Langa",
+      "resumo": "O bispo emérito de Xai-Xai faleceu no dia 3 de agosto de 2026, no Hospital Central de Maputo, em Moçambique.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-xiv-telegrama-morte-cardeal-julio-duarte-langa-2026.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O cardeal dom Júlio Duarte Langa morreu no dia 3 de agosto de 2026, no Hospital Central de Maputo, em Moçambique. Ele era bispo emérito da diocese de Xai-Xai.",
+        "O Papa Leão XIV enviou um telegrama de condolências dirigido ao arcebispo emérito de Maputo, dom Francisco Chimoio, e aos familiares do religioso falecido.",
+        "Na mensagem, o Papa recordou o serviço de 28 anos prestado por dom Júlio Langa à frente da diocese de Xai-Xai, inclusive durante o período da guerra civil.",
+        "Segundo o telegrama, o cardeal se entregou com simplicidade, zelo e perseverança ao rebanho para anunciar o Evangelho da paz e da reconciliação para um futuro de fraternidade entre os moçambicanos."
+      ],
+      "link": "/materia/papa-leao-xiv-manifesta-pesar-pela-morte-do-cardeal-dom-julio-duarte-l.html",
+      "iso": "2026-08-05T09:30:00.000Z",
+      "hora": "05h30",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/srv/2026/08/05/2026-08-05-udienza-generale/1785918009261.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:papa-leao-xiv-aborda-a-dimensao-eclesial-da-oracao-em-audiencia-geral",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Papa Leão XIV aborda a dimensão eclesial da oração em audiência geral",
+      "resumo": "Encontro foi realizado na Basílica de São Pedro por causa do calor e deu continuidade à reflexão sobre a Constituição conciliar Sacrosanctum Concilium.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-catequese-audiencia-sacrosanctum-concilium-oracao.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Papa Leão XIV deu continuidade à catequese sobre a Constituição conciliar Sacrosanctum Concilium nesta quarta-feira (05/08), na Basílica de São Pedro. Devido ao calor, o encontro abordou a dimensão eclesial da oração litúrgica e a necessidade de redescobrir a oração como dimensão fundamental da humanidade.",
+        "Durante a reflexão, o Pontífice afirmou que a oração pode parecer inútil em contextos dominados pela eficiência, pelo consumismo e pelo avanço da ciência e da tecnologia. O Papa ressaltou que a tradição da oração já não é transmitida em muitas famílias cristãs e que existe o risco de ela ser confundida com uma técnica psicológica voltada ao bem-estar pessoal.",
+        "Ao abordar a Sacrosanctum Concilium, Leão XIV explicou que o termo oração designa toda a liturgia e coloca a participação ativa dos fiéis como eixo central. O Papa também lembrou o desejo do Papa São Paulo VI de que a Liturgia das Horas, indissociável da Eucaristia, guie a oração cristã e alimente a vida espiritual do povo de Deus.",
+        "O Pontífice citou Santo Agostinho para tratar da união com Cristo durante a oração e afirmou que a Liturgia das Horas santifica o tempo da vida cotidiana. Segundo Leão XIV, a prática acompanha os momentos do dia e cada Hora funciona como um ato de esperança na peregrinação terrena."
+      ],
+      "link": "/materia/papa-leao-xiv-aborda-a-dimensao-eclesial-da-oracao-em-audiencia-geral.html",
+      "iso": "2026-08-05T08:36:00.000Z",
+      "hora": "04h36",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:projeto-teatral-em-mocambique-combate-a-corrupcao-na-prestacao-de-serv",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Projeto teatral em Moçambique combate a corrupção na prestação de serviços públicos",
+      "resumo": "Ação inaugural do projeto Gris ocorreu em uma unidade de saúde nos arredores de Maputo e contou com apoio do Unodc, da União Europeia e da Iadc.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853912",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Grupo de Intervenção e Sensibilização, Gris, realizou sua ação inaugural no Centro de Saúde da Matola 2, nos arredores de Maputo, em Moçambique. Promovida pelo Centro de Formação Jurídica e Judiciária, Cfjj, órgão criado pelo Ministério da Justiça, Assuntos Religiosos e Constitucionais de Moçambique em abril, a iniciativa utiliza palestras e representações teatrais para combater a extorsão e prevenir cobranças ilícitas nos serviços públicos.",
+        "Durante a atividade na unidade de saúde, o grupo apresentou a peça \"A fila que não anda\", abordando exigências de propina para o atendimento de maternidade. Na ocasião, a integrante do coletivo Anifa Vilanculo convocou o público a denunciar atos de corrupção. A participante Josefina* relatou que seus familiares pagaram 1,5 mil meticais para assegurar atendimento em um parto em 2014. No país, o salário-mínimo varia de 7 mil a 11 mil meticais na maioria dos setores.",
+        "O projeto é apoiado pelo Escritório das Nações Unidas sobre Drogas e Crime, Unodc, com financiamento da União Europeia e da Associação Internacional de Advogados de Defesa, Iadc. A especialista do Unodc, Joana Wrabetz, explicou que a ação deriva da adaptação de um módulo de ensino da agência voltado à participação cidadã e alinhado ao capítulo 2 da Convenção das Nações Unidas contra a Corrupção, Uncac. O ministro da Justiça, Assuntos Constitucionais e Religiosos, Mateus Saize, afirmou que a atuação do grupo transforma o conhecimento em ação nas comunidades."
+      ],
+      "link": "/materia/projeto-teatral-em-mocambique-combate-a-corrupcao-na-prestacao-de-serv.html",
+      "iso": "2026-08-04T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/05/presidente.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:daniel-chapo-envia-condolencias-pela-morte-do-cardeal-dom-julio-duarte",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Daniel Chapo envia condolências pela morte do Cardeal Dom Júlio Duarte Langa",
+      "resumo": "O presidente moçambicano lamentou o falecimento ocorrido na madrugada de 03 de agosto e dirigiu a mensagem à Igreja Católica, à Diocese de Xai-Xai, aos familiares e aos fiéis.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/africa/news/2026-08/presidente-chapo-condolencias-morte-cardeal-julio-langa-legado.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Presidente da República de Moçambique, Daniel Francisco Chapo, enviou um comunicado de condolências pela morte do Cardeal Dom Júlio Duarte Langa, ocorrida na madrugada de segunda-feira (03 de agosto). A mensagem foi direcionada à Igreja Católica em Moçambique, à Diocese de Xai-Xai, aos familiares e a todos os fiéis.",
+        "No documento, o chefe do Estado descreveu o religioso como uma das mais importantes referências espirituais e humanas do país, citando a entrega ao serviço da Igreja e do povo moçambicano ao longo de várias décadas. Daniel Chapo recordou que Dom Júlio Langa exerceu o ministério de Bispo de Xai-Xai durante quase trinta anos.",
+        "Durante sua atuação pastoral, o religioso dedicou atenção às populações mais vulneráveis e ao compromisso com a promoção da paz, da reconciliação nacional e da coesão social. O presidente destacou também o contributo do segundo Cardeal de Moçambique na valorização das línguas nacionais por meio da tradução de textos do Concílio Vaticano II.",
+        "Daniel Chapo afirmou que o legado deixado pelo Cardeal Dom Júlio Duarte Langa permanecerá como exemplo de fé, humildade, serviço ao próximo e dedicação à construção da paz."
+      ],
+      "link": "/materia/daniel-chapo-envia-condolencias-pela-morte-do-cardeal-dom-julio-duarte.html",
+      "iso": "2026-08-05T08:16:00.000Z",
+      "hora": "04h16",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/05/dom-lu-cio-andrice-muandula-jpg.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:dom-lucio-muandula-apresenta-roteiro-africano-para-a-assembleia-eclesi",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Dom Lúcio Muandula apresenta roteiro africano para a Assembleia Eclesial de 2028",
+      "resumo": "O documento define quatro etapas de preparação até o evento em Roma e foi apresentado durante o Primeiro Seminário Preparatório, realizado na Etiópia.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/africa/news/2026-08/igreja-africa-sinodo-sinodalidade-secam-renovacao-missao.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O bispo de Chimoio, em Moçambique, e coordenador da Equipa Sinodal Continental do SECAM, Dom Lúcio Andrice Muandula, apresentou o roteiro da fase de implementação do Sínodo sobre a Sinodalidade na África. A apresentação ocorreu no dia 4 de agosto, durante o Primeiro Seminário Preparatório realizado em Adis Abeba, na Etiópia.",
+        "Segundo o prelado, a caminhada rumo à Assembleia Eclesial de outubro de 2028, em Roma, envolve a renovação da vida ordinária da Igreja por meio da comunhão, participação e missão. Dom Muandula declarou que o processo tem início imediato e que a implementação se apoia no discernimento espiritual, e não em avaliações administrativas.",
+        "O roteiro prevê quatro etapas sucessivas. Em 2027, as dioceses realizarão assembleias sinodais locais, seguidas pelo discernimento das prioridades pastorais por parte das conferências episcopais nacionais e regionais. No início de 2028, as assembleias continentais reunirão os frutos desses processos.",
+        "A etapa final em Roma reunirá bispos, sacerdotes, pessoas consagradas e fiéis leigos. O bispo defendeu a participação de todo o Povo de Deus, citando a inclusão de mulheres, jovens, comunidades paroquiais e pessoas em situação de pobreza ou marginalização."
+      ],
+      "link": "/materia/dom-lucio-muandula-apresenta-roteiro-africano-para-a-assembleia-eclesi.html",
+      "iso": "2026-08-05T07:52:00.000Z",
+      "hora": "03h52",
+      "original": true,
+      "contexto": "O processo envolve as dioceses africanas, incluindo bispos, sacerdotes, pessoas consagradas, mulheres e jovens. As próximas etapas preveem assembleias sinodais locais em 2027 e encontros continentais no início de 2028. A etapa final da caminhada está agendada para outubro de 2028, em Roma.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:bebe-rauf-mohamed-ganha-peso-com-aleitamento-materno-exclusivo-em-biss",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Bebê Rauf Mohamed ganha peso com aleitamento materno exclusivo em Bissau",
+      "resumo": "Dados de agências da ONU apontam que a amamentação exclusiva nos primeiros seis meses de vida subiu de cerca de 37% em 2012 para mais de 47% atualmente.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853918",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O bebê Rauf Mohamed, nascido em março de 2026 no Hospital Nacional Simão Mendes, em Bissau, atingiu cerca de 6.5 quilogramas aos três meses e meio de vida alimentando-se apenas de leite materno. Ele nasceu com 2.550 gramas e subiu para 4.310 g nos primeiros 45 dias, sem ter ingerido água.",
+        "A mãe da criança, Maimuna Baldé, recém-licenciada em enfermagem pela Escola Nacional de Saúde em Bissau, cumpre o regime de aleitamento exclusivo para os primeiros quatro meses. Nos primeiros dias, o bebê mamava de duas em duas horas, entre 10 a 12 vezes por dia. Com quatro meses, ele mama a cada três horas, permanecendo entre 10 a 20 minutos em cada mamada.",
+        "Maimuna Baldé afirmou que o leite materno contém todos os nutrientes e protege contra diarreia, pneumonia e alergia, além de fortalecer a ligação entre mãe e filho. O irmão mais velho do bebê, Walid, tem 6 anos de idade.",
+        "Segundo dados de agências da ONU divulgados na Semana Mundial do Aleitamento Materno, a amamentação exclusiva nos primeiros seis meses subiu de cerca de 37% em 2012 para mais de 47% atualmente. Nos últimos cinco anos, a prevalência da amamentação até os dois anos de idade aumentou de 38% para 50%."
+      ],
+      "link": "/materia/bebe-rauf-mohamed-ganha-peso-com-aleitamento-materno-exclusivo-em-biss.html",
+      "iso": "2026-08-03T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": "O arquivo registra quatro matérias semelhantes em 3 de agosto de 2026 sobre o ganho de peso do bebê em Bissau. Na evolução descrita, a criança passou de 2.550 gramas ao nascer para cerca de 6,5 quilogramas aos três meses e meio, com meta de aleitamento exclusivo até os quatro meses. Em âmbito global, os dados apresentados apontam que a amamentação exclusiva nos primeiros seis meses subiu de 37% em 2012 para mais de.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:surto-de-ebola-na-republica-democratica-do-congo-soma-3-605-casos-e-1-",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Surto de ebola na República Democrática do Congo soma 3.605 casos e 1.587 mortes",
+      "resumo": "Com 49 zonas de saúde afetadas em cinco províncias, a OMS e o Africa CDC reforçam leitos e ações conjuntas para conter a expansão do vírus no país africano.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853920",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Organização Mundial da Saúde e o Centro de Controle e Prevenção de Doenças na África reúnem esforços com o Ministério da Saúde da República Democrática do Congo para combater o surto do vírus ebola bundibugyo. Até 30 de julho, foram confirmados 3.605 casos e 1.587 mortes, com taxa de letalidade de 44%. O país registrou um pico histórico de 567 novos casos e 296 óbitos em uma única semana.",
+        "O surto começou na zona de saúde de Mongbwalu, na Província de Ituri, e alcançou 49 zonas de saúde nas províncias de Ituri, Kivu do Norte, Kivu do Sul, Haut-Uélé e Tshopo. A prioridade das operações concentra-se na cidade de Nizi, próxima a Mongbwalu, que abriga mais de 80 mil deslocados em 22 acampamentos. Insegurança, deslocamento em massa, alta mobilidade e movimentos transfronteiriços dificultam as ações de resposta e aumentam o risco de propagação internacional.",
+        "Para responder ao aumento da demanda, o Ministério da Saúde da República Democrática do Congo recebeu 30 camas e 38 colchões, o que elevou a capacidade do Centro de Tratamento de Ebola para 80 leitos. A Organização Mundial da Saúde informou que é urgente uma ampliação drástica das medidas de combate ao vírus.",
+        "Na frente diplomática, o Escritório da Organização Mundial da Saúde em Uganda acolhe o diretor regional, Mohamed Janabi, e o diretor-geral do Africa CDC, Jean Kaseya, para uma missão conjunta de alto nível. Após visitar o escritório em Kampala, Janabi reuniu-se com a equipe local para tratar das conquistas de saúde no país e da expansão da promoção da saúde."
+      ],
+      "link": "/materia/surto-de-ebola-na-republica-democratica-do-congo-soma-3-605-casos-e-1-.html",
+      "iso": "2026-08-03T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:queda-da-natalidade-reduzira-populacao-em-idade-escolar-na-america-lat",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Queda da natalidade reduzirá população em idade escolar na América Latina até 2050",
+      "resumo": "Estudo da Unesco e da Cepal aponta que a transição demográfica pode liberar cerca de 30% dos recursos financeiros por nível educacional no continente.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853910",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A redução nas taxas de natalidade na América Latina fará com que a região tenha 38,3 milhões a menos de pessoas em idade escolar até o ano de 2050, em comparação com a década de 2020. O dado faz parte de um estudo publicado pela Organização das Nações Unidas para Educação, Ciência e Cultura, Unesco, e pela Comissão Econômica para a América Latina e o Caribe, Cepal.",
+        "Conforme o relatório, a taxa média de fecundidade regional diminuiu de 5,8 filhos por mulher em 1950 para 1,8 nos últimos anos. Entre 2018 e 2023, Uruguai e Venezuela tiveram queda superior a 15%, enquanto Chile, Costa Rica e Argentina ultrapassaram 20%. No Brasil, o Censo Demográfico do Instituto Brasileiro de Geografia e Estatística, Ibge, mostra que a taxa caiu para cerca de 1,55 filho por mulher, abaixo do índice de reposição populacional de 2,1.",
+        "A retração foi motivada por fatores como urbanização, maior especialização profissional e acadêmica feminina, acesso a métodos contraceptivos e elevados custos de moradia e criação de filhos. As projeções indicam que a natalidade ficará abaixo do nível de reposição em todos os países latino-americanos até 2050. Os sistemas educacionais de locais em declínio demográfico podem encolher entre 32% e 40%, embora a chegada de populações mais jovens atenue os índices em regiões receptoras de migrantes.",
+        "Até a metade do século, a diminuição populacional poderá liberar cerca de 30% dos recursos financeiros por nível educacional. Para utilizar o montante, Unesco e Cepal recomendam a redução do tamanho das turmas, a universalização da pré-escola, o fortalecimento do ensino médio e técnico e a melhoria da capacitação docente. As instituições também orientam o desenvolvimento de sistemas de informação georreferenciados para cruzar estatísticas de nascimentos, matrículas e movimentos migratórios."
+      ],
+      "link": "/materia/queda-da-natalidade-reduzira-populacao-em-idade-escolar-na-america-lat.html",
+      "iso": "2026-08-03T12:00:00.000Z",
+      "hora": "08h00",
+      "original": true,
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [],
+  "circulando": [
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que três veículos de imprensa publicaram informações sobre a suposta revogação de visto.",
+        "Que as manchetes relacionam o fato a uma crise entre Brasil e Estados Unidos.",
+        "Que o caso estaria sendo repercutido por veículos da imprensa internacional."
+      ],
+      "falta": [
+        "Confirmação oficial do Governo dos Estados Unidos sobre a revogação do visto.",
+        "Manifestação do Ministério das Relações Exteriores ou do Governo do Brasil.",
+        "Data exata em que a medida teria sido adotada pelas autoridades americanas.",
+        "Posicionamento oficial da embaixadora citada nas publicações."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "Governo Trump revoga visto da embaixadora do Brasil nos EUA em nova escalada na crise entre os dois países",
+          "link": "https://www.bbc.com/portuguese/articles/cwyepe1lz0ro?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
+          "veiculo": "Folha Mundo",
+          "titulo": "Veja cronologia da crise entre Brasil e EUA, que ganhou novo capítulo com a revogação do visto de embaixadora",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/veja-cronologia-da-crise-entre-brasil-e-eua-que-ganhou-novo-capitulo-com-a-revogacao-do-visto-de-embaixadora.shtml"
+        },
+        {
+          "veiculo": "g1 Mundo",
+          "titulo": "Como imprensa internacional noticiou revogação do visto de embaixadora do Brasil e aumento da tensão com os EUA",
+          "link": "https://g1.globo.com/mundo/noticia/2026/08/05/como-imprensa-internacional-noticiou-revogacao-do-visto-de-embaixadora-do-brasil-e-aumento-da-tensao-com-os-eua.ghtml"
+        }
+      ],
+      "link": "/materia/nc-governo-trump-teria-revogado-visto-de-embaixadora-do-brasil-nos-eua.html",
+      "corpo": [
+        "As publicações trariam uma cronologia dos eventos da crise entre Brasil e Estados Unidos. O assunto também estaria sendo noticiado por veículos da imprensa internacional."
+      ],
+      "id": "circ:governo-trump-teria-revogado-visto-de-embaixadora-do-brasil-nos-eua",
+      "editoria": "internacional",
+      "uf": null,
+      "titulo": "Governo Trump teria revogado visto de embaixadora do Brasil nos EUA",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T12:00:57.719Z",
+      "hora": "08h00"
+    }
+  ],
   "pautas": [
     {
       "titulo": "Governo Trump revoga visto da embaixadora do Brasil nos EUA em nova escalada na crise entre os dois países",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 7,
       "tambemEm": [
         "Folha Mundo",
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Quem é Maria Luiza Ribeiro Viotti, embaixadora do Brasil nos EUA que teve visto revogado pelo governo Trump",
-      "veiculo": "g1 Mundo",
+      "titulo": "Revogação de visto de embaixadora do Brasil nos EUA é 'instrumento arbitrário para pressionar governo brasileiro', afirma analista",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 7,
       "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
+        "Folha Mundo",
+        "g1 Mundo"
       ]
     },
     {
       "titulo": "Governo Trump revoga visto de embaixadora do Brasil nos Estados Unidos",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 5,
       "tambemEm": [
         "BBC Brasil",
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Seis anos depois, familiares dos mortos na megaexplosão do porto de Beirute esperam por justiça",
+      "titulo": "Veja cronologia da crise entre Brasil e EUA, que ganhou novo capítulo com a revogação do visto de embaixadora",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 4,
       "tambemEm": [
-        "BBC Brasil"
+        "BBC Brasil",
+        "g1 Mundo"
       ]
     },
     {
-      "titulo": "Quem é Daniel Perez, o indicado para a embaixada no Brasil que está no centro de nova crise diplomática com os EUA",
-      "veiculo": "g1 Mundo",
+      "titulo": "Governo chama de falsas razões dos EUA para revogar visto de embaixadora e acusa Trump de interferência",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Diplomatas avaliam que decisão de revogar visto de embaixadora é anômala e gravíssima",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Governo Trump chama de 'ação recíproca' revogação do visto de embaixadora do Brasil",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Decisão sem precedentes de revogar visto de embaixadora agrava relação com EUA a nível inédito",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Quem é Daniel Perez, indicado de Trump para embaixada em Brasília e pivô de crise — e o que ele disse sobre o Brasil",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Seis anos depois, familiares dos mortos na megaexplosão do porto de Beirute esperam por justiça",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -614,24 +1091,6 @@
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Ucrânia: Vídeo mostra drone russo a perseguir civil em mercado de Kherson",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Vídeo mostra drone caçando vendedor na Ucrânia; ataques matam 5 na Rússia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
       ]
     }
   ]

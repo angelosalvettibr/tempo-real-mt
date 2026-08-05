@@ -1,27 +1,45 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-04T22:33:24.194Z",
-  "modelo": "gemini-flash-latest",
+  "gerado": "2026-08-05T12:04:42.859Z",
+  "modelo": "gemini-2.0-flash-lite-001",
   "numeros": {
-    "pauta": 125,
-    "fonteLivre": 61,
-    "confirmadas": 19,
-    "publicadas": 21,
+    "pauta": 124,
+    "fonteLivre": 35,
+    "confirmadas": 7,
+    "publicadas": 2,
     "resgatadas": 0,
-    "semFonte": 81
+    "semFonte": 88
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 22,
-    "entregando": 19,
-    "itens": 186,
+    "responderam": 17,
+    "entregando": 14,
+    "itens": 159,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "mprs",
         "nome": "MPRS",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1rs",
+        "nome": "g1 RS",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -46,26 +64,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-rs",
         "nome": "Rio Grande do Sul",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,17 +91,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1rs",
-        "nome": "g1 RS",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
         "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
+        "tipo": "assessoria",
+        "id": "tre-rs",
+        "nome": "TRE-RS",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -117,9 +117,9 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
+        "tipo": "resgate",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -144,51 +144,6 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "tre-rs",
-        "nome": "TRE-RS",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "saude-rs",
-        "nome": "Secretaria de Saúde do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "jc",
         "nome": "Jornal do Comércio",
@@ -196,15 +151,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -226,12 +172,30 @@
       },
       {
         "tipo": "pauta",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "resgate",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "resgate",
@@ -243,13 +207,13 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "tipo": "assessoria",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
       },
       {
         "tipo": "assessoria",
@@ -334,15 +298,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "ssp-rs",
         "nome": "Secretaria de Segurança do RS",
         "itens": 0,
@@ -352,8 +307,17 @@
       },
       {
         "tipo": "assessoria",
-        "id": "educacao-rs",
-        "nome": "Secretaria de Educação do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +334,26 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "saude-rs",
+        "nome": "Secretaria de Saúde do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "educacao-rs",
+        "nome": "Secretaria de Educação do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -388,8 +370,26 @@
       },
       {
         "tipo": "assessoria",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "caxias",
         "nome": "Prefeitura de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -409,106 +409,6 @@
   ],
   "itens": [
     {
-      "foto": "https://www.tre-rs.jus.br/imagens/imagens/tre-rs-eleicoes-2026-1/@@images/image-0-40d21de318c02f2d3d5e35165808f7b5.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:rio-grande-do-sul-tem-8-526-233-eleitores-aptos-para-as-eleicoes-gerai",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Rio Grande do Sul tem 8.526.233 eleitores aptos para as Eleições Gerais de 2026",
-      "resumo": "O contingente divulgado pelo TSE apresenta queda de 1,8% na comparação com 2024 e crescimento de 1,22% em relação ao pleito geral de 2022.",
-      "fonte": "Meridiano, com informações de TRE-RS",
-      "origemLink": "https://www.tre-rs.jus.br/comunicacao/noticias/2026/Julho/rio-grande-do-sul-tera-8-526-233-eleitores-para-o-pleito-de-outubro",
-      "origemNome": "TRE-RS",
-      "pautadoPor": [
-        "terra.com.br",
-        "Portal do Estado do Rio Grande do Sul",
-        "www.gov.br",
-        "Canal Rural"
-      ],
-      "quentura": 6,
-      "uf": null,
-      "corpo": [
-        "O Tribunal Superior Eleitoral divulgou nesta segunda-feira (20) que o estado do Rio Grande do Sul possui 8.526.233 pessoas aptas a votar nas Eleições Gerais de 2026. Os dados foram apresentados pelo presidente do TSE após o encerramento do processamento do Cadastro Nacional de Eleitores.",
-        "O total de eleitores no estado teve uma redução de 1,8% em relação às eleições de 2024, que somavam 8.682.558 eleitores. Em comparação com a última eleição geral, em 2022, quando havia 8.423.308 eleitores, houve um aumento de 1,22%. Do eleitorado atual, 86,92% possuem dados biométricos coletados.",
-        "Entre os municípios gaúchos, Porto Alegre registra o maior número de eleitores, com 1.061.485, seguido por Caxias do Sul, com 342.369; Canoas, com 252.875; Pelotas, com 243.865; e Santa Maria, com 206.350.",
-        "Do total de eleitores aptos no estado, 53% pertencem ao gênero feminino. O grupo de eleitores jovens entre 16 e 17 anos soma 54.702 pessoas, enquanto 2.308 eleitores solicitaram a inclusão do nome social no título de eleitor."
-      ],
-      "link": "/materia/rio-grande-do-sul-tem-8-526-233-eleitores-aptos-para-as-eleicoes-gerai.html",
-      "iso": "2026-08-04T22:21:03.979Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "O total de 8.526.233 pessoas aptas a votar abrange os eleitores do Rio Grande do Sul habilitados para as Eleições Gerais de 2026. Esse contingente representa uma queda de 1,8% em relação aos 8.682.558 eleitores registrados no estado em 2024. Na comparação com as eleições gerais de 2022, quando havia 8.423.308 eleitores gaúchos, o número atual teve um aumento de 1,22%.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:porto-alegre-amplia-rede-de-eletropostos-em-vias-publicas-com-mais-qua",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Porto Alegre amplia rede de eletropostos em vias públicas com mais quatro unidades",
-      "resumo": "As novas estações serão instaladas em parceria com a Esquina do Futuro por meio do programa Living Lab POA, sem custos financeiros para o município.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/gi/noticias/prefeitura-amplia-pontos-de-carregamento-para-veiculos-eletricos-em-vias-publicas",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "Correio do Povo"
-      ],
-      "quentura": 3,
-      "uf": "rs",
-      "corpo": [
-        "A Prefeitura de Porto Alegre, por meio do Gabinete de Inovação, autorizou a instalação de mais quatro pontos de carregamento para veículos elétricos em vias públicas. A ampliação da rede ocorre em parceria com a Esquina do Futuro, no âmbito do programa Living Lab POA.",
-        "Atualmente, a cidade conta com três eletropostos em operação, situados nas regiões do Jardim Europa (Parque Germânia), 24 de Outubro e Encol. As quatro novas unidades ficarão na Avenida Siqueira Campos, 814; Rua Frederico Mentz, 1561; Rua Irmão José Otão, 320; e Rua Siomma Breitmann, 2.",
-        "A Prova de Conceito que viabiliza os eletropostos opera desde maio deste ano e já disponibilizou cerca de 25 mil kWh de energia, somando mais de 1.250 recargas efetuadas por 546 usuários distintos. O desenvolvimento, a instalação e a operação dos equipamentos são realizados pelos parceiros durante o período de testes, sem custos para a prefeitura.",
-        "A entrada em funcionamento das novas estações depende da liberação de ligação de energia pela concessionária responsável, com previsão de início entre 45 e 60 dias. O secretário municipal de Inovação, Luiz Carlos Pinto, afirmou que os testes orientam decisões baseadas em resultados e avaliam a demanda sem impacto financeiro para o município."
-      ],
-      "link": "/materia/porto-alegre-amplia-rede-de-eletropostos-em-vias-publicas-com-mais-qua.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:tre-rs-orienta-sobre-acesso-e-cadastramento-no-sistema-infodipweb",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "TRE-RS orienta sobre acesso e cadastramento no sistema INFODIPWEB",
-      "resumo": "O serviço de Informações de Óbitos e Direitos Políticos é gerido pela Secretaria da Corregedoria Regional Eleitoral e possui canal de suporte por e-mail.",
-      "fonte": "Meridiano, com informações de TRE-RS",
-      "origemLink": "https://www.tre-rs.jus.br/servicos-judiciais/infodipweb/infodipweb",
-      "origemNome": "TRE-RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O TRE-RS disponibiliza o Sistema de Informações de Óbitos e Direitos Políticos, denominado INFODIPWEB. A gestão do serviço é de responsabilidade da Secretaria da Corregedoria Regional Eleitoral.",
-        "Para utilizar o sistema, o usuário deve configurar o navegador para permitir a execução de scripts. O programa de navegação também não deve bloquear a abertura de janelas popup no domínio.",
-        "O procedimento para acesso requer o preenchimento do Requerimento de Cadastramento no Sistema INFODIPWEB. O formulário deve ser baixado no computador para que o preenchimento seja realizado.",
-        "O canal indicado para atendimento de dúvidas sobre o sistema é o e-mail infodip@tre-rs.jus.br."
-      ],
-      "link": "/materia/tre-rs-orienta-sobre-acesso-e-cadastramento-no-sistema-infodipweb.html",
-      "iso": "2026-08-04T22:21:03.979Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/denunciamedico98.jpg",
       "fotoAlt": null,
       "fotoLarg": 0,
@@ -518,7 +418,7 @@
       "chapeu": "Nosso texto",
       "editoria": "regional",
       "titulo": "Cirurgião plástico Leandro Fuchs vira réu por crimes contra sete pacientes",
-      "resumo": "A Justiça aceitou a denúncia do MPRS por concussão, estelionato, falsidade ideológica e injúria racial contra o médico que atuava no Hospital Ernesto Dornelles.",
+      "resumo": "A denúncia acolhida pela 11ª Vara Criminal de Porto Alegre inclui acusações por fatos ocorridos durante a atuação do médico no Hospital Ernesto Dornelles.",
       "fonte": "Meridiano, com informações de MPRS",
       "origemLink": "https://www.mprs.mp.br/noticias/66815/",
       "origemNome": "MPRS",
@@ -528,147 +428,14 @@
       "quentura": 1,
       "uf": "rs",
       "corpo": [
-        "O cirurgião plástico Leandro Fuchs virou réu pelos crimes de concussão, estelionato, falsidade ideológica e injúria racial após a Justiça aceitar a denúncia do Ministério Público do Rio Grande do Sul (MPRS). As acusações envolvem sete pacientes e se referem à conduta do profissional no Hospital Ernesto Dornelles, em Porto Alegre.",
-        "A denúncia foi apresentada no dia 6 de julho pelo promotor de Justiça André Baptista Caruso Mac Donald e recebida em 2 de agosto pela 11ª Vara Criminal do Foro Central de Porto Alegre. A ação penal reúne sete inquéritos policiais e atribui ao médico a prática de concussão como funcionário público por equiparação, obtenção de vantagem indevida, indução de vítimas em erro, ofensas à honra e inserção de dados falsos em documentos, com agravantes de abuso de poder e continuidade delitiva.",
-        "As vítimas recebem acompanhamento do Espaço Bem-me-quer, a Central de Atendimento às Vítimas e Familiares de Vítimas de Crimes e Atos Infracionais do MPRS em Porto Alegre, sob coordenação da promotora de Justiça Carla Frós. O promotor André Mac Donald informou também que pelo menos outros 30 inquéritos foram distribuídos e seguem em análise pelo MPRS."
+        "O cirurgião plástico Leandro Fuchs virou réu após a Justiça aceitar denúncia do Ministério Público do Rio Grande do Sul (MPRS) por concussão, estelionato e falsidade ideológica contra sete pacientes. O médico também responde por injúria racial praticada contra uma das vítimas.",
+        "A ação penal reúne sete inquéritos policiais sobre a atuação profissional do médico no Hospital Ernesto Dornelles, em Porto Alegre. A denúncia foi apresentada em 6 de julho pelo promotor de Justiça André Baptista Caruso Mac Donald e recebida em 2 de agosto pela 11ª Vara Criminal do Foro Central de Porto Alegre.",
+        "O MPRS atribuiu ao réu a prática de concussão na condição de funcionário público por equiparação, além de estelionato e falsidade ideológica. Conforme a denúncia, os fatos envolvem obtenção de vantagem indevida, indução de vítimas em erro, ofensas à honra e inserção de informações falsas em documentos, com agravantes de abuso de poder e continuidade delitiva em parte dos delitos.",
+        "As vítimas são acompanhadas pela Central de Atendimento às Vítimas e Familiares de Vítimas de Crimes e Atos Infracionais (Espaço Bem-me-quer), do MPRS, em Porto Alegre, com atendimento coordenado pela promotora de Justiça Carla Frós. Segundo o promotor André Mac Donald, pelo menos outros 30 inquéritos já foram distribuídos e estão em análise pelo MPRS."
       ],
       "link": "/materia/cirurgiao-plastico-leandro-fuchs-vira-reu-por-crimes-contra-sete-pacie.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "Não há registro de caso parecido no histórico. O processo atual envolve sete pacientes e teve a denúncia aceita pela Justiça em 2 de agosto. Além desta ação penal, o Ministério Público tem pelo menos outros 30 inquéritos em análise envolvendo o médico.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:camara-municipal-de-caxias-do-sul-abre-selecao-para-estagiarios-de-ens",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Câmara Municipal de Caxias do Sul abre seleção para estagiários de Ensino Superior",
-      "resumo": "As inscrições são gratuitas e podem ser feitas até 3 de agosto de 2026 por estudantes de 12 cursos, com bolsa-auxílio de R$ 1.153,05 e auxílio-transporte.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32943",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [
-        "Prefeitura de Porto Alegre",
-        "PCI Concursos"
-      ],
-      "quentura": 3,
-      "uf": "rs",
-      "corpo": [
-        "A Câmara Municipal de Caxias do Sul abriu processo seletivo público para formação de cadastro de reserva de estagiários de Ensino Superior. As oportunidades são voltadas para estudantes da rede pública ou privada, a partir do segundo semestre.",
-        "As inscrições são gratuitas e podem ser feitas até 3 de agosto de 2026 pelo site www.ebcpconsultoria.com.br. Estudantes sem acesso à internet podem se inscrever presencialmente no escritório da EBCP Consultoria, na Rua José Tovasi, 417, bairro Cruzeiro, em Caxias do Sul/RS, de segunda a sexta-feira, em dias úteis, das 8h30 às 12h e das 13h30 às 17h.",
-        "Os candidatos devem enviar cópia do documento de identidade, comprovante de matrícula e relatório de notas do semestre imediatamente anterior. A bolsa-auxílio para seis horas diárias de estágio é de R$ 1.153,05, acrescida de auxílio-transporte equivalente a duas passagens de transporte público coletivo municipal por dia estagiado.",
-        "A seleção atende alunos dos cursos de Administração, Ciências Contábeis, Design Gráfico, Direito, Fotografia, Informática, Jornalismo, Letras, Marketing, Produção Audiovisual, Publicidade e Propaganda, e Relações Públicas. O edital completo está disponível no site da Casa Legislativa, e dúvidas podem ser enviadas ao e-mail rh@camaracaxias.rs.gov.br ou tratadas pelo telefone (54) 3218-1600, ramais 3838 e 3839."
-      ],
-      "link": "/materia/camara-municipal-de-caxias-do-sul-abre-selecao-para-estagiarios-de-ens.html",
-      "iso": "2026-08-04T22:22:04.528Z",
-      "hora": "18h22",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 2899,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:prazo-para-resgate-de-r-28-mil-do-sorteio-do-nfg-termina-em-11-de-agos",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Prazo para resgate de R$ 28 mil do sorteio do NFG termina em 11 de agosto",
-      "resumo": "Os contemplados no sorteio 163 de abril têm até 90 dias após a homologação de 14 de maio para pedir o repasse dos valores pendentes.",
-      "fonte": "Meridiano, com informações de Governo do RS",
-      "origemLink": "https://estado.rs.gov.br/termina-em-11-de-agosto-prazo-para-resgatar-valores-do-sorteio-de-abril-do-nfg",
-      "origemNome": "Governo do RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O prazo para o resgate dos valores distribuídos no sorteio mensal 163 do Nota Fiscal Gaúcha (NFG), realizado em abril, termina no dia 11 de agosto. Após essa data, a solicitação não poderá mais ser feita.",
-        "No total, estão pendentes R$ 28 mil. O período para resgatar os prêmios é de 90 dias após a homologação do resultado, que ocorreu no dia 14 de maio.",
-        "Os inscritos no NFG podem verificar se têm valores disponíveis no site ou aplicativo do programa. O acesso é feito com login pela conta gov.br, na aba \"Meus prêmios\".",
-        "O resgate pode ser direcionado para uma conta do Banrisul ou via Pix para outras instituições, desde que a chave seja o CPF. O valor não é transferido na hora, mas a entrega do repasse é garantida após o pedido."
-      ],
-      "link": "/materia/prazo-para-resgate-de-r-28-mil-do-sorteio-do-nfg-termina-em-11-de-agos.html",
-      "iso": "2026-08-04T22:20:45.115Z",
-      "hora": "18h20",
-      "original": true,
-      "contexto": "O prazo para o resgate dos R$ 28 mil pendentes termina no dia 11 de agosto, data que marca o fim do período de 90 dias após a homologação do resultado. A medida afeta os inscritos no programa Nota Fiscal Gaúcha contemplados no sorteio mensal 163.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "id": "ilm:camara-de-caxias-do-sul-sediara-seminario-regional-de-protecao-e-defes",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Câmara de Caxias do Sul sediará Seminário Regional de Proteção e Defesa Civil",
-      "resumo": "O evento na próxima segunda-feira (03/08) reunirá órgãos de segurança e Ministério Público para apresentar um modelo de atendimento à população em temporais e ocorrências naturais.",
-      "fonte": "Meridiano, com informações de Câmara de Caxias do Sul",
-      "origemLink": "https://www.camaracaxias.rs.gov.br/noticias/index/32949",
-      "origemNome": "Câmara de Caxias do Sul",
-      "pautadoPor": [
-        "Portal do Estado do Rio Grande do Sul"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "A Câmara de Vereadores realiza, na próxima segunda-feira (03/08), das 9h às 18h, o Seminário Regional Legislativo de Proteção e Defesa Civil. Promovida pela Frente Parlamentar de Proteção e Defesa Civil do Legislativo, a atividade no plenário da Casa reúne lideranças de órgãos de segurança e do Ministério Público para apresentar um modelo de ações no atendimento à população diante de temporais e ocorrências naturais de grande porte no estado.",
-        "A programação conta com seis palestras. Às 9h30, Marcelo Almeida de Souza, titular da 9ª Coordenadoria Regional de Proteção e Defesa Civil de Caxias do Sul, aborda ações de prevenção e contingência. Às 10h, Eder Camilo Dalla Porta, presidente da filial de Caxias do Sul da Cruz Vermelha Brasileira, trata da logística humanitária durante as enchentes no território gaúcho. Às 11h, o promotor de Justiça Ádrio Gelatti discorre sobre a atuação do Ministério Público em crises climáticas.",
-        "No período da tarde, às 13h30, César de Assumpção Nunes, assessor especial do Gabinete do Secretário de Proteção e Defesa Civil de Santa Catarina, relata as medidas tomadas no estado com apoio dos legislativos municipais. Às 15h30, o comandante do 5º Batalhão de Bombeiro Militar, Márcio Müller Batista, explica a atuação em grandes crises e o fortalecimento operacional da corporação. O evento termina com a apresentação de Julimar Fortes Pinheiro, ex-comandante-geral do Corpo de Bombeiros do Rio Grande do Sul, sobre a atuação na maior catástrofe climática da história do estado.",
-        "O presidente da Frente Parlamentar, Alexandre Bortoluz (PP), informa que os trabalhos visam antecipar ações contra possíveis eventos climáticos extremos e promover a interlocução com o Poder Legislativo. O promotor Ádrio Gelatti pontua que o Ministério Público acompanha o Plano de Contingência e o Plano Diretor do município, referente às zonas propícias e não propícias para urbanização por risco de inundações e deslizamentos. A entrada é franca, mediante cadastramento."
-      ],
-      "link": "/materia/camara-de-caxias-do-sul-sediara-seminario-regional-de-protecao-e-defes.html",
-      "iso": "2026-08-04T22:22:04.528Z",
-      "hora": "18h22",
-      "original": true,
-      "contexto": "O evento está agendado para a próxima segunda-feira, 3 de agosto, das 9h às 18h, no plenário da Câmara de Caxias do Sul. A atividade reúne lideranças de órgãos de segurança e do Ministério Público, com foco em ações voltadas à população afetada por temporais e eventos naturais. O histórico do acervo registra matérias sobre o seminário em duas ocasiões anteriores, em 3 e 4 de agosto de 2026.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://sema.rs.gov.br/upload/recortes/202607/15152519_118778_GD.jpg",
-      "fotoAlt": null,
-      "fotoLarg": 945,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:irrigacao-superficial-nao-precisa-mais-de-licenciamento-ambiental-no-r",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Irrigação superficial não precisa mais de licenciamento ambiental no RS",
-      "resumo": "Decisão do Consema adequa o estado à legislação federal, mas mantém exigências como o Cadastro Ambiental Rural e a outorga da água.",
-      "fonte": "Meridiano, com informações de Sema-RS",
-      "origemLink": "https://sema.rs.gov.br/empreendimentos-de-irrigacao-superficial-passam-a-nao-precisar-de-licenciamento-ambiental-no-rio-grande-do-sul",
-      "origemNome": "Sema-RS",
-      "pautadoPor": [
-        "Portal do Estado do Rio Grande do Sul",
-        "www.gov.br",
-        "Canal Rural",
-        "Sesc/RS"
-      ],
-      "quentura": 5,
-      "uf": "rs",
-      "corpo": [
-        "A atividade de irrigação pelo método superficial não necessita mais de licenciamento ambiental no Rio Grande do Sul. A mudança foi aprovada na 286ª reunião ordinária do Conselho Estadual do Meio Ambiente (Consema), realizada na quinta-feira (9/7), para adequação à Lei Geral do Licenciamento Ambiental, a Lei Federal 15.190/2025.",
-        "Com a decisão, duas resoluções do Conselho, de números 372/2018 e 512/2024, passaram por alterações em suas redações. As versões atualizadas foram publicadas no Diário Oficial nesta quarta-feira (15/7) e estão disponíveis no site do Consema.",
-        "Apesar da mudança, a irrigação continua submetida a instrumentos de controle, que incluem o Cadastro Ambiental Rural (CAR), a outorga do uso da água para captação e lançamento, a fiscalização, o poder de polícia e as responsabilidades administrativa, civil e penal. Empreendimentos que utilizam reservatórios hídricos seguem precisando de licenciamento ambiental.",
-        "A próxima reunião do conselho está prevista para 13 de agosto."
-      ],
-      "link": "/materia/irrigacao-superficial-nao-precisa-mais-de-licenciamento-ambiental-no-r.html",
-      "iso": "2026-08-04T22:21:47.287Z",
-      "hora": "18h21",
+      "iso": "2026-08-05T11:56:05.671Z",
+      "hora": "07h56",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -680,817 +447,221 @@
       "fotoLarg": 0,
       "municipio": "poa",
       "municipioNome": "Porto Alegre",
-      "id": "ilm:porto-alegre-lanca-plataforma-com-dados-e-projetos-do-distrito-da-inov",
+      "id": "ilm:porto-alegre-vai-instalar-quatro-novos-eletropostos-em-vias-publicas",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Porto Alegre lança plataforma com dados e projetos do Distrito da Inovação",
-      "resumo": "Ferramenta reúne informações de uma área de 258 hectares e detalha projetos com investimentos previstos superiores a R$ 1 bilhão.",
+      "titulo": "Porto Alegre vai instalar quatro novos eletropostos em vias públicas",
+      "resumo": "A expansão é feita sem custos para o município por meio do programa Living Lab POA, e o início da operação dos novos pontos está previsto para ocorrer entre 45 e 60 dias.",
       "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/smamus/noticias/distrito-da-inovacao-ganha-plataforma-com-indicadores-e-oportunidades-de",
+      "origemLink": "https://prefeitura.poa.br/gi/noticias/prefeitura-amplia-pontos-de-carregamento-para-veiculos-eletricos-em-vias-publicas",
       "origemNome": "Prefeitura de Porto Alegre",
       "pautadoPor": [
-        "Jornal do Comércio",
-        "Correio do Povo"
+        "radiocaicara.com.br",
+        "Terra"
       ],
-      "quentura": 2,
+      "quentura": 4,
       "uf": "rs",
       "corpo": [
-        "A Prefeitura de Porto Alegre lançou nesta terça-feira, 4, a plataforma do Distrito da Inovação durante a primeira reunião do Comitê Estratégico do 4º Distrito. A ferramenta de inteligência urbana apresenta dados, mapas em 2D e 3D, projetos e oportunidades de investimento em uma área de 258 hectares.",
-        "O perímetro do Distrito da Inovação foi estabelecido via Acordo de Cooperação com o Instituto de Caldeira, entre as avenidas Farrapos e Voluntários da Pátria e entre a travessa São Jorge e a rua Comendador Azevedo. O local reúne mais de 18 mil economias locais e os chamados Âncoras Territoriais, como Caldeira, Nau Live Spaces, 4D Complex, Fiateci, Museu de Arte Contemporânea e Vila Flores.",
-        "Os investimentos previstos para a região ultrapassam R$ 1 bilhão, com início das obras marcado para o segundo semestre de 2027. O projeto inclui a criação do Parque do Porto, com 21 mil metros quadrados na avenida Mauá, a requalificação da Praça Navegantes, um corredor verde e a implantação de caminhos sustentáveis até o bairro Moinhos de Vento.",
-        "As ações englobam ainda urbanismo tático e intervenções viárias em mais de seis mil metros quadrados para qualificar os acessos ao Hub de Inovação. A plataforma com as informações sobre infraestrutura e o andamento das obras pode ser acessada no site prefeitura.poa.br/distritodainovacao."
+        "A Prefeitura de Porto Alegre, por meio do Gabinete de Inovação, autorizou a instalação de quatro novos pontos de carregamento para veículos elétricos em vias públicas. A ampliação ocorre em parceria com a Esquina do Futuro, no âmbito do programa Living Lab POA, sem custos financeiros para o município.",
+        "As novas estações serão instaladas nos seguintes endereços: Avenida Siqueira Campos, 814; Rua Frederico Mentz, 1561; Rua Irmão José Otão, 320; e Rua Siomma Breitmann, 2. A entrada em operação depende da liberação da ligação de energia pela concessionária e a previsão é que ocorra entre 45 e 60 dias. Atualmente, a cidade conta com três eletropostos em funcionamento no Jardim Europa (Parque Germânia), na 24 de Outubro e na Encol.",
+        "A Prova de Conceito que viabiliza os eletropostos está em operação desde maio deste ano e já disponibilizou cerca de 25 mil kWh de energia, com mais de 1.250 recargas efetuadas por 546 usuários distintos. Todo o desenvolvimento, a instalação e a operação das estruturas são executados pelos parceiros ao longo dos testes.",
+        "Segundo o secretário municipal de Inovação, Luiz Carlos Pinto, o formato permite testar tecnologias e avaliar a demanda sem gerar custos para o poder público. O Living Lab POA é uma iniciativa da prefeitura que reúne setor público, empresas, universidades e sociedade para testar soluções em ambiente real."
       ],
-      "link": "/materia/porto-alegre-lanca-plataforma-com-dados-e-projetos-do-distrito-da-inov.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 2899,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:plano-de-contratacoes-anual-para-2027-e-disponibilizado-pelo-executivo",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Plano de Contratações Anual para 2027 é disponibilizado pelo Executivo",
-      "resumo": "Ferramenta serve de apoio à elaboração da Lei Orçamentária Anual, que deve ser encaminhada à Assembleia Legislativa até 15 de setembro.",
-      "fonte": "Meridiano, com informações de Governo do RS",
-      "origemLink": "https://estado.rs.gov.br/plano-de-contratacoes-para-o-ano-de-2027-e-disponibilizado",
-      "origemNome": "Governo do RS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Poder Executivo disponibilizou o Plano de Contratações Anual (PCA) referente ao ano de 2027. O instrumento orienta as contratações da administração pública estadual e visa cumprir as diretrizes da Lei 14133/2021 e as exigências da Instrução Normativa CELIC/SPGG nº 05/2026.",
-        "Para 2027, as informações do plano passam a ser acessadas por meio de painéis interativos em Power BI, em substituição às planilhas eletrônicas. A mudança permite o cruzamento de dados e garante segurança no acesso aos registros do planejamento de contratações do Estado.",
-        "A disponibilização do PCA ocorre durante a discussão para a montagem da Lei Orçamentária Anual (LOA) de 2027. A ferramenta funciona como recurso informacional para a elaboração da peça orçamentária, que precisa ser enviada pelo Poder Executivo à Assembleia Legislativa até 15 de setembro."
-      ],
-      "link": "/materia/plano-de-contratacoes-anual-para-2027-e-disponibilizado-pelo-executivo.html",
-      "iso": "2026-08-04T22:20:45.115Z",
-      "hora": "18h20",
-      "original": true,
-      "contexto": "O arquivo registra um caso parecido em 4 de agosto de 2026. O plano afeta as contratações da administração pública estadual. O Poder Executivo deve enviar a proposta da Lei Orçamentária Anual à Assembleia Legislativa até 15 de setembro.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:mprs-detalha-atuacao-na-defesa-dos-direitos-do-consumidor-e-combate-a-",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "MPRS detalha atuação na defesa dos direitos do consumidor e combate a irregularidades",
-      "resumo": "Instituição atua em causas coletivas, disponibiliza orientações digitais e realizou apreensões de alimentos impróprios e ações judiciais no estado.",
-      "fonte": "Meridiano, com informações de MPRS",
-      "origemLink": "https://www.mprs.mp.br/consumidor",
-      "origemNome": "MPRS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Ministério Público do Estado do Rio Grande do Sul atua na proteção da ordem econômica e na defesa dos direitos coletivos dos consumidores. A instituição intervém em casos que envolvem adulteração de alimentos, combustíveis e medicamentos, publicidade enganosa, defeitos em produtos e serviços, além de cláusulas abusivas nos setores de energia elétrica, telefonia, água, transporte, habitação, ensino privado, planos de saúde e comércio eletrônico.",
-        "A atuação é exercida pelas Promotorias de Justiça na capital e no interior do estado. Ao receber denúncias de danos coletivos, a instituição utiliza o inquérito civil para celebrar compromissos de ajustamento de conduta ou ajuizar ações coletivas. Em municípios sem órgãos de proteção ao consumidor, o Ministério Público atende o cidadão e promove acordos com fornecedores. Já as causas individuais devem ser tratadas por advogados, Procons ou Juizados Especiais Cíveis. O suporte técnico é prestado pelo Centro de Apoio Operacional do Consumidor e da Ordem Econômica, localizado em Porto Alegre.",
-        "Para orientar os cidadãos, o órgão e entidades parceiras disponibilizam recursos digitais e materiais informativos. Entre eles estão a plataforma e aplicativo Consumidor.gov.br, o aplicativo Anatel Comparador e orientações sobre o PIX. Também são distribuídas cartilhas explicativas sobre golpes no ambiente virtual, empréstimos consignados voltados a idosos e pessoas com deficiência, além de diretrizes para o setor aéreo elaboradas em conjunto com o Conselho Nacional de Justiça, Senacon e Anac.",
-        "Entre as ações recentes do Ministério Público do Rio Grande do Sul estão o ajuizamento de ação civil pública contra a Corsan e a Aegea Saneamento, o cumprimento de cinco mandados de busca e apreensão em Porto Alegre no dia 29 de junho e a obtenção de liminar para interditar um estabelecimento de alimentos. Além disso, a Força-Tarefa do Programa Segurança dos Alimentos apreendeu 2,2 toneladas de produtos impróprios para consumo em fiscalização realizada na terça-feira, 7 de julho."
-      ],
-      "link": "/materia/mprs-detalha-atuacao-na-defesa-dos-direitos-do-consumidor-e-combate-a-.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.defesacivil.rs.gov.br/upload/recortes/202608/01223017_129939_GD.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 1600,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Defesa Civil monitora Barragem Santa Lúcia entre Ilópolis e Putinga",
-      "resumo": "Estrutura passa por reparos após vistorias técnicas e moradores do município de Putinga devem ficar preparados para uma eventual evacuação.",
-      "fonte": "Meridiano, com informações de Defesa Civil do RS",
-      "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-estadual-acompanha-situacao-da-barragem-santa-lucia-e-se-necessario-emitira-alertas-via-cell-broadcast",
-      "origemNome": "Defesa Civil do RS",
-      "pautadoPor": [
-        "Portal do Estado do Rio Grande do Sul"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A Defesa Civil do Estado atua no monitoramento das condições da Barragem Santa Lúcia, localizada entre Ilópolis e Putinga, em apoio à Secretaria Estadual do Meio Ambiente e Infraestrutura (Sema). A estrutura apresenta condições sensíveis e passa por medidas de reparos.",
-        "Uma vistoria técnica foi realizada no local pela Divisão de Segurança de Barragens e Emergências da Sema em parceria com a Defesa Civil estadual, motivada pela sequência de chuvas registrada na última semana. Durante a inspeção, foram alinhadas medidas emergenciais a serem adotadas pelo município caso ocorra elevação do nível da água.",
-        "O Centro de Monitoramento da Defesa Civil acompanha as condições hidrometeorológicas e emitirá alertas via Cell Broadcast caso a água atinja cotas consideradas de risco. Em caso de chuvas persistentes, a recomendação é que os moradores de Putinga contatem a coordenadoria municipal de Proteção e Defesa Civil pelo telefone (51) 99125-5399, acompanhem os canais oficiais de informação e fiquem atentos para eventual evacuação."
-      ],
-      "link": "/materia/defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga.html",
-      "iso": "2026-08-04T22:21:39.516Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:site-do-ministerio-publico-do-estado-do-rio-grande-do-sul-detalha-aces",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Site do Ministério Público do Estado do Rio Grande do Sul detalha acessibilidade",
-      "resumo": "Página informa o uso de cookies, a opção de alto contraste em preto e branco e a alteração do tamanho de texto via navegadores ou teclado com as teclas Ctrl ou Cmd.",
-      "fonte": "Meridiano, com informações de MPRS",
-      "origemLink": "https://www.mprs.mp.br/frbl_ga",
-      "origemNome": "MPRS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Ministério Público do Estado do Rio Grande do Sul informa que utiliza cookies para oferecer uma melhor experiência de navegação e que seu site dispõe de recursos para facilitar o acesso ao conteúdo por qualquer cidadão.",
-        "Dentre as ferramentas do portal, o recurso de Alto Contraste alterna o esquema de cores dos textos e do fundo da tela para branco e preto, com o objetivo de maximizar o contraste para a leitura.",
-        "A página também permite o uso de ajustes de tamanho do texto dos navegadores. Em alguns navegadores, a alteração pode ser feita com a roda do mouse enquanto se mantém pressionada a tecla Ctrl ou Cmd."
-      ],
-      "link": "/materia/site-do-ministerio-publico-do-estado-do-rio-grande-do-sul-detalha-aces.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:porto-alegre-entrega-primeira-escola-reformada-do-programa-infancia-em",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Porto Alegre entrega primeira escola reformada do programa Infância em Construção",
-      "resumo": "A unidade no bairro Sarandi terá 53 novas vagas na primeira etapa e faz parte de projeto financiado por parceiros privados para gerar cerca de 1,8 mil vagas na Capital.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/gp/noticias/escola-favo-de-mel-e-primeira-entregue-pelo-programa-infancia-em-construcao",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "Jornal do Comércio",
-        "radiocaicara.com.br"
-      ],
-      "quentura": 2,
-      "uf": "rs",
-      "corpo": [
-        "A Prefeitura de Porto Alegre entregou, nesta terça-feira, 4, a reforma e ampliação da Escola de Educação Infantil Favo de Mel, localizada no bairro Sarandi. A instituição é parceira da Rede Municipal de Educação e foi atingida pelas enchentes de maio de 2024.",
-        "Esta é a primeira obra concluída dentro do projeto Infância em Construção, lançado em julho de 2025. Na Favo de Mel, a intervenção foi viabilizada pelo Instituto Alma Mater e garante a criação de 53 novas vagas nesta primeira etapa, com expansão gradual até alcançar 112 novas vagas.",
-        "O projeto geral prevê a construção e ampliação de 12 escolas por meio de parcerias com instituições privadas sem fins lucrativos, somando cerca de 1,8 mil novas vagas com investimento estimado em R$ 35 milhões. Segundo o secretário municipal de Educação, Leonardo Pascoal, a meta é zerar a fila da Educação Infantil até o final de 2028.",
-        "A iniciativa conta também com a participação do Instituto Jama, Instituto Cultural Floresta, Instituto Franco, Instituto Mari Johannpeter, Instituto Helda Gerdau e Instituto Ling. O prefeito Sebastião Melo também participou da entrega da estrutura."
-      ],
-      "link": "/materia/porto-alegre-entrega-primeira-escola-reformada-do-programa-infancia-em.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "A medida atende inicialmente 53 crianças com a criação de novas vagas na Escola Favo de Mel, com ampliação gradual prevista até alcançar 112 vagas. O projeto abrange 12 escolas no total e estabelece o final de 2028 como prazo da meta para zerar a fila da Educação Infantil em Porto Alegre.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:teatro-renascenca-recebe-edicao-2026-do-dia-do-folclore-de-porto-alegr",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Teatro Renascença recebe edição 2026 do Dia do Folclore de Porto Alegre",
-      "resumo": "O evento gratuito reúne apresentações de dança de diversas culturas nos dias 19 e 20 de agosto de 2026, com ingressos liberados a partir das 18h30.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/smc/noticias/dia-do-folclore-celebra-diversidade-cultural-no-teatro-renascenca",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "Sesc/RS"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "O Teatro Renascença recebe, nos dias 19 e 20 de agosto de 2026, a edição 2026 do Dia do Folclore de Porto Alegre. As apresentações começam às 19h30 e reúnem grupos e artistas dedicados à preservação das tradições culturais por meio da dança.",
-        "A programação reúne manifestações das culturas da Argentina, Palestina, Índia, Japão, Rio Grande do Sul, China, Polônia, Grécia, Brasil, cultura cigana, Espanha, Emirados Árabes e Ucrânia. Participam do evento o Grupo MT Adelante Tango, Grupo Folclórico Palestino Terra, Paty Cardoso, Grupo Shinsei, Grupo Andanças, Dança do Leão Porto Alegre, Grupo Folclórico Polônia, Grupo Neoléa Sociedade Helênica, Alexandre Santos, Trama Arte Cia de Dança, Kumpannia Bartale, Flamencos do Sul, Conjunto de Folclore Internacional Os Gaúchos, Cia de Danças Árabes Nadima Murad e Folclore Ucraniano Solovey.",
-        "Os ingressos são gratuitos e devem ser retirados a partir das 18h30 na bilheteria do teatro, situado no Centro Municipal de Cultura, na avenida Erico Verissimo, 307, no bairro Menino Deus. O evento é realizado pela 7 Marias Produtora e pelo Grupo Andanças, com oferecimento do Centro Municipal de Dança e da Secretaria Municipal da Cultura de Porto Alegre."
-      ],
-      "link": "/materia/teatro-renascenca-recebe-edicao-2026-do-dia-do-folclore-de-porto-alegr.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "O histórico do arquivo registra um caso parecido em 4 de agosto de 2026. O evento ocorre nos dias 19 e 20 de agosto de 2026, com apresentações a partir das 19h30. O público afeto pode retirar os ingressos gratuitos na bilheteria do teatro a partir das 18h30.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/fotoperg2026.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:ex-diretor-de-penitenciaria-e-condenado-a-85-anos-e-operacao-perg-e-en",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Ex-diretor de penitenciária é condenado a 85 anos e Operação PERG é encerrada",
-      "resumo": "Balanço do MPRS e do GAECO soma 175 anos de reclusão para sete envolvidos, além de três perdas de cargo público e confisco de R$ 1,34 milhão em bens.",
-      "fonte": "Meridiano, com informações de MPRS",
-      "origemLink": "https://www.mprs.mp.br/noticias/66829/",
-      "origemNome": "MPRS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Ministério Público do Rio Grande do Sul (MPRS), por meio do 10º Núcleo Regional do GAECO, divulgou o balanço final da Operação PERG após a condenação de um ex-policial penal e ex-diretor da Penitenciária Estadual de Rio Grande a 15 anos, 10 meses e 20 dias de prisão nesta terça-feira, 4 de agosto.",
-        "Com a nova sentença, as penas somadas do ex-diretor chegam a 85 anos e 17 dias de reclusão, além da perda do cargo público. Ele foi alvo principal da investigação e acabou condenado em sete processos por corrupção, lavagem de dinheiro, tráfico de drogas, associação para o tráfico, ingresso de celulares em presídio e crimes relacionados a armas e munição.",
-        "As duas fases da Operação PERG resultaram na condenação de sete pessoas, com penas que somam 175 anos, dois meses e 23 dias de reclusão. Além do ex-diretor, outros seis investigados foram condenados por corrupção ativa, tráfico de drogas, associação para o tráfico e ingresso de celulares, com penas somadas em 90 anos, dois meses e seis dias. O saldo final inclui três decretos de perda de cargo público, confisco de cinco veículos e R$ 1,34 milhão em bens.",
-        "A investigação foi iniciada pelo GAECO em dezembro de 2022 e desarticulou um esquema mantido dentro"
-      ],
-      "link": "/materia/ex-diretor-de-penitenciaria-e-condenado-a-85-anos-e-operacao-perg-e-en.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "Não há registro de caso parecido no histórico. As decisões afetam sete pessoas, sendo o ex-diretor da penitenciária e outros seis investigados. Das penas totais de 175 anos da operação, 85 anos correspondem ao ex-diretor e 90 anos aos demais réus.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:prefeitura-de-porto-alegre-divulga-pauta-de-servicos-para-quarta-feira",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Prefeitura de Porto Alegre divulga pauta de serviços para quarta-feira",
-      "resumo": "Ações incluem manutenções na rede de água, trânsito especial para futebol, descarte de resíduos e encerramento de inscrições em concurso público.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/gcs/noticias/previsao-de-pautas-quarta-feira-5-de-agosto-0",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [
-        "terra.com.br"
-      ],
-      "quentura": 1,
-      "uf": "rs",
-      "corpo": [
-        "A Prefeitura de Porto Alegre divulgou a previsão de pautas e serviços para esta quarta-feira, 5 de agosto. A programação engloba reuniões técnicas, manutenções no abastecimento de água, alteração no trânsito para partida de futebol, ações de limpeza urbana, atendimentos de saúde e processos seletivos.",
-        "Na infraestrutura e serviços urbanos, o Departamento Municipal de Água e Esgotos realiza troca de fusível na Ebat Jardim Ipê a partir das 9h, com possibilidade de falta de água nos bairros Jardim Carvalho e Boa Vista e nas comunidades Jardim Ipê e Colina do Prado. O projeto Bota-Fora recolhe resíduos volumosos nas comunidades Santa Helena, Eucalipto, Mirim e Cooperativa dos Pinheiros a partir das 8h. Para a partida entre Grêmio e Mirassol às 19h30 na Arena do Grêmio, a Empresa Pública de Transporte e Circulação opera esquema especial de trânsito.",
-        "Na saúde, a Farmácia Distrital Restinga mantém atendimento suspenso nos dias 4 e 5 para inventário anual de medicamentos. A campanha de multivacinação para menores de 15 anos segue até 1º de setembro. Na área do tempo, o Centro de Monitoramento e Alerta da Defesa Civil de Porto Alegre prevê pancadas de chuva com acumulado diário em torno de 15 mm, ventos médios de 13 km/h e temperaturas entre 17°C e 25°C.",
-        "Nos concursos e eventos, encerram-se às 17h as inscrições para o concurso público de agente de fiscalização no site da Fundação La Salle. A Procuradoria-Geral do Município patrocina a Cidade da Advocacia no Cais Embarcadero e a prefeitura conduz reunião do Fórum Nacional dos Procuradores-Gerais das Capitais e Grandes Cidades Brasileiras. Estão abertas também as inscrições para o Turismo Farroupilha de Galpão 2026 e o cadastro de voluntários para a Copa do Mundo Feminina de 2027."
-      ],
-      "link": "/materia/prefeitura-de-porto-alegre-divulga-pauta-de-servicos-para-quarta-feira.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:cinemateca-capitolio-estreia-documentario-os-ruminantes-nesta-quinta-f",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Cinemateca Capitólio estreia documentário Os Ruminantes nesta quinta-feira",
-      "resumo": "A produção resgata a história da tentativa inacabada de adaptação do livro de José J. Veiga para o cinema, interrompida pela censura durante o regime militar.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/smc/noticias/documentario-os-ruminantes-entra-em-cartaz-na-cinemateca-capitolio",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Cinemateca Capitólio estreia nesta quinta-feira, 6 de agosto, o documentário Os Ruminantes (2025), dirigido por Tarsila Araújo e Marcelo Mello. A obra aborda a tentativa não concluída de adaptar para o cinema o romance A Hora dos Ruminantes, de José J. Veiga, projeto roteirizado em 1967 por Luiz Sérgio Person e Jean-Claude Bernardet que foi impedido pela censura e pela repressão do regime militar.",
-        "O longa reúne documentos inéditos, materiais de arquivo e depoimentos, incluindo entrevistas com a cineasta Marina Person e com o próprio Jean-Claude Bernardet. A programação do local também exibe o filme Futuro Futuro, de Davi Pretto, vencedor do Festival de Brasília.",
-        "A mostra As Mulheres de Altman segue em cartaz até 19 de agosto, exibindo com entrada franca quatro filmes do diretor norte-americano Robert Altman focados em protagonistas femininas: Uma Mulher Diferente (1969), Imagens (1972), Três Mulheres (1977) e James Dean, o Mito Sobrevive (1982).",
-        "No sábado, 8 de agosto, às 17h, a Cinemateca realiza a segunda edição da sessão Clássicos, com a exibição do filme Ninotchka (1939), dirigido por Ernst Lubitsch e estrelado por Greta Garbo, com roteiro assinado por Charles Brackett, Billy Wilder e Walter Reisch."
-      ],
-      "link": "/materia/cinemateca-capitolio-estreia-documentario-os-ruminantes-nesta-quinta-f.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "A estreia do documentário Os Ruminantes ocorre nesta quinta-feira, 6 de agosto. A mostra As Mulheres de Altman segue em cartaz na Cinemateca Capitólio até 19 de agosto. A exibição do filme Ninotchka está agendada para sábado, 8 de agosto, às 17h.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/reuniao040803.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:mprs-realiza-reuniao-para-elaborar-guia-aos-conselhos-tutelares-do-rs",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "MPRS realiza reuniao para elaborar guia aos Conselhos Tutelares do RS",
-      "resumo": "A iniciativa desenvolvida em parceria com a ACONTURS busca padronizar a atuacao dos conselheiros tutelares e tem conclusao prevista para o final de novembro.",
-      "fonte": "Meridiano, com informações de MPRS",
-      "origemLink": "https://www.mprs.mp.br/noticias/66825/",
-      "origemNome": "MPRS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Ministerio Publico do Rio Grande do Sul (MPRS) realizou, nesta terça-feira, 4 de agosto, a primeira reuniao do grupo de trabalho criado para elaborar um guia de orientacao aos conselheiros tutelares do Estado. A iniciativa sera construida de forma conjunta entre o MPRS, a Associacao dos Conselheiros e Ex-Conselheiros Tutelares do Rio Grande do Sul (ACONTURS) e demais instituicoes da rede de protecao, para fortalecer e uniformizar a atuacao dos Conselhos Tutelares no Estado.",
-        "A coordenadora do Centro de Apoio Operacional da Educacao, Infancia e Juventude (CAOEIJ), Cristiane Corrales, informou que a proposta e elaborar um documento com orientacoes praticas, estabelecendo fluxos, procedimentos padronizados e esclarecendo atribuicoes e competencias. No encontro, foram sistematizados temas como os conceitos de situacao de risco e vulnerabilidade de criancas e adolescentes e as diretrizes para realizacao de visitas domiciliares.",
-        "Ficou definido que serao realizadas reunioes mensais com a participacao das instituicoes envolvidas. O material tambem devera detalhar as competencias dos Conselhos Tutelares e os fluxos de atendimento, com conclusao do documento prevista para o final de novembro.",
-        "A reuniao teve a participacao presencial da analista em Servico Social do CAOEIJ, Mariele Aparecida Diotti, e da psicologa Nathalia Paida da Silva. De forma virtual, estiveram presentes o presidente da ACONTURS, Jean Carlos da Rosa; a delegada Alice Jantsch Fernandes, da Delegacia de Policia de Protecao a Crianca e ao Adolescente (DECA); Caroline da Rosa Pavilak, da Secretaria Estadual da Saude; Bruna Silveira Moraes, assessora do Tribunal de Justica (TJRS); e Michelle Marques, secretaria de Relacoes Institucionais da ACONTURS."
-      ],
-      "link": "/materia/mprs-realiza-reuniao-para-elaborar-guia-aos-conselhos-tutelares-do-rs.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": "Não há registro de caso parecido no histórico. A medida afeta os conselheiros tutelares e o atendimento prestado a crianças e adolescentes no Rio Grande do Sul. As reuniões do grupo de trabalho serão mensais, com a conclusão do documento prevista para o final de novembro.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "poa",
-      "municipioNome": "Porto Alegre",
-      "id": "ilm:dmae-realiza-obras-na-rede-de-esgotamento-sanitario-do-centro-historic",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Dmae realiza obras na rede de esgotamento sanitário do Centro Histórico",
-      "resumo": "Os trabalhos englobam a implantação e a substituição de 235 metros de tubulações com investimento de R$ 260 mil.",
-      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/dmae/noticias/dmae-qualifica-redes-de-esgotamento-sanitario-no-centro-historico",
-      "origemNome": "Prefeitura de Porto Alegre",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Departamento Municipal de Água e Esgotos (Dmae) executa duas obras simultâneas no Centro Histórico para qualificar o esgotamento sanitário. As intervenções contemplam a implantação e a substituição de 235 metros de redes coletoras, com investimento de R$ 260 mil.",
-        "Na rua Ibanor José Tartarotti, estão sendo implantados 200 metros de novas tubulações em polietileno de alta densidade (Pead). A rede será ligada à infraestrutura existente para encaminhar o esgoto coletado para tratamento na Estação de Tratamento de Esgotos (ETE) Serraria, com previsão de conclusão até o final de agosto, dependendo do clima.",
-        "Na avenida Júlio de Castilhos, o Dmae fará a substituição de 35 metros de rede por tubulações de policloreto de vinila (PVC). O esgoto recolhido também vai para tratamento na ETE Serraria, com intervenção prevista para terminar em setembro.",
-        "O sistema de esgotamento sanitário de Porto Alegre possui, atualmente, dez Estações de Tratamento de Esgoto (ETEs) e 36 Estações de Bombeamento de Esgoto (Ebes)."
-      ],
-      "link": "/materia/dmae-realiza-obras-na-rede-de-esgotamento-sanitario-do-centro-historic.html",
-      "iso": "2026-08-04T22:21:01.944Z",
-      "hora": "18h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/sipia040803.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:mprs-e-sjcdh-debatem-implantacao-do-sistema-sipia-ct-nos-municipios",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "MPRS e SJCDH debatem implantação do sistema SIPIA-CT nos municípios",
-      "resumo": "Dados apresentados na reunião mostram que 243 municípios gaúchos estão aptos a usar a plataforma e 157 efetuaram registros neste ano.",
-      "fonte": "Meridiano, com informações de MPRS",
-      "origemLink": "https://www.mprs.mp.br/noticias/66821/",
-      "origemNome": "MPRS",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "rs",
-      "corpo": [
-        "O Ministério Público do Rio Grande do Sul (MPRS), por meio do Centro de Apoio Operacional da Educação, Infância e Juventude (CAOEIJ), realizou nesta terça-feira, 4 de agosto, uma reunião com a Secretaria de Justiça, Cidadania e Direitos Humanos (SJCDH) para tratar da implantação e utilização do Sistema de Informação para a Infância e Adolescência – Conselho Tutelar (SIPIA-CT).",
-        "O encontro foi conduzido pela coordenadora do CAOEIJ, Cristiane Corrales, e discutiu as dificuldades e desafios dos municípios na adoção da ferramenta pública e gratuita, que unifica o registro de atendimentos dos Conselhos Tutelares para o fortalecimento da proteção de crianças e adolescentes.",
-        "Durante a reunião, representantes da SJCDH apresentaram o panorama de implementação do sistema e as ações de capacitação desenvolvidas pela pasta. A secretaria é responsável pela gestão do SIPIA-CT, oferecendo suporte técnico, orientações e cursos para conselheiros tutelares.",
-        "Também participaram da reunião a analista em Serviço Social do CAOEIJ, Mariele Aparecida Diotti, e os representantes da SJCDH Denrlei da Silva, Gabriela Proença Machado e Bruna da Rosa."
-      ],
-      "link": "/materia/mprs-e-sjcdh-debatem-implantacao-do-sistema-sipia-ct-nos-municipios.html",
-      "iso": "2026-08-04T22:21:00.706Z",
-      "hora": "18h21",
+      "link": "/materia/porto-alegre-vai-instalar-quatro-novos-eletropostos-em-vias-publicas.html",
+      "iso": "2026-08-05T11:56:06.573Z",
+      "hora": "07h56",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [
-    {
-      "municipio": "caxias",
-      "municipioNome": "Caxias do Sul",
-      "seSabe": [
-        "Que as informações estão sendo veiculadas por dois veículos de imprensa.",
-        "Que os relatos tratam de medidas da Prefeitura de Caxias do Sul.",
-        "Que foram citados o adiamento a artistas e atendimento no sábado."
-      ],
-      "falta": [
-        "Manifestação oficial da Prefeitura de Caxias do Sul sobre o adiamento de pagamentos.",
-        "Confirmação oficial sobre a abertura do atendimento no município neste sábado.",
-        "Calendário ou data prevista para o pagamento dos integrantes dos grupos artísticos."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Radio Caxias FM",
-          "titulo": "Prefeitura adia pagamento de integrantes dos grupos artísticos de Caxias do Sul",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNnhFeGoxYXNabDJobVBSajZQYW1qbkpyV2wwaTRXR21mTHZPYlowYnlWZi1paEZYSFBoMW0wbGJZQ0xjSTNkSTBfNDJwVmJ4b1BzUncyd3p4Q29IbkVxd1M3S3NCbWRUYWNncVlZMnZncnhWcTF0MUZJdWV0UWttTzh4N0FBUHVQNDg3RnZYSllKRlhmb3A5Y21Gdk1IdzBDWEhNVW9OS1poZ0M3YUUtMQ?oc=5"
-        },
-        {
-          "veiculo": "GZH",
-          "titulo": "Prefeitura de Caxias do Sul abrirá neste sábado para negociação de dívidas com o município",
-          "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNQ0VsSnFIUVJ6bHBjbG4zRnFNMkZkYmJZZEdkWE5xQ0dOYXJvVHNuTHhRX1dCWkdHRTFoS0xyWXN0MUl5SmtxdXl1WDBWLXd6dUVJY09DTk5nMnN0V2NCa0xKR3R1b3ExbEp1MFBjSmJPaTN6UjVLTm4zTUFOWkZsOHV1QXVHMnROQWI5WVlLSXJ1ZUVqb29naUJwZXAtaWRkLVRyYXdOUU9TY0sxWU9nSzVOVjM0ZlUtMjdKaHQyZzZrNWNIeENCWGlTd0JsU19YczlqV0Z3WXV2OFhtUXZzRzZkZTR6VktaWm5hWXNtd0hmOFVlOFVuXzlUOU5ZZG1mMTN6LUd1ak9EN3o4cFJUSW5n?oc=5"
-        }
-      ],
-      "link": "/materia/nc-prefeitura-de-caxias-do-sul-teria-adiado-pagamentos-e-abriria-no-sabad.html",
-      "corpo": [
-        "A Prefeitura de Caxias do Sul teria adiado o pagamento de integrantes de grupos artísticos locais. Além disso, a administração municipal estaria planejando abrir suas instalações neste sábado. A medida visaria atender contribuintes para a negociação de dívidas com o município.",
-        "As informações veiculadas pelas publicações divergem quanto aos temas centrais abordados sobre o município. Enquanto um relato trataria do adiamento de repasses financeiros a artistas, o outro focaria na negociação fiscal no fim de semana. Os textos publicados não detalhariam os motivos do adiamento nem a logística do atendimento.",
-        "Até o momento, não foram localizados registros oficiais confirmando as duas medidas alegadas. A formalização de datas para os pagamentos e dos horários para o mutirão de dívidas dependeria de manifestação do município."
-      ],
-      "id": "circ:prefeitura-de-caxias-do-sul-teria-adiado-pagamentos-e-abriria-no-sabad",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Prefeitura de Caxias do Sul teria adiado pagamentos e abriria no sábado",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:27:26.028Z",
-      "hora": "18h27"
-    },
-    {
-      "municipio": "canoas",
-      "municipioNome": "Canoas",
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos de imprensa.",
-        "Que as duas manchetes citam o resgate de 19 cães em Canoas.",
-        "Que ambas as publicações tratam o estabelecimento como clandestino."
-      ],
-      "falta": [
-        "Confirmação oficial por parte dos órgãos públicos envolvidos.",
-        "Data e horário exatos em que a operação teria ocorrido.",
-        "Identificação das entidades ou órgãos responsáveis pela ação conjunta.",
-        "Endereço do local ou número do procedimento formal instaurado."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "– Prefeitura Municipal de Canoas",
-          "titulo": "Operação conjunta resgata 19 cães de canil clandestino e reforça combate aos maus-tratos em Canoas",
-          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRE82bWNMU29TbFNWQURjOGlENTZDeGYxRnZHampxTzVTZDdnUXo4TjV4M3Z2NU4wcS1PTXJGekVxWE1aNzFGZ3l5c1dINmlSQUtSY1FhOVJPcnBwTWE4aUo1MEpNbGVYSEhGSURLWFJtMldoTmc3cm40NDlLN25nejNYV2lmMTFhNnlIY1V2ZUNtMjVxaF9CdXFudUpmbTlFMXB5RXg5anR5OWp5SWpHUnJBMnpuZE1zSFoxOE9GUVNMQjZtUVlkWVZYbXI3bzljYmw4?oc=5"
-        },
-        {
-          "veiculo": "agenciagbc.com",
-          "titulo": "Operação fecha canil clandestino e resgata 19 cães em Canoas",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZWR4cnRsYnctbFJRTlF0all6UUEyQXNhY29zTVRfOWJIcDFadWY5OTQ0WEtxUTg0dVNySVBOLW43U0ZLZU1WY28zUGZWTEYwc0ZZTVhEb3pLeXB0YXFxVUNMUjJUZE8yU3VvaG1xaktzNnQ4QUZqNDRPMEhIeEdsb3JTUElwVHRpWm5rTjdpRkhDb2tiZUozSHlQQQ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-operacao-em-canoas-teria-fechado-canil-clandestino-e-resgatado-19-caes.html",
-      "corpo": [
-        "Segundo as publicações, a intervenção teria sido realizada em caráter conjunto. Ambas as fontes tratam o local como um canil clandestino e informam o resgate de 19 cães.",
-        "A mobilização estaria vinculada a ações de proteção animal no município. Não há divergências identificadas entre as manchetes veiculadas pela imprensa."
-      ],
-      "id": "circ:operacao-em-canoas-teria-fechado-canil-clandestino-e-resgatado-19-caes",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Operação em Canoas teria fechado canil clandestino e resgatado 19 cães",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:27:52.536Z",
-      "hora": "18h27"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos da imprensa.",
-        "Que a Corsan é citada como responsável pelas obras e ações.",
-        "Que as manchetes diferem sobre o número de municípios atingidos."
-      ],
-      "falta": [
-        "Manifestação oficial da Corsan sobre os alertas e obras citados.",
-        "Confirmação do número exato de frentes e municípios envolvidos.",
-        "Detalhamento sobre quais seriam os cinco municípios da região.",
-        "Datas exatas e cronograma de execução das ações mencionadas."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Planalto News",
-          "titulo": "Corsan alerta para obras e ações em cinco municípios da região",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZXo3M1FtR3BicEZZclBydUJHQjZtelFwc0VEdlEwYUxEdzJoUExXamxfZHY4NHdwY2Q5UDhabTBPdGJZODNCeDF2N3JacDFFNHpNdWI1V01hR1Y2TDF2OXRid3dQLVhzQU5aY1FRajl2emNSMFdLcUdSMWRXU1BzWkQ2VkEtYzBrZWExRlNHQQ?oc=5"
-        },
-        {
-          "veiculo": "realnews.com.br",
-          "titulo": "Corsan mobiliza mais de 700 frentes de obras e ações em 80 municípios",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yTTNDNS11eHZWQ0JkemFmcnY0cnNfeGRzNmF3SVVIenc1TGctdjgyc3dTTXZpR2k3TnVEN01pQktCcHlUZnpEeHNuMlNLN1ZLem5wV05vZGxzaWJMdHdDQV9wSHhjTG42QzZjS0RFV24?oc=5"
-        }
-      ],
-      "link": "/materia/nc-corsan-alertaria-para-obras-e-mobilizaria-frentes-em-municipios.html",
-      "corpo": [
-        "A Corsan estaria alertando para a realização de obras e ações em municípios. A informação estaria sendo divulgada por veículos da imprensa.",
-        "As matérias veiculadas apresentariam divergências quanto aos dados informados. Uma publicação aponta que os alertas seriam direcionados a cinco municípios da região, enquanto outra afirma que haveria mais de 700 frentes de obras e ações em 80 municípios.",
-        "As divergências estariam no total de municípios citados e na quantidade de ações. A confirmação dos dados dependeria de posicionamento institucional oficial."
-      ],
-      "id": "circ:corsan-alertaria-para-obras-e-mobilizaria-frentes-em-municipios",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Corsan alertaria para obras e mobilizaria frentes em municipios",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:28:52.160Z",
-      "hora": "18h28"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto estaria sendo publicado por dois veiculos da imprensa.",
-        "Que as materias citam alertas atribuidos ao Instituto Nacional de Meteorologia.",
-        "Que os textos mencionam a possibilidade de tempestades e ciclones."
-      ],
-      "falta": [
-        "Confirmacao oficial registrada em canais do Instituto Nacional de Meteorologia.",
-        "Definicao exata sobre a data e o horario do evento climatico.",
-        "Esclarecimento sobre se o fenomeno seria extratropical ou ciclone bomba."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Notícias Agrícolas",
-          "titulo": "Inmet alerta para tempestades com avanço de ciclone extratropical no Sul do Brasil",
-          "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPXzd1Q0FRaS04YWR6eG5vRHFmLUhDUFk3bFVCXzIxZ1VJRHBMVVhTQkhWdWdaVkdRVWdFSTZTbXZLVjk0TFpXdG1yYW5TcHlCLWNTNUg0c05jQk9IS0JzNm14VXBZYm1GR0NpNFM3Q0dzOU01UnFhdkhoWWE2clA1LVpCenhnSGdlbVY1Q3o2MlZSSjZHVnFINlprdEFveXE1ekQ2ZmJCeDZkV3haZ0FPai05SGpCUUZ3aEsxb2VSQlNmXzExa3dCT0tWbEptcW14bmVzYWJueXBaeEdCaFNHcm1Gb25jOUhQSU5RWG1ZTdIB7wFBVV95cUxPXzd1Q0FRaS04YWR6eG5vRHFmLUhDUFk3bFVCXzIxZ1VJRHBMVVhTQkhWdWdaVkdRVWdFSTZTbXZLVjk0TFpXdG1yYW5TcHlCLWNTNUg0c05jQk9IS0JzNm14VXBZYm1GR0NpNFM3Q0dzOU01UnFhdkhoWWE2clA1LVpCenhnSGdlbVY1Q3o2MlZSSjZHVnFINlprdEFveXE1ekQ2ZmJCeDZkV3haZ0FPai05SGpCUUZ3aEsxb2VSQlNmXzExa3dCT0tWbEptcW14bmVzYWJueXBaeEdCaFNHcm1Gb25jOUhQSU5RWG1ZTQ?oc=5"
-        },
-        {
-          "veiculo": "INMET",
-          "titulo": "INMET monitora a possível formação de um ciclone bomba entre Argentina, Uruguai, Sul do Brasil e Oceano Atlântico",
-          "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPSEpkSzdkSVFzZXFoWnMzU05Mbnd0TExMN1lVN2NfQmRrMUxudllhaG5LelpqbklYQnlIOEYzTm14ckpINDY4VEpoOFltQUNuYkVLYkFKRG9OOUJ2QzVIR3N2Qng3Mi1iamJMMlhYS291WUZ2LXBOQmVLTEJDWHJDTExuNDZrWlJWZGIycHhLQXMwTkl5LUlQSFNJMVRlT1hYQlFHaGFiVVM5eWsybkEyeHpBNElTNjdBdHRoRk9obVpNdTRkM01QUkxpcEdPcC1jM0xsQ2Fkdzl1cm1iZTBUN29UU19KS1JQWjhfMGtDOG83blVCMGpmRDh0MXM?oc=5"
-        }
-      ],
-      "link": "/materia/nc-inmet-estaria-alertando-para-possivel-ciclone-e-tempestades-no-sul.html",
-      "corpo": [
-        "O Instituto Nacional de Meteorologia estaria monitorando a possivel formacao e o avanco de um ciclone na America do Sul. A alegacao teria sido divulgada por veiculos de imprensa com base em supostos comunicados do orgao.",
-        "Uma das publicacoes indicaria um alerta de tempestades por ciclone extratropical no Sul do Brasil. Outro texto citaria o monitoramento de um ciclone bomba entre Argentina, Uruguai, Sul do Brasil e Oceano Atlantico. Os relatos divergiriam quanto a classificacao tecnica do fenomeno e ao raio de abrangencia.",
-        "O quadro meteorologico envolveria possiveis instabilidades na Regiao Sul e em territorios vizinhos. A confirmacao da ocorrencia dependeria de registros nos canais oficiais de meteorologia."
-      ],
-      "id": "circ:inmet-estaria-alertando-para-possivel-ciclone-e-tempestades-no-sul",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Inmet estaria alertando para possivel ciclone e tempestades no Sul",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:29:21.628Z",
-      "hora": "18h29"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo veiculado por dois veículos de imprensa.",
-        "Que a Secult é citada como órgão responsável em uma das notícias.",
-        "Que há menção ao dia 5 como prazo de encerramento de inscrições."
-      ],
-      "falta": [
-        "Confirmação ou pronunciamento oficial por parte da Secult.",
-        "Esclarecimento se as publicações tratam do mesmo edital ou de cargos distintos.",
-        "Identificação exata do mês referente ao prazo do dia 5.",
-        "Publicação de edital com normas, requisitos e número de vagas."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Prefeitura de Pelotas",
-          "titulo": "Secult abre inscrições para Agentes do Patrimônio",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPT0NiYVhsSUREQ3lLS0RGRjZUQlNaT3FCZ1hFZXlWaTZMY3pIRFlxM1UyX0JwS21Kd2o4ZzF1QlBlZ2dGQ0Z0aExaUVBYdU1vMklhcFFrQUYzTUxKNjJIQ2xYVnNHMHE3ZnY0LXZ0VWU4SnJZbktSM3Z1RW52bmEwQUFoc2xDZTFzQUtqREhEYw?oc=5"
-        },
-        {
-          "veiculo": "Prefeitura de Porto Alegre",
-          "titulo": "Inscrições para concurso público de agente de fiscalização terminam no dia 5",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVBmemhyWnAzWjVRSlhRQXZVQ2M2TTl2NHJzOEFwMUtWdjBfZlE2amMxT2F1VWJVUjVRUEpiUlhXcG5vaFN0YnQ3Z2RKa1Y3WmM4bXNNam9sYUF6QXZONlQ2MUJwUEZ4MEIteUY3XzhacVRhZ2IwVU9acERBLWFEMXN2eXF4SWs0SllyT2c3VEV2bFhTODE0UmF2NGJ1ZGFlQWNYanRLWWVudjh6b1diOXI2N0RORlk?oc=5"
-        }
-      ],
-      "link": "/materia/nc-secult-teria-aberto-inscricoes-para-agentes-e-prazo-terminaria-no-dia-.html",
-      "corpo": [
-        "A Secretaria de Cultura teria aberto inscrições para vagas de agentes públicos. As informações veiculadas pela imprensa tratariam de seleções voltadas ao setor.",
-        "Uma das publicações aponta que a Secult teria aberto inscrições para agente do patrimônio. Outro veículo indica que o prazo para concurso público de agente de fiscalização terminaria no dia 5. As matérias divergiam sobre a denominação do cargo e o estágio das inscrições.",
-        "Não haveria confirmação oficial se os relatos tratariam do mesmo processo seletivo. A indicação do encerramento no dia 5 tampouco viria acompanhada da especificação do mês correspondente."
-      ],
-      "id": "circ:secult-teria-aberto-inscricoes-para-agentes-e-prazo-terminaria-no-dia-",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Secult teria aberto inscrições para agentes e prazo terminaria no dia 5",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:29:47.655Z",
-      "hora": "18h29"
-    },
-    {
-      "municipio": "canoas",
-      "municipioNome": "Canoas",
-      "seSabe": [
-        "Que a informação é veiculada por dois veículos de imprensa.",
-        "Que as publicações atribuem a Canoas a remoção de toneladas de resíduos.",
-        "Que apenas uma das fontes menciona o bairro Mathias Velho."
-      ],
-      "falta": [
-        "Manifestação oficial da Prefeitura de Canoas confirmando os fatos.",
-        "Data exata ou período em que a ação teria sido realizada.",
-        "Especificação exata do volume total de resíduos recolhidos."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "jornaltimoneiro.com.br",
-          "titulo": "Canoas retira toneladas de resíduos em ação contra descarte irregular no Mathias Velho",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNU3lycWZYeVdNYTdsSEZnUlJEV0xIalk1a1VBU24xbmxSMzlacFJiakpRd0hMV3g2NEtEYWpsLWV3Z1l4SXF4VU55aWxvYkR1YURkRUxERmpGUjZtWmc4LVRCeUtVbWFfQ01JNjZlSWpfWjgxODFJeWdURnhnTGp3dGx4S2RJMzNCU04xcm9aS2I5ZnRqdFM4SEZ5cE9VY3NXbHJqcw?oc=5"
-        },
-        {
-          "veiculo": "realnews.com.br",
-          "titulo": "Canoas reforça limpeza urbana e retira toneladas de resíduos",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zdlBsclRHeWNxVlFpdkNYakV6VGFCaWVBdC1zUXk5UHFkVVFJWHd6dEUxaTA0elFUUnF5Sjc4MUdOX1MwbE1POW5nSjRLOWF2STEteDl6YTFLZw?oc=5"
-        }
-      ],
-      "link": "/materia/nc-canoas-teria-retirado-toneladas-de-residuos-em-acao-de-limpeza.html",
-      "corpo": [
-        "A administração municipal de Canoas teria executado ações para a retirada de toneladas de resíduos na cidade. A iniciativa estaria ligada ao reforço das atividades de limpeza urbana no município.",
-        "Os relatos veiculados apresentam variações sobre o detalhamento do local dos trabalhos. Enquanto uma das publicações cita a atuação contra o descarte irregular no bairro Mathias Velho, o outro veículo aborda a medida de forma geral."
-      ],
-      "id": "circ:canoas-teria-retirado-toneladas-de-residuos-em-acao-de-limpeza",
-      "editoria": "regional",
-      "uf": "rs",
-      "titulo": "Canoas teria retirado toneladas de resíduos em ação de limpeza",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:30:15.181Z",
-      "hora": "18h30"
-    }
-  ],
+  "circulando": [],
   "pautas": [
     {
       "titulo": "Prefeitura de Porto Alegre começa demolição de 70 moradias em área atingida pelas enchentes",
+      "veiculo": "grupo sepé",
+      "editoria": "regional",
+      "quentura": 10,
+      "tambemEm": [
+        "g1 RS",
+        "G1",
+        "radiocaicara.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Porto Alegre começa demolição de 70 moradias em área atingida pelas enchentes",
       "veiculo": "g1 RS",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 10,
       "tambemEm": [
         "G1",
-        "GZH"
+        "radiocaicara.com.br",
+        "Diário Gaúcho"
       ]
     },
     {
       "titulo": "Prefeitura de Porto Alegre inicia demolição de casas na Vila Dique para obras de proteção contra cheias",
-      "veiculo": "GZH",
+      "veiculo": "Diário Gaúcho",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 9,
       "tambemEm": [
         "g1 RS",
-        "G1"
+        "G1",
+        "radiocaicara.com.br"
       ]
     },
     {
       "titulo": "Prefeitura de Porto Alegre inicia demolição de casas na Vila Dique para obras de proteção contra cheias",
-      "veiculo": "GZH",
+      "veiculo": "Diário Gaúcho",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 9,
       "tambemEm": [
         "g1 RS",
-        "G1"
+        "G1",
+        "radiocaicara.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura remove casas para reforçar dique em Porto Alegre",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 8,
+      "tambemEm": [
+        "g1 RS",
+        "radiocaicara.com.br",
+        "Terra"
+      ]
+    },
+    {
+      "titulo": "Prefeitura remove casas para reforçar dique em Porto Alegre",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 8,
+      "tambemEm": [
+        "g1 RS",
+        "radiocaicara.com.br",
+        "Terra"
       ]
     },
     {
       "titulo": "Prefeitura de Porto Alegre começa demolição de 70 moradias em área atingida pelas enchentes",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 6,
       "tambemEm": [
         "g1 RS",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Porto Alegre começa demolição de 70 moradias em área atingida pelas enchentes",
-      "veiculo": "G1",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 RS",
-        "GZH"
+        "radiocaicara.com.br",
+        "Diário Gaúcho"
       ]
     },
     {
       "titulo": "Prefeitura de Porto Alegre inicia demolição de 70 moradias em área atingidas por enchentes",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 6,
       "tambemEm": [
         "g1 RS",
-        "GZH"
+        "radiocaicara.com.br",
+        "Diário Gaúcho"
       ]
     },
     {
       "titulo": "Prefeitura de Porto Alegre inicia demolição de 70 moradias em área atingidas por enchentes",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 6,
       "tambemEm": [
         "g1 RS",
-        "GZH"
+        "radiocaicara.com.br",
+        "Diário Gaúcho"
       ]
     },
     {
-      "titulo": "Dique construído na Zona Norte de Porto Alegre não tem influência na cheia do Rio Gravataí, afirma prefeitura",
+      "titulo": "Canil clandestino é fechado e 19 cães de raça são resgatados no RS; homem é preso por maus-tratos",
       "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "GZH"
+        "– Prefeitura Municipal de Canoas",
+        "Agência GBC"
       ]
     },
     {
-      "titulo": "Prefeitura adia pagamento de integrantes dos grupos artísticos de Caxias do Sul",
-      "veiculo": "Radio Caxias FM",
+      "titulo": "Porto Alegre passa a contar com seis pontos para descarte gratuito de resíduos de gesso",
+      "veiculo": "Prefeitura de Porto Alegre",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "GZH"
+        "radiocaicara.com.br"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre passa a contar com seis pontos para descarte gratuito de resíduos de gesso",
+      "veiculo": "Prefeitura de Porto Alegre",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "radiocaicara.com.br"
       ]
     },
     {
       "titulo": "Operação conjunta resgata 19 cães de canil clandestino e reforça combate aos maus-tratos em Canoas",
       "veiculo": "– Prefeitura Municipal de Canoas",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "agenciagbc.com"
+        "g1 RS",
+        "Agência GBC"
+      ]
+    },
+    {
+      "titulo": "Canoas autoriza reforma da quadra e requalificação do pátio da EMEF Farroupilha",
+      "veiculo": "realnews.com.br",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "– Prefeitura Municipal de Canoas",
+        "Agência GBC"
       ]
     },
     {
       "titulo": "Prefeitura de Canoas assina Ordem de Início de Serviços para reforma da quadra e requalificação do pátio da EMEF Farroupilha",
       "veiculo": "– Prefeitura Municipal de Canoas",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "agenciagbc.com"
+        "realnews.com.br",
+        "Agência GBC"
       ]
     },
     {
       "titulo": "Operação fecha canil clandestino e resgata 19 cães em Canoas",
-      "veiculo": "agenciagbc.com",
+      "veiculo": "Agência GBC",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
+        "g1 RS",
         "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Corsan alerta para obras e ações em cinco municípios da região",
-      "veiculo": "Planalto News",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "realnews.com.br"
       ]
     },
     {
       "titulo": "Prefeitura de Canoas anuncia obra de reforma de quadra poliesportiva e pátio de escola",
-      "veiculo": "agenciagbc.com",
+      "veiculo": "Agência GBC",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Inmet alerta para tempestades com avanço de ciclone extratropical no Sul do Brasil",
-      "veiculo": "Notícias Agrícolas",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "INMET"
-      ]
-    },
-    {
-      "titulo": "Secult abre inscrições para Agentes do Patrimônio",
-      "veiculo": "Prefeitura de Pelotas",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Prefeitura de Porto Alegre"
-      ]
-    },
-    {
-      "titulo": "Canoas retira toneladas de resíduos em ação contra descarte irregular no Mathias Velho",
-      "veiculo": "jornaltimoneiro.com.br",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
+        "– Prefeitura Municipal de Canoas",
         "realnews.com.br"
       ]
     },
     {
-      "titulo": "Corsan mobiliza mais de 700 frentes de obras e ações em 80 municípios",
-      "veiculo": "realnews.com.br",
+      "titulo": "Temporais seguem no Sul, enquanto Rio, SP e MG terão mais um dia de tempo firme; veja previsão",
+      "veiculo": "O GLOBO",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Planalto News"
+        "Terra"
       ]
     }
   ]

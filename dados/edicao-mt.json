@@ -1,27 +1,36 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-08-04T22:32:04.862Z",
+  "gerado": "2026-08-05T12:09:01.136Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 189,
-    "fonteLivre": 31,
+    "pauta": 194,
+    "fonteLivre": 38,
     "confirmadas": 10,
-    "publicadas": 12,
+    "publicadas": 21,
     "resgatadas": 0,
-    "semFonte": 151
+    "semFonte": 152
   },
   "fontes": {
-    "checadas": 52,
+    "checadas": 54,
     "responderam": 23,
-    "entregando": 21,
-    "itens": 220,
+    "entregando": 22,
+    "itens": 232,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
+        "itens": 13,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -73,15 +82,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-sinop",
-        "nome": "Sinop",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-mt-cap",
         "nome": "Cuiabá",
         "itens": 12,
@@ -117,18 +117,18 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-mt-sorriso",
-        "nome": "Sorriso",
+        "tipo": "resgate",
+        "id": "olivre",
+        "nome": "O Livre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "sonoticias",
-        "nome": "Só Notícias",
+        "tipo": "pauta",
+        "id": "gn-mt-sinop",
+        "nome": "Sinop",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -136,18 +136,18 @@
       },
       {
         "tipo": "pauta",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 10,
+        "id": "gn-mt-sorriso",
+        "nome": "Sorriso",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "muvuca",
         "nome": "Muvuca Popular",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -171,10 +171,19 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "sonoticias",
+        "nome": "Só Notícias",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "gn-mt-rondonopol",
         "nome": "Rondonópolis",
-        "itens": 6,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,21 +199,39 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
         "id": "sema-mt",
         "nome": "Sema-MT",
         "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "reportermt",
+        "nome": "Repórter MT",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "muvuca",
+        "nome": "Muvuca Popular",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "olivre",
+        "nome": "O Livre",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "pauta",
@@ -232,15 +259,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "resgate",
-        "id": "reportermt",
-        "nome": "Repórter MT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       },
       {
         "tipo": "resgate",
@@ -433,15 +451,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "rondonopolis",
-        "nome": "Prefeitura de Rondonópolis",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "sorriso",
         "nome": "Prefeitura de Sorriso",
         "itens": 0,
@@ -451,8 +460,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-cba",
-        "nome": "Câmara de Cuiabá",
+        "id": "rondonopolis",
+        "nome": "Prefeitura de Rondonópolis",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -462,6 +471,15 @@
         "tipo": "assessoria",
         "id": "camara-vg",
         "nome": "Câmara de Várzea Grande",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-cba",
+        "nome": "Câmara de Cuiabá",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -503,16 +521,115 @@
   ],
   "itens": [
     {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/206001?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "fotoLarg": 600,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:escola-do-legislativo-da-almt-abre-matriculas-para-cursos-gratuitos-de",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Escola do Legislativo da ALMT abre matrículas para cursos gratuitos de 2026",
+      "resumo": "As capacitações presenciais atendem servidores públicos e a comunidade, com prazo de inscrição aberto até a primeira semana de agosto na plataforma EAD.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/escola-do-legislativo-abre-matriculas-para-cursos-gratuitos-do-segundo-semestre/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [
+        "rdmonline.com.br",
+        "giroes.com.br",
+        "mtagora.com.br"
+      ],
+      "quentura": 3,
+      "uf": null,
+      "corpo": [
+        "A Escola e Memória do Legislativo da Assembleia Legislativa de Mato Grosso (ALMT) abriu matrículas para os cursos gratuitos do segundo semestre de 2026. As capacitações são destinadas a servidores públicos e à comunidade em geral.",
+        "A lista de opções inclui Clube de Leitura em Espanhol, Conscientização, Cidadania e Patrimônio, Espanhol para Iniciantes, Espanhol Intermediário, Espanhol para o Enem, História e Historiografia de Mato Grosso, Redação Oficial e Linguagem Simples e Redação para o Enem. Cada curso dispõe de 39 vagas, com exceção da turma de Redação para o Enem, que oferece 10 vagas.",
+        "As inscrições podem ser feitas até a primeira semana de agosto por meio da ferramenta de autoinscrição na plataforma EAD da escola, inclusive para as modalidades presenciais. Todas as formações emitem certificado de conclusão e possuem carga horária de 30, 40 ou 70 horas, conforme a opção escolhida.",
+        "De acordo com a secretária da Escola e Memória do Legislativo, Marcela Bruna Vieira Castro, os cursos presenciais de Português, Espanhol e Inglês passam a contar com autoinscrição na plataforma virtual. A programação também prevê eventos em parceria com outras instituições, a exemplo do curso Nova Oratória, que está em andamento."
+      ],
+      "link": "/materia/escola-do-legislativo-da-almt-abre-matriculas-para-cursos-gratuitos-de.html",
+      "iso": "2026-08-05T11:55:44.375Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": "As capacitações são destinadas a servidores públicos e à comunidade em geral. As inscrições para os cursos podem ser feitas até a primeira semana de agosto por meio da plataforma EAD da instituição.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba/@@images/image-0-1c1e1c20af74575b9013a0147b97c8bb.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:tre-mt-transfere-quatro-secoes-eleitorais-do-liceu-cuiabano-para-a-cdl",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "TRE-MT transfere quatro seções eleitorais do Liceu Cuiabano para a CDL em Cuiabá",
+      "resumo": "A alteração atinge as seções 0841, 0843, 0844 e 1170 e ocorre devido a obras de reforma na infraestrutura do prédio escolar.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [
+        "Primeira Página"
+      ],
+      "quentura": 1,
+      "uf": "mt",
+      "corpo": [
+        "Quatro seções eleitorais que funcionavam na Escola Estadual Liceu Cuiabano, situada na Av. Presidente Marques, no bairro Quilombo, em Cuiabá, foram transferidas para a Câmara de Dirigentes Lojistas de Cuiabá (CDL), localizada na mesma avenida.",
+        "A mudança consta na Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz da 01ª ZE, Moacir Rogério Tortato. As seções transferidas são a 0841, 0843, 0844 e 1170. A alteração foi motivada por obras de reforma no prédio da escola, que inviabilizaram o recebimento de todas as seções no local.",
+        "O chefe de cartório da 01ª ZE, Antônio Henrique Ricci Boaventura, explicou que uma nova avaliação da estrutura e o avanço das obras permitiram que parte das seções continuasse na escola, diminuindo a necessidade de deslocamento dos eleitores.",
+        "Os eleitores podem consultar o local de votação pelo aplicativo e-Título ou pelo Portal do TSE, informando CPF, nome completo e data de nascimento na seção de Autoatendimento Eleitoral."
+      ],
+      "link": "/materia/tre-mt-transfere-quatro-secoes-eleitorais-do-liceu-cuiabano-para-a-cdl.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": "A alteração atinge os eleitores das seções eleitorais 0841, 0843, 0844 e 1170, que votavam na Escola Estadual Liceu Cuiabano. A confirmação do novo local de votação pode ser consultada pelo aplicativo e-Título ou no Portal do TSE.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
       "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:sema-mt-informa-indisponibilidade-dos-sistemas-siga-sisflora-e-simcar",
+      "id": "ilm:corregedoria-regional-eleitoral-atua-na-fiscalizacao-dos-servicos-em-m",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Corregedoria Regional Eleitoral atua na fiscalização dos serviços em Mato Grosso",
+      "resumo": "Órgão expedidor de orientações para as Zonas Eleitorais do estado tem titularidade exercida por membro eleito do Tribunal.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em todo o Estado de Mato Grosso. O setor também responde pela expedição de orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais do estado.",
+        "A titularidade da unidade é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral. O ocupante da função é eleito dentre os membros do Tribunal.",
+        "A estrutura reúne o regulamento interno da Corregedoria Regional Eleitoral de Mato Grosso e o Protocolo para Julgamento com Perspectiva Racial. A área também contempla o Processo Judicial Eletrônico da Corregedoria - PjeCor, o Sistema de Informações de Óbitos e Direitos Políticos - Infodip e o Sistema de Informações Eleitorais - SIEL.",
+        "O espaço institucional inclui ainda o Informativo da Corregedoria Regional Eleitoral e registros relativos ao 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil."
+      ],
+      "link": "/materia/corregedoria-regional-eleitoral-atua-na-fiscalizacao-dos-servicos-em-m.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:sistemas-siga-sisflora-e-simcar-ficam-fora-do-ar-por-problemas-tecnico",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Sema-MT informa indisponibilidade dos sistemas SIGA, SISFLORA e SIMCAR",
-      "resumo": "A Superintendência de Tecnologia da Informação atua para solucionar a falha técnica, mas ainda não há previsão para o retorno dos serviços.",
+      "titulo": "Sistemas SIGA, SISFLORA e SIMCAR ficam fora do ar por problemas técnicos",
+      "resumo": "A Superintendência de Tecnologia da Informação trabalha na solução da falha, mas ainda não há previsão para o retorno dos serviços da Sema-MT.",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
       "origemNome": "Sema-MT",
@@ -520,13 +637,13 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Secretaria de Estado de Meio Ambiente (Sema-MT) informou que o sistema SIGA está fora do ar devido a problemas técnicos. A indisponibilidade afeta diretamente o funcionamento dos sistemas SISFLORA e SIMCAR.",
-        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No entanto, ainda não há previsão para o retorno dos serviços.",
-        "A Sema-MT informou que divulgará o retorno à normalidade em seus canais oficiais assim que a situação for reestabelecida."
+        "O sistema SIGA está fora do ar devido à ocorrência de problemas técnicos, o que impactou diretamente o funcionamento das plataformas SISFLORA e SIMCAR. A informação foi comunicada pela Secretaria de Estado de Meio Ambiente (Sema-MT).",
+        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No entanto, ainda não há previsão de retorno dos serviços.",
+        "A Sema-MT informou que, assim que a situação voltar à normalidade, a informação será divulgada em seus canais oficiais."
       ],
-      "link": "/materia/sema-mt-informa-indisponibilidade-dos-sistemas-siga-sisflora-e-simcar.html",
-      "iso": "2026-08-04T22:20:51.260Z",
-      "hora": "18h20",
+      "link": "/materia/sistemas-siga-sisflora-e-simcar-ficam-fora-do-ar-por-problemas-tecnico.html",
+      "iso": "2026-08-05T11:55:43.044Z",
+      "hora": "07h55",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -538,31 +655,157 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:obras-do-contorno-leste-seguem-em-varias-frentes-de-trabalho-em-cuiaba",
+      "id": "ilm:obras-do-contorno-leste-em-cuiaba-avancam-com-trabalhos-em-diversas-fr",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Obras do Contorno Leste seguem em várias frentes de trabalho em Cuiabá",
-      "resumo": "Com 17,3 quilômetros de extensão, o projeto liga a Avenida Fernando Corrêa à MT-251 para atender mais de 200 mil moradores de 39 bairros.",
+      "titulo": "Obras do Contorno Leste em Cuiabá avançam com trabalhos em diversas frentes",
+      "resumo": "Com 17,3 quilômetros de extensão, a via vai interligar a Avenida Fernando Corrêa à Rodovia Emanuel Pinheiro, beneficiando mais de 200 mil moradores de 39 bairros.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/obras-do-contorno-leste-avancam-com-servicos-simultaneos-em-diferentes-frentes-de-trabalho",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
-        "O Documento",
-        "mtagora.com.br",
-        "Prefeitura de Cuiabá"
+        "Prefeitura de Cuiabá",
+        "Olhar Direto"
       ],
-      "quentura": 8,
+      "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Obras, mantém em andamento os trabalhos no Contorno Leste em diversas frentes. Os serviços em execução incluem terraplenagem, drenagem, pavimentação, implantação de calçadas, meio-fio, ciclovia e iluminação pública.",
-        "A avenida tem 17,3 quilômetros de extensão e conecta a Avenida Fernando Corrêa, na região do Distrito Industrial e da BR-364, à Rodovia Emanuel Pinheiro (MT-251), ligando as regiões Sul, Leste e Norte da capital. Entre as etapas concluídas está a ponte de concreto sobre o Rio Coxipó, com 75,60 metros de extensão e 23,80 metros de largura.",
-        "No trecho entre os bairros Recanto do Sol e Fortaleza, a Construtora Nhambiquaras realiza a implantação da drenagem profunda. O encarregado de terraplenagem Isaías Magalhães informou que cerca de 25 trabalhadores e aproximadamente 15 equipamentos atuam no local, lidando com tubulações subterrâneas e interferências de redes encontradas durante as escavações.",
-        "O empreendimento atende 39 bairros e contempla sinalização viária, paisagismo e recuperação ambiental. Ao longo da execução, o projeto passou por adequações técnicas, com ajuste no traçado para atender normas relativas a linhas de transmissão de energia, inclusão de ciclovia em toda a extensão e redução de aproximadamente 43% na área de desapropriações urbanas."
+        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Obras, dá continuidade às intervenções no Contorno Leste nesta terça-feira (4). Os trabalhos abrangem serviços simultâneos de terraplenagem, drenagem, pavimentação, implantação de calçadas, meio-fio, ciclovia e iluminação pública.",
+        "A nova avenida possui 17,3 quilômetros de extensão, ligando a região do Distrito Industrial e da BR-364 na Avenida Fernando Corrêa à Rodovia Emanuel Pinheiro (MT-251). O projeto prevê sinalização viária, paisagismo e recuperação ambiental. Entre as estruturas concluídas está a ponte sobre o Rio Coxipó, com 75,60 metros de extensão e 23,80 metros de largura.",
+        "No trecho entre os bairros Recanto do Sol e Fortaleza, a Construtora Nhambiquaras executa a drenagem profunda. Segundo o encarregado de terraplenagem da empresa, Isaías Magalhães, cerca de 25 trabalhadores e aproximadamente 15 equipamentos atuam diariamente nas obras do local.",
+        "O traçado do empreendimento passou por adequações técnicas que reduziram a área de desapropriações urbanas em aproximadamente 43%. O projeto também incorporou a instalação de ciclovia em toda a extensão da via e ajustes para atender às normas de segurança próximas às linhas de transmissão de energia."
       ],
-      "link": "/materia/obras-do-contorno-leste-seguem-em-varias-frentes-de-trabalho-em-cuiaba.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/obras-do-contorno-leste-em-cuiaba-avancam-com-trabalhos-em-diversas-fr.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/829331?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "fotoLarg": 600,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:assembleia-legislativa-de-mato-grosso-tera-recesso-administrativo-de-2",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Assembleia Legislativa de Mato Grosso terá recesso administrativo de 24 a 31 de julho",
+      "resumo": "Durante o período, serviços essenciais funcionam em plantão e as atividades normais retornam no dia 3 de agosto.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/assembleia-legislativa-entra-em-recesso-administrativo-entre-os-dias-24-e-31-de-julho/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Assembleia Legislativa de Mato Grosso (ALMT) suspenderá suas atividades administrativas entre os dias 24 e 31 de julho devido ao recesso administrativo. A retomada dos trabalhos no órgão está marcada para o dia 3 de agosto.",
+        "Durante o recesso, os serviços considerados essenciais vão funcionar por meio de escalas de plantão. As secretarias e superintendências organizaram as equipes necessárias para garantir a continuidade dos atendimentos indispensáveis ao funcionamento da Assembleia Legislativa.",
+        "No Espaço Cidadania, será mantido somente o atendimento para retirada de documentos de identidade já prontos. Esse serviço funcionará entre os dias 24 e 31 de julho, das 8h às 14h.",
+        "Os demais atendimentos do Espaço Cidadania ficarão temporariamente suspensos, como a emissão da Carteira de Identidade Nacional (CIN) e os serviços da Defensoria Pública, do Procon, do Detran, da Receita Federal, por meio do Ponto de Atendimento Virtual, e da Ouvidoria. Os serviços regulares do local retornam no dia 3 de agosto."
+      ],
+      "link": "/materia/assembleia-legislativa-de-mato-grosso-tera-recesso-administrativo-de-2.html",
+      "iso": "2026-08-05T11:55:44.375Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:rua-joaquim-murtinho-tera-interdicao-total-entre-os-dias-4-e-17-de-ago",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Rua Joaquim Murtinho terá interdição total entre os dias 4 e 17 de agosto",
+      "resumo": "O bloqueio ocorre entre a Rua Tenente Thogo da Silva Pereira e a Avenida Dom Bosco para obras da rede de esgoto executadas pela Concessionária Águas Cuiabá.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/trecho-da-rua-joaquim-murtinho-ficara-interditada-de-4-a-17-deste-mes",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "g1 MT",
+        "g1.globo.com",
+        "CircuitoMT"
+      ],
+      "quentura": 3,
+      "uf": "mt",
+      "corpo": [
+        "A Secretaria Municipal de Mobilidade Urbana e Segurança Pública (Semob) informou que a Rua Joaquim Murtinho ficará totalmente interditada entre os dias 4 e 17 de agosto. O bloqueio atinge o trecho entre a Rua Tenente Thogo da Silva Pereira e a Avenida Dom Bosco, com início previsto para as 8h30.",
+        "A interdição atende a um pedido da Concessionária Águas Cuiabá, responsável pela realização das obras de implantação da rede de esgoto no local.",
+        "Durante os dias de interdição, a área terá sinalização viária e presença de agentes de trânsito para orientar os motoristas. A recomendação da Semob para rota alternativa é utilizar a Rua Comandante Costa para acessar a Avenida Generoso Ponce.",
+        "A secretária municipal de Mobilidade Urbana e Segurança Pública, coronel Francyanne Lacerda, orientou os condutores a redobrarem a atenção à sinalização temporária, planejarem os trajetos com antecedência e seguirem pelos desvios indicados."
+      ],
+      "link": "/materia/rua-joaquim-murtinho-tera-interdicao-total-entre-os-dias-4-e-17-de-ago.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/curso-da-eje-mt-aborda-aspectos-materiais-e-processuais-da-prestacao-de-contas/@@images/image-0-284cb23b7ad0990f64eccf948fe28f52.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:eje-mt-realiza-curso-sobre-prestacao-de-contas-eleitorais-para-magistr",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "EJE-MT realiza curso sobre prestação de contas eleitorais para magistrados e servidores",
+      "resumo": "As aulas ocorrem em formato telepresencial com ministração da técnica judiciária do TRE-RJ, Anna Paula Oliveira Mendes, reunindo cerca de 1 20 participantes.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/curso-da-eje-mt-aborda-aspectos-materiais-e-processuais-da-prestacao-de-contas",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Escola Judiciária Eleitoral de Mato Grosso (EJE-MT) iniciou um curso focado nos aspectos materiais e processuais da prestação de contas eleitorais. A capacitação é voltada a magistrados e servidores do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT), além de promotores eleitorais e advogados. A abertura ocorreu na manhã de terça-feira (04.08), com aulas programadas para os dias 05 e 07 de agosto, das 8h30 às 11h30, em formato telepresencial.",
+        "O evento reúne cerca de 1 20 participantes e tem como instrutora a técnica judiciária do TRE-RJ, Anna Paula Oliveira Mendes, mestre em Direito da Cidade pela Universidade Estadual do Rio de Janeiro (UERJ) e autora do livro \"O abuso do poder no direito eleitoral: uma necessária revisitação ao instituto\". Na abertura, o diretor da EJE-MT e juiz-membro do TRE-MT, Welder Queiroz, apontou que o conteúdo aborda regras jurídicas, limites de gastos partidários e percentuais de investimento em candidaturas femininas e negras.",
+        "Durante o treinamento, a professora Anna Paula Mendes utiliza casos supostos para exemplificar situações de candidaturas. O programa abrange a Resolução TSE nº 23.607/19 aplicada à propaganda eleitoral, procedimento e princípios da prestação de contas, comunicações processuais, capacidade postulatória e o julgamento das contas.",
+        "O assessor de Contas Eleitorais e Partidárias do TRE-MT, Jorge Kimura, afirmou que a iniciativa qualifica o corpo técnico do órgão para a análise das contas das Eleições 2026. Segundo Kimura, o conteúdo também atende ao público externo formado por advogados, contadores e representantes partidários."
+      ],
+      "link": "/materia/eje-mt-realiza-curso-sobre-prestacao-de-contas-eleitorais-para-magistr.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:sema-mt-detalha-atuacao-da-unidade-de-programas-e-projetos-internacion",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Sema-MT detalha atuação da Unidade de Programas e Projetos Internacionais",
+      "resumo": "Estrutura atua na articulação entre a Secretaria e organismos internacionais para coordenar projetos financiados com recursos externos.",
+      "fonte": "Meridiano, com informações de Sema-MT",
+      "origemLink": "https://www.sema.mt.gov.br/site/index.php/unidades-administrativas/unidade-de-programas-e-projetos-internacionais",
+      "origemNome": "Sema-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Unidade de Programas e Projetos Internacionais (UPPI) atua como ponto de articulação entre a Sema-MT, organismos internacionais, governos parceiros, fundos climáticos, instituições financeiras e iniciativas multilaterais. O setor busca assegurar a governança, a transparência, a eficiência e o alinhamento técnico das ações com recursos externos.",
+        "A estrutura é responsável por coordenar o planejamento, a execução, o monitoramento e o reporte dos programas e projetos internacionais. O trabalho inclui garantir o cumprimento das salvaguardas socioambientais, a conformidade financeira e a integridade dos processos.",
+        "A missão do setor envolve o fortalecimento da gestão ambiental em Mato Grosso, a proteção das florestas, a redução das emissões de gases de efeito estufa e a valorização de povos e comunidades tradicionais. A UPPI atua na mitigação e adaptação às mudanças climáticas e no aumento da capacidade institucional do Estado.",
+        "A unidade também articula executores e subexecutores, fiscaliza contratos e gerencia riscos sociais, ambientais, financeiros e políticos. O setor coordena a comunicação institucional dos programas para garantir o acesso da sociedade à informação e aos canais de ouvidoria."
+      ],
+      "link": "/materia/sema-mt-detalha-atuacao-da-unidade-de-programas-e-projetos-internacion.html",
+      "iso": "2026-08-05T11:55:43.044Z",
+      "hora": "07h55",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -576,92 +819,57 @@
       "municipioNome": null,
       "id": "ilm:emissoras-de-radio-e-tv-devem-seguir-restricoes-eleitorais-a-partir-de",
       "chapeu": "Nosso texto",
-      "editoria": "brasil",
+      "editoria": "regional",
       "titulo": "Emissoras de rádio e TV devem seguir restrições eleitorais a partir de 6 de agosto",
-      "resumo": "As proibições para a programação normal e noticiários buscam garantir a igualdade de oportunidades entre candidatos, partidos, federações e coligações nas Eleições Gerais de 2026.",
+      "resumo": "As medidas visam assegurar a igualdade entre candidatos, partidos, federações e coligações durante as Eleições Gerais de 2026, conforme prevê a legislação eleitoral.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/emissoras-devem-observar-vedacoes-da-legislacao-eleitoral-a-partir-de-06-08",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "Emissoras de rádio e televisão de todo o país passam a cumprir novas restrições previstas na legislação eleitoral nesta quinta-feira (06.08). As medidas aplicam-se ao período das Eleições Gerais de 2026, com regramento baseado na Lei nº 9.504/1997 e na Resolução TSE nº 23.610/2019.",
-        "A legislação proíbe a veiculação de propaganda política na programação normal, o tratamento privilegiado a concorrentes — inclusive por retransmissão de lives — e a exibição de pesquisas nas quais seja possível identificar o entrevistado ou em que haja manipulação de dados. Transmissões de filmes, novelas e minisséries com alusão ou crítica a candidatos, partidos, federações ou coligações também estão vedadas, com exceção de programas jornalísticos e debates políticos.",
-        "A partir de 6 de agosto, fica proibida a divulgação de nomes de programas que façam referência a candidato escolhido em convenção, sob pena de cancelamento do registro do programa. A regra vale mesmo que a atração já existisse anteriormente ou que o nome coincida com o utilizado na urna eletrônica.",
-        "A juíza auxiliar da Presidência do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT), Edna Coutinho, declarou que as restrições buscam garantir isonomia entre os concorrentes. O secretário judiciário do TRE-MT, Carlos Luanga, orientou que rádios e TVs observem as regras para evitar irregularidades durante o processo eleitoral."
-      ],
-      "link": "/materia/emissoras-de-radio-e-tv-devem-seguir-restricoes-eleitorais-a-partir-de.html",
-      "iso": "2026-08-04T22:20:57.791Z",
-      "hora": "18h20",
-      "original": true,
-      "contexto": "As restrições da legislação eleitoral afetam emissoras de rádio e televisão de todo o país e passam a valer a partir de 6 de agosto para as Eleições Gerais de 2026. O histórico registra um caso parecido em 4 de agosto de 2026.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:sargento-da-pm-de-mato-grosso-conclui-curso-de-protecao-de-autoridades",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Sargento da PM de Mato Grosso conclui curso de proteção de autoridades",
-      "resumo": "Fagner Fernando do Espírito Santo Cerqueira foi o único representante do estado na capacitação promovida pela Casa Militar do Acre e Sejusp.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/servidor-da-prefeitura-de-cuiaba-conclui-curso-nacional-de-seguranca-de-autoridades-e-representa-mato-grosso-no-acre",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "Prefeitura de Cuiabá",
-        "FOLHAMAX",
-        "LOCAL MT"
-      ],
-      "quentura": 6,
       "uf": "mt",
       "corpo": [
-        "O 3º Sargento da Polícia Militar de Mato Grosso, Fagner Fernando do Espírito Santo Cerqueira, integrante da equipe de Segurança Institucional da Prefeitura de Cuiabá, concluiu o Curso de Segurança e Proteção de Autoridades. A capacitação foi promovida pela Casa Militar do Estado do Acre em parceria com a Secretaria de Estado de Justiça e Segurança Pública (Sejusp).",
-        "O militar foi o único representante de Mato Grosso e da capital cuiabana no treinamento, que reuniu profissionais de diferentes estados brasileiros e da Polícia Nacional do Peru. O curso abordou disciplinas como gerenciamento de riscos, inteligência e contrainteligência, planejamento de equipes precursoras, tiro, noções de explosivos, embarque e desembarque tático em aeronaves e salvamento aquático, ministradas por instrutores do Acre, Piauí, Pernambuco e Rio de Janeiro.",
-        "Antes do início do curso, o sargento realizou testes físicos e de tiro em Cuiabá para cumprir as etapas previstas no edital. O processo de inscrição ocorreu em um curto espaço de tempo, e o militar agradeceu o apoio recebido da Prefeitura de Cuiabá para participar da formação.",
-        "Segundo Fagner, o treinamento permitiu conhecer modelos de atuação adotados por forças de segurança de outros estados e trocar informações com operadores da área. Os conhecimentos e técnicas adquiridos poderão ser aplicados na rotina da Segurança Institucional da Prefeitura de Cuiabá, na proteção de autoridades municipais, no planejamento preventivo e na gestão de riscos."
+        "A partir desta quinta-feira, 6 de agosto, passam a vigorar novas restrições da legislação eleitoral para as emissoras de rádio e televisão em todo o país. As regras, previstas na Lei nº 9.504/1997 e na Resolução TSE nº 23.610/2019, têm o objetivo de garantir o equilíbrio na disputa das Eleições Gerais de 2026.",
+        "Entre as proibições estão a veiculação de propaganda política, a concessão de tratamento privilegiado a concorrentes e a transmissão de pesquisas em que seja possível identificar o eleitor ou com dados manipulados. Fica vedada também a exibição de programas ou obras ficcionais com alusão ou crítica a candidatos ou partidos, abrindo exceção apenas para jornalísticos e debates.",
+        "Além disso, as emissoras não podem divulgar nomes de programas que façam referência a candidatos escolhidos em convenção, mesmo que a atração já existisse anteriormente. A desobediência a essa regra pode resultar no cancelamento do registro do programa.",
+        "A juíza auxiliar da Presidência do TRE-MT, Edna Coutinho, declarou que as restrições buscam garantir isonomia e acesso equilibrado às informações. O secretário judiciário do TRE-MT, Carlos Luanga, orientou os veículos a observarem as normas para evitar irregularidades durante o processo eleitoral."
       ],
-      "link": "/materia/sargento-da-pm-de-mato-grosso-conclui-curso-de-protecao-de-autoridades.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/emissoras-de-radio-e-tv-devem-seguir-restricoes-eleitorais-a-partir-de.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
       "original": true,
-      "contexto": null,
+      "contexto": "As restrições afetam as emissoras de rádio e televisão em todo o país a partir de 6 de agosto. O histórico do arquivo registra um caso parecido em 4 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/829331?width=502px&amp;quality=80",
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/775394?width=502px&amp;quality=80",
       "fotoAlt": null,
       "fotoLarg": 600,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:almt-entra-em-recesso-administrativo-entre-24-e-31-de-julho",
+      "municipio": "primavera",
+      "municipioNome": "Primavera do Leste",
+      "id": "ilm:almt-publica-decretos-de-plebiscito-sobre-limites-territoriais-em-quat",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "ALMT entra em recesso administrativo entre 24 e 31 de julho",
-      "resumo": "Os trabalhos retornam em 3 de agosto, mantendo apenas serviços essenciais e a entrega de documentos de identidade já prontos durante o período.",
+      "titulo": "ALMT publica decretos de plebiscito sobre limites territoriais em quatro municípios",
+      "resumo": "As consultas vão decidir a incorporação do distrito de Nova Poxoréu a Primavera do Leste e das Ilhas de Ocupação do Projeto de Assentamento Nova Cotriguaçu a Cotriguaçu.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/assembleia-legislativa-entra-em-recesso-administrativo-entre-os-dias-24-e-31-de-julho/visualizar",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/decretos-convocam-plebiscitos-para-desmembramento-de-nova-poxoreu-e-ilhas-de-ocupacao/visualizar",
       "origemNome": "Assembleia de MT",
       "pautadoPor": [],
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Assembleia Legislativa de Mato Grosso (ALMT) entra em recesso administrativo entre os dias 24 e 31 de julho. Durante esse período, as atividades administrativas do órgão ficam suspensas e serão retomadas no dia 3 de agosto.",
-        "Nesse intervalo, os serviços considerados essenciais funcionam em regime de escala de plantão. As secretarias e superintendências organizaram equipes para garantir a continuidade dos atendimentos indispensáveis ao funcionamento da Casa.",
-        "No Espaço Cidadania, haverá atendimento exclusivo para a retirada de documentos de identidade já prontos. O serviço funcionará de 24 a 31 de julho, no horário das 8h às 14h.",
-        "Os demais serviços do local ficam suspensos, incluindo a emissão da Carteira de Identidade Nacional (CIN) e os atendimentos da Defensoria Pública, do Procon, do Detran, da Receita Federal, por meio do Ponto de Atendimento Virtual, e da Ouvidoria. Os atendimentos regulares do Espaço Cidadania voltam no dia 3 de agosto."
+        "A Assembleia Legislativa de Mato Grosso (ALMT) publicou, no Diário Oficial Eletrônico desta quarta-feira (22), convocações para plebiscitos sobre desmembramento e incorporação de áreas nos municípios de Primavera do Leste, Poxoréu, Cotriguaçu e Colniza. De autoria da Comissão de Revisão Territorial dos Municípios e das Cidades, os decretos legislativos foram aprovados em sessão plenária no dia 15 de julho, após reuniões técnicas sobre o Estudo de Viabilidade Municipal.",
+        "O Decreto Legislativo nº 82 trata do desmembramento do distrito de Nova Poxoréu, pertencente a Poxoréu, e sua incorporação a Primavera do Leste. O local é um aglomerado urbano de cerca de 20 mil habitantes, situado a pouco mais de 5 km de Primavera do Leste e a cerca de 50 km da sede de Poxoréu. A proposta é que a Justiça Eleitoral realize a votação no dia 4 de outubro, data das eleições gerais, quando os eleitores responderão \"sim\" ou \"no\" à alteração.",
+        "Já o Decreto Legislativo nº 83 convoca plebiscito para consultar as populações de Cotriguaçu e Colniza sobre o desmembramento das Ilhas de Ocupação do Projeto de Assentamento Nova Cotriguaçu. A área compreende 250 lotes em mais de 100 mil hectares situados no território de Colniza, mas vinculados a Cotriguaçu. O decreto também propõe que a consulta ocorra junto com as próximas eleições.",
+        "As convocações seguem a Lei Complementar nº 230, de 15 de abril de 2026, que atribui às assembleias legislativas a competência sobre o tema e exige a realização do Estudo de Viabilidade Municipal. Segundo os estudos, Primavera do Leste já custeia serviços de saúde, educação e infraestrutura em Nova Poxoréu, enquanto Cotriguaçu presta os serviços essenciais nas Ilhas de Ocupação por meio da subprefeitura do Distrito de Nova União."
       ],
-      "link": "/materia/almt-entra-em-recesso-administrativo-entre-24-e-31-de-julho.html",
-      "iso": "2026-08-04T22:20:52.759Z",
-      "hora": "18h20",
+      "link": "/materia/almt-publica-decretos-de-plebiscito-sobre-limites-territoriais-em-quat.html",
+      "iso": "2026-08-05T11:55:44.375Z",
+      "hora": "07h55",
       "original": true,
-      "contexto": null,
+      "contexto": "O histórico registra 3 casos semelhantes em 3 e 4 de agosto de 2026. A medida afeta os moradores de Primavera do Leste, Poxoréu, Cotriguaçu e Colniza, incluindo cerca de 20 mil habitantes do distrito de Nova Poxoréu. A proposta prevê a realização da votação no dia 4 de outubro.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -671,30 +879,61 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:rua-joaquim-murtinho-tera-interdicao-total-entre-4-e-17-de-agosto",
+      "id": "ilm:militar-de-cuiaba-conclui-curso-de-seguranca-e-protecao-de-autoridades",
       "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Rua Joaquim Murtinho terá interdição total entre 4 e 17 de agosto",
-      "resumo": "O bloqueio ocorre entre a Rua Tenente Thogo da Silva Pereira e a Avenida Dom Bosco para a implantação de rede de esgoto a partir das 8h30.",
+      "editoria": "regional",
+      "titulo": "Militar de Cuiabá conclui Curso de Segurança e Proteção de Autoridades no Acre",
+      "resumo": "O 3º Sargento Fagner Fernando do Espírito Santo Cerqueira foi o único representante de Mato Grosso na capacitação realizada em parceria com a Sejusp.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/trecho-da-rua-joaquim-murtinho-ficara-interditada-de-4-a-17-deste-mes",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/servidor-da-prefeitura-de-cuiaba-conclui-curso-nacional-de-seguranca-de-autoridades-e-representa-mato-grosso-no-acre",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
-        "CircuitoMT"
+        "Prefeitura de Cuiabá"
       ],
       "quentura": 2,
-      "uf": null,
+      "uf": "mt",
       "corpo": [
-        "A Rua Joaquim Murtinho ficará totalmente interditada entre os dias 4 e 17 de agosto, no trecho entre a Rua Tenente Thogo da Silva Pereira e a Avenida Dom Bosco. A medida é necessária para a implantação da rede de esgoto, a partir das 8h30, e atende a uma solicitação da Concessionária Águas Cuiabá, responsável pela execução do serviço.",
-        "Durante o período de bloqueio, além da sinalização viária, agentes de trânsito orientarão os condutores na região. A Secretaria Municipal de Mobilidade Urbana e Segurança Pública (Semob) recomenda o uso da Rua Comandante Costa como opção de rota alternativa para acessar a Avenida Generoso Ponce.",
-        "A secretária municipal de Mobilidade Urbana e Segurança Pública, coronel Francyanne Lacerda, orientou os motoristas e usuários a redobrarem a atenção à sinalização temporária, planejarem os deslocamentos com antecedência e utilizarem os desvios indicados."
+        "O 3º Sargento da Polícia Militar de Mato Grosso, Fagner Fernando do Espírito Santo Cerqueira, integrante da equipe de Segurança Institucional da Prefeitura de Cuiabá, concluiu o Curso de Segurança e Proteção de Autoridades. A capacitação foi promovida pela Casa Militar do Estado do Acre em parceria com a Secretaria de Estado de Justiça e Segurança Pública (Sejusp).",
+        "O militar foi o único representante de Mato Grosso e de Cuiabá na formação, que reuniu profissionais de diferentes estados brasileiros e da Polícia Nacional do Peru. As aulas contaram com instrutores do Acre, Piauí, Pernambuco e Rio de Janeiro, abordando temas como gerenciamento de riscos, inteligência e contrainteligência, planejamento de equipes precursoras, tiro, noções de explosivos, salvamento aquático e embarque e desembarque tático em aeronaves.",
+        "Antes de iniciar a capacitação, o sargento passou por testes físicos e de tiro realizados em Cuiabá para cumprir as etapas exigidas no edital de inscrição.",
+        "Os ensinamentos e protocolos obtidos no treinamento serão aplicados na rotina da Segurança Institucional da Prefeitura de Cuiabá, no planejamento preventivo e na proteção de autoridades municipais em eventos oficiais."
       ],
-      "link": "/materia/rua-joaquim-murtinho-tera-interdicao-total-entre-4-e-17-de-agosto.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/militar-de-cuiaba-conclui-curso-de-seguranca-e-protecao-de-autoridades.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
       "original": true,
       "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:governo-de-mato-grosso-sanciona-lei-de-seguranca-no-ambiente-escolar",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Governo de Mato Grosso sanciona lei de segurança no ambiente escolar",
+      "resumo": "A Lei nº 13.459 estabelece diretrizes de prevenção à violência, planos de segurança nas unidades de ensino e a instalação gradual de câmeras e botões de pânico na rede estadual.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/lei-cria-politica-permanente-de-seguranca-e-protecao-no-ambiente-escolar-em-mt/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "O Governo de Mato Grosso sancionou a Lei nº 13.459, que institui a Política Estadual Permanente de Segurança, Prevenção e Proteção no Ambiente Escolar. A norma foi aprovada pela Assembleia Legislativa em 23 de junho de 2026 e publicada no Diário Oficial.",
+        "A legislação estabelece diretrizes para garantir um ambiente seguro e proteger a integridade física, psíquica e moral de estudantes, professores e integrantes da comunidade escolar da rede estadual. O texto prevê a articulação entre as áreas de educação, segurança pública, saúde e assistência social, além do desenvolvimento de programas de prevenção à violência e combate ao bullying e ao cyberbullying.",
+        "As unidades escolares deverão elaborar um Plano de Segurança Escolar com protocolos de prevenção e resposta a emergências. A lei determina a implantação progressiva de sistemas de videomonitoramento, com respeito à privacidade e à Lei Geral de Proteção de Dados Pessoais (LGPD), além da instalação gradativa de dispositivos de alerta emergencial, incluindo botão de pânico.",
+        "A implementação da política dará prioridade às escolas localizadas em regiões de maior vulnerabilidade social e índices mais elevados de violência. As ações dependerão de regulamentação pelo Poder Executivo e da disponibilidade orçamentária."
+      ],
+      "link": "/materia/governo-de-mato-grosso-sanciona-lei-de-seguranca-no-ambiente-escolar.html",
+      "iso": "2026-08-05T11:55:44.375Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": "A legislação afeta estudantes, professores e integrantes da comunidade escolar da rede estadual de ensino de Mato Grosso. O histórico registra o relato de leis semelhantes sobre segurança escolar no estado em duas ocasiões anteriores, nos dias 3 e 4 de agosto de 2026. O texto estabelece a implantação progressiva de sistemas de videomonitoramento e dispositivos de alerta emergencial nas unidades escolares.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -704,59 +943,28 @@
       "fotoLarg": 600,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:almt-fica-em-5-lugar-em-interacoes-nas-redes-sociais-no-1-semestre-de-",
+      "id": "ilm:almt-e-a-5-assembleia-com-mais-interacoes-nas-redes-sociais-no-1-semes",
       "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "ALMT fica em 5º lugar em interações nas redes sociais no 1º semestre de 2026",
-      "resumo": "Levantamento da Social Media Gov mostra que o parlamento registrou 179.675 interações no período, superando assembleias como as do Rio de Janeiro e Minas Gerais.",
+      "editoria": "regional",
+      "titulo": "ALMT é a 5ª assembleia com mais interações nas redes sociais no 1º semestre de 2026",
+      "resumo": "O parlamento de Mato Grosso somou 179.675 interações no período, superando estados como Rio de Janeiro, Minas Gerais, Ceará e Amazonas, segundo levantamento da Social Media Gov.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/almt-esta-entre-as-cinco-assembleias-com-mais-interacoes-nas-redes-sociais/visualizar",
       "origemNome": "Assembleia de MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Assembleia Legislativa de Mato Grosso (ALMT) ficou na quinta colocação entre os parlamentos estaduais com maior número de interações nas redes sociais no primeiro semestre de 2026. No período, os perfis institucionais da Casa registraram 179.675 interações, segundo levantamento divulgado pela plataforma Social Media Gov.",
-        "Com a marca, a ALMT figurou à frente das assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas. Segundo a gerente de Gestão de Redes e Publicidade Institucional, Noemia Almeida, a equipe da área é formada por nove servidores e uma jovem aprendiz, atuando de forma integrada com o jornalismo, fotografia, TV Assembleia e Rádio Assembleia.",
-        "O secretário de Comunicação Social da ALMT, coronel Henrique Santos, afirmou que a posição reflete a ampliação do contato com a população e o trabalho conjunto dos servidores da Secretaria de Comunicação Social (Secom).",
-        "O resultado dá sequência a premiações anteriores obtidas pela comunicação da ALMT. Em 2025, a instituição ficou em segundo lugar no Prêmio Social Media Gov, durante o 14º Redes WeGov, com a assistente virtual \"Alê\". Neste ano, no 15º Redes WeGov, o parlamento conquistou o primeiro lugar com o projeto \"Termômetro de Notícias\". Um artigo científico sobre essa ferramenta, elaborado por Noemia Almeida e revisado por William Monteiro e Yuri Daltro Caseiro, foi aprovado para o Congresso Brasileiro de Comunicação Pública."
-      ],
-      "link": "/materia/almt-fica-em-5-lugar-em-interacoes-nas-redes-sociais-no-1-semestre-de-.html",
-      "iso": "2026-08-04T22:20:52.759Z",
-      "hora": "18h20",
-      "original": true,
-      "contexto": "O histórico do MERIDIANO registra quatro matérias anteriores sobre a posição da ALMT no ranking de interações em redes sociais, todas publicadas em 4 de agosto de 2026. O levantamento da plataforma contabilizou 179.675 interações nos perfis institucionais da assembleia ao longo do primeiro semestre de 2026.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas-entre-eleitores-candidatos-indigenas-e-representantes-de-igrejas/@@images/image-0-f355d17eb327ce79266cf7e07034a72b.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-eleicoes-2026-em-barra-do-garca",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "TRE-MT realiza audiência pública sobre Eleições 2026 em Barra do Garças",
-      "resumo": "Evento reuniu cerca de 100 pessoas de nove municípios do Vale do Araguaia no Tribunal do Júri do Fórum do município.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou nesta sexta-feira (31) uma audiência pública sobre as Eleições Gerais de 2026 no Tribunal do Júri do Fórum da Comarca de Barra do Garças. O município, localizado a 521 km de Cuiabá, foi o quarto polo a receber o ciclo de debates, reunindo público de nove municípios do Vale do Araguaia.",
-        "A abertura foi feita pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. A mesa foi coordenada pelo juiz-membro substituto Flávio Fraga e Silva, com apresentações do assessor jurídico Hernandésio de Lima e do coordenador de Sistemas Eleitorais e Logística, Salomão Fortaleza. O evento contou com a presença de representantes do Ministério Público Estadual, do Poder Judiciário, de gestões municipais, de partidos políticos, além de indígenas, candidatos, líderes religiosos, de movimentos comunitários, voluntários e alunos da Escola Estadual Militar Tiradentes \"Cabo PM Vanilson Silva Carvalho\".",
-        "Os palestrantes abordaram a segurança da urna eletrônica, os canais de atendimento ao eleitor, as fases da eleição e a fiscalização de práticas ilícitas. Na etapa dedicada a perguntas, o público levantou questões sobre acessibilidade, envio de denúncias de assédio eleitoral no trabalho, uso de redes sociais por candidatos, treinamento de mesários e o funcionamento do aplicativo Pardal, que estará disponível a partir do dia 16 de agosto.",
-        "Os trabalhos no município tiveram apoio do cartório eleitoral da 9ª Zona Eleitoral e coordenação da Assessoria de Gestão Estratégica. O ciclo de audiências públicas abrange seis polos regionais no estado, com as próximas edições agendadas para Cáceres, em 7 de agosto, e Cuiabá, em 14 de agosto."
+        "A Assembleia Legislativa de Mato Grosso (ALMT) alcançou a quinta colocação entre os parlamentos estaduais com maior número de interações nas redes sociais no primeiro semestre de 2026. No período, os perfis institucionais da Casa de Leis registraram 179.675 interações. Os dados foram divulgados pela plataforma Social Media Gov.",
+        "Na classificação nacional, a ALMT ficou à frente das assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas. O secretário de Comunicação Social da Casa, coronel Henrique Santos, afirmou que a conquista reflete o trabalho conjunto dos servidores da Secom. A equipe de Gestão de Redes e Publicidade Institucional é composta por nove servidores e uma jovem aprendiz, conforme informado pela gerente Noemia Almeida.",
+        "As produções para os canais digitais são realizadas de forma integrada pelas equipes de redes sociais, publicidade institucional, jornalismo, fotografia, TV Assembleia e Rádio Assembleia. A estrutura atua na elaboração de notícias, vídeos, campanhas, transmissões e outros formatos de conteúdo.",
+        "Em 2025, a ALMT obteve o segundo lugar no Prêmio Social Media Gov, durante o 14º Redes WeGov, com a assistente virtual \"Alê\". Neste ano, no 15º Redes WeGov, a instituição conquistou o primeiro lugar na mesma premiação com o projeto \"Termômetro de Notícias\", ferramenta que utiliza inteligência artificial, automação e análise de dados. Um artigo sobre a iniciativa, elaborado por Noemia Almeida e revisado pelos servidores William Monteiro e Yuri Daltro Caseiro, foi aprovado para o Congresso Brasileiro de Comunicação Pública."
       ],
-      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-eleicoes-2026-em-barra-do-garca.html",
-      "iso": "2026-08-04T22:20:57.791Z",
-      "hora": "18h20",
+      "link": "/materia/almt-e-a-5-assembleia-com-mais-interacoes-nas-redes-sociais-no-1-semes.html",
+      "iso": "2026-08-05T11:55:44.375Z",
+      "hora": "07h55",
       "original": true,
-      "contexto": "O histórico registra três reuniões e audiências do TRE-MT sobre as Eleições de 2026 nos dias 3 e 4 de agosto de 2026, sendo duas em Barra do Garças e uma em Rondonópolis. As discussões do evento afetam representantes e moradores de nove municípios do Vale do Araguaia, o quarto polo a receber o ciclo de debates.",
+      "contexto": "O histórico registra quatro matérias semelhantes em 4 de agosto de 2026. Em 2025, a Assembleia Legislativa de Mato Grosso obteve o segundo lugar no Prêmio Social Media Gov, e no primeiro semestre de 2026 registrou 179.675 interações nas redes sociais.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -766,28 +974,91 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:praca-alencastro-recebe-edicao-da-feira-da-agricultura-familiar-nesta-",
+      "id": "ilm:upas-de-cuiaba-completam-seis-dias-sem-pacientes-retidos-em-salas-de-m",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Praça Alencastro recebe edição da Feira da Agricultura Familiar nesta terça-feira",
-      "resumo": "Evento reúne produtores rurais, empreendedores da gastronomia e artesãos com organização da Prefeitura de Cuiabá.",
+      "titulo": "UPAs de Cuiabá completam seis dias sem pacientes retidos em salas de medicação",
+      "resumo": "A rede municipal mantém vagas em leitos de enfermaria mesmo durante a estiagem, período com alta na procura por atendimento de doenças respiratórias.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/feira-gastronomica-e-da-agricultura-familiar-movimenta-praca-alencastro-com-novos-expositores-e-vendas-presenciais-e-on-line",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/upas-de-cuiaba-completam-seis-dias-sem-pacientes-internados-em-salas-de-medicacao",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O EMPALLADOR"
+        "g1 MT",
+        "g1.globo.com"
       ],
-      "quentura": 1,
+      "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá realiza nesta terça-feira (4) mais uma edição da Feira Gastronômica e da Agricultura Familiar na Praça Alencastro. O evento reúne produtores rurais, empreendedores da gastronomia e artesãos.",
-        "De acordo com o coordenador da feira, Luís Alberto Rodrigues Leite, a expectativa é pelo retorno de produtores da comunidade Pai Joaquim, ausentes na edição passada porque a produção não estava pronta para colheita. Ele também relatou que feirantes utilizam redes sociais e aplicativos de entrega para atender pedidos pela internet.",
-        "A Secretaria Adjunta de Agricultura realiza o transporte gratuito de alimentos para participantes do Programa de Aquisição de Alimentos (PAA) e do Programa Nacional de Alimentação Escolar (PNAE). Interessados em participar das feiras podem realizar cadastro na secretaria, no bairro Poção, ou pelo telefone (65) 3324-9451.",
-        "Entre os expositores estão Cleber José da Silva, que comercializa churros, Adriane Albuquerque Alves, com espetinhos, e Arthur Davi Pinheiro Godoy, com minidonuts, bolos e cafés. O público consumidor inclui o professor universitário Paulo Modesto e a dona de casa Vilma Ferreira da Silva."
+        "Nesta segunda-feira (3), as quatro Unidades de Pronto Atendimento (UPAs) de Cuiabá completaram seis dias consecutivos sem pacientes internados nas salas de medicação à espera de vagas de enfermaria. O cenário envolve a UPA Norte (Morada do Ouro), UPA Leste (Leblon), UPA Oeste (Verdão) e UPA Sul (Pascoal Ramos).",
+        "A rede municipal de saúde também registra disponibilidade de vagas em leitos de enfermaria nas unidades hospitalares. O fluxo ocorre durante o período de estiagem, marcado pelo aumento na busca por atendimentos de doenças respiratórias e outros quadros clínicos.",
+        "A gestão do fluxo é feita de forma integrada entre a Atenção Secundária, gestores das UPAs, Central de Regulação Estadual e hospitais municipais. A articulação abrange o Hospital São Benedito, o Hospital Municipal de Cuiabá (HMC) e o Hospital e Pronto-Socorro Municipal de Cuiabá, com acompanhamento diário da ocupação dos leitos.",
+        "A secretária municipal de Saúde, Deisi Bocalon, e o secretário adjunto de Atenção Secundária, Odair Mendonsa, afirmaram que o monitoramento diário e a integração das equipes garantiram a agilidade na transferência dos pacientes. A Secretaria Municipal de Saúde (SMS) continuará o monitoramento da ocupação na rede."
       ],
-      "link": "/materia/praca-alencastro-recebe-edicao-da-feira-da-agricultura-familiar-nesta-.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/upas-de-cuiaba-completam-seis-dias-sem-pacientes-retidos-em-salas-de-m.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-transmite-abertura-de-urna-eletronica-do-tse/@@images/image-0-e1ce62eb023a817d9d827609b421c1d2.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:tre-mt-transmite-abertura-de-urna-eletronica-do-tse-nesta-segunda-feir",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "TRE-MT transmite abertura de urna eletrônica do TSE nesta segunda-feira",
+      "resumo": "A iniciativa integra a 1ª Semana Nacional do Sistema Eletrônico de Votação e será exibida ao vivo pelo canal do TRE-MT no YouTube às 16h30.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/tre-mt-transmite-abertura-de-urna-eletronica-do-tse",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) fará a transmissão da abertura da urna eletrônica, realizada pelo Tribunal Superior Eleitoral (TSE), nesta segunda-feira (03.08). A ação faz parte da programação da 1ª Semana Nacional do Sistema Eletrônico de Votação, que ocorre até o dia 09 de agosto.",
+        "A abertura do equipamento será realizada na Escola Elefante Branco, em Brasília, às 11h, dentro do eixo temático \"O Sistema Eletrônico por Dentro\". No período da tarde, às 16h30 no horário de Mato Grosso, a atividade será transmitida ao vivo por um pool de TVs públicas e pelos canais no YouTube dos TREs.",
+        "A programação começa junto com a abertura do segundo semestre do Judiciário e tem o objetivo de aproximar a Justiça Eleitoral da sociedade. A execução dos eventos fica a cargo do TSE e dos TREs, incluindo demonstrações da urna eletrônica, atividades educativas, palestras, exposições, visitas guiadas e ações de combate à desinformação.",
+        "Nesta segunda-feira também estreia a série \"Fato ou Boato – Viralizou\", com conteúdos veiculados entre agosto e setembro para esclarecer dúvidas sobre o processo eleitoral. Ao longo da semana, os tribunais regionais promoverão atividades em todo o país, como a Corrida Pela Democracia e visitas a escolas."
+      ],
+      "link": "/materia/tre-mt-transmite-abertura-de-urna-eletronica-do-tse-nesta-segunda-feir.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira/@@images/image-0-b42a3ea0416d9e20c1accc2e9fcb063b.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Justiça Eleitoral altera locais de votação na área rural de Juscimeira",
+      "resumo": "A mudança vale para as Eleições Gerais de 2026 e atinge seções da Escola Municipal Chico Mendes por conta do limite de eleitores e de uma reforma no prédio escolar.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A Justiça Eleitoral alterou dois locais de votação na área rural de Juscimeira, município a 158 km de Cuiabá. A decisão consta nas Portarias nº 06/2026 e 08/2026, assinadas pelo juiz da 14ª Zona Eleitoral, Fernando Kendi Ishikawa, para a votação do dia 4 de outubro.",
+        "A primeira mudança ocorreu na extensão da Escola Municipal de Ensino Fundamental Chico Mendes, no Assentamento Geraldo Pereira de Andrade. Como o local não atingiu a quantidade mínima de 50 eleitores, a seção nº 110 foi agregada à seção nº 61, situada na E . M . Chico Mendes, no Distrito de Irenópolis.",
+        "Na sequência, as seções nº 50, 51 e 61 da E . M . Chico Mendes foram transferidas temporariamente para a Escola Estadual Antônio José de Lima, localizada na Rua Emanuel Pinheiro, nº 183, Centro. A chefe de Cartório da 14ª ZE, Rosangela Colli Dal Pra, explicou que a transferência ocorreu devido a uma reforma no prédio escolar.",
+        "As alterações valem para as Eleições Gerais de 2026 e são atualizadas automaticamente no sistema. Juscimeira conta com 34 seções eleitorais, 6 locais de votação e 8.781 eleitores aptos, dos quais 8.491 (96,7%) possuem biometria cadastrada. A consulta do local de votação está disponível no site do TRE-MT e no aplicativo e-Título."
+      ],
+      "link": "/materia/justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira.html",
+      "iso": "2026-08-05T11:55:46.362Z",
+      "hora": "07h55",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -797,30 +1068,30 @@
       "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governo-de-mt-sanciona-lei-que-cria-politica-estadual-de-seguranca-nas",
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:secretaria-de-saude-de-cuiaba-lamenta-morte-do-servidor-flavio-marcos",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Governo de MT sanciona lei que cria Política Estadual de Segurança nas Escolas",
-      "resumo": "Aprovada pela Assembleia Legislativa em 23 de junho de 2026, a norma prevê videomonitoramento e botões de pânico nas unidades da rede estadual.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/lei-cria-politica-permanente-de-seguranca-e-protecao-no-ambiente-escolar-em-mt/visualizar",
-      "origemNome": "Assembleia de MT",
+      "titulo": "Secretária de Saúde de Cuiabá lamenta morte do servidor Flávio Marcos",
+      "resumo": "O profissional era responsável pelo setor de contratos do Hospital Municipal de Cuiabá e faleceu no dia 1º de agosto.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/secretaria-de-saude-lamenta-morte-do-servidor-flavio-marcos",
+      "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [],
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Governo de Mato Grosso sancionou a Lei nº 13.459, que institui a Política Estadual Permanente de Segurança, Prevenção e Proteção no Ambiente Escolar. A matéria foi aprovada pela Assembleia Legislativa em 23 de junho de 2026 e publicada no Diário Oficial para aplicação na rede estadual de ensino.",
-        "A legislação estabelece diretrizes para prevenir a violência e proteger a integridade física, psíquica e moral de estudantes, professores e comunidade escolar. O texto prevê a articulação entre as áreas de educação, segurança pública, saúde e assistência social, com prioridade para escolas situadas em locais de maior vulnerabilidade e índices mais elevados de violência.",
-        "As instituições de ensino deverão elaborar um Plano de Segurança Escolar com procedimentos para resposta a emergências e protocolos preventivos. O Poder Público também deverá desenvolver programas de mediação de conflitos, práticas restaurativas e de combate ao bullying e ao cyberbullying.",
-        "A norma prevê a instalação progressiva de videomonitoramento, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD), e a implantação gradativa de botões de pânico integrados à segurança pública. A execução das medidas dependerá de disponibilidade orçamentária e de regulamentação pelo Poder Executivo."
+        "A secretária municipal de Saúde de Cuiabá, Deisi Bocalon, lamentou o falecimento do servidor Flávio Marcos, ocorrido no último sábado, 1º de agosto.",
+        "O servidor exercia a função de responsável pelo setor de contratos do Hospital Municipal de Cuiabá. Ele também atuou na área durante o período de intervenção na Saúde, em 2023.",
+        "Deisi Bocalon declarou que o profissional era comprometido com o serviço público e deixou um legado de responsabilidade, competência e respeito com os colegas de trabalho.",
+        "A secretária adjunta de Atenção Hospitalar e Complexo Regulador, Erika Carvalho, e a Secretaria Municipal de Saúde também expressaram pesar e prestaram solidariedade aos familiares, amigos e colegas de trabalho do servidor."
       ],
-      "link": "/materia/governo-de-mt-sanciona-lei-que-cria-politica-estadual-de-seguranca-nas.html",
-      "iso": "2026-08-04T22:20:52.759Z",
-      "hora": "18h20",
+      "link": "/materia/secretaria-de-saude-de-cuiaba-lamenta-morte-do-servidor-flavio-marcos.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
       "original": true,
-      "contexto": "A medida afeta estudantes, professores e a comunidade escolar da rede estadual de ensino de Mato Grosso. O projeto de lei foi aprovado pela Assembleia Legislativa em 23 de junho de 2026 antes de sua publicação oficial. O histórico do arquivo registra outros dois casos parecidos no estado, em 3 e 4 de agosto de 2026.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -830,11 +1101,11 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:operacao-cidade-limpa-remove-mais-de-40-paineis-na-avenida-dos-florais",
+      "id": "ilm:operacao-retira-mais-de-40-paineis-irregulares-na-avenida-dos-florais-",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Operação Cidade Limpa remove mais de 40 painéis na Avenida dos Florais",
-      "resumo": "Ação da Sorp e Limpurb também alcançou a via de acesso a Nossa Senhora da Guia, e a próxima etapa será realizada na Avenida Palmiro Paes de Barros.",
+      "titulo": "Operação retira mais de 40 painéis irregulares na Avenida dos Florais em Cuiabá",
+      "resumo": "A ação da Sorp e da Limpurb também contemplou o acesso a Nossa Senhora da Guia e terá a próxima etapa na Avenida Palmiro Paes de Barros.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cidade-limpa-remove-anuncios-irregulares-nos-florais-e-avanca-para-a-avenida-palmiro-paes-de-barros",
       "origemNome": "Prefeitura de Cuiabá",
@@ -842,14 +1113,14 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Secretaria Municipal de Ordem Pública (Sorp), com apoio da Empresa Cuiabana de Zeladoria e Serviços Urbanos (Limpurb), removeu mais de 40 painéis fixos, além de banners, faixas, cartazes e placas menores na Avenida dos Florais e na via de acesso ao distrito de Nossa Senhora da Guia, em Cuiabá. A ação integra a Operação Cidade Limpa.",
-        "Todo o material recolhido estava instalado irregularmente em canteiros centrais, rotatórias e áreas públicas. A Sorp realiza a identificação dos prestadores de serviços e responsáveis pelos anúncios para aplicar as penalidades e autuações previstas na legislação municipal.",
-        "A proibição consta na Lei Complementar nº 443/2017, que veda qualquer propaganda em áreas públicas, incluindo postes, árvores, semáforos, calçadas, canteiros, rotatórias e vias. Em situações de flagrante, a legislação determina a apreensão imediata do material, sem necessidade de notificação prévia.",
-        "De acordo com a diretora de Atividades Econômicas da Sorp, Claudia Borges Bertoldo, as ações fazem parte de um cronograma permanente. A força-tarefa seguirá para a Avenida Palmiro Paes de Barros. O trabalho já foi realizado na Avenida República do Líbano, na MT 251, na Avenida Engenheiro Itamar Marcondes Filho e na Rua Martim Pescador, no trecho entre o Parque Tia Nair e o Jardim Imperial."
+        "Equipes da Secretaria Municipal de Ordem Pública (Sorp), com apoio da Empresa Cuiabana de Zeladoria e Serviços Urbanos (Limpurb), retiraram mais de 40 painéis fixos, além de banners, faixas, cartazes e placas menores na Avenida dos Florais, em Cuiabá. A fiscalização atuou em toda a extensão da via e no acesso ao distrito de Nossa Senhora da Guia.",
+        "Após a remoção dos materiais instalados em canteiros centrais, rotatórias e áreas públicas, a Sorp trabalha na identificação dos responsáveis pelos anúncios. Os prestadores de serviços identificados serão autuados para a aplicação das penalidades previstas na legislação municipal.",
+        "De acordo com a diretora de Atividades Econômicas da Sorp, Claudia Borges Bertoldo, o trabalho integra um cronograma permanente. A Lei Complementar nº 443/2017 proíbe publicidade em áreas públicas e autoriza a apreensão imediata do material sem notificação prévia em casos de flagrante.",
+        "A Operação Cidade Limpa já percorreu a Avenida República do Líbano, a MT 251, a Avenida Engenheiro Itamar Marcondes Filho e a Rua Martim Pescador, no trecho situado entre o Parque Tia Nair e o Jardim Imperial."
       ],
-      "link": "/materia/operacao-cidade-limpa-remove-mais-de-40-paineis-na-avenida-dos-florais.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/operacao-retira-mais-de-40-paineis-irregulares-na-avenida-dos-florais-.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -861,11 +1132,42 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-divulga-dados-sobre-monitoramento-de-zoonoses-no-primeiro-semes",
+      "id": "ilm:praca-alencastro-recebe-nova-edicao-da-feira-da-agricultura-familiar-n",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Cuiabá divulga dados sobre monitoramento de zoonoses no primeiro semestre de 2026",
-      "resumo": "Foram registradas 88 notificações epizoóticas e um caso humano de leishmaniose visceral, além de 753 atendimentos antirrábicos em pessoas no período.",
+      "titulo": "Praça Alencastro recebe nova edição da Feira da Agricultura Familiar nesta terça-feira",
+      "resumo": "Evento promovido pela Prefeitura de Cuiabá reúne produtores rurais, artesãos e empreendedores da gastronomia.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/feira-gastronomica-e-da-agricultura-familiar-movimenta-praca-alencastro-com-novos-expositores-e-vendas-presenciais-e-on-line",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá realiza nesta terça-feira (4) mais uma edição da Feira Gastronômica e da Agricultura Familiar na Praça Alencastro. O evento reúne produtores rurais, artesãos e empreendedores da área de gastronomia para a venda direta de produtos à população.",
+        "Conforme o coordenador da feira, Luís Alberto Rodrigues Leite, feirantes têm utilizado perfis em redes sociais e aplicativos de entrega para receber pedidos pela internet durante a realização da feira. Na edição da última terça-feira (28), produtores da comunidade Pai Joaquim não participaram porque a produção não estava pronta para colheita, enquanto outros expositores optaram por participar do Festival de Inverno.",
+        "A Secretaria Adjunta de Agricultura faz o transporte gratuito da produção recolhida nas propriedades até os locais de destino para feirantes inseridos em programas como o Programa de Aquisição de Alimentos (PAA) e o Programa Nacional de Alimentação Escolar (PNAE). Quem deseja se cadastrar pode ir à sede da secretaria, no bairro Poção, ou ligar para o telefone (65) 3324-9451.",
+        "Entre os expositores cadastrados estão Cleber José da Silva, que vende churros, Adriane Albuquerque Alves, que comercializa espetinhos de fraldinha, medalhão de frango e kafta, e Arthur Davi Pinheiro Godoy, que vende minidonuts recheados, bolos e cafés. Entre os frequentadores, o professor universitário Paulo Modesto e a dona de casa Vilma Ferreira da Silva citaram a compra de itens com preços acessíveis e a economia em frutas e verduras."
+      ],
+      "link": "/materia/praca-alencastro-recebe-nova-edicao-da-feira-da-agricultura-familiar-n.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:cuiaba-divulga-balanco-do-monitoramento-de-zoonoses-no-primeiro-semest",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Cuiabá divulga balanço do monitoramento de zoonoses no primeiro semestre de 2026",
+      "resumo": "No período, a leishmaniose visceral teve 249 casos confirmados em cães e um em humano, enquanto suspeitas de febre amarela e influenza aviária foram descartadas.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-intensifica-monitoramento-de-zoonoses-e-mantem-vigilancia-ativa-para-proteger-a-populacao",
       "origemNome": "Prefeitura de Cuiabá",
@@ -873,44 +1175,97 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Saúde, divulgou os dados de vigilância ambiental e epidemiológica referentes ao primeiro semestre de 2026. No período, foram registradas 88 notificações de eventos de saúde pública epizoóticos, com foco no monitoramento de primatas não humanos e aves silvestres.",
-        "Entre as doenças monitoradas em animais e humanos, a leishmaniose visceral somou 782 atendimentos e 249 confirmações em cães, além de um caso confirmado em humano. Em relação à esporotricose, foram 21 notificações em felinos, com 17 confirmações laboratoriais, e 13 suspeitas em humanos, resultando em seis casos confirmados.",
-        "As ações voltadas para a raiva contabilizaram 62 notificações de animais mortos ou com sinais neurológicos, além de 753 atendimentos antirrábicos na rede humana, dos quais 125 foram classificados como graves. Em contrapartida, as investigações de febre amarela em 14 epizootias de macacos e de influenza aviária em aves silvestres foram encerradas sem nenhuma confirmação.",
-        "A secretária municipal de Saúde, Deisi Bocalon, afirmou que o monitoramento permanente permite identificar riscos precocemente. A Secretaria Municipal de Saúde orienta que a população comunique imediatamente o encontro de animais mortos ou com comportamento anormal e mantenha cães e gatos vacinados contra a raiva."
+        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Saúde, apresentou o balanço da vigilância epidemiológica e ambiental do primeiro semestre de 2026. No período, o município registrou 88 notificações de eventos de saúde pública epizooticos relacionados ao monitoramento de primatas não humanos e aves silvestres.",
+        "Entre as zoonoses monitoradas, a leishmaniose visceral registrou 782 atendimentos e 249 casos confirmados em cães, além de um caso confirmado em humano. Em relação à esporotricose, foram registradas 21 notificações e 17 confirmações laboratoriais em felinos, enquanto entre humanos ocorreram 13 suspeitas e seis confirmações.",
+        "No monitoramento da raiva, foram contabilizadas 62 notificações de animais mortos ou com sinais neurológicos, seis atendimentos por comportamento suspeito em cães e gatos e 52 casos de animais com contato com morcegos ou outros suspeitos. Na rede municipal, foram feitos 753 atendimentos antirrábicos em humanos, dos quais 125 foram classificados como graves.",
+        "As investigações de febre amarela em 14 epizootias de macacos e de influenza aviária de alta patogenicidade em cinco notificações de aves silvestres resultaram sem nenhum caso confirmado. A secretária municipal de Saúde, Deisi Bocalon, e a pasta orientam que a população vacine cães e gatos contra a raiva e comunique os órgãos de vigilância ao encontrar animais silvestres mortos ou doentes."
       ],
-      "link": "/materia/cuiaba-divulga-dados-sobre-monitoramento-de-zoonoses-no-primeiro-semes.html",
-      "iso": "2026-08-04T22:20:59.710Z",
-      "hora": "18h20",
+      "link": "/materia/cuiaba-divulga-balanco-do-monitoramento-de-zoonoses-no-primeiro-semest.html",
+      "iso": "2026-08-05T11:55:47.865Z",
+      "hora": "07h55",
       "original": true,
-      "contexto": "O histórico registra duas matérias sobre o monitoramento de zoonoses em Cuiabá em 4 de agosto de 2026. Os atendimentos e confirmações afetam a população humana da cidade, além de cães, felinos, primatas não humanos e aves silvestres.",
+      "contexto": "O arquivo registra casos parecidos três vezes, nos dias 3 e 4 de agosto de 2026. Os dados divulgados no balanço afetam cães, felinos, primatas não humanos, aves silvestres e a população humana do município de Cuiabá.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
   "circulando": [
     {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
+      "municipio": null,
+      "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo veiculado por seis publicações de imprensa.",
-        "Que as matérias mencionam os municípios de Sinop e Várzea Grande.",
-        "Que os relatos citam a oferta de cursos de capacitação gratuita."
+        "Que cinco veículos da imprensa publicaram relatos sobre a convenção do MDB.",
+        "Que as notícias citam Janaina Riva, Wellington Fagundes, Jayme e legendas partidárias.",
+        "Que as publicações tratam de articulações para o Governo de Mato Grosso e Senado."
       ],
       "falta": [
-        "Confirmação oficial do lançamento das inscrições e prorrogações pelas prefeituras.",
-        "Divulgação do número exato de vagas e datas de encerramento nos diários oficiais.",
-        "Publicação dos editais completos e pré-requisitos de participação por órgão responsável."
+        "Ata oficial da convenção do MDB registrada na Justiça Eleitoral.",
+        "Confirmação formal emitida pelas assessorias dos políticos citados nas matérias.",
+        "Documento oficial comprovando o registro da coligação partidária em Mato Grosso."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Muvuca Popular",
-          "titulo": "VG prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
-          "link": "https://www.muvucapopular.com.br/2026/08/04/vg-prorroga-inscricoes-para-curso-gratuito-de-impulso-digital-em-dois-cras/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=vg-prorroga-inscricoes-para-curso-gratuito-de-impulso-digital-em-dois-cras"
+          "veiculo": "O Livre",
+          "titulo": "Convenção do MDB confirma Janaina Riva ao Senado e apoio a Wellington ao Governo",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaVZVX1pubm1nb1lWN2pYUkl1OTFGRmtOUlNBRXhLWnRLQWxJWHdlRy1ZbWoyeFhMSnFRQVl1cFlRZkgtVHcxVFlFTEJQMF9Kb1BsZV9aYlBlVUtrX25iM1VRbFFCVDJkUlRGSUpsOE94NFk0QmpLOHdvZzV2MU55b19zSExtbHFXRU9BNjJSMnQySWduLUFOR0RjeFJjM1VxTzZ4SlBR?oc=5"
         },
         {
-          "veiculo": "LOCAL MT",
+          "veiculo": "Estadão MT",
+          "titulo": "MDB confirma Janaina ao Senado, fecha com Wellington ao governo e Jayme entra na campanha",
+          "link": "https://www.estadaomatogrosso.com.br/eleicoes-2026/mdb-confirma-janaina-ao-senado-fecha-com-wellington-ao-governo-e-jayme-entra-na-campanha/143373"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Jayme marca presença na convenção do MDB e anuncia apoio a Janaina e Wellington",
+          "link": "https://odocumento.com.br/jayme-marca-presenca-na-convencao-do-mdb-e-anuncia-apoio-a-janaina-e-wellington/"
+        },
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Após derrota no União, Jayme sobe ao palanque do MDB e declara apoio a Janaína e Wellington",
+          "link": "https://www.vgnoticias.com.br/politica/apos-derrota-no-uniao-jayme-sobe-ao-palanque-do-mdb-e-declara-apoio-a-janaina-e-wellington/149994"
+        },
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Convenção do MDB Oficializa Janaina Riva ao Senado e Aliança com Wellington Fagundes ao Governo de MT",
+          "link": "https://cenariomt.com.br/cenario-politico/convencao-do-mdb-oficializa-janaina-riva-ao-senado-e-alianca-com-wellington-fagundes-ao-governo-de-mt/"
+        }
+      ],
+      "link": "/materia/nc-mdb-teria-confirmado-janaina-ao-senado-e-alianca-com-wellington-em-mt.html",
+      "corpo": [
+        "A convenção do MDB teria oficializado a candidatura de Janaina Riva ao Senado. A reunião partidária também teria selado o apoio à candidatura de Wellington Fagundes ao Governo de Mato Grosso. A informação estaria sendo veiculada por publicações da imprensa.",
+        "As notícias indicariam ainda que Jayme teria subido ao palanque para declarar apoio à chapa. A manifestação teria ocorrido após um resultado desfavorável no partido União. O político estaria passando a integrar a campanha eleitoral."
+      ],
+      "id": "circ:mdb-teria-confirmado-janaina-ao-senado-e-alianca-com-wellington-em-mt",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "MDB teria confirmado Janaina ao Senado e aliança com Wellington em MT",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T12:02:17.176Z",
+      "hora": "08h02"
+    },
+    {
+      "municipio": "vg",
+      "municipioNome": "Várzea Grande",
+      "seSabe": [
+        "Que seis publicações divulgaram notas sobre cursos gratuitos em Várzea Grande e Sinop.",
+        "Que a Prefeitura de Sinop e unidades do CRAS são citadas nas matérias.",
+        "Que são mencionados os cursos de Impulso Digital e Condutor Ambiental Local."
+      ],
+      "falta": [
+        "Confirmação oficial das prefeituras de Sinop e Várzea Grande sobre os processos seletivos.",
+        "Divulgação dos editais, calendários completos e quantitativo de vagas em diário oficial.",
+        "Especificação sobre pré-requisitos e documentação necessária para a realização das inscrições."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "muvucapopular.com.br",
+          "titulo": "VG prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYUdaMUJrN3BoS0Z3emxIeU44cXFWRzktS0JFR19mbWdBNlNORUN0d2FXQi1PRnM4NWNXaGNFVHgzR1FtbzgwVkhTdVhCN3N6Wnptc0VtR2tWdkt1RlljMEJLVmgtZERCLUhiOTN1OTN2d2dhZGlmdGxPamtTeDRrODRjdEZ5NnQzeURVbDRpQnlRV1hoUTkweGc0SENPYXVoY3JRNHBQRWFkLTZ6alZnYUx2Ylo2d3poQXk4?oc=5"
+        },
+        {
+          "veiculo": "rdmonline.com.br",
           "titulo": "Prefeitura de Sinop abre inscrições gratuitas para curso de Condutor Ambiental Local pelo Qualifica Turismo",
-          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQeXQ3aVp2S3FGSFZFRlBsNC1sVlZDN0NmU09EREdFQTdGV1VTcm1IaXVDTDlJR0VFSDlEb1pDRzZkWG9nVkhka3Q3Rk52Q1RmcEtHeTJhTngzVmpGdlB2TXlwcFc1N01UZUx3SmRiVHJIdEdmbDRySDE4NkRCcDNvTlVSQlJKUzJJM2pLWjN6eXNhZTdIV1ZSWkxnby1qcENSeHR6aEJWYnNRd3FvdHZfeFFzNGRDUXVFRHZqeWxIVXo1MHBJQW5FaHRrY3JzVWZaYVEtaElLUk4yTlBxQ3c?oc=5"
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObi1sWXhCNjJsUklqQnRBQ3lydVplcG80Rks5U1hZMEo5YWl5a05aMDQyTTg2WDltbjZHRXJ2VzRqT1FLSDFSX19BdlgtZkJEUUJkUGYxdG8xX2pVZFRmTUdHRHQ5b21Obl85T2hsY01oWHdxNzE1bXctdnY3YWtxQnNYbnUtcHY1dm1ONmtGX1hxYXBlTU1YUklKS29TYVlJd0MwOXkxZWRHSFFKbGNJcnBXUjgtOEhhMlhVcUxiZ1dZcTk1UjdYUzFmUDhKQQ?oc=5"
         },
         {
           "veiculo": "giroes.com.br",
@@ -923,92 +1278,137 @@
           "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQZVplaHBXRVpaTGQyWjR4ODRVaWZhb0hjQUM4RmQ3OXJ6MWI1YkdONk03M3BlN29YX21zQVFua2pORWdabzhQaGptTXNPcTFqcUFQOThNaXhkbnZNQzNjbU1fYldpcWp2REZ4NUVkYU1relhmcnFad0MtQ3BpOG1tcjc5X2drVXNDX0VvOUdCT1RGN2FnS1BYc1ExWFdmcFhWYnV5WGVaTjVYOU8zNlVFREdka2hUOHpLeVpobVR0a3BqdmpzSkhNbmRGRk56Y3lNTFJ2aUMwbWlFMXg2MWc?oc=5"
         },
         {
-          "veiculo": "Estação Livre MT",
-          "titulo": "Prefeitura de Sinop abre inscrições gratuitas para curso de Condutor Ambiental Local pelo Qualifica Turismo",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdVk0OVZyUmNEaWl3enNaZlo2SEZmRThIRVJvWXhoTTA2SzRlVGdSWFRCS1dtWlVLdGpoS1V5bHdMdVlBcmpjX1hfZmNrRWQyX09yeHl1ckNOcDllbVpTb2dtdWdONGdXaWpFQkZFRV9na0RMSUFtamVwZm5JV1dlV2hOSnlOWjhRcUFRYTIxX2xTUjNpYmFKQjh4WTRIU1Y4aGowY0pZM1hqWUgyRkJ1SnhtX01tLVpOQzhIM2dpcjNnQVcweWN5RGplMnBfX0dPNXY2bA?oc=5"
+          "veiculo": "Expressão Notícias",
+          "titulo": "Várzea Grande prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONlJSU2MwcGVaUUZYcDJ3UjJ0MWE2SHJnbTFHakp4bHZtZno0TzgwMklIV3hRQ0VTU3F5OHoyU3VkWDM1UGcxVzBiM3dNMnFMc1JrM1dmUVNCY1E5MnNmMlJZeHNucjdoQXVWRkZOZ2FCbUY1YTQ3eFdONFRwenZaX1cwNFliekNrOGdfcVNXM2FqRWk4YUZCdEkxR0pkNS00aXpvQzFiSExmNy0wN0RSeHJ5OFVOUi1venZJbENlVlU?oc=5"
         },
         {
-          "veiculo": "Prefeitura Municipal de Várzea Grande - Página Inicial",
+          "veiculo": "Prefeitura Municipal de Várzea Grande",
           "titulo": "Várzea Grande prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
           "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYlo0Z1VBZUxOdXgtcWVzREtMUjk0MzdKZEM4V1RKWGRDcU5kWElHTGZqUUc1LTRoX0dpcXJiMUdnUzFVR0JsOElCRkxpcFp2NjIwWkt1QVlzV3FHN0dOcUhneDBCYUxndjV5UWNiUmdYVUpMODJZTHg1RjBlSlp6SEo1OFlFMEFFbXRDOHA3MlBHd3k3ZHBrMXl5VW1GUkx2RG1zTWVxUlp5dXB4dk9xeDIxUXNJcVI1cWNVZ0lMallsUE1DYm52TlZzajNfaDQ4?oc=5"
         }
       ],
-      "link": "/materia/nc-sinop-e-varzea-grande-teriam-inscricoes-abertas-e-prorrogadas-para-cur.html",
+      "link": "/materia/nc-prefeituras-teriam-aberto-e-prorrogado-inscricoes-para-cursos-gratuito.html",
       "corpo": [
-        "Veículos de imprensa estariam noticiando a abertura e a prorrogação de inscrições para cursos gratuitos em dois municípios. A Prefeitura de Sinop estaria oferecendo capacitação para Condutor Ambiental Local por meio do programa Qualifica Turismo. Já no município de Várzea Grande, o poder público teria prorrogado o prazo de adesão para a formação em Impulso Digital.",
-        "No caso de Sinop, as vagas estariam voltadas ao curso de Condutor Ambiental Local sem a cobrança de taxa. Em Várzea Grande, as oportunidades relatadas estariam vinculadas ao atendimento de dois Centros de Referência de Assistência Social. As publicações não detalhariam os prazos finais do cronograma nem a quantidade total de vagas.",
-        "Os dados veiculados estariam restritos às informações preliminares reproduzidas pelas matérias de imprensa. Não teriam sido identificadas divergências diretas entre os textos publicados pelas diferentes fontes. O conteúdo exposto, contudo, ainda dependeria de validação formal por meio de documentos dos órgãos públicos."
+        "Veículos de imprensa estariam divulgando a abertura e a prorrogação de inscrições para cursos gratuitos. As publicações tratariam de oportunidades atribuídas a gestões municipais.",
+        "Em Várzea Grande, teriam sido prorrogadas as inscrições para o curso de Impulso Digital em dois CRAS. Já a Prefeitura de Sinop teria aberto vagas para a formação de Condutor Ambiental Local, por meio do programa Qualifica Turismo.",
+        "As matérias veiculadas pelas publicações divergiriam entre si ao apresentarem conteúdos voltados a diferentes municípios e cursos. Até o momento, não constaria registro oficial que confirme os anúncios reportados."
       ],
-      "id": "circ:sinop-e-varzea-grande-teriam-inscricoes-abertas-e-prorrogadas-para-cur",
+      "id": "circ:prefeituras-teriam-aberto-e-prorrogado-inscricoes-para-cursos-gratuito",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Sinop e Várzea Grande teriam inscrições abertas e prorrogadas para cursos gratuitos",
+      "titulo": "Prefeituras teriam aberto e prorrogado inscrições para cursos gratuitos",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:25:31.070Z",
-      "hora": "18h25"
+      "iso": "2026-08-05T12:03:11.408Z",
+      "hora": "08h03"
+    },
+    {
+      "municipio": "vg",
+      "municipioNome": "Várzea Grande",
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "PM é morto a tiros durante aula de projeto social em VG",
+          "link": "https://www.vgnoticias.com.br/policia/pm-e-morto-a-tiros-durante-aula-de-projeto-social-em-vg/149995"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Cabo da PM é assassinado a tiros durante aula de jiu-jitsu de projeto social em Várzea Grande",
+          "link": "https://odocumento.com.br/cabo-da-pm-e-assassinado-a-tiros-durante-aula-de-jiu-jitsu-de-projeto-social-em-varzea-grande/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "PM é morto a tiros durante aula de jiu-jitsu em Várzea Grande (MT)",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/04/pm-e-morto-a-tiros-durante-aula-de-jiu-jitsu-em-varzea-grande-mt.ghtml"
+        },
+        {
+          "veiculo": "Estadão MT",
+          "titulo": "VÍDEO: Policial militar é morto com dez tiros durante treino de artes marciais em VG",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObWlpMEFlaEstdzVtdmZMWmpXbThKcWloV1o2TDVkMGJxSGtGM0JlSWx2V2ZIUTZsUXZVREFONmFBOEc3Rlo4czZjQTg1V0RLZFJZMGNyOTBYQ0h3dnlubU96ZVJSYUp2c2RCRDNTb3VBOVJZRHN5dTh2OWJDaDNOTHBSSXpBUXZrZmdDVWNzaGlJX2NHX1NNbmtPSVF1Q2FZWG1DZXFPcXhvN2J6T1FJTXJIVXNDUWpyUnk1ejZBMmZ1U0NCTVlUZ01uOHNUMUNK?oc=5"
+        },
+        {
+          "veiculo": "O Livre",
+          "titulo": "Cabo da PM é assassinado a tiros durante aula de lutas marciais em projeto social em Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbzhaVG1keld5RzNxekNNN2Z4eHk2VFM2NkloS1NuX082YUtZOThKMDZ3QVZ2eV9Ca3hfYzhDMF9wQmw4cGZ6Q3BxbkdkTTlYSUE2RWZsN3lwT3BTdnVFWnQ2OFo5NWVfSDVjR2F5RkljX2d5UGpfMjBrRGZ5U2w0Mm9oZnRCQnY2c0tqRExOd2dLcVNGZ1dNRnBpcE53eDVtN2h6eDNsRUVReHRmbkI4MU8tWkFTQVNDX3J3SzZ3?oc=5"
+        }
+      ],
+      "link": "/materia/nc-pm-teria-sido-morto-a-tiros-durante-treino-em-varzea-grande.html",
+      "corpo": [
+        "Um policial militar teria sido morto a tiros no município de Várzea Grande, em Mato Grosso. O ataque teria atingido o agente enquanto ele participava de uma atividade presencial vinculada a um projeto social. A ocorrência estaria sob apuração das autoridades locais.",
+        "Os relatos publicados indicariam que o fato teria ocorrido durante uma aula, havendo divergências quanto à modalidade citada entre jiu-jitsu, artes marciais e lutas marciais. Uma das matérias afirmaria que teriam sido efetuados dez disparos contra a vítima. Essa mesma publicação citaria a existência de um registro em vídeo do episódio.",
+        "A situação envolveria um integrante da Polícia Militar e mobilizaria averiguações na área de segurança pública. A confirmação oficial do caso dependeria da emissão de laudos e notas dos órgãos competentes. A apuração das circunstâncias do crime seguiria em andamento."
+      ],
+      "id": "circ:pm-teria-sido-morto-a-tiros-durante-treino-em-varzea-grande",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "PM teria sido morto a tiros durante treino em Várzea Grande",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T12:04:10.332Z",
+      "hora": "08h04"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que as informações estão sendo publicadas por 3 veículos de imprensa.",
-        "Que Mato Grosso é o estado citado em todas as alegações veiculadas.",
-        "Que o Imea é apontado como a fonte para os dados da soja."
+        "Que o tema sobre o governo de Mato Grosso circula em três veículos.",
+        "Que as siglas Podemos e Republicanos são citadas nas veiculações.",
+        "Que os nomes de Ritela e Otaviano Pivetta foram mencionados."
       ],
       "falta": [
-        "Documento ou nota oficial do Imea confirmando os dados da safra 2026/27.",
-        "Dados numéricos sobre o percentual colhido de milho e os desafios enfrentados.",
-        "Valores nominais do preço da saca de soja e das margens de esmagamento."
+        "Anúncio oficial e formalização das candidaturas pelas siglas partidárias.",
+        "Declarações oficiais das assessorias de Ritela e Otaviano Pivetta.",
+        "Documento de ata ou registro das decisões partidárias em Mato Grosso."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Portal do Agronegócio",
-          "titulo": "Safra de soja 2026/27 em Mato Grosso deve atingir 48,88 milhões de toneladas, mantém Imea",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxObG5xbXo5Q0M0NS1PdWxBd3I2eVBtQ0Y2WFQwN3FrVXFqMjIxc1haTkRzZ3lJN2k2Skx6alpFS1ZnVTBZTzNfcDh2LUI2eTBWWjYtbFR2dTZudmFpM1RuZjJhdzlvT091Ti1XLXhZeVJyVFpVaFJLaFQ3Q3lEVFlOcUJqZk5sQzR5Q1ZHT2V6bExwMGI4NFNycGJ4aTJ3YXlzQ0dpMDhCQS0yb1c2VnFUeHZ5SV9NdkNJX1dFTk5zLXZNam1BVUkyMEMzZGNVcGJzX0c4T0R4THdjVkxoLU9ZQ2xMQnZicEdm?oc=5"
+          "veiculo": "muvucapopular.com.br",
+          "titulo": "“Se não respeitarem o Podemos, nós lançaremos candidato ao Governo”, dispara Ritela",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOTUJ2djBXVXphQzVlS21SOXh3TFNOMmJ4LXlMWnRQZzhrQm1QbnpqeDF6dmZtaFpOUjlfOXg0V0dJRDZTTF9aRkNveVEwVlZ5MzdLdGp6LVJJS1RqdS03T3g0VEI4TFBYYWtDTXBNdW1WZ3ZvVjlRc3VWb1lXVzBsOExhRVJNR3A0ZHdDZHBjZzNYdnJ4bzRGNXQxUUsyMUVySlFqMUtFbTBKbFpUZGRsSXJxZjRrQjltSDBoMA?oc=5"
         },
         {
-          "veiculo": "Canal Rural",
-          "titulo": "Colheita de milho avança em Mato Grosso, mas desafios persistem",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZlNPX0FuVnFBTlFqZUVUTmVORjEtaFQxSHA4X0lTUEZ0TEFtQ3d4alBoYXQ2WFRUY1lyOE83amRrUE5zQ0l6SjV0MFNhY2N0cXRQV3dkcndBQWdPRlRlWndtSDI0MEdmQ1pYMjRYLVlELWJTOEtPXzBQdlZMMGRMWWpFSV9LRXA2MUFxM3p6TkZieHllSU13VFRxZ1lWbm91MXc?oc=5"
+          "veiculo": "g1 MT",
+          "titulo": "Republicanos lança Otaviano Pivetta como candidato ao governo de Mato Grosso",
+          "link": "https://g1.globo.com/mt/mato-grosso/eleicoes/2026/noticia/2026/08/04/republicanos-lanca-otaviano-pivetta-como-candidato-ao-governo-de-mato-grosso.ghtml"
         },
         {
-          "veiculo": "Só Notícias",
-          "titulo": "Preço da saca de soja em Mato Grosso atinge maior média no ano pressiona margem de esmagamento",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNY3pVQnRQZHlUNjVlSlJBamprWE9FS0o4aHZGSW1MclY1cVVXUkt3bTFUdlhSTlNVQ2g0ZWZjbThyY3JsTW91X0JWYTdsMmo4Vlk5LXVkc0NnOThBZ1FqSDcyU3ZUYXQ0dXpVeXFlNG9Zak9nMnBCQi1iNUZCTTBCVFNNSVA0c2NRb0VhaWF6U3hTU0dnNkw3X210ZElSdTdNaTF3SWstdnBsNGliTXdiTGN4RkNoZnpjVndPVWh6RF9GM09zQllDNTZfT2pQTXFuUlN4ag?oc=5"
+          "veiculo": "O Livre",
+          "titulo": "Podemos deve lançar candidatura própria ao governo em Mato Grosso",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPN1dfOFlDQXB5VnN0OXFxZDAwSWczdEdvQ200Y196UWU4cVlLM1pNMXhsWk5pX19Gb3BONHBPeFFIeDRWcmxMU0pYNkkybHFxamtIZ0R4MXJ2RlpXcmkzekhUQjdsVXg2SDBCbWg4TlpRa0pNWWx0LXRDbnBrR253ZWZieWgxUm15VnRka0RmYmY?oc=5"
         }
       ],
-      "link": "/materia/nc-producao-de-soja-em-mato-grosso-poderia-chegar-a-48-88-milhoes-de-tone.html",
+      "link": "/materia/nc-podemos-e-republicanos-teriam-movimentacoes-para-o-governo-de-mato-gro.html",
       "corpo": [
-        "A safra de soja 2026/27 em Mato Grosso estaria estimada em 48,88 milhões de toneladas, segundo dados que teriam sido mantidos pelo Imea. Ao mesmo tempo, o preço da saca do grão no estado teria atingido a maior média do ano, o que estaria pressionando as margens de esmagamento.",
-        "As publicações apontariam também que a colheita do milho estaria em avanço no território mato-grossense, embora desafios ainda persistissem. O conjunto das informações abrangeria tanto as projeções volumétricas para a soja quanto a situação atual da cultura do milho.",
-        "Os relatos situariam a elevação de preços da matéria-prima como elemento de pressão sobre o setor de processamento local. Não haveria contradições explícitas entre as alegações divulgadas até o momento pelos veículos que veicularam o conteúdo."
+        "O partido Podemos estaria considerando o lançamento de uma candidatura própria ao governo de Mato Grosso. A medida teria sido defendida por Ritela, que teria declarado que a sigla tomaria essa decisão caso não fosse respeitada.",
+        "Em paralelo, veiculações apontam que o Republicanos já teria lançado Otaviano Pivetta como candidato ao executivo do estado. As publicações apresentam cenários distintos quanto ao andamento das articulações e candidaturas locais."
       ],
-      "id": "circ:producao-de-soja-em-mato-grosso-poderia-chegar-a-48-88-milhoes-de-tone",
+      "id": "circ:podemos-e-republicanos-teriam-movimentacoes-para-o-governo-de-mato-gro",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Produção de soja em Mato Grosso poderia chegar a 48,88 milhões de toneladas",
+      "titulo": "Podemos e Republicanos teriam movimentações para o governo de Mato Grosso",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:26:25.185Z",
-      "hora": "18h26"
+      "iso": "2026-08-05T12:05:04.760Z",
+      "hora": "08h05"
     },
     {
       "municipio": "sinop",
       "municipioNome": "Sinop",
       "seSabe": [
-        "Que o assunto é veiculado por três veículos de imprensa.",
-        "Que a Prefeitura de Sinop e a REFECCS são citadas nas publicações.",
-        "Que a alegação envolve serviços direcionados a pacientes e familiares."
+        "Que a informação está sendo veiculada por três meios de comunicação.",
+        "Que a Prefeitura de Sinop é apontada como executora das ações.",
+        "Que a REFECCS seria a entidade receptora dos atendimentos citados."
       ],
       "falta": [
-        "Confirmação oficial da Prefeitura de Sinop ou da REFECCS.",
-        "Especificação de quais serviços teriam sido prestados.",
-        "Registro da data exata em que a ação teria ocorrido."
+        "Registro oficial da Prefeitura de Sinop confirmando a prestação dos serviços.",
+        "Discriminação de quais atendimentos específicos teriam sido levados ao local.",
+        "Indicação da data e do horário exatos da realização do evento."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "LEIAGORA",
+          "veiculo": "paranatinga news",
           "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd2hnWkFmOFdfaVBhWG5KREE3REpWeWg1cWQ0TU9HZFlMS010eHdmQlVaMTFUVUdXT2lQbVEzZnkybXh2cFEtQ3h4Z3ZNNi0zbzY0TFYwUWlqWlZhN0dTS2d6aDV2T1E5cnhFY2FDOG1aWXpFZDdySE5XWGJJcHFzZEtzSUFraG5GaU14cWV0djRQMWhsN3l6Ymkzd0xQMFlfOUhKMng4RWhMZVM1X2pndFp1M25kTUVaOGJ5a0xkOEFCeDdiZ2c?oc=5"
+          "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcVRrZk9Ya2JiejFFdUdPbkdRT3RMR0FBYjZVdE9PNUdKZ3FGaEllSFBLSk5Fcno4YV9RTEFlMlVwVFNDNGpZUzJRREl2dHFRYXhoYUZPTEowczJHdV80NEdzbGNMMUw0czh3VVl1UTZJZWlaeEs5TWV4cWh1Y1laU3JZaVBTbXp2SzFVWERBTTBFVTJrc3VZTlFGWmdJN1dfeUhjMThZa21qVk9hRkczdjA1UEhqb3daS0h6RE1rLTZVbDlVal9Sb1VuY1VqZGhyajFoVld0a2lGaVhjQk44?oc=5"
         },
         {
           "veiculo": "mtagora.com.br",
@@ -1016,324 +1416,259 @@
           "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNYzFuSnZtX0tlQ3lxM1VMUEl3b3VMMkY4RW5NM3FtM3U5QjFVanJEV2EwUkNvbWVzcF9qVi1Vcno5a0dhdExrSUVMelUtdXZsY1pPUTJQOHJiWjJWZXc0akdvQXJCX29XRFhXeXc3czlYRmZkY19FTlFDdDYyZnhiZmdpVU9nUllKV2d1WVJxMlgxMENKS3pMNTZBMFlTV19VRDBZbVpJVzk0aWVqbF8wSXdzdUpjZjBJeElRNGFGaUxQdW1YN3JDYm5FMkowY3pTQnBlb0NOa0Eyalpf?oc=5"
         },
         {
-          "veiculo": "paranatinga news",
+          "veiculo": "LOCAL MT",
           "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
-          "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcVRrZk9Ya2JiejFFdUdPbkdRT3RMR0FBYjZVdE9PNUdKZ3FGaEllSFBLSk5Fcno4YV9RTEFlMlVwVFNDNGpZUzJRREl2dHFRYXhoYUZPTEowczJHdV80NEdzbGNMMUw0czh3VVl1UTZJZWlaeEs5TWV4cWh1Y1laU3JZaVBTbXp2SzFVWERBTTBFVTJrc3VZTlFGWmdJN1dfeUhjMThZa21qVk9hRkczdjA1UEhqb3daS0h6RE1rLTZVbDlVal9Sb1VuY1VqZGhyajFoVld0a2lGaVhjQk44?oc=5"
+          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOOEUwajJyZkJLZFdmZDNkQVFPS3hQUGNTcUJaam5kU2ZWc0VMVHlWX01qd3NqMV9yTHlBRXI0T2xVcjVyLWJtUE1oV0lGdGZHc3Vkcnc5Y0RrYlhZUDdzRzZjOWJqVlRPN3NJaEZsLVZGZ0xvdGRhM2M4NFpYYWRqamtfeWdFV2kybkdrNWVOMXVpQWM1TkhwN2lHekxNOWhFcDhjR0trU0hWcTc4dFVQSHFOZlFpUDFXUGJ5dVktREpCcnczQ3Q5ZDFxLWxRbkpiTkZ0ZVNqRQ?oc=5"
         }
       ],
-      "link": "/materia/nc-prefeitura-de-sinop-teria-levado-servicos-e-ampliado-atendimentos-na-r.html",
+      "link": "/materia/nc-prefeitura-de-sinop-teria-levado-servicos-a-refeccs-para-ampliar-atend.html",
       "corpo": [
-        "A Prefeitura de Sinop teria levado uma série de serviços à REFECCS. A iniciativa estaria voltada para ampliar o acesso a atendimentos destinados a pacientes e seus familiares.",
-        "As publicações apontam o envolvimento da administração municipal e da referida entidade na ação. O material divulgado pelos veículos não especifica datas ou o volume de atendimentos realizados.",
-        "A medida buscaria reforçar o suporte prestado aos pacientes e aos seus familiares. Os textos veiculados pela imprensa apresentam conteúdo idêntico sobre a suposta realização dos serviços."
+        "A Prefeitura de Sinop teria levado uma série de serviços à REFECCS. A medida estaria voltada para a ampliação do acesso aos atendimentos prestados na unidade. A ação contemplaria tanto os pacientes quanto os seus respectivos familiares.",
+        "As publicações apontariam a Prefeitura de Sinop como o órgão responsável pelas ações. O local beneficiado seria a REFECCS, onde seriam atendidos os pacientes e parentes. O conteúdo veiculado pelos meios de comunicação não detalharia datas ou cronogramas.",
+        "Não haveria divergências entre os conteúdos disponibilizados pelas diferentes publicações. O objetivo alegado das ações seria expandir a oferta de assistências na instituição. A confirmação da realização dos fatos ainda dependeria de verificação em fontes oficiais."
       ],
-      "id": "circ:prefeitura-de-sinop-teria-levado-servicos-e-ampliado-atendimentos-na-r",
+      "id": "circ:prefeitura-de-sinop-teria-levado-servicos-a-refeccs-para-ampliar-atend",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Prefeitura de Sinop teria levado serviços e ampliado atendimentos na REFECCS",
+      "titulo": "Prefeitura de Sinop teria levado serviços à REFECCS para ampliar atendimentos",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:27:17.472Z",
-      "hora": "18h27"
+      "iso": "2026-08-05T12:05:58.916Z",
+      "hora": "08h05"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto vem sendo veiculado por publicações da imprensa.",
-        "Que as notícias citam nomes e legendas para disputas federais.",
-        "Que as informações envolvem os partidos Avante e Podemos."
+        "Que três veículos de imprensa noticiaram divergências internas envolvendo a aliança entre PL e MDB.",
+        "Que o MDB e o PL são os partidos citados nas matérias que veiculam as divergências.",
+        "Que declarações foram atribuídas aos nomes de Kalil, Flávia, Ananias e Cláudio."
       ],
       "falta": [
-        "Publicação das atas das convenções em órgãos oficiais.",
-        "Registro formal das candidaturas no sistema da Justiça Eleitoral.",
-        "Confirmação oficial emitida pela direção das agremiações partidárias."
+        "Confirmar oficialmente a veracidade das declarações atribuídas aos políticos citados.",
+        "Obter posicionamento formal dos órgãos partidários do PL e do MDB sobre os relatos.",
+        "Identificar a data, o meio e o local em que as declarações teriam ocorrido."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Primeira Página",
-          "titulo": "Avante oficializa Antônio Galvan como candidato ao Senado e 9 nomes à Câmara Federal",
-          "link": "https://primeirapagina.com.br/politica/avante-oficializa-antonio-galvan-como-candidato-ao-senado-e-mais-9-nomes-a-camara-federal/"
-        },
-        {
-          "veiculo": "Estadão MT",
-          "titulo": "Katiuscia Manteli tem candidatura a deputada federal oficializada pelo Podemos",
-          "link": "https://www.estadaomatogrosso.com.br/geral/katiuscia-manteli-tem-candidatura-a-deputada-federal-oficializada-pelo-podemos/143355"
-        }
-      ],
-      "link": "/materia/nc-partidos-teriam-oficializado-candidaturas-ao-senado-e-a-camara-federal.html",
-      "corpo": [
-        "O partido Avante teria oficializado a candidatura de Antônio Galvan ao Senado, juntamente com nove nomes para a Câmara Federal. Simultaneamente, Katiuscia Manteli teria tido a candidatura a deputada federal oficializada pelo Podemos.",
-        "As publicações veiculam deliberações partidárias voltadas para a disputa de cargos federais. Os relatos dividem-se entre as escolhas atribuídas ao Avante e a definição informada sobre o Podemos.",
-        "A confirmação dos fatos dependeria da publicação de documentos partidários em meios oficiais. Até o momento, a tramitação das candidaturas restringe-se ao noticiado pelos veículos."
-      ],
-      "id": "circ:partidos-teriam-oficializado-candidaturas-ao-senado-e-a-camara-federal",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Partidos teriam oficializado candidaturas ao Senado e à Câmara Federal",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:28:09.006Z",
-      "hora": "18h28"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a restrição de apoio no PL é noticiada por três veículos de imprensa.",
-        "Que a direção nacional do PL e o estado de Mato Grosso são citados.",
-        "Que a candidatura de Wellington e a conduta de prefeitos foram mencionadas."
-      ],
-      "falta": [
-        "Divulgação de documento ou resolução oficial emitida pela direção do PL.",
-        "Pronunciamento oficial do órgão partidário confirmando a proibição ou a orientação.",
-        "Identificação exata de quais prefeitos teriam descumprido o acordo partidário."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Primeira Página",
-          "titulo": "PL nacional proíbe filiados de pedir votos para candidatos de outros partidos em MT",
-          "link": "https://primeirapagina.com.br/politica/pl-nacional-proibe-filiados-de-pedir-votos-para-candidatos-de-outros-partidos-em-mt/"
+          "veiculo": "muvucapopular.com.br",
+          "titulo": "Kalil responde a críticas de Flávia sobre aliança entre PL e MDB",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMk5DbVNaQlJ3c21kMy1UNnlIbHVBYlQ0MFAydUZNWG5sbFBlVTFCRXY0dXNqaWVlU1ZEU3FBQ1E5MnBtUWFyMzY4cllsNE5va2FWb2xBZGQzMExDMWV6TERTOWtPb2NyOWxzbkRNdXA4SU5ZeERCU2tXTFM5bVhSUkJlUHdpNm1najNKWG52NUQ3UnZuWFlSQjNuQllqYW9EV1cwZ3A5enRDZGNVV2c?oc=5"
         },
         {
           "veiculo": "VG Notícias",
-          "titulo": "PL proíbe apoio a candidatos de outros partidos ao Governo de MT",
-          "link": "https://www.vgnoticias.com.br/politica/pl-proibe-apoio-a-candidatos-de-outros-partidos-ao-governo-de-mt/149982"
+          "titulo": "Kalil critica Flávia e dispara: “Tem que enfrentar os problemas; não chorar lágrimas de crocodilo”",
+          "link": "https://www.vgnoticias.com.br/politica/kalil-critica-flavia-e-dispara-tem-que-enfrentar-os-problemas-nao-chorar-lagrimas-de-crocodilo/149991"
         },
         {
-          "veiculo": "Só Notícias",
-          "titulo": "Após prefeitos atacarem acordo e não apoiarem Wellington, PL diz que líderes não devem pedir votos para outros",
-          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVnFSOG52Tk9kTG5sVGpvdmItZVVmOUVmQ1EyUlB2Tzg1aVNRbTNwUGlwZ1QyX25fbmU1NzRrQzBpVVR5eVlLSWI3ZFlXM0dXOGxGSmJLbHNLc2tYUFVacnBNVUF6eVVRakdzLVgxRGpxMFdOYWxPZ0lsQTRtd05PV1ZNVjhubGpDbDh6R19iMERHM1cyMzNtZWlPTXdqWkJyX1FuQjVwd0lKRE8yaHdvNVI3Y0hoYmFzOG9MaVItem8yUDhqUzlXeS13d0hFVHhDck82dk5GbURnRTRRcF9NR0x6cw?oc=5"
+          "veiculo": "O Livre",
+          "titulo": "Racha no PL! Ananias chama Cláudio de traidor após críticas à aliança com o MDB",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSWluMDN3cmc1THROS0V5NUhfeGJfV1NyLWx3Y1V2WXYzajlzMDFDdUwwYXJkV1BZRS1lZTNEVzNSaVdxU1dUbUUtRTZpdGdyeDRGNFVGSEo4cFl5S05SY2h4U2VQWkVzMmR2NExLT1N5T2VHc255eG1vX0p6RHlIWndudjE2RTgxZThqc1U3b0ZuOXI5Q2sxRDY3VVBPcjR4OWkw?oc=5"
         }
       ],
-      "link": "/materia/nc-pl-teria-proibido-filiados-de-pedir-votos-para-outros-partidos-em-mt.html",
+      "link": "/materia/nc-integrantes-do-pl-teriam-trocado-acusacoes-sobre-alianca-com-mdb.html",
       "corpo": [
-        "O Partido Liberal nacional teria proibido seus filiados e líderes de pedirem votos para candidatos de outras legendas em Mato Grosso. A determinação teria sido adotada pela direção da sigla para barrar o apoio a concorrentes externos no estado.",
-        "As publicações divergiram sobre a intensidade e o foco da medida atribuída ao partido. Enquanto um relato citou uma proibição voltada ao Governo de Mato Grosso, outro descreveu a decisão como uma declaração de que líderes não deveriam pedir votos para terceiros.",
-        "A suposta orientação teria ocorrido após prefeitos atacarem um acordo e deixarem de apoiar a candidatura de Wellington. Diante desse cenário, a direção partidária teria se manifestado contra o pedido de votos para nomes de fora da agremiação."
+        "Três veículos de imprensa veiculam relatos sobre um suposto racha político relacionado a uma aliança entre o PL e o MDB. O alinhamento entre as siglas teria gerado trocas de acusações entre quadros políticos citados nas matérias. A controvérsia envolveria manifestações públicas sobre os rumos da composição partidária.",
+        "De acordo com as publicações, Kalil teria rebatido declarações de Flávia e afirmado que se deve enfrentar problemas sem chorar \"lágrimas de crocodilo\". Paralelamente, Ananias teria classificado Cláudio como traidor após questionamentos sobre a união com o MDB. Os relatos veiculados pelas fontes não detalham datas ou locais em que as falas teriam sido registradas.",
+        "As notícias apontariam para um cenário de dissidência no PL motivado pelo diálogo com o MDB. A manutenção ou rejeição da aliança estaria no centro dos atritos relatados."
       ],
-      "id": "circ:pl-teria-proibido-filiados-de-pedir-votos-para-outros-partidos-em-mt",
+      "id": "circ:integrantes-do-pl-teriam-trocado-acusacoes-sobre-alianca-com-mdb",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "PL teria proibido filiados de pedir votos para outros partidos em MT",
+      "titulo": "Integrantes do PL teriam trocado acusações sobre aliança com MDB",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:29:01.331Z",
-      "hora": "18h29"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto é veiculado por dois veículos da imprensa.",
-        "Que existe citação de vídeo atribuído a Max.",
-        "Que os relatos mencionam metas para a Assembleia e a Câmara."
-      ],
-      "falta": [
-        "Manifestação oficial do partido Podemos ou dos órgãos eleitorais.",
-        "Divulgação da lista oficial e completa com os nomes dos pré-candidatos.",
-        "Detalhamento formal sobre o pleito, datas e especificações regionais."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Estadão MT",
-          "titulo": "VÍDEO: Max diz que Podemos terá 25% da Assembleia e eleger até sete deputados",
-          "link": "https://www.estadaomatogrosso.com.br/eleicoes-2026/video-max-diz-que-podemos-tera-25-da-assembleia-e-eleger-ate-sete-deputados/143344"
-        },
-        {
-          "veiculo": "O Documento",
-          "titulo": "Podemos terá deputados, pastor, delegado e coronel na disputa pela Assembleia e Câmara",
-          "link": "https://odocumento.com.br/podemos-tera-34-candidatos-e-projeta-eleicao-de-ate-sete-deputados-estaduais-em-mt/"
-        }
-      ],
-      "link": "/materia/nc-podemos-pretenderia-eleger-ate-sete-deputados-e-ocupar-25-da-assemblei.html",
-      "corpo": [
-        "As publicações apontariam que a legenda contaria com deputados, pastor, delegado e coronel na disputa. A concorrência envolveria vagas para a Assembleia e para a Câmara.",
-        "As informações veiculadas tratariam da estratégia eleitoral pretendida pela agremiação. Até o momento, não foram divulgados documentos oficiais sobre as pré-candidaturas mencionadas."
-      ],
-      "id": "circ:podemos-pretenderia-eleger-ate-sete-deputados-e-ocupar-25-da-assemblei",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Podemos pretenderia eleger até sete deputados e ocupar 25% da Assembleia",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-04T22:29:53.336Z",
-      "hora": "18h29"
+      "iso": "2026-08-05T12:06:53.883Z",
+      "hora": "08h06"
     }
   ],
   "pautas": [
     {
-      "titulo": "VG prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
-      "veiculo": "Muvuca Popular",
-      "editoria": "regional",
+      "titulo": "Convenção do MDB confirma Janaina Riva ao Senado e apoio a Wellington ao Governo",
+      "veiculo": "O Livre",
       "quentura": 6,
       "tambemEm": [
-        "LOCAL MT",
+        "Estadão MT",
+        "O Documento",
+        "VG Notícias"
+      ]
+    },
+    {
+      "titulo": "Pivetta é confirmado candidato ao Governo de Mato Grosso e Republicanos oficializa chapa para 2026",
+      "veiculo": "Agência da Notícia",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "g1 MT",
+        "Primeira Página",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "MDB confirma Janaina ao Senado, fecha com Wellington ao governo e Jayme entra na campanha",
+      "veiculo": "Estadão MT",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "O Documento",
+        "VG Notícias",
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "VG prorroga inscrições para curso gratuito de Impulso Digital em dois CRAS",
+      "veiculo": "muvucapopular.com.br",
+      "quentura": 5,
+      "tambemEm": [
+        "rdmonline.com.br",
         "giroes.com.br",
         "mtagora.com.br"
       ]
     },
     {
-      "titulo": "Safra de soja 2026/27 em Mato Grosso deve atingir 48,88 milhões de toneladas, mantém Imea",
-      "veiculo": "Portal do Agronegócio",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Canal Rural",
-        "Só Notícias"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
-      "veiculo": "LEIAGORA",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "mtagora.com.br",
-        "paranatinga news"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
-      "veiculo": "mtagora.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "LEIAGORA",
-        "paranatinga news"
-      ]
-    },
-    {
-      "titulo": "Avante oficializa Antônio Galvan como candidato ao Senado e 9 nomes à Câmara Federal",
-      "veiculo": "Primeira Página",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Estadão MT"
-      ]
-    },
-    {
-      "titulo": "Katiuscia Manteli tem candidatura a deputada federal oficializada pelo Podemos",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "O Livre",
-        "Primeira Página"
-      ]
-    },
-    {
-      "titulo": "Katiuscia Manteli tem candidatura a deputada federal oficializada pelo Podemos",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "O Livre",
-        "Primeira Página"
-      ]
-    },
-    {
-      "titulo": "PL nacional proíbe filiados de pedir votos para candidatos de outros partidos em MT",
-      "veiculo": "Primeira Página",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "VG Notícias",
-        "Só Notícias"
-      ]
-    },
-    {
-      "titulo": "VÍDEO: Max diz que Podemos terá 25% da Assembleia e eleger até sete deputados",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "O Documento"
-      ]
-    },
-    {
-      "titulo": "Mato Grosso cria cadastro estadual de pessoas condenadas por crime de estupro",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Muvuca Popular",
-        "al.mt.gov.br"
-      ]
-    },
-    {
-      "titulo": "Homem é preso após perseguir ex, invadir casa e descumprir medida protetiva",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "O Livre",
-        "O Documento"
-      ]
-    },
-    {
-      "titulo": "MT cria cadastro estadual de pessoas condenadas por estupro",
-      "veiculo": "Muvuca Popular",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Estadão MT",
-        "al.mt.gov.br"
-      ]
-    },
-    {
-      "titulo": "Podemos confirma chapa com 34 candidatos e mantém indefinição sobre disputa ao Governo",
+      "titulo": "Podemos deve lançar candidatura própria ao governo em Mato Grosso",
       "veiculo": "O Livre",
-      "editoria": "regional",
-      "quentura": 2,
+      "quentura": 5,
       "tambemEm": [
-        "Estadão MT"
+        "g1 MT",
+        "Agência da Notícia",
+        "Primeira Hora"
       ]
     },
     {
-      "titulo": "Max Russi adia decisão e diz que Podemos só bate martelo sobre apoio ao Governo nesta quarta",
-      "veiculo": "VG Notícias",
+      "titulo": "Convenção do MDB Oficializa Janaina Riva ao Senado e Aliança com Wellington Fagundes ao Governo de MT",
+      "veiculo": "CenárioMT",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 4,
       "tambemEm": [
         "Estadão MT",
-        "O Documento"
-      ]
-    },
-    {
-      "titulo": "Polícia Civil prende homem por voltar a descumprir medidas protetivas em Cuiabá",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Estadão MT",
+        "O Documento",
         "O Livre"
       ]
     },
     {
-      "titulo": "Colheita de milho avança em Mato Grosso, mas desafios persistem",
-      "veiculo": "Canal Rural",
+      "titulo": "Jayme marca presença na convenção do MDB e anuncia apoio a Janaina e Wellington",
+      "veiculo": "O Documento",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 4,
       "tambemEm": [
-        "Globo Rural",
-        "Portal do Agronegócio"
+        "Estadão MT",
+        "VG Notícias",
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "PM é morto a tiros durante aula de projeto social em VG",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Documento",
+        "g1 MT",
+        "Estadão MT"
+      ]
+    },
+    {
+      "titulo": "Após derrota no União, Jayme sobe ao palanque do MDB e declara apoio a Janaína e Wellington",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Estadão MT",
+        "O Documento",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "PM é morto a tiros durante aula de jiu-jitsu em Várzea Grande (MT)",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "O Documento",
+        "VG Notícias",
+        "Estadão MT"
+      ]
+    },
+    {
+      "titulo": "Republicanos lança Otaviano Pivetta como candidato ao governo de Mato Grosso",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Agência da Notícia",
+        "O Livre",
+        "muvucapopular.com.br"
+      ]
+    },
+    {
+      "titulo": "Mobiliza lança Maurício Coelho como candidato ao governo de Mato Grosso",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Agência da Notícia",
+        "O Livre",
+        "muvucapopular.com.br"
+      ]
+    },
+    {
+      "titulo": "Em convenção, MDB confirma Janaina Riva ao Senado e fecha aliança com Wellington Fagundes",
+      "veiculo": "O Documento",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estadão MT",
+        "CenárioMT",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "Cabo da PM é assassinado a tiros durante aula de lutas marciais em projeto social em Várzea Grande",
+      "veiculo": "O Livre",
+      "quentura": 3,
+      "tambemEm": [
+        "O Documento",
+        "g1 MT",
+        "VG Notícias"
+      ]
+    },
+    {
+      "titulo": "Cabo da PM é assassinado a tiros durante aula de jiu-jitsu de projeto social em Várzea Grande",
+      "veiculo": "O Documento",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 MT",
+        "VG Notícias",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "“Se não respeitarem o Podemos, nós lançaremos candidato ao Governo”, dispara Ritela",
+      "veiculo": "muvucapopular.com.br",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 MT",
+        "O Livre"
       ]
     },
     {
       "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
       "veiculo": "paranatinga news",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
         "mtagora.com.br",
-        "LEIAGORA"
+        "LOCAL MT"
       ]
     },
     {
       "titulo": "Prefeitura de Sinop leva serviços à REFECCS e amplia acesso a atendimentos para pacientes e familiares",
-      "veiculo": "paranatinga news",
+      "veiculo": "LOCAL MT",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
         "mtagora.com.br",
-        "LEIAGORA"
+        "paranatinga news"
       ]
     }
   ]
