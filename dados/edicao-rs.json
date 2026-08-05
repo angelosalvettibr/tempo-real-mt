@@ -1,21 +1,21 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-05T23:14:53.256Z",
-  "modelo": "gemini-2.0-flash-lite-001",
+  "gerado": "2026-08-05T23:42:31.412Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 123,
-    "fonteLivre": 41,
-    "confirmadas": 16,
-    "publicadas": 3,
-    "resgatadas": 0,
-    "semFonte": 78
+    "pauta": 122,
+    "fonteLivre": 51,
+    "confirmadas": 18,
+    "publicadas": 24,
+    "resgatadas": 1,
+    "semFonte": 77
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 20,
-    "entregando": 17,
-    "itens": 164,
+    "responderam": 21,
+    "entregando": 18,
+    "itens": 173,
     "lista": [
       {
         "tipo": "assessoria",
@@ -37,8 +37,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-caxiasdosu",
-        "nome": "Caxias do Sul",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -55,8 +55,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
+        "id": "gn-rs-caxiasdosu",
+        "nome": "Caxias do Sul",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -117,10 +117,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
-        "itens": 9,
+        "tipo": "assessoria",
+        "id": "tre-rs",
+        "nome": "TRE-RS",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -130,6 +130,15 @@
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
         "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -181,12 +190,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "gzh",
+        "nome": "GZH",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -199,12 +208,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -262,15 +271,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tre-rs",
-        "nome": "TRE-RS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "camarapoa",
         "nome": "Câmara de Porto Alegre",
         "itens": 0,
@@ -289,8 +289,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "seapi-rs",
-        "nome": "Agricultura RS",
+        "id": "fiergs",
+        "nome": "Fiergs",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +298,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "fiergs",
-        "nome": "Fiergs",
+        "id": "seapi-rs",
+        "nome": "Agricultura RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -316,8 +316,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -361,8 +361,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -409,16 +409,52 @@
   ],
   "itens": [
     {
-      "foto": "https://www.estado.rs.gov.br/upload/recortes/202607/14115322_2294132_GD.jpeg",
+      "foto": "https://www.tre-rs.jus.br/imagens/imagens/tre-rs-eleicoes-2026-1/@@images/image-0-40d21de318c02f2d3d5e35165808f7b5.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:rio-grande-do-sul-tem-8-526-233-eleitores-aptos-para-as-eleicoes-gerai",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Rio Grande do Sul tem 8.526.233 eleitores aptos para as Eleições Gerais de 2026",
+      "resumo": "Número divulgado pelo TSE representa redução de 1,8% em relação a 2024 e aumento de 1,22% na comparação com a eleição geral de 2022.",
+      "fonte": "Meridiano, com informações de TRE-RS",
+      "origemLink": "https://www.tre-rs.jus.br/comunicacao/noticias/2026/Julho/rio-grande-do-sul-tera-8-526-233-eleitores-para-o-pleito-de-outubro",
+      "origemNome": "TRE-RS",
+      "pautadoPor": [
+        "Sul21",
+        "www.gov.br",
+        "Notícias Agrícolas",
+        "Senado"
+      ],
+      "quentura": 11,
+      "uf": null,
+      "corpo": [
+        "O Tribunal Superior Eleitoral divulgou nesta segunda-feira (20) os dados do Cadastro Nacional de Eleitores, indicando que o Rio Grande do Sul possui 8.526.233 pessoas aptas a votar nas Eleições Gerais de 2026.",
+        "O contingente de eleitores aptos no estado diminuiu 1,8% em relação às eleições de 2024, quando somava 8.682.558 pessoas. Em comparação com a última eleição geral, realizada em 2022, que contava com 8.423.308 eleitores, houve aumento de 1,22%. Do total atual, 86,92% realizaram a coleta de dados biométricos.",
+        "Os municípios com maior número de eleitores são Porto Alegre, com 1.061.485; Caxias do Sul, com 342.369; Canoas, com 252.875; Pelotas, com 243.865; e Santa Maria, com 206.350.",
+        "Quanto ao perfil do eleitorado, 53% pertencem ao gênero feminino. O grupo de jovens entre 16 e 17 anos, para quem o voto não é obrigatório, soma 54.702 eleitores cadastrados para votar em outubro. Além disso, 2.308 eleitores solicitaram a inclusão do nome social no título eleitoral."
+      ],
+      "link": "/materia/rio-grande-do-sul-tem-8-526-233-eleitores-aptos-para-as-eleicoes-gerai.html",
+      "iso": "2026-08-05T23:29:19.674Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "Os dados contemplam os 8.526.233 eleitores do Rio Grande do Sul aptos a votar. O contingente atual representa uma redução de 1,8% em relação aos 8.682.558 votantes de 2024 e um aumento de 1,22% em relação aos 8.423.308 registrados em 2022. A próxima etapa do processo ocorre com a votação marcada para outubro de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://estado.rs.gov.br/upload/recortes/202607/14115322_2294132_GD.jpeg",
       "fotoAlt": null,
       "fotoLarg": 2899,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:defesa-civil-do-rio-grande-do-sul-atualiza-aviso-sobre-risco-de-tempes",
+      "id": "ilm:cmdec-atualiza-aviso-de-tempestades-com-rajadas-de-vento-no-rio-grande",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Defesa Civil do Rio Grande do Sul atualiza aviso sobre risco de tempestades no estado",
-      "resumo": "O Aviso Meteorológico nº 12 vigora até sexta-feira (7/8) e aponta chuva intensa, rajadas de vento que podem superar 100 km/h e chance de tornado.",
+      "titulo": "CMDEC atualiza aviso de tempestades com rajadas de vento no Rio Grande do Sul",
+      "resumo": "O Aviso Meteorológico nº 12 vale até sexta-feira (7/8) e prevê rajadas de vento que podem superar 100 km/h, queda de granizo e chance de tornado na maioria das regiões do Estado.",
       "fonte": "Meridiano, com informações de Governo do RS",
       "origemLink": "https://estado.rs.gov.br/rio-grande-do-sul-tem-risco-de-tempestades-com-rajadas-de-ventos-nos-proximos-dias",
       "origemNome": "Governo do RS",
@@ -428,16 +464,49 @@
         "Notícias Agrícolas",
         "Senado"
       ],
-      "quentura": 13,
+      "quentura": 12,
       "uf": "rs",
       "corpo": [
-        "O Centro de Monitoramento da Defesa Civil Estadual (CMDEC) atualizou, nesta quarta-feira (5/8), o Aviso Meteorológico nº 12. O documento apresenta o prognóstico do tempo para os próximos dias no Rio Grande do Sul, com vigência até sexta-feira (7/8).",
-        "Na madrugada e manhã de quinta-feira (6/8), há risco de tempestades isoladas com queda de granizo em áreas do Norte, Noroeste, Centro, Oeste e da Campanha. Na tarde e noite de quinta-feira, existe possibilidade de tempestades severas com rajadas de vento que podem superar 100 km/h, queda de granizo grande, chuva pontualmente intensa na maioria das regiões e chance de tornado. Os acumulados variam entre 10 e 60 mm/dia, com pontuais de 100 mm/dia.",
-        "No início da madrugada de sexta-feira (7/8), persiste a condição para tempestades com rajadas de vento que podem superar 90 km/h e chuva pontualmente intensa nas regiões Norte, Nordeste e Litoral Norte. Um ciclone extratropical em alto mar também pode provocar rajadas de vento superiores a 70 km/h em áreas da faixa Leste na madrugada e manhã de sexta-feira."
+        "O Centro de Monitoramento da Defesa Civil Estadual (CMDEC) atualizou, nesta quarta-feira (5/8), o Aviso Meteorológico nº 12, indicando o prognóstico do tempo para os próximos dias no Rio Grande do Sul. A vigência da atualização segue até sexta-feira (7/8).",
+        "Na madrugada e manhã de quinta-feira (6/8), há risco de tempestades isoladas com queda de granizo em áreas do Norte, Noroeste, Centro, Oeste e da Campanha. Na tarde e noite de quinta-feira (6/8), existe possibilidade de tempestades severas com rajadas de vento que podem superar os 100 km/h, queda de granizo grande e chuva pontualmente intensa na maioria das regiões do Estado, além de chance de tornado. O maior risco ocorre na área em Alerta (laranja) do mapa, com acumulados que variam entre 10 e 60 mm/dia e pontuais de 100 mm/dia.",
+        "No início da madrugada de sexta-feira (7/8), persiste a condição para tempestades com rajadas de vento que podem superar 90 km/h e chuva pontualmente intensa nas regiões Norte, Nordeste e Litoral Norte. Na madrugada e manhã de sexta-feira (7/8), um ciclone extratropical em alto mar também pode causar rajadas de vento superiores a 70 km/h em áreas da faixa Leste."
       ],
-      "link": "/materia/defesa-civil-do-rio-grande-do-sul-atualiza-aviso-sobre-risco-de-tempes.html",
-      "iso": "2026-08-05T23:06:06.487Z",
-      "hora": "19h06",
+      "link": "/materia/cmdec-atualiza-aviso-de-tempestades-com-rajadas-de-vento-no-rio-grande.html",
+      "iso": "2026-08-05T23:28:57.834Z",
+      "hora": "19h28",
+      "original": true,
+      "contexto": "A atualização do aviso meteorológico tem validade até sexta-feira (7/8) e afeta a maioria das regiões do Rio Grande do Sul. A medida abrange moradores das áreas do Norte, Noroeste, Centro, Oeste, Campanha, Nordeste e Litoral Norte do estado. O histórico registra dois casos parecidos na região neste mês, nos dias 1º e 5 de agosto.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.defesacivil.rs.gov.br/upload/recortes/202608/01223017_129939_GD.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 1600,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Defesa Civil monitora Barragem Santa Lúcia entre Ilópolis e Putinga",
+      "resumo": "Estrutura apresenta condições sensíveis, passa por reparos e moradores de Putinga são orientados a se preparar para eventual evacuação.",
+      "fonte": "Meridiano, com informações de Defesa Civil do RS",
+      "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-estadual-acompanha-situacao-da-barragem-santa-lucia-e-se-necessario-emitira-alertas-via-cell-broadcast",
+      "origemNome": "Defesa Civil do RS",
+      "pautadoPor": [
+        "Defesa Civil do Rio Grande do Sul"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "A Defesa Civil do Estado monitora as condições da Barragem Santa Lúcia, localizada entre os municípios de Ilópolis e Putinga, em apoio à Secretaria Estadual do Meio Ambiente e Infraestrutura. A ação ocorre após uma vistoria técnica realizada na estrutura devido a uma sequência de chuvas registrada na última semana.",
+        "A vistoria foi feita pela Divisão de Segurança de Barragens e Emergências da Sema em parceria com a Defesa Civil estadual. Atualmente, as condições da barragem são sensíveis e medidas de reparos estão sendo executadas.",
+        "Durante a inspeção, foram alinhadas medidas emergenciais para o município em caso de elevação do nível da água. O Centro de Monitoramento da Defesa Civil acompanha as condições hidrometeorológicas e emitirá alertas via Cell Broadcast caso a água atinja cotas de risco.",
+        "A recomendação é que os moradores de Putinga sigam as orientações dos órgãos de emergência e estejam preparados para uma eventual evacuação. Em caso de chuvas persistentes, a orientação é contatar a coordenadoria municipal de Proteção e Defesa Civil pelo telefone (51) 99125-5399."
+      ],
+      "link": "/materia/defesa-civil-monitora-barragem-santa-lucia-entre-ilopolis-e-putinga.html",
+      "iso": "2026-08-05T23:29:49.365Z",
+      "hora": "19h29",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -449,13 +518,13 @@
       "fotoLarg": 945,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:ceee-equatorial-presta-contas-da-distribuicao-de-energia-no-rio-grande",
+      "id": "ilm:irrigacao-pelo-metodo-superficial-nao-precisa-mais-de-licenciamento-no",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "CEEE Equatorial presta contas da distribuição de energia no Rio Grande do Sul",
-      "resumo": "Reunião com o governador Eduardo Leite detalhou valores investidos de 2021 a 2025 e a projeção de R$ 1 bilhão para 2026.",
+      "titulo": "Irrigação pelo método superficial não precisa mais de licenciamento no RS",
+      "resumo": "A mudança foi aprovada pelo Consema com base na Lei Federal 15.190/2025 e altera a redação de duas resoluções estaduais.",
       "fonte": "Meridiano, com informações de Sema-RS",
-      "origemLink": "https://sema.rs.gov.br/ceee-equatorial-presta-contas-sobre-a-distribuicao-de-energia-eletrica-no-rio-grande-do-sul",
+      "origemLink": "https://sema.rs.gov.br/empreendimentos-de-irrigacao-superficial-passam-a-nao-precisar-de-licenciamento-ambiental-no-rio-grande-do-sul",
       "origemNome": "Sema-RS",
       "pautadoPor": [
         "Sul21",
@@ -466,14 +535,208 @@
       "quentura": 10,
       "uf": "rs",
       "corpo": [
-        "A CEEE Equatorial realizou, na quarta-feira (16/7), uma prestação de contas sobre a distribuição de energia elétrica no Rio Grande do Sul. A atividade ocorreu cinco anos após o início das operações da companhia no estado.",
-        "O encontro reuniu representantes da concessionária, do poder público, de órgãos reguladores e de diferentes instituições. O governador Eduardo Leite esteve presente representando o poder concedente.",
-        "Durante a reunião, a empresa apresentou dados operacionais e o valor investido no período de 2021 a 2025. Também foi apresentada a projeção de um aporte adicional de R$ 1 bilhão para o ano de 2026.",
-        "Entre os temas discutidos estiveram os impactos de eventos meteorológicos extremos no sistema, o planejamento para manutenção de redes e a resiliência da infraestrutura. Como medida preventiva, a distribuidora informou o investimento de mais de R$ 9,5 milhões na modernização tecnológica do Centro de Operações Integradas (COI), responsável pelo monitoramento da área de atuação."
+        "A atividade de irrigação pelo método superficial não necessita mais de licenciamento ambiental no Rio Grande do Sul. A alteração foi aprovada na 286ª reunião ordinária do Conselho Estadual do Meio Ambiente (Consema), realizada em 9 de julho, com vistas à Lei Geral do Licenciamento Ambiental, a Lei Federal 15.190/2025.",
+        "Com a decisão, as Resoluções Consema 372/2018 e 512/2024 passaram por alterações em suas redações. Apesar da dispensa de licenciamento, a irrigação permanece submetida ao Cadastro Ambiental Rural (CAR), à outorga do uso da água para captação e lançamento, à fiscalização, ao poder de polícia e às responsabilidades administrativa, civil e penal.",
+        "Os empreendimentos que utilizam reservatórios hídricos continuam precisando de licenciamento ambiental. As versões atualizadas das resoluções foram publicadas no Diário Oficial em 15 de julho e estão disponíveis no site do Consema. A próxima reunião do conselho está prevista para 13 de agosto."
       ],
-      "link": "/materia/ceee-equatorial-presta-contas-da-distribuicao-de-energia-no-rio-grande.html",
-      "iso": "2026-08-05T23:07:09.833Z",
-      "hora": "19h07",
+      "link": "/materia/irrigacao-pelo-metodo-superficial-nao-precisa-mais-de-licenciamento-no.html",
+      "iso": "2026-08-05T23:29:59.303Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/fic040826.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:mprs-participa-de-reuniao-do-forum-interinstitucional-carcerario-no-tj",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "MPRS participa de reunião do Fórum Interinstitucional Carcerário no TJRS",
+      "resumo": "O encontro abordou a expansão do ensino em presídios, auxílio a detentos no inverno e condições de trabalho na Polícia Penal.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/noticias/66833/",
+      "origemNome": "MPRS",
+      "pautadoPor": [
+        "AEROIN",
+        "peticaopublica.com.br"
+      ],
+      "quentura": 4,
+      "uf": "rs",
+      "corpo": [
+        "O Ministério Público do Rio Grande do Sul (MPRS) participou, na terça-feira, 4 de agosto, de uma reunião ordinária do Fórum Interinstitucional Carcerário do Estado (FIC-RS). O encontro ocorreu no Tribunal de Justiça (TJRS), na cidade de Porto Alegre.",
+        "A instituição foi representada por Lisiane Veríssimo, coordenadora do Centro de Apoio Operacional Criminal e de Acolhimento às Vítimas (CAOCRIM). A reunião foi presidida pelo desembargador Luiz Antônio Alves Capra e reuniu representantes do Poder Judiciário, SEDUC, Conselho Estadual de Educação, SSPS, OAB, Defensoria Pública, Polícia Penal e Brigada Militar.",
+        "Entre as pautas esteve a implementação dos Núcleos Estaduais de Educação de Jovens e Adultos (NEEJAs) em unidades prisionais, com o objetivo de ampliar a escolarização dos detentos. Também foram discutidos o fornecimento de vestimentas e mantas durante o inverno, a prestação jurisdicional no Presídio Militar de Porto Alegre e as condições de trabalho dos servidores da Polícia Penal.",
+        "Criado em 2011, o FIC-RS reúne diferentes instituições para debater soluções para o sistema prisional no Rio Grande do Sul. O foco das discussões foi o aperfeiçoamento das ações de execução penal e o fortalecimento do trabalho integrado entre os órgãos."
+      ],
+      "link": "/materia/mprs-participa-de-reuniao-do-forum-interinstitucional-carcerario-no-tj.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "As pautas do encontro afetam os detentos do sistema prisional do Rio Grande do Sul em questões como o acesso à educação e o fornecimento de vestimentas e mantas durante o inverno. As discussões afetam também os servidores da Polícia Penal, cujas condições de trabalho foram pautadas na reunião.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/denunciamedico98.jpg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:cirurgiao-plastico-leandro-fuchs-vira-reu-por-crimes-contra-sete-pacie",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Cirurgião plástico Leandro Fuchs vira réu por crimes contra sete pacientes",
+      "resumo": "A 11ª Vara Criminal de Porto Alegre aceitou a denúncia do MPRS por concussão, estelionato, falsidade ideológica e injúria racial no Hospital Ernesto Dornelles.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/noticias/66815/",
+      "origemNome": "MPRS",
+      "pautadoPor": [
+        "peticaopublica.com.br",
+        "Terra"
+      ],
+      "quentura": 4,
+      "uf": "rs",
+      "corpo": [
+        "O cirurgião plástico Leandro Fuchs virou réu após a 11ª Vara Criminal do Foro Central de Porto Alegre aceitar denúncia apresentada pelo Ministério Público do Rio Grande do Sul (MPRS). O médico responde por concussão, estelionato e falsidade ideológica contra sete pacientes, além de injúria racial cometida contra uma das vítimas.",
+        "A ação penal reúne sete inquéritos policiais relacionados a fatos apurados durante investigação sobre a atuação profissional do médico no Hospital Ernesto Dornelles, em Porto Alegre. A denúncia foi apresentada em 6 de julho pelo promotor de Justiça André Baptista Caruso Mac Donald e recebida pela Justiça em 2 de agosto, incluindo agravante de abuso de poder e continuidade delitiva em parte dos delitos.",
+        "Na ação penal, o MPRS atribui ao réu a prática de concussão na condição de funcionário público por equiparação. Conforme a acusação, os fatos envolvem obtenção de vantagem indevida, indução de vítimas em erro, ofensas à honra e inserção de informações falsas em documentos.",
+        "As vítimas são acompanhadas pela Central de Atendimento às Vítimas e Familiares de Vítimas de Crimes e Atos Infracionais (Espaço Bem-me-quer), do MPRS, sob coordenação da promotora de Justiça Carla Frós. O promotor André Mac Donald informa que pelo menos outros 30 inquéritos já foram distribuídos e estão sob análise do MPRS."
+      ],
+      "link": "/materia/cirurgiao-plastico-leandro-fuchs-vira-reu-por-crimes-contra-sete-pacie.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "Não há registros anteriores de casos semelhantes no histórico. As infrações atribuídas ao réu afetaram sete pacientes do Hospital Ernesto Dornelles, em Porto Alegre. A denúncia do Ministério Público foi apresentada em 6 de julho e aceita pela Justiça em 2 de agosto.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:tre-rs-divulga-orientacoes-para-acesso-ao-sistema-infodipweb",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "TRE-RS divulga orientações para acesso ao sistema INFODIPWEB",
+      "resumo": "A ferramenta é gerida pela Secretaria da Corregedoria Regional Eleitoral e reúne informações sobre óbitos e direitos políticos.",
+      "fonte": "Meridiano, com informações de TRE-RS",
+      "origemLink": "https://www.tre-rs.jus.br/servicos-judiciais/infodipweb/infodipweb",
+      "origemNome": "TRE-RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O TRE-RS disponibilizou o acesso ao Sistema de Informações de Óbitos e Direitos Políticos, denominado INFODIPWEB. A ferramenta integra a seção de serviços judiciais e é gerida pela Secretaria da Corregedoria Regional Eleitoral do Tribunal Regional Eleitoral.",
+        "Para a utilização da plataforma, é necessário que o navegador de internet esteja configurado para permitir a execução de scripts. Além disso, o usuário deve garantir que o navegador não esteja ajustado para bloquear a abertura de janelas do tipo popup no domínio do sistema.",
+        "O processo de requerimento de cadastramento no INFODIPWEB exige o preenchimento de um formulário. Para realizar o preenchimento das informações, é obrigatório baixar o documento no computador.",
+        "O canal para esclarecimento de dúvidas sobre o sistema é o endereço eletrônico infodip@tre-rs.jus.br."
+      ],
+      "link": "/materia/tre-rs-divulga-orientacoes-para-acesso-ao-sistema-infodipweb.html",
+      "iso": "2026-08-05T23:29:19.674Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 2899,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:projeto-para-reconstrucao-de-pilar-de-ponte-na-ers-129-e-entregue-a-eg",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Projeto para reconstrução de pilar de ponte na ERS-129 é entregue à EGR",
+      "resumo": "Estrutura entre Encantado e Muçum segue interditada sem previsão de liberação enquanto estatal planeja contratação das obras.",
+      "fonte": "Meridiano, com informações de Governo do RS",
+      "origemLink": "https://estado.rs.gov.br/entregue-projeto-para-reconstrucao-de-pilar-da-ponte-entre-encantado-e-mucum",
+      "origemNome": "Governo do RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O projeto para a reconstrução do pilar comprometido da ponte da ERS-129 sobre o Rio Guaporé, entre Encantado e Muçum, foi entregue nesta quarta-feira (5/8) à Empresa Gaúcha de Rodovias (EGR). Com a conclusão dessa etapa, teve início o planejamento para a contratação da obra.",
+        "A ponte permanece interditada sem previsão de liberação. O bloqueio total foi mantido após avaliações técnicas identificarem a evolução de trincas e o surgimento de novas fissuras na estrutura, agravados pela elevação do nível do Rio Guaporé. Diante disso, a solução adotada passou a ser a reconstrução do pilar, em substituição à alternativa inicial de recuperação localizada.",
+        "Após a contratação, a obra deverá ser executada em aproximadamente 40 dias, condicionado às condições climáticas. Nesta quarta-feira (5/8), a EGR também emitiu uma nota técnica atualizando a situação.",
+        "O projeto contempla o escoramento da estrutura e a instalação de elementos metálicos no tabuleiro, com o objetivo de garantir a estabilidade da ponte e avaliar a possibilidade de restabelecer o tráfego de veículos leves e pedestres de forma controlada e segura. A liberação de veículos pesados dependerá da conclusão dos trabalhos e da comprovação das condições de segurança."
+      ],
+      "link": "/materia/projeto-para-reconstrucao-de-pilar-de-ponte-na-ers-129-e-entregue-a-eg.html",
+      "iso": "2026-08-05T23:28:57.834Z",
+      "hora": "19h28",
+      "original": true,
+      "contexto": "Não há registro de caso parecido no histórico para essa estrutura. O bloqueio total da ponte na ERS-129 afeta pedestres e condutores de veículos que trafegam entre Encantado e Muçum. A próxima etapa é o planejamento para a contratação da obra, que tem prazo de execução de aproximadamente 40 dias após ser contratada.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/vitimabalaperdida050826.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:acusado-de-matar-estudante-por-bala-perdida-vai-a-juri-nesta-quinta-em",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Acusado de matar estudante por bala perdida vai a júri nesta quinta em Porto Alegre",
+      "resumo": "O crime ocorreu em novembro de 2024 durante troca de tiros do tráfico de drogas na Restinga, atingindo a jovem de 25 anos na cabeça.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/noticias/66839/",
+      "origemNome": "MPRS",
+      "pautadoPor": [
+        "peticaopublica.com.br"
+      ],
+      "quentura": 2,
+      "uf": "rs",
+      "corpo": [
+        "Um homem acusado pelo Ministério Público do Rio Grande do Sul (MPRS) de matar a estudante de enfermagem Camilla Lopes Fruck, de 25 anos, vai a julgamento pelo Tribunal do Júri nesta quinta-feira, 6 de agosto, no Fórum Central de Porto Alegre. A acusação será sustentada pelo promotor de Justiça Eugênio Paes Amorim.",
+        "O crime ocorreu na madrugada de 16 de novembro de 2024, na Estrada João Antônio da Silveira, na Restinga. Segundo a denúncia do MPRS, o réu participava de um confronto entre facções criminosas rivais ligado a disputas do tráfico de drogas, quando diversos disparos foram efetuados em via pública.",
+        "Camilla estava em um veículo com amigos e não tinha relação com o confronto. Atingida na cabeça, a jovem morreu após ser socorrida e encaminhada ao Hospital da Restinga. Depoimentos de testemunhas, imagens de monitoramento e laudos periciais reunidos no processo embasaram a decisão de levar o acusado a julgamento.",
+        "O homem responde por homicídio qualificado por motivo torpe e emprego de meio que resultou perigo comum, na forma de erro na execução. Para o promotor Eugênio Paes Amorim, o caso desmente a fala popular de que as mortes ocorrem apenas entre os criminosos, demonstrando a subjugação das comunidades pelos traficantes e a necessidade de punição e encarceramento."
+      ],
+      "link": "/materia/acusado-de-matar-estudante-por-bala-perdida-vai-a-juri-nesta-quinta-em.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.defesacivil.rs.gov.br/upload/recortes/202607/20141025_127127_GD.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 2899,
+      "municipio": "santamaria",
+      "municipioNome": "Santa Maria",
+      "id": "ilm:defesa-civil-reclassifica-risco-meteorologico-de-vermelho-para-laranja",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Defesa Civil reclassifica risco meteorológico de vermelho para laranja no RS",
+      "resumo": "A medida abrange 36 municípios em condição de eventos severos e foi anunciada no domingo durante reunião do Gabinete Integrado de Gerenciamento de Desastres.",
+      "fonte": "Meridiano, com informações de Defesa Civil do RS",
+      "origemLink": "https://www.defesacivil.rs.gov.br/defesa-civil-atualiza-prognostico-meteorologico-e-reclassifica-areas-em-risco-de-vermelho-para-laranja",
+      "origemNome": "Defesa Civil do RS",
+      "pautadoPor": [
+        "Defesa Civil do Rio Grande do Sul"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "A Defesa Civil do Estado do Rio Grande do Sul reclassificou de vermelho para laranja o risco meteorológico na área que abrange 36 municípios com possibilidade de eventos severos. A alteração ocorreu no domingo (19/7), durante reunião do Gabinete Integrado de Gerenciamento de Desastres (Giged).",
+        "Para o domingo (19/7), a previsão indicou chuva intensa de curto período, com acumulados variando entre 40 e 80 mm/dia, podendo ultrapassar 100 mm/dia em pontos do Noroeste, Centro e Campanha, além de vento acima de 90 km/h e granizo de forma isolada. Na segunda-feira (20/7), os acumulados variam entre 40 e 100 mm/dia, podendo superar 120 mm/dia no Oeste, Centro e Vales, com risco de tempestades severas na faixa central. Na terça-feira (21/7), a chuva concentrada fica na metade norte do Estado, também com acumulados que podem passar de 120 mm/dia.",
+        "O governador Eduardo Leite afirmou que os impactos entre sexta-feira e o início de domingo foram menores do que o prognóstico inicial, mas que as equipes da Defesa Civil continuarão mobilizadas. O chefe da Casa Militar e coordenador estadual de Proteção e Defesa Civil, coronel Luciano Chaves Boeira, informou que as equipes do órgão permanecerão em Santa Maria para prestar apoio aos municípios."
+      ],
+      "link": "/materia/defesa-civil-reclassifica-risco-meteorologico-de-vermelho-para-laranja.html",
+      "iso": "2026-08-05T23:29:49.365Z",
+      "hora": "19h29",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -485,44 +748,736 @@
       "fotoLarg": 0,
       "municipio": "poa",
       "municipioNome": "Porto Alegre",
-      "id": "ilm:porto-alegre-tem-alerta-para-vendaval-de-100-km-h-e-novas-acoes-munici",
+      "id": "ilm:porto-alegre-realiza-semana-municipal-da-juventude-com-feirao-da-empre",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Porto Alegre tem alerta para vendaval de 100 km/h e novas ações municipais",
-      "resumo": "Entre as atividades informadas estão o Feirão da Empregabilidade, campanhas de vacinação, concurso do Demhab e a abertura de registros para voluntários da Copa do Mundo Feminina de 2027.",
+      "titulo": "Porto Alegre realiza Semana Municipal da Juventude com Feirão da Empregabilidade",
+      "resumo": "A programação começa nesta quinta-feira, dia 6, e segue até 19 de agosto com oferta de vagas de trabalho, atendimentos de saúde e emissão de documentos.",
       "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
-      "origemLink": "https://prefeitura.poa.br/gcs/noticias/previsao-de-pautas-quinta-feira-6-de-agosto-0",
+      "origemLink": "https://prefeitura.poa.br/smidh/noticias/semana-da-juventude-comeca-com-feirao-da-empregabilidade-nesta-quinta-feira",
       "origemNome": "Prefeitura de Porto Alegre",
       "pautadoPor": [
         "Rádio Solaris",
-        "Terra",
-        "Prefeitura Municipal de Rio Grande/RS",
-        "abcmais.com"
+        "abcmais.com",
+        "Claudemir Pereira"
       ],
-      "quentura": 6,
+      "quentura": 3,
       "uf": "rs",
       "corpo": [
-        "A Defesa Civil de Porto Alegre emitiu alerta laranja para vendaval com rajadas de vento de até 100 km/h, válido das 19h de quinta-feira, 6, até as 10h de sexta-feira, 7. A previsão indica também cerca de 30 mm de chuva, descargas elétricas e eventual queda de granizo, com período de maior atenção entre 20h de quinta-feira e 4h de sexta-feira.",
-        "A programação municipal prevê o início da Semana da Juventude nesta quinta-feira, 6, com o Feirão da Empregabilidade das 9h às 13h na Lomba do Pinheiro. O município abriu inscrições até 17h de sexta-feira, 7, para o processo seletivo de auxiliar de farmácia da Operação Inverno, e divulgou edital de concurso público para o Demhab, com prazo de inscrição até 19 de agosto no site da Fundatec.",
-        "Na saúde e serviços urbanos, a campanha de multivacinação para menores de 15 anos segue até 1º de setembro, com Dia D em 22 de agosto. O projeto Bota-Fora do DMLU recolhe resíduos volumosos nesta quinta-feira a partir das 8h nas comunidades Esmeralda, Chácara da Fumaça e Valneri Antunes. Na cultura, a Cinemateca Capitólio estreia o documentário Os Ruminantes (2025), e o evento Cidade da Advocacia ocorre até sábado, 8.",
-        "A FIFA iniciou o registro de voluntários para a Copa do Mundo Feminina de 2027, e foram abertas as inscrições para o Turismo Farroupilha de Galpão 2026 no Parque Harmonia. Também estão abertas as inscrições para a segunda edição da Meia Maratona do Mercado Público de Porto Alegre, marcada para 11 de outubro."
+        "A Prefeitura de Porto Alegre realiza, de 6 a 19 de agosto, a Semana Municipal da Juventude, evento alusivo ao Dia Internacional da Juventude, celebrado em 12 de agosto. A abertura oficial ocorre nesta quinta-feira, 6, das 9h às 13h, com o Feirão da Empregabilidade na Pracinha da Cultura da Lomba do Pinheiro, na Estrada João de Oliveira Remião, nº 5250.",
+        "O Feirão da Empregabilidade, coordenado pelo Sine Municipal, oferece vagas de trabalho, confecção de currículos, intermediação de oportunidades e workshops de autoestima e beleza. A ação também será realizada no dia 12 de agosto, no Centro Esportivo e Cultural da Bom Jesus/Centro de Referência da Juventude, e no dia 19 de agosto, na Restinga.",
+        "A programação inclui serviços de saúde prestados pela Secretaria de Saúde, como exames de pressão e glicemia, saúde bucal e testes rápidos para HIV, sífilis e hepatites. O Procon Porto Alegre orienta sobre direitos do consumidor, e o Instituto-Geral de Perícias (IGP) realiza a emissão da Carteira de Identidade Nacional (CIN).",
+        "Também prestam atendimento no evento a Defensoria Pública do Estado do Rio Grande do Sul, a Arpen-RS, a Receita Federal e o CIEE-RS, com orientações jurídicas, regularização de CPF, registros civis e programas de estágio. A realização é da Secretaria da Inclusão e Desenvolvimento Humano (SMIDH), em parceria com instituições locais e apoio da Cufa-RS e Fênix Vestibulares."
       ],
-      "link": "/materia/porto-alegre-tem-alerta-para-vendaval-de-100-km-h-e-novas-acoes-munici.html",
-      "iso": "2026-08-05T23:06:27.386Z",
-      "hora": "19h06",
+      "link": "/materia/porto-alegre-realiza-semana-municipal-da-juventude-com-feirao-da-empre.html",
+      "iso": "2026-08-05T23:29:17.432Z",
+      "hora": "19h29",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 2899,
+      "municipio": "santoangelo",
+      "municipioNome": "Santo Ângelo",
+      "id": "ilm:concessionaria-on8-assume-a-operacao-dos-aeroportos-de-passo-fundo-e-s",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Concessionária ON8 assume a operação dos aeroportos de Passo Fundo e Santo Ângelo",
+      "resumo": "A empresa do ECB Group responderá pela manutenção, modernização e expansão dos terminais Lauro Kurtz e Sepé Tiaraju pelo período de 30 anos.",
+      "fonte": "Meridiano, com informações de Governo do RS",
+      "origemLink": "https://estado.rs.gov.br/concessionaria-assume-a-operacao-dos-aeroportos-de-passo-fundo-e-santo-angelo",
+      "origemNome": "Governo do RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "A concessionária ON8, empresa do ECB Group, assumiu a operação dos aeroportos Lauro Kurtz, em Passo Fundo, e Sepé Tiaraju, em Santo Ângelo. O início das atividades ocorreu após a assinatura da Declaração de Encerramento do Estágio 2 da Fase I-A do Contrato de Concessão 04/2026, realizada na quarta-feira (29/7).",
+        "O documento assinado é o último previsto no Plano de Transferência Operacional dos dois aeroportos. Com isso, a concessionária passa a responder pela operação, manutenção, modernização e expansão da infraestrutura aeroportuária das estruturas.",
+        "Conforme previsto no contrato de concessão, os terminais continuam mantidos como bens públicos. A concessão tem vigência de 30 anos."
+      ],
+      "link": "/materia/concessionaria-on8-assume-a-operacao-dos-aeroportos-de-passo-fundo-e-s.html",
+      "iso": "2026-08-05T23:28:57.834Z",
+      "hora": "19h28",
+      "original": true,
+      "contexto": "A mudança afeta a operação, manutenção e expansão dos aeroportos Lauro Kurtz, em Passo Fundo, e Sepé Tiaraju, em Santo Ângelo. O contrato assinado na quarta-feira (29/7) tem prazo de vigência de 30 anos.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/estanciavelha050826.jpg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:justica-condena-ex-chefe-do-rh-de-estancia-velha-por-fraude-na-folha-d",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Justiça condena ex-chefe do RH de Estância Velha por fraude na folha de pagamento",
+      "resumo": "A pedido do MPRS, a ex-servidora terá de ressarcir R$ 221,9 mil e teve os direitos políticos suspensos por 12 anos.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/noticias/66843/",
+      "origemNome": "MPRS",
+      "pautadoPor": [
+        "g1 RS"
+      ],
+      "quentura": 1,
+      "uf": "rs",
+      "corpo": [
+        "A Vara Estadual de Improbidade Administrativa condenou, a pedido do Ministério Público do Rio Grande do Sul (MPRS), uma ex-servidora pública que atuava como chefe do Departamento de Recursos Humanos da Prefeitura de Estância Velha por ato de improbidade administrativa.",
+        "A investigação indicou que, entre fevereiro de 2020 e dezembro de 2021, a ex-servidora valeu-se do cargo e do acesso aos sistemas de pagamento para obter vantagens patrimoniais indevidas. Conforme o promotor de Justiça Bruno Amorim Carpes, um parecer técnico contábil identificou uma diferença de R$ 221.950,63 entre o valor devido e os montantes creditados na conta da ré. As irregularidades envolveram recebimentos superiores à remuneração e quitação de parcelas de empréstimos consignados sem descontos em folha.",
+        "A ré foi condenada ao ressarcimento integral do dano no valor de R$ 221,9 mil e ao pagamento de multa civil no mesmo valor. A sentença determinou a suspensão dos direitos políticos por 12 anos e a proibição de contratar com o Poder Público ou receber benefícios ou incentivos fiscais e creditícios pelo mesmo período.",
+        "A decisão também decretou a perda de eventual função pública que a ex-servidora venha a ocupar após o trânsito em julgado. Os valores recuperados deverão ser revertidos ao Município de Estância Velha."
+      ],
+      "link": "/materia/justica-condena-ex-chefe-do-rh-de-estancia-velha-por-fraude-na-folha-d.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "A medida afeta a ex-servidora, que perde os direitos políticos e a possibilidade de contratar com o Poder Público pelo prazo de 12 anos. O valor da multa civil aplicada é igual ao montante do ressarcimento exigido, no total de R$ 221,9 mil. Não há registro de caso parecido no histórico.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:tre-rs-encerra-ciclo-do-seminario-dialogos-eleitorais-em-porto-alegre",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "TRE-RS encerra ciclo do Seminário Diálogos Eleitorais em Porto Alegre",
+      "resumo": "O evento em parceria com a AGERT teve como objetivo esclarecer radiodifusores e jornalistas sobre a legislação para as Eleições 2026.",
+      "fonte": "Meridiano, com informações de TRE-RS",
+      "origemLink": "https://www.tre-rs.jus.br/comunicacao/noticias/2026/Agosto/dialogos-eleitorais-encerra-ciclo-no-plenario-do-tre-rs",
+      "origemNome": "TRE-RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O plenário do TRE-RS, em Porto Alegre, sediou na tarde de quarta-feira (5/8) o último encontro da série Seminário Diálogos Eleitorais: Eleições 2026. A iniciativa, realizada em parceria entre o TRE-RS e a Associação Gaúcha de Emissoras de Rádio e Televisão (AGERT), buscou esclarecer profissionais da imprensa e radiodifusores sobre a legislação eleitoral.",
+        "A presidente do TRE-RS, desembargadora Maria de Lourdes Galvão Braccini de Gonzalez, agradeceu a parceria e afirmou que a desinformação afeta a confiança nas instituições democráticas. O presidente da AGERT, Alessandro Heck, destacou a observância da legislação e a checagem rigorosa das informações como pilares essenciais para a imprensa durante o período eleitoral.",
+        "O evento contou com palestras do secretário de Tecnologia da Informação do TRE-RS, Daniel Wobeto, sobre etapas da eleição e pauta jornalística; da assessora técnica Marília Piantá, sobre propaganda eleitoral; e da vice-presidente jurídica da AGERT, Débora Dalcin Rodrigues, sobre o papel do rádio e da televisão nas Eleições 2026.",
+        "No encerramento, o vice-presidente do TRE-RS, desembargador Antônio Maria Rodrigues de Freitas Iserhard, declarou que cabe à Justiça Eleitoral garantir o equilíbrio do jogo. Na ocasião, a presidente Maria de Lourdes e o vice-presidente Antônio Maria receberam o Troféu Microfone, entregues por Débora Dalcin Rodrigues e pelo vice-presidente da AGERT, Luís Cardoso. O encontro foi transmitido ao vivo pelo YouTube do TRE-RS."
+      ],
+      "link": "/materia/tre-rs-encerra-ciclo-do-seminario-dialogos-eleitorais-em-porto-alegre.html",
+      "iso": "2026-08-05T23:29:19.674Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:porto-alegre-lidera-ranking-nacional-de-desempenho-em-maratonas",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Porto Alegre lidera ranking nacional de desempenho em maratonas",
+      "resumo": "Levantamento da ChronoMAX analisou quase 12 milhões de resultados de 9.803 eventos disputados entre janeiro de 2023 e dezembro de 2025.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/smel/noticias/porto-alegre-lidera-ranking-nacional-e-se-consolida-como-capital-das-corridas-de-rua",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [
+        "peticaopublica.com.br"
+      ],
+      "quentura": 2,
+      "uf": "rs",
+      "corpo": [
+        "Porto Alegre ficou na primeira colocação do ranking brasileiro de desempenho na maratona, de 42 quilômetros, tanto no masculino quanto no feminino. O dado consta em levantamento da empresa de cronometragem esportiva ChronoMAX, que utilizou o tempo mediano dos participantes de cada cidade.",
+        "Na categoria feminina, a capital gaúcha registrou o tempo mediano de 4h19min07s, ficando à frente de Florianópolis (4h21min34s), São Paulo (4h22min34s) e Rio de Janeiro (4h36min13s). No masculino, a liderança também foi de Porto Alegre, com 3h49min50s, seguida por Rio de Janeiro (3h54min36s), Florianópolis (3h56min47s), Curitiba (3h59min46s) e Brasília (4h01min58s).",
+        "O estudo levou três meses para ser concluído e compilou quase 12 milhões de resultados públicos de 9.803 eventos realizados no país entre janeiro de 2023 e dezembro de 2025. A ChronoMAX atribuiu o resultado à tradição da cidade na modalidade, ao calendário de provas, aos grupos de treinamento, à presença de atletas experientes, à baixa altimetria e ao clima ameno.",
+        "O secretário municipal de Esporte e Lazer, Lucas Siqueira, declarou que o levantamento confirma a força da comunidade de corredores e os investimentos municipais. A Secretaria Municipal de Esporte e Lazer (Smel) prevê para 2026 a realização de dezenas de provas, etapas de circuitos nacionais e corridas temáticas na cidade."
+      ],
+      "link": "/materia/porto-alegre-lidera-ranking-nacional-de-desempenho-em-maratonas.html",
+      "iso": "2026-08-05T23:29:17.433Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-rs.jus.br/imagens/fotos/tre-rs-cartorio-de-canela/@@images/image-0-39fe0535992bfff4d81deac3db6157f4.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:presidente-do-tre-rs-visita-cartorio-eleitoral-em-canela",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Presidente do TRE-RS visita cartório eleitoral em Canela",
+      "resumo": "A desembargadora Maria de Lourdes Galvão Braccini de Gonzalez apresentou uma iniciativa para incentivar o voto e combater a abstenção.",
+      "fonte": "Meridiano, com informações de TRE-RS",
+      "origemLink": "https://www.tre-rs.jus.br/comunicacao/noticias/2026/Julho/canela-recebe-a-visita-da-presidente-do-tre-rs",
+      "origemNome": "TRE-RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A presidente do TRE-RS, desembargadora Maria de Lourdes Galvão Braccini de Gonzalez, visitou o cartório da 65ª Zona Eleitoral, em Canela, na tarde de quinta-feira (30/7). A viagem teve como objetivo incentivar o voto e combater a abstenção.",
+        "Na ocasião, a magistrada apresentou o Ato Institucional de Incentivo ao Voto e Combate à Abstenção, iniciativa capitaneada por ela que integra as ações da Justiça Eleitoral gaúcha. A presidente reforçou a necessidade de conscientizar os cidadãos sobre a importância de votar pensando no bem comum, lamentou o alto índice de abstenção registrado nas últimas eleições e demonstrou esperança de mudança nos próximos pleitos.",
+        "Estiveram presentes no ato o diretor do Foro e juiz da 65ª Zona Eleitoral, Vancarlo André Anacleto, e o chefe do cartório, Guilherme Piovesan Cavagnoli. Pelo TRE-RS, compareceram a diretora-geral, Ana Gabriela Veiga, o secretário da Presidência, Fernando de Assumpção Neto, e a coordenadora de Relações Institucionais, Regina Ferri.",
+        "Também participaram o assessor jurídico Fabiano Faes, representando o presidente da Câmara de Vereadores de Canela; o secretário de Gestão Pública, Ismael Viezze, representando a Prefeitura de Canela; e Leonel Brizola Pompeu de Mattos, representando a OAB/RS – Subseção Canela."
+      ],
+      "link": "/materia/presidente-do-tre-rs-visita-cartorio-eleitoral-em-canela.html",
+      "iso": "2026-08-05T23:29:19.674Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:mprs-atua-na-defesa-do-consumidor-com-acoes-judiciais-apreensoes-e-car",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "MPRS atua na defesa do consumidor com ações judiciais, apreensões e cartilhas",
+      "resumo": "Entre as medidas da instituição estão uma ação contra a Corsan e a Aegea Saneamento, a apreensão de 2,2 toneladas de alimentos e a disponibilização de orientações sobre golpes e operações bancárias.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/consumidor",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Ministério Público do Estado do Rio Grande do Sul (MPRS) atua na proteção do consumidor e da ordem econômica por meio de investigações, fiscalizações e ações judiciais. Entre as medidas adotadas, o órgão ajuizou ação civil pública contra a Corsan e a Aegea Saneamento, executou cinco mandados de busca e apreensão em Porto Alegre e apreendeu 2,2 toneladas de produtos impróprios para consumo.",
+        "A atuação ocorre por meio das Promotorias de Justiça, especializadas ou não, na capital e no interior do Estado. O MPRS utiliza o inquérito civil para celebrar compromissos de ajustamento de conduta ou ajuizar ações coletivas. Em municípios onde não houver órgão de proteção do consumidor, o Ministério Público realiza o atendimento ao cidadão para informar, orientar e promover acordos entre este e os fornecedores.",
+        "O MPRS e o Centro de Apoio Operacional do Consumidor e da Ordem Econômica (CAOCON) também disponibilizam cartilhas e materiais informativos sobre empréstimos consignados, PIX e golpes no ambiente virtual, nas relações bancárias e na contratação de planos de saúde. A estrutura inclui a divulgação de serviços e ferramentas como o Consumidor.gov.br e o Anatel Comparador.",
+        "Em outra medida, a Justiça atendeu a um pedido do MPRS e determinou liminarmente a interdição de um estabelecimento que preparava e entregava comida. A apreensão de itens impróprios"
+      ],
+      "link": "/materia/mprs-atua-na-defesa-do-consumidor-com-acoes-judiciais-apreensoes-e-car.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mprs-disponibiliza-recursos-de-acessibilidade-e-navegacao-em-seu-site",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "MPRS disponibiliza recursos de acessibilidade e navegação em seu site",
+      "resumo": "O portal do Ministério Público do Estado do Rio Grande do Sul conta com ajuste de contraste de tela, alteração do tamanho de texto e uso de cookies.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/frbl_ga",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Ministério Público do Estado do Rio Grande do Sul utiliza cookies para navegação e oferece recursos em seu site para facilitar o acesso ao conteúdo para qualquer cidadão.",
+        "Entre os recursos disponíveis na página está o Alto Contraste, ferramenta que alterna a cor dos textos e do fundo da tela para branco e preto com o objetivo de maximizar o contraste para a leitura.",
+        "O portal também aceita os ajustes de tamanho de texto presentes na maioria dos navegadores atuais. A alteração pode ser realizada por meio de combinações de teclas ou com o uso da roda do mouse mantendo a tecla Ctrl ou Cmd pressionada."
+      ],
+      "link": "/materia/mprs-disponibiliza-recursos-de-acessibilidade-e-navegacao-em-seu-site.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:porto-alegre-recebe-nova-edicao-da-feira-brechocao-neste-domingo-no-pa",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Porto Alegre recebe nova edição da feira Brechocão neste domingo no Parque Farroupilha",
+      "resumo": "Evento reúne 30 bancas de protetoras de animais e ocorre das 9h às 16h no trecho entre o Parquinho de Diversões e o Auditório Araújo Vianna.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/smgg/noticias/domingo-e-dia-de-brechocao-no-parque-farroupilha-0",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "A feira beneficente Brechocão terá uma nova edição neste domingo, 9, no Parque Farroupilha (Redenção). O evento, realizado por protetoras cadastradas na Prefeitura de Porto Alegre com apoio do Gabinete da Causa Animal (GCA), ocorrerá das 9h às 16h, no trecho entre o Parquinho de Diversões e o Auditório Araújo Vianna.",
+        "A iniciativa conta com 30 espaços ocupados por protetoras selecionadas por meio de sorteio entre as cadastradas no órgão. Estarão à venda roupas, calçados, brinquedos, itens de decoração, acessórios e produtos para animais de estimação.",
+        "O valor arrecadado com as vendas é destinado integralmente ao atendimento dos animais acolhidos pelas expositoras. Os recursos cobrem despesas com alimentação, abrigo, castrações e tratamentos veterinários.",
+        "A feira ocorre tradicionalmente no segundo domingo de cada mês e pode ter edições extras conforme a organização das participantes e a disponibilidade do calendário. Em caso de chuva, a edição é transferida para o fim de semana seguinte."
+      ],
+      "link": "/materia/porto-alegre-recebe-nova-edicao-da-feira-brechocao-neste-domingo-no-pa.html",
+      "iso": "2026-08-05T23:29:17.432Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "Os recursos arrecadados na feira são destinados ao atendimento dos animais acolhidos pelas 30 protetoras cadastradas na prefeitura. O evento acontece neste domingo, das 9h às 16h, no Parque Farroupilha. Em caso de chuva, a edição é transferida para o fim de semana seguinte.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-rs.jus.br/imagens/fotos/tre-rs-posse-des-marcelo/@@images/image-0-d97d491d3971492a1fdd60f9d813bc6d.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:marcelo-da-rosa-toma-posse-como-desembargador-eleitoral-efetivo-no-tre",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Marcelo da Rosa toma posse como desembargador eleitoral efetivo no TRE-RS",
+      "resumo": "A solenidade ocorreu em sessão plenária nesta sexta-feira (31/7) e reuniu representantes do Poder Judiciário, do Ministério Público e da OAB/RS.",
+      "fonte": "Meridiano, com informações de TRE-RS",
+      "origemLink": "https://www.tre-rs.jus.br/comunicacao/noticias/2026/Julho/desembargador-eleitoral-e-empossado-no-tre-rs",
+      "origemNome": "TRE-RS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O jurista Marcelo da Rosa tomou posse como desembargador eleitoral efetivo do Tribunal Regional Eleitoral do Rio Grande do Sul (TRE-RS), na classe dos advogados, em sessão plenária realizada nesta sexta-feira (31/7). A solenidade ocorreu no plenário da Corte e contou com a presença de autoridades e representantes do Poder Judiciário, do Ministério Público e da Ordem dos Advogados do Brasil – Seccional do Rio Grande do Sul (OAB/RS).",
+        "Em seu discurso, Marcelo da Rosa declarou receber a nomeação com profunda honra e senso de responsabilidade. Ele afirmou que a Justiça Eleitoral assegura a manifestação livre, legítima e íntegra da vontade popular, ressaltando que a magistratura eleitoral deve ser exercida com prudência, equilíbrio, respeito ao contraditório e compromisso com a fundamentação das decisões.",
+        "O empossado assegurou que assume o cargo com o compromisso de exercer a função com dedicação, humildade, independência e absoluto respeito à Constituição Federal e aos cidadãos.",
+        "A desembargadora eleitoral Fernanda Ajnhorn saudou o novo integrante em nome dos demais membros da Corte. A presidente do TRE-RS, desembargadora Maria de Lourdes Galvão Braccini de Gonzalez, deu as boas-vindas destacando a trajetória profissional de Marcelo da Rosa, expressou convicção de que seu conhecimento jurídico contribuirá com os trabalhos e reafirmou o apoio da Presidência.",
+        "A cerimônia foi transmitida ao vivo pelo canal do TRE-RS no YouTube."
+      ],
+      "link": "/materia/marcelo-da-rosa-toma-posse-como-desembargador-eleitoral-efetivo-no-tre.html",
+      "iso": "2026-08-05T23:29:19.674Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:eptc-recebe-15-novas-viaturas-para-a-fiscalizacao-do-transito-em-porto",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "EPTC recebe 15 novas viaturas para a fiscalização do trânsito em Porto Alegre",
+      "resumo": "O contrato de locação das viaturas com a CS Brasil Frotas tem vigência de 24 meses e valor de R$ 1.238.086,80.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/eptc/noticias/eptc-recebe-15-novas-viaturas-para-qualificar-fiscalizacao-e-o-atendimento-na-capital",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "A Empresa Pública de Transporte e Circulação (EPTC) recebeu 15 novas viaturas zero quilômetro nesta quarta-feira, 5, em Porto Alegre. Os veículos substituem outras 15 viaturas e vão atuar nas atividades de fiscalização e no atendimento prestado pelos agentes de trânsito e transporte.",
+        "Os automóveis são do modelo Chevrolet Onix 2026, com motor 1.0 12V Turbo, e fazem parte de um contrato de locação com a empresa CS Brasil Frotas. Todos os veículos são emplacados em Porto Alegre e possuem sistema de telemetria monitorado em tempo real pela Central de Controle e Monitoramento da Mobilidade (Cecomm) da EPTC.",
+        "O diretor-presidente da EPTC, Pedro Bisch Neto, declarou que o investimento busca otimizar as condições de trabalho e qualificar o atendimento. A contratação por locação elimina custos de aquisição e manutenção, além de oferecer maior disponibilidade da frota e reposição rápida de veículos."
+      ],
+      "link": "/materia/eptc-recebe-15-novas-viaturas-para-a-fiscalizacao-do-transito-em-porto.html",
+      "iso": "2026-08-05T23:29:17.432Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/concussao050826.jpg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:vereador-de-palmeira-das-missoes-e-condenado-a-prisao-por-esquema-de-r",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Vereador de Palmeira das Missões é condenado a prisão por esquema de rachadinha",
+      "resumo": "A pena fixada pela 1ª Vara Criminal inclui quatro anos e seis meses de prisão em regime semiaberto, multa e perda do mandato pela prática de concussão contra seis servidores comissionados.",
+      "fonte": "Meridiano, com informações de MPRS",
+      "origemLink": "https://www.mprs.mp.br/noticias/66845/",
+      "origemNome": "MPRS",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O Ministério Público do Rio Grande do Sul (MPRS) obteve a condenação de um vereador de Palmeira das Missões pelo crime de concussão, prática conhecida como \"rachadinha\". A denúncia indicou que o parlamentar recebeu repasses mensais de parte dos salários de servidores comissionados por ele indicados para trabalhar na Câmara Municipal entre os anos de 2022 e 2025.",
+        "A investigação iniciou em junho de 2024 a partir de uma denúncia anônima, sendo reforçada por representação formal encaminhada pela Câmara de Vereadores com documentos, áudios e vídeos. Durante a apuração, o Núcleo de Inteligência do MPRS (NIMP) analisou movimentações bancárias e identificou transferências regulares de valores das contas dos servidores para o parlamentar.",
+        "A promotora Manuela Montanari sustentou a acusação com base em provas documentais, gravação ambiental e relatório técnico de movimentação financeira. Na sentença, o juiz da 1ª Vara Criminal de Palmeira das Missões registrou que a exigência de vantagem indevida atingiu seis servidores comissionados no exercício da função pública.",
+        "O vereador foi condenado a quatro anos e seis meses de prisão em regime inicial semiaberto, além de pagamento de multa e perda do mandato eletivo. A decisão determinou a cassação do cargo por entender que o crime envolveu abuso de poder e violação de dever para com a Administração Pública."
+      ],
+      "link": "/materia/vereador-de-palmeira-das-missoes-e-condenado-a-prisao-por-esquema-de-r.html",
+      "iso": "2026-08-05T23:29:14.935Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": "Não há registros de casos parecidos no histórico arquivado. A decisão afeta o parlamentar condenado e seis servidores comissionados que atuavam na Câmara Municipal entre os anos de 2022 e 2025.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:sebastiao-melo-debate-reforma-tributaria-na-5-cidade-da-advocacia",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Sebastião Melo debate Reforma Tributária na 5ª Cidade da Advocacia",
+      "resumo": "O presidente da FNP defendeu que a gestão de impostos permaneça com os municípios durante painel promovido no Cais Embarcadero.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/gp/noticias/prefeito-discute-impactos-da-reforma-tributaria-nos-municipios-durante-encontro-da",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "O prefeito Sebastião Melo participou nesta quarta-feira, 5, como presidente da Frente Nacional de Prefeitos e Prefeitas (FNP), do painel Reforma Tributária e os Desafios Federativos para os Municípios Brasileiros. A atividade fez parte da 5ª edição da Cidade da Advocacia, promovida pela OAB/RS no Cais Embarcadero, e integrou o Fórum Nacional dos Procuradores-Gerais das Capitais e Grandes Cidades Brasileiras (FNPGC).",
+        "Durante a apresentação, Sebastião Melo declarou que a competência para gerir impostos precisa ser das cidades para garantir recursos a serviços essenciais. O painel discutiu a transição para o novo sistema tributário, mecanismos de governança interfederativa e soluções jurídicas das procuradorias municipais, sob mediação dos procuradores-gerais Sarah Campos (Contagem/MG) e Daniel Bucar Cervasio (Rio de Janeiro/RJ).",
+        "A discussão teve a participação do professor de Direito Financeiro e Tributário da UERJ, Sérgio André Rocha, do procurador de Aracaju/SE, Ramon Santos, e do presidente da OAB/RS, Leonardo Lamachia. Sebastião Melo também esteve na abertura do Fórum Nacional dos Procuradores-Gerais das Capitais e Grandes Cidades Brasileiras, mediada pelo procurador-geral de Porto Alegre, Jhonny Prado, com presença de Sarah Campos e da vice-presidente da OAB/RS, Claridê Chitolina Taffarel.",
+        "A Procuradoria-Geral do Município (PGM) mantém até o próximo sábado, 8, uma programação dedicada ao Direito Municipal no local."
+      ],
+      "link": "/materia/sebastiao-melo-debate-reforma-tributaria-na-5-cidade-da-advocacia.html",
+      "iso": "2026-08-05T23:29:17.432Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "id": "ilm:dmlu-recolhe-dez-toneladas-de-residuos-na-ilha-grande-dos-marinheiros",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "DMLU recolhe dez toneladas de resíduos na Ilha Grande dos Marinheiros",
+      "resumo": "A ação ocorreu após o recuo das águas do rio Jacuí e contou com a atuação de 15 garis, dois caminhões toco e dois caminhões compactadores.",
+      "fonte": "Meridiano, com informações de Prefeitura de Porto Alegre",
+      "origemLink": "https://prefeitura.poa.br/dmlu/noticias/operacao-de-limpeza-na-ilha-grande-dos-marinheiros-recolhe-dez-toneladas-de-residuos",
+      "origemNome": "Prefeitura de Porto Alegre",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "Na manhã desta quarta-feira, 5, equipes do Departamento Municipal de Limpeza Urbana (DMLU) intensificaram os serviços de limpeza na Ilha Grande dos Marinheiros, no bairro Arquipélago. A operação recolheu cerca de dez toneladas de resíduos nas áreas onde as águas do rio Jacuí recuaram, tendo início pela rua Nossa Senhora Aparecida.",
+        "A remoção dos materiais das vias contou com 15 garis, dois caminhões toco e dois caminhões compactadores, com um operador em cada equipamento. Segundo o diretor-geral do DMLU, Carlos Alberto Hundertmarker, as chuvas de julho impossibilitaram a atuação das equipes em condições seguras. Com o recuo das águas, foi possível acessar os locais para acelerar a retirada dos resíduos deixados pela enchente, e o trabalho continuará na região para recolher os materiais colocados nas vias públicas pelos moradores.",
+        "O DMLU também segue com outra frente de trabalho na Orla do Guaíba após as chuvas que atingiram a Capital. De 25 de julho até o dia 4 de agosto, foram recolhidas 490 toneladas de troncos, galhos e outros resíduos acumulados entre o Centro Histórico e o bairro Lami. A força-tarefa conta com cerca de 100 garis escalados. O DMLU integra a Secretaria Municipal de Serviços Urbanos (Smsurb)."
+      ],
+      "link": "/materia/dmlu-recolhe-dez-toneladas-de-residuos-na-ilha-grande-dos-marinheiros.html",
+      "iso": "2026-08-05T23:29:17.433Z",
+      "hora": "19h29",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:partidos-definem-candidaturas-e-neutralidade-na-eleicao-presidencial",
+      "editoria": "regional",
+      "chapeu": "Nosso texto",
+      "titulo": "Partidos definem candidaturas e neutralidade na eleição presidencial",
+      "resumo": "PRD, Solidariedade, União Brasil e Republicanos optaram pela neutralidade, enquanto Avante e Democrata oficializaram nomes para a disputa.",
+      "fonte": "Meridiano, com informacoes de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "rs",
+      "corpo": [
+        "Os partidos PRD e Solidariedade decidiram pela neutralidade na eleição presidencial. A opção de se manter neutro na corrida presidencial também foi adotada pelas legendas União Brasil e Republicanos na terça-feira, 04/08/2026.",
+        "Em contrapartida, o Avante oficializou Augusto Cury como candidato à Presidência na segunda-feira, 03/08/2026, às 21:"
+      ],
+      "link": "/materia/partidos-definem-candidaturas-e-neutralidade-na-eleicao-presidencial.html",
+      "iso": "2026-08-05T23:40:51.877Z",
+      "hora": "19h40",
+      "original": true,
+      "resgatada": true,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
     }
   ],
-  "circulando": [],
+  "circulando": [
+    {
+      "municipio": "canoas",
+      "municipioNome": "Canoas",
+      "seSabe": [
+        "Que o assunto está sendo publicado por seis veículos de imprensa.",
+        "Que as publicações citam o resgate de 19 cães em Canoas.",
+        "Que os relatos mencionam a prisão de um homem por maus-tratos."
+      ],
+      "falta": [
+        "Manifestação oficial das autoridades policiais ou órgãos de fiscalização.",
+        "Identificação da corporação responsável pela operação alegada.",
+        "Número do registro policial ou do procedimento instaurado."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Clic Camaquã",
+          "titulo": "Canil clandestino é fechado em Canoas e homem é preso por maus-tratos a 19 cães",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQSGpocEtXclVPZkhpV0NqaFg1V0pDVXh6d0ZsRTUyZGRmQlQyUHJaV084ZS1BLS1FZWNIZlJwMlRWX0lzeFRqM0lJR0IyN20yRFZKU3lGYWFrMEpSdE5pRWcyXzcwUmhRVktJUlk5WXRHc3NuSEtIajlYOGtFTUFWUXlkWmtjckpEN0FMZ0RTdnFJcV9FZFZNeDhGeFBZblp4akVVdg?oc=5"
+        },
+        {
+          "veiculo": "g1 RS",
+          "titulo": "Canil clandestino é fechado e 19 cães de raça são resgatados no RS; homem é preso por maus-tratos",
+          "link": "https://g1.globo.com/rs/rio-grande-do-sul/noticia/2026/08/05/canil-clandestino-e-fechado-e-19-caes-de-raca-sao-resgatados-no-rs-homem-e-preso-por-maus-tratos.ghtml"
+        },
+        {
+          "veiculo": "GZH",
+          "titulo": "Canil clandestino é fechado em Canoas após resgate de 19 cães de raça; homem é preso",
+          "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPNXBSX1RUNUZsa2Nta3ZDemlPSEI3RFhYRmV6d3R4R3JYaThabmhkbmxkQ280X3pjUWg2a3lUMHZ2VjlXRDVFczljZXU3NVgwRUx6QS1HUkwtYTdKVFNsNExKdWI1OGhuNk1MZXRYSmlndkpoZGZ6cFJ6UDJNcXV1ZVJES3pVRVh3bVRIcmN6Q2lNaXNMRFhRWEFfN2tJUlpIbDk1YlR4UnowanhSVkNKQkkzLTd6TWVKOS1vWEhHRzh0RUMybUhIRTBLczU0aWtJWlFqTDZXZFczSjlXbDFTVWU4NllzVzBSZW5uUVphNkZHN2ZNUndBQ0kwS1ZfUkJmM0E?oc=5"
+        },
+        {
+          "veiculo": "realnews.com.br",
+          "titulo": "Operação resgata 19 cães de canil clandestino em Canoas e homem é preso",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE84Sy1RR3J5dzFVS3NnZGRUOVAyY2UzVVROalE4dDg2NHBvTEdDZHZQQk9PbDJkVkd0eW5TdDE0eXdfbG9keUU3M2dFQnpZUDhNTkFvYkpoSUhkOXRZbnRPdG1UYlRPQ2NGN2VNTmlGQmhIUjNNMjZzaEpKSUkxcDg?oc=5"
+        },
+        {
+          "veiculo": "Independente",
+          "titulo": "Canil clandestino é fechado e 19 cães de raça são resgatados no RS; homem é preso por maus-tratos",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPOE1KVGtROURHRjRlSHdHa2NlQnlBMGpac2dzajJsbm9pSmtTdkw0bnFFV3p5RGxSRFNtdGJGdDhHUUpuOWVhdWpDbk15VDNWZTUzN2VMREc1cHhJd0hfcTFmM19fMkV5ZnZmZlRkVjdfNWVNaC11SzE5UEhDeXlIWHBBWTlXVW4zdS1vdW1LTmhpVTViSUVTZEdqLXpqWnlCTDNGeHp6Ni1BbGItZ1ZNZUZVVzNmRVhmRTlhRGxMaUw3QVhqYkFTeW5wS29zR28?oc=5"
+        },
+        {
+          "veiculo": "Leouve",
+          "titulo": "Operação em Canoas resgata 19 cães de canil clandestino e prende responsável por maus-tratos",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONWxBZUJNcG8yVFNvQ1dkWW1DSHlwQlh5ZWxHQVB0LVI2YW1aVTZNS0tZZ1lFaVJGd1RjNW5ZbEhaSHozcl9vbm1DZWZHLWVHTWdaQU1Nel9qb2pmZTNTSl95aHhJWkFYR1RkOUVzTXhzZERvZ2pRWjdRU3h2YTg2S2lzdG1BRUR4Qmk5c1RmR21TTThhcHNVQXpSOHpEeXEydHlJYTBR?oc=5"
+        }
+      ],
+      "link": "/materia/nc-canil-clandestino-teria-sido-fechado-e-homem-preso-por-maus-tratos-em-.html",
+      "corpo": [
+        "Um homem teria sido preso em decorrência do fechamento de um canil clandestino. A ação teria resultado no resgate de 19 cães. A informação estaria sendo veiculada por veículos da imprensa regional.",
+        "Segundo as publicações, a ocorrência teria sido registrada no município de Canoas, no Rio Grande do Sul. O local abrigaria cães de raça que teriam sido recolhidos durante uma operação. O indivíduo apontado como responsável pelo espaço teria sido detido sob acusação de maus-tratos.",
+        "As notícias divulgadas não identificam qual órgão teria executado a operação de resgate. Tampouco há detalhes nas publicações sobre as condições em que os animais se encontrariam."
+      ],
+      "id": "circ:canil-clandestino-teria-sido-fechado-e-homem-preso-por-maus-tratos-em-",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Canil clandestino teria sido fechado e homem preso por maus-tratos em Canoas",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:36:57.273Z",
+      "hora": "19h36"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a informação é veiculada por três veículos da imprensa.",
+        "Que as publicações atribuem à Prefeitura ações de zeladoria e limpeza.",
+        "Que os relatos citam abrangência de mais de 10 bairros em uma quarta-feira, dia 5."
+      ],
+      "falta": [
+        "Manifestação ou confirmação oficial por parte da Prefeitura.",
+        "A lista com os nomes exatos dos bairros citados.",
+        "A especificação do mês e do ano relativos à data informada.",
+        "O detalhamento de quais serviços de limpeza seriam executados."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Prefeitura de Pelotas",
+          "titulo": "Prefeitura busca mais eficiência nos serviços de zeladoria",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbjdSQ0ZkenBsZUNXOW94eElBSXpUVFY4V1IwYVFkZEktNWpZWWpEdnllQzgyQ3p1bTBTbXlrN1k5UFRsU3ZLSzlVWjdUNzRLelFyMXFBVnVzYm8zQ040Z2ZMNzd3TDZxQTBJYTcybFBtM2Y3UF9TRlJ0cEFqMWpwVEh5UTVaZ0t3Slk0REVSbHJ6LVJwNG1hNg?oc=5"
+        },
+        {
+          "veiculo": "FaxAju",
+          "titulo": "Prefeitura intensifica serviços de limpeza e manutenção em mais de 10 bairros",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaEFVWHNrd3RUVHZZNENLQ053dlp6TF9kTHAxU0hMUjJYRHFXSjMwRUNLc0Z1NS1sMURrZWxJREJ6aUplNmFyMEdfMHZpQzdDNmZvRzVTU25Sb2xqa19SSkl4M1g5M2oyekhwUldpeWkyZWhDNW4yUWVfUFg3clVJM19tbV9KWjJqd08waHNGUzY0dTdQcFpab1hNaFJ1WmY4eTVXc0E4SQ?oc=5"
+        },
+        {
+          "veiculo": "Prefeitura de Aracaju",
+          "titulo": "Saiba quais serviços de limpeza a Prefeitura realizará nesta quarta-feira, 5",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNellCMHdmOG5TZWQ5SThvS3plbEprNGNBYmFqeU1nNFR6blU1eTRJUVpZdDZIWWZ2MEZYc1VvY3ZIZVZMOGhMeDdYQkdHTVRrb205Q0twRS1HRUNRdnQyM2lhdU5zR25EN2swTlRfT3hPR2gzdE5SSU83OGNBLW0wWjRxR210YnRndHIwTWUxZ0Y1LWhmV0VTbm96U0lKcXBtMi1yT1dMNWgxU01wUjRqdGNfTGg4NWdwNXNoWlMwZlZ3TGhXc2c?oc=5"
+        }
+      ],
+      "link": "/materia/nc-prefeitura-estaria-buscando-reforcar-servicos-de-limpeza-em-mais-de-de.html",
+      "corpo": [
+        "A Prefeitura estaria buscando ampliar a eficiência de suas ações de zeladoria urbana. Conforme alegado por veículos de imprensa, o órgão municipal estaria intensificando trabalhos de manutenção e conservação.",
+        "As ações de limpeza estariam previstas para ocorrer em mais de 10 bairros. O cronograma apontado pelas publicações incluiria intervenções programadas para esta quarta-feira, dia 5.",
+        "Enquanto uma publicação destacaria a busca geral por eficiência na zeladoria, outras detalhariam o volume de localidades atendidas. Não haveria indicação nas manchetes sobre o mês correspondente à quarta-feira citada."
+      ],
+      "id": "circ:prefeitura-estaria-buscando-reforcar-servicos-de-limpeza-em-mais-de-de",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Prefeitura estaria buscando reforçar serviços de limpeza em mais de dez bairros",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:37:29.820Z",
+      "hora": "19h37"
+    },
+    {
+      "municipio": "caxias",
+      "municipioNome": "Caxias do Sul",
+      "seSabe": [
+        "Três veículos de imprensa veicularam matérias sobre temas em Caxias do Sul.",
+        "As publicações citam a Prefeitura municipal e uma operação com prisões na cidade.",
+        "Uma advogada estaria entre os integrantes do grupo detido segundo as matérias."
+      ],
+      "falta": [
+        "Posicionamento oficial da Prefeitura de Caxias do Sul sobre o adiamento de repasses.",
+        "Confirmação do órgão policial responsável com o número do procedimento e identificação dos detidos.",
+        "Esclarecimento sobre datas exatas, valores afetados e eventuais conexões entre os fatos."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "GZH",
+          "titulo": "Grupo é preso em Caxias do Sul por fraude em compra e venda de veículos; advogada está entre as detidas",
+          "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQcTljYXdNQVozYzBwbmx2TlU2NGd5Sm9XNm5TREoxYkRtYUNiSjFveFF0WEg4a0VtUjIzMDNkV3hxY0hHN1VMcWRfSlMyMm1qWlV3eV9KUFkzZllBMFNnNFJGWGlPeUtPUWFnTnUtTExRNEJpaldlVzFKV0U2clhWOGQ2dk5vSExIMk0ydmdBZUhVYnVaRFk2WjFvelJpSGlMS1gybFB4cXViN0FjWDF2dFhtMFU2OVpUY2lGcWNKQ1pfcDFyNEJIcXQycDljeFAtRjNIWEdvbDN0d0xjN1BrTWs0S21yeC1FZEROd0F3V1A0dDRtLWNJWk8ta1FNS2VMTDM5dEFtRm1uM01SMWg2aGJMRTNvQ0RqY3BfcnE3MS14bTVm?oc=5"
+        },
+        {
+          "veiculo": "Serra em Pauta",
+          "titulo": "Gestão pública em Caxias do Sul",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5nc3JBVVFkTTV2bERGYW50X3NLYVVIOV9pUTBGWHQxcDFyQWJ6dHlMVjlpVmM1dHg0YkdTX2VqM1FadlE1bG1ieTdpV3hRWmlZQ0tMbGNzRHR5X2QwYXdwWHVlWThvV1N1aWNOcGNxQVRBTEFpUV9hbEYxUQ?oc=5"
+        },
+        {
+          "veiculo": "Radio Caxias FM",
+          "titulo": "Prefeitura adia pagamento de integrantes dos grupos artísticos de Caxias do Sul",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNnhFeGoxYXNabDJobVBSajZQYW1qbkpyV2wwaTRXR21mTHZPYlowYnlWZi1paEZYSFBoMW0wbGJZQ0xjSTNkSTBfNDJwVmJ4b1BzUncyd3p4Q29IbkVxd1M3S3NCbWRUYWNncVlZMnZncnhWcTF0MUZJdWV0UWttTzh4N0FBUHVQNDg3RnZYSllKRlhmb3A5Y21Gdk1IdzBDWEhNVW9OS1poZ0M3YUUtMQ?oc=5"
+        }
+      ],
+      "link": "/materia/nc-prefeitura-de-caxias-do-sul-adiaria-pagamentos-e-grupo-seria-preso-por.html",
+      "corpo": [
+        "Publicações na imprensa apontariam a prisão de um grupo suspeito de fraude em compra e venda de veículos em Caxias do Sul. Uma advogada estaria entre as pessoas que teriam sido detidas na ação.",
+        "Outras matérias abordariam a gestão pública no município e o adiamento de pagamentos pela Prefeitura a integrantes de grupos artísticos. Os textos veiculados não apresentariam convergência direta sobre a relação entre os fatos citados.",
+        "A consolidação das informações dependeria da divulgação de documentos oficiais por parte do poder público local e das autoridades policiais. Até o momento, o cenário basear-se-ia apenas no material veiculado pela imprensa."
+      ],
+      "id": "circ:prefeitura-de-caxias-do-sul-adiaria-pagamentos-e-grupo-seria-preso-por",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Prefeitura de Caxias do Sul adiaria pagamentos e grupo seria preso por fraude",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:38:01.286Z",
+      "hora": "19h38"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que três veículos de imprensa publicaram informações sobre o assunto.",
+        "Que as notícias citam Flávio Bolsonaro, Alfredo Gaspar, Michelle e o PL.",
+        "Que não há registro da confirmação em fonte ou documento oficial."
+      ],
+      "falta": [
+        "Confirmação oficial emitida pelo partido PL ou pelos citados.",
+        "Registro formal que valide a indicação do vice na chapa.",
+        "Manifestação oficial sobre a declaração atribuída a Michelle."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Correio do Povo",
+          "titulo": "Cotada a vice, Michelle deseja sorte para Alfredo Gaspar na chapa com Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQdlk1VmZkMGVaYmI3T3V0QnhpbWl6ekZaZDY0b1g4eWhVVDQzVkJmWHItTnNyOThhTV83Rld5QnI1cVMyTkZ4dXlyc1hWMWRJQXJ2UldFTkYydTBRdkVtbm9pTFMzZEtsTWQwY2F6VVFld0FpNlIzZldjZ0l5VUlsbll4Z1FqUVh3TndBM0NjYTJMbmkzY1VvN3Q2ZnR0RE1uN1M3TnpCbllvb2pqVDNhWThETS1pUTBjSEEyb1djZXRhS1Q1MlJsYmluSDFuUHltTGFyWnFQVTlhUWdRbXp5RDhQMVAwa1dCcVFBeERxZFJXZDFYU0F3OThOZGdPVFlZaUhWeW1R?oc=5"
+        },
+        {
+          "veiculo": "Sul21",
+          "titulo": "Flávio Bolsonaro anuncia Alfredo Gaspar como vice na chapa do PL",
+          "link": "https://sul21.com.br/noticias/politica/2026/08/flavio-bolsonaro-anuncia-alfredo-gaspar-como-vice-na-chapa-do-pl/"
+        },
+        {
+          "veiculo": "GZH",
+          "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNUk5IUDNzVFhOTXNucjlXNUpxYlBaV1ZJMTlHNlNJaGdJeEMyMFZCTkROTWJzWjg3aWoxVTVycXpqNWoyX05vLVRTdzVaeGpRVWVvQ0lGU2EwS2JuckQxWG83ZE5hR2VaelJmWG4zc0QxU2hyVDdrVldPelgxam5VZmxaTkJHX1lyTGx4bG1oSHpyb0ZhbjM5SkZzbGpQWU9IeldJVTlhM2w4bFQ5V3htNkFzak5JVGNGYm1QWjJfaVBYTlZRUGZLYmt4TG43d0tfejBGRkZfeTEwTHJ2WGRvVW8xSUJDSFk0TUlqWllzX0RjblJtVXdoOVZLMFhVdzB6WlhMbVp3?oc=5"
+        }
+      ],
+      "link": "/materia/nc-flavio-bolsonaro-teria-anunciado-alfredo-gaspar-como-vice-em-chapa-do-.html",
+      "corpo": [
+        "As publicações abordariam a indicação para a vaga e a repercussão da escolha. Os veículos apresentariam focos distintos, alternando entre o anúncio do nome do vice e a avaliação sobre a estratégia política envolvida.",
+        "A composição trataria do alinhamento interno para a estruturação da chapa do PL. A escolha estaria sendo associada aos rumos da estratégia de Flávio Bolsonaro."
+      ],
+      "id": "circ:flavio-bolsonaro-teria-anunciado-alfredo-gaspar-como-vice-em-chapa-do-",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Flávio Bolsonaro teria anunciado Alfredo Gaspar como vice em chapa do PL",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:38:28.245Z",
+      "hora": "19h38"
+    },
+    {
+      "municipio": "poa",
+      "municipioNome": "Porto Alegre",
+      "seSabe": [
+        "Que ao menos duas publicações veiculam a informação sobre o concurso público.",
+        "Que as matérias mencionam o término do período de inscrições para o certame.",
+        "Que são citados o município de Porto Alegre e o cargo de agente de fiscalização."
+      ],
+      "falta": [
+        "Confirmação do cronograma em edital ou canal oficial da Prefeitura de Porto Alegre.",
+        "Publicação oficial do órgão que especifique o cargo de agente de fiscalização.",
+        "Especificação da data exata e do horário limite para envio de inscrições."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Prefeitura de Porto Alegre",
+          "titulo": "Último dia de inscrições para concurso público de agente de fiscalização",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONzJqcVh5clB4TkNEMzNyUnNKeFgzRmlpTVVpeXh3RDFFbHotNkxMRkpwSDBKMFp4MkJCSmtBTV9GTTVzRzFOQjVVRmpMUGlmUzg2R0VIQzA4bURUN0V5U0hCMUdqc2Z0Q2RtZU9ndGhrS1N1eDVlY3poZFJkb1ZYUkE3d01XbWx1RUdKUHlZV2dmWklLLXRTN01zWDZxaTBQOXFGbUtyQm9sc29sVEZVUE9PcHlPTDg?oc=5"
+        },
+        {
+          "veiculo": "Terra",
+          "titulo": "Último dia para se inscrever em concurso público da prefeitura de Porto Alegre",
+          "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNVnAtcW11cGpSeVQ2QmFEdllqRlp3Z29YX3FjRlVrOE9wd2lWMGxnTHFtY3lETWV1aVp3bmZubDNyYUxuckRXRkZUMk55QWl1TGFsM0lQZm1EV3FXWVRNS09QRFVrOVFTY2xMZjlmNElua1hVQWxEQl9QaFpJV3NET0wyd0Q2aTNxZFJLNGlHWC1ySmU5RHppVkpSZWsxS1RjMHlLLWU3TzlGNkdJV1FSRE1BR01vYURsSURHRk90LTUybXk2QlRIdDFjOUo5LXBCNUVZQkpIdXNERjFjZlBPcll3bFNjcGVUdGI5TlJ3OA?oc=5"
+        }
+      ],
+      "link": "/materia/nc-inscricoes-para-concurso-publico-em-porto-alegre-estariam-no-ultimo-di.html",
+      "corpo": [
+        "Publicações na imprensa apontam que estaria no último dia o prazo para inscrições em um concurso público. O certame seria voltado para o preenchimento de vagas na administração pública.",
+        "As matérias apresentariam informações complementares entre si sobre a seleção. Enquanto uma publicação indica o cargo de agente de fiscalização, a outra atribui o concurso à prefeitura de Porto Alegre.",
+        "O encerramento do prazo determinaria a consolidação das candidaturas para o processo seletivo. A validação das informações precisaria de confirmação por parte do órgão responsável."
+      ],
+      "id": "circ:inscricoes-para-concurso-publico-em-porto-alegre-estariam-no-ultimo-di",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Inscrições para concurso público em Porto Alegre estariam no último dia",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:38:55.820Z",
+      "hora": "19h38"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "maraba.pa.gov.br",
+          "titulo": "Cultura: Marabá prepara-se para 7ª Cavalgada Expo 21",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9jNkR5REtVZHZoMmYxUXdiY2pjQXk1UzVLMHB3MmxmV3gxYjQyQThRZGhPQnpQN2RtT1pyc1A1QjAwTjNIQS1nOWRuTFVwbWh4WGEta2Jvc1p2Q3Zkd2xRVnZWX2Jtdm9uSVo0?oc=5"
+        },
+        {
+          "veiculo": "bahiaja.com.br",
+          "titulo": "Cultura - EXPO A SANTA DULCE REÚNE OBRAS 28 ARTISTAS NA SEDE TRIBUNAL DE JUSTIÇA",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNeGxjX2tPYTQzc1VQZkg0VzhacVdTRUxyUUNrTWk3VHloc2lrdVVCVC02UFlIMXhvOFNiOHRNaV9sdG5OYWJXN1dpNTVjMmljanNadGROTVJtY2FMbEJub2lnX3VucjFfQnR4OThxTDdBaThmWGJtMzZTMU5hZDRPWllHQmZ3SkxMbUR1X3dsZzRTdnprZmFSa3lveHFQU01kMEFKRks5dDlaa1pHU0RHMk9oVkVXRXZQLTl1bmw1VFRYVndIbmYxeXZ2dEt0LV9NWHpxSQ?oc=5"
+        }
+      ],
+      "link": "/materia/nc-publicacoes-divulgariam-eventos-culturais-em-maraba-e-no-tribunal-de-j.html",
+      "corpo": [
+        "Publicações da imprensa estariam divulgando informações sobre eventos da área de cultura. Segundo o que estaria sendo veiculado, Marabá estaria em preparação para a 7ª Cavalgada Expo 21. Outra publicação apontaria a realização da Expo A Santa Dulce na sede do Tribunal de Justiça. Os conteúdos veiculados trariam dados específicos sobre locais e participantes citados. A exposição na sede do Tribunal"
+      ],
+      "id": "circ:publicacoes-divulgariam-eventos-culturais-em-maraba-e-no-tribunal-de-j",
+      "editoria": "regional",
+      "uf": "rs",
+      "titulo": "Publicações divulgariam eventos culturais em Marabá e no Tribunal de Justiça",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:39:31.569Z",
+      "hora": "19h39"
+    }
+  ],
   "pautas": [
     {
       "titulo": "Prefeitura amplia pontos de carregamento para veículos elétricos em Porto Alegre",
       "veiculo": "radiocaicara.com.br",
       "editoria": "regional",
-      "quentura": 12,
+      "quentura": 11,
       "tambemEm": [
         "Prefeitura de Porto Alegre",
         "Terra",
@@ -533,7 +1488,7 @@
       "titulo": "Prefeitura amplia pontos de carregamento para veículos elétricos em Porto Alegre",
       "veiculo": "radiocaicara.com.br",
       "editoria": "regional",
-      "quentura": 12,
+      "quentura": 11,
       "tambemEm": [
         "Prefeitura de Porto Alegre",
         "Terra",
@@ -544,7 +1499,7 @@
       "titulo": "Prefeitura remove casas para reforçar dique em Porto Alegre",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 11,
+      "quentura": 10,
       "tambemEm": [
         "Prefeitura de Porto Alegre",
         "Terra",
@@ -555,22 +1510,11 @@
       "titulo": "Prefeitura remove casas para reforçar dique em Porto Alegre",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 11,
+      "quentura": 10,
       "tambemEm": [
         "Prefeitura de Porto Alegre",
         "Terra",
         "radiocaicara.com.br"
-      ]
-    },
-    {
-      "titulo": "Gestão pública em Caxias do Sul",
-      "veiculo": "Serra em Pauta",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "GZH",
-        "Terra",
-        "Tua Rádio"
       ]
     },
     {
@@ -682,6 +1626,26 @@
       ]
     },
     {
+      "titulo": "Ideb: RS melhora em todas as etapas de ensino e sobe no ranking nacional",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Correio do Povo",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Ideb: RS melhora em todas as etapas de ensino e sobe no ranking nacional",
+      "veiculo": "Sul 21",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo"
+      ]
+    },
+    {
       "titulo": "Homem morre e mulher fica ferida em ataque a tiros na zona sul de Porto Alegre; veículo utilizado no crime foi incendiado",
       "veiculo": "GZH",
       "quentura": 3,
@@ -691,22 +1655,13 @@
       ]
     },
     {
-      "titulo": "Ideb: RS melhora em todas as etapas de ensino e sobe no ranking nacional",
-      "veiculo": "Sul21",
+      "titulo": "Prefeitura busca mais eficiência nos serviços de zeladoria",
+      "veiculo": "Prefeitura de Pelotas",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Ciclone-bomba: entenda o fenômeno que pode provocar tempestades e até tornados no RS",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "Prefeitura Municipal de Rio Grande/RS"
+        "FaxAju",
+        "Prefeitura de Aracaju"
       ]
     }
   ]
