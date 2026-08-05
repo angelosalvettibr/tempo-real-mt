@@ -1,26 +1,35 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-08-05T22:30:01.528Z",
+  "gerado": "2026-08-05T22:56:36.503Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 193,
-    "fonteLivre": 30,
-    "confirmadas": 11,
-    "publicadas": 18,
+    "pauta": 192,
+    "fonteLivre": 31,
+    "confirmadas": 13,
+    "publicadas": 15,
     "resgatadas": 0,
-    "semFonte": 171
+    "semFonte": 163
   },
   "fontes": {
     "checadas": 51,
-    "responderam": 23,
-    "entregando": 22,
+    "responderam": 22,
+    "entregando": 21,
     "itens": 222,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
+        "itens": 13,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
         "itens": 13,
         "ok": true,
         "respondeu": true,
@@ -55,35 +64,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "vgnoticias",
-        "nome": "VG Notícias",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "cenariomt",
         "nome": "CenárioMT",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-cap",
-        "nome": "Cuiabá",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-cuiaba",
-        "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -109,6 +91,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-mt-cuiaba",
+        "nome": "Cuiabá",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-cap",
+        "nome": "Cuiabá",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-mt",
         "nome": "Mato Grosso",
         "itens": 12,
@@ -121,6 +121,15 @@
         "id": "gn-mt-sorriso",
         "nome": "Sorriso",
         "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "vgnoticias",
+        "nome": "VG Notícias",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -175,24 +184,6 @@
         "id": "sonoticias",
         "nome": "Só Notícias",
         "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "almt",
-        "nome": "Assembleia de MT",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -255,6 +246,15 @@
         "tipo": "assessoria",
         "id": "sefaz-mt",
         "nome": "Sefaz-MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "almt",
+        "nome": "Assembleia de MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -424,15 +424,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sorriso",
-        "nome": "Prefeitura de Sorriso",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "rondonopolis",
         "nome": "Prefeitura de Rondonópolis",
         "itens": 0,
@@ -442,8 +433,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-vg",
-        "nome": "Câmara de Várzea Grande",
+        "id": "sorriso",
+        "nome": "Prefeitura de Sorriso",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -453,6 +444,15 @@
         "tipo": "assessoria",
         "id": "camara-cba",
         "nome": "Câmara de Cuiabá",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-vg",
+        "nome": "Câmara de Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -494,39 +494,6 @@
   ],
   "itens": [
     {
-      "foto": "https://s2-g1.glbimg.com/WV6V3F3aXqi3iB2CWl8R1UI4csI=/1280x0/filters:format(jpeg)/https://thumbor.globoi.com/unsafe/fit-in/1280x720/s04.video.glbimg.com/deo/vi/63/70/13507063",
-      "fotoAlt": null,
-      "fotoLarg": 1200,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:mae-de-homem-morto-em-cuiaba-pede-r-574-5-mil-de-indenizacao-a-ex-proc",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Mãe de homem morto em Cuiabá pede R$ 574,5 mil de indenização a ex-procurador",
-      "resumo": "A técnica de enfermagem Iracema Alves Ferreira da Silva entrou com a ação referente ao assassinato de seu filho, Ney Müller Alves Pereira, ocorrido em abril de 2025.",
-      "fonte": "Meridiano, com informações de g1 MT",
-      "origemLink": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/mae-de-homem-em-situacao-de-rua-morto-a-tiros-em-cuiaba-pede-r-5745-mil-de-indenizacao-a-ex-procurador-da-almt.ghtml",
-      "origemNome": "g1 MT",
-      "pautadoPor": [
-        "g1 MT"
-      ],
-      "quentura": 2,
-      "uf": "mt",
-      "corpo": [
-        "A técnica de enfermagem Iracema Alves Ferreira da Silva protocolou na Vara Cível de Várzea Grande uma ação de indenização contra o ex-procurador da Assembleia Legislativa de Mato Grosso (ALMT), Luiz Eduardo Figueiredo Rocha Silva, de 45 anos. O processo pede o valor inicial de R$ 574,5 mil por danos morais e materiais, além do pagamento de pensão mensal, em razão da morte de seu filho, Ney Müller Alves Pereira.",
-        "Ney era um homem em situação de rua e foi morto a tiros em Cuiabá, em abril de 2025. Na ação, a mãe afirma ter perdido o único filho de forma violenta, inesperada e calculada, relatando também ter sofrido prejuízo financeiro. Segundo o documento, a vítima estava prestes a receber uma pensão por morte de seu pai, um policial rodoviário federal aposentado, benefício que ajudaria no sustento da mãe.",
-        "O pedido formulado pela autora exige o pagamento de R$ 500 mil por danos morais e uma indenização mensal no valor de R$ 4.972,33, quantia correspondente à pensão que a vítima receberia. A cobrança mensal é solicitada pelo período de até 32 anos ou até a morte da mãe.",
-        "Preso pelo crime, o ex-procurador responde a uma ação penal e foi pronunciado pela Justiça. Ele irá a julgamento no Tribunal do Júri por homicídio qualificado por motivo torpe e por recurso que dificultou a defesa da vítima, fundamentação criminal usada para embasar o pedido de reparação cível."
-      ],
-      "link": "/materia/mae-de-homem-morto-em-cuiaba-pede-r-574-5-mil-de-indenizacao-a-ex-proc.html",
-      "iso": "2026-08-05T22:01:58.000Z",
-      "hora": "18h01",
-      "original": true,
-      "contexto": "Não há registro de caso parecido no histórico. A ação indenizatória afeta a mãe da vítima, Iracema Alves Ferreira da Silva, e o ex-procurador Luiz Eduardo Figueiredo Rocha Silva. A próxima etapa do réu, que está preso, é ser levado a julgamento pela Justiça.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
       "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
@@ -534,9 +501,9 @@
       "municipioNome": null,
       "id": "ilm:sema-mt-informa-indisponibilidade-dos-sistemas-siga-sisflora-e-simcar",
       "chapeu": "Nosso texto",
-      "editoria": "brasil",
+      "editoria": "regional",
       "titulo": "Sema-MT informa indisponibilidade dos sistemas SIGA, SISFLORA e SIMCAR",
-      "resumo": "A Superintendência de Tecnologia da Informação trabalha para solucionar o problema técnico, mas não há previsão para o retorno dos serviços.",
+      "resumo": "Falhas técnicas no sistema SIGA afetaram o funcionamento dos outros serviços, que seguem sem previsão de retorno.",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
       "origemNome": "Sema-MT",
@@ -544,17 +511,53 @@
         "agoramt.com.br"
       ],
       "quentura": 1,
-      "uf": null,
+      "uf": "mt",
       "corpo": [
-        "O sistema SIGA está fora do ar devido a problemas técnicos, informou a Secretaria de Estado de Meio Ambiente (Sema-MT). A indisponibilidade do sistema gera impacto direto no funcionamento do SISFLORA e do SIMCAR.",
-        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. Até o momento, não há previsão de retorno dos serviços.",
-        "A Sema-MT comunicou que divulgará a normalização da situação em seus canais oficiais assim que os sistemas voltarem a operar."
+        "O sistema SIGA ficou fora do ar em razão de problemas técnicos, o que causou impacto direto no funcionamento do SISFLORA e do SIMCAR. A informação foi comunicada pela Secretaria de Estado de Meio Ambiente (Sema-MT).",
+        "A Superintendência de Tecnologia da Informação do órgão ambiental está trabalhando para solucionar o problema. Até o momento, não há previsão para o retorno dos serviços.",
+        "A Sema-MT comunicou que a regularização da situação será informada em seus canais oficiais assim que os sistemas voltarem à normalidade."
       ],
       "link": "/materia/sema-mt-informa-indisponibilidade-dos-sistemas-siga-sisflora-e-simcar.html",
-      "iso": "2026-08-05T22:18:53.518Z",
-      "hora": "18h18",
+      "iso": "2026-08-05T22:44:29.210Z",
+      "hora": "18h44",
       "original": true,
       "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba/@@images/image-0-1c1e1c20af74575b9013a0147b97c8bb.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:tre-mt-transfere-quatro-secoes-eleitorais-do-liceu-cuiabano-para-a-cdl",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "TRE-MT transfere quatro seções eleitorais do Liceu Cuiabano para a CDL em Cuiabá",
+      "resumo": "A mudança atinge as seções 0841, 0843, 0844 e 1170 por conta de obras de reforma na escola e consta na Portaria nº 15/2026/01ª ZE/MT.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/justica-eleitoral-transfere-secoes-eleitorais-para-cdl-em-cuiaba",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [
+        "Estadão MT",
+        "Muvuca Popular",
+        "Isso É Notícia",
+        "O Mato Grosso"
+      ],
+      "quentura": 6,
+      "uf": "mt",
+      "corpo": [
+        "Eleitores de quatro seções eleitorais que votavam na Escola Estadual Liceu Cuiabano, situada na Avenida Presidente Marques, no bairro Quilombo, em Cuiabá, passarão a votar na Câmara de Dirigentes Lojistas de Cuiabá (CDL), localizada na mesma avenida. A medida atinge as seções 0841, 0843, 0844 e 1170.",
+        "A alteração consta na Portaria nº 15/2026/01ª ZE/MT, assinada pelo juiz da 01ª ZE, Moacir Rogério Tortato. A mudança ocorre por causa de obras de reforma na infraestrutura do prédio escolar, que impossibilitam o recebimento de todas as seções no endereço original.",
+        "O chefe de cartório da 01ª ZE, Antônio Henrique Ricci Boaventura, explicou que a evolução das obras e uma nova avaliação da estrutura da escola permitiram manter parte das seções no prédio original e transferir o restante para a CDL, reduzindo a necessidade de deslocamentos dos eleitores.",
+        "A consulta ao local de votação pode ser realizada no Portal do TSE, na opção Autoatendimento Eleitoral, inserindo CPF, nome completo e data de nascimento, ou pelo aplicativo e-Título. Demais serviços estão disponíveis no site tre-mt.gov.br."
+      ],
+      "link": "/materia/tre-mt-transfere-quatro-secoes-eleitorais-do-liceu-cuiabano-para-a-cdl.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
+      "original": true,
+      "contexto": "A transferência de local atinge os eleitores das seções 0841, 0843, 0844 e 1170 que votavam na Escola Estadual Liceu Cuiabano. A consulta ao local de votação atualizado pode ser realizada pelo aplicativo e-Título ou no Portal do TSE.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -564,62 +567,31 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-realiza-quinto-sorteio-da-nota-cuiabana-premiada-",
+      "id": "ilm:justica-nega-pedido-de-bloqueio-de-r-15-milhoes-das-contas-da-prefeitu",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá realiza quinto sorteio da Nota Cuiabana Premiada nesta sexta-feira",
-      "resumo": "A edição de agosto ocorre às 15h na Sala de Reuniões do CIAC e segue o cronograma estabelecido pela Portaria SMEconomia nº 294/2026.",
+      "titulo": "Justiça nega pedido de bloqueio de R$ 15 milhões das contas da Prefeitura de Cuiabá",
+      "resumo": "O juiz Emerson Luis Pereira Cajango determinou a produção de novas provas e fixou prazos para a apresentação de relatórios e de um plano emergencial.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/nota-cuiabana-premiada-realiza-5-sorteio-de-2026-nesta-sexta-feira-7",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/justica-reconhece-avancos-da-prefeitura-e-mantem-contas-sem-bloqueio-de-r-15-milhoes",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Prefeitura de Cuiabá",
-        "O Mato Grosso"
+        "Muvuca Popular",
+        "Prefeitura de Cuiabá"
       ],
       "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá realiza às 15h desta sexta-feira (7) o quinto sorteio da Nota Cuiabana Premiada de 2026. A edição de agosto ocorrerá na Sala de Reuniões do Centro Integrado de Atendimento ao Contribuinte (CIAC).",
-        "O sorteio é conduzido segundo as regras da Portaria SMEconomia nº 294/2026, que define o calendário das edições do programa ao longo do ano. A organização envolve equipes técnicas da Secretaria Municipal de Economia, com acompanhamento da Comissão da Nota Cuiabana e coordenação da Diretoria Administrativa e Financeira do órgão.",
-        "A ação integra a política de incentivo à cidadania fiscal e estimula os consumidores a solicitarem o CPF na nota fiscal ao contratarem serviços no município. Além de concorrer aos prêmios, quem participa ajuda a fortalecer a arrecadação tributária e a combater a sonegação fiscal.",
-        "Com edições periódicas em 2026, a Nota Cuiabana Premiada incentiva a emissão de documentos fiscais, busca fortalecer a transparência na arrecadação municipal e promove a conscientização sobre cidadania fiscal."
+        "A Vara Especializada do Meio Ambiente de Cuiabá indeferiu o pedido do Ministério Público para bloqueio de R$ 15 milhões das contas da Prefeitura de Cuiabá. A decisão foi proferida na terça-feira (4) pelo juiz Emerson Luis Pereira Cajango, que condicionou qualquer retenção de recursos à produção de novas provas técnicas.",
+        "O Ministério Público pleiteou o bloqueio alegando descumprimento do Termo de Ajustamento de Conduta (TAC) referente ao bem-estar animal. Em defesa, a Procuradoria Geral do Município apresentou documentos sobre o Programa Reação Animal 24 Horas, atendimento em clínicas credenciadas, execução de recursos do Fundo Municipal de Bem-Estar Animal (Funbea) e a vistoria feita pelo Juizado Especial Volante Ambiental (Juvam) em abril.",
+        "O magistrado observou que o pedido do Ministério Público foi genérico, sem um plano detalhado para a destinação dos valores, e que persistem controvérsias sobre fatos recentes. O procurador-geral do Município, Luiz Antônio, declarou que a administração tem cumprido seu dever constitucional e investido na estruturação dos serviços de proteção animal.",
+        "A decisão deu prazo de até dez dias para a Delegacia Especializada do Meio Ambiente (Dema) e a Perícia Oficial e Identificação Técnica (Politec) enviarem relatórios e laudos de diligências feitas no fim de julho. O Ministério Público terá 15 dias para apresentar um plano emergencial sobre como aplicaria os R$ 15 milhões. O processo foi encaminhado ao Centro Judiciário de Solução de Conflitos e Cidadania (Cejusc) Ambiental para tentativa de conciliação."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-realiza-quinto-sorteio-da-nota-cuiabana-premiada-.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
+      "link": "/materia/justica-nega-pedido-de-bloqueio-de-r-15-milhoes-das-contas-da-prefeitu.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": "Este é o quinto sorteio do programa Nota Cuiabana Premiada realizado em 2026, marcado para esta sexta-feira (7), às 15h. A medida abrange os consumidores que solicitam a inclusão do CPF na nota fiscal ao contratarem serviços no município de Cuiabá.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/206001?width=502px&amp;quality=80",
-      "fotoAlt": null,
-      "fotoLarg": 600,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:almt-abre-matriculas-para-cursos-gratuitos-do-segundo-semestre-de-2026",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "ALMT abre matrículas para cursos gratuitos do segundo semestre de 2026",
-      "resumo": "As capacitações presenciais abrangem diversas áreas e as inscrições podem ser feitas até a primeira semana de agosto pela plataforma EAD.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/escola-do-legislativo-abre-matriculas-para-cursos-gratuitos-do-segundo-semestre/visualizar",
-      "origemNome": "Assembleia de MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Escola e Memória do Legislativo da Assembleia Legislativa de Mato Grosso (ALMT) abriu matrículas para os cursos gratuitos do segundo semestre de 2026. As oportunidades de qualificação são voltadas para servidores públicos e a comunidade em geral.",
-        "As inscrições seguem até a primeira semana de agosto e devem ser realizadas na plataforma EAD da escola, inclusive para os cursos presenciais. Todas as opções oferecem certificado e possuem carga horária de 30, 40 ou 70 horas. Cada curso tem 39 vagas disponíveis, com exceção de Redação para o Enem, que conta com 10 vagas.",
-        "A lista de capacitações inclui Clube de Leitura em Espanhol, Conscientização, Cidadania e Patrimônio, Espanhol para Iniciantes, Espanhol Intermediário, Espanhol para o Enem, História e Historiografia de Mato Grosso, Redação Oficial e Linguagem Simples e Redação para o Enem.",
-        "De acordo com a secretária da Escola e Memória do Legislativo, Marcela Bruna Vieira Castro, o semestre conta com a novidade da autoinscrição via plataforma EAD para os cursos presenciais de Português, Espanhol e Inglês. A programação também inclui eventos e cursos em parceria com outras instituições, como o curso Nova Oratória, que já está em andamento."
-      ],
-      "link": "/materia/almt-abre-matriculas-para-cursos-gratuitos-do-segundo-semestre-de-2026.html",
-      "iso": "2026-08-05T22:18:55.839Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": "As oportunidades de qualificação são voltadas para servidores públicos e a comunidade em geral. As inscrições seguem até a primeira semana de agosto na plataforma de ensino a distância. O histórico do órgão registra uma abertura anterior de matrículas para cursos gratuitos em 5 de agosto de 2026.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -629,11 +601,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-mt-detalha-funcoes-da-vice-presidencia-e-corregedoria-regional-ele",
+      "id": "ilm:vice-presidencia-e-corregedoria-do-tre-mt-fiscaliza-servicos-no-estado",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "TRE-MT detalha funções da Vice-Presidência e Corregedoria Regional Eleitoral",
-      "resumo": "A unidade é responsável por fiscalizar a regularidade dos serviços eleitorais em Mato Grosso e orientar as Zonas Eleitorais do estado.",
+      "titulo": "Vice-Presidência e Corregedoria do TRE-MT fiscaliza serviços no estado",
+      "resumo": "O setor é gerido pelo Vice-Presidente e Corregedor Regional Eleitoral, eleito entre os membros do Tribunal.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
       "origemNome": "TRE-MT",
@@ -641,13 +613,45 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Vice-Presidência e Corregedoria Regional Eleitoral atua como a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em todo o Estado de Mato Grosso. O setor também responde pela expedição de orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais deste Estado.",
-        "A titularidade da unidade é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral. A escolha do ocupante do cargo ocorre por meio de eleição realizada entre os membros do Tribunal.",
-        "A estrutura vinculada ao setor abrange sistemas como o Processo Judicial Eletrônico da Corregedoria - PjeCor, o Sistema de Informações de Óbitos e Direitos Políticos - Infodip e o Sistema de Informações Eleitorais - SIEL. A unidade conta ainda com o regulamento interno da Corregedoria Regional Eleitoral de Mato Grosso, o Protocolo para Julgamento com Perspectiva Racial e o registro do 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil."
+        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais em Mato Grosso. O órgão também atua na expedição de orientações sobre procedimentos e rotinas que devem ser observadas pelas Zonas Eleitorais do Estado.",
+        "A titularidade da unidade é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral. A escolha do ocupante para a função ocorre por meio de eleição realizada entre os membros do Tribunal.",
+        "Entre os sistemas e normativas vinculados à estrutura do órgão estão o Processo Judicial Eletrônico da Corregedoria (PjeCor), o Sistema de Informações de Óbitos e Direitos Políticos (Infodip) e o Sistema de Informações Eleitorais (SIEL). O setor também conta com regulamento interno próprio e com o Protocolo para Julgamento com Perspectiva Racial.",
+        "A unidade realiza inspeções, disponibiliza o Informativo da Corregedoria Regional Eleitoral e faz parte de iniciativas da área, como o 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil."
       ],
-      "link": "/materia/tre-mt-detalha-funcoes-da-vice-presidencia-e-corregedoria-regional-ele.html",
-      "iso": "2026-08-05T22:18:58.151Z",
-      "hora": "18h18",
+      "link": "/materia/vice-presidencia-e-corregedoria-do-tre-mt-fiscaliza-servicos-no-estado.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-leva-debate-sobre-assedio-eleitoral-a-trabalhadores-do-sistema-fiemt-1/@@images/image-0-9e252b1cdd2333227ad6f122d0c40e97.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:tre-mt-realiza-painel-sobre-assedio-eleitoral-em-evento-do-sistema-fie",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "TRE-MT realiza painel sobre assédio eleitoral em evento do Sistema Fiemt em Cuiabá",
+      "resumo": "A atividade reuniu 330 pessoas de forma presencial e virtual, abordando formas de identificação da prática, punições e canais de denúncia para trabalhadores.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/tre-mt-leva-debate-sobre-assedio-eleitoral-a-trabalhadores-do-sistema-fiemt-1",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou nesta quarta-feira (05) um painel sobre assédio eleitoral no local de trabalho durante a Semana Interna de Prevenção de Acidentes do Trabalho (Sipat) da Federação das Indústrias no Estado de Mato Grosso (Fiemt). O evento ocorreu no Plenarinho da instituição, no Centro Político Administrativo (CPA), em Cuiabá.",
+        "O painel contou com participações do assessor jurídico do TRE-MT, Hernandésio de Lima, e da juíza do Trabalho Leda Borges de Lima, do Tribunal Regional do Trabalho de Mato Grosso (TRT-MT) – 23ª Região. Durante a atividade, foram abordados a identificação da coação a eleitores, exemplos da prática e as consequências para empresas e gestores, que podem incluir multas e indenizações.",
+        "Para a fiscalização do assédio eleitoral e do trabalho infantil nas eleições, TRE-MT, TRT-MT e o Ministério Público do Trabalho de Mato Grosso (MPT-MT) – 23ª Região firmaram um Acordo de Cooperação Técnica. As denúncias podem ser enviadas pelos números 0800-647-8191 (TRE-MT) e 0800 364 8400 (TRT-MT), pelo e-mail ouvidoria@tre-mt.jus.br ou pelo portal tre-mt.jus.br.",
+        "A Sipat teve início na segunda-feira (3) e o painel registrou um público de 330 pessoas, entre participantes presenciais e virtuais em unidades do estado. Segundo a gerente jurídica do Sistema Fiemt, Dirla Menezes, a iniciativa visou garantir neutralidade, ética e respeito no ambiente de trabalho durante o período eleitoral."
+      ],
+      "link": "/materia/tre-mt-realiza-painel-sobre-assedio-eleitoral-em-evento-do-sistema-fie.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -659,11 +663,11 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-repassa-r-243-935-80-a-235-servidoras-municipais",
+      "id": "ilm:cuiaba-destina-r-243-935-80-para-235-servidoras-pelo-auxilio-nova-mate",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá repassa R$ 243.935,80 a 235 servidoras municipais",
-      "resumo": "Criado na gestão do prefeito Abilio Brunini, o benefício atendeu 61 mulheres em março, 54 em abril, 53 em maio e 67 em junho de 2026.",
+      "titulo": "Cuiabá destina R$ 243.935,80 para 235 servidoras pelo Auxílio Nova Maternidade",
+      "resumo": "Criado na gestão do prefeito Abilio Brunini, o benefício atendeu trabalhadoras efetivas, comissionadas e contratadas em licença entre março e junho de 2026.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/auxilio-pioneiro-criado-pela-gestao-abilio-ja-beneficia-235-servidoras-municipais",
       "origemNome": "Prefeitura de Cuiabá",
@@ -674,16 +678,16 @@
       "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá destinou R$ 243.935,80 em pagamentos do Auxílio Nova Maternidade em pouco mais de quatro meses de vigência da medida. Ao todo, 235 servidoras efetivas, comissionadas e contratadas que entraram em licença-maternidade receberam o benefício sem redução na remuneração.",
-        "Entre março e junho de 2026, foram atendidas 61 mulheres em março, 54 em abril, 53 em maio e 67 em junho. O valor pago é calculado com base na média das quantias recebidas pela servidora nos 12 meses anteriores ao afastamento por gestação, parto, puerpério ou adoção.",
-        "A medida foi instituída por meio de projeto de lei complementar enviado pelo Executivo e aprovado pela Câmara Municipal. A legislação manteve o pagamento de verbas como adicionais, gratificações vinculadas à função, verbas indenizatórias e o Prêmio Saúde durante o afastamento legal.",
-        "A lei prevê ainda o afastamento imediato de ambientes insalubres sem prejuízo financeiro e possui caráter indenizatório. O prefeito Abilio Brunini afirmou que a iniciativa foi criada para corrigir uma distorção histórica e garantir que nenhuma mulher seja penalizada financeiramente por exercer o direito à licença."
+        "A Prefeitura de Cuiabá repassou R$ 243.935,80 em pagamentos do Auxílio Nova Maternidade em pouco mais de quatro meses de vigência. O recurso beneficiou 235 servidoras municipais que entraram em licença-maternidade sem sofrer redução na remuneração.",
+        "Entre março e junho de 2026, foram atendidas 61 servidoras em março, 54 em abril, 53 em maio e 67 em junho. O benefício abrange servidoras efetivas, comissionadas e contratadas em casos de gestação, parto, puerpério ou adoção, mantendo adicionais, gratificações de função, verbas indenizatórias e o Prêmio Saúde.",
+        "A política foi instituída por projeto de lei complementar do Executivo aprovado pela Câmara Municipal. A legislação estabelece um auxílio temporário calculado pela média das quantias recebidas nos 12 meses anteriores ao afastamento, além de permitir o afastamento imediato de ambientes insalubres sem prejuízo financeiro. O auxílio tem caráter indenizatório para evitar descontos no valor líquido.",
+        "O prefeito Abilio Brunini afirmou que a maternidade não poderia continuar representando perda de renda para as servidoras públicas e que a medida corrige uma distorção histórica para que nenhuma mulher seja penalizada financeiramente."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-repassa-r-243-935-80-a-235-servidoras-municipais.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
+      "link": "/materia/cuiaba-destina-r-243-935-80-para-235-servidoras-pelo-auxilio-nova-mate.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": "O benefício afeta 235 servidoras públicas efetivas, comissionadas e contratadas da Prefeitura de Cuiabá em licença-maternidade. No período entre março e junho de 2026, o mês de junho registrou o maior número de mulheres atendidas (67), superando março (61), abril (54) e maio (53).",
+      "contexto": "O repasse afeta 235 servidoras municipais efetivas, comissionadas e contratadas que entraram em licença-maternidade em Cuiabá. O número de beneficiadas mensalmente variou entre 61 em março, 54 em abril, 53 em maio e 67 em junho. O arquivo registra um caso parecido anterior em 5 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -693,96 +697,30 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:paciente-com-suspeita-de-avc-e-transferido-em-menos-de-30-minutos-na-u",
+      "id": "ilm:sme-preve-entrega-do-ceic-sao-francisco-e-do-ceic-santa-ines-ate-o-fim",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Paciente com suspeita de AVC é transferido em menos de 30 minutos na UPA Norte",
-      "resumo": "Durante a ocorrência, a Polícia Militar foi acionada após um familiar do paciente adotar comportamento agressivo contra a equipe de saúde da unidade.",
+      "titulo": "SME prevê entrega do Ceic São Francisco e do Ceic Santa Inês até o fim do mês",
+      "resumo": "O Ceic São Francisco é a primeira unidade de educação infantil totalmente construída pela atual gestão municipal.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/pacientes-com-suspeita-de-avc-sao-atendidos-dentro-da-janela-terapeutica-nas-upas-de-cuiaba",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/secretaria-municipal-de-educacao-acelera-ritmo-das-obras-para-entregar-primeira-unidade-100-construida-pela-atual-gestao",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Documento",
         "mtagora.com.br"
       ],
       "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "Um paciente com suspeita de Acidente Vascular Cerebral deu entrada na UPA Norte (Morada do Ouro), em Cuiabá, às 13h58 desta quarta-feira (5) e foi encaminhado ao Hospital Municipal de Cuiabá às 14h25. Todo o processo até a transferência durou menos de 30 minutos, mantendo a assistência dentro da janela terapêutica de até quatro horas após o início dos sintomas.",
-        "Durante o atendimento, um familiar do paciente chegou exaltado e agiu de forma agressiva contra os profissionais. A equipe acionou o botão do pânico e a Polícia Militar compareceu ao local. A Secretaria Municipal de Saúde lembrou que desacatar servidor público no exercício da função é crime previsto no artigo 331 do Código Penal.",
-        "A rede municipal mantém o protocolo SOS AVC nas unidades UPA Norte (Morada do Ouro), Sul (Osmar Cabral), Oeste (Verdão) e Leste (Leblon). As equipes são capacitadas para identificar os sinais da doença, aplicar os primeiros cuidados e fazer a regulação para o Hospital Municipal de Cuiabá, unidade de referência na capital.",
-        "O secretário adjunto de Atenção Secundária, Odair Mendonça, informou que a agilidade do atendimento resulta da organização da rede e da preparação dos profissionais. A Secretaria Municipal de Saúde orienta que a população procure urgência ou o Samu ao notar sinais como fraqueza em um lado do corpo, dificuldade para falar, desvio da boca, perda súbita da visão ou alterações no equilíbrio."
+        "A Secretaria Municipal de Educação acelerou o cronograma das obras para entregar, até o fim deste mês, o Centro de Educação Infantil Cuiabano (Ceic) São Francisco, localizado no Residencial Bela Marinha, no bairro São Francisco. O prédio é a primeira unidade de educação infantil construída integralmente pela atual gestão municipal.",
+        "A nova estrutura possui playground com grama sintética. Durante a execução da obra, as crianças recebem atendimento em um espaço provisório nas proximidades. Outra unidade com entrega prevista para este mês é o Ceic Santa Inês, no bairro Poção, que passou por reforma e ampliação de duas salas. No período de intervenção, os alunos dessa unidade são atendidos no Cras e no Centro Comunitário do bairro Dom Aquino.",
+        "O secretário municipal de Educação, Reginaldo Teixeira, informou que os trabalhos nas duas unidades são realizados por empresas diferentes e acompanhados para que o prazo de entrega seja cumprido. Equipes de infraestrutura da secretaria fizeram vistorias técnicas nos locais para fiscalizar o cumprimento do cronograma e os padrões de qualidade.",
+        "A programação da secretaria para o segundo semestre prevê reformas nas Emebs Joana Darc, Osmar Cabral, Marechal Cândido Rondon, Nossa Senhora Aparecida, Tenente Octacílio Sebastião da Cruz, Rafael Rueda, Gláucia Maria Borges Garcia, Orzina de Amorim Soares e Professora Rita Caldas Castrillon. Também passarão por reformas os Ceics Edna Catharina, Sebastião Tolomeu, Wilmon Ferreira de Souza e Maria Nery Batista Ribeiro."
       ],
-      "link": "/materia/paciente-com-suspeita-de-avc-e-transferido-em-menos-de-30-minutos-na-u.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": "Não há registro de atendimento semelhante no histórico arquivado. O tempo entre a entrada do paciente, às 13h58, e o encaminhamento, às 14h25, durou menos de 30 minutos, dentro do prazo de até quatro horas da janela terapêutica. O protocolo SOS AVC abrange os pacientes atendidos nas UPAs Norte, Sul, Oeste e Leste que necessitam de regulação para o Hospital Municipal de Cuiabá.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/829331?width=502px&amp;quality=80",
-      "fotoAlt": null,
-      "fotoLarg": 600,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:assembleia-legislativa-de-mato-grosso-entra-em-recesso-entre-24-e-31-d",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Assembleia Legislativa de Mato Grosso entra em recesso entre 24 e 31 de julho",
-      "resumo": "As atividades administrativas serão retomadas no dia 3 de agosto, enquanto serviços essenciais funcionam em regime de plantão.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/assembleia-legislativa-entra-em-recesso-administrativo-entre-os-dias-24-e-31-de-julho/visualizar",
-      "origemNome": "Assembleia de MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "A Assembleia Legislativa de Mato Grosso (ALMT) entra em recesso administrativo entre os dias 24 e 31 de julho. Durante esse período, as atividades administrativas da Casa ficam suspensas e serão retomadas no dia 3 de agosto.",
-        "Os serviços considerados essenciais permanecerão em funcionamento por meio de escalas de plantão. As secretarias e superintendências organizaram equipes para garantir a continuidade dos atendimentos indispensáveis.",
-        "No Espaço Cidadania, no período de 24 a 31 de julho, haverá apenas a entrega de documentos de identidade que já estão prontos, das 8h às 14h.",
-        "Os demais serviços prestados no Espaço Cidadania estarão temporariamente suspensos, o que inclui a emissão da Carteira de Identidade Nacional (CIN) e os atendimentos da Defensoria Pública, do Procon, do Detran, da Receita Federal, por meio do Ponto de Atendimento Virtual, e da Ouvidoria. Os atendimentos regulares retornam no dia 3 de agosto."
-      ],
-      "link": "/materia/assembleia-legislativa-de-mato-grosso-entra-em-recesso-entre-24-e-31-d.html",
-      "iso": "2026-08-05T22:18:55.839Z",
-      "hora": "18h18",
+      "link": "/materia/sme-preve-entrega-do-ceic-sao-francisco-e-do-ceic-santa-ines-ate-o-fim.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
       "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-torna-obrigatoria-a-emissao-de-nfs-e-pelo-emissor-nacional-em-s",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Cuiabá torna obrigatória a emissão de NFS-e pelo Emissor Nacional em setembro",
-      "resumo": "A regra passa a valer em 1º de setembro de 2026 para todos os contribuintes do ISSQN no município, descontinuando o webservice municipal e o sistema Free Nota.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-torna-obrigatorio-uso-do-emissor-nacional-de-nfs-e-a-partir-de-setembro",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "Prefeitura de Cuiabá"
-      ],
-      "quentura": 2,
-      "uf": "mt",
-      "corpo": [
-        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Economia, determinou que todos os contribuintes do Imposto Sobre Serviços de Qualquer Natureza (ISSQN) do município deverão emitir a Nota Fiscal de Serviço Eletrônica (NFS-e) exclusivamente pelo Emissor Nacional a partir de 1º de setembro de 2026.",
-        "A medida foi estabelecida alinhada às exigências da Reforma Tributária e à Resolução CGSN nº 189/2026. A norma amplia a obrigatoriedade que já era aplicada aos Microempreendedores Individuais (MEIs) desde 1º de setembro de 2023, passando a abranger todos os prestadores de serviços, independentemente do regime tributário. Mais de 80% dos contribuintes cuiabanos já são optantes pelo Simples Nacional ou SIMEI.",
-        "O emissor local, o webservice municipal e o sistema Free Nota permanecerão ativos até 31 de agosto de 2026. A partir de 1º de setembro, esses serviços serão descontinuados. Quem não efetuar a migração até o prazo final deixará de emitir notas fiscais de serviços, o que poderá gerar irregularidades fiscais e dificultar a comprovação dos serviços prestados.",
-        "O diretor de Receitas Mobiliárias e auditor fiscal tributário da Receita Municipal, Alexandre Moraes Ferreira, orientou que os ajustes de migração sejam feitos com antecedência, sobretudo por contribuintes que usam webservice. A Secretaria recomenda que empresas, escritórios de contabilidade e desenvolvedores utilizem a documentação técnica e os ambientes de homologação no Portal da Nota Fiscal de Serviço Eletrônica.",
-        "Para dúvidas sobre o processo de migração, os atendimentos são feitos pelos e-mails suporte@notacontrol.com.br e issqn@cuiaba.mt.gov.br, pelo WhatsApp (65) 3324-5574 e pelo telefone (65) 3324-5590."
-      ],
-      "link": "/materia/cuiaba-torna-obrigatoria-a-emissao-de-nfs-e-pelo-emissor-nacional-em-s.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": "A medida atinge todos os prestadores de serviços de Cuiabá pagadores de ISSQN, grupo no qual mais de 80% dos contribuintes são optantes do Simples Nacional ou SIMEI. A obrigatoriedade do Emissor Nacional já era aplicada aos Microempreendedores Individuais do município desde 1º de setembro de 2023. Os sistemas locais permanecem ativos até 31 de agosto de 2026, e a mudança definitiva ocorre em 1º de setembro de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -792,59 +730,28 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:novas-restricoes-eleitorais-para-radio-e-tv-entram-em-vigor-em-06-de-a",
+      "id": "ilm:emissoras-de-radio-e-tv-tem-novas-restricoes-eleitorais-a-partir-de-6-",
       "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Novas restrições eleitorais para rádio e TV entram em vigor em 06 de agosto",
-      "resumo": "Regras previstas na legislação buscam assegurar a igualdade entre concorrentes nas Eleições Gerais de 2026.",
+      "editoria": "regional",
+      "titulo": "Emissoras de rádio e TV têm novas restrições eleitorais a partir de 6 de agosto",
+      "resumo": "As regras visam assegurar a igualdade entre candidatas, candidatos, partidos, federações e coligações durante as Eleições Gerais de 2026.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/emissoras-devem-observar-vedacoes-da-legislacao-eleitoral-a-partir-de-06-08",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A partir de 06 de agosto, entram em vigor novas restrições da legislação eleitoral para emissoras de rádio e televisão em todo o país. As normas visam assegurar a igualdade de oportunidades entre candidatas, candidatos, partidos políticos, federações e coligações, preservando o equilíbrio e a lisura das Eleições Gerais de 2026.",
-        "Conforme a Lei nº 9.504/1997 e a Resolução TSE nº 23.610/2019, fica proibida a transmissão de pesquisas em que seja possível identificar o eleitor ou haja manipulação de dados, a veiculação de propaganda política na programação normal e a concessão de tratamento privilegiado, inclusive por retransmissão de lives. Também é vedada a exibição de filmes, novelas e minisséries com alusão ou crítica a concorrentes, exceto em programas jornalísticos e debates.",
-        "A legislação proíbe ainda a divulgação de nome de programa que faça referência a candidata ou candidato escolhido em convenção, mesmo que a atração já existisse ou coincida com o nome utilizado na urna eletrônica. O descumprimento dessa regra pode acarretar o cancelamento do registro do programa.",
-        "A juíza auxiliar da Presidência do TRE-MT, Edna Coutinho, afirmou que as restrições buscam garantir a isonomia entre os concorrentes e o acesso equilibrado às informações pelo eleitorado. O secretário judiciário do TRE-MT, Carlos Luanga, orientou que as emissoras de rádio e televisão observem as regras para evitar irregularidades no processo eleitoral."
-      ],
-      "link": "/materia/novas-restricoes-eleitorais-para-radio-e-tv-entram-em-vigor-em-06-de-a.html",
-      "iso": "2026-08-05T22:18:58.151Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:unidade-da-sema-mt-coordena-programas-e-projetos-internacionais",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Unidade da Sema-MT coordena programas e projetos internacionais",
-      "resumo": "O setor atua como ponto central entre a Secretaria, fundos climáticos e organismos internacionais para fortalecer a gestão ambiental em Mato Grosso.",
-      "fonte": "Meridiano, com informações de Sema-MT",
-      "origemLink": "https://www.sema.mt.gov.br/site/index.php/unidades-administrativas/unidade-de-programas-e-projetos-internacionais",
-      "origemNome": "Sema-MT",
-      "pautadoPor": [],
-      "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "A Unidade de Programas e Projetos Internacionais (UPPI) atua como ponto central de articulação entre a Secretaria, organismos internacionais, governos parceiros, fundos climáticos, instituições financeiras e iniciativas multilaterais. O setor busca garantir a governança, a transparência, a eficiência e o alinhamento técnico das ações financiadas por recursos externos.",
-        "A unidade coordena o planejamento, a execução, o monitoramento e o reporte dos programas e projetos internacionais. Suas atribuições incluem assegurar o cumprimento de salvaguardas socioambientais, a conformidade financeira e a integridade dos processos.",
-        "A UPPI atua para fortalecer a gestão ambiental em Mato Grosso, a proteção das florestas, a redução das emissões de gases de efeito estufa e a valorização de povos e comunidades tradicionais. O setor trabalha também na mitigação e adaptação às mudanças climáticas, buscando contribuir para uma economia sustentável e ampliar a capacidade institucional do Estado.",
-        "A estrutura lidera a articulação entre executores e subexecutores, fiscaliza contratos e gerencia riscos sociais, ambientais, financeiros e políticos. Além disso, coordena a comunicação institucional dos programas para assegurar o acesso da sociedade à informação e aos canais de ouvidoria."
+        "A partir de 6 de agosto, novas restrições previstas na legislação eleitoral passam a vigorar para emissoras de rádio e televisão em todo o país. As medidas, fundamentadas na Lei nº 9.504/1997 e na Resolução TSE nº 23.610/2019, visam garantir a igualdade de oportunidades entre participantes da disputa e a lisura das Eleições Gerais de 2026.",
+        "Na programação normal e nos noticiários, fica proibida a transmissão de pesquisas ou consultas eleitorais que permitam identificar o eleitor ou apresentem dados manipulados. Também é vetada a veiculação de propaganda política, a concessão de tratamento privilegiado a concorrentes — inclusive por retransmissão de lives — e a exibição de filmes, novelas ou programas com alusão ou crítica a candidatos e partidos. A exceção aplica-se a programas jornalísticos e debates.",
+        "A legislação proíbe ainda a divulgação de nomes de atrações que façam referência a candidatos escolhidos em convenção, mesmo em programas preexistentes ou quando o título coincidir com o nome usado na urna eletrônica. O descumprimento pode resultar no cancelamento do registro do programa.",
+        "A juíza auxiliar da Presidência do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT), Edna Coutinho, declarou que as restrições buscam garantir a isonomia entre os concorrentes e o acesso equilibrado às informações. O secretário judiciário do TRE-MT, Carlos Luanga, orientou que os meios de comunicação observem as normas para evitar irregularidades."
       ],
-      "link": "/materia/unidade-da-sema-mt-coordena-programas-e-projetos-internacionais.html",
-      "iso": "2026-08-05T22:18:53.518Z",
-      "hora": "18h18",
+      "link": "/materia/emissoras-de-radio-e-tv-tem-novas-restricoes-eleitorais-a-partir-de-6-.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": null,
+      "contexto": "As medidas afetam emissoras de rádio e televisão de todo o país e passam a valer em 6 de agosto. O histórico registra matérias sobre o mesmo tema duas vezes, em 4 e 5 de agosto de 2026.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -854,11 +761,11 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-alerta-para-baixa-cobertura-vacinal-contra-a-influenza-em-grupo",
+      "id": "ilm:cuiaba-reforca-alerta-sobre-baixa-cobertura-vacinal-contra-a-influenza",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Cuiabá alerta para baixa cobertura vacinal contra a Influenza em grupos prioritários",
-      "resumo": "Com 14 mortes registradas no ano, as taxas de imunização na capital atingiram 37,72% entre crianças e 40,13% nos idosos, abaixo da meta de 90% fixada pelo Ministério da Saúde.",
+      "titulo": "Cuiabá reforça alerta sobre baixa cobertura vacinal contra a Influenza",
+      "resumo": "Nenhum dos principais grupos prioritários atingiu a meta de 90% definida pelo Ministério da Saúde e o município registrou 14 mortes pela doença de janeiro a julho de 2026.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-tem-baixa-cobertura-contra-influenza-e-saude-alerta-para-risco-de-casos-graves-entre-criancas-e-idosos",
       "origemNome": "Prefeitura de Cuiabá",
@@ -868,78 +775,45 @@
       "quentura": 2,
       "uf": null,
       "corpo": [
-        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Saúde, reforçou o alerta sobre a baixa cobertura vacinal contra a Influenza na capital e convocou os grupos prioritários a buscarem imunização nas unidades de saúde. Os índices da campanha permanecem abaixo da meta de 90% estabelecida pelo Ministério da Saúde para cada público prioritário.",
-        "Dados atualizados em 5 de agosto de 2026 mostram que a cobertura em crianças de 6 meses a menores de 6 anos está em 37,72%, com 18.905 doses aplicadas em uma população estimada de 50.121 crianças. Nos idosos com 60 anos ou mais, o índice atinge 40,13%, com 39.354 doses aplicadas de um público estimado em 98.078 pessoas. Entre as gestantes, foram aplicadas 4.143 doses, alcançando 61% do público.",
-        "Conforme o Boletim Epidemiológico de Vigilância dos Vírus Respiratórios do município, referente ao período de janeiro a julho de 2026, foram registrados 2.348 casos de Influenza A e B na população-alvo da vacinação. Do total, 957 registros ocorreram em crianças de 0 a 6 anos e 172 em idosos com 60 anos ou mais. A doença provocou 14 mortes no período analisado.",
-        "Iniciada em 28 de março de 2026, a campanha oferece vacinas gratuitamente nas 72 Unidades de Saúde da Família do município, incluindo locais com atendimento estendido até as 19h e até as 21h. O município também adotou vacinação extramuros em hospitais, maternidades, residências terapêuticas, Rodoviária e Centros de Convivência de Idosos, além de instituir a Estratégia Municipal de Vacinação nas Escolas pela Portaria Conjunta SMS/SME.CULT.ESP nº 001/2026.",
-        "A imunização não está disponível para a população geral, pois a liberação depende do alcance da meta de 90% de cobertura nos grupos prioritários definidos pelo Ministério da Saúde, que englobam crianças, gestantes, puérperas"
+        "A Prefeitura de Cuiabá, por meio da Secretaria Municipal de Saúde, reforçou o alerta sobre a baixa cobertura vacinal contra a Influenza e convocou a população dos grupos prioritários a procurar as unidades de saúde. Mesmo com o início da campanha em 28 de março de 2026 e a ampliação das estratégias, os índices permanecem abaixo da meta de 90% estabelecida pelo Ministério da Saúde para cada público alvo.",
+        "Com dados atualizados em 5 de agosto de 2026, a vacinação entre crianças de 6 meses a menores de 6 anos está em 37,72%, com 18.905 doses aplicadas em uma população estimada de 50.121 crianças. Nos idosos com 60 anos ou mais, o índice atinge 40,13%, somando 39.354 doses aplicadas em 98.078 pessoas. Já entre as gestantes, foram aplicadas 4.143 doses, alcançando 61% do grupo.",
+        "De acordo com o Boletim Epidemiológico de Vigilância dos Vírus Respiratórios, entre janeiro e julho de 2026 foram registrados 2.348 casos de Influenza A e B na população alvo em Cuiabá. Desse total, 957 ocorrências foram em crianças de 0 a 6 anos e 172 em idosos com 60 anos ou mais. A doença causou 14 mortes no município durante o período analisado.",
+        "A imunização segue disponível nas 72 Unidades de Saúde da Família e em locais extramuros, além de contar com atendimento em horário estendido até as 19h ou 21h em postos específicos. A vacina não está aberta para a população em geral, pois a liberação depende do alcance da meta de 90% de cobertura nos grupos prioritários previstos pelo Ministério da Saúde."
       ],
-      "link": "/materia/cuiaba-alerta-para-baixa-cobertura-vacinal-contra-a-influenza-em-grupo.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
+      "link": "/materia/cuiaba-reforca-alerta-sobre-baixa-cobertura-vacinal-contra-a-influenza.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": "Os públicos afetados pelo alerta são crianças de 6 meses a menores de 6 anos, idosos com 60 anos ou mais e gestantes em Cuiabá. Os índices de cobertura de 37,72% em crianças, 40,13% em idosos e 61% em gestantes estão abaixo da meta de 90% definida pelo Ministério da Saúde. A mobilização foi iniciada em 28 de março de 2026 nas 72 unidades de saúde do município.",
+      "contexto": "O histórico do arquivo registra um alerta parecido sobre a vacinação contra a Influenza no município em 5 de agosto de 2026. A meta de imunização é de 90%, enquanto os índices atuais alcançam 37,72% entre as crianças, 40,13% nos idosos e 61% nas gestantes. A medida afeta a população de crianças de 6 meses a menores de 6 anos, idosos com 60 anos ou mais e gestantes.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/1052479?width=502px&amp;quality=80",
-      "fotoAlt": null,
-      "fotoLarg": 600,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:almt-fica-em-5-lugar-nacional-em-interacoes-nas-redes-sociais-no-1-sem",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "ALMT fica em 5º lugar nacional em interações nas redes sociais no 1º semestre de 2026",
-      "resumo": "Dados da Social Media Gov mostram que os perfis da Assembleia Legislativa de Mato Grosso somaram 179.675 interações, superando órgãos de estados como Rio de Janeiro e Minas Gerais.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/almt-esta-entre-as-cinco-assembleias-com-mais-interacoes-nas-redes-sociais/visualizar",
-      "origemNome": "Assembleia de MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "A Assembleia Legislativa de Mato Grosso (ALMT) alcançou a quinta posição no ranking nacional de parlamentos estaduais com maior número de interações nas redes sociais no primeiro semestre de 2026. Os dados foram divulgados pela plataforma Social Media Gov e indicam que os perfis institucionais da Casa somaram 179.675 interações no período.",
-        "Na classificação do levantamento, a ALMT ficou à frente das assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas. O secretário de Comunicação Social, coronel Henrique Santos, e a gerente de Gestão de Redes e Publicidade Institucional, Noemia Almeida, atribuíram a marca ao trabalho integrado das equipes de comunicação do órgão.",
-        "O setor conta com a atuação de áreas como jornalismo, fotografia, TV Assembleia, Rádio Assembleia, redes sociais e publicidade. A equipe responsável pela gestão direta das redes e publicidade institucional é formada por nove servidores e uma jovem aprendiz.",
-        "O resultado sucede premiações anteriores da comunicação da Casa. Em 2025, a ALMT ficou em segundo lugar no Prêmio Social Media Gov, no 14º Redes WeGov, com a assistente virtual \"Alê\". Neste ano, a instituição conquistou o primeiro lugar da mesma premiação, no 15º Redes WeGov, com o projeto \"Termômetro de Notícias\", que utiliza inteligência artificial e análise de dados.",
-        "Um artigo científico sobre o \"Termômetro de Notícias\", escrito por Noemia Almeida com revisão de William Monteiro e Yuri Daltro Caseiro, foi aprovado para apresentação no Congresso Brasileiro de Comunicação Pública."
-      ],
-      "link": "/materia/almt-fica-em-5-lugar-nacional-em-interacoes-nas-redes-sociais-no-1-sem.html",
-      "iso": "2026-08-05T22:18:55.839Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": "O histórico registra quatro matérias semelhantes entre 3 e 4 de agosto de 2026. Em 2025, a ALMT havia ficado em segundo lugar no Prêmio Social Media Gov. O levantamento abrange os perfis institucionais e a equipe de comunicação da Casa.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira/@@images/image-0-b42a3ea0416d9e20c1accc2e9fcb063b.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governo-sanciona-lei-da-politica-de-seguranca-no-ambiente-escolar-em-m",
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:justica-eleitoral-altera-dois-locais-de-votacao-na-area-rural-de-jusci",
       "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Governo sanciona lei da Política de Segurança no Ambiente Escolar em MT",
-      "resumo": "A norma prevê a elaboração de planos de proteção, a instalação gradual de videomonitoramento e o uso de botões de pânico nas unidades da rede estadual de ensino.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/lei-cria-politica-permanente-de-seguranca-e-protecao-no-ambiente-escolar-em-mt/visualizar",
-      "origemNome": "Assembleia de MT",
+      "editoria": "brasil",
+      "titulo": "Justiça Eleitoral altera dois locais de votação na área rural de Juscimeira",
+      "resumo": "Medidas constam nas Portarias nº 06/2026 e 08/2026 e readequam seções do município para as Eleições Gerais de 2026.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/justica-eleitoral-altera-locais-de-votacao-na-area-rural-de-juscimeira",
+      "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": "mt",
+      "uf": null,
       "corpo": [
-        "O Governo de Mato Grosso sancionou a Lei nº 13.459, que institui a Política Estadual Permanente de Segurança, Prevenção e Proteção no Ambiente Escolar. Aprovada pela Assembleia Legislativa em 23 de junho de 2026 e publicada no Diário Oficial, a norma estabelece diretrizes e instrumentos de governança para as unidades de ensino da rede estadual.",
-        "A legislação visa assegurar um ambiente seguro e proteger a integridade de estudantes, professores e demais membros da comunidade escolar. As ações preveem a articulação entre as áreas de educação, segurança pública, saúde e assistência social, além do desenvolvimento de programas de mediação de conflitos e combate ao bullying e cyberbullying.",
-        "As instituições de ensino deverão elaborar um Plano de Segurança Escolar com protocolos de prevenção e de resposta a emergências. O texto também determina a implantação progressiva de sistemas de videomonitoramento, com respeito à Lei Geral de Proteção de Dados Pessoais (LGPD), e a inclusão gradual de dispositivos de alerta emergencial, incluindo botão de pânico.",
-        "A implementação da política dependerá de disponibilidade orçamentária, regulamentação pelo Poder Executivo e definição de critérios para priorizar escolas situadas em regiões com maior vulnerabilidade social e índices elevados de violência."
+        "A Justiça Eleitoral alterou dois locais de votação situados na área rural de Juscimeira, município localizado a 158 km de Cuiabá. A decisão consta nas Portarias nº 06/2026 e 08/2026, que foram assinadas pelo juiz da 14ª Zona Eleitoral, Fernando Kendi Ishikawa, e vale para o dia de votação em 4 de outubro.",
+        "A primeira modificação ocorreu na extensão da Escola Municipal de Ensino Fundamental Chico Mendes, situada no Assentamento Geraldo Pereira de Andrade, que não atingiu a quantidade mínima de 50 eleitores. Em razão disso, a seção eleitoral nº 110 foi agregada à seção nº 61, localizada na Escola Municipal Chico Mendes, no Distrito de Irenópolis.",
+        "Posteriormente, as seções nº 50, 51 e 61, da Escola Municipal Chico Mendes, em Irenópolis, foram transferidas temporariamente para a Escola Estadual Antônio José de Lima, localizada na Rua Emanuel Pinheiro, nº 183, Centro. A transferência foi motivada por uma reforma no prédio escolar, conforme explicou a chefe de Cartório da 14ª Zona Eleitoral, Rosangela Colli Dal Pra.",
+        "O município de Juscimeira conta com 34 seções eleitorais, 6 locais de votação e uma média de 250 eleitores por seção. Do total de 8.781 eleitores aptos a votar na cidade, 8.491 (96,7%) possuem a biometria cadastrada. A alteração do local é feita automaticamente no sistema e pode ser consultada no site do TRE-MT ou no aplicativo e-Título, disponível para iOS e Android."
       ],
-      "link": "/materia/governo-sanciona-lei-da-politica-de-seguranca-no-ambiente-escolar-em-m.html",
-      "iso": "2026-08-05T22:18:55.839Z",
-      "hora": "18h18",
+      "link": "/materia/justica-eleitoral-altera-dois-locais-de-votacao-na-area-rural-de-jusci.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -951,30 +825,30 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-e-defensoria-fazem-acao-sobre-direitos-do-idoso-n",
+      "id": "ilm:upas-de-cuiaba-mantem-protocolo-para-encaminhamento-rapido-de-casos-su",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá e Defensoria fazem ação sobre direitos do idoso no CCI João Guerreiro",
-      "resumo": "Encontro do dia 4 de agosto marcou o encerramento das visitas do projeto Reforçando Laços e distribuiu a Cartilha dos Direitos da Pessoa Idosa.",
+      "titulo": "UPAs de Cuiabá mantêm protocolo para encaminhamento rápido de casos suspeitos de AVC",
+      "resumo": "Atendimentos são integrados ao protocolo SOS AVC e contam com transferência para o Hospital Municipal de Cuiabá dentro do limite de quatro horas após o início dos sintomas.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-fortalece-acesso-a-informacao-sobre-direitos-da-pessoa-idosa-em-acao-no-cci-joao-guerreiro",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/pacientes-com-suspeita-de-avc-sao-atendidos-dentro-da-janela-terapeutica-nas-upas-de-cuiaba",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "LOCAL MT"
+        "O Documento"
       ],
-      "quentura": 2,
+      "quentura": 1,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá e a Defensoria Pública de Mato Grosso promoveram, no dia 4 de agosto, uma ação voltada à orientação sobre os direitos da população idosa no Centro de Convivência de Idosos (CCI) João Guerreiro. Durante a atividade, os participantes receberam informações sobre serviços públicos e exemplares da Cartilha dos Direitos da Pessoa Idosa.",
-        "A iniciativa integrou o projeto Reforçando Laços, da Defensoria Pública, e marcou o encerramento de uma série de visitas aos centros de convivência do município. Representante da instituição, Lívia de Paula Santos informou que o objetivo foi acolher sugestões para aperfeiçoar os serviços, além de apresentar a atuação do Núcleo de Mediação em casos de vulnerabilidade, abandono ou suspeita de maus-tratos.",
-        "A gerente do CCI João Guerreiro, Leidiane Virgini Figueiredo, afirmou que a ação ajuda os frequentadores a compreenderem as garantias previstas no Estatuto da Pessoa Idosa. A aposentada Magnolia Almeida, que frequenta o local há 12 anos, também apontou a relevância do acesso à informação e das atividades oferecidas na unidade.",
-        "Administrado pela Prefeitura de Cuiabá, o CCI João Guerreiro tem mais de 200 idosos cadastrados e recebe entre 350 e 400 pessoas por semana, somando visitantes e os participantes do baile de quinta-feira. O espaço oferece ginástica, hidroginástica, rodas de conversa, jogos recreativos e alimentação saudável, funcionando de segunda a quinta-feira, das 7h às 16h."
+        "As quatro Unidades de Pronto Atendimento (UPAs) de Cuiabá atuam com o protocolo SOS AVC para identificar e transferir pacientes com suspeita de Acidente Vascular Cerebral para o Hospital Municipal de Cuiabá (HMC). A integração abrange as unidades Norte (Morada do Ouro), Sul (Osmar Cabral), Oeste (Verdão) e Leste (Leblon), mantidas pela Secretaria Municipal de Saúde.",
+        "Nesta quarta-feira (5), a UPA Norte atendeu um paciente com suspeita da doença que deu entrada às 13h58 e teve o encaminhamento ao HMC concluído às 14h25, em menos de 30 minutos. Durante o atendimento, um familiar do paciente adotou comportamento agressivo, o que levou a equipe a acionar o botão do pânico e a Polícia Militar para conter a situação.",
+        "O secretário adjunto de Atenção Secundária, Odair Mendonça, declarou que a agilidade no encaminhamento dentro da janela terapêutica de até quatro horas busca conter sequelas. O gestor também pontuou que agressões e desacatos prejudicam o atendimento dos demais usuários e estão sujeitos a penalidades legais.",
+        "A Secretaria Municipal de Saúde reforçou que desacatar servidor público é crime previsto no artigo 331 do Código Penal. A pasta orienta que a população procure urgência ou acione o Samu ao notar sintomas como fraqueza em um lado do corpo, dificuldade para falar, desvio da boca, perda súbita da visão ou alterações no equilíbrio."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-e-defensoria-fazem-acao-sobre-direitos-do-idoso-n.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
+      "link": "/materia/upas-de-cuiaba-mantem-protocolo-para-encaminhamento-rapido-de-casos-su.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": "A ação é voltada à população idosa frequentadora do Centro de Convivência de Idosos João Guerreiro, que conta com mais de 200 cadastrados. A atividade realizada no dia 4 de agosto marcou o encerramento de uma série de visitas da Defensoria Pública aos centros de convivência do município.",
+      "contexto": "O protocolo de encaminhamento abrange pacientes com suspeita de AVC atendidos nas quatro UPAs de Cuiabá. A janela terapêutica informada é de até quatro horas, enquanto a transferência citada levou menos de 30 minutos. Não há registro de casos parecidos no histórico.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -984,28 +858,28 @@
       "fotoLarg": 0,
       "municipio": "barradogarcas",
       "municipioNome": "Barra do Garças",
-      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-eleicoes-gerais-de-2026-em-barr",
+      "id": "ilm:tre-mt-realiza-audiencia-publica-sobre-as-eleicoes-2026-em-barra-do-ga",
       "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "TRE-MT realiza audiência pública sobre Eleições Gerais de 2026 em Barra do Garças",
-      "resumo": "Encontro no Fórum do município reuniu cerca de 100 pessoas de nove cidades do Vale do Araguaia e debateu temas como a urna eletrônica e o aplicativo Pardal.",
+      "editoria": "brasil",
+      "titulo": "TRE-MT realiza audiência pública sobre as Eleições 2026 em Barra do Garças",
+      "resumo": "O encontro reuniu cerca de 100 pessoas de nove municípios do Vale do Araguaia para tirar dúvidas sobre o processo eleitoral e a urna eletrônica.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": "mt",
+      "uf": null,
       "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou nesta sexta-feira (31) a audiência pública sobre as Eleições Gerais de 2026 em Barra do Garças, distante 521 km de Cuiabá. O evento ocorreu no Tribunal do Júri do Fórum da Comarca do município e reuniu cerca de 100 pessoas de nove municípios localizados no Vale do Araguaia.",
-        "A abertura foi realizada pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. A mesa dos trabalhos foi coordenada pelo juiz-membro substituto Flávio Fraga e Silva e contou com apresentações do assessor jurídico Hernandésio de Lima e do coordenador de Sistemas Eleitorais e Logística, Salomão Fortaleza, que trataram da segurança da urna eletrônica e dos canais de atendimento ao eleitorado.",
-        "A audiência reuniu representantes do Ministério Público Estadual, do Poder Judiciário, gestões municipais, partidos políticos, candidatos, líderes religiosos, de movimentos comunitários, voluntários de projetos sociais, alunos da Escola Estadual Militar Tiradentes \"Cabo PM Vanilson Silva Carvalho\" e indígenas do povo Xavante. Durante o debate, foram levantadas questões sobre acessibilidade, assédio eleitoral no trabalho, uso de redes sociais por candidatos, treinamento de mesários e o aplicativo Pardal, que estará disponível a partir do dia 16 de agosto.",
-        "Barra do Garças foi o quarto polo a receber o ciclo de audiências públicas promovido pelo TRE-MT em seis polos regionais do estado. O encontro teve o apoio do cartório da 9ª Zona Eleitoral e coordenação da Assessoria de Gestão Estratégica (AGE). As próximas reuniões estão agendadas para os municípios de Cáceres, no dia 7 de agosto, e Cuiabá, no dia 14 de agosto."
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizou nesta sexta-feira (31) uma audiência pública sobre as Eleições Gerais de 2026, no Tribunal do Júri do Fórum da Comarca de Barra do Garças. O município, situado a 521 km de Cuiabá, foi o quarto polo a receber o ciclo do evento, reunindo cerca de 100 pessoas de nove municípios do Vale do Araguaia.",
+        "A abertura dos trabalhos foi feita pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. A mesa foi coordenada pelo juiz-membro substituto do órgão, Flávio Fraga e Silva, e contou com exposições do assessor jurídico Hernandésio de Lima, sobre canais de atendimento, e do coordenador de Sistemas Eleitorais e Logística, Salomão Fortaleza, sobre a segurança da urna eletrônica.",
+        "O evento teve a participação de representantes do Ministério Público Estadual (MPE-MT), do Poder Judiciário, de gestões municipais, de partidos políticos, além de indígenas do povo Xavante, líderes religiosos e comunitários, candidatos e estudantes da Escola Estadual Militar Tiradentes \"Cabo PM Vanilson Silva Carvalho\". Foram discutidos assuntos como acessibilidade, assédio eleitoral no trabalho, uso de redes sociais por candidatos, treinamento de mesários e o aplicativo Pardal, disponível a partir de 16 de agosto.",
+        "A audiência em Barra do Garças teve apoio do cartório da 9ª Zona Eleitoral e coordenação da Assessoria de Gestão Estratégica (AGE). O ciclo promovido pela Justiça Eleitoral abrange seis polos no estado, com os próximos eventos marcados para Cáceres, no dia 7 de agosto, e Cuiabá, no dia 14 de agosto."
       ],
-      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-eleicoes-gerais-de-2026-em-barr.html",
-      "iso": "2026-08-05T22:18:58.151Z",
-      "hora": "18h18",
+      "link": "/materia/tre-mt-realiza-audiencia-publica-sobre-as-eleicoes-2026-em-barra-do-ga.html",
+      "iso": "2026-08-05T22:44:45.922Z",
+      "hora": "18h44",
       "original": true,
-      "contexto": "O histórico registra outra audiência pública do TRE-MT sobre as Eleições Gerais de 2026 em 3 de agosto de 2026, realizada em Rondonópolis. Além disso, o tribunal já havia promovido um debate e uma reunião preparatória sobre o pleito em Barra do Garças nos dias 3 e 4 de agosto de 2026. A audiência atual reuniu representantes do Ministério Público, do Judiciário, de gestões municipais, partidos, candidatos, estudantes.",
+      "contexto": "O histórico registra outros três eventos do TRE-MT sobre as Eleições de 2026 realizados nos dias 3 e 4 de agosto de 2026 em Rondonópolis e Barra do Garças. O município foi o quarto polo a receber o ciclo de audiências do órgão na região. A reunião abrangeu cerca de 100 pessoas de nove municípios do Vale do Araguaia, incluindo gestores locais, candidatos, estudantes e indígenas do povo Xavante.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1015,80 +889,163 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-preve-entregar-duas-creches-ate-o-fim-do-mes",
+      "id": "ilm:acao-no-cci-joao-guerreiro-orienta-idosos-sobre-direitos-em-cuiaba",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá prevê entregar duas creches até o fim do mês",
-      "resumo": "O Ceic São Francisco é a primeira unidade construída pela atual gestão, enquanto o Ceic Santa Inês passou por reforma e recebeu a ampliação de duas salas.",
+      "titulo": "Ação no CCI João Guerreiro orienta idosos sobre direitos em Cuiabá",
+      "resumo": "Realizado em 4 de agosto, o evento encerrou as visitas do projeto Reforçando Laços aos centros de convivência de Cuiabá e distribuiu exemplares da Cartilha dos Direitos da Pessoa Idosa.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/secretaria-municipal-de-educacao-acelera-ritmo-das-obras-para-entregar-primeira-unidade-100-construida-pela-atual-gestao",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-fortalece-acesso-a-informacao-sobre-direitos-da-pessoa-idosa-em-acao-no-cci-joao-guerreiro",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "MOMENTO MT"
+        "Prefeitura de Cuiabá",
+        "LOCAL MT"
       ],
-      "quentura": 1,
+      "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Secretaria Municipal de Educação prevê concluir até o fim deste mês a construção do Centro de Educação Infantil Cuiabano (Ceic) São Francisco e a reforma do Ceic Santa Inês. Equipes da pasta realizaram vistoria técnica no local e em outras unidades para acompanhar o andamento das intervenções e o cumprimento do cronograma.",
-        "Localizado no Residencial Bela Marinha, no bairro São Francisco, o Ceic São Francisco é a primeira unidade de educação infantil construída totalmente pela atual gestão. O prédio conta com um playground equipado com grama sintética e, durante as obras, o atendimento às crianças ocorre em um espaço provisório nas proximidades.",
-        "No bairro Poção, o Ceic Santa Inês recebeu reformas e a ampliação de duas salas para aumentar a capacidade de vagas no próximo ano letivo. O atendimento atual dos alunos é feito no Cras e no Centro Comunitário do bairro Dom Aquino. Segundo o secretário municipal de Educação, Reginaldo Teixeira, as duas obras são executadas por empresas diferentes e seguem dentro do prazo.",
-        "Para o segundo semestre, a prefeitura prevê reformas nas escolas municipais Joana Darc, no Real Parque; Osmar Cabral, no bairro Osmar Cabral; Marechal Cândido Rondon, no Alvorada; Nossa Senhora Aparecida, no bairro de mesmo nome; Tenente Octacílio Sebastião da Cruz, no Morada da Serra; Rafael Rueda, no Três Barras; Gláucia Maria Borges Garcia, no Despraiado; Orzina de Amorim Soares, no Jardim Vitória; e Professora Rita Caldas Castrillon, no Coophamil. Também estão programadas reformas nos Ceics Edna Catharina, no Altos da Serra; Sebastião Tolomeu, no Santa Isabel; Wilmon Ferreira de Souza, no Três Barras; e Maria Nery Batista Ribeiro, no Osmar Cabral."
+        "A Prefeitura de Cuiabá e a Defensoria Pública de Mato Grosso promoveram, no dia 4 de agosto, uma ação de orientação sobre os direitos da população idosa no Centro de Convivência de Idosos (CCI) João Guerreiro. Durante a atividade, os participantes receberam orientações sobre os serviços da instituição e exemplares da Cartilha dos Direitos da Pessoa Idosa.",
+        "A iniciativa integra o projeto Reforçando Laços, desenvolvido pela Defensoria Pública. A representante do órgão, Lívia de Paula Santos, explicou que o encontro encerrou uma série de visitas aos centros de convivência de Cuiabá para ouvir os idosos e divulgar atendimentos como o do Núcleo de Mediação, voltado a casos de vulnerabilidade, abandono ou suspeita de maus-tratos.",
+        "A gerente do CCI João Guerreiro, Leidiane Virgini Figueiredo, afirmou que a presença da equipe orientou sobre os direitos e deveres previstos no Estatuto da Pessoa Idosa. O centro conta com mais de 200 idosos cadastrados e atende entre 350 e 400 pessoas por semana. O funcionamento ocorre de segunda a quinta-feira, das 7h às 16h.",
+        "O espaço oferece ginástica, hidroginástica, rodas de conversa, jogos recreativos e alimentação saudável, além de um baile aberto à comunidade às quintas-feiras. A aposentada Magnolia Almeida, frequentadora da unidade há 12 anos, declarou que o local auxilia na prática de exercícios, na convivência e no aprendizado sobre as garantias legais."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-preve-entregar-duas-creches-ate-o-fim-do-mes.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
-      "original": true,
-      "contexto": "A conclusão do Ceic São Francisco e da reforma do Ceic Santa Inês está prevista para o fim deste mês, afetando o atendimento de crianças da educação infantil nos bairros São Francisco e Poção. Entre janeiro de 2025 e junho de 2026, a Prefeitura de Cuiabá registrou a entrega de 12 obras públicas, com uma média de uma estrutura a cada 45 dias. A gestão prevê novas reformas em escolas municipais para o segundo semestre.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:justica-nega-bloqueio-de-r-15-milhoes-nas-contas-da-prefeitura-de-cuia",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Justiça nega bloqueio de R$ 15 milhões nas contas da Prefeitura de Cuiabá",
-      "resumo": "Decisão condiciona eventual retenção de verbas a novas provas e a um plano do Ministério Público para a aplicação dos recursos.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/justica-reconhece-avancos-da-prefeitura-e-mantem-contas-sem-bloqueio-de-r-15-milhoes",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "Muvuca Popular"
-      ],
-      "quentura": 1,
-      "uf": "mt",
-      "corpo": [
-        "A Justiça indeferiu o pedido do Ministério Público para o bloqueio de R$ 15 milhões das contas da Prefeitura de Cuiabá. A decisão foi proferida na terça-feira (4) pelo juiz Emerson Luis Pereira Cajango, da Vara Especializada do Meio Ambiente de Cuiabá.",
-        "Ao analisar o caso, o magistrado registrou que vistoria realizada em abril pelo Juizado Especial Volante Ambiental (Juvam) apontou condições adequadas de limpeza, alimentação, manejo e medicamentos na unidade municipal. A Procuradoria Geral do Município apresentou documentos sobre o Programa Reação Animal 24 Horas e a execução de verbas do Fundo Municipal de Bem-Estar Animal (Funbea).",
-        "O Ministério Público solicitava a indisponibilidade dos recursos alegando descumprimento de Termo de Ajustamento de Conduta (TAC). O juiz determinou que a Delegacia Especializada do Meio Ambiente (Dema) e a Politec enviem relatórios de diligências em até dez dias, e concedeu 15 dias para o Ministério Público apresentar um plano emergencial detalhando a destinação dos R$ 15 milhões.",
-        "O magistrado também encaminhou o processo ao Centro Judiciário de Solução de Conflitos e Cidadania (Cejusc) Ambiental para tentativa de conciliação entre as partes. A reavaliação do pedido de bloqueio ocorrerá apenas após a conclusão da instrução probatória e a análise dos novos elementos técnicos."
-      ],
-      "link": "/materia/justica-nega-bloqueio-de-r-15-milhoes-nas-contas-da-prefeitura-de-cuia.html",
-      "iso": "2026-08-05T22:18:59.346Z",
-      "hora": "18h18",
+      "link": "/materia/acao-no-cci-joao-guerreiro-orienta-idosos-sobre-direitos-em-cuiaba.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
       "original": true,
       "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeitura-apresenta-projeto-da-nova-feira-do-peixe-do-praeirinho-aos-",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Prefeitura apresenta projeto da nova Feira do Peixe do Praeirinho aos feirantes",
+      "resumo": "Com investimento estimado em cerca de R$ 2 milhões, a estrutura terá boxes padronizados e gestão sob responsabilidade da associação dos comerciantes.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-de-cuiaba-apresenta-projeto-da-nova-feira-do-peixe-do-praeirinho",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "O Documento"
+      ],
+      "quentura": 1,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá apresentou aos feirantes a planta e o projeto da nova Feira do Peixe do Praeirinho. A apresentação ocorreu em reunião no gabinete do prefeito Abilio Brunini, nesta terça-feira (4), com investimento estimado em cerca de R$ 2 milhões.",
+        "A estrutura planejada inclui boxes padronizados, banheiros, depósito, área administrativa e espaços para circulação de clientes e comerciantes. Durante o encontro, os feirantes analisaram a proposta e apresentaram sugestões de adequação. O prefeito declarou a intenção de conceder o uso do local à associação dos feirantes, que assumirá a administração e a manutenção da feira.",
+        "Estiveram presentes na reunião o secretário adjunto de Ordem Pública, Max Aguiar, e os vereadores Coronel Dias, Wilson Kero Kero e Samantha Iris, além de representantes dos feirantes.",
+        "A medida abrange 22 comerciantes. O processo incluiu a elaboração de um decreto para regulamentar a atividade e de um projeto de lei que reconheceu o modo tradicional de preparo do pescado no Praeirinho como Patrimônio Cultural Imaterial de Cuiabá."
+      ],
+      "link": "/materia/prefeitura-apresenta-projeto-da-nova-feira-do-peixe-do-praeirinho-aos-.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
+      "original": true,
+      "contexto": "Não há registro de caso parecido no histórico. A medida abrange 22 comerciantes da Feira do Peixe do Praeirinho. O projeto apresentado prevê um investimento estimado em R$ 2 milhões na estrutura.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeito-de-cuiaba-anuncia-entrega-do-campo-do-parque-da-familia-para-",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Prefeito de Cuiabá anuncia entrega do campo do Parque da Família para 22 de agosto",
+      "resumo": "Com investimento de aproximadamente R$ 400 mil, o local terá grama sintética, iluminação, quadras de areia e playground.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/campo-de-futebol-society-do-parque-da-familia-avanca-e-sera-entregue-ainda-neste-mes-diz-prefeito",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "O prefeito de Cuiabá, Abilio Brunini, realizou nesta quarta-feira (5) uma visita técnica às obras do novo campo de futebol society do Parque da Família. A vistoria apresentou o andamento dos serviços e confirmou a entrega do espaço para o dia 22 de agosto.",
+        "A obra conta com investimento de aproximadamente R$ 400 mil, realizado pelo município em parceria com o Governo do Estado. O local terá grama sintética, sistema de iluminação, duas quadras de areia, playground com piso emborrachado e o projeto Bom de Bola, Bom de Escola.",
+        "Segundo o prefeito, este será o terceiro campo de grama sintética entregue pela atual gestão. Ele informou que outras estruturas esportivas estão em execução na cidade, como no bairro Maracanã, enquanto o campo do Caieirinho receberá grama natural em razão de características ambientais da área.",
+        "A administração municipal também prevê manter cercamentos no Parque da Família somente nos trechos necessários para a segurança de crianças próximas às vias de circulação."
+      ],
+      "link": "/materia/prefeito-de-cuiaba-anuncia-entrega-do-campo-do-parque-da-familia-para-.html",
+      "iso": "2026-08-05T22:44:45.736Z",
+      "hora": "18h44",
+      "original": true,
+      "contexto": "A entrega do campo de futebol society do Parque da Família está confirmada para o dia 22 de agosto. Este é o terceiro campo de grama sintética entregue pela atual gestão municipal, somando-se às 12 estruturas que a prefeitura registrou em 3 de agosto.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
   ],
   "circulando": [
     {
+      "municipio": "sinop",
+      "municipioNome": "Sinop",
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "plantaonews.com.br",
+          "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZzNWRWRVMC03WTQ3aXg4bnpDYjBzb0tqOHZ2RS1vUjZxLTJNd05CSEh1a1o5d0w3NHRNWTg4QTBrYzI4aXk4V0lHSWp4VlYySENxU0FwUkJzQ25xa1RiTmVvR0xCbFR1TWt0ZGlKRzZ1X0xEbUpXMEVHYk5KWjVZNzJmajBqMmhGV21USGx2bUdOUFRYLUxkWXhObGRtVjVzRGhUZUxrMkFLVnN2OUQwRFdxLVBfQzRTOUEwcGRQRmN4aDZtbk9XOThzdw?oc=5"
+        },
+        {
+          "veiculo": "mtagora.com.br",
+          "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUDJKVnNuMDZqeldpa1NKcWJEN3IydTdxbldIbjdTT0NSc2doU3JpR19fSC1GOFZ5ekpOcEJ2RGFhNU1SQ0d0eVBhQWdfWU9Wb2NoZFpOcWNILWdjU0xMTERNTWYzQTVTeThmX3ltN0JJemdFTTVQVmNoNlA2V1h3LTEweG9ZYkotdlotRGhsdkx4RVYyZDlLbExQQ0tXaFA3bUU3MnNrNHFKbnRwSHIyUW5oc21JaURteGQ0Ny03MkV0RE5NbGlzU0tUYlRrcTE1Y2ZweEdR?oc=5"
+        },
+        {
+          "veiculo": "LOCAL MT",
+          "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQWxUWmZyTkcxenhjekdHdGdJbEJ3cm81NzNxRzA1X1EwelhmWnJLSml1NjhyNHRtR0EzSVVHRWU4MDFuVURkVmlyb3hoVDRZZm9XUzNYTHplYzBRWW9mUXc4eFRXNlZHakZSS3cweGFaZmU2MFlZNEh4Vm9femhHbUhWeFZmZjBfX01rWG1pU1czbElleEFZaU1KVDMtVGFoLWtrQk5NUFl0R1lqSU5oZ0tQNW1pTDZXWnBONFdYYS16NDdNZTFUU1JKM1RwWmg3WGYzTEFR?oc=5"
+        },
+        {
+          "veiculo": "ibi.ong.br",
+          "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQcXcyUkdnVUNZbWd6RFkwYTdDdk9Od2V0WlgwQTdZZFBqbVFtSnE5VlFSMG92UjQzQ2pZZUJnMzVsOWxIUmZndzdnQTIzTGM3VlNPSGpXX1dIMVNoMWZsazRodlg5cU85Nkhia3F2dkwtR1JSUTVTNDJxcDRwNHZRVEVWWVRGbVBtdXpPYm5mNk96OG15alY0YkNlZXRpQV9xMnNlRnFPdUJRcmEwUVJocjZ4b2RPeU1Tc1FZcVVBTjFEYlM1T3AxTnMwZXhnMVVzUEtz?oc=5"
+        },
+        {
+          "veiculo": "NG NOTÍCIAS",
+          "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZFJ0WjR5VFJ2cHhGcER4eEVxUV80Mml0R09wMnE5NE1iblpTUUVBN1R5aUpyVFUwZlpLWFVTTXBnV2NaVHFYU3JLQVU2Q3hfRlhEZ2oxa1pFRHV3ZktvN3Jsb3pNM0VhZjJXdTFYUXRWdlZqTHFVOWU2LXNJSWYwQ0NjN0d4TlNnUlBfOTQ4Yy1teHBuaFF5UGlyMjNJcWp4cXI3V3JzQW0ydkVSajNSUzZBVEZYeXJvTXQ2ZTMwX3lZTVNIRlNjRWRYTkhBaFBWUEZ6SXVXbGE?oc=5"
+        },
+        {
+          "veiculo": "MOMENTO MT",
+          "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQMnc2MXB4TG5fS3dpTHkzb2ROUjJPVXFBVmhIcFloS2g0bUpXQ1RxVFQ3LTJ3cUVNLW9CUE5JNHB5RW9qMVRjUUgwMWJ5aTZlN1pETzNLcWpKRUNqdHFkSWx1c19xTGZoa1BQT2c5OE54UklIMlpZWUktUWdKcExqd1VPdHNRSjgzMlU3R3pSV0xkejcwcWpRM1B4UHdkcGZMOW5pRDd6UjZsX0hkVzJSM0VWOVluYUZDMTNCck91MXgzTTNMS285TUU1dlN5NkhJZ09XTkUtZ01rTXk3MDJWXzRNZGtUZw?oc=5"
+        }
+      ],
+      "link": "/materia/nc-prefeitura-de-sinop-teria-atuado-em-obras-em-tres-estradas.html",
+      "corpo": [
+        "A Prefeitura de Sinop teria adotado medidas de fiscalização, pavimentação e cobrança em vias do município. Segundo as publicações que veiculam o caso, as ações envolveriam as estradas Selene, Dalva e Cirineu Coan. A gestão municipal estaria atuando no acompanhamento de obras e na liberação do tráfego local.",
+        "Na Estrada Dalva, teria sido concluída a aplicação de capa asfáltica e liberada a circulação de veículos. Na Estrada Selene, a prefeitura teria intensificado a fiscalização para cobrar celeridade no término dos trabalhos. Já na Estrada Cirineu Coan, uma cobrança do órgão municipal teria feito com que uma empresa restabelecesse o acesso à Comunidade Adalgisa.",
+        "Os relatos divulgados pelas publicações tratam de frentes de trabalho distintas na mesma região. Não foram registradas divergências diretas entre os conteúdos veiculados sobre cada uma das vias."
+      ],
+      "id": "circ:prefeitura-de-sinop-teria-atuado-em-obras-em-tres-estradas",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Prefeitura de Sinop teria atuado em obras em três estradas",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T22:49:55.563Z",
+      "hora": "18h49"
+    },
+    {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que a notícia está sendo veiculada por seis veículos da imprensa.",
-        "Que o partido citado em todas as manchetes é o Podemos.",
-        "Que os políticos mencionados são Max Russi e Otaviano Pivetta."
+        "O assunto está sendo publicado por seis veículos da imprensa.",
+        "As matérias citam declaração de Max Russi sobre apoio a Otaviano Pivetta.",
+        "Os relatos mencionam liberação de filiados do Podemos para outras campanhas."
       ],
       "falta": [
-        "Documento oficial ou ata do partido Podemos que confirme a decisão.",
-        "Registro formal da aliança perante a Justiça Eleitoral.",
-        "Manifestação oficial das assessorias dos políticos citados."
+        "Confirmação oficial divulgada nos canais institucionais do partido Podemos.",
+        "Publicação de ata ou documento formal sobre a aliança partidária.",
+        "Manifestação direta e oficial das assessorias dos políticos citados."
       ],
       "ondeCirculou": [
         {
@@ -1107,6 +1064,11 @@
           "link": "https://www.muvucapopular.com.br/2026/08/05/mesmo-com-apoio-a-pivetta-max-libera-filiados-do-podemos/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mesmo-com-apoio-a-pivetta-max-libera-filiados-do-podemos"
         },
         {
+          "veiculo": "g1 MT",
+          "titulo": "Podemos anuncia apoio à candidatura de Otaviano Pivetta ao governo de Mato Grosso",
+          "link": "https://g1.globo.com/mt/mato-grosso/eleicoes/2026/noticia/2026/08/05/podemos-anuncia-apoio-a-candidatura-de-otaviano-pivetta-ao-governo-de-mato-grosso.ghtml"
+        },
+        {
           "veiculo": "VG Notícias",
           "titulo": "Max Russi bate o martelo e Podemos apoiará Pivetta",
           "link": "https://www.vgnoticias.com.br/politica/max-russi-bate-o-martelo-e-podemos-apoiara-pivetta/150057"
@@ -1115,214 +1077,68 @@
           "veiculo": "Primeira Página",
           "titulo": "Podemos decide apoiar Pivetta ao governo e libera filiados para outros candidatos",
           "link": "https://primeirapagina.com.br/politica/podemos-decide-apoiar-pivetta-ao-governo-e-libera-filiados-para-outros-candidatos/"
-        },
-        {
-          "veiculo": "Só Notícias",
-          "titulo": "Podemos define apoio para Otaviano Pivetta disputar governo",
-          "link": "https://www.sonoticias.com.br/politica/podemos-define-apoio-para-otaviano-pivetta-disputar-governo/"
         }
       ],
-      "link": "/materia/nc-podemos-teria-definido-apoio-a-otaviano-pivetta-e-liberado-filiados.html",
+      "link": "/materia/nc-podemos-teria-decidido-apoiar-candidatura-de-otaviano-pivetta-em-mato-.html",
       "corpo": [
-        "O parlamentar Max Russi teria confirmado o apoio do partido Podemos à pré-candidatura de Otaviano Pivetta ao governo. A direção da sigla também teria decidido liberar seus filiados para seguirem outras candidaturas no pleito.",
-        "As publicações citam a existência de um vídeo em que a aliança estaria sendo selada. Não foram registradas divergências entre os textos analisados sobre o teor do anúncio de apoio ou sobre a liberação dos membros.",
-        "A deliberação estabeleceria os rumos da legenda para a disputa do Poder Executivo. O acerto permitiria que integrantes do partido apoiassem diferentes concorrentes na mesma eleição."
+        "O partido Podemos teria anunciado apoio à candidatura de Otaviano Pivetta ao governo do estado de Mato Grosso. A aliança teria sido confirmada por Max Russi, conforme relatos veiculados pela imprensa.",
+        "As informações publicadas indicam que a sigla partidária estaria liberando seus filiados para seguir outros candidatos na mesma disputa eleitoral. Uma das matérias menciona a circulação de um vídeo registrando o momento em que o acordo teria sido fechado.",
+        "Não foram observadas contradições diretas entre as matérias sobre o apoio ou sobre a liberação de filiados. Contudo, até o momento, a confirmação depende de validação em registros oficiais."
       ],
-      "id": "circ:podemos-teria-definido-apoio-a-otaviano-pivetta-e-liberado-filiados",
+      "id": "circ:podemos-teria-decidido-apoiar-candidatura-de-otaviano-pivetta-em-mato-",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Podemos teria definido apoio a Otaviano Pivetta e liberado filiados",
+      "titulo": "Podemos teria decidido apoiar candidatura de Otaviano Pivetta em Mato Grosso",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:24:34.306Z",
-      "hora": "18h24"
+      "iso": "2026-08-05T22:50:47.273Z",
+      "hora": "18h50"
     },
     {
       "municipio": "sinop",
       "municipioNome": "Sinop",
       "seSabe": [
-        "Que o assunto está sendo veiculado por quatro publicações da imprensa regional.",
-        "Que os relatos citam intervenções da Prefeitura de Sinop nas estradas Dalva, Selene e Cirineu Coan."
+        "O assunto está sendo publicado por três veículos da imprensa.",
+        "Que a Prefeitura de Sinop é citada como autora da iniciativa.",
+        "Que o foco alegado abrange fluxo turístico e movimentação econômica."
       ],
       "falta": [
-        "Registro em fonte oficial que confirme o andamento e a conclusão das obras citadas.",
-        "Identificação oficial da empresa responsável e número dos contratos das intervenções.",
-        "Divulgação das datas exatas em que as ações teriam sido realizadas."
+        "Manifestação ou confirmação oficial da Prefeitura de Sinop.",
+        "Data exata do lançamento da ferramenta.",
+        "Publicação de ato normativo no Diário Oficial do município."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "MT de Fato",
-          "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWmx6alRlbkNjUWptb1RKOV8zRC1ESFVGWThkWlZCa09RYmFLNGpJWUJCeENNa0xJTllaR2tkZ3hSejVid0p6Q0RYeW02VkZkYnNaYzNCM3VDMXNtSGhBZmU0d0c5eGU1Um9XTld0cFlmZkVhQ2JJZE85WWVqcElWajBfeFRCZG1TT3llcklvVUNDZGRLNjRsNTFoV1JSSEZpWkxjTVRTUDRLZFFJWGtHazRUb0dmQ1NoZFAweVIyZnZNczlnS1NWQnNSbnRJMWZIQW1sWklfc1NMdw?oc=5"
+          "veiculo": "Só Notícias",
+          "titulo": "Sinop lança plataforma para acompanhar fluxo de turistas e movimentação econômica",
+          "link": "https://www.sonoticias.com.br/economia/sinop-lanca-plataforma-para-acompanhar-fluxo-de-turistas-e-movimentacao-economica/"
+        },
+        {
+          "veiculo": "LEIAGORA",
+          "titulo": "Prefeitura lança Centro de Inteligência Turística de Sinop para fortalecer planejamento e desenvolvimento do setor",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPeFhtR0dsclF0OV9NYWF4QUt6THM0NFh6YXBuOWRfY19KU3B0ZjB5MjVxMVBvX0MycGh4RWZBVmJMM0xtWnFENFgzd0dSZ1lkZ3BqeDk3Vjh5YzRSWEV4cU1nY1k3anhxNk12NFdwTlNCc1laWW9zejZSSUFwZHdnOU9POTNoVE42N1ZIaVFnVGQtQUsxT2hXaTBOaV9KeTBXclVMUGdkS0dOYnNiTjBDa1dITHB0c1JVOTJ2Zw?oc=5"
         },
         {
           "veiculo": "mtagora.com.br",
-          "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
-          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUDJKVnNuMDZqeldpa1NKcWJEN3IydTdxbldIbjdTT0NSc2doU3JpR19fSC1GOFZ5ekpOcEJ2RGFhNU1SQ0d0eVBhQWdfWU9Wb2NoZFpOcWNILWdjU0xMTERNTWYzQTVTeThmX3ltN0JJemdFTTVQVmNoNlA2V1h3LTEweG9ZYkotdlotRGhsdkx4RVYyZDlLbExQQ0tXaFA3bUU3MnNrNHFKbnRwSHIyUW5oc21JaURteGQ0Ny03MkV0RE5NbGlzU0tUYlRrcTE1Y2ZweEdR?oc=5"
-        },
-        {
-          "veiculo": "MOMENTO MT",
-          "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
-          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQUtpeTFNVUlpR195YXBha3hBSS1UYVp4cUFvWmRNRVRVODNIZmtuLVBfRDhrZXliUGRkdFJFNEZZbW9nVHVWUzYyWWFmV2g3eXNtWGZkcXV4MElaUFVnUXlVcWFXZTB1ZWRKenBiSkJzOVE4bG5adE1McDNhSzdNS2s4Qm1iSGlfTkg4RVlMdnZOZ09ycjZWUEx4dzN3MUR0MFE0UF9BdEJ0TXItTGYtZkFVQlc0YXltOEd5NUxYdGZIejNXeVB0cHZTRFpxaTJwc0o0RzBUdS1yOVp1RWN3OFFQaw?oc=5"
-        },
-        {
-          "veiculo": "Inteligência Brasil Imprensa",
-          "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
-          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQcXcyUkdnVUNZbWd6RFkwYTdDdk9Od2V0WlgwQTdZZFBqbVFtSnE5VlFSMG92UjQzQ2pZZUJnMzVsOWxIUmZndzdnQTIzTGM3VlNPSGpXX1dIMVNoMWZsazRodlg5cU85Nkhia3F2dkwtR1JSUTVTNDJxcDRwNHZRVEVWWVRGbVBtdXpPYm5mNk96OG15alY0YkNlZXRpQV9xMnNlRnFPdUJRcmEwUVJocjZ4b2RPeU1Tc1FZcVVBTjFEYlM1T3AxTnMwZXhnMVVzUEtz?oc=5"
+          "titulo": "Prefeitura lança Centro de Inteligência Turística de Sinop para fortalecer planejamento e desenvolvimento do setor",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQcEQxbndTczFPSk8zWnRqWUdCYWJ4NWNWOWFBUmlVSWc1V3RLTXJibWx0cjlZZkQwR1I5ZnBTTWlFVFdfeTJlNFFrMjRZNDBOV2xyV2tHS01YdGV3RlZ3QjhXVnNwQ0xOMm5pVXNsRUFaa2VaR0EycG1qLU1LQ0lBYU16R0xfby03ajFjVjV6VTlSNndBYUxPMmVoZXo1R2szaWQ1TFUzdEdNel80cVVLZlBBa2tiUHU5TmpzcjZsQjFscWh3OHJoSWs0WFhwY3JTemdPNVRjYXhfeDdBY0dDbW5HQVAzVmd0NUNwaQ?oc=5"
         }
       ],
-      "link": "/materia/nc-prefeitura-de-sinop-realizaria-acoes-e-cobrancas-em-obras-viarias-no-m.html",
+      "link": "/materia/nc-prefeitura-de-sinop-teria-lancado-centro-de-inteligencia-turistica.html",
       "corpo": [
-        "A Prefeitura de Sinop estaria executando e fiscalizando intervenções em diferentes trechos viários do município. As publicações relatam que o poder público municipal teria cobrado agilidade de empresas e concluído serviços de pavimentação.",
-        "Na Estrada Dalva, teria ocorrido a finalização da capa asfáltica com a consequente liberação do tráfego de veículos. Já na Estrada Selene, a administração municipal teria intensificado a fiscalização para acelerar a conclusão dos trabalhos.",
-        "Ademais, uma empresa privada teria reestabelecido o acesso à Comunidade Adalgisa pela Estrada Cirineu Coan após cobrança oficial. Os relatos veiculados abordam vias distintas e não apresentam divergências diretas entre as informações relatadas."
+        "O projeto visaria monitorar o fluxo de turistas e a movimentação econômica na região. A ação estaria vinculada à administração municipal.",
+        "A medida buscaria fortalecer o planejamento e o desenvolvimento do setor turístico local. As publicações que veicularam a informação apresentariam pequenas variações na descrição do recurso."
       ],
-      "id": "circ:prefeitura-de-sinop-realizaria-acoes-e-cobrancas-em-obras-viarias-no-m",
+      "id": "circ:prefeitura-de-sinop-teria-lancado-centro-de-inteligencia-turistica",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Prefeitura de Sinop realizaria ações e cobranças em obras viárias no município",
+      "titulo": "Prefeitura de Sinop teria lançado Centro de Inteligência Turística",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:25:35.440Z",
-      "hora": "18h25"
-    },
-    {
-      "municipio": "sorriso",
-      "municipioNome": "Sorriso",
-      "seSabe": [
-        "Que quatro veículos de imprensa veiculam a aceitação da denúncia.",
-        "Que o caso trata de acidente com morte de criança em Mato Grosso.",
-        "Que a denúncia teria sido oferecida pelo Ministério Público estadual."
-      ],
-      "falta": [
-        "Confirmação oficial do Poder Judiciário sobre o recebimento da denúncia.",
-        "Número do processo ou procedimento judicial correspondente ao caso.",
-        "Data exata da decisão que teria tornado o motorista réu.",
-        "Identificação oficial fornecida pelas autoridades competentes."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "CenárioMT",
-          "titulo": "Justiça aceita denúncia do MPMT e motorista que provocou morte de criança em acidente em Sorriso vira réu por homicídio qualificado",
-          "link": "https://cenariomt.com.br/mato-grosso/sorriso/justica-aceita-denuncia-do-mpmt-e-motorista-que-provocou-morte-de-crianca-em-acidente-em-sorriso-vira-reu-por-homicidio-qualificado/"
-        },
-        {
-          "veiculo": "O Documento",
-          "titulo": "Justiça recebe denúncia do MP e motorista que matou criança de 4 anos em acidente vira réu",
-          "link": "https://odocumento.com.br/justica-recebe-denuncia-do-mp-e-motorista-que-matou-crianca-de-4-anos-em-acidente-vira-reu-em-mt/"
-        },
-        {
-          "veiculo": "g1 MT",
-          "titulo": "Justiça aceita denúncia contra motorista acusado de matar criança de 4 anos em acidente em MT",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/justica-aceita-denuncia-contra-motorista-acusado-de-matar-crianca-de-4-anos-em-acidente-em-mt.ghtml"
-        },
-        {
-          "veiculo": "VG Notícias",
-          "titulo": "Justiça aceita denúncia contra motorista acusado de matar menino de 4 anos",
-          "link": "https://www.vgnoticias.com.br/penal/justica-aceita-denuncia-contra-motorista-acusado-de-matar-menino-de-4-anos/150049"
-        }
-      ],
-      "link": "/materia/nc-motorista-teria-virado-reu-por-morte-de-crianca-em-acidente-em-mt.html",
-      "corpo": [
-        "A Justiça teria aceito denúncia do Ministério Público contra um motorista acusado de provocar acidente fatal. O condutor teria se tornado réu pela morte de uma criança após a acolhida da acusação formal.",
-        "As publicações indicariam que a vítima seria um menino de 4 anos de idade. O fato teria registrado desdobramento no município de Sorriso, no estado de Mato Grosso, a partir de atuação do MPMT.",
-        "Os veículos que publicaram a informação divergiriam sobre a qualificação do crime. Uma das matérias mencionaria homicídio qualificado, enquanto as demais citariam o réu por matar a criança sem detalhar a qualificadora."
-      ],
-      "id": "circ:motorista-teria-virado-reu-por-morte-de-crianca-em-acidente-em-mt",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Motorista teria virado réu por morte de criança em acidente em MT",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:26:06.378Z",
-      "hora": "18h26"
+      "iso": "2026-08-05T22:51:40.767Z",
+      "hora": "18h51"
     },
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [
-        "Que as informações constam em três publicações da imprensa.",
-        "Que órgãos como a Justiça e a Polícia de MT são citados.",
-        "Que o episódio envolve a morte de um policial militar a tiros."
-      ],
-      "falta": [
-        "Confirmação oficial emitida pelo Tribunal de Justiça ou pela Polícia de Mato Grosso.",
-        "Data exata e município de Mato Grosso onde o fato teria ocorrido.",
-        "Número do processo judicial ou do auto de prisão em flagrante.",
-        "Identificação oficial dos envolvidos na ocorrência."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Primeira Página",
-          "titulo": "Justiça mantém prisão de homem suspeito de matar PM a tiros durante aula de jiu-jitsu em MT",
-          "link": "https://primeirapagina.com.br/justica/justica-mantem-prisao-de-homem-suspeito-de-matar-pm-a-tiros-durante-aula-de-jiu-jitsu-em-mt/"
-        },
-        {
-          "veiculo": "Estadão MT",
-          "titulo": "Justiça converte flagrante em peventiva e mantem prisão de homem que matou PM",
-          "link": "https://www.estadaomatogrosso.com.br/judiciario/justica-converte-flagrante-em-peventiva-e-mantem-prisao-de-homem-que-matou-pm/143441"
-        },
-        {
-          "veiculo": "g1 MT",
-          "titulo": "Morte de PM durante aula de jiu-jitsu em MT teria sido motivada por relacionamento com esposa do suspeito; diz polícia",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/morte-de-pm-durante-aula-de-jiu-jitsu-em-mt-teria-sido-motivada-por-relacionamento-com-esposa-do-suspeito-diz-policia.ghtml"
-        }
-      ],
-      "link": "/materia/nc-justica-em-mt-teria-mantido-prisao-de-homem-suspeito-de-matar-pm-a-tir.html",
-      "corpo": [
-        "O crime teria ocorrido no estado de Mato Grosso durante uma aula de jiu-jitsu. Conforme dados atribuídos à polícia, a motivação estaria ligada a um relacionamento com a esposa do suspeito.",
-        "As publicações apresentariam variações ao tratar o indivíduo como suspeito ou autor do homicídio. O caso estaria sob apuração das autoridades locais."
-      ],
-      "id": "circ:justica-em-mt-teria-mantido-prisao-de-homem-suspeito-de-matar-pm-a-tir",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Justiça em MT teria mantido prisão de homem suspeito de matar PM a tiros",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:26:39.045Z",
-      "hora": "18h26"
-    },
-    {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
-      "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que a alegação envolve a instalação de CPI em Várzea Grande."
-      ],
-      "falta": [
-        "Confirmação ou documento oficial expedido pelo Poder Judiciário.",
-        "Posicionamento oficial da Câmara Municipal de Várzea Grande.",
-        "Identificação do número do processo judicial correspondente."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Isso É Notícia",
-          "titulo": "Justiça manda Câmara instalar CPI do transporte coletivo em VG",
-          "link": "https://issoenoticia.com.br/justica-manda-camara-instalar-cpi-do-transporte-coletivo-em-vg/"
-        },
-        {
-          "veiculo": "O Mato Grosso",
-          "titulo": "Justiça determina que Câmara de Várzea Grande instale CPI do transporte coletivo",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYjRQNHc2STdLOFlRVlozbmJ1cXVzWi11cDBuejdSbURBdkJTeHV5V2pvTE5NV0tGQWhlbWxDNUJLSTJxLTM1TS1ia2ZwUzJuZDRvNUE5clZUTnJsNnhrbEpUS1h1SjRremYxanpFOVppNlVnRFEyNC1xQ2RWR1FmamRFQ3Mxb3RMUF9iSTR2NHRWWktKS0JPaFBOQlE2THRtRTN2NWFaN0g?oc=5"
-        },
-        {
-          "veiculo": "noveen.com.br",
-          "titulo": "Justiça determina que Câmara de Várzea Grande instale CPI do transporte coletivo",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaHBNalQ3Sjl6eUVBYmhjM1l2Q0J3WXpwRmV4bG1qdFZZU3hvWGdla0M1LXNOUDZZdHFKWjZyYlZqbnQwN3pVT3JpLVJoTmwyWXl0VHp6N19ScTA3R3k3N1Via0dMSjFFbzlzQWhRRFZEbWc5WHhmWG80dUE4NXZtUmFtY1NDOTRGNGVQZF92VDM0Vi1UOEcySmhNX2xYeWNHVWNvaEx5ZnY3QVUxV1RNTzEtYm11VFA1OVlPSzJwb3VFQQ?oc=5"
-        }
-      ],
-      "link": "/materia/nc-justica-teria-determinado-a-instalacao-de-cpi-do-transporte-em-varzea-.html",
-      "corpo": [
-        "A Justiça teria determinado que a Câmara Municipal de Várzea Grande instale uma Comissão Parlamentar de Inquérito relativa ao transporte coletivo. A informação estaria sendo veiculada por três publicações da imprensa. A suposta decisão judicial exigiria a efetivação da CPI no legislativo municipal.",
-        "As publicações que reportam o fato apresentariam dados convergentes sobre a ordem judicial. Duas das matérias utilizariam o nome completo do município de Várzea Grande, enquanto uma terceira empregaria a sigla VG. Não haveria contradições entre os relatos jornalísticos analisados."
-      ],
-      "id": "circ:justica-teria-determinado-a-instalacao-de-cpi-do-transporte-em-varzea-",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Justiça teria determinado a instalação de CPI do transporte em Várzea Grande",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:27:09.077Z",
-      "hora": "18h27"
-    },
-    {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
       "seSabe": [],
       "falta": [],
       "ondeCirculou": [
@@ -1342,20 +1158,117 @@
           "link": "https://cenariomt.com.br/mato-grosso/barra-do-garcas/jovem-de-18-anos-morre-baleado-em-confronto-com-a-forca-tatica-apos-invasao-a-ponto-de-trafico-em-barra-do-garcas/"
         }
       ],
-      "link": "/materia/nc-tres-ocorrencias-noticiadas-envolveriam-feminicidios-e-morte-apos-conf.html",
+      "link": "/materia/nc-mortes-de-jovens-e-feminicidios-estariam-sendo-relatados-por-veiculos.html",
       "corpo": [
-        "Publicações da imprensa estariam veiculando informações sobre três casos de mortes violentas na região. Uma jovem de 22 anos teria sido a vigésima vítima de feminicídio no estado de Mato Grosso do Sul. Em outro relato, a família de uma vítima de feminicídio em Santa Catarina, vinda de Várzea Grande, teria conseguido o traslado do corpo. Um terceiro episódio envolveria a morte de um jovem de 18 ano"
+        "Veículos de imprensa estariam veiculando matérias sobre mortes de jovens e casos de feminicídio. As publicações apontariam a ocorrência de homicídios contra mulheres e um óbito em ação policial. Nenhuma das situações contaria com confirmação em registros oficiais. Em um dos textos, uma jovem de 22 anos teria sido a vigésima vítima de feminicídio em Mato Grosso do Sul. Em outra matéria, a família d"
       ],
-      "id": "circ:tres-ocorrencias-noticiadas-envolveriam-feminicidios-e-morte-apos-conf",
+      "id": "circ:mortes-de-jovens-e-feminicidios-estariam-sendo-relatados-por-veiculos",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Três ocorrências noticiadas envolveriam feminicídios e morte após confronto",
+      "titulo": "Mortes de jovens e feminicídios estariam sendo relatados por veículos",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:27:45.566Z",
-      "hora": "18h27"
+      "iso": "2026-08-05T22:52:39.160Z",
+      "hora": "18h52"
+    },
+    {
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "seSabe": [
+        "Que o assunto está sendo veiculado por três veículos de imprensa.",
+        "Que as publicações atribuem o disparo a uma policial penal na região de Cuiabá.",
+        "Que os relatos mencionam a prisão sob a classificação de tentativa de homicídio."
+      ],
+      "falta": [
+        "Confirmação ou nota oficial emitida pela Polícia Civil ou órgão de segurança pública.",
+        "Número de registro do boletim de ocorrência ou do auto de prisão em flagrante.",
+        "Confirmação oficial e acesso às imagens que teriam contestado a versão inicial.",
+        "Data e horário exatos em que a prisão teria sido efetuada."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Policial penal que atirou contra entregador no CPA 4 é presa",
+          "link": "https://www.vgnoticias.com.br/policia/policial-penal-que-atirou-contra-entregador-no-cpa-4-e-presa/150053"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Policial penal que atirou contra entregador em Cuiabá é presa por tentativa de homicídio",
+          "link": "https://odocumento.com.br/policial-penal-que-atirou-contra-entregador-em-cuiaba-e-presa-por-tentativa-de-homicidio/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Policial penal é presa após imagens contestarem versão sobre tiros contra motociclista em Cuiabá (MT)",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/policial-penal-e-presa-apos-imagens-contestarem-versao-sobre-tiros-contra-motociclista-em-cuiaba-mt.ghtml"
+        }
+      ],
+      "link": "/materia/nc-policial-penal-teria-sido-presa-por-tentativa-de-homicidio-em-cuiaba.html",
+      "corpo": [
+        "As publicações que relatam o caso apresentam complementos sobre a localização e o motivo da ação policial. Uma das notas situaria a ocorrência no bairro CPA 4, enquanto outra apontaria que a prisão teria ocorrido após imagens contestarem a versão apresentada sobre os tiros contra o motociclista."
+      ],
+      "id": "circ:policial-penal-teria-sido-presa-por-tentativa-de-homicidio-em-cuiaba",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Policial penal teria sido presa por tentativa de homicídio em Cuiabá",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T22:53:12.521Z",
+      "hora": "18h53"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que o assunto está sendo noticiado por três veículos de imprensa diferentes.",
+        "Que as alegações envolvem um motorista e a morte de uma criança.",
+        "Que os relatos apontam a atuação do Ministério Público em Mato Grosso."
+      ],
+      "falta": [
+        "Manifestação oficial do Poder Judiciário ou do Ministério Público sobre o caso.",
+        "O número do procedimento judicial e a data da decisão da Justiça.",
+        "A indicação do município exato de Mato Grosso onde o acidente teria ocorrido."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "VG Notícias",
+          "titulo": "Justiça aceita denúncia contra motorista acusado de matar menino de 4 anos",
+          "link": "https://www.vgnoticias.com.br/penal/justica-aceita-denuncia-contra-motorista-acusado-de-matar-menino-de-4-anos/150049"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Justiça recebe denúncia do MP e motorista que matou criança de 4 anos em acidente vira réu",
+          "link": "https://odocumento.com.br/justica-recebe-denuncia-do-mp-e-motorista-que-matou-crianca-de-4-anos-em-acidente-vira-reu-em-mt/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Justiça aceita denúncia contra motorista acusado de matar criança de 4 anos em acidente em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/justica-aceita-denuncia-contra-motorista-acusado-de-matar-crianca-de-4-anos-em-acidente-em-mt.ghtml"
+        }
+      ],
+      "link": "/materia/nc-justica-teria-aceito-denuncia-contra-motorista-por-morte-de-crianca-em.html",
+      "corpo": [
+        "As publicações indicam que o fato teria ocorrido no estado de Mato Grosso. Uma das coberturas cita a atuação do Ministério Público, enquanto as demais apontam que o condutor teria virado réu no processo.",
+        "Com o acolhimento da acusação formal, o motorista passaria a responder judicialmente pela morte do menino. A confirmação da tramitação dependeria de verificação direta com os órgãos do Poder Judiciário."
+      ],
+      "id": "circ:justica-teria-aceito-denuncia-contra-motorista-por-morte-de-crianca-em",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Justiça teria aceito denúncia contra motorista por morte de criança em MT",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T22:54:04.085Z",
+      "hora": "18h54"
     }
   ],
   "pautas": [
+    {
+      "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
+      "veiculo": "plantaonews.com.br",
+      "editoria": "regional",
+      "quentura": 7,
+      "tambemEm": [
+        "mtagora.com.br",
+        "LOCAL MT",
+        "ibi.ong.br"
+      ]
+    },
     {
       "titulo": "Max Russi confirma apoio a Pivetta e libera filiados do Podemos para seguir outras candidaturas",
       "veiculo": "O Documento",
@@ -1364,7 +1277,7 @@
       "tambemEm": [
         "Estadão MT",
         "Muvuca Popular",
-        "VG Notícias"
+        "g1 MT"
       ]
     },
     {
@@ -1375,7 +1288,7 @@
       "tambemEm": [
         "Estadão MT",
         "O Documento",
-        "VG Notícias"
+        "g1 MT"
       ]
     },
     {
@@ -1391,31 +1304,42 @@
     },
     {
       "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
-      "veiculo": "MT de Fato",
+      "veiculo": "paranatinga news",
       "editoria": "regional",
       "quentura": 7,
       "tambemEm": [
+        "plantaonews.com.br",
         "mtagora.com.br",
-        "MOMENTO MT",
-        "Inteligência Brasil Imprensa"
+        "LOCAL MT"
       ]
     },
     {
-      "titulo": "Max Russi declara apoio a Otaviano Pivetta e oficializa aliança para disputa ao Governo de Mato Grosso",
-      "veiculo": "O Mato Grosso",
+      "titulo": "Podemos anuncia apoio à candidatura de Otaviano Pivetta ao governo de Mato Grosso",
+      "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
-        "Estadão MT",
         "O Documento",
-        "Muvuca Popular"
+        "Muvuca Popular",
+        "Primeira Página"
+      ]
+    },
+    {
+      "titulo": "Podemos decide apoiar Pivetta ao governo e libera filiados para outros candidatos",
+      "veiculo": "Primeira Página",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "O Documento",
+        "Muvuca Popular",
+        "g1 MT"
       ]
     },
     {
       "titulo": "VÍDEO: Max Russi fecha aliança do Podemos com Pivetta na disputa pelo Governo",
       "veiculo": "Estadão MT",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
         "O Documento",
         "Muvuca Popular",
@@ -1426,7 +1350,7 @@
       "titulo": "Max Russi bate o martelo e Podemos apoiará Pivetta",
       "veiculo": "VG Notícias",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
         "Estadão MT",
         "O Documento",
@@ -1434,123 +1358,100 @@
       ]
     },
     {
-      "titulo": "Podemos decide apoiar Pivetta ao governo e libera filiados para outros candidatos",
-      "veiculo": "Primeira Página",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "O Documento",
-        "Muvuca Popular",
-        "VG Notícias"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
-      "veiculo": "Inteligência Brasil Imprensa",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "mtagora.com.br",
-        "MT de Fato",
-        "MOMENTO MT"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
-      "veiculo": "MOMENTO MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "mtagora.com.br",
-        "MT de Fato",
-        "Inteligência Brasil Imprensa"
-      ]
-    },
-    {
       "titulo": "Fim do suspense: Podemos fecha com Pivetta e anuncia apoio à reeleição",
       "veiculo": "Muvuca Popular",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
         "Estadão MT",
         "O Documento",
-        "Só Notícias"
+        "g1 MT"
       ]
     },
     {
-      "titulo": "Justiça aceita denúncia do MPMT e motorista que provocou morte de criança em acidente em Sorriso vira réu por homicídio qualificado",
-      "veiculo": "CenárioMT",
+      "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
+      "veiculo": "ibi.ong.br",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "VG Notícias"
-      ]
-    },
-    {
-      "titulo": "Justiça aceita denúncia contra motorista acusado de matar menino de 4 anos",
-      "veiculo": "VG Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "O Documento",
-        "g1 MT",
-        "CenárioMT"
-      ]
-    },
-    {
-      "titulo": "Justiça aceita denúncia contra motorista acusado de matar criança de 4 anos em acidente em MT",
-      "veiculo": "g1 MT",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "O Documento",
-        "VG Notícias",
-        "CenárioMT"
-      ]
-    },
-    {
-      "titulo": "Justiça recebe denúncia do MP e motorista que matou criança de 4 anos em acidente vira réu",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 MT",
-        "VG Notícias",
-        "CenárioMT"
+        "plantaonews.com.br",
+        "MOMENTO MT",
+        "mtagora.com.br"
       ]
     },
     {
       "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+      "veiculo": "LOCAL MT",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "plantaonews.com.br",
+        "mtagora.com.br",
+        "NG NOTÍCIAS"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+      "veiculo": "NG NOTÍCIAS",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "plantaonews.com.br",
+        "mtagora.com.br",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
       "veiculo": "MOMENTO MT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
-        "mtagora.com.br",
-        "MT de Fato"
+        "plantaonews.com.br",
+        "ibi.ong.br",
+        "mtagora.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Sinop conclui aplicação da capa asfáltica na Estrada Dalva e libera tráfego de veículos",
+      "veiculo": "mtagora.com.br",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "plantaonews.com.br",
+        "LOCAL MT",
+        "NG NOTÍCIAS"
       ]
     },
     {
       "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
       "veiculo": "mtagora.com.br",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
-        "MT de Fato",
-        "Inteligência Brasil Imprensa",
+        "plantaonews.com.br",
+        "ibi.ong.br",
         "MOMENTO MT"
       ]
     },
     {
-      "titulo": "Prefeitura de Sinop cobra e empresa reestabelece acesso à Comunidade Adalgisa pela Estrada Cirineu Coan",
-      "veiculo": "mtagora.com.br",
+      "titulo": "Sinop lança plataforma para acompanhar fluxo de turistas e movimentação econômica",
+      "veiculo": "Só Notícias",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "MT de Fato",
-        "Inteligência Brasil Imprensa",
-        "MOMENTO MT"
+        "LEIAGORA",
+        "mtagora.com.br"
+      ]
+    },
+    {
+      "titulo": "Após apoio a Pivetta, Podemos indica Elson Ramos para segunda suplência de Mauro ao Senado",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Estadão MT",
+        "Só Notícias"
       ]
     }
   ]

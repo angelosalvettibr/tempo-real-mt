@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-05T22:38:17.951Z",
+  "gerado": "2026-08-05T23:02:59.157Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 197,
-    "fonteLivre": 63,
+    "pauta": 209,
+    "fonteLivre": 51,
     "confirmadas": 20,
-    "publicadas": 11,
+    "publicadas": 15,
     "resgatadas": 0,
-    "semFonte": 35
+    "semFonte": 48
   },
   "fontes": {
-    "checadas": 97,
-    "responderam": 39,
+    "checadas": 114,
+    "responderam": 42,
     "entregando": 28,
-    "itens": 259,
+    "itens": 260,
     "lista": [
       {
         "tipo": "pauta",
@@ -100,6 +100,15 @@
       },
       {
         "tipo": "resgate",
+        "id": "valor",
+        "nome": "Valor",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "correiobraz",
         "nome": "Correio Braziliense",
         "itens": 12,
@@ -145,17 +154,17 @@
       },
       {
         "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
+        "tipo": "resgate",
+        "id": "estadao",
+        "nome": "Estadão",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -172,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -189,27 +198,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -219,6 +210,15 @@
         "tipo": "pauta",
         "id": "g1economia",
         "nome": "g1 Economia",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -360,27 +360,18 @@
         "erro": "HTTP 404"
       },
       {
-        "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 405"
       },
       {
         "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -511,6 +502,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 429"
       },
       {
         "tipo": "livre",
@@ -721,21 +721,21 @@
       },
       {
         "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "mpf",
         "nome": "MPF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "tcu",
+        "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -865,6 +865,15 @@
       },
       {
         "tipo": "livre",
+        "id": "antaq",
+        "nome": "Antaq",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "cnmp",
         "nome": "CNMP",
         "itens": 0,
@@ -874,8 +883,152 @@
       },
       {
         "tipo": "livre",
+        "id": "anac",
+        "nome": "Anac",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "aneel",
+        "nome": "Aneel",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "anatel",
+        "nome": "Anatel",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "ana",
+        "nome": "ANA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "anm",
+        "nome": "ANM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "infrasa",
+        "nome": "Infra S.A.",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "bndes",
+        "nome": "BNDES",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ppi",
+        "nome": "Programa de Parcerias de Investimentos",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "portos",
+        "nome": "Ministério de Portos e Aeroportos",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "mdic",
+        "nome": "MDIC",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "minas",
+        "nome": "Ministério de Minas e Energia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "ontl",
+        "nome": "Observatório Nacional de Transporte e Logística",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "in-dou",
+        "nome": "Imprensa Nacional",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "pncp",
+        "nome": "Portal Nacional de Contratações Públicas",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "epe",
+        "nome": "EPE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "tse",
         "nome": "TSE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -895,31 +1048,61 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/Sergio-Carvalho.png",
-      "fotoAlt": "Sergio Carvalho",
-      "fotoLarg": 4184,
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Indigenous-action-at-COP30-UNclimatechange-Flickr-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:sergio-carvalho-realiza-recital-gratuito-de-piano-na-casa-de-dona-yaya",
+      "id": "ilm:povos-indigenas-seguem-em-luta-por-reconhecimento-e-direitos-no-mundo",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Sérgio Carvalho realiza recital gratuito de piano na Casa de Dona Yayá",
-      "resumo": "Apresentação integra a programação do Domingo na Yayá e traz peças do compositor alemão Ludwig van Beethoven.",
-      "fonte": "Meridiano, com informações de Jornal da USP",
-      "origemLink": "https://jornal.usp.br/cadernodecultura/recital-piano-gratuito-domingo-yaya/",
-      "origemNome": "Jornal da USP",
+      "titulo": "Povos indígenas seguem em luta por reconhecimento e direitos no mundo",
+      "resumo": "A defesa e o avanço de garantias fundamentais ocorrem mesmo após a queda de impérios e a descolonização política.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/05/indigenous-stories-are-global-stories/",
+      "origemNome": "Global Voices (EN)",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O pianista Sérgio Carvalho interpreta peças do compositor alemão Ludwig van Beethoven (1770-1827) em um recital intimista e gratuito na Casa de Dona Yayá.",
-        "Beethoven é uma figura da história da música ocidental cujas obras estão entre as mais executadas do repertório clássico, abrangendo a transição do período clássico para a era romântica.",
-        "Sérgio Carvalho de Oliveira formou-se em cravo pela Unicamp em 1992 na classe de Helena Jank, fez aperfeiçoamento com Maria Lúcia Nogueira e estudou órgão com Elisa Freixo. Ele participou de festivais e oficinas em Campos do Jordão (1985), Curitiba e Rio de Janeiro (1989), Buenos Aires e Stuttgart (1997), além de masterclasses de cravo e órgão.",
-        "O músico atuou como cravista e organista convidado pela Orquestra do Teatro Municipal de São Paulo e pela Orquestra Sinfônica do Estado (Osesp). Como solista, atuou na Orquestra da Sociedade Bach de São Paulo, na Orquestra de Câmara da Unesp, na Orquestra de Câmara da ECA (Ocam) e na Orquestra Sinfônica da USP (Osusp), sendo intérprete e curador da série Bach: tema desde 2009."
+        "Os povos indígenas continuam a lutar pelo reconhecimento e pela proteção e avanço de seus direitos fundamentais em âmbito global.",
+        "Essa mobilização permanece ativa mesmo após a queda de impérios e os processos de descolonização política.",
+        "A defesa dessas garantias e o avanço dos direitos fundamentais seguem mantidos por esses povos no mundo."
       ],
-      "link": "/materia/sergio-carvalho-realiza-recital-gratuito-de-piano-na-casa-de-dona-yaya.html",
-      "iso": "2026-08-05T21:59:39.000Z",
-      "hora": "17h59",
+      "link": "/materia/povos-indigenas-seguem-em-luta-por-reconhecimento-e-direitos-no-mundo.html",
+      "iso": "2026-08-05T18:17:02.000Z",
+      "hora": "14h17",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/03/IMG_7316-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:nippon-budokan-sedia-a-49-demonstracao-japonesa-de-kobudo",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Nippon Budokan sedia a 49ª Demonstração Japonesa de Kobudo",
+      "resumo": "Artes marciais ancestrais estabelecidas antes de 1868 mantêm demonstrações focadas em técnicas letais sem regras de pontuação ou competições.",
+      "fonte": "Meridiano, com informações de Global Voices",
+      "origemLink": "https://pt.globalvoices.org/2026/08/05/apresentando-o-kobudo-artes-marciais-tradicionais-do-japao/",
+      "origemNome": "Global Voices",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Em primeiro de fevereiro, a Global Voices acompanhou a 49ª Demonstração Japonesa de Kobudo no Nippon Budokan, no Japão. O evento apresentou escolas de artes marciais clássicas estabelecidas antes da Restauração Meiji, em 1868, que praticam técnicas tradicionais.",
+        "Diferente das artes marciais modernas voltadas para o esporte, o kobudo não possui competições de combate real, apenas demonstrações. O soke da escola Hontai Yoshin-ryu, fundada em 1660, Sensei Kyoichi Inoue, afirmou que a modalidade não tem regras sobre onde golpear, direcionando ataques a pontos letais e artérias expostas.",
+        "A escola Shojitsuken Rikata Ichi-ryu Katchu Battojutsu, estabelecida entre meados do século XV e o final do século XVI, utilizou armaduras autênticas e espadas longas reais durante a exibição. O representante da escola, Sensei Masaru Kanzaki, demonstrou a execução do golpe final, fundamentado nos princípios do bushido para evitar o sofrimento prolongado do oponente.",
+        "As demonstrações da modalidade abrangem combates armados e sem armas. A prática do kobudo caracteriza-se pela busca por eficiência, flexibilidade e ausência de padronização no preparo dos praticantes para diferentes situações."
+      ],
+      "link": "/materia/nippon-budokan-sedia-a-49-demonstracao-japonesa-de-kobudo.html",
+      "iso": "2026-08-05T10:30:38.000Z",
+      "hora": "06h30",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -931,11 +1114,11 @@
       "fotoLarg": 900,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:passagem-de-antonio-candido-pela-faculdade-de-assis-marcou-sua-carreir",
+      "id": "ilm:antonio-candido-lecionou-na-faculdade-de-letras-de-assis-entre-1958-e-",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Passagem de Antonio Candido pela faculdade de Assis marcou sua carreira na literatura",
-      "resumo": "Intelectual lecionou na instituição de 1958 a 1960, período em que migrou do ensino da sociologia para os estudos literários antes de a unidade ser incorporada pela Unesp em 1976.",
+      "titulo": "Antonio Candido lecionou na Faculdade de Letras de Assis entre 1958 e 1960",
+      "resumo": "A passagem pela instituição marcou a transição do intelectual da sociologia para o ensino universitário de literatura.",
       "fonte": "Meridiano, com informações de Jornal da Unesp",
       "origemLink": "https://jornal.unesp.br/2026/08/04/antonio-candido-viveu-renascimento-intelectual-durante-periodo-como-professor-da-faculdade-de-letras-de-assis/",
       "origemNome": "Jornal da Unesp",
@@ -945,11 +1128,12 @@
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "A atuação do intelectual Antonio Candido (1918-2017) como professor na Faculdade de Filosofia, Ciências e Letras de Assis (FFCL), entre 1958 e 1960, marcou o início de sua docência dedicada aos estudos literários. A instituição foi incorporada em 1976 pela Unesp, passando a se chamar Faculdade de Ciências e Letras (FCL).",
-        "Docente de Sociologia na Universidade de São Paulo (USP) desde 1942, Candido aceitou o convite do então diretor da FFCL, Antonio Soares Amora, feito em 1957. O professor mudou-se para a cidade paulista no segundo semestre de 1958. Com o início das atividades da faculdade em 1959, ele propôs aos professores o \"Pacto do Silêncio\", reservando quatro horas diárias pela manhã para pesquisas e trabalhos individuais, destinando o período da tarde às aulas e atendimentos.",
-        "Sua esposa, Gilda de Mello e Souza, e suas filhas mudaram-se para Assis em 1959. Em 1988, a FCL da Unesp concedeu a Antonio Candido o título de Professor Emérito. Em discurso, publicado em 1992 pela Editora Unesp na reedição de \"Brigada ligeira\", ele definiu a passagem pela faculdade de Assis como uma oportunidade decisiva e um renascimento intelectual. A filha do crítico, Ana Luísa Escorel, e o historiador Paulo Henrique Martinez também destacaram a relevância da experiência do docente na instituição."
+        "Antonio Candido lecionou na Faculdade de Filosofia, Ciências e Letras de Assis de 1958 a 1960, período em que iniciou sua atuação no ensino universitário de literatura. A instituição foi incorporada pela Unesp em 1976 e passou a se chamar Faculdade de Ciências e Letras.",
+        "O intelectual recebeu o convite para integrar o corpo docente em 1957, feito por Antonio Soares Amora, enquanto estava em licença da Universidade de São Paulo, onde lecionava Sociologia desde 1942. Ele se mudou no segundo semestre de 1958, e a faculdade começou a funcionar em 1959, quando sua esposa, Gilda de Mello e Souza, e suas filhas se juntaram a ele em Assis.",
+        "Na rotina de trabalho da instituição, Candido propôs o chamado \"Pacto do Silêncio\", em que os professores reservavam quatro horas diárias no período da manhã para leitura e escrita, dedicando o período da tarde às aulas e aos estudantes.",
+        "Em 1988, a faculdade concedeu a Antonio Candido o título de Professor Emérito. O discurso proferido na ocasião foi publicado em 1992 pela Editora Unesp em uma reedição especial do seu primeiro livro, \"Brigada ligeira\", juntamente com \"O observador literário\" e uma entrevista concedida à Revista Trans/Form/Ação."
       ],
-      "link": "/materia/passagem-de-antonio-candido-pela-faculdade-de-assis-marcou-sua-carreir.html",
+      "link": "/materia/antonio-candido-lecionou-na-faculdade-de-letras-de-assis-entre-1958-e-.html",
       "iso": "2026-08-04T18:29:27.000Z",
       "hora": "14h29",
       "original": true,
@@ -958,67 +1142,62 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://s2-g1.glbimg.com/WV6V3F3aXqi3iB2CWl8R1UI4csI=/1280x0/filters:format(jpeg)/https://thumbor.globoi.com/unsafe/fit-in/1280x720/s04.video.glbimg.com/deo/vi/63/70/13507063",
-      "fotoAlt": null,
-      "fotoLarg": 1200,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:mae-de-ney-muller-pede-r-574-5-mil-de-indenizacao-a-ex-procurador-da-a",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Mãe de Ney Müller pede R$ 574,5 mil de indenização a ex-procurador da ALMT",
-      "resumo": "A técnica de enfermagem Iracema Alves Ferreira da Silva ingressou com a ação na Vara Cível de Várzea Grande contra Luiz Eduardo Figueiredo Rocha Silva, preso pelo crime ocorrido em abril de 2025.",
-      "fonte": "Meridiano, com informações de g1",
-      "origemLink": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/05/mae-de-homem-em-situacao-de-rua-morto-a-tiros-em-cuiaba-pede-r-5745-mil-de-indenizacao-a-ex-procurador-da-almt.ghtml",
-      "origemNome": "g1",
-      "pautadoPor": [
-        "g1"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A técnica de enfermagem Iracema Alves Ferreira da Silva acionou a Justiça contra o ex-procurador da Assembleia Legislativa de Mato Grosso (ALMT), Luiz Eduardo Figueiredo Rocha Silva, cobrando indenização por danos morais e materiais e uma pensão mensal. A ação motivada pelo assassinato a tiros de seu único filho, Ney Müller Alves Pereira, ocorrido em abril de 2025, tramita na Vara Cível de Várzea Grande.",
-        "O processo pede o valor inicial de R$ 574,5 mil. A quantia inclui R$ 500 mil por danos morais e o pagamento de uma indenização mensal de R$ 4.972,33 por até 32 anos, ou até a morte da mãe. O valor mensal equivale à pensão por morte do pai da vítima, um policial rodoviário federal aposentado, benefício que Ney estava prestes a receber e que ajudaria no sustento de Iracema.",
-        "Luiz Eduardo, de 45 anos, está preso e foi pronunciado pela Justiça para responder perante o Tribunal do Júri por homicídio qualificado por motivo torpe e por recurso que dificultou a defesa da vítima. A defesa da autora sustenta que a responsabilização criminal do ex-procurador embasa o pedido de reparação cível pelo homicídio de Ney, que era homem em situação de rua."
-      ],
-      "link": "/materia/mae-de-ney-muller-pede-r-574-5-mil-de-indenizacao-a-ex-procurador-da-a.html",
-      "iso": "2026-08-05T22:01:58.000Z",
-      "hora": "18h01",
-      "original": true,
-      "contexto": "A ação cível afeta a técnica de enfermagem Iracema Alves Ferreira da Silva e o ex-procurador Luiz Eduardo Figueiredo Rocha Silva. Na esfera criminal, a próxima etapa do processo contra o réu é o julgamento pelo Tribunal do Júri. Não há registro de caso parecido no histórico do arquivo.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Assyrian_refugees_on_wagon-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:avante-oficializa-candidatura-de-augusto-cury-a-presidencia-da-republi",
+      "id": "ilm:mulheres-indigenas-assirias-enfrentam-processo-de-apagamento-triplo",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Avante oficializa candidatura de Augusto Cury à Presidência da República",
-      "resumo": "Nome para o cargo de vice-presidente não foi definido e candidato defende a adoção do semipresidencialismo no país.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/avante-oficializa-augusto-cury-como-candidato-presidencia",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "Metrópoles",
-        "JOTA"
-      ],
-      "quentura": 5,
+      "titulo": "Mulheres indígenas assírias enfrentam processo de apagamento triplo",
+      "resumo": "O apagamento ocorreu por sua identidade, por violência sexual e pela história, enquanto o mecanismo que as fez desaparecer continua em atividade.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/05/the-anatomy-of-erasure-indigenous-assyrian-women-and-forgotten-genocide/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "O partido Avante oficializou a candidatura do escritor e psiquiatra Augusto Cury à Presidência da República nesta segunda-feira (3). A confirmação ocorreu durante a convenção nacional da legenda, realizada na Assembleia Legislativa de São Paulo (Alesp).",
-        "Em discurso a filiados e dirigentes, Cury defendeu mudanças no sistema de governo brasileiro com a adoção do semipresidencialismo. Pela proposta, se eleito, o presidente da República exercerá funções estratégicas, enquanto a condução da administração do governo ficará com um primeiro-ministro.",
-        "O candidato informou também que as tratativas para uma eventual composição de chapa com o candidato do Novo, Romeu Zema, não avançaram. De acordo com Cury, a aliança entre as duas legendas está praticamente descartada.",
-        "A realização das convenções partidárias se encerra na próxima quarta-feira (5). O prazo limite para o registro das candidaturas junto à Justiça Eleitoral é o dia 15 de agosto."
+        "Mulheres indígenas assírias passaram por um processo de apagamento registrado em três etapas.",
+        "A eliminação ocorreu primeiro por serem assírias e, em seguida, por meio de violência sexual.",
+        "A etapa final do apagamento deu-se pela própria história.",
+        "O mecanismo responsável por fazer com que essas mulheres desaparecessem continua em funcionamento."
       ],
-      "link": "/materia/avante-oficializa-candidatura-de-augusto-cury-a-presidencia-da-republi.html",
-      "iso": "2026-08-04T00:51:00.000Z",
-      "hora": "20h51",
+      "link": "/materia/mulheres-indigenas-assirias-enfrentam-processo-de-apagamento-triplo.html",
+      "iso": "2026-08-05T06:12:13.000Z",
+      "hora": "02h12",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/07/Sergio-Carvalho.png",
+      "fotoAlt": "Sergio Carvalho",
+      "fotoLarg": 4184,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:casa-de-dona-yaya-recebe-recital-gratuito-de-piano",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Casa de Dona Yayá recebe recital gratuito de piano",
+      "resumo": "O pianista Sérgio Carvalho de Oliveira interpreta composições de Ludwig van Beethoven no evento Domingo na Yayá.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/cadernodecultura/recital-piano-gratuito-domingo-yaya/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O pianista Sérgio Carvalho de Oliveira realiza um recital na Casa de Dona Yayá. A apresentação gratuita integra a programação do Domingo na Yayá e traz obras de Ludwig van Beethoven (1770-1827).",
+        "Ludwig van Beethoven foi um compositor e pianista alemão da música ocidental. A produção do músico abrange a transição entre o período clássico e a era romântica, figurando entre as obras mais executadas do repertório clássico.",
+        "Sérgio Carvalho de Oliveira formou-se em cravo na Unicamp em 1992, na classe de Helena Jank, e fez aperfeiçoamento com a cravista Maria Lúcia Nogueira, além de estudar órgão com Elisa Freixo. Ele participou de festivais e oficinas em Campos do Jordão (1985), Curitiba e Rio de Janeiro (1989), Buenos Aires e Stuttgart (1997), além de masterclasses de cravo e órgão.",
+        "O músico foi cravista e organista convidado da Orquestra do Teatro Municipal de São Paulo e da Orquestra Sinfônica do Estado (Osesp). Atuou como solista na Orquestra da Sociedade Bach de São Paulo, na Orquestra de Câmara da Unesp, na Orquestra de Câmara da ECA (Ocam) e na Orquestra Sinfônica da USP (Osusp), e desde 2009 é intérprete e curador da série Bach: tema."
+      ],
+      "link": "/materia/casa-de-dona-yaya-recebe-recital-gratuito-de-piano.html",
+      "iso": "2026-08-05T21:59:39.000Z",
+      "hora": "17h59",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1030,29 +1209,29 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:lula-classifica-revogacao-de-visto-de-embaixadora-nos-eua-como-irrespo",
+      "id": "ilm:lula-classifica-como-irresponsavel-revogacao-de-visto-de-embaixadora-n",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Lula classifica revogação de visto de embaixadora nos EUA como irresponsável",
-      "resumo": "Medida dos Estados Unidos foi motivada por suposta demora em aprovação diplomática, alegação que o governo brasileiro afirmou ser falsa.",
+      "titulo": "Lula classifica como irresponsável revogação de visto de embaixadora nos EUA",
+      "resumo": "O governo norte-americano justificou a medida por uma suposta demora na resposta diplomática brasileira, alegação rebatida pelo governo do Brasil.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/atitude-irresponsavel-diz-lula-apos-revogacao-de-visto-de-embaixadora",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Congresso em Foco",
         "BBC Brasil",
-        "Poder360",
-        "Estadão"
+        "Congresso em Foco",
+        "CNN Brasil",
+        "Poder360"
       ],
-      "quentura": 5,
+      "quentura": 7,
       "uf": null,
       "corpo": [
-        "O presidente Luiz Inácio Lula da Silva classificou como uma atitude irresponsável e impensada a revogação do visto da embaixadora brasileira nos Estados Unidos, Maria Luiza Ribeiro Viotti. A declaração foi dada nesta quarta-feira (5), em entrevista ao Meteoro Brasil e ao podcast Os Três Elementos.",
-        "A revogação foi anunciada na terça-feira (4) pelo governo de Donald Trump, que alegou demora do Brasil em responder sobre a aprovação diplomática do seu indicado para a embaixada norte-americana. O governo brasileiro rebateu a justificativa, afirmando que ela é falsa.",
-        "Lula afirmou que a decisão foi desnecessária para países com 203 anos de relações diplomáticas. O presidente declarou que Donald Trump está no poder há um ano e meio sem enviar embaixador ao Brasil e defendeu que o país exige ser tratado com respeito.",
-        "O presidente também afirmou que o Brasil não aceitará interferência estrangeira nas eleições de outubro e que o país está preparado para enfrentar quem tentar interferir no processo eleitoral."
+        "O presidente Luiz Inácio Lula da Silva classificou como uma atitude irresponsável e impensada a revogação do visto da embaixadora brasileira nos Estados Unidos, Maria Luiza Ribeiro Viotti. A decisão foi anunciada na terça-feira (4) pelo governo de Donald Trump.",
+        "Os Estados Unidos justificaram a medida citando a demora do Brasil em responder à aprovação diplomática do indicado de Trump para a embaixada norte-americana no país. O governo brasileiro declarou que as alegações são falsas.",
+        "Em entrevista ao Meteoro Brasil e ao podcast Os Três Elementos nesta quarta-feira (5), Lula declarou que Trump está no poder há um ano e meio e não havia enviado representante ao Brasil. Ele afirmou que a relação diplomática entre os países tem 203 anos e declarou que o país quer ser tratado com respeito.",
+        "O presidente também afirmou que o Brasil está preparado e enfrentará qualquer pessoa de fora que queira interferir no processo eleitoral das eleições de outubro."
       ],
-      "link": "/materia/lula-classifica-revogacao-de-visto-de-embaixadora-nos-eua-como-irrespo.html",
+      "link": "/materia/lula-classifica-como-irresponsavel-revogacao-de-visto-de-embaixadora-n.html",
       "iso": "2026-08-05T16:04:00.000Z",
       "hora": "12h04",
       "original": true,
@@ -1061,38 +1240,32 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/1784199434ijf9a_1600x900-800x450.jpg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:copom-reduz-taxa-selic-de-14-25-para-14-ao-ano-em-quarta-queda-seguida",
+      "id": "ilm:sindicatos-e-tribunais-falham-na-protecao-de-trabalhadores-no-kazakhst",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Copom reduz taxa Selic de 14,25% para 14% ao ano em quarta queda seguida",
-      "resumo": "Decisão do Banco Central busca alinhar a inflação à meta estipulada pelo CMN em meio a incertezas no cenário externo e moderação da atividade econômica no país.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/em-nova-reducao-copom-baixa-taxa-selic-para-14-ao-ano",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Economia",
-        "Poder360",
-        "Metrópoles",
-        "R7"
-      ],
-      "quentura": 4,
+      "titulo": "Sindicatos e tribunais falham na proteção de trabalhadores no Kazakhstan",
+      "resumo": "No papel, as entidades sindicais funcionam como a instituição principal para defender os direitos trabalhistas, mas enfrentam pressão constante há mais de três décadas.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/courts-and-unions-fail-to-protect-workers-in-kazakhstan/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Comitê de Política Monetária (Copom) do Banco Central (BC) reduziu a taxa básica de juros da economia brasileira, a Selic, de 14,25% para 14% ao ano nesta quarta-feira (5). A decisão, tomada em reunião realizada na sede da instituição, em Brasília, marcou a quarta redução consecutiva do indicador.",
-        "De acordo com o BC, o ajuste de menos 0,25 ponto percentual é compatível com a estratégia de convergência da inflação para o redor da meta. A autoridade monetária citou indefinições externas relativas a conflitos armados no Oriente Médio e à política monetária de economias avançadas. No ambiente interno, o órgão observou moderação gradual da atividade econômica e mercado de trabalho aquecido.",
-        "A inflação prévia, medida pelo Índice Nacional de Preços ao Consumidor Amplo 15 (IPCA-15) do Instituto Brasileiro de Geografia e Estatística (IBGE), foi de 0,06% em julho, acumulando 4,52% em 12 meses. A meta de inflação fixada pelo Conselho Monetário Nacional (CMN) para o período iniciado em janeiro de 2025 é de 3%, com intervalo de tolerância entre 1,50% e 4,50%.",
-        "De junho de 2025 a março deste ano, a Selic esteve fixada em 15% ao ano. O Copom deu início aos cortes da taxa de juros em março."
+        "Os tribunais e os sindicatos falham na proteção dos trabalhadores no Kazakhstan. A atuação das entidades sindicais no país registra pressão constante há mais de três décadas.",
+        "No papel, os sindicatos servem como a instituição principal responsável por proteger os direitos dos trabalhadores.",
+        "Apesar da atribuição formal de defesa da categoria, a pressão contra as organizações sindicais no Kazakhstan é contínua há mais de três décadas."
       ],
-      "link": "/materia/copom-reduz-taxa-selic-de-14-25-para-14-ao-ano-em-quarta-queda-seguida.html",
-      "iso": "2026-08-05T21:52:00.000Z",
-      "hora": "17h52",
+      "link": "/materia/sindicatos-e-tribunais-falham-na-protecao-de-trabalhadores-no-kazakhst.html",
+      "iso": "2026-08-04T22:22:39.000Z",
+      "hora": "18h22",
       "original": true,
-      "contexto": "Esta foi a quarta redução consecutiva da taxa Selic desde março, caindo de 14,25% para 14% ao ano. Entre junho de 2025 e março deste ano, o indicador esteve em 15% ao ano. A inflação de 4,52% acumulada em 12 meses pelo IPCA-15 compara-se à meta central de 3%, que possui intervalo de tolerância de até 4,50%.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1102,11 +1275,145 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:republicanos-decide-nao-apoiar-candidato-a-presidencia-da-republica-na",
+      "id": "ilm:avante-oficializa-augusto-cury-como-candidato-a-presidencia-da-republi",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Republicanos decide não apoiar candidato à Presidência da República nas eleições",
-      "resumo": "Partido adotou posição de independência institucional e liberou os diretórios regionais para realizarem as coligações que quiserem.",
+      "titulo": "Avante oficializa Augusto Cury como candidato à Presidência da República",
+      "resumo": "A escolha ocorreu durante convenção em São Paulo, mas a definição do candidato a vice-presidente segue em aberto.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/avante-oficializa-augusto-cury-como-candidato-presidencia",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "CNN Brasil",
+        "g1 Política",
+        "Poder360",
+        "JOTA"
+      ],
+      "quentura": 6,
+      "uf": null,
+      "corpo": [
+        "O partido Avante oficializou a candidatura do escritor e psiquiatra Augusto Cury à Presidência da República nesta segunda-feira (3). A decisão foi tomada durante a convenção nacional da legenda, realizada na Assembleia Legislativa de São Paulo (Alesp).",
+        "O nome do candidato a vice-presidente ainda não foi definido. Ao discursar para filiados e dirigentes, Cury defendeu mudanças no sistema de governo brasileiro e disse que pretende propor a adoção do semipresidencialismo, modelo no qual o presidente ficaria com funções estratégicas e um primeiro-ministro conduziria a administração do governo.",
+        "Cury informou que as conversas para uma composição de chapa com o candidato do Novo à Presidência, Romeu Zema, não avançaram. Segundo ele, a possibilidade de aliança entre os dois partidos está praticamente descartada.",
+        "O prazo para a realização de convenções partidárias termina na próxima quarta-feira (5). O limite para o registro das candidaturas na Justiça Eleitoral é o dia 15 de agosto."
+      ],
+      "link": "/materia/avante-oficializa-augusto-cury-como-candidato-a-presidencia-da-republi.html",
+      "iso": "2026-08-04T00:51:00.000Z",
+      "hora": "20h51",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/medium-vecteezy_glass-globe-and-airplane-model-travel-and-globalization_2923800_medium-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:pessoa-nascida-apatrida-relata-medo-de-coisas-que-sao-naturais-aos-out",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Pessoa nascida apátrida relata medo de coisas que são naturais aos outros",
+      "resumo": "O depoimento descreve a vivência de ter nascido sem nacionalidade e o aprendizado de temer situações consideradas comuns para o restante das pessoas.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/a-stateless-travelers-journey-through-ignorance-and-misinformation/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Uma pessoa que nasceu apátrida declarou ter aprendido a temer coisas que surgem naturalmente para outras pessoas.",
+        "O relato apresenta o depoimento sobre a condição de não possuir nacionalidade desde o nascimento. A declaração aborda o impacto dessa situação na percepção de eventos cotidianos.",
+        "O trecho divulgado não fornece dados adicionais sobre a identidade do indivíduo ou o contexto da afirmação."
+      ],
+      "link": "/materia/pessoa-nascida-apatrida-relata-medo-de-coisas-que-sao-naturais-aos-out.html",
+      "iso": "2026-08-04T07:37:20.000Z",
+      "hora": "03h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:prd-e-solidariedade-decidem-nao-apoiar-candidato-a-presidencia",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "PRD e Solidariedade decidem não apoiar candidato à presidência",
+      "resumo": "A federação Renovação Solidária liberou os diretórios estaduais para formarem as alianças políticas que preferirem nas eleições deste ano.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/prd-e-solidariedade-decidem-pela-neutralidade-na-eleicao-presidencial",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "BBC Brasil",
+        "Estadão"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "A federação Renovação Solidária, formada pelo Partido da Renovação Democrática (PRD) e pelo Solidariedade, decidiu não apoiar nenhum candidato à presidência da República. A definição ocorreu em convenção nacional realizada nesta quarta-feira (5).",
+        "Com o posicionamento, os diretórios estaduais ficaram livres para compor as alianças que preferirem. Em nota, a federação declarou que a medida respeita a autonomia de dirigentes, parlamentares, mandatários e candidatos, assegurando a liberdade no debate eleitoral brasileiro.",
+        "Segundo as duas legendas, a decisão também se baseia no contexto de intensa polarização política. Os partidos avaliaram que manter a independência constitui uma contribuição maior ao país.",
+        "A quarta-feira é o data limite para que os partidos realizem convenções, escolham candidatos aos cargos eletivos deste ano e decidam sobre a formação de coligações."
+      ],
+      "link": "/materia/prd-e-solidariedade-decidem-nao-apoiar-candidato-a-presidencia.html",
+      "iso": "2026-08-05T21:21:00.000Z",
+      "hora": "17h21",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:copom-reduz-taxa-selic-para-14-ao-ano-em-quarta-queda-consecutiva",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Copom reduz taxa Selic para 14% ao ano em quarta queda consecutiva",
+      "resumo": "O corte de 0,25 ponto percentual foi decidido pelo Banco Central, que aponta moderação da atividade econômica no país e incertezas no cenário externo.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/em-nova-reducao-copom-baixa-taxa-selic-para-14-ao-ano",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "g1 Economia",
+        "Poder360",
+        "R7"
+      ],
+      "quentura": 3,
+      "uf": null,
+      "corpo": [
+        "O Comitê de Política Monetária (Copom) do Banco Central (BC) reduziu a Taxa Selic de 14,25% para 14% ao ano nesta quarta-feira (5). A decisão, tomada em reunião na sede da autarquia em Brasília, representa a quarta redução consecutiva da taxa básica de juros da economia brasileira.",
+        "Segundo o BC, o novo ajuste de menos 0,25 ponto percentual é compatível com a convergência da inflação para a meta. A instituição informou em nota que a medida busca suavizar as flutuações da atividade econômica e fomentar o pleno emprego, citando a moderação gradual da atividade doméstica, além de conflitos armados no Oriente Médio e incertezas sobre a política monetária em economias avançadas.",
+        "A inflação prévia, medida pelo IPCA-15 do IBGE, registrou 0,06% em julho, acumulando 4,52% em 12 meses. A meta fixada pelo Conselho Monetário Nacional (CMN) para o período iniciado em janeiro de 2025 é de 3%, com limite superior de 4,50%. De junho de 2025 a março deste ano, a Selic esteve em 15% ao ano, antes do início do ciclo de cortes promovido pelo comitê."
+      ],
+      "link": "/materia/copom-reduz-taxa-selic-para-14-ao-ano-em-quarta-queda-consecutiva.html",
+      "iso": "2026-08-05T21:52:00.000Z",
+      "hora": "17h52",
+      "original": true,
+      "contexto": "Esta foi a quarta redução consecutiva da Selic, taxa que esteve em 15% ao ano entre junho de 2025 e março deste ano. Com o novo corte de 0,25 ponto percentual, o juro caiu de 14,25% para 14% ao ano, valor acima da estimativa de 13,75% projetada pelo mercado financeiro em 3 de agosto de 2026. A inflação acumulada em 12 meses, de 4,52%, supera o limite superior de 4,50% fixado para a meta.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:republicanos-declara-neutralidade-e-nao-tera-candidato-a-presidencia",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Republicanos declara neutralidade e não terá candidato à Presidência",
+      "resumo": "Os diretórios regionais da legenda poderão fazer coligações livres, sem uma orientação da direção nacional.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
       "origemNome": "Agência Brasil",
@@ -1117,12 +1424,12 @@
       "quentura": 3,
       "uf": null,
       "corpo": [
-        "O partido Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano e que não lançará nome próprio para a disputa. A sigla adotará a chamada posição de independência institucional.",
-        "Em nota, o partido explicou a decisão no respeito às alianças estaduais e justificou que está presente de forma significativa em vários estados. De acordo com o comunicado, essa capilaridade exige considerar as particularidades locais e as composições construídas ao longo dos últimos anos.",
-        "Com a determinação, os diretórios regionais da legenda têm permissão para fazer as coligações que desejarem, sem a exigência de seguir uma orientação do diretório nacional.",
-        "A agremiação realizou sua convenção nacional no período da manhã. No entanto, a nota com o posicionamento sobre a corrida presidencial foi publicada em seu site antes do início do evento."
+        "O Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. O partido também definiu que não lançará um nome próprio para a disputa, adotando o que chamou de posição de independência institucional.",
+        "Segundo nota divulgada pela agremiação, a decisão justificou-se pelo respeito às alianças nos estados e pela presença da legenda em vários locais. O texto informou que essa capilaridade exige considerar as particularidades estaduais e as composições políticas construídas ao longo dos últimos anos.",
+        "Dessa forma, os diretórios regionais do partido estão autorizados a realizar as coligações que quiserem. A determinação concede liberdade às instâncias locais sem a necessidade de seguir uma orientação do diretório nacional.",
+        "A convenção nacional do Republicanos foi realizada no período da manhã. A nota oficial comunicando a decisão foi publicada no site da agremiação antes do início do evento."
       ],
-      "link": "/materia/republicanos-decide-nao-apoiar-candidato-a-presidencia-da-republica-na.html",
+      "link": "/materia/republicanos-declara-neutralidade-e-nao-tera-candidato-a-presidencia.html",
       "iso": "2026-08-04T16:57:00.000Z",
       "hora": "12h57",
       "original": true,
@@ -1136,11 +1443,77 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:copom-inicia-quinta-reuniao-de-2026-para-definir-a-taxa-selic",
+      "id": "ilm:trabalhadores-da-cptm-encerram-greve-nas-linhas-de-trem-em-sao-paulo",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Copom inicia quinta reunião de 2026 para definir a Taxa Selic",
-      "resumo": "A decisão sobre a taxa básica de juros será anunciada no dia 5 de agosto após dois dias de avaliações do cenário econômico pelo comitê.",
+      "titulo": "Trabalhadores da CPTM encerram greve nas linhas de trem em São Paulo",
+      "resumo": "Proposta aceita em assembleia garante o emprego de mais de 4.600 funcionários afetados pela concessão das linhas ao setor privado.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/termina-greve-nas-linhas-de-trens-em-sao-paulo",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "CNN Brasil"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "Os trabalhadores da Companhia Paulista de Trens Metropolitanos (CPTM) suspenderam a greve iniciada na terça-feira (4) e retomam as atividades nesta quarta-feira (5). A mobilização afetou as linhas 11, 12, 13 e o Expresso Aeroporto.",
+        "A decisão foi tomada em assembleia após a aprovação de uma proposta do governo estadual, mediada pelo Tribunal Regional do Trabalho (TRT). O acordo atende à reivindicação de garantia de emprego para os mais de 4.600 trabalhadores diretos que atuavam nas quatro linhas concedidas à iniciativa privada em julho.",
+        "O governo de São Paulo formalizou nesta quarta-feira (5) um projeto de lei específico para assegurar a realocação de 1.300 funcionários que ainda não tinham sido direcionados para novas funções.",
+        "Em nota, o sindicato informou que a categoria permanecerá em estado de greve para acompanhar o cumprimento dos compromissos e o avanço das negociações. Pela manhã, a paralisação havia interrompido a circulação na linha 13 por algumas horas."
+      ],
+      "link": "/materia/trabalhadores-da-cptm-encerram-greve-nas-linhas-de-trem-em-sao-paulo.html",
+      "iso": "2026-08-05T21:11:00.000Z",
+      "hora": "17h11",
+      "original": true,
+      "contexto": "A paralisação afetou as linhas 11, 12, 13 e o Expresso Aeroporto, envolvendo mais de 4.600 trabalhadores da CPTM. Do total da categoria, 1.300 funcionários ainda dependiam de direcionamento para novas funções. Como próxima etapa, o governo estadual formalizou nesta quarta-feira (5) um projeto de lei para a realocação desse grupo, enquanto o sindicato mantém a categoria em estado de greve.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Produção da indústria brasileira recua 1,8% em junho",
+      "resumo": "O resultado representa a segunda queda consecutiva do indicador do IBGE, que acumula perda de 2,7% nos últimos dois meses.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Exame"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "A produção industrial brasileira registrou queda de 1,8% em junho deste ano na comparação com maio. Os dados foram divulgados nesta terça-feira (4) pelo Instituto Brasileiro de Geografia e Estatística (IBGE) e integram a Pesquisa Industrial Mensal. É o segundo resultado negativo consecutivo do indicador, que havia apresentado recuo de 0,9% entre abril e maio.",
+        "De acordo com o gerente da pesquisa, André Macedo, a perda acumulada de 2,7% nos dois meses seguidos de queda eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses do ano. Na média móvel trimestral, a produção caiu 0,5%. Na comparação com junho do ano passado, houve crescimento de 1,7%. Com esse desempenho, a indústria acumula alta de 1,5% no ano e de 0,7% no acumulado de 12 meses.",
+        "Entre os 25 ramos industriais pesquisados, 16 tiveram redução na produção de maio para junho. A maior variação negativa ocorreu na atividade de coque, produtos derivados de petróleo e biocombustíveis, com índice de -5,9%. Também tiveram resultados negativos os setores de produtos farmoquímicos e farmacêuticos (-11%), confecção de artigos do vestuário e acessórios (-11%), equipamentos de informática, produtos eletrônicos e ópticos (-8,9%), outros equipamentos de transporte (-8,6%), produtos químicos (-4,3%), produtos de borracha e de material plástico (-2,8%), produtos alimentícios (-1,9%) e indústrias extrativas (-0,6%).",
+        "Nove atividades apresentaram alta na produção, com destaques para impressão e reprodução de gravações (20,2%), celulose, papel e produtos de papel (5,4%) e metalurgia (1,4%). Todas as quatro grandes categorias econômicas registraram queda no período: bens de consumo semi e não duráveis (-4,1%), bens de consumo duráveis (-3,2%), bens de capital (-1,1%) e bens intermediários (-1,1%)."
+      ],
+      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho.html",
+      "iso": "2026-08-04T12:44:00.000Z",
+      "hora": "08h44",
+      "original": true,
+      "contexto": "O recuo de 1,8% registrado em junho é a segunda queda consecutiva da produção industrial brasileira, após a redução de 0,9% em maio. A perda acumulada de 2,7% nesses dois meses elimina parte da alta de 4,4% verificada entre janeiro e abril. O resultado negativo atingiu 16 dos 25 ramos industriais pesquisados, com maiores variações negativas nos setores de derivados de petróleo, produtos farmacêuticos e vestuário.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:copom-inicia-quinta-reuniao-de-2026-para-definir-a-taxa-basica-de-juro",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Copom inicia quinta reunião de 2026 para definir a taxa básica de juros",
+      "resumo": "A decisão sobre a Selic, atualmente em 14,25% ao ano, será anunciada no dia 5 de agosto após dois dias de avaliações sobre o cenário econômico.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/copom-inicia-reuniao-que-definira-taxa-basica-de-juros",
       "origemNome": "Agência Brasil",
@@ -1151,116 +1524,16 @@
       "quentura": 2,
       "uf": null,
       "corpo": [
-        "O Comitê de Política Monetária (Copom) do Banco Central (BC) iniciou nesta terça-feira (4) a quinta reunião de 2026. O anúncio da decisão sobre a Taxa Selic está previsto para a quarta-feira, 5 de agosto, após dois dias de discussões sobre o cenário econômico nacional e internacional.",
-        "O encontro ocorre após o mercado financeiro reduzir a projeção da Selic para 2026 de 14% para 13,75%, conforme o Boletim Focus divulgado na segunda-feira (3). A projeção para o Índice Nacional de Preços ao Consumidor Amplo (IPCA) no ano caiu de 5,12% para 5,03%, mantendo-se acima do teto de 4,5% da meta definida pelo Conselho Monetário Nacional (CMN).",
-        "A Selic está atualmente em 14,25% ao ano, menor nível de 2026, após três reduções consecutivas de 0,25 ponto percentual feitas nas reuniões de março, abril e junho. O Copom vinha acenando com a possibilidade de corte, mas adotou cautela devido a incertezas com preços de combustíveis causadas pelo conflito entre Estados Unidos e Irã.",
-        "A taxa básica de juros orienta as negociações de títulos públicos e é o principal instrumento do BC para controlar a inflação. Juros mais altos reduzem a demanda e encarecem o crédito, enquanto taxas menores barateiam os financiamentos e estimulam o consumo e os investimentos."
+        "O Comitê de Política Monetária (Copom) do Banco Central iniciou nesta terça-feira (4) a quinta reunião de 2026 para definir a taxa Selic. O encontro ocorre ao longo de dois dias, com apresentações técnicas sobre a economia brasileira e mundial no primeiro dia e a definição da taxa básica de juros no segundo dia.",
+        "A reunião começou um dia após a divulgação do Boletim Focus de segunda-feira (3), que mostrou a redução das expectativas do mercado financeiro para a Selic em 2026 de 14% para 13,75%. Foi a primeira revisão para baixo dessa estimativa desde março.",
+        "A Selic está em 14,25% ao ano, menor nível de 2026, resultado de três reduções consecutivas de 0,25 ponto percentual aplicadas nas reuniões de março, abril e junho. Incertezas geradas pelo conflito entre Estados Unidos e Irã, principalmente sobre preços de combustíveis, levaram o comitê a adotar mais cautela em decisões recentes.",
+        "No mesmo Boletim Focus, a estimativa para o IPCA de 2026 caiu pela quinta semana consecutiva, passando de 5,12% para 5,03%. A projeção permanece acima do teto da meta contínua de inflação de 4,5%, definida pelo Conselho Monetário Nacional com centro em 3% e margem de tolerância de 1,5 ponto percentual."
       ],
-      "link": "/materia/copom-inicia-quinta-reuniao-de-2026-para-definir-a-taxa-selic.html",
+      "link": "/materia/copom-inicia-quinta-reuniao-de-2026-para-definir-a-taxa-basica-de-juro.html",
       "iso": "2026-08-04T09:40:00.000Z",
       "hora": "05h40",
       "original": true,
-      "contexto": "O anúncio da decisão sobre a Taxa Selic está previsto para quarta-feira, 5 de agosto. A taxa básica está atualmente em 14,25% ao ano, após três reduções consecutivas de 0,25 ponto percentual nas reuniões de março, abril e junho. A projeção do mercado para a inflação em 2026 é de 5,03%, valor acima do teto da meta de 4,5%.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
-      "resumo": "Esta foi a segunda queda seguida do indicador, que acumula perda de 2,7% em dois meses e registrou retração em 16 dos 25 setores pesquisados pelo instituto.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Exame"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "A produção industrial brasileira caiu 1,8% em junho deste ano na comparação com o mês anterior, segundo dados da Pesquisa Industrial Mensal divulgados nesta terça-feira (4) pelo Instituto Brasileiro de Geografia e Estatística (IBGE). Foi a segunda queda consecutiva do indicador, que havia recuado 0,9% de abril para maio.",
-        "Segundo o gerente da Pesquisa Industrial Mensal (PIM-BR), André Macedo, a perda acumulada de 2,7% nesses dois meses consecutivos eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026. Na média móvel trimestral, a indústria recuou 0,5%. Na comparação com junho do ano passado, houve crescimento de 1,7%, acumulando altas de 1,5% no ano e de 0,7% em 12 meses.",
-        "Na passagem de maio para junho, 16 das 25 atividades pesquisadas registraram queda. O resultado negativo foi liderado por coque, produtos derivados de petróleo e biocombustíveis (-5,9%), produtos químicos (-4,3%), produtos alimentícios (-1,9%), produtos farmoquímicos e farmacêuticos (-11%), confecção de artigos do vestuário e acessórios (-11%), equipamentos de informática, produtos eletrônicos e ópticos (-8,9%), outros equipamentos de transporte (-8,6%), produtos de borracha e de material plástico (-2,8%) e indústrias extrativas (-0,6%).",
-        "Entre os nove segmentos que cresceram, os destaques foram impressão e reprodução de gravações (20,2%), celulose, papel e produtos de papel (5,4%) e metalurgia (1,4%). As quatro grandes categorias econômicas tiveram redução: bens de consumo semi e não duráveis (-4,1%), bens de consumo duráveis (-3,2%), bens de capital (-1,1%) e bens intermediários (-1,1%)."
-      ],
-      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
-      "iso": "2026-08-04T12:44:00.000Z",
-      "hora": "08h44",
-      "original": true,
-      "contexto": "Esta é a segunda queda consecutiva do indicador, que já havia recuado 0,9% em maio. A retração em junho atingiu 16 das 25 atividades pesquisadas pelo IBGE, liderada pelos setores de derivados de petróleo e biocombustíveis, produtos químicos e alimentos. Na comparação com junho do ano anterior, a produção industrial registrou crescimento de 1,7%.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:bolsonaro-pede-ao-stf-autorizacao-para-receber-filhos-no-dia-dos-pais",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Bolsonaro pede ao STF autorização para receber filhos no Dia dos Pais",
-      "resumo": "Ex-presidente cumpre prisão domiciliar e está proibido de receber visitas até 17 de agosto por determinação do ministro Alexandre de Moraes.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/bolsonaro-pede-ao-stf-para-receber-os-filhos-no-dia-dos-pais",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Congresso em Foco"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "O ex-presidente Jair Bolsonaro solicitou ao Supremo Tribunal Federal (STF) autorização para receber a visita dos seus filhos Carlos, Jair Renan e Flávio Bolsonaro no próximo domingo (9), para comemorar o Dia dos Pais. A petição foi enviada pelos advogados ao ministro Alexandre de Moraes.",
-        "Os defensores sustentam que a visita possui caráter humanitário com o objetivo de preservar vínculos familiares. Jair Bolsonaro está em prisão domiciliar e cumpre proibição de receber visitas por um período de 30 dias, prazo que se encerra em 17 de agosto.",
-        "A restrição foi fixada no mês passado por Moraes, depois que o senador Flávio Bolsonaro (PL-RJ) publicou em redes sociais uma carta do ex-presidente. Bolsonaro está proibido de acessar a internet, inclusive por meio de terceiros. A determinação impõe ainda o veto a visitas com finalidade político-eleitoral até o fim das eleições de outubro e proíbe a divulgação de manifestos eleitorais.",
-        "No ano passado, o ex-presidente foi condenado a 27 anos e três meses de prisão no processo de trama golpista. Após ser submetido a uma cirurgia, obteve autorização para cumprir a pena em prisão domiciliar, onde se recupera de uma pneumonia bacteriana."
-      ],
-      "link": "/materia/bolsonaro-pede-ao-stf-autorizacao-para-receber-filhos-no-dia-dos-pais.html",
-      "iso": "2026-08-05T18:39:00.000Z",
-      "hora": "14h39",
-      "original": true,
-      "contexto": "O pedido de autorização afeta diretamente o ex-presidente Jair Bolsonaro e seus filhos Carlos, Jair Renan e Flávio Bolsonaro. A atual restrição de visitas em vigor cumpre prazo até 17 de agosto. Já as proibições relativas a encontros com finalidade político-eleitoral se estendem até o fim das eleições de outubro.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:federacao-renovacao-solidaria-decide-nao-apoiar-candidato-a-presidenci",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Federação Renovação Solidária decide não apoiar candidato à presidência",
-      "resumo": "A decisão tomada em convenção nacional libera os diretórios estaduais dos partidos PRD e Solidariedade para formarem as alianças que preferirem.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/prd-e-solidariedade-decidem-pela-neutralidade-na-eleicao-presidencial",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "BBC Brasil",
-        "Estadão"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "A federação Renovação Solidária, formada pelos partidos Solidariedade e Partido da Renovação Democrática (PRD), realizou convenção nacional nesta quarta-feira (5) e decidiu não apoiar nenhum candidato à presidência da República. Com a decisão, os diretórios estaduais foram liberados para formarem as alianças que preferirem.",
-        "Em nota, a federação afirmou que a medida reafirma o respeito à autonomia de dirigentes, parlamentares, mandatários e candidatos, garantindo a liberdade de manifestação e construção política dentro dos diferentes campos do debate eleitoral do país.",
-        "De acordo com os dois partidos, o posicionamento foi motivado pelo cenário de intensa polarização política. As legendas entenderam que a manutenção da independência representa uma contribuição maior ao país.",
-        "Esta quarta-feira é a data limite para que os partidos realizem suas convenções, definam formações de coligações e escolham os candidatos e candidatas para os cargos eletivos das eleições deste ano."
-      ],
-      "link": "/materia/federacao-renovacao-solidaria-decide-nao-apoiar-candidato-a-presidenci.html",
-      "iso": "2026-08-05T21:21:00.000Z",
-      "hora": "17h21",
-      "original": true,
-      "contexto": "A medida afeta os diretórios estaduais, dirigentes, parlamentares e candidatos dos partidos Solidariedade e PRD. A quarta-feira em que a decisão ocorreu é a data limite para que os partidos realizem convenções e definam coligações para as eleições deste ano. Em 4 de agosto, o Republicanos também decidiu não apoiar nenhum candidato na disputa presidencial.",
+      "contexto": "A definição da taxa básica de juros ocorre no segundo dia de reunião do comitê. A Selic atual está em 14,25% ao ano, resultado de três quedas consecutivas de 0,25 ponto percentual em março, abril e junho de 2026. A nova estimativa do mercado para a taxa é de 13,75%, valor registrado no histórico em 3 de agosto e que se situa abaixo do patamar atual.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -1270,20 +1543,21 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que cinco veículos publicaram matérias sobre a indicação de Alfredo Gaspar como vice.",
-        "Que as manchetes citam declaração atribuída a Flávio Bolsonaro sobre suas filhas.",
-        "Que os textos tratam de impactos envolvendo Arthur Lira e Lulinha."
+        "Que o tema vem sendo divulgado por seis veículos da imprensa.",
+        "Que as matérias citam Alfredo Gaspar como vice de Flávio Bolsonaro.",
+        "Que o Supremo Tribunal Federal é mencionado nas publicações."
       ],
       "falta": [
-        "Registro ou ata oficial de partido político que oficialize a chapa informada.",
-        "Manifestação direta das assessorias dos políticos citados confirmando os anúncios.",
-        "Detalhes de data ou local em que as declarações teriam sido proferidas."
+        "Confirmação oficial do anúncio da composição de chapa por Flávio Bolsonaro.",
+        "Número de procedimento oficial referente a inquérito no Supremo Tribunal Federal.",
+        "Manifestação oficial do deputado Alfredo Gaspar sobre as alegações citadas.",
+        "Posicionamento oficial das demais partes citadas pelas matérias veiculadas."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "GZH",
-          "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNUk5IUDNzVFhOTXNucjlXNUpxYlBaV1ZJMTlHNlNJaGdJeEMyMFZCTkROTWJzWjg3aWoxVTVycXpqNWoyX05vLVRTdzVaeGpRVWVvQ0lGU2EwS2JuckQxWG83ZE5hR2VaelJmWG4zc0QxU2hyVDdrVldPelgxam5VZmxaTkJHX1lyTGx4bG1oSHpyb0ZhbjM5SkZzbGpQWU9IeldJVTlhM2w4bFQ5V3htNkFzak5JVGNGYm1QWjJfaVBYTlZRUGZLYmt4TG43d0tfejBGRkZfeTEwTHJ2WGRvVW8xSUJDSFk0TUlqWllzX0RjblJtVXdoOVZLMFhVdzB6WlhMbVp3?oc=5"
+          "veiculo": "Folha",
+          "titulo": "Vice de Flávio é pra ferrar Lula",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/blogs/claudio-hebdo/2026/08/vice-de-flavio-e-pra-ferrar-lula.shtml"
         },
         {
           "veiculo": "BBC Brasil",
@@ -1291,9 +1565,9 @@
           "link": "https://www.bbc.com/portuguese/articles/cz6483j0g42o?at_medium=RSS&amp;at_campaign=rss"
         },
         {
-          "veiculo": "Poder360",
-          "titulo": "Flávio Bolsonaro diz que teve filhas para cuidar dele na velhice",
-          "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-bolsonaro-diz-que-teve-filhas-para-cuidar-dele-na-velhice/"
+          "veiculo": "Metrópoles",
+          "titulo": "Esposa de Flávio cria canal para mulheres nas redes e apresenta vice da chapa",
+          "link": "https://www.metropoles.com/colunas/milena-teixeira/fernanda-bolsonaro-cria-canal-nas-redes-para-aproximar-flavio-das-mulheres"
         },
         {
           "veiculo": "JOTA",
@@ -1301,36 +1575,89 @@
           "link": "https://www.jota.info/eleicoes/eleicoes-2026/quem-e-alfredo-gaspar-anunciado-como-vice-de-flavio"
         },
         {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Chapa pura: Alfredo Gaspar é confirmado como vice de Flávio Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSjFJdEJJOVdxWmdqeGYyR01HWVdiakpCYlhaQ0F0TEZlcEdxVWRVTVA2cWNfWlFYZnQyR3YxaDBYVVdOQmhfa01YcFBmY1RYNVd0VXVBX1RpVEpGZzhzNFlnZ2xZZk9CdkxHR3JkTi0wODNJTktvWmJoaUF6eE1MUFpBNDN5X1ZLc1NmdjBmVHdiSTQ4QTNwdjlhdkVXS1NZREdMVXhCTE50MU5FQm54QkYyTHQyNXdMTlU2RXZvRjZqNXd4TFdqMDVvdFdsYnhnU1HSAdcBQVVfeXFMTm1pUDFzMmJGTFZwUlp1anlZdndjemEwZTEwdWtDM2lsNWhjWWdVU2ZZUkRrTVEwYlJ6T25qaTEtR053VW85NlEyUGdYeHhsUEtKZFA3S1lxVkp6R0NVMGhPRjhuMzMtSXBHaGItcGZvQ3VORF9pdE5OMzlvNW9JcW5SeXluQmNUZndjRm9OVWh4UUI1ZHhZS1pnVWxRQUVVY0xfelRLTWxZeE9JNUcyeGNTb3E1OGRjZXg0TTI2TWw1MTRLZXlkTmJoVkNKaEhPQ1NoSld2Um8?oc=5"
+          "veiculo": "CartaCapital",
+          "titulo": "Vice de Flávio Bolsonaro é investigado por estupro de vulnerável no STF",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQjgybmZvWG5aUVNNVkZSZVVqVzUxbFZxWHhpNTd6cUVnbTlobW1MMTJQdEtEZHZOSnBVWVFnZXFmRC1JcU10MG80X19SSkE3YmdsM2Q2RXBQTDg5OVRXU2s4R3N2NENsVlZ2bFZfSFZnYkZhdEo5VFp1cDc2Y2RfakpxWHNjRldDM19Uck5PT3NSaVZQT0tuMHAxQlBmTW83b0VPejhqR0tMejVwcmY5X19qbw?oc=5"
+        },
+        {
+          "veiculo": "GZH",
+          "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNUk5IUDNzVFhOTXNucjlXNUpxYlBaV1ZJMTlHNlNJaGdJeEMyMFZCTkROTWJzWjg3aWoxVTVycXpqNWoyX05vLVRTdzVaeGpRVWVvQ0lGU2EwS2JuckQxWG83ZE5hR2VaelJmWG4zc0QxU2hyVDdrVldPelgxam5VZmxaTkJHX1lyTGx4bG1oSHpyb0ZhbjM5SkZzbGpQWU9IeldJVTlhM2w4bFQ5V3htNkFzak5JVGNGYm1QWjJfaVBYTlZRUGZLYmt4TG43d0tfejBGRkZfeTEwTHJ2WGRvVW8xSUJDSFk0TUlqWllzX0RjblJtVXdoOVZLMFhVdzB6WlhMbVp3?oc=5"
         }
       ],
-      "link": "/materia/nc-alfredo-gaspar-teria-sido-anunciado-como-vice-de-flavio-bolsonaro-em-c.html",
+      "link": "/materia/nc-alfredo-gaspar-teria-sido-anunciado-como-vice-na-chapa-de-flavio-bolso.html",
       "corpo": [
-        "As publicações analisam o perfil de Alfredo Gaspar e os desdobramentos da escolha para a estratégia de Flávio Bolsonaro. Não há indicação nas manchetes sobre a data ou o local em que o anúncio teria sido realizado. As matérias também associariam o movimento à aproximação de Arthur Lira ao Senado.",
-        "Até o momento, o tema é tratado pelos veículos sob o ponto de vista de análise de conjuntura política. Não constam nos relatos confirmações formais por parte de órgãos partidários ou das assessorias dos envolvidos."
+        "De acordo com as matérias, o deputado estaria sob investigação por estupro de vulnerável no Supremo Tribunal Federal. A articulação envolveria o uso do tema como arma contra Lulinha e aproximaria Arthur Lira do Senado.",
+        "A definição da vice-presidência indicaria os rumos da estratégia do grupo político de Flávio Bolsonaro. As publicações debatem os impactos decorrentes da escolha para a disputa eleitoral."
       ],
-      "id": "circ:alfredo-gaspar-teria-sido-anunciado-como-vice-de-flavio-bolsonaro-em-c",
+      "id": "circ:alfredo-gaspar-teria-sido-anunciado-como-vice-na-chapa-de-flavio-bolso",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Alfredo Gaspar teria sido anunciado como vice de Flávio Bolsonaro em chapa pura",
+      "titulo": "Alfredo Gaspar teria sido anunciado como vice na chapa de Flávio Bolsonaro",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:31:39.297Z",
-      "hora": "18h31"
+      "iso": "2026-08-05T22:56:18.460Z",
+      "hora": "18h56"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto esta sendo veiculado por quatro publicacoes da imprensa.",
-        "As noticias relatam que teria havido uma reducao na taxa Selic.",
-        "Os textos citam a existencia de um ranking de juros reais."
+        "Que o assunto está sendo publicado por quatro veículos de imprensa.",
+        "Que as matérias abordam os balanços financeiros do segundo trimestre de quatro empresas."
       ],
       "falta": [
-        "Manifestacao oficial do Banco Central referente ao corte da taxa Selic.",
-        "Identificacao do orgao ou instituicao responsavel pela elaboracao do ranking.",
-        "Esclarecimento se o pais estaria em primeiro ou em segundo lugar na lista."
+        "Confirmação oficial das demonstrações financeiras publicadas pelas respectivas empresas.",
+        "Registro dos balanços trimestrais nos canais oficiais de relações com investidores."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Valor Econômico",
+          "titulo": "Uber tem lucro de US$ 2,39 bilhões no 2º trimestre, alta de 77%",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdjZTaXZnMFZUZXJ1R01LbGliT085Y2hnZ1dXS3RwdnN1U2plMk00UERqeFFDRlo2MUNhTkYzSXFNZGtpTnBLRlEzMmU3RnpSY1NCN2dyQWRBOWVvVEx2Y0N0WURZQlNuMi1zdmFRYWpyNmJ2RVk3UlhWOFlMYU5LcjJobXl3a2Jtcm5PaWNMMVR5MWlZclUxVlNzdTZlNV8zS3ZydHFxNE81Ql9TSDY5Ml9tbVBhNlFwWFYwZTRhR05LQdIB0AFBVV95cUxNYi1NdEhKejY3OXpmZ0NJR2JoNk5pa1dPczdCbjdzbVlRTl9ROTMwSWhZSWxIUDZ1MkFxOWYwTXExNXNmXzdwbTNWVTB4Y1JFSWZFWEo5MGZXcmd5Tm1Nc0ZMUW56ZmlDZk5ZaWpodWRXdjhYcjl4T2hoeGRwMnZJUjFheUdfcFcxdnNJX0pjUHpMUGRwc3RjSnJnZkRyVXkzem1paVpVczE4U3NfcXpsR0huT2hEZlFhcVhSUDJUeFVfV3VPYkxxbVdwMnRrdGha?oc=5"
+        },
+        {
+          "veiculo": "Exame",
+          "titulo": "Bradesco lucra R$ 7,1 bilhões no 2º trimestre, alta de 16,2% em um ano",
+          "link": "https://exame.com/invest/mercados/bradesco-lucra-r-71-bilhoes-no-2o-trimestre-alta-de-162-em-um-ano/"
+        },
+        {
+          "veiculo": "Folha",
+          "titulo": "Axia (ex-Eletrobras) tem lucro de R$ 1,2 bilhão e amplia investimentos no segundo trimestre",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/08/axia-ex-eletrobras-tem-lucro-de-r-12-bilhao-e-amplia-investimentos-no-segundo-trimestre.shtml"
+        },
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Vivara (VIVA3) tem lucro líquido de R$ 156,7 mi no 2T, alta de 0,9% na base anual",
+          "link": "https://www.infomoney.com.br/mercados/vivara-viva3-resultados-segundo-trimestre-2026/"
+        }
+      ],
+      "link": "/materia/nc-veiculos-divulgariam-lucros-trimestrais-de-uber-bradesco-axia-e-vivara.html",
+      "corpo": [
+        "Publicações da imprensa estariam veiculando os balanços financeiros do segundo trimestre de quatro empresas. Conforme os relatos, Uber, Bradesco, Axia, identificada como ex-Eletrobras, e Vivara teriam registrado lucro no período.",
+        "Segundo o conjunto de notícias, a Uber teria alcançado lucro de 2,39 bilhões de dólares, enquanto o Bradesco teria obtido 7,1 bilhões de reais. A Axia teria apurado lucro de 1,2 bilhão de reais e a Vivara teria tido lucro líquido de 156,7 milhões de reais.",
+        "As publicações acrescentariam dados sobre o desempenho operacional e comparativo das companhias. A Uber teria apresentado alta de 77%, o Bradesco teria subido 16,2% em um ano, a Vivara teria crescido 0,9% na base anual e a Axia teria ampliado investimentos no período."
+      ],
+      "id": "circ:veiculos-divulgariam-lucros-trimestrais-de-uber-bradesco-axia-e-vivara",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Veículos divulgariam lucros trimestrais de Uber, Bradesco, Axia e Vivara",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T22:57:18.144Z",
+      "hora": "18h57"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que quatro veículos noticiaram a posição do país em ranking de juro real.",
+        "Que as publicações divergem sobre se o país estaria em primeiro ou segundo lugar.",
+        "Que uma das matérias citou o valor da taxa Selic em 14%."
+      ],
+      "falta": [
+        "A confirmação oficial do órgão responsável sobre o patamar da taxa Selic.",
+        "A identificação da instituição responsável ou da metodologia do ranking citado.",
+        "A consolidação dos dados que esclareça se o país ocuparia a primeira ou segunda posição.",
+        "A data exata da decisão referente ao corte da taxa de juros."
       ],
       "ondeCirculou": [
         {
@@ -1354,32 +1681,118 @@
           "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/08/brasil-lidera-ranking-de-juros-reais-mesmo-apos-corte-da-selic.shtml"
         }
       ],
-      "link": "/materia/nc-brasil-teria-o-maior-ou-o-segundo-maior-juro-real-apos-corte-da-selic.html",
+      "link": "/materia/nc-brasil-teria-o-maior-ou-o-segundo-maior-juro-real-do-mundo-apos-corte-.html",
       "corpo": [
-        "O Brasil teria passado por um corte na taxa Selic e manteria uma das posicoes mais altas no ranking global de juros reais. Segundo as informacoes veiculadas, a medida alteraria o patamar da taxa basica de juros no pais. As publicacoes divergem, no entanto, sobre a exata colocacao brasileira na lista internacional.",
-        "Uma das publicacoes aponta que a Selic teria caido para 14% e que o Brasil seguiria com o maior juro real do mundo. Outros dois veiculos que publicaram o tema tambem relatam que o pais estaria na lideranca do ranking mesmo apos o corte. Por outro lado, uma das materias indica que o pais teria caido uma posicao, passando ao segundo lugar.",
-        "A alteracao na taxa estaria associada a uma mudanca no posicionamento economico do pais frente a outras nacoes. Os relatos expoem divergencias sobre a posicao final ocupada pelo Brasil no levantamento. A confirmacao do cenario dependeria da divulgacao de dados oficiais e da metodologia do estudo."
+        "Veículos de imprensa estariam noticiando que o Brasil figuraria entre os primeiros colocados no ranking global de juros reais após um corte na taxa Selic. A medida de redução não teria retirado o país das posições mais altas de levantamento internacional.",
+        "As publicações apresentariam divergência sobre a exata colocação ocupada pelo país. Enquanto uma matéria apontaria que o corte teria feito o Brasil cair uma posição e passar ao segundo lugar, outras três sustentariam que o país seguiria liderando o ranking. Uma das notícias mencionaria ainda que a Selic teria caído para 14%."
       ],
-      "id": "circ:brasil-teria-o-maior-ou-o-segundo-maior-juro-real-apos-corte-da-selic",
+      "id": "circ:brasil-teria-o-maior-ou-o-segundo-maior-juro-real-do-mundo-apos-corte-",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Brasil teria o maior ou o segundo maior juro real apos corte da Selic",
+      "titulo": "Brasil teria o maior ou o segundo maior juro real do mundo após corte da Selic",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:32:39.977Z",
-      "hora": "18h32"
+      "iso": "2026-08-05T22:58:14.145Z",
+      "hora": "18h58"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto é noticiado atualmente por quatro veículos de imprensa.",
-        "Que as publicações mencionam a obrigatoriedade de preço mínimo sem fixar valores.",
-        "Que a medida tornaria permanente a legislação do frete no país."
+        "Que três veículos da imprensa estão publicando conteúdos sobre o tema.",
+        "Que as matérias atribuem uma frase sobre filhas e velhice a Flávio Bolsonaro.",
+        "Que as análises mencionam a estratégia do senador e sua escolha de vice."
       ],
       "falta": [
-        "Divulgação oficial do ato no Diário Oficial da União.",
-        "Manifestação formal da Presidência da República sobre a sanção.",
-        "Número oficial da lei sancionada e íntegra do texto."
+        "Registro oficial ou confirmação direta por parte do senador ou de sua assessoria.",
+        "Contexto completo, data e local em que a declaração teria sido proferida.",
+        "Documentação ou gravação oficial que valide o teor das frases veiculadas."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Flávio Bolsonaro diz que teve filhas para que elas cuidem dele na velhice",
+          "link": "https://www.cnnbrasil.com.br/politica/flavio-diz-que-teve-duas-filhas-para-que-elas-cuidem-dele-na-velhice/"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Flávio Bolsonaro diz que teve filhas para cuidar dele na velhice",
+          "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-bolsonaro-diz-que-teve-filhas-para-cuidar-dele-na-velhice/"
+        },
+        {
+          "veiculo": "GZH",
+          "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
+          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNUk5IUDNzVFhOTXNucjlXNUpxYlBaV1ZJMTlHNlNJaGdJeEMyMFZCTkROTWJzWjg3aWoxVTVycXpqNWoyX05vLVRTdzVaeGpRVWVvQ0lGU2EwS2JuckQxWG83ZE5hR2VaelJmWG4zc0QxU2hyVDdrVldPelgxam5VZmxaTkJHX1lyTGx4bG1oSHpyb0ZhbjM5SkZzbGpQWU9IeldJVTlhM2w4bFQ5V3htNkFzak5JVGNGYm1QWjJfaVBYTlZRUGZLYmt4TG43d0tfejBGRkZfeTEwTHJ2WGRvVW8xSUJDSFk0TUlqWllzX0RjblJtVXdoOVZLMFhVdzB6WlhMbVp3?oc=5"
+        }
+      ],
+      "link": "/materia/nc-flavio-bolsonaro-teria-dito-que-teve-filhas-para-cuidarem-dele-na-velh.html",
+      "corpo": [
+        "O senador Flávio Bolsonaro teria afirmado que teve filhas para que elas cuidem dele na velhice. A alegação estaria sendo veiculada por publicações da imprensa. As matérias veiculadas também analisariam a estratégia política do parlamentar e a definição de um vice.",
+        "As publicações abordariam a motivação atribuída ao político em relação à sua família. Análises veiculadas discutiriam a influência da escolha do vice em suas articulações eleitorais. Não haveria detalhamento de datas, locais ou registros oficiais nas chamadas divulgadas."
+      ],
+      "id": "circ:flavio-bolsonaro-teria-dito-que-teve-filhas-para-cuidarem-dele-na-velh",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Flávio Bolsonaro teria dito que teve filhas para cuidarem dele na velhice",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T22:59:09.204Z",
+      "hora": "18h59"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Três veículos de imprensa relatam julgamento sobre jogos de azar no STF.",
+        "As publicações atribuem posicionamentos ao ministro Fux e a Paulo Gonet.",
+        "A discussão divulgada diz respeito à caracterização de jogos de azar como contravenção."
+      ],
+      "falta": [
+        "Confirmação em fonte oficial do STF sobre a realização e o resultado da sessão.",
+        "Acesso à ata ou às transcrições oficiais dos pronunciamentos atribuídos aos citados.",
+        "Número de identificação do procedimento ou processo em tramitação no tribunal."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Fux critica bets ao abrir julgamento sobre jogos de azar no STF",
+          "link": "https://www.cnnbrasil.com.br/politica/fux-critica-bets-ao-abrir-julgamento-sobre-jogos-de-azar-no-stf/"
+        },
+        {
+          "veiculo": "JOTA",
+          "titulo": "STF &#8211; Exploração de jogos de azar continua a ser contravenção? &#8211; sessão de 5/8/2026",
+          "link": "https://www.jota.info/stf/do-supremo/stf-ao-vivo-exploracao-de-jogos-de-azar-continua-a-ser-contravencao-sessao-de-5-8-2026"
+        },
+        {
+          "veiculo": "Migalhas",
+          "titulo": "No STF, Paulo Gonet defende manutenção da punição por jogos de azar",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQS1pmc21mMmV4R0lPaXNueTNtOWNiSzRib2JSTUQ3bkx4dHRUZDQ3ekVNMnNDMmc1eHUzaTE5dFlsRlpsRTFScWNsdGxOZU51RjRnNDYwVmQxVjVkOFFqa1BDWV9YRmVTR2VDQ3d6SXR1Tm1ISzZ6azlEYjhkVTd2SWgtRkhMS0VTR0ZLaXpLS3Y2akpHQTdwckpfYmE0TGE2eXNQWEE2a3hPQkFHX0E?oc=5"
+        }
+      ],
+      "link": "/materia/nc-stf-julgaria-se-jogos-de-azar-seguem-como-contravencao-e-fux-criticari.html",
+      "corpo": [
+        "O Supremo Tribunal Federal estaria analisando se a exploração de jogos de azar permaneceria classificada como contravenção penal. Segundo as informações veiculadas, a discussão judicial teria sido iniciada durante sessão na Corte. O tema central envolveria a continuidade da punição legal associada à prática.",
+        "Conforme as publicações, a sessão citada estaria associada à data de 5 de agosto de 2026. O ministro Fux teria feito críticas às apostas ao abrir a apreciação da matéria no tribunal. Além disso, Paulo Gonet teria se posicionado favoravelmente à manutenção das sanções aplicadas aos jogos de azar.",
+        "Os veículos que publicaram o conteúdo abordariam diferentes aspectos da deliberação jurídica. Não foram identificadas divergências diretas entre as alegações relativas às posições atribuídas aos agentes citados."
+      ],
+      "id": "circ:stf-julgaria-se-jogos-de-azar-seguem-como-contravencao-e-fux-criticari",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "STF julgaria se jogos de azar seguem como contravenção e Fux criticaria bets",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-05T23:00:06.877Z",
+      "hora": "19h00"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Que a informação está sendo veiculada por 3 veículos de imprensa.",
+        "Que o tema trata de novas regras e preço mínimo para o frete.",
+        "Que a matéria cita a conversão de uma medida provisória em lei."
+      ],
+      "falta": [
+        "A confirmação e publicação oficial do ato no Diário Oficial da União.",
+        "O número identificador da nova legislação sancionada.",
+        "O posicionamento oficial dos órgãos governamentais responsáveis pela medida."
       ],
       "ondeCirculou": [
         {
@@ -1396,153 +1809,51 @@
           "veiculo": "Congresso em Foco",
           "titulo": "Lula sanciona lei de conversão que torna permanente a MP do Frete",
           "link": "https://www.congressoemfoco.com.br/noticia/121049/lula-sanciona-lei-de-conversao-que-torna-permanente-a-mp-do-frete"
-        },
-        {
-          "veiculo": "Poder360",
-          "titulo": "Lula sanciona nova lei do piso do frete",
-          "link": "https://www.poder360.com.br/poder-governo/lula-sanciona-nova-lei-do-piso-do-frete/"
         }
       ],
-      "link": "/materia/nc-presidente-lula-teria-sancionado-nova-lei-sobre-o-piso-do-frete.html",
+      "link": "/materia/nc-presidente-lula-teria-sancionado-lei-com-novas-regras-para-a-tabela-do.html",
       "corpo": [
-        "O presidente Luiz Inácio Lula da Silva teria sancionado a legislação que altera as regras para o transporte rodoviário de cargas. A medida converteria a Medida Provisória do Frete em lei permanente no país. A informação vem sendo veiculada por publicações da imprensa.",
-        "De acordo com os veículos que publicaram o conteúdo, a norma definiria a obrigatoriedade de um preço mínimo, embora não fixasse valores exatos. A alteração seria uma demanda defendida por caminhoneiros. As publicações utilizam nomenclaturas distintas para se referir ao texto, como lei do piso, tabela do frete e MP do frete."
+        "O presidente Luiz Inácio Lula da Silva teria sancionado alterações nas regras para o transporte de cargas no país. A medida corresponderia à conversão em lei permanente de uma medida provisória sobre o setor. Segundo as publicações, a mudança na legislação seria uma pauta defendida por caminhoneiros.",
+        "As matérias veiculadas indicariam que o texto sancionado passaria a estabelecer a obrigatoriedade de um preço mínimo. Os relatos apontariam, no entanto, que a nova legislação não fixaria os valores exatos a serem praticados. As fontes citadas não apresentariam divergências centrais entre os pontos veiculados."
       ],
-      "id": "circ:presidente-lula-teria-sancionado-nova-lei-sobre-o-piso-do-frete",
+      "id": "circ:presidente-lula-teria-sancionado-lei-com-novas-regras-para-a-tabela-do",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Presidente Lula teria sancionado nova lei sobre o piso do frete",
+      "titulo": "Presidente Lula teria sancionado lei com novas regras para a tabela do frete",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:33:34.948Z",
-      "hora": "18h33"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o tema estaria sendo veiculado por dois veículos da imprensa.",
-        "Que o lucro informado nas publicações seria de R$ 204 milhões.",
-        "Que a alta alegada no trimestre corresponderia a 8%."
-      ],
-      "falta": [
-        "Divulgação oficial do balanço financeiro do período pela Smart Fit.",
-        "Confirmação do resultado trimestral junto à Comissão de Valores Mobiliários.",
-        "Detalhamento oficial sobre a meta de 60% do resultado vindo do exterior."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Smart Fit (SMFT3) tem alta de 8% no lucro recorrente do 2º tri, para R$ 204 milhões",
-          "link": "https://www.infomoney.com.br/mercados/smart-fit-smft3-resultados-segundo-trimestre-2026/"
-        },
-        {
-          "veiculo": "Exame",
-          "titulo": "Smart Fit lucra R$ 204 milhões e já mira 60% do resultado vindo do exterior",
-          "link": "https://exame.com/invest/mercados/smart-fit-lucra-r-204-milhoes-e-ja-mira-60-do-resultado-vindo-do-exterior/"
-        }
-      ],
-      "link": "/materia/nc-smart-fit-teria-tido-lucro-recorrente-de-r-204-milhoes-no-2-trimestre.html",
-      "corpo": [
-        "A empresa Smart Fit teria registrado lucro líquido recorrente de R$ 204 milhões no segundo trimestre. A informação estaria sendo veiculada na imprensa sem registro em fontes oficiais até o momento. O desempenho alegado representaria uma elevação nos ganhos da companhia.",
-        "Segundo as publicações, o resultado indicaria uma alta de 8% no lucro recorrente do período. Além disso, a empresa estaria buscando obter 60% de seu resultado operacional a partir de negócios no exterior.",
-        "Não haveria divergências entre os valores citados pelos veículos que publicaram a notícia. A confirmação dos dados dependeria da apresentação dos relatórios financeiros ao mercado."
-      ],
-      "id": "circ:smart-fit-teria-tido-lucro-recorrente-de-r-204-milhoes-no-2-trimestre",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Smart Fit teria tido lucro recorrente de R$ 204 milhões no 2º trimestre",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:34:27.530Z",
-      "hora": "18h34"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que a informação estaria sendo veiculada por dois veículos de imprensa.",
-        "Que os relatos apontariam para a formação de uma chapa pura.",
-        "Que haveria menção à criação de canal em rede social pela esposa."
-      ],
-      "falta": [
-        "Confirmação oficial das assessorias de imprensa dos envolvidos.",
-        "Documento ou ata partidária formalizando a indicação do vice.",
-        "Pronunciamento direto dos políticos citados confirmando a composição."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Metrópoles",
-          "titulo": "Esposa de Flávio cria canal para mulheres nas redes e apresenta vice da chapa",
-          "link": "https://www.metropoles.com/colunas/milena-teixeira/fernanda-bolsonaro-cria-canal-nas-redes-para-aproximar-flavio-das-mulheres"
-        },
-        {
-          "veiculo": "Correio Braziliense",
-          "titulo": "Chapa pura: Alfredo Gaspar é confirmado como vice de Flávio Bolsonaro",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSjFJdEJJOVdxWmdqeGYyR01HWVdiakpCYlhaQ0F0TEZlcEdxVWRVTVA2cWNfWlFYZnQyR3YxaDBYVVdOQmhfa01YcFBmY1RYNVd0VXVBX1RpVEpGZzhzNFlnZ2xZZk9CdkxHR3JkTi0wODNJTktvWmJoaUF6eE1MUFpBNDN5X1ZLc1NmdjBmVHdiSTQ4QTNwdjlhdkVXS1NZREdMVXhCTE50MU5FQm54QkYyTHQyNXdMTlU2RXZvRjZqNXd4TFdqMDVvdFdsYnhnU1HSAdcBQVVfeXFMTm1pUDFzMmJGTFZwUlp1anlZdndjemEwZTEwdWtDM2lsNWhjWWdVU2ZZUkRrTVEwYlJ6T25qaTEtR053VW85NlEyUGdYeHhsUEtKZFA3S1lxVkp6R0NVMGhPRjhuMzMtSXBHaGItcGZvQ3VORF9pdE5OMzlvNW9JcW5SeXluQmNUZndjRm9OVWh4UUI1ZHhZS1pnVWxRQUVVY0xfelRLTWxZeE9JNUcyeGNTb3E1OGRjZXg0TTI2TWw1MTRLZXlkTmJoVkNKaEhPQ1NoSld2Um8?oc=5"
-        }
-      ],
-      "link": "/materia/nc-alfredo-gaspar-seria-indicado-como-vice-em-chapa-pura-de-flavio-bolson.html",
-      "corpo": [
-        "O parlamentar Alfredo Gaspar teria sido confirmado como vice na chapa liderada por Flávio Bolsonaro. A composição estaria sendo tratada como uma chapa pura para o pleito.",
-        "A esposa de Flávio Bolsonaro teria criado um canal voltado para mulheres em rede social. Na mesma plataforma, ela teria realizado a apresentação do nome indicado para a vice-presidência.",
-        "As publicações que veiculam o fato trariam abordagens com nuances distintas sobre o anúncio da candidatura. Até o momento, não haveria registro oficial formalizando a aliança descrita."
-      ],
-      "id": "circ:alfredo-gaspar-seria-indicado-como-vice-em-chapa-pura-de-flavio-bolson",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Alfredo Gaspar seria indicado como vice em chapa pura de Flávio Bolsonaro",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:35:29.097Z",
-      "hora": "18h35"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que as informações sobre as candidaturas circulam em dois veículos de imprensa.",
-        "Que o Democrata e o MDB são citados como autores dos lançamentos.",
-        "Que os estados do Pará e de Goiás seriam os locais das disputas."
-      ],
-      "falta": [
-        "Registro oficial da decisão em órgãos eleitorais ou ata partidária.",
-        "Manifestação ou confirmação oficial do Democrata e do MDB.",
-        "Declaracao formal de José Moita e Daniel Vilela sobre o lançamento.",
-        "Data exata em que teriam ocorrido os anúncios formais."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1",
-          "titulo": "Democrata lança José Moita como candidato ao governo do Pará",
-          "link": "https://g1.globo.com/pa/para/eleicoes/2026/noticia/2026/08/05/democrata-lanca-jose-moita-como-candidato-ao-governo-do-para.ghtml"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "MDB lança Daniel Vilela como candidato ao governo de Goiás",
-          "link": "https://g1.globo.com/go/goias/eleicoes/2026/noticia/2026/08/05/mdb-lanca-daniel-vilela-como-candidato-ao-governo-de-goias.ghtml"
-        }
-      ],
-      "link": "/materia/nc-partidos-teriam-lancado-candidaturas-aos-governos-do-para-e-de-goias.html",
-      "corpo": [
-        "O partido Democrata e o MDB teriam lançado nomes para as disputas aos governos estaduais do Pará e de Goiás. As alegações estariam sendo veiculadas na imprensa sem confirmação em registro oficial.",
-        "Uma das publicações indica que o Democrata teria lançado José Moita como candidato ao governo do Pará. Outro veículo afirma que o MDB teria oficializado Daniel Vilela como candidato ao governo de Goiás.",
-        "Os relatos mostrariam movimentações distintas em dois estados com partidos diferentes. As informações veiculadas tratariam de pretensões eleitorais para o comando do Executivo nessas unidades da Federação."
-      ],
-      "id": "circ:partidos-teriam-lancado-candidaturas-aos-governos-do-para-e-de-goias",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Partidos teriam lançado candidaturas aos governos do Pará e de Goiás",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T22:36:20.035Z",
-      "hora": "18h36"
+      "iso": "2026-08-05T23:00:59.030Z",
+      "hora": "19h00"
     }
   ],
   "pautas": [
     {
-      "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
-      "veiculo": "GZH",
-      "quentura": 7,
+      "titulo": "Vice de Flávio é pra ferrar Lula",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 11,
       "tambemEm": [
         "BBC Brasil",
-        "Poder360",
+        "Metrópoles",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
+      "veiculo": "GZH",
+      "quentura": 10,
+      "tambemEm": [
+        "BBC Brasil",
+        "CNN Brasil",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Vice de Flávio Bolsonaro é investigado por estupro de vulnerável no STF",
+      "veiculo": "CartaCapital",
+      "quentura": 8,
+      "tambemEm": [
+        "BBC Brasil",
+        "Folha",
         "JOTA"
       ]
     },
@@ -1550,52 +1861,82 @@
       "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro nas eleições 2026",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 8,
       "tambemEm": [
+        "Folha",
         "JOTA",
-        "GZH",
-        "Correio Braziliense"
+        "CartaCapital"
       ]
     },
     {
       "titulo": "Quem é Alfredo Gaspar, escolhido para vice na chapa de Flávio Bolsonaro",
       "veiculo": "Correio Braziliense",
-      "quentura": 6,
+      "quentura": 8,
       "tambemEm": [
         "BBC Brasil",
-        "Metrópoles",
-        "JOTA"
+        "Folha",
+        "Metrópoles"
       ]
     },
     {
       "titulo": "Chapa pura: Alfredo Gaspar é confirmado como vice de Flávio Bolsonaro",
       "veiculo": "Correio Braziliense",
-      "quentura": 6,
+      "quentura": 8,
       "tambemEm": [
         "BBC Brasil",
-        "Metrópoles",
-        "JOTA"
+        "Folha",
+        "Metrópoles"
       ]
     },
     {
       "titulo": "Acusação de estupro, 'arma contra Lulinha' e Arthur Lira mais perto do Senado: os impactos de Alfredo Gaspar como vice de Flávio Bolsonaro",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 5,
+      "quentura": 7,
       "tambemEm": [
+        "Folha",
         "JOTA",
-        "GZH",
-        "Correio Braziliense"
+        "CartaCapital"
       ]
     },
     {
       "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro",
       "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 5,
+      "quentura": 7,
       "tambemEm": [
         "BBC Brasil",
-        "GZH",
+        "Folha",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "Uber tem lucro de US$ 2,39 bilhões no 2º trimestre, alta de 77%",
+      "veiculo": "Valor Econômico",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "Folha",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Smart Fit (SMFT3) tem alta de 8% no lucro recorrente do 2º tri, para R$ 204 milhões",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Exame",
+        "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Esposa de Flávio cria canal para mulheres nas redes e apresenta vice da chapa",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Folha",
         "Correio Braziliense"
       ]
     },
@@ -1633,90 +1974,42 @@
       ]
     },
     {
-      "titulo": "Tabela do frete: Lula sanciona novas regras e define obrigatoriedade de preço mínimo, mas não fixa valores",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Lula sanciona lei de conversão que torna permanente a MP do Frete",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Exame",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Defendida por caminhoneiros, Lei do Frete é sancionada por Lula; entenda o que muda",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Smart Fit (SMFT3) tem alta de 8% no lucro recorrente do 2º tri, para R$ 204 milhões",
-      "veiculo": "InfoMoney",
+      "titulo": "Axia (ex-Eletrobras) tem lucro de R$ 1,2 bilhão e amplia investimentos no segundo trimestre",
+      "veiculo": "Folha",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "Exame"
+        "Valor Econômico"
       ]
     },
     {
-      "titulo": "Esposa de Flávio cria canal para mulheres nas redes e apresenta vice da chapa",
-      "veiculo": "Metrópoles",
+      "titulo": "Flávio Bolsonaro diz que teve filhas para que elas cuidem dele na velhice",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Democrata lança José Moita como candidato ao governo do Pará",
-      "veiculo": "g1",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Riachuelo tem lucro recorde de R$ 168 mi no 2º tri, apesar de vendas menores",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "InfoMoney"
+        "Poder360",
+        "GZH"
       ]
     },
     {
       "titulo": "Flávio Bolsonaro diz que teve filhas para cuidar dele na velhice",
       "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
+        "CNN Brasil",
         "GZH"
       ]
     },
     {
-      "titulo": "Brasil enfrenta dupla crise diplomática sem horizonte de fim",
-      "veiculo": "JOTA",
+      "titulo": "Fux critica bets ao abrir julgamento sobre jogos de azar no STF",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil"
+        "JOTA",
+        "Migalhas"
       ]
     }
   ]
