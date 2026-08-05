@@ -391,22 +391,33 @@ export default async function handler(req, res){
 
     if (perfil.length < 30 || !itens.length) return res.status(200).json({ ok:true, escolhidas: [] });
 
+    // O que ele ja abriu. Nao substitui a descricao: refina. Descricao e o que
+    // a pessoa DIZ que quer; historico e o que ela FAZ. Quando os dois
+    // divergem, o segundo costuma estar mais perto da verdade — mas mudar o
+    // criterio sozinho seria arrogante, entao ele so desempata.
+    const lidos = (Array.isArray(corpo.lidos) ? corpo.lidos : [])
+      .slice(0, 25).map(t => String(t).slice(0, 140)).filter(Boolean);
+
     const prompt = `Você seleciona matérias para um leitor do MERIDIANO, a partir da descrição que ele mesmo escreveu do que quer acompanhar.
 
 DESCRIÇÃO DO LEITOR:
 ${perfil}
+${lidos.length ? `
+O QUE ELE JÁ ABRIU (use para desempatar, não para mudar o critério):
+${lidos.map(t => '· ' + t).join('\n')}` : ''}
 
 REGRAS:
 1. Escolha apenas o que serve a essa descrição. Na dúvida, NÃO escolha — lista cheia de coisa vagamente relacionada faz o leitor parar de olhar.
 2. A descrição pode citar órgãos, instrumentos e temas. Uma matéria serve se tratar de qualquer um deles, mesmo que use outras palavras: "leilão da BR-381" serve a quem acompanha concessão rodoviária.
 3. Para cada escolhida, escreva em POUCAS PALAVRAS por que ela entrou. O leitor precisa poder discordar.
 4. No máximo 20 escolhidas.
+5. AGRUPE por setor. Olhe a descrição e identifique os grandes temas dela — por exemplo, num perfil de infraestrutura: rodovias, ferrovias, portos e aeroportos, energia, saneamento, telecomunicações. Cada matéria escolhida recebe um desses. Se não couber em nenhum, use "outros". No máximo seis setores.
 
 MATÉRIAS (número, título, resumo):
 ${itens.map(i => `[${i.n}] ${i.titulo} — ${i.resumo}`).join('\n')}
 
 FORMATO — exatamente isto, uma por linha, sem markdown:
-numero | motivo curto`;
+numero | setor | motivo curto`;
 
     try {
       const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
@@ -421,7 +432,9 @@ numero | motivo curto`;
       const escolhidas = t.split(/\n/)
         .map(l => l.split('|').map(x => x.trim()))
         .filter(p => p.length >= 2 && /^\d+$/.test(p[0]))
-        .map(p => ({ n: Number(p[0]), motivo: p[1].slice(0, 120) }))
+        .map(p => p.length >= 3
+          ? { n: Number(p[0]), setor: p[1].slice(0, 40) || 'outros', motivo: p[2].slice(0, 120) }
+          : { n: Number(p[0]), setor: 'outros', motivo: p[1].slice(0, 120) })
         .filter(x => x.n >= 0 && x.n < itens.length)
         .slice(0, 20);
 
