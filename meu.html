@@ -64,6 +64,16 @@ h1{font-family:var(--tit);font-size:clamp(28px,5.4vw,40px);font-weight:900;lette
 .perfil button.claro{background:none;color:var(--tinta2);border:1px solid var(--linha2)}
 .perfil .dica{font-size:13.5px;color:var(--fraco);line-height:1.55;margin-top:10px}
 .perfil .st{font-family:var(--mono);font-size:11px;color:var(--verde);margin-left:auto}
+/* Visao por setor. Lista unica de vinte materias e uma parede; agrupada, o
+   leitor ve a semana em blocos e percebe onde houve movimento. */
+.setor{margin-top:26px}
+.setor h3{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--rosso);border-bottom:1px solid var(--linha);padding-bottom:8px;margin-bottom:2px;
+  display:flex;align-items:baseline;gap:10px}
+.setor h3 span{margin-left:auto;font-size:9.5px;color:var(--fraco)}
+.aprendeu{background:var(--areia);border-left:3px solid var(--verde);padding:11px 15px;margin:14px 0;
+  font-size:13.5px;line-height:1.55;color:var(--tinta2)}
+.aprendeu b{color:var(--tinta)}
 .motivo{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--rosso);
   display:block;margin-top:5px;padding-left:11px;border-left:2px solid var(--linha2)}
 .assuntos{border:1px solid var(--linha);padding:18px 20px;margin-bottom:8px;background:var(--areia)}
@@ -148,6 +158,9 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
     const seg = j.acompanhando || [];
     const mudaram = seg.filter(x => x.mudou);
     const hist = j.historico || [];
+    // Titulos do que ele abriu, para o agente desempatar com o comportamento
+    // real em vez de so com o que foi declarado.
+    window.__lidos = hist.map(h => h.titulo).filter(Boolean);
 
     // Assuntos e lugares que ele lê. É por aqui que a personalização acontece:
     // por tema e praça, não por engajamento.
@@ -286,6 +299,8 @@ async function aplicarPerfil(){
   try {
     const r = await fetch('/api/leitor', { method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ acao:'filtrar', perfil: txt,
+        // O que ele ja abriu — o agente usa para desempatar.
+        lidos: (window.__lidos || []).slice(0, 25),
         itens: base.map(i => ({ titulo:i.titulo, resumo:i.resumo || '' })) }) });
     const j = await r.json();
 
@@ -296,17 +311,35 @@ async function aplicarPerfil(){
       return;
     }
 
+    // Agrupar por setor: lista unica de vinte e uma parede. Em blocos, o
+    // leitor ve onde houve movimento na semana.
+    const porSetor = {};
+    for (const x of esc2) {
+      const k = (x.setor || 'outros').toLowerCase();
+      (porSetor[k] = porSetor[k] || []).push(x);
+    }
+    const ordem = Object.entries(porSetor).sort((a,b) => b[1].length - a[1].length);
+
+    const cartao = x => { const i = base[x.n];
+      const d = Math.floor((Date.now() - Date.parse(i.iso)) / 86400000);
+      return `<a class="mat" href="${esc(i.link)}">
+        <h3>${esc(i.titulo)}</h3>
+        <p>${esc(i.resumo || '')}</p>
+        <span class="motivo">${esc(x.motivo)}</span>
+        <div class="pe">${esc(ROT[i.nivel] || i.nivel || '')} · ${d >= 1 ? (d === 1 ? 'ontem' : 'há ' + d + ' dias') : (i.hora || 'hoje')}</div>
+      </a>`; };
+
     alvo.innerHTML = `<div style="margin-top:22px">
-      <h2 style="font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--tinta);padding-bottom:9px;margin-bottom:4px;display:flex">
-        Combina com a sua descrição <span style="margin-left:auto;font-size:9.5px;color:var(--fraco)">${esc2.length}</span></h2>
-      ${esc2.map(x => { const i = base[x.n];
-        const d = Math.floor((Date.now() - Date.parse(i.iso)) / 86400000);
-        return `<a class="mat" href="${esc(i.link)}">
-          <h3>${esc(i.titulo)}</h3>
-          <p>${esc(i.resumo || '')}</p>
-          <span class="motivo">${esc(x.motivo)}</span>
-          <div class="pe">${esc(ROT[i.nivel] || i.nivel || '')} · ${d >= 1 ? (d === 1 ? 'ontem' : 'há ' + d + ' dias') : (i.hora || 'hoje')}</div>
-        </a>`; }).join('')}
+      <h2 style="font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;border-bottom:2px solid var(--tinta);padding-bottom:9px;margin-bottom:2px;display:flex">
+        Combina com a sua descrição
+        <span style="margin-left:auto;font-size:9.5px;color:var(--fraco)">${esc2.length} em ${ordem.length} ${ordem.length === 1 ? 'setor' : 'setores'}</span></h2>
+      ${(window.__lidos || []).length >= 5
+        ? `<p class="aprendeu">A seleção também leva em conta <b>o que você abriu antes</b> — ${(window.__lidos||[]).length} matérias. A descrição decide o critério; o histórico desempata.</p>`
+        : ''}
+      ${ordem.map(([setor, itens]) => `<div class="setor">
+        <h3>${esc(setor)} <span>${itens.length}</span></h3>
+        ${itens.map(cartao).join('')}
+      </div>`).join('')}
     </div>`;
   } catch { alvo.innerHTML = '<p class="vazio">falha de conexão</p>'; }
 }
