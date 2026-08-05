@@ -40,6 +40,41 @@ export const semDuplicar = lista => {
 // CAMINHO DO PLONE: a listagem fica em /ultimas-noticias, e o feed sai do
 // sufixo /RSS aplicado a ELA — nao a pasta /noticias, que e so um indice
 // montado por JavaScript. Foi por isso que 33 fontes devolveram 404 ou zero.
+/* ==================== INFRAESTRUTURA E REGULAÇÃO =========================
+   Pacote montado para acompanhamento regulatorio: agencias, orgaos que
+   estruturam concessao, e onde o dinheiro aparece antes da noticia.
+
+   E o material de quem produz boletim do tipo "concessoes rodoviarias,
+   autorizacoes ferroviarias e infraestrutura aeroportuaria na semana de X a
+   Y" — hoje feito a mao, lendo portal por portal.
+
+   Licenca: todos gov.br, portanto CC BY-ND. Vao pela esteira 2, republicacao
+   integral com credito. Decisao de agencia reguladora, alias, e o tipo de
+   texto que NAO se deve reescrever mesmo: o valor esta na literalidade.    */
+export const INFRAESTRUTURA = [
+  // agencias reguladoras — onde a decisao nasce
+  { id:'antaq',   nome:'Antaq',    url:'https://www.gov.br/antaq/pt-br/noticias', base:'https://www.gov.br/antaq' },
+  { id:'anac',    nome:'Anac',     url:'https://www.gov.br/anac/pt-br/noticias', base:'https://www.gov.br/anac' },
+  { id:'aneel',   nome:'Aneel',    url:'https://www.gov.br/aneel/pt-br/assuntos/noticias', base:'https://www.gov.br/aneel' },
+  { id:'anatel',  nome:'Anatel',   url:'https://www.gov.br/anatel/pt-br/assuntos/noticias', base:'https://www.gov.br/anatel' },
+  { id:'ana',     nome:'ANA',      url:'https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias', base:'https://www.gov.br/ana' },
+  { id:'anm',     nome:'ANM',      url:'https://www.gov.br/anm/pt-br/assuntos/noticias', base:'https://www.gov.br/anm' },
+
+  // quem planeja, estrutura e financia
+  { id:'infrasa', nome:'Infra S.A.',        url:'https://www.infrasa.gov.br/noticias', base:'https://www.infrasa.gov.br' },
+  { id:'ontl',    nome:'Observatório Nacional de Transporte e Logística', url:'https://ontl.infrasa.gov.br/noticias', base:'https://ontl.infrasa.gov.br' },
+  { id:'bndes',   nome:'BNDES',             url:'https://www.bndes.gov.br/wps/portal/site/home/imprensa/noticias', base:'https://www.bndes.gov.br' },
+  { id:'ppi',     nome:'Programa de Parcerias de Investimentos', url:'https://www.gov.br/ppi/pt-br/noticias', base:'https://www.gov.br/ppi' },
+  { id:'portos',  nome:'Ministério de Portos e Aeroportos', url:'https://www.gov.br/portos-e-aeroportos/pt-br/assuntos/noticias', base:'https://www.gov.br/portos-e-aeroportos' },
+  { id:'mdic',    nome:'MDIC',              url:'https://www.gov.br/mdic/pt-br/assuntos/noticias', base:'https://www.gov.br/mdic' },
+  { id:'minas',   nome:'Ministério de Minas e Energia', url:'https://www.gov.br/mme/pt-br/assuntos/noticias', base:'https://www.gov.br/mme' },
+  { id:'epe',     nome:'EPE',               url:'https://www.epe.gov.br/pt/imprensa/noticias', base:'https://www.epe.gov.br' },
+
+  // onde o dinheiro aparece antes da noticia
+  { id:'pncp',    nome:'Portal Nacional de Contratações Públicas', url:'https://www.gov.br/pncp/pt-br/noticias', base:'https://www.gov.br/pncp' },
+  { id:'in-dou',  nome:'Imprensa Nacional',  url:'https://www.in.gov.br/leiturajornal', base:'https://www.in.gov.br' }
+];
+
 export const FEDERAIS_ESTEIRA2 = [
   { id:'pf',        nome:'Polícia Federal',         url:'https://www.gov.br/pf/pt-br/assuntos/noticias/ultimas-noticias/RSS', base:'https://www.gov.br/pf' },
   { id:'prf',       nome:'Polícia Rodoviária Federal', url:'https://www.gov.br/prf/pt-br/noticias/ultimas-noticias/RSS', base:'https://www.gov.br/prf' },
@@ -474,7 +509,8 @@ export const EDICOES_GERAIS = {
     ,
       // Os federais voltam — agora pela esteira 2. O robo detecta a licenca
       // pelo dominio e manda para republicacao integral em vez de reescrita.
-      ...FEDERAIS_ESTEIRA2
+      ...FEDERAIS_ESTEIRA2,
+      ...INFRAESTRUTURA
     ]
   },
   mundo: {
