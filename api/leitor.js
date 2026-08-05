@@ -358,6 +358,79 @@ export default async function handler(req, res){
     return res.status(200).json({ ok:true, termos: idx.slice(0, 200) });
   }
 
+  /* ------------------------------------------------ perfil em texto ------
+     Etiqueta por palavra e fragil: "concessao rodoviaria" so casa com quem
+     escreve exatamente isso, e nao pega "leilao da BR-381" nem "audiencia
+     publica sobre pedagio" — que sao a mesma coisa.
+
+     Uma descricao em linguagem natural captura a intencao. E cresce sem virar
+     lista: doze etiquetas ja e muito para gerenciar; um paragrafo se lapida.
+
+     As etiquetas continuam existindo — busca por termo e rapida e nao custa
+     IA. A descricao entra como segunda camada, para o que escapa delas.    */
+  if (acao === 'perfil') {
+    const nome = limpar(corpo.apelido);
+    if (!nome || !ligado()) return res.status(200).json({ ok:true, perfil:'' });
+
+    if (corpo.por === 'gravar') {
+      const txt = String(corpo.perfil || '').replace(/[<>]/g,'').trim().slice(0, 1500);
+      await redis('SET', `perfil:${nome}`, txt);
+      return res.status(200).json({ ok:true, perfil: txt });
+    }
+    return res.status(200).json({ ok:true, perfil: (await redis('GET', `perfil:${nome}`)) || '' });
+  }
+
+  /* ---- o agente decide quais matérias combinam com a descrição ---- */
+  if (acao === 'filtrar') {
+    if (!CHAVE_IA) return res.status(200).json({ ok:false, msg:'sem GEMINI_API_KEY' });
+
+    const perfil = String(corpo.perfil || '').slice(0, 1500);
+    const itens = (Array.isArray(corpo.itens) ? corpo.itens : []).slice(0, 60)
+      .map((x, n) => ({ n, titulo: String(x.titulo || '').slice(0, 180), resumo: String(x.resumo || '').slice(0, 200) }))
+      .filter(x => x.titulo);
+
+    if (perfil.length < 30 || !itens.length) return res.status(200).json({ ok:true, escolhidas: [] });
+
+    const prompt = `Você seleciona matérias para um leitor do MERIDIANO, a partir da descrição que ele mesmo escreveu do que quer acompanhar.
+
+DESCRIÇÃO DO LEITOR:
+${perfil}
+
+REGRAS:
+1. Escolha apenas o que serve a essa descrição. Na dúvida, NÃO escolha — lista cheia de coisa vagamente relacionada faz o leitor parar de olhar.
+2. A descrição pode citar órgãos, instrumentos e temas. Uma matéria serve se tratar de qualquer um deles, mesmo que use outras palavras: "leilão da BR-381" serve a quem acompanha concessão rodoviária.
+3. Para cada escolhida, escreva em POUCAS PALAVRAS por que ela entrou. O leitor precisa poder discordar.
+4. No máximo 20 escolhidas.
+
+MATÉRIAS (número, título, resumo):
+${itens.map(i => `[${i.n}] ${i.titulo} — ${i.resumo}`).join('\n')}
+
+FORMATO — exatamente isto, uma por linha, sem markdown:
+numero | motivo curto`;
+
+    try {
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
+        method:'POST', headers:{ 'Content-Type':'application/json' },
+        body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }],
+          generationConfig:{ temperature:0.2, maxOutputTokens:1500 } })
+      });
+      if (!r.ok) throw new Error('IA HTTP ' + r.status);
+      const j = await r.json();
+      const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '').replace(/\*\*/g,'');
+
+      const escolhidas = t.split(/\n/)
+        .map(l => l.split('|').map(x => x.trim()))
+        .filter(p => p.length >= 2 && /^\d+$/.test(p[0]))
+        .map(p => ({ n: Number(p[0]), motivo: p[1].slice(0, 120) }))
+        .filter(x => x.n >= 0 && x.n < itens.length)
+        .slice(0, 20);
+
+      return res.status(200).json({ ok:true, escolhidas });
+    } catch (e) {
+      return res.status(200).json({ ok:false, msg: String(e.message).slice(0, 80) });
+    }
+  }
+
   /* --------------------------------------------- afinar o assunto --------
      "Fifa e Uefa problemas" nao casa com nada: exige as tres palavras na
      mesma materia, e "problemas" nunca esta num release oficial. O que a
@@ -527,6 +600,8 @@ EXPLICA: (uma frase dizendo o que esse termo vai trazer)`;
       await redis('DEL', `visto:${nome}`);
       await redis('DEL', `tent:${nome}`);
       await redis('DEL', `segue:${nome}`);
+      await redis('DEL', `perfil:${nome}`);
+      await redis('DEL', `assunto:${nome}`);
     }
     return res.status(200).json({ ok:true });
   }
