@@ -71,6 +71,14 @@ async function chamarUmaVez(prompt, ms = 35000){
         headers:{ 'Content-Type':'application/json' },
         body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }], generationConfig: cfg })
       });
+      // Modelo que devolve 404 nao existe mais: descarta e passa ao proximo,
+      // em vez de insistir com ele o resto da rodada.
+      if (r.status === 404 && reservas.length) {
+        console.log(`     modelo ${modeloBom} nao existe mais — descartando`);
+        reservas = reservas.filter(n => n !== modeloBom);
+        const proximo = reservas.shift();
+        if (proximo) { modeloBom = proximo; continue; }
+      }
       if (r.status === 400 && comThinking) continue;
       if (!r.ok) {
         // A resposta de erro do Google vem em JSON formatado, com quebras de
@@ -367,7 +375,20 @@ export const modeloUsado = () => modeloBom || '(nenhum)';
 // inteira, esperamos e caimos para um modelo "lite", que tem cota bem maior.
 let reservas = [];
 export function definirReservas(nomes){
-  reservas = nomes.filter(n => /lite/i.test(n) && n !== modeloBom);
+  /* Pegar qualquer nome com "lite" foi erro: a listagem inclui modelos que
+     aparecem no catalogo mas nao aceitam mais geracao de conteudo. Numa
+     rodada o robo trocou para gemini-2.0-flash-lite-001 e TODAS as chamadas
+     seguintes deram 404 — a edicao publicou 3 materias em vez de vinte.
+
+     Os apelidos terminados em "-latest" apontam sempre para a versao viva,
+     entao vem primeiro. Versao fixada com numero vem depois, e so como ultimo
+     recurso. */
+  const cand = nomes.filter(n => /lite/i.test(n) && n !== modeloBom);
+  reservas = [
+    ...cand.filter(n => /-latest$/.test(n)),
+    ...cand.filter(n => !/-latest$/.test(n) && !/-\d{3}$/.test(n)),
+    ...cand.filter(n => /-\d{3}$/.test(n))
+  ];
 }
 
 
