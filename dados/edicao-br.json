@@ -1,35 +1,26 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-05T23:46:19.621Z",
+  "gerado": "2026-08-06T12:36:00.423Z",
   "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 210,
-    "fonteLivre": 86,
-    "confirmadas": 22,
-    "publicadas": 12,
+    "pauta": 204,
+    "fonteLivre": 85,
+    "confirmadas": 14,
+    "publicadas": 14,
     "resgatadas": 0,
-    "semFonte": 43
+    "semFonte": 32
   },
   "fontes": {
-    "checadas": 130,
-    "responderam": 81,
-    "entregando": 31,
-    "itens": 296,
+    "checadas": 131,
+    "responderam": 83,
+    "entregando": 30,
+    "itens": 289,
     "lista": [
       {
         "tipo": "pauta",
         "id": "exame",
         "nome": "Exame",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "congresso",
-        "nome": "Congresso em Foco",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -46,26 +37,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "metropoles",
         "nome": "Metrópoles",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "jota",
-        "nome": "JOTA",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -75,15 +48,6 @@
         "tipo": "resgate",
         "id": "cartacapital",
         "nome": "CartaCapital",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -163,8 +127,35 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
+        "id": "folha",
+        "nome": "Folha",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "jota",
+        "nome": "JOTA",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1economia",
+        "nome": "g1 Economia",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -199,7 +190,7 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-geral",
+        "id": "ab-justica",
         "nome": "Agência Brasil",
         "itens": 10,
         "ok": true,
@@ -208,7 +199,7 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-justica",
+        "id": "ab-geral",
         "nome": "Agência Brasil",
         "itens": 10,
         "ok": true,
@@ -225,10 +216,28 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "congresso",
+        "nome": "Congresso em Foco",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
-        "itens": 9,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -237,15 +246,6 @@
         "tipo": "pauta",
         "id": "infomoney",
         "nome": "InfoMoney",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -274,15 +274,6 @@
         "id": "unesp",
         "nome": "Jornal da Unesp",
         "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "globorural",
-        "nome": "Agro",
-        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -387,13 +378,13 @@
         "erro": "HTTP 404"
       },
       {
-        "tipo": "livre",
-        "id": "senado",
-        "nome": "Agência Senado",
+        "tipo": "pauta",
+        "id": "globorural",
+        "nome": "Agro",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -402,7 +393,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 405"
+      },
+      {
+        "tipo": "livre",
+        "id": "senado",
+        "nome": "Agência Senado",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -496,8 +496,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -505,8 +505,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inmet",
-        "nome": "Inmet",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -532,26 +532,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -568,6 +550,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
         "itens": 0,
@@ -577,8 +568,17 @@
       },
       {
         "tipo": "livre",
-        "id": "cgu",
-        "nome": "CGU",
+        "id": "pf",
+        "nome": "Polícia Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mec",
+        "nome": "Ministério da Educação",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -586,8 +586,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mec",
-        "nome": "Ministério da Educação",
+        "id": "cgu",
+        "nome": "CGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -613,15 +613,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "mj",
         "nome": "Ministério da Justiça",
         "itens": 0,
@@ -631,12 +622,12 @@
       },
       {
         "tipo": "livre",
-        "id": "fazenda",
-        "nome": "Ministério da Fazenda",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -649,8 +640,17 @@
       },
       {
         "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
+        "id": "fazenda",
+        "nome": "Ministério da Fazenda",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -667,8 +667,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -676,8 +676,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -712,8 +712,8 @@
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "funai",
+        "nome": "Funai",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -721,8 +721,8 @@
       },
       {
         "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
+        "id": "dnit",
+        "nome": "Dnit",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -775,17 +775,17 @@
       },
       {
         "tipo": "livre",
-        "id": "mpf",
-        "nome": "MPF",
+        "id": "ipea",
+        "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 503"
       },
       {
         "tipo": "livre",
-        "id": "ipea",
-        "nome": "Ipea",
+        "id": "mpf",
+        "nome": "MPF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -804,6 +804,15 @@
         "tipo": "livre",
         "id": "defesa",
         "nome": "Ministério da Defesa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "agu",
+        "nome": "AGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -838,15 +847,6 @@
       },
       {
         "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "antaq",
         "nome": "Antaq",
         "itens": 0,
@@ -865,15 +865,6 @@
       },
       {
         "tipo": "livre",
-        "id": "justica",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "saude-fed",
         "nome": "Ministério da Saúde",
         "itens": 0,
@@ -889,6 +880,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -955,15 +955,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mdic",
-        "nome": "MDIC",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "minas",
         "nome": "Ministério de Minas e Energia",
         "itens": 0,
@@ -975,6 +966,15 @@
         "tipo": "livre",
         "id": "portos",
         "nome": "Ministério de Portos e Aeroportos",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mdic",
+        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1027,6 +1027,15 @@
       },
       {
         "tipo": "livre",
+        "id": "stj-inf",
+        "nome": "STJ",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "in-dou",
         "nome": "Imprensa Nacional",
         "itens": 0,
@@ -1036,12 +1045,12 @@
       },
       {
         "tipo": "livre",
-        "id": "stj-inf",
-        "nome": "STJ",
+        "id": "epe",
+        "nome": "EPE",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -1054,8 +1063,8 @@
       },
       {
         "tipo": "livre",
-        "id": "epe",
-        "nome": "EPE",
+        "id": "sudene",
+        "nome": "Sudene",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1090,21 +1099,12 @@
       },
       {
         "tipo": "livre",
-        "id": "sudene",
-        "nome": "Sudene",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "camara-inf",
         "nome": "Câmara dos Deputados",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -1135,6 +1135,15 @@
       },
       {
         "tipo": "livre",
+        "id": "ipea-inf",
+        "nome": "Ipea",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "livre",
         "id": "ipeadata",
         "nome": "Ipea — Carta de Conjuntura",
         "itens": 0,
@@ -1144,17 +1153,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ipea-inf",
-        "nome": "Ipea",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "tse",
+        "nome": "TSE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1162,8 +1162,17 @@
       },
       {
         "tipo": "livre",
-        "id": "tse",
-        "nome": "TSE",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1192,98 +1201,199 @@
   "cidades": [],
   "itens": [
     {
-      "foto": "https://www12.senado.leg.br/noticias/materias/2026/08/05/saiba-como-consultar-seu-local-de-votacao-nas-eleicoes-de-outubro/54097192011_67a9709c00_o.jpg",
+      "foto": "https://www12.senado.leg.br/noticias/videos/2026/08/lei-maria-da-penha-completa-20-anos-em-constante-aperfeicoamento/@@images/3326661b-393e-4f7e-8b66-5d2eec0e8971.jpeg",
       "fotoAlt": null,
-      "fotoLarg": 0,
+      "fotoLarg": 1280,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:eleitores-ja-podem-consultar-locais-de-votacao-para-as-eleicoes-de-202",
+      "id": "ilm:lei-maria-da-penha-completa-20-anos",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Eleitores já podem consultar locais de votação para as eleições de 2026",
-      "resumo": "No Rio de Janeiro, o TRE alterou 66 zonas eleitorais por motivos de segurança, decisão que afeta cerca de 188 mil eleitores em 20 municípios.",
+      "titulo": "Lei Maria da Penha completa 20 anos",
+      "resumo": "A legislação foi adotada após condenação imposta ao Brasil na Comissão Interamericana de Direitos Humanos e é considerada referência no combate à violência contra as mulheres.",
       "fonte": "Meridiano, com informações de Senado Federal",
-      "origemLink": "https://www12.senado.leg.br/noticias/materias/2026/08/05/saiba-como-consultar-seu-local-de-votacao-nas-eleicoes-de-outubro",
+      "origemLink": "https://www12.senado.leg.br/noticias/videos/2026/08/lei-maria-da-penha-completa-20-anos-em-constante-aperfeicoamento",
       "origemNome": "Senado Federal",
       "pautadoPor": [
-        "g1"
+        "Congresso em Foco"
       ],
-      "quentura": 1,
+      "quentura": 2,
       "uf": null,
       "corpo": [
-        "Os eleitores de todo o país já podem consultar os locais de votação para as eleições de 2026. O primeiro turno ocorrerá em 4 de outubro e o segundo turno, se houver, em 25 de outubro.",
-        "A consulta é necessária porque a Justiça Eleitoral pode alterar os locais entre os pleitos. Nesta terça-feira (4), o Tribunal Regional Eleitoral (TRE) do Rio de Janeiro anunciou a mudança de 66 zonas eleitorais. A medida atinge cerca de 188 mil eleitores em 20 municípios para evitar a votação em locais dominados pelo crime organizado e classificados como de alto risco.",
-        "A pesquisa deve ser feita na página do Tribunal Superior Eleitoral (TSE), na área de Serviços eleitorais, situada no canto superior à direita, na opção \"Local de votação\". O acesso pode ser feito com a digitação do CPF, nome da mãe e data de nascimento, ou pelo aplicativo e-Título, mediante inserção do CPF e do código gerado pelo programa.",
-        "Além de localizar a seção de votação, o portal do TSE disponibiliza a consulta ao número do título, a verificação da situação eleitoral e a confirmação de autenticidade de documentos emitidos pela Justiça Eleitoral."
+        "A Lei Maria da Penha completa 20 anos. A legislação é considerada uma referência no combate à violência contra as mulheres.",
+        "A adoção da norma ocorreu após uma condenação imposta ao Brasil na Comissão Interamericana de Direitos Humanos.",
+        "Essa legislação tem sido aperfeiçoada continuamente."
       ],
-      "link": "/materia/eleitores-ja-podem-consultar-locais-de-votacao-para-as-eleicoes-de-202.html",
-      "iso": "2026-08-05T19:42:49.000Z",
-      "hora": "15h42",
+      "link": "/materia/lei-maria-da-penha-completa-20-anos.html",
+      "iso": "2026-08-06T11:56:10.000Z",
+      "hora": "07h56",
       "original": true,
-      "contexto": "O primeiro turno das eleições está marcado para 4 de outubro e o eventual segundo turno para 25 de outubro. A mudança nos locais de votação anunciada pelo TRE do Rio de Janeiro atinge cerca de 188 mil eleitores em 20 municípios.",
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://globalvoices.org/wp-content/uploads/2026/03/IMG_7316-800x450.webp",
+      "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:nippon-budokan-sedia-a-49-demonstracao-japonesa-de-kobudo",
+      "id": "ilm:governo-brasileiro-repudia-revogacao-de-visto-de-embaixadora-nos-eua",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Nippon Budokan sedia a 49ª Demonstração Japonesa de Kobudo",
-      "resumo": "A prática das artes marciais ancestrais do Japão prioriza a eficiência e não possui competições de combate por conta do risco das técnicas letais.",
-      "fonte": "Meridiano, com informações de Global Voices",
-      "origemLink": "https://pt.globalvoices.org/2026/08/05/apresentando-o-kobudo-artes-marciais-tradicionais-do-japao/",
-      "origemNome": "Global Voices",
+      "titulo": "Governo brasileiro repudia revogação de visto de embaixadora nos EUA",
+      "resumo": "O Departamento de Estado norte-americano alegou demora na aprovação do seu indicado diplomático, mas o Planalto afirmou que a justificativa é falsa e fere a Convenção de Viena.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/brasil-repudia-revogacao-de-visto-de-embaixadora-nos-eua",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "BBC Brasil",
+        "Folha",
+        "R7",
+        "Estadão"
+      ],
+      "quentura": 5,
+      "uf": null,
+      "corpo": [
+        "O governo brasileiro repudiou a decisão do Departamento de Estado dos Estados Unidos de alterar o visto da embaixadora do Brasil em Washington, Maria Luiza Ribeiro Viotti. O governo norte-americano justificou a medida alegando demora do Brasil na resposta para a concessão de aprovação diplomática do indicado do governo Trump para a embaixada no país.",
+        "Em nota da Secretaria de Comunicação da Presidência da República, o governo declarou que as justificativas dos EUA são falsas. A nota afirma que o governo norte-americano feriu a Convenção de Viena sobre Relações Diplomáticas ao divulgar publicamente o nome do indicado antes da concessão de anuência do país anfitrião. O pedido segue em análise e a convenção não estipula prazo para essa concessão.",
+        "O Palácio do Planalto afirmou que o episódio faz parte de uma escalada de medidas hostis ao Brasil por razões ideológicas. A nota citou a negativa dada a dois funcionários do governo norte-americano, justificando que a presença deles tinha o objetivo de questionar o sistema eleitoral brasileiro e interferir na próxima eleição presidencial.",
+        "O governo lembrou ainda que autoridades brasileiras e ministros do Supremo Tribunal Federal (STF) continuam sob sanções da Lei Magnitsky, aplicadas pelos EUA em retaliação à condenação de Jair Bolsonaro por golpe de Estado. O texto ressalta que o presidente Luiz Inácio Lula da Silva solicitou ao presidente Trump o cancelamento das sanções individuais durante visita a Washington em maio."
+      ],
+      "link": "/materia/governo-brasileiro-repudia-revogacao-de-visto-de-embaixadora-nos-eua.html",
+      "iso": "2026-08-05T00:14:00.000Z",
+      "hora": "20h14",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/08/20260804_lua.jpg",
+      "fotoAlt": "Foto: WikiCommons",
+      "fotoLarg": 1200,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:foguete-da-spacex-colide-com-a-lua-na-madrugada-de-quarta-feira",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Foguete da SpaceX colide com a Lua na madrugada de quarta-feira",
+      "resumo": "O impacto do estágio superior do Falcon 9 permite à comunidade científica estudar a colisão de um objeto de origem conhecida e refinar modelos físicos.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/atualidades/colisao-de-foguete-com-a-lua-fornece-informacoes-importantes-para-a-ciencia/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [
+        "Metrópoles"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O estágio superior do foguete Falcon 9, da empresa norte-americana SpaceX, colidiu com a Lua na madrugada desta quarta-feira (5). O impacto pôde ser observado por entusiastas da astronomia com o auxílio de telescópios.",
+        "Para a comunidade científica, o evento representa uma oportunidade rara de estudar a colisão de um objeto de origem conhecida com a superfície lunar.",
+        "Segundo Luna Fontana Formigari, tecnologista da Agência Espacial Brasileira (AEB) e mestra em Física pela USP, as observações permitirão refinar os modelos físicos que predizem esse tipo de colisão e seus efeitos. O episódio também servirá para testar equipamentos."
+      ],
+      "link": "/materia/foguete-da-spacex-colide-com-a-lua-na-madrugada-de-quarta-feira.html",
+      "iso": "2026-08-06T10:50:29.000Z",
+      "hora": "06h50",
+      "original": true,
+      "contexto": "Não há registros de casos parecidos no histórico. O impacto na superfície lunar ocorreu na madrugada de quarta-feira (5). A comunidade científica é afetada pelo evento, que tem como próxima etapa o teste de equipamentos e o refinamento de modelos físicos.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/07/Screenshot-2026-08-02-5.29.19-PM-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:industria-de-vicio-em-internet-na-china-ajuda-familias-a-confinar-filh",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Indústria de vício em internet na China ajuda famílias a confinar filhos adultos",
+      "resumo": "A prática expõe a sobrevivência da coerção parental por meio de instituições privadas e da aplicação de uma fiscalização frágil.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/06/when-chinese-parents-outsource-control-over-their-adult-children/",
+      "origemNome": "Global Voices (EN)",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Global Voices acompanhou, em primeiro de fevereiro, a 49ª Demonstração Japonesa de Kobudo no Nippon Budokan, um dos maiores eventos de artes marciais do Japão. A exibição reuniu escolas tradicionais cujas práticas foram estabelecidas antes da Restauração Meiji, em 1868.",
-        "Diferente das artes marciais modernas, o kobudo não possui regras sobre onde golpear e realiza apenas demonstrações, sem competições de combate real. O Sensei Kyoichi Inoue, soke da escola Hontai Yoshin-ryu, fundada em 1660, explicou que as técnicas miram pontos letais e áreas sensíveis expostas do corpo, como as principais artérias.",
-        "Durante o evento, a escola Shojitsuken Rikata Ichi-ryu Katchu Battojutsu, criada no final do período Sengoku, entre meados do século XV e o final do século XVI, utilizou armaduras autênticas e espadas longas reais. O representante Sensei Masaru Kanzaki demonstrou o movimento do todome-wo-sasu, focado em desferir o golpe final para evitar o sofrimento do oponente, em acordo com o espírito do bushido."
+        "A indústria remodelada de vício em internet na China passou a auxiliar famílias a confinar filhos adultos que são legalmente independentes.",
+        "O cenário expõe como a coerção praticada por pais sobrevive por meio da atuação de instituições privadas.",
+        "A situação também revela a permanência dessa coerção devido à existência de uma fiscalização frágil."
       ],
-      "link": "/materia/nippon-budokan-sedia-a-49-demonstracao-japonesa-de-kobudo.html",
-      "iso": "2026-08-05T10:30:38.000Z",
-      "hora": "06h30",
+      "link": "/materia/industria-de-vicio-em-internet-na-china-ajuda-familias-a-confinar-filh.html",
+      "iso": "2026-08-06T06:07:42.000Z",
+      "hora": "02h07",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://jornal.unesp.br/wp-content/uploads/2026/07/Serie-50-anos-50-historias-Jornal-900x507-1.jpg",
-      "fotoAlt": "Serie-50-anos-50-historias-Jornal-900&#215;507-1",
-      "fotoLarg": 900,
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:atuacao-de-antonio-candido-em-assis-marcou-sua-transicao-para-os-estud",
+      "id": "ilm:uniao-brasil-decide-pela-neutralidade-na-eleicao-presidencial",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Atuação de Antonio Candido em Assis marcou sua transição para os estudos literários",
-      "resumo": "O intelectual lecionou na instituição entre 1958 e 1960 após aceitar o convite do então diretor Antonio Soares Amora.",
-      "fonte": "Meridiano, com informações de Jornal da Unesp",
-      "origemLink": "https://jornal.unesp.br/2026/08/04/antonio-candido-viveu-renascimento-intelectual-durante-periodo-como-professor-da-faculdade-de-letras-de-assis/",
-      "origemNome": "Jornal da Unesp",
+      "titulo": "União Brasil decide pela neutralidade na eleição presidencial",
+      "resumo": "A legenda liberou seus candidatos para realizarem coligações em âmbito estadual durante o pleito deste ano.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/uniao-brasil-decide-pela-neutralidade-na-eleicao-presidencial",
+      "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "InfoMoney"
+        "BBC Brasil",
+        "Congresso em Foco",
+        "JOTA"
+      ],
+      "quentura": 4,
+      "uf": null,
+      "corpo": [
+        "O União Brasil decidiu adotar neutralidade na corrida presidencial deste ano, em convenção nacional realizada nesta terça-feira (4). A decisão liberou os candidatos do partido para fazerem, em âmbito estadual, as coligações que melhor atenderem seus objetivos nas eleições.",
+        "Em março deste ano, a sigla formou uma federação com o Progressistas (PP), reunindo dois dos maiores partidos do chamado “centrão”. O Progressistas havia oficializado seu posicionamento pela neutralidade em 31 de julho.",
+        "O presidente do União Brasil, Antonio Rueda, declarou em nota publicada nas redes sociais que a posição reflete a maturidade política da legenda e ressaltou o peso político nacional da Federação União Progressista."
+      ],
+      "link": "/materia/uniao-brasil-decide-pela-neutralidade-na-eleicao-presidencial.html",
+      "iso": "2026-08-04T21:48:00.000Z",
+      "hora": "17h48",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://jornal.usp.br/wp-content/uploads/2026/04/20260408_vistaaerea_FMRPeHC-3.JPG.jpeg",
+      "fotoAlt": "Vista aérea da Fachada da Faculdade de Medicina de Ribeirão Preto, com o complexo do Hospital das Clínicas da FMRP ao fundo - Foto: Gabriel Braga - HC-FMRP",
+      "fotoLarg": 1200,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:usp-lanca-edital-para-financiar-projetos-de-extensao-nos-campi-do-inte",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "USP lança edital para financiar projetos de extensão nos campi do interior",
+      "resumo": "A Pró-Reitoria de Cultura e Extensão Universitária vai selecionar seis propostas com valor de até R$ 40 mil cada, com inscrições de 10 de agosto a 9 de setembro.",
+      "fonte": "Meridiano, com informações de Jornal da USP",
+      "origemLink": "https://jornal.usp.br/cadernodecultura/edital-apoio-atividades-extensao-interior/",
+      "origemNome": "Jornal da USP",
+      "pautadoPor": [
+        "JOTA"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "Entre 1958 e 1960, o intelectual Antonio Candido atuou como professor na Faculdade de Filosofia, Ciências e Letras de Assis (FFCL), instituição incorporada pela Unesp em 1976. O período representou o início da docência do sociólogo na área de estudos literários.",
-        "Em 1957, Candido estava em licença da Universidade de São Paulo (USP), onde lecionava desde 1942, quando aceitou o convite do diretor Antonio Soares Amora para integrar a nova instituição. Ele mudou-se para Assis no segundo semestre de 1958, e a faculdade começou a funcionar em 1959, ano em que sua esposa, Gilda de Mello e Souza, e suas filhas reuniram-se a ele na cidade.",
-        "Na rotina acadêmica em Assis, o docente instituiu o \"Pacto do Silêncio\", reservando quatro horas diárias na parte da manhã para leituras e preparação de aulas, ministradas no período da tarde. Ele permaneceu três anos na instituição, dedicando-se ao ensino de literatura e teoria literária na universidade.",
-        "Em 1988, a Faculdade de Ciências e Letras da Unesp concedeu a Antonio Candido o título de Professor Emérito. O impacto de sua passagem por Assis foi registrado por sua filha, Ana Luísa Escorel, em artigo na revista Miscelânea, e analisado pelo historiador e professor da FCL Unesp, Paulo Henrique Martinez."
+        "A Pró-Reitoria de Cultura e Extensão Universitária (PRCEU) da USP recebe, a partir de 10 de agosto, propostas de atividades de extensão para os campi do interior. A iniciativa prevê o financiamento de seis projetos com recursos de até R$ 40 mil para cada contemplado.",
+        "As inscrições permanecem abertas até o dia 9 de setembro e devem ser realizadas pelos docentes responsáveis por meio do Sistema Apolo. Cada docente pode submeter apenas um único projeto.",
+        "Para participar do processo de seleção, cada proposta precisa envolver duas ou mais unidades e institutos dos campi da USP localizados fora da capital.",
+        "Segundo o pró-reitor de Cultura e Extensão Universitária, Amâncio Jorge de Oliveira, o edital busca ser transversal tematicamente e integrar departamentos e unidades em propostas interunidades para apoiar e estimular as atividades de extensão no interior."
       ],
-      "link": "/materia/atuacao-de-antonio-candido-em-assis-marcou-sua-transicao-para-os-estud.html",
-      "iso": "2026-08-04T18:29:27.000Z",
-      "hora": "14h29",
+      "link": "/materia/usp-lanca-edital-para-financiar-projetos-de-extensao-nos-campi-do-inte.html",
+      "iso": "2026-08-05T21:53:19.000Z",
+      "hora": "17h53",
       "original": true,
-      "contexto": null,
+      "contexto": "As inscrições ficam abertas do dia 10 de agosto até o dia 9 de setembro, devendo ser realizadas por meio do Sistema Apolo. A oportunidade é voltada para docentes dos campi da USP fora da capital que submetam propostas envolvendo duas ou mais unidades.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1293,11 +1403,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:povos-indigenas-mantem-luta-por-reconhecimento-e-direitos-fundamentais",
+      "id": "ilm:povos-indigenas-mantem-luta-por-direitos-e-reconhecimento-no-mundo",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Povos indígenas mantêm luta por reconhecimento e direitos fundamentais no mundo",
-      "resumo": "A mobilização ocorre mesmo após a queda de impérios e a descolonização política, reafirmando as histórias indígenas como globais.",
+      "titulo": "Povos indígenas mantêm luta por direitos e reconhecimento no mundo",
+      "resumo": "Mobilização por direitos fundamentais continua mesmo após a queda de impérios e a descolonização política.",
       "fonte": "Meridiano, com informações de Global Voices (EN)",
       "origemLink": "https://globalvoices.org/2026/08/05/indigenous-stories-are-global-stories/",
       "origemNome": "Global Voices (EN)",
@@ -1305,11 +1415,11 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Os povos indígenas continuam a lutar pelo reconhecimento e pela proteção e avanço de seus direitos fundamentais no mundo.",
-        "A continuidade dessa luta ocorre mesmo após a queda de impérios e a descolonização política.",
-        "As histórias dos povos indígenas são histórias globais no processo de proteção e avanço de seus direitos."
+        "Os povos indígenas continuam em luta pelo reconhecimento e pela proteção de seus direitos fundamentais no mundo. A declaração indica que a busca pelo avanço dessas garantias permanece ativa na esfera global.",
+        "A mobilização dessas populações persiste mesmo após processos históricos como a queda de impérios e a descolonização política.",
+        "As histórias e narrativas associadas aos povos indígenas são tratadas como histórias globais no contexto da defesa contínua de seus direitos."
       ],
-      "link": "/materia/povos-indigenas-mantem-luta-por-reconhecimento-e-direitos-fundamentais.html",
+      "link": "/materia/povos-indigenas-mantem-luta-por-direitos-e-reconhecimento-no-mundo.html",
       "iso": "2026-08-05T18:17:02.000Z",
       "hora": "14h17",
       "original": true,
@@ -1323,31 +1433,90 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:avante-oficializa-candidatura-de-augusto-cury-a-presidencia-da-republi",
+      "id": "ilm:trabalhadores-da-cptm-encerram-greve-nas-linhas-de-trem-de-sao-paulo",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Avante oficializa candidatura de Augusto Cury à Presidência da República",
-      "resumo": "Escolha ocorreu em convenção na Alesp e o nome para vice-presidente não foi definido, enquanto aliança com candidato do Novo está praticamente descartada.",
+      "titulo": "Trabalhadores da CPTM encerram greve nas linhas de trem de São Paulo",
+      "resumo": "A categoria aceitou proposta mediada pelo TRT que garante o trabalho de mais de 4.600 funcionários das linhas concedidas à iniciativa privada.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/avante-oficializa-augusto-cury-como-candidato-presidencia",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/termina-greve-nas-linhas-de-trens-em-sao-paulo",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "g1",
-        "g1 Política",
         "Poder360",
-        "JOTA"
+        "JOTA",
+        "CartaCapital"
       ],
-      "quentura": 7,
+      "quentura": 3,
       "uf": null,
       "corpo": [
-        "O partido Avante oficializou a candidatura do escritor e psiquiatra Augusto Cury à Presidência da República nesta segunda-feira (3). A confirmação ocorreu durante a convenção nacional da legenda, realizada na Assembleia Legislativa de São Paulo (Alesp). O nome do candidato a vice-presidente ainda não foi definido.",
-        "Ao discursar para filiados e dirigentes do partido, Cury defendeu mudanças no sistema de governo brasileiro e afirmou que, se eleito, pretende propor a adoção do semipresidencialismo. Nesse modelo, o presidente ficaria responsável por funções estratégicas, enquanto a condução da administração do governo caberia a um primeiro-ministro.",
-        "Cury informou também que as conversas para uma eventual composição de chapa com o candidato do Novo à Presidência, Romeu Zema, não avançaram. De acordo com ele, a possibilidade de aliança entre as duas legendas está praticamente descartada.",
-        "O Avante é uma das siglas que oficializam candidaturas na reta final do calendário eleitoral, cujas convenções partidárias terminam na próxima quarta-feira (5). O prazo máximo para o registro das candidaturas na Justiça Eleitoral é o dia 15 de agosto."
+        "Os trabalhadores da Companhia Paulista de Trens Metropolitanos (CPTM) suspenderam a greve iniciada na terça-feira (4). A paralisação afetava a circulação das linhas 11, 12, 13 e Expresso Aeroporto, com o retorno das atividades marcado para esta quarta-feira (5).",
+        "A decisão ocorreu em assembleia após a aceitação de uma proposta do governo estadual mediada pelo Tribunal Regional do Trabalho (TRT). O acordo contempla a garantia de trabalho para mais de 4.600 funcionários diretos das quatro linhas, que foram concedidas ao setor privado em julho.",
+        "O governo de São Paulo formalizou nesta quarta-feira (5) um projeto de lei específico para os trabalhadores. A medida garante a realocação de 1.300 funcionários que ainda não haviam sido direcionados para novos postos de trabalho.",
+        "Apesar do fim da paralisação, o sindicato informou em nota que a categoria permanecerá em estado de greve para acompanhar o cumprimento dos compromissos e a evolução das negociações. Pela manhã, a mobilização havia interrompido a circulação na linha 13 por algumas horas e afetado as linhas 11, 12 e Expresso."
       ],
-      "link": "/materia/avante-oficializa-candidatura-de-augusto-cury-a-presidencia-da-republi.html",
-      "iso": "2026-08-04T00:51:00.000Z",
-      "hora": "20h51",
+      "link": "/materia/trabalhadores-da-cptm-encerram-greve-nas-linhas-de-trem-de-sao-paulo.html",
+      "iso": "2026-08-05T21:11:00.000Z",
+      "hora": "17h11",
+      "original": true,
+      "contexto": "A medida afeta a circulação das linhas 11, 12, 13 e Expresso Aeroporto, além de envolver mais de 4.600 funcionários diretos e a realocação de 1.300 trabalhadores. O retorno das atividades das linhas ocorre nesta quarta-feira (5). A próxima etapa é o acompanhamento do cumprimento dos acordos e do projeto de lei do governo estadual pelos trabalhadores, que permanecem em estado de greve.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/Assyrian_refugees_on_wagon-800x450.webp",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:mulheres-assirias-indigenas-passam-por-processo-de-apagamento",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Mulheres assírias indígenas passam por processo de apagamento",
+      "resumo": "O apagamento das mulheres ocorreu por sua identidade assíria, por violência sexual e pela própria história, enquanto a estrutura do desaparecimento continua ativa.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/05/the-anatomy-of-erasure-indigenous-assyrian-women-and-forgotten-genocide/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Mulheres assírias indígenas foram submetidas a um processo de apagamento executado em três momentos.",
+        "A eliminação ocorreu primeiramente pela condição de assírias, seguida pela violência sexual e, de forma final, pela própria história.",
+        "A estrutura responsável pelo desaparecimento desse grupo permanece em funcionamento."
+      ],
+      "link": "/materia/mulheres-assirias-indigenas-passam-por-processo-de-apagamento.html",
+      "iso": "2026-08-05T06:12:13.000Z",
+      "hora": "02h12",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/1784199434ijf9a_1600x900-800x450.jpg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:sindicatos-no-kazakhstan-enfrentam-pressao-constante-ha-mais-de-tres-d",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Sindicatos no Kazakhstan enfrentam pressão constante há mais de três décadas",
+      "resumo": "No papel, as organizações servem como a principal instituição de proteção aos direitos dos trabalhadores.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/04/courts-and-unions-fail-to-protect-workers-in-kazakhstan/",
+      "origemNome": "Global Voices (EN)",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Os sindicatos no Kazakhstan estão sob pressão constante há mais de três décadas.",
+        "No papel, essas entidades servem como a principal instituição responsável pela proteção dos direitos dos trabalhadores.",
+        "A pressão sobre as organizações sindicais no país tem sido mantida de forma contínua por mais de três décadas."
+      ],
+      "link": "/materia/sindicatos-no-kazakhstan-enfrentam-pressao-constante-ha-mais-de-tres-d.html",
+      "iso": "2026-08-04T22:22:39.000Z",
+      "hora": "18h22",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1359,61 +1528,27 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:cre-amplia-articulacao-contra-novas-exigencias-da-uniao-europeia-a-car",
+      "id": "ilm:lula-chama-de-irresponsavel-revogacao-de-visto-da-embaixadora-do-brasi",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "CRE amplia articulação contra novas exigências da União Europeia à carne brasileira",
-      "resumo": "Medidas da comissão do Senado incluem reunião com o novo embaixador do bloco no Brasil e agenda permanente com o setor produtivo.",
-      "fonte": "Meridiano, com informações de Senado Federal",
-      "origemLink": "https://www12.senado.leg.br/noticias/audios/2026/08/cre-quer-esforco-conjunto-para-combater-restricoes-da-uniao-europeia-a-carne-brasileira",
-      "origemNome": "Senado Federal",
-      "pautadoPor": [
-        "Agro"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "A Comissão de Relações Exteriores do Senado (CRE) decidiu ampliar a articulação entre o governo e o setor produtivo para enfrentar as novas exigências da União Europeia (UE) para a importação de carne brasileira. A decisão ocorreu em reunião na terça-feira (4).",
-        "Entre as medidas previstas pela comissão está a realização de um encontro com o novo embaixador da União Europeia no Brasil.",
-        "O planejamento da CRE inclui também a manutenção de uma agenda permanente de audiências com produtores e empresas."
-      ],
-      "link": "/materia/cre-amplia-articulacao-contra-novas-exigencias-da-uniao-europeia-a-car.html",
-      "iso": "2026-08-05T19:24:53.000Z",
-      "hora": "15h24",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:lula-classifica-revogacao-de-visto-de-embaixadora-nos-eua-como-irrespo",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Lula classifica revogação de visto de embaixadora nos EUA como irresponsável",
-      "resumo": "Medida do governo de Donald Trump foi motivada por suposta demora do Brasil em aprovar indicado americano, alegação rebatida como falsa pelo governo brasileiro.",
+      "titulo": "Lula chama de irresponsável revogação de visto da embaixadora do Brasil nos EUA",
+      "resumo": "Medida do governo de Donald Trump foi justificada por suposta demora do Brasil em aprovação diplomática, alegação rebatida pelo governo brasileiro.",
       "fonte": "Meridiano, com informações de Agência Brasil",
       "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/atitude-irresponsavel-diz-lula-apos-revogacao-de-visto-de-embaixadora",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "BBC Brasil",
-        "Congresso em Foco",
-        "Correio Braziliense",
+        "R7",
         "Estadão"
       ],
-      "quentura": 5,
+      "quentura": 2,
       "uf": null,
       "corpo": [
-        "O presidente Luiz Inácio Lula da Silva classificou como irresponsável e impensada a revogação do visto da embaixadora do Brasil nos Estados Unidos, Maria Luiza Ribeiro Viotti. A medida foi anunciada na terça-feira (4) pelo governo de Donald Trump.",
-        "O governo norte-americano justificou a decisão alegando demora do Brasil na resposta para a concessão de aprovação diplomática do indicado dos Estados Unidos a assumir a embaixada no país. O governo brasileiro rebateu a declaração e afirmou que as alegações são falsas.",
-        "Em entrevista ao Meteoro Brasil e ao podcast Os Três Elementos nesta quarta-feira (5), Lula afirmou que a atitude foi desnecessária para uma relação diplomática de 203 anos. O presidente declarou que faz um ano e meio que Trump está no poder sem enviar embaixador ao Brasil e disse que o país exige ser tratado com respeito.",
-        "Durante a fala, Lula afirmou também que não vai aceitar tentativas de interferência estrangeira nas eleições de outubro e declarou que o Brasil está preparado para enfrentar quem tentar interferir no processo eleitoral."
+        "O presidente Luiz Inácio Lula da Silva classificou como irresponsável e impensada a revogação do visto da embaixadora brasileira nos Estados Unidos, Maria Luiza Ribeiro Viotti. O anúncio da medida foi feito na terça-feira (4) pelo governo de Donald Trump.",
+        "A justificativa apresentada pelos Estados Unidos foi uma suposta demora do governo brasileiro em responder à aprovação diplomática do indicado por Donald Trump para a embaixada norte-americana no Brasil. O governo do Brasil rebateu a alegação e afirmou que a justificativa é falsa.",
+        "Em entrevista conjunta ao Meteoro Brasil e ao podcast Os Três Elementos nesta quarta-feira (5), Lula declarou que a atitude é desnecessária para uma relação diplomática de 203 anos. O presidente pontuou que, caso a embaixadora venha ao Brasil, precisará obter o visto novamente para retornar aos Estados Unidos.",
+        "Lula afirmou que Donald Trump está no poder há um ano e meio e não havia enviado embaixador ao Brasil, ressaltando que o país exige ser tratado com respeito. O presidente declarou também que o Brasil está preparado e vai enfrentar qualquer tentativa de interferência de fora no processo eleitoral de outubro."
       ],
-      "link": "/materia/lula-classifica-revogacao-de-visto-de-embaixadora-nos-eua-como-irrespo.html",
+      "link": "/materia/lula-chama-de-irresponsavel-revogacao-de-visto-da-embaixadora-do-brasi.html",
       "iso": "2026-08-05T16:04:00.000Z",
       "hora": "12h04",
       "original": true,
@@ -1427,61 +1562,27 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:trabalhadores-da-cptm-suspendem-greve-em-quatro-linhas-de-trens-em-sao",
+      "id": "ilm:republicanos-nao-apoiara-candidato-a-presidencia-nas-eleicoes-deste-an",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Trabalhadores da CPTM suspendem greve em quatro linhas de trens em São Paulo",
-      "resumo": "Acordo mediado pelo TRT atendeu às exigências sobre a realocação dos funcionários, mas a categoria se mantém em estado de greve para monitorar o cumprimento das propostas.",
+      "titulo": "Republicanos não apoiará candidato à Presidência nas eleições deste ano",
+      "resumo": "Legenda não lançará nome próprio para a disputa e liberou os diretórios regionais para realizarem as coligações que desejarem.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/termina-greve-nas-linhas-de-trens-em-sao-paulo",
+      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "Folha",
+        "Congresso em Foco",
         "JOTA"
       ],
       "quentura": 2,
       "uf": null,
       "corpo": [
-        "Os trabalhadores da Companhia Paulista de Trens Metropolitanos (CPTM) suspenderam a greve iniciada nas primeiras horas de terça-feira (4). O movimento afetou as linhas 11, 12, 13 e o Expresso Aeroporto, com o retorno do serviço marcado para esta quarta-feira (5).",
-        "A decisão ocorreu em assembleia após a aceitação de proposta do governo estadual mediada pelo Tribunal Regional do Trabalho (TRT). A medida atende à reivindicação de garantia de trabalho para os mais de 4.600 trabalhadores diretos que atuavam nas quatro linhas entregues ao setor privado em julho.",
-        "O governo de São Paulo formalizou nesta quarta-feira (5) o projeto de lei que garante a realocação dos 1.300 funcionários que ainda não tinham sido direcionados a novos postos. O sindicato informou em nota que a categoria permanece em estado de greve para acompanhar os compromissos assumidos.",
-        "Durante a manhã de quarta-feira, a mobilização chegou a interromper a circulação de trens na linha 13 por algumas horas, além de provocar impactos no tráfego das linhas 11, 12 e no Expresso."
+        "O partido Republicanos anunciou nesta terça-feira (4) que adotará uma posição de independência institucional e não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também não lançará um nome próprio para a disputa.",
+        "Em nota, a sigla justificou a decisão com base no respeito às alianças estaduais e na sua presença em vários estados. O comunicado indica que essa capilaridade exige considerar as particularidades de cada estado e as composições construídas ao longo dos últimos anos.",
+        "Dessa forma, os diretórios regionais do partido poderão realizar as coligações que quiserem, sem a necessidade de seguir uma orientação do diretório nacional.",
+        "A agremiação realizou sua convenção nacional na parte da manhã, mas a nota oficial com a resolução já havia sido publicada em seu site antes do início do evento."
       ],
-      "link": "/materia/trabalhadores-da-cptm-suspendem-greve-em-quatro-linhas-de-trens-em-sao.html",
-      "iso": "2026-08-05T21:11:00.000Z",
-      "hora": "17h11",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:republicanos-decide-nao-lancar-nem-apoiar-candidato-a-presidencia-da-r",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Republicanos decide não lançar nem apoiar candidato à Presidência da República",
-      "resumo": "Diretórios regionais do partido terão liberdade para definir coligações estaduais sem orientação da direção nacional.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/republicanos-se-mantera-neutro-na-corrida-presidencial",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "g1 Política",
-        "Estadão"
-      ],
-      "quentura": 3,
-      "uf": null,
-      "corpo": [
-        "O partido Republicanos anunciou nesta terça-feira (4) que não apoiará nenhum candidato à Presidência da República nas eleições deste ano. A legenda também definiu que não lançará nome para a disputa e que adotará uma posição de independência institucional.",
-        "Em nota, a sigla explicou que a decisão respeita as alianças estaduais e a presença do partido em vários estados. O Republicanos justificou que a capilaridade impõe o dever de considerar as particularidades regionais e as composições políticas construídas nos últimos anos.",
-        "Dessa forma, os diretórios regionais da agremiação poderão realizar as coligações que quiserem, sem a necessidade de seguir uma orientação do diretório nacional.",
-        "A nota informando a decisão foi publicada no site do partido no período da manhã, antes do início da convenção nacional realizada pela legenda."
-      ],
-      "link": "/materia/republicanos-decide-nao-lancar-nem-apoiar-candidato-a-presidencia-da-r.html",
+      "link": "/materia/republicanos-nao-apoiara-candidato-a-presidencia-nas-eleicoes-deste-an.html",
       "iso": "2026-08-04T16:57:00.000Z",
       "hora": "12h57",
       "original": true,
@@ -1495,97 +1596,63 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:prd-e-solidariedade-liberam-diretorios-e-ficam-neutros-na-eleicao-pres",
+      "id": "ilm:prefeitura-de-itaquaquecetuba-interdita-area-de-fabrica-apos-incendio",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "PRD e Solidariedade liberam diretórios e ficam neutros na eleição presidencial",
-      "resumo": "A federação Renovação Solidária citou a intensa polarização política do país ao anunciar a decisão tomada em convenção nacional.",
+      "titulo": "Prefeitura de Itaquaquecetuba interdita área de fábrica após incêndio",
+      "resumo": "A interdição atinge a Estrada do Bonsucesso e a região industrial teve cerca de 200 pessoas evacuadas preventivamente, sem registro de feridos.",
       "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/prd-e-solidariedade-decidem-pela-neutralidade-na-eleicao-presidencial",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/prefeitura-interdita-entorno-de-fabrica-atingida-por-incendio-em-sp",
       "origemNome": "Agência Brasil",
       "pautadoPor": [
-        "BBC Brasil",
-        "Estadão"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "A federação Renovação Solidária, formada pelo Partido da Renovação Democrática (PRD) e pelo Solidariedade, decidiu não apoiar nenhum candidato à presidência da República. A definição ocorreu durante convenção nacional realizada nesta quarta-feira (5).",
-        "Com a medida, os diretórios estaduais dos dois partidos foram liberados para formar as alianças que preferirem. Em nota, a federação declarou que a decisão reafirma o respeito à autonomia e assegura a liberdade de manifestação política de dirigentes, parlamentares, mandatários e candidatos.",
-        "Segundo os dois partidos, a postura de independência se baseia no cenário atual do país, que consideram de intensa polarização política.",
-        "Esta quarta-feira (5) é o último dia do prazo para que os partidos realizem convenções para definir coligações e escolher candidatos que disputarão as eleições deste ano."
-      ],
-      "link": "/materia/prd-e-solidariedade-liberam-diretorios-e-ficam-neutros-na-eleicao-pres.html",
-      "iso": "2026-08-05T21:21:00.000Z",
-      "hora": "17h21",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Produção da indústria brasileira recua 1,8% em junho, aponta IBGE",
-      "resumo": "O resultado representa a segunda queda consecutiva do indicador, que já havia registrado recuo de 0,9% na passagem de abril para maio.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/producao-da-industria-brasileira-cai-18-de-maio-para-junho",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "Exame"
-      ],
-      "quentura": 2,
-      "uf": null,
-      "corpo": [
-        "A produção industrial do Brasil teve uma queda de 1,8% em junho deste ano na comparação com o mês anterior. Os dados da Pesquisa Industrial Mensal foram divulgados nesta terça-feira (4) pelo Instituto Brasileiro de Geografia e Estatística (IBGE).",
-        "Com o resultado, o indicador acumula uma perda de 2,7% em dois meses consecutivos de retração. O gerente da pesquisa, André Macedo, afirmou que essa perda acumulada eliminou parte do ganho de 4,4% verificado nos quatro primeiros meses de 2026. Na média móvel trimestral, a queda foi de 0,5%.",
-        "Na comparação com junho do ano passado, a indústria apresentou crescimento de 1,7%. No ano, a produção acumula alta de 1,5% e, em 12 meses, de 0,7%. Na passagem de maio para junho deste ano, 16 dos 25 ramos pesquisados apresentaram queda, com destaques para coque, produtos derivados de petróleo e biocombustíveis (-5,9%), produtos químicos (-4,3%), produtos alimentícios (-1,9%), produtos farmoquímicos e farmacêuticos (-11%) e confecção de artigos do vestuário e acessórios (-11%).",
-        "Entre as nove atividades com alta na produção, sobressaem-se impressão e reprodução de gravações (20,2%), celulose, papel e produtos de papel (5,4%) e metalurgia (1,4%). As quatro grandes categorias econômicas tiveram recuo, com destaques negativos para bens de consumo semi e não duráveis (-4,1%) e bens de consumo duráveis (-3,2%). Bens de capital e bens intermediários registraram queda de 1,1% cada."
-      ],
-      "link": "/materia/producao-da-industria-brasileira-recua-1-8-em-junho-aponta-ibge.html",
-      "iso": "2026-08-04T12:44:00.000Z",
-      "hora": "08h44",
-      "original": true,
-      "contexto": "O recuo de 1,8% em junho marca o segundo mês consecutivo de queda na produção industrial, acumulando perda de 2,7% após uma alta de 4,4% nos quatro primeiros meses de 2026. A retração atingiu 16 dos 25 ramos pesquisados pelo IBGE, com destaque para derivados de petróleo (-5,9%), produtos químicos (-4,3%) e alimentos (-1,9%). Na comparação com junho do ano passado, a indústria teve alta de 1,7%, com crescimento.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:governo-de-sp-propoe-nao-demitir-trabalhadores-da-cptm-para-encerrar-g",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "Governo de SP propõe não demitir trabalhadores da CPTM para encerrar greve",
-      "resumo": "Proposta apresentada em audiência prevê a realocação de funcionários para o Metrô, Artesp e Arsesp, enquanto a categoria decide em assembleia se encerra a paralisação.",
-      "fonte": "Meridiano, com informações de Agência Brasil",
-      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/governo-de-sp-diz-que-nao-havera-demissoes-de-funcionarios-da-cptm",
-      "origemNome": "Agência Brasil",
-      "pautadoPor": [
-        "CartaCapital"
+        "GZH"
       ],
       "quentura": 1,
       "uf": null,
       "corpo": [
-        "O governo de São Paulo apresentou a proposta de não demitir nenhum trabalhador da Companhia Paulista de Transporte Metropolitano (CPTM) durante audiência de conciliação realizada na tarde desta quarta-feira (5) com o sindicato e a empresa.",
-        "De acordo com o comunicado do governo estadual, dos 4.648 funcionários empregados em junho de 2026, 2.171 estão trabalhando atualmente na Linha 10-Turquesa. Os demais trabalhadores serão realocados para órgãos como o Metrô, a Agência de Transporte do Estado de São Paulo (Artesp) e a Agência Reguladora de Serviços Públicos do Estado de São Paulo (Arsesp).",
-        "A manutenção dos empregos é uma das reivindicações da greve que paralisa parcialmente há dois dias as linhas 11, 12 e 13 da CPTM, concedidas à Trivia Trens em julho. Após problemas técnicos no início da gestão privada, incluindo o incêndio de uma composição com passageiros, o governo determinou o retorno dos funcionários da CPTM para operar as três linhas em uma intervenção com duração de 90 dias.",
-        "Os trabalhadores da CPTM realizam assembleia na tarde de hoje para decidir se aceitam a proposta do governo e encerram a greve."
+        "A Prefeitura de Itaquaquecetuba determinou a interdição de toda a extensão da Estrada do Bonsucesso e de suas vias de acesso após um incêndio em uma empresa de produtos químicos ocorrido na terça-feira (4). A medida atinge uma área industrial localizada a mais de 500 metros das residências mais próximas, de onde cerca de 200 pessoas foram evacuadas de forma preventiva. Não houve feridos no incidente.",
+        "O incêndio já foi controlado, mas 35 viaturas e 89 bombeiros continuam no local no combate às chamas em resíduos químicos e no resfriamento dos tanques de solventes. Duas equipes do Samu permanecem de prontidão na área, onde foi registrado o atendimento médico a um homem que apresentou quadro de convulsão. A prefeitura recomenda que moradores mantenham portas e janelas fechadas e busquem atendimento de saúde em caso de sintomas de intoxicação.",
+        "O prefeito Eduardo Boigues afirmou que o abastecimento de água da Sabesp não foi contaminado e que o reestabelecimento da energia elétrica cortada pela EDP depende do aval dos bombeiros. Boigues informou que ainda existe risco de novas explosões em menor escala por causa da presença de substâncias inflamáveis, como álcool, acetato, resina e propanol. De acordo com o prefeito, a empresa funcionava com alvará municipal, licença da Cetesb e Auto de Vistoria do Corpo de Bombeiros em dia.",
+        "As causas do evento estão sob investigação, sendo o vazamento de materiais associado a gases e eletricidade estática uma das hipóteses. As ações no local recebem apoio da Defesa Civil, Polícia Militar, Guarda Civil Municipal e secretarias municipais. A reportagem tentou contato com a Quema Química, mas não obteve sucesso."
       ],
-      "link": "/materia/governo-de-sp-propoe-nao-demitir-trabalhadores-da-cptm-para-encerrar-g.html",
-      "iso": "2026-08-05T20:01:00.000Z",
-      "hora": "16h01",
+      "link": "/materia/prefeitura-de-itaquaquecetuba-interdita-area-de-fabrica-apos-incendio.html",
+      "iso": "2026-08-05T16:52:00.000Z",
+      "hora": "12h52",
       "original": true,
-      "contexto": "A paralisação afeta parcialmente os passageiros das linhas 11, 12 e 13 da CPTM, com nova assembleia marcada para esta quarta-feira (5) para decidir sobre o fim da greve. A medida envolve 4.648 funcionários da empresa, dos quais 2.171 atuam na Linha 10-Turquesa e os demais serão realocados para o Metrô, Artesp e Arsesp. O histórico do arquivo registra 4 relatos anteriores sobre assembleias e greves da CPTM nos dias 4.",
+      "contexto": "Não há registro de caso parecido no arquivo. A evacuação preventiva atinge cerca de 200 pessoas que moram nas proximidades da área industrial interditada. O restabelecimento da energia elétrica no local depende da liberação do Corpo de Bombeiros, que continua os trabalhos na fábrica.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:rio-de-janeiro-entra-em-estagio-2-devido-a-ventos-de-ate-76-km-h",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Rio de Janeiro entra em estágio 2 devido a ventos de até 76 km/h",
+      "resumo": "A Defesa Civil municipal enviou alerta por celular e orientou a população a evitar ficar debaixo de árvores e de estruturas metálicas.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-08/rio-tem-previsao-ventos-moderados-fortes-nesta-quarta-feira",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "Poder360"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "O município do Rio de Janeiro entrou em estágio 2 às 19h de terça-feira (4) por conta da previsão de ventos moderados a pontualmente fortes, com rajadas de até 76 km/h. As rajadas devem atingir a cidade entre a manhã e a tarde desta quarta-feira (5), principalmente na zona oeste e em áreas litorâneas.",
+        "A Defesa Civil emitiu alerta severo nos telefones celulares e recomendou que a população evite ficar debaixo de árvores e de estruturas metálicas. O estágio 2 é o segundo nível em uma escala de cinco e sinaliza risco de ocorrências de alto impacto, havendo possibilidade de mudança de estágio por causa da chuva e de outros fatores.",
+        "Segundo o Sistema Alerta Rio, a quarta-feira (5) terá atuação de um sistema de alta pressão, sem previsão de chuva e com céu parcialmente nublado. Os ventos estarão entre 18,5 km/h e 51,9 km/h, com rajadas pontuais entre 52 km/h e 76 km/h pela manhã e à tarde. Na quinta-feira (6), a atuação de áreas de instabilidade trará ventos de 18,5 km/h a 51,9 km/h, céu parcialmente nublado a nublado e previsão de chuva fraca isolada à tarde e à noite.",
+        "Na sexta-feira (7), áreas de instabilidade associadas à aproximação de uma frente fria causarão rajadas de vento entre 52 km/h e 76 km/h, podendo ficar acima de 76 km/h a partir da manhã, com perda de intensidade à noite. A Defesa Civil disponibiliza cadastro gratuito de alertas via SMS pelo envio do CEP para o número 40199, além dos telefones 193, do Corpo de Bombeiros, e 199, da Defesa Civil."
+      ],
+      "link": "/materia/rio-de-janeiro-entra-em-estagio-2-devido-a-ventos-de-ate-76-km-h.html",
+      "iso": "2026-08-05T09:45:00.000Z",
+      "hora": "05h45",
+      "original": true,
+      "contexto": "A medida afeta a população do município do Rio de Janeiro, principalmente na zona oeste e em áreas litorâneas, com ocorrência prevista para esta quarta-feira (5). As rajadas de até 76 km/h superam os ventos regulares previstos entre 18,5 km/h e 51,9 km/h. Não há registro de caso parecido no histórico do arquivo.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     }
@@ -1595,40 +1662,76 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto está sendo veiculado por seis veículos da imprensa.",
-        "O nome de Alfredo Gaspar é citado como vice de Flávio Bolsonaro.",
-        "Há menção ao Supremo Tribunal Federal como local de suposta investigação."
+        "O assunto está sendo publicado por três veículos de imprensa.",
+        "As matérias citam eleições para a Presidência da República e governos estaduais em 2026.",
+        "Os estados de Santa Catarina e Espírito Santo são mencionados nas matérias."
       ],
       "falta": [
-        "Confirmação oficial por parte dos políticos citados ou de suas assessorias.",
-        "Manifestação do Supremo Tribunal Federal confirmando a existência do procedimento citado.",
-        "Registro ou ata partidária oficial que confirme a formação da chapa pura."
+        "Manifestação oficial do Tribunal Superior Eleitoral ou dos Tribunais Regionais Eleitorais.",
+        "Confirmação formal das candidaturas por parte das agremiações partidárias.",
+        "Publicação de ata ou documento oficial que valide os nomes apresentados."
       ],
       "ondeCirculou": [
+        {
+          "veiculo": "g1",
+          "titulo": "Veja quem são os candidatos a governador de Santa Catarina em 2026",
+          "link": "https://g1.globo.com/sc/santa-catarina/eleicoes/2026/noticia/2026/08/06/veja-quem-sao-os-candidatos-a-governador-de-santa-catarina-em-2026.ghtml"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Veja quem são os candidatos a governador no Espírito Santo em 2026",
+          "link": "https://g1.globo.com/es/espirito-santo/eleicoes/2026/noticia/2026/08/06/veja-quem-sao-os-candidatos-a-governador-no-espirito-santo-em-2026.ghtml"
+        },
+        {
+          "veiculo": "JOTA",
+          "titulo": "Quem são os pré-candidatos a presidente da República do Brasil nas eleições 2026",
+          "link": "https://www.jota.info/eleicoes/eleicoes-2026/quem-sao-pre-candidatos-a-presidente-da-republica-do-brasil-eleicoes-de-2026-agosto"
+        }
+      ],
+      "link": "/materia/nc-veiculos-apontariam-pre-candidatos-estaduais-e-a-presidencia-em-2026.html",
+      "corpo": [
+        "Publicações da imprensa estariam listando possíveis concorrentes para o pleito de 2026. A cobertura abrangeria a disputa pela Presidência da República e também cargos estaduais.",
+        "Entre as localidades mencionadas nas matérias estariam os estados de Santa Catarina e do Espírito Santo. As reportagens tratariam das definições relativas aos cargos de governador nas duas Unidades da Federação.",
+        "As publicações divergiriam no enquadramento dos nomes, alternando entre candidatos e pré-candidatos. Não haveria, até o momento, confirmação oficial por parte da Justiça Eleitoral."
+      ],
+      "id": "circ:veiculos-apontariam-pre-candidatos-estaduais-e-a-presidencia-em-2026",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "Veículos apontariam pré-candidatos estaduais e à Presidência em 2026",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-06T12:33:21.473Z",
+      "hora": "08h33"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [],
+      "falta": [],
+      "ondeCirculou": [
+        {
+          "veiculo": "BBC Brasil",
+          "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro nas eleições 2026",
+          "link": "https://www.bbc.com/portuguese/articles/cvg71ddlrrro?at_medium=RSS&amp;at_campaign=rss"
+        },
+        {
+          "veiculo": "Exame",
+          "titulo": "Isolamento faz Flávio Bolsonaro trocar sinalização a mulheres por segurança pública com vice",
+          "link": "https://exame.com/brasil/isolamento-faz-flavio-trocar-sinalizacao-a-mulheres-por-seguranca-publica-com-vice/"
+        },
+        {
+          "veiculo": "g1 Política",
+          "titulo": "Entenda o peso das alianças partidárias para Lula e Flávio Bolsonaro nas eleições de 2026",
+          "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/06/entenda-aliancas-partidarias-lula-e-flavio-bolsonaro.ghtml"
+        },
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "Vice de Flávio Bolsonaro é alvo de pedido de investigação por suspeita de estupro de vulnerável",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQjgybmZvWG5aUVNNVkZSZVVqVzUxbFZxWHhpNTd6cUVnbTlobW1MMTJQdEtEZHZOSnBVWVFnZXFmRC1JcU10MG80X19SSkE3YmdsM2Q2RXBQTDg5OVRXU2s4R3N2NENsVlZ2bFZfSFZnYkZhdEo5VFp1cDc2Y2RfakpxWHNjRldDM19Uck5PT3NSaVZQT0tuMHAxQlBmTW83b0VPejhqR0tMejVwcmY5X19qbw?oc=5"
+        },
         {
           "veiculo": "GZH",
           "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
           "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNUk5IUDNzVFhOTXNucjlXNUpxYlBaV1ZJMTlHNlNJaGdJeEMyMFZCTkROTWJzWjg3aWoxVTVycXpqNWoyX05vLVRTdzVaeGpRVWVvQ0lGU2EwS2JuckQxWG83ZE5hR2VaelJmWG4zc0QxU2hyVDdrVldPelgxam5VZmxaTkJHX1lyTGx4bG1oSHpyb0ZhbjM5SkZzbGpQWU9IeldJVTlhM2w4bFQ5V3htNkFzak5JVGNGYm1QWjJfaVBYTlZRUGZLYmt4TG43d0tfejBGRkZfeTEwTHJ2WGRvVW8xSUJDSFk0TUlqWllzX0RjblJtVXdoOVZLMFhVdzB6WlhMbVp3?oc=5"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "Acusação de estupro, 'arma contra Lulinha' e Arthur Lira mais perto do Senado: os impactos de Alfredo Gaspar como vice de Flávio Bolsonaro",
-          "link": "https://www.bbc.com/portuguese/articles/cz6483j0g42o?at_medium=RSS&amp;at_campaign=rss"
-        },
-        {
-          "veiculo": "Poder360",
-          "titulo": "Flávio Bolsonaro diz que teve filhas para cuidar dele na velhice",
-          "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-bolsonaro-diz-que-teve-filhas-para-cuidar-dele-na-velhice/"
-        },
-        {
-          "veiculo": "JOTA",
-          "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro",
-          "link": "https://www.jota.info/eleicoes/eleicoes-2026/quem-e-alfredo-gaspar-anunciado-como-vice-de-flavio"
-        },
-        {
-          "veiculo": "CartaCapital",
-          "titulo": "Vice de Flávio Bolsonaro é investigado por estupro de vulnerável no STF",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQjgybmZvWG5aUVNNVkZSZVVqVzUxbFZxWHhpNTd6cUVnbTlobW1MMTJQdEtEZHZOSnBVWVFnZXFmRC1JcU10MG80X19SSkE3YmdsM2Q2RXBQTDg5OVRXU2s4R3N2NENsVlZ2bFZfSFZnYkZhdEo5VFp1cDc2Y2RfakpxWHNjRldDM19Uck5PT3NSaVZQT0tuMHAxQlBmTW83b0VPejhqR0tMejVwcmY5X19qbw?oc=5"
         },
         {
           "veiculo": "Correio Braziliense",
@@ -1636,381 +1739,281 @@
           "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSjFJdEJJOVdxWmdqeGYyR01HWVdiakpCYlhaQ0F0TEZlcEdxVWRVTVA2cWNfWlFYZnQyR3YxaDBYVVdOQmhfa01YcFBmY1RYNVd0VXVBX1RpVEpGZzhzNFlnZ2xZZk9CdkxHR3JkTi0wODNJTktvWmJoaUF6eE1MUFpBNDN5X1ZLc1NmdjBmVHdiSTQ4QTNwdjlhdkVXS1NZREdMVXhCTE50MU5FQm54QkYyTHQyNXdMTlU2RXZvRjZqNXd4TFdqMDVvdFdsYnhnU1HSAdcBQVVfeXFMTm1pUDFzMmJGTFZwUlp1anlZdndjemEwZTEwdWtDM2lsNWhjWWdVU2ZZUkRrTVEwYlJ6T25qaTEtR053VW85NlEyUGdYeHhsUEtKZFA3S1lxVkp6R0NVMGhPRjhuMzMtSXBHaGItcGZvQ3VORF9pdE5OMzlvNW9JcW5SeXluQmNUZndjRm9OVWh4UUI1ZHhZS1pnVWxRQUVVY0xfelRLTWxZeE9JNUcyeGNTb3E1OGRjZXg0TTI2TWw1MTRLZXlkTmJoVkNKaEhPQ1NoSld2Um8?oc=5"
         }
       ],
-      "link": "/materia/nc-flavio-bolsonaro-teria-definido-alfredo-gaspar-como-vice-em-chapa-pura.html",
+      "link": "/materia/nc-alfredo-gaspar-seria-anunciado-como-vice-de-flavio-bolsonaro-para-2026.html",
       "corpo": [
-        "Veículos de imprensa estariam noticiando que Alfredo Gaspar teria sido confirmado como vice de Flávio Bolsonaro em uma chapa pura. A escolha estaria sendo relacionada à estratégia política do parlamentar.",
-        "As publicações apontariam que o indicado a vice estaria sendo investigado por estupro de vulnerável no Supremo Tribunal Federal. A movimentação também estaria associada a Arthur Lira mais perto do Senado e a uma alegada arma contra Lulinha.",
-        "Os textos citariam ainda que Flávio Bolsonaro teria dito que teve filhas para cuidar dele na velhice. Os conteúdos veiculados apresentariam divergências de enfoque, variando entre a confirmação da chapa, o perfil do vice e a análise de impactos."
+        "Alfredo Gaspar teria sido indicado e confirmado como vice na chapa de Flávio Bolsonaro para as eleições de 2026. A composição representaria uma chapa pura e indicaria uma troca na sinalização a mulheres pela pauta de segurança pública. Um suposto isolamento do pré-candidato estaria associado à decisão estratégica. As publicações tratariam sobre o peso das alianças partidárias para Lula e Flávio Bo"
       ],
-      "id": "circ:flavio-bolsonaro-teria-definido-alfredo-gaspar-como-vice-em-chapa-pura",
+      "id": "circ:alfredo-gaspar-seria-anunciado-como-vice-de-flavio-bolsonaro-para-2026",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Flávio Bolsonaro teria definido Alfredo Gaspar como vice em chapa pura",
+      "titulo": "Alfredo Gaspar seria anunciado como vice de Flávio Bolsonaro para 2026",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:39:28.862Z",
-      "hora": "19h39"
+      "iso": "2026-08-06T12:33:48.395Z",
+      "hora": "08h33"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que três veículos de imprensa veicularam dados sobre lucros trimestrais das empresas.",
-        "Que os relatos atribuem resultados à Copel, à Vivara e à Disney."
+        "O assunto está sendo publicado por três veículos da imprensa.",
+        "As matérias citam um contexto de tensão diplomática entre Brasil e Estados Unidos.",
+        "Não há confirmação de órgãos oficiais sobre as declarações atribuídas a Lula."
       ],
       "falta": [
-        "Confirmação oficial dos balanços junto aos órgãos reguladores do mercado financeiro.",
-        "Divulgação das demonstrações financeiras nos canais oficiais de relações com investidores."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "CNN Brasil",
-          "titulo": "Copel tem lucro líquido de R$ 645 milhões no 2º trimestre, alta de 42,6%",
-          "link": "https://www.cnnbrasil.com.br/infra/copel-tem-lucro-liquido-de-r-645-milhoes-no-2o-trimestre-alta-de-426/"
-        },
-        {
-          "veiculo": "InfoMoney",
-          "titulo": "Vivara (VIVA3) tem lucro líquido de R$ 156,7 mi no 2T, alta de 0,9% na base anual",
-          "link": "https://www.infomoney.com.br/mercados/vivara-viva3-resultados-segundo-trimestre-2026/"
-        },
-        {
-          "veiculo": "Valor Econômico",
-          "titulo": "Disney tem lucro de US$ 2,63 bilhões no trimestre fiscal, queda de 49,9%",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOb0RKWEJ2WTVEclE5YmtnSmtJUjI5U1JJRHNrQzYwODNCWWFVQ1Atdm9uejVFUkJNME50Y0VaNWJsMFdJazJCalRqQVN3cWlOUlBVMWVrNGU4NjNyRlByY1N0U2F4T21YdHI2Tl84NmlEbllMbE1wZE1Pa0dDYzJvaWhBTWVDc0xYQlZNenNjNGZTeDN6NFZhcnkwdElINDRmZHQ0d2d5cDFyaEtkOXFjTzVRbkV1bmwzeXhqZ2JJYmxsRzEyX2trVnVpcW3SAdsBQVVfeXFMTXhpZ3lsdVVkWEYxd2FVTXNFdXlPNWlYMjZqYWhyWE00MmlJbVZraTFpV0VCM3AwQ00xWmZYYUdRMXdsYXBiZk4xWmg1aFd5TTlvU29KcHJacUNvSzBJazVqeE9paWlZbU5NbnlsYVRZa05OV3h2TTE3UHZ6UlNCN2pBb3dKQWhfSThQenN6aHlIb01WdnZ4VzYxcndhcl83aFBrQ3daTWNubXZJcWEwcXZFRXktZHlhMkhuc2lacFVDa2xpRkd2dU94MjNfRkxIVi1CSzJxQTMzbkFv?oc=5"
-        }
-      ],
-      "link": "/materia/nc-publicacoes-apontariam-lucros-trimestrais-para-copel-vivara-e-disney.html",
-      "corpo": [
-        "Veículos da imprensa teriam divulgado dados sobre os balanços financeiros trimestrais de três companhias. As publicações atribuiriam lucros à Copel, à Vivara e à Disney referentes a seus trimestres fiscais recentes.",
-        "A Copel teria registrado lucro líquido de 645 milhões de reais no segundo trimestre, o que representaria alta de 42,6%. A Vivara teria obtido 156,7 milhões de reais no mesmo período, com avanço anual de 0,9%. A Disney teria alcançado 2,63 bilhões de dólares em seu trimestre fiscal, indicando queda de 49,9%.",
-        "As informações divulgadas tratariam dos resultados operacionais de cada uma das empresas no período. Os dados publicados apontariam desempenhos e variações percentuais distintos entre as corporações citadas."
-      ],
-      "id": "circ:publicacoes-apontariam-lucros-trimestrais-para-copel-vivara-e-disney",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Publicações apontariam lucros trimestrais para Copel, Vivara e Disney",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:40:38.161Z",
-      "hora": "19h40"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "O tema está sendo publicado por dois veículos de imprensa.",
-        "O Progressistas teria indicado Lucas Ribeiro ao governo paraibano.",
-        "O MDB teria lançado Daniel Vilela ao governo goiano."
-      ],
-      "falta": [
-        "Manifestação oficial das direções partidárias citadas nas notícias.",
-        "Documentos oficiais que comprovem os lançamentos das candidaturas.",
-        "Registros formais das decisões tomadas pelos partidos."
+        "Manifestação oficial do Palácio do Planalto sobre o teor das declarações do presidente.",
+        "Definição oficial de data para a realização do eventual diálogo citado.",
+        "Registro ou nota oficial das autoridades norte-americanas ou brasileiras a respeito do contato."
       ],
       "ondeCirculou": [
         {
           "veiculo": "g1",
-          "titulo": "Progressistas lança Lucas Ribeiro como candidato ao governo da Paraíba",
-          "link": "https://g1.globo.com/pb/paraiba/eleicoes/2026/noticia/2026/08/05/progressistas-lanca-lucas-ribeiro-como-candidato-ao-governo-da-paraiba.ghtml"
+          "titulo": "Em meio à tensão com EUA, Lula diz a aliados que pode falar com Donald Trump; data ainda não está definida",
+          "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/08/06/em-meio-a-tensao-com-eua-lula-diz-a-aliados-que-pode-falar-com-donald-trump-data-ainda-nao-esta-definida.ghtml"
         },
         {
           "veiculo": "g1 Política",
-          "titulo": "MDB lança Daniel Vilela como candidato ao governo de Goiás",
-          "link": "https://g1.globo.com/go/goias/eleicoes/2026/noticia/2026/08/05/mdb-lanca-daniel-vilela-como-candidato-ao-governo-de-goias.ghtml"
+          "titulo": "Em meio à tensão com EUA, Lula diz a aliados que pode falar com Donald Trump; data ainda não está definida",
+          "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/08/06/em-meio-a-tensao-com-eua-lula-diz-a-aliados-que-pode-falar-com-donald-trump-data-ainda-nao-esta-definida.ghtml"
+        },
+        {
+          "veiculo": "Folha",
+          "titulo": "Lula diz que falará com Trump em meio a crise diplomática entre Brasil e EUA",
+          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/lula-diz-que-falara-com-trump-em-meio-a-crise-diplomatica-entre-brasil-e-eua.shtml"
         }
       ],
-      "link": "/materia/nc-partidos-teriam-lancado-candidaturas-aos-governos-da-paraiba-e-de-goia.html",
+      "link": "/materia/nc-lula-teria-dito-que-pode-falar-com-donald-trump-em-meio-a-tensao-com-e.html",
       "corpo": [
-        "Veículos de imprensa indicariam que legendas partidárias teriam oficializado candidaturas estaduais. O Progressistas teria lançado Lucas Ribeiro como candidato ao governo da Paraíba. O MDB estaria lançando Daniel Vilela para o governo de Goiás.",
-        "As publicações tratariam de anúncios políticos distintos em duas unidades da federação. Não haveria detalhes adicionais nas manchetes sobre as circunstâncias das escolhas.",
-        "As informações estariam restritas aos nomes indicados por cada agremiação. A confirmação dos fatos dependeria de posicionamento formal dos partidos citados."
+        "O presidente Luiz Inácio Lula da Silva teria afirmado que poderá conversar com Donald Trump. A declaração teria sido dada em meio a um contexto de tensão diplomática entre o Brasil e os Estados Unidos.",
+        "As publicações que veiculam a informação registram divergências quanto ao teor do relato. Parte dos veículos aponta que a conversa teria sido mencionada a aliados com data ainda indefinida, enquanto outra versão afirma que a interlocução efetivamente ocorreria.",
+        "A eventual conversa estaria vinculada ao cenário de crise entre os dois países citado pelas matérias. Até o momento, não existe confirmação pública por canais oficiais sobre a realização ou o agendamento do contato."
       ],
-      "id": "circ:partidos-teriam-lancado-candidaturas-aos-governos-da-paraiba-e-de-goia",
-      "editoria": "brasil",
+      "id": "circ:lula-teria-dito-que-pode-falar-com-donald-trump-em-meio-a-tensao-com-e",
+      "editoria": "internacional",
       "uf": null,
-      "titulo": "Partidos teriam lançado candidaturas aos governos da Paraíba e de Goiás",
+      "titulo": "Lula teria dito que pode falar com Donald Trump em meio a tensão com EUA",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:41:35.132Z",
-      "hora": "19h41"
+      "iso": "2026-08-06T12:34:14.218Z",
+      "hora": "08h34"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por três veículos de imprensa.",
-        "Que a taxa Selic estaria fixada em 14% ao ano segundo os relatos.",
-        "Que há menções a alerta de alta de preços e ausência de sinalização."
+        "Que publicações veiculam estimativa de imposto sobre consumo em 28% em 2033.",
+        "Que matérias citam projeção de alíquota superior à dos países da OCDE.",
+        "Que há matérias abordando o tamanho do eleitorado dos estados e Brasília."
       ],
       "falta": [
-        "Divulgação do comunicado oficial por parte do Banco Central.",
-        "Registro em ata ou documento formal do Comitê de Política Monetária.",
-        "Confirmação oficial sobre os alertas de preços ou passos futuros."
+        "Relatório oficial do comitê dos estados formalizando a projeção de 28%.",
+        "Manifestação de órgãos governamentais responsáveis sobre o percentual da alíquota.",
+        "Confirmação dos dados do eleitorado por meio do tribunal eleitoral competente."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Poder360",
-          "titulo": "Copom reduz Selic para 14%, mas alerta para alta de preços",
-          "link": "https://www.poder360.com.br/poder-economia/copom-reduz-selic-para-14-mas-alerta-para-alta-de-precos/"
+          "veiculo": "g1 Política",
+          "titulo": "Comitê dos estados estima futuro imposto sobre o consumo brasileiro de 28% em 2033; taxa supera a dos países da OCDE",
+          "link": "https://g1.globo.com/economia/noticia/2026/08/06/comite-dos-estados-estima-futuro-imposto-sobre-o-consumo-brasileiro-de-28percent-em-2033-taxa-supera-a-dos-paises-da-ocde.ghtml"
         },
         {
           "veiculo": "g1 Economia",
-          "titulo": "Selic: Copom reduz taxa básica de juros para 14% ao ano",
-          "link": "https://g1.globo.com/economia/noticia/2026/08/05/selic-copom-reduz-taxa-basica-de-juros-para-14percent-ao-ano.ghtml"
+          "titulo": "Comitê dos estados estima futuro imposto sobre o consumo brasileiro de 28% em 2033; taxa supera a dos países da OCDE",
+          "link": "https://g1.globo.com/economia/noticia/2026/08/06/comite-dos-estados-estima-futuro-imposto-sobre-o-consumo-brasileiro-de-28percent-em-2033-taxa-supera-a-dos-paises-da-ocde.ghtml"
         },
         {
-          "veiculo": "JOTA",
-          "titulo": "Copom reduz Selic para 14% ao ano e não sinaliza próximos passos",
-          "link": "https://www.jota.info/tributos-e-empresas/mercado/copom-reduz-selic-para-14-ao-ano-e-nao-sinaliza-proximos-passos"
+          "veiculo": "Poder360",
+          "titulo": "Saiba qual é o tamanho do eleitorado dos 26 Estados e de Brasília",
+          "link": "https://www.poder360.com.br/poder-eleicoes-2026/saiba-qual-e-o-tamanho-do-eleitorado-dos-26-estados-e-de-brasilia/"
         }
       ],
-      "link": "/materia/nc-copom-teria-reduzido-a-taxa-selic-para-14-ao-ano.html",
+      "link": "/materia/nc-comite-dos-estados-estimaria-imposto-de-consumo-de-28-para-2033.html",
       "corpo": [
-        "O Comitê de Política Monetária teria reduzido a taxa básica de juros para 14% ao ano. A informação estaria sendo veiculada pela imprensa sem validação em canais oficiais até o momento.",
-        "Entre os conteúdos publicados, aponta-se que a decisão teria vindo acompanhada de um alerta sobre alta de preços. Outra publicação relata que o órgão não teria sinalizado os próximos passos da taxa.",
-        "Os textos divergem quanto aos pontos de ênfase atribuídos à decisão. Enquanto uma versão destacaria o risco inflacionário, outra focaria na ausência de orientações futuras."
+        "Publicações veiculariam que um comitê dos estados teria estimado em 28% a taxa do futuro imposto sobre o consumo brasileiro para o ano de 2033. A alíquota projetada superaria a média registrada nos países da OCDE.",
+        "As matérias em circulação abordariam também o tamanho do eleitorado referente aos 26 estados e a Brasília. As publicações apresentariam divergência de pauta entre si, alternando entre projeções tributárias e dados eleitorais.",
+        "A estimativa mencionada situaria o patamar da tributação sobre consumo para a próxima década. A validação desses números estaria sujeita à confirmação por instâncias governamentais oficiais."
       ],
-      "id": "circ:copom-teria-reduzido-a-taxa-selic-para-14-ao-ano",
+      "id": "circ:comite-dos-estados-estimaria-imposto-de-consumo-de-28-para-2033",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Copom teria reduzido a taxa Selic para 14% ao ano",
+      "titulo": "Comitê dos estados estimaria imposto de consumo de 28% para 2033",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:42:38.675Z",
-      "hora": "19h42"
+      "iso": "2026-08-06T12:34:37.819Z",
+      "hora": "08h34"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o tema é noticiado por ao menos três veículos da imprensa.",
-        "Que a alegação envolve as relações do Brasil com Estados Unidos e Argentina.",
-        "Que as matérias mencionam o prazo de dois meses para as eleições."
+        "Três veículos de imprensa veiculam a manutenção da inelegibilidade de Pablo Marçal.",
+        "As matérias atribuem a decisão ao Tribunal Regional Eleitoral de São Paulo."
       ],
       "falta": [
-        "Manifestação oficial do Ministério das Relações Exteriores do Brasil sobre o tema.",
-        "Posicionamento dos governos dos Estados Unidos e da Argentina sobre as alegações.",
-        "Identificação oficial do diplomata citado e detalhamento dos atos diplomáticos descritos."
+        "Confirmação oficial do TRE-SP por meio de nota ou publicação do acórdão.",
+        "Número do procedimento judicial e data de realização da sessão de julgamento.",
+        "Posicionamento oficial do órgão julgador ou da defesa do político."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "JOTA",
-          "titulo": "Brasil enfrenta dupla crise diplomática sem horizonte de fim",
-          "link": "https://www.jota.info/executivo/brasil-enfrenta-dupla-crise-diplomatica-sem-horizonte-de-fim"
+          "veiculo": "Valor Econômico",
+          "titulo": "TRE-SP rejeita novo recurso e mantém Pablo Marçal inelegível por oito anos",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMDVUQ3BCd21qZ1RUMkxQX2syLTVTSTNjQktLTkhHLXdNak84X0VpTU1QNkhiSVBVYXQtOXY2Z3VvVzg1YW8wY1FSTXRkQ3FhUE5PNjRsSXcydjB3eFM0OWpBb0k1NVYyQzZ5VW00dHFhc3pSQ3J5TGY4MlJ2WUlPMVZrQk1rVjVUM2dtUEVyV0tJV0w1R2NLZ2IzaVRtQThGX2s0VkI3Q1I5WWJEQ1luVE9LRzhJVjVIRkZNZmt3UnU5Z1Y1WHl5ZTh5amHSAdsBQVVfeXFMT2VLNHd2Y0J6cmFlbW9mRlE0ZXgxSkJjVzAyODJYeGJjMWlNc2hBakNiamJRRktuNXJKZ0ZiNW84bkFhSV9WU2twMTNBY043ek9rbVBreV9fVzNYdTQyNGRSWnBiS0otLVJoUHNiLWR3ZjdHU3hsM2xRbG5qV0tXZ19KUFc0SjBQa25jX1B6X0t2aTRVQlc4V3FoRmNKbF8wN0N6YU9PVG9jeDRoTHlOMkU5RE51bHZZd0hrVXdFOURmQlZkblY3WGRWZkp1VlplVTM3LTFvVmlqcmh3?oc=5"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Por unanimidade, TRE-SP mantém Pablo Marçal inelegível até 2032",
+          "link": "https://www.congressoemfoco.com.br/noticia/121052/por-unanimidade-tre-sp-mantem-pablo-marcal-inelegivel-ate-2032"
+        },
+        {
+          "veiculo": "CartaCapital",
+          "titulo": "TRE de São Paulo nega recurso e mantém Pablo Marçal inelegível",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMWc3STlWekJ2ci1DenRKcDlrZTJBWVRjSGdmY3N0cFVDM21jOWpTVTBpQ3BqOWdJaXNkblRTZEVHcldpNU9uaG83Snh1TVV5ZXRCOHdaejJsNngxbUNrOGZ3MmdUN3BONjhLbGg5eWhkR1Z3OGpjU19HS1B1OUQ0d1RFVU5vZjJSbkZCZ055dUt2WVNwR0UzSm1vcmNpRWExdEw1ZS1nQVVsNC1ZbFE?oc=5"
+        }
+      ],
+      "link": "/materia/nc-tre-sp-teria-rejeitado-recurso-e-mantido-pablo-marcal-inelegivel.html",
+      "corpo": [
+        "O Tribunal Regional Eleitoral de São Paulo teria rejeitado um novo recurso referente a Pablo Marçal. A medida teria mantido o político em condição de inelegibilidade.",
+        "Segundo as publicações que veiculam o caso, o indeferimento do recurso teria ocorrido por unanimidade. Os textos informam que a restrição duraria oito anos, estendendo-se até 2032."
+      ],
+      "id": "circ:tre-sp-teria-rejeitado-recurso-e-mantido-pablo-marcal-inelegivel",
+      "editoria": "brasil",
+      "uf": null,
+      "titulo": "TRE-SP teria rejeitado recurso e mantido Pablo Marçal inelegível",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-06T12:34:57.949Z",
+      "hora": "08h34"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "Três veículos de imprensa veicularam alertas sobre a chegada de um ciclone-bomba.",
+        "As matérias citam previsão de rajadas de vento de até 100 km/h.",
+        "As publicações mencionam a criação de gabinete especial no Estado de São Paulo."
+      ],
+      "falta": [
+        "Manifestação oficial dos órgãos públicos de meteorologia confirmando a formação do fenômeno.",
+        "Confirmação oficial do Governo do Estado de São Paulo sobre a criação do gabinete.",
+        "Detalhamento dos municípios e horários exatos previstos para as rajadas de vento."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "GZH",
+          "titulo": "Ciclone-bomba: meteorologista alerta para temporais e ventos de até 100 km/h no RS",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQeEh2aGNsb3BzeldiZnNDTUlzOVpNMmlON054Y2RxMDlJUjVuZWRjRGpYSmJFY2JERmJ2MUhHMlFnRHVTQUlZd185Q1AxYWZhREZ4U2dJcGNTRWQ5dHd3Z005U0x4elJCUjM1ZkZ1cWJCU3lWMTNWcl9mR0VhLWkxbzhQX2ZLcV90RHU1LTI2SWdMQ3lfbndQekdXck9rLUdhQkJ3WjJjYl9jQTBRVG1RNVM2ei1SNnMzU3FGbGpaNTVFeHo4V0g2RzF4RElNaHJBaGs5T2Fvc0RmdEFPRlRIaWVENUk?oc=5"
         },
         {
           "veiculo": "BBC Brasil",
-          "titulo": "A dois meses da eleição, Brasil enfrenta crises diplomáticas inéditas com EUA e Argentina",
-          "link": "https://www.bbc.com/portuguese/articles/cy8e4764z98o?at_medium=RSS&amp;at_campaign=rss"
+          "titulo": "Ciclone-bomba deve atingir o Sul e provocar ventos de até 100 km/h nesta quinta-feira; entenda o fenômeno",
+          "link": "https://www.bbc.com/portuguese/articles/cz648vl379do?at_medium=RSS&amp;at_campaign=rss"
         },
         {
-          "veiculo": "Folha",
-          "titulo": "Mais de 200 anos de regras diplomáticas foram deixadas de lado, diz diplomata sobre crise Brasil-EUA",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/mais-de-200-anos-de-regras-diplomaticas-foram-deixadas-de-lado-diz-diplomata-sobre-crise-brasil-eua.shtml"
+          "veiculo": "Poder360",
+          "titulo": "SP monta gabinete especial após alerta de ventos de até 100 km/h",
+          "link": "https://www.poder360.com.br/poder-brasil/sp-monta-gabinete-especial-apos-alerta-de-ventos-de-ate-100-km-h/"
         }
       ],
-      "link": "/materia/nc-brasil-estaria-enfrentando-crises-diplomaticas-com-eua-e-argentina.html",
+      "link": "/materia/nc-ciclone-bomba-poderia-provocar-ventos-de-100-km-h-e-mobilizar-sp-e-o-s.html",
       "corpo": [
-        "O Brasil estaria enfrentando uma dupla crise diplomática sem perspectiva de término, envolvendo os Estados Unidos e a Argentina. O cenário estaria se desenrolando no período de dois meses antes do pleito eleitoral.",
-        "As publicações apontam que os episódios teriam caráter inédito para a diplomacia nacional. Um diplomata teria afirmado que mais de 200 anos de regras diplomáticas teriam sido ignorados na relação com o governo norte-americano.",
-        "A situação relatada indicaria um impasse prolongado nas instâncias de política externa do país. As alegações divulgadas mantêm-se restritas às análises e relatos veiculados pela imprensa."
+        "Um ciclone-bomba estaria previsto para atingir a Região Sul do país e provocar ventos de até 100 km/h. O fenômeno teria motivado alertas meteorológicos sobre a ocorrência de temporais nas áreas afetadas.",
+        "As publicações apontam que o evento meteorológico poderia ocorrer nesta quinta-feira, atingindo o Rio Grande do Sul e a Região Sul. Além disso, a estrutura de governo de São Paulo teria montado um gabinete especial devido ao alerta de ventos intensos.",
+        "As notícias veiculadas divergem sobre a abrangência do fenômeno, citando isoladamente o Rio Grande do Sul, a Região Sul de forma ampla e o Estado de São Paulo. A confirmação dos fatos ainda dependeria do envio de notas técnicas por órgãos de meteorologia e governos estaduais."
       ],
-      "id": "circ:brasil-estaria-enfrentando-crises-diplomaticas-com-eua-e-argentina",
+      "id": "circ:ciclone-bomba-poderia-provocar-ventos-de-100-km-h-e-mobilizar-sp-e-o-s",
       "editoria": "brasil",
       "uf": null,
-      "titulo": "Brasil estaria enfrentando crises diplomáticas com EUA e Argentina",
+      "titulo": "Ciclone-bomba poderia provocar ventos de 100 km/h e mobilizar SP e o Sul",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:43:31.027Z",
-      "hora": "19h43"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que três veículos de imprensa publicaram informações sobre a sanção da lei.",
-        "Que os textos abordam regras do frete e veto a anistia de caminhoneiros.",
-        "Que as notícias citam o presidente da República como autor da medida."
-      ],
-      "falta": [
-        "Confirmação oficial do ato no Diário Oficial da União.",
-        "O número final da nova lei sancionada e a data de publicação.",
-        "Posicionamento oficial da Presidência da República sobre os termos do veto."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Congresso em Foco",
-          "titulo": "Lula sanciona lei de conversão que torna permanente a MP do Frete",
-          "link": "https://www.congressoemfoco.com.br/noticia/121049/lula-sanciona-lei-de-conversao-que-torna-permanente-a-mp-do-frete"
-        },
-        {
-          "veiculo": "g1 Política",
-          "titulo": "Tabela do frete: Lula sanciona novas regras e define obrigatoriedade de preço mínimo, mas não fixa valores",
-          "link": "https://g1.globo.com/politica/noticia/2026/08/05/tabela-do-frete-lula-sanciona-novas-regras-e-define-obrigatoriedade-de-preco-minimo-mas-nao-fixa-valores.ghtml"
-        },
-        {
-          "veiculo": "Folha",
-          "titulo": "Lula sanciona piso do frete e veta anistia a caminhoneiros que bloquearam estradas em 2022",
-          "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/08/lula-sanciona-piso-do-frete-e-veta-anistia-a-caminhoneiros-que-bloquearam-estradas-em-2022.shtml"
-        }
-      ],
-      "link": "/materia/nc-presidente-teria-sancionado-lei-do-frete-e-vetado-anistia-a-caminhonei.html",
-      "corpo": [
-        "O presidente da República teria sancionado a lei de conversão decorrente da medida provisória do frete. A decisão tornaria permanente a legislação do setor e estabeleceria a obrigatoriedade de um preço mínimo.",
-        "As publicações informam que o texto não teria fixado os valores exatos para as tarifas. Além disso, a sanção estaria acompanhada do veto à anistia para caminhoneiros que bloquearam estradas em 2022.",
-        "As matérias abordariam o piso do frete e as novas regras para a categoria. As informações veiculadas não apresentariam divergências diretas, variando apenas nos pontos destacados por cada publicação."
-      ],
-      "id": "circ:presidente-teria-sancionado-lei-do-frete-e-vetado-anistia-a-caminhonei",
-      "editoria": "brasil",
-      "uf": null,
-      "titulo": "Presidente teria sancionado lei do frete e vetado anistia a caminhoneiros",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-05T23:44:25.087Z",
-      "hora": "19h44"
+      "iso": "2026-08-06T12:35:20.644Z",
+      "hora": "08h35"
     }
   ],
   "pautas": [
     {
-      "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
-      "veiculo": "GZH",
-      "quentura": 8,
+      "titulo": "Veja quem são os candidatos a governador de Santa Catarina em 2026",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 5,
       "tambemEm": [
-        "BBC Brasil",
-        "Poder360",
+        "g1 Política",
         "JOTA"
-      ]
-    },
-    {
-      "titulo": "Vice de Flávio Bolsonaro é investigado por estupro de vulnerável no STF",
-      "veiculo": "CartaCapital",
-      "quentura": 7,
-      "tambemEm": [
-        "BBC Brasil",
-        "JOTA",
-        "GZH"
       ]
     },
     {
       "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro nas eleições 2026",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 5,
       "tambemEm": [
-        "JOTA",
-        "CartaCapital",
-        "GZH"
+        "Exame",
+        "g1 Política",
+        "CartaCapital"
       ]
     },
     {
-      "titulo": "Acusação de estupro, 'arma contra Lulinha' e Arthur Lira mais perto do Senado: os impactos de Alfredo Gaspar como vice de Flávio Bolsonaro",
-      "veiculo": "BBC Brasil",
-      "editoria": "brasil",
-      "quentura": 6,
-      "tambemEm": [
-        "JOTA",
-        "CartaCapital",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Quem é Alfredo Gaspar, anunciado como vice de Flávio Bolsonaro",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 6,
+      "titulo": "O que a escolha do vice diz sobre a estratégia de Flávio Bolsonaro",
+      "veiculo": "GZH",
+      "quentura": 5,
       "tambemEm": [
         "BBC Brasil",
-        "CartaCapital",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Quem é Alfredo Gaspar, escolhido para vice na chapa de Flávio Bolsonaro",
-      "veiculo": "Correio Braziliense",
-      "quentura": 6,
-      "tambemEm": [
-        "BBC Brasil",
-        "JOTA",
+        "Exame",
         "CartaCapital"
       ]
     },
     {
       "titulo": "Chapa pura: Alfredo Gaspar é confirmado como vice de Flávio Bolsonaro",
       "veiculo": "Correio Braziliense",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
         "BBC Brasil",
-        "JOTA",
+        "Exame",
         "CartaCapital"
       ]
     },
     {
-      "titulo": "Copel tem lucro líquido de R$ 645 milhões no 2º trimestre, alta de 42,6%",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
+      "titulo": "Vice de Flávio Bolsonaro é alvo de pedido de investigação por suspeita de estupro de vulnerável",
+      "veiculo": "CartaCapital",
       "quentura": 4,
-      "tambemEm": [
-        "InfoMoney",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Smart Fit (SMFT3) tem alta de 8% no lucro recorrente do 2º tri, para R$ 204 milhões",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 4,
-      "tambemEm": [
-        "Exame",
-        "CNN Brasil",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Uber tem lucro de US$ 2,39 bilhões no 2º trimestre, alta de 77%",
-      "veiculo": "Valor Econômico",
-      "quentura": 4,
-      "tambemEm": [
-        "Exame",
-        "CNN Brasil",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Progressistas lança Lucas Ribeiro como candidato ao governo da Paraíba",
-      "veiculo": "g1",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Copom reduz Selic para 14%, mas alerta para alta de preços",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Economia",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Vivara (VIVA3) tem lucro líquido de R$ 156,7 mi no 2T, alta de 0,9% na base anual",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "CNN Brasil",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Brasil enfrenta dupla crise diplomática sem horizonte de fim",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 2,
       "tambemEm": [
         "BBC Brasil",
-        "Folha"
+        "GZH",
+        "Correio Braziliense"
       ]
     },
     {
-      "titulo": "Lula sanciona lei de conversão que torna permanente a MP do Frete",
-      "veiculo": "Congresso em Foco",
+      "titulo": "Isolamento faz Flávio Bolsonaro trocar sinalização a mulheres por segurança pública com vice",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "BBC Brasil",
+        "GZH",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Saiba qual é o tamanho do eleitorado dos 26 Estados e de Brasília",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Política",
+        "g1 Economia",
+        "Estadão"
+      ]
+    },
+    {
+      "titulo": "Acusação de estupro, 'arma contra Lulinha' e Arthur Lira mais perto do Senado: os impactos de Alfredo Gaspar como vice de Flávio Bolsonaro",
+      "veiculo": "BBC Brasil",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "CartaCapital",
+        "GZH",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Em meio à tensão com EUA, Lula diz a aliados que pode falar com Donald Trump; data ainda não está definida",
+      "veiculo": "g1",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
@@ -2019,31 +2022,92 @@
       ]
     },
     {
-      "titulo": "O que disseram as pesquisas sobre a disputa presidencial em julho",
-      "veiculo": "CartaCapital",
-      "quentura": 2,
-      "tambemEm": [
-        "Poder360",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Bradesco lucra R$ 7,1 bilhões no 2º trimestre, alta de 16,2% em um ano",
-      "veiculo": "Exame",
+      "titulo": "Em meio à tensão com EUA, Lula diz a aliados que pode falar com Donald Trump; data ainda não está definida",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "InfoMoney",
+        "g1",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Comitê dos estados estima futuro imposto sobre o consumo brasileiro de 28% em 2033; taxa supera a dos países da OCDE",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Economia",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Comitê dos estados estima futuro imposto sobre o consumo brasileiro de 28% em 2033; taxa supera a dos países da OCDE",
+      "veiculo": "g1 Economia",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Veja quem são os candidatos a governador no Espírito Santo em 2026",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Veja quem são os candidatos a senador no Amazonas em 2026",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Veja quem são os candidatos a vice-governador no Amazonas em 2026",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Veja quem são os candidatos a governador no Amazonas em 2026",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "TRE-SP rejeita novo recurso e mantém Pablo Marçal inelegível por oito anos",
+      "veiculo": "Valor Econômico",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
+        "CartaCapital"
+      ]
+    },
+    {
+      "titulo": "Por unanimidade, TRE-SP mantém Pablo Marçal inelegível até 2032",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "CartaCapital",
         "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Riachuelo tem lucro recorde de R$ 168 mi no 2º tri, apesar de vendas menores",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "InfoMoney"
       ]
     }
   ]
