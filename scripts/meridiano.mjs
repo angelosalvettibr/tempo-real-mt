@@ -432,7 +432,7 @@ if (listaLivre.length) {
     }
   }
 }
-await gravarDescobertas(descobertas);
+await gravarDescobertas(descobertas, GERAL ? (GERAL.chave || 'br') : UF);
 
 if (!GERAL) {
 console.log('\n  2b. ASSESSORIAS PUBLICAS — release oficial, tres caminhos');

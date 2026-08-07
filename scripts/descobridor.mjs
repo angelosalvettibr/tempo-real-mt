@@ -26,9 +26,19 @@
 // seguinte ir direto ao endereco certo. Redescobrir a cada rodada custaria
 // tempo que o job nao tem.
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 
-const ARQUIVO = 'dados/descobertas.json';
+/* UM ARQUIVO POR EDIÇÃO, NÃO UM SÓ
+   As cinco edicoes rodam como jobs PARALELOS. Todas escreviam o mesmo
+   dados/descobertas.json e colidiam no commit — o arquivo simplesmente nunca
+   chegava ao repositorio, e o descobridor redescobria tudo a cada rodada,
+   jogando fora o trabalho.
+
+   Os edicao-*.json sobrevivem porque cada um tem nome proprio. Aqui vale o
+   mesmo: cada job dono do seu arquivo, e na leitura juntamos todos — assim
+   cada edicao aproveita o que as outras descobriram.                       */
+const PASTA = 'dados';
+const arquivoDe = ed => `${PASTA}/descobertas-${String(ed || 'geral').toLowerCase()}.json`;
 
 /* --------------------------------------------------------- CAMINHOS ----- */
 // Ordem importa: os primeiros sao os mais comuns e mais baratos de testar.
@@ -184,15 +194,34 @@ export async function descobrir(base){
 // Redescobrir a cada rodada custaria tempo que o job nao tem. O que foi
 // achado fica guardado; o que falhou tambem, para nao insistir todo dia.
 
+/** Le o que TODAS as edicoes ja descobriram. */
 export async function lerDescobertas(){
-  try { return JSON.parse(await readFile(ARQUIVO, 'utf8')); }
-  catch { return {}; }
+  const junto = {};
+  try {
+    const arqs = (await readdir(PASTA)).filter(f => /^descobertas-.*\.json$/.test(f));
+    for (const a of arqs) {
+      try {
+        const m = JSON.parse(await readFile(`${PASTA}/${a}`, 'utf8'));
+        for (const [k, v] of Object.entries(m)) {
+          // Entre duas descobertas da mesma fonte, fica a mais recente — e
+          // uma que ACHOU sempre vale mais que uma que falhou.
+          const atual = junto[k];
+          if (!atual) { junto[k] = v; continue; }
+          if (v.url && !atual.url) { junto[k] = v; continue; }
+          if (Boolean(v.url) === Boolean(atual.url) &&
+              Date.parse(v.quando || 0) > Date.parse(atual.quando || 0)) junto[k] = v;
+        }
+      } catch {}
+    }
+  } catch {}
+  return junto;
 }
 
-export async function gravarDescobertas(mapa){
+/** Grava so o que ESTA edicao descobriu, no arquivo dela. */
+export async function gravarDescobertas(mapa, edicao){
   try {
-    await mkdir('dados', { recursive: true });
-    await writeFile(ARQUIVO, JSON.stringify(mapa, null, 2), 'utf8');
+    await mkdir(PASTA, { recursive: true });
+    await writeFile(arquivoDe(edicao), JSON.stringify(mapa, null, 1), 'utf8');
   } catch {}
 }
 
