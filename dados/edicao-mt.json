@@ -1,27 +1,36 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-08-07T14:08:27.599Z",
-  "modelo": "gemini-flash-lite-latest",
+  "gerado": "2026-08-07T16:49:42.894Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 193,
-    "fonteLivre": 32,
-    "confirmadas": 15,
-    "publicadas": 19,
+    "pauta": 199,
+    "fonteLivre": 38,
+    "confirmadas": 16,
+    "publicadas": 18,
     "resgatadas": 0,
-    "semFonte": 154
+    "semFonte": 146
   },
   "fontes": {
-    "checadas": 51,
+    "checadas": 55,
     "responderam": 23,
     "entregando": 21,
-    "itens": 225,
+    "itens": 237,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "cuiaba",
         "nome": "Prefeitura de Cuiabá",
         "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tre-mt",
+        "nome": "TRE-MT",
+        "itens": 13,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -73,15 +82,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-sinop",
-        "nome": "Sinop",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-mt-varzeagran",
         "nome": "Várzea Grande",
         "itens": 12,
@@ -91,8 +91,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-cap",
-        "nome": "Cuiabá",
+        "id": "gn-mt-rondonopol",
+        "nome": "Rondonópolis",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-sinop",
+        "nome": "Sinop",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -101,6 +110,15 @@
       {
         "tipo": "pauta",
         "id": "gn-mt-cuiaba",
+        "nome": "Cuiabá",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-cap",
         "nome": "Cuiabá",
         "itens": 12,
         "ok": true,
@@ -126,37 +144,37 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-mt-rondonopol",
-        "nome": "Rondonópolis",
+        "tipo": "resgate",
+        "id": "muvuca",
+        "nome": "Muvuca Popular",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "olivre",
+        "nome": "O Livre",
         "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "muvuca",
-        "nome": "Muvuca Popular",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "issoenoticia",
         "nome": "Isso É Notícia",
-        "itens": 10,
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "sonoticias",
+        "nome": "Só Notícias",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -166,24 +184,6 @@
         "id": "primeirapagina",
         "nome": "Primeira Página",
         "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "sonoticias",
-        "nome": "Só Notícias",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "tre-mt",
-        "nome": "TRE-MT",
-        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -205,6 +205,42 @@
         "ok": true,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "muvuca",
+        "nome": "Muvuca Popular",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "issoenoticia",
+        "nome": "Isso É Notícia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 415"
+      },
+      {
+        "tipo": "pauta",
+        "id": "olivre",
+        "nome": "O Livre",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "pauta",
+        "id": "sonoticias",
+        "nome": "Só Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -424,15 +460,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sorriso",
-        "nome": "Prefeitura de Sorriso",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "rondonopolis",
         "nome": "Prefeitura de Rondonópolis",
         "itens": 0,
@@ -442,8 +469,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-vg",
-        "nome": "Câmara de Várzea Grande",
+        "id": "sorriso",
+        "nome": "Prefeitura de Sorriso",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -453,6 +480,15 @@
         "tipo": "assessoria",
         "id": "camara-cba",
         "nome": "Câmara de Cuiabá",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-vg",
+        "nome": "Câmara de Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -497,200 +533,101 @@
       "foto": null,
       "fotoAlt": null,
       "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:vice-presidencia-e-corregedoria-do-tre-mt-fiscaliza-servicos-eleitorai",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Vice-Presidência e Corregedoria do TRE-MT fiscaliza serviços eleitorais no estado",
+      "resumo": "A unidade expede orientações sobre procedimentos para as Zonas Eleitorais e tem titular eleito entre os membros do Tribunal.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [
+        "g1 MT"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral responsável pela fiscalização da regularidade dos serviços eleitorais no Estado de Mato Grosso. O setor também emite orientações sobre procedimentos e rotinas a serem observadas pelas Zonas Eleitorais.",
+        "A titularidade do órgão é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral. O ocupante do cargo é eleito entre os membros do próprio Tribunal.",
+        "A estrutura reúne sistemas como o Processo Judicial Eletrônico da Corregedoria - PjeCor, o Sistema de Informações de Óbitos e Direitos Políticos - Infodip e o Sistema de Informações Eleitorais - SIEL.",
+        "O acervo de informações da unidade abrange o regulamento interno da Corregedoria Regional Eleitoral de Mato Grosso, o Protocolo para Julgamento com Perspectiva Racial e o 53° Encontro do Colégio de Corregedoras e Corregedores Eleitorais do Brasil."
+      ],
+      "link": "/materia/vice-presidencia-e-corregedoria-do-tre-mt-fiscaliza-servicos-eleitorai.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
       "id": "ilm:primeira-edicao-do-mato-grosso-agrofestival-comeca-nesta-sexta-feira-e",
       "chapeu": "Nosso texto",
       "editoria": "regional",
       "titulo": "Primeira edição do Mato Grosso AgroFestival começa nesta sexta-feira em Cuiabá",
-      "resumo": "O evento segue até domingo no Parque Novo Mato Grosso com rodeios, shows nacionais e atrações culturais organizadas pela Prefeitura de Cuiabá.",
+      "resumo": "Evento segue até domingo no Parque Novo Mato Grosso com rodeios, manifestações culturais e shows de duplas como Cezar & Paulinho e Di Paullo & Paulino.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
       "origemLink": "https://www.cuiaba.mt.gov.br/noticias/mato-grosso-agrofestival-tem-inicio-nesta-sexta-feira-e-reune-shows-nacionais-rodeio-e-cultura",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "Estadão MT",
         "O Documento",
-        "Muvuca Popular",
-        "Só Notícias"
-      ],
-      "quentura": 11,
-      "uf": "mt",
-      "corpo": [
-        "A primeira edição do Mato Grosso AgroFestival tem início nesta sexta-feira (7) e segue até domingo (9) no Parque Novo Mato Grosso, em Cuiabá. Promovido pela Prefeitura de Cuiabá, por meio da Secretaria Municipal de Cultura, o evento reúne atrações sertanejas, rodeio, gastronomia regional e apresentações culturais.",
-        "A programação de sexta-feira começa com a abertura dos portões às 18h30. Às 19h ocorre o Rodeio Cutiano e a apresentação de Siriri, seguidos às 20h30 pela abertura da etapa internacional da Professional Bull Riders (PBR), transmitida pelo BandSports. Shows das duplas Cezar & Paulinho, às 23h, e João Bosco & Vinícius, à 1h, encerram a noite. No sábado (8), haverá novas disputas de rodeio e PBR, com shows de George Henrique & Rodrigo, às 23h, e Yuri & Gustavo.",
-        "No domingo (9), a programação inclui a Procissão dos Caminhoneiros, a Cavalgada do AgroFestival, bênção e missa campal em homenagem a São Cristóvão. Após o almoço com costelão ao meio-dia, ocorrem apresentações de Holy Praise, Violada Cuiabana, Power Rock Trio, Sara & Lívia, Rafa Garcia, Trio Maravilha e Bison & Comassetto. À noite acontecem a final do Rodeio Cutiano, apresentação de Cururu, a decisão da PBR e o show de Di Paullo & Paulino, às 22h30.",
-        "O festival conta com praça de alimentação e espaços de networking. A realização ocorre em parceria com o Governo de Mato Grosso, por meio da Secretaria de Estado de Cultura, Esporte e Lazer (Secel), o Instituto Cordemato e o Ministério do Esporte, com recursos de emendas parlamentares."
-      ],
-      "link": "/materia/primeira-edicao-do-mato-grosso-agrofestival-comeca-nesta-sexta-feira-e.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/reuniao-com-emissoras-alinha-procedimentos-do-horario-eleitoral-gratuito-3/@@images/image-0-e5c9ce372195cded9de9f0649c2993fa.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:tre-mt-realiza-reuniao-com-emissoras-sobre-regras-do-horario-eleitoral",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "TRE-MT realiza reunião com emissoras sobre regras do Horário Eleitoral Gratuito",
-      "resumo": "Encontro virtual apresentou o Sistema HEG-Mídias, que vai calcular e distribuir automaticamente o tempo das cotas de propaganda para as Eleições 2026.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/reuniao-com-emissoras-alinha-procedimentos-do-horario-eleitoral-gratuito",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [
-        "O Livre"
-      ],
-      "quentura": 1,
-      "uf": null,
-      "corpo": [
-        "Representantes de emissoras de rádio e televisão de Mato Grosso participaram, na terça-feira (04.08), de uma reunião preparatória promovida pelo Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) via Zoom. O encontro tratou de regras gerais, prazos, especificidades técnicas e procedimentos para a veiculação do Horário Eleitoral Gratuito nas Eleições 2026.",
-        "A Rádio Vila Real, do grupo Gazeta, e a TV Centro América, do grupo Globo, foram apresentadas como as geradoras do sinal em rede. A exibição da propaganda é obrigatória para emissoras de rádio, incluindo comunitárias, TVs que operam em VHF e UHF e canais por assinatura mantidos por órgãos legislativos, com base na Lei nº 9.504/1997 e na Resolução TSE nº 23.610/2019.",
-        "O tribunal detalhou as atualizações do Sistema HEG-Mídias, ferramenta que permite aos veículos disponibilizarem suas especificações técnicas e canais de atendimento diretamente na página oficial do Horário Eleitoral Gratuito. O procedimento dispensa a necessidade de credenciamento individual perante cada partido, coligação ou federação.",
-        "O sistema também inclui um módulo que realiza automaticamente a distribuição do tempo de propaganda referente às cotas destinadas a candidaturas de mulheres, pessoas negras e pessoas indígenas. O cálculo é feito com a consolidação dos dados de registros de candidatura, do tempo das agremiações por cargo e dos arquivos e cronogramas fornecidos por partidos e federações."
-      ],
-      "link": "/materia/tre-mt-realiza-reuniao-com-emissoras-sobre-regras-do-horario-eleitoral.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:atribuicoes-da-vice-presidencia-e-corregedoria-do-tre-mt",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Atribuições da Vice-Presidência e Corregedoria do TRE-MT",
-      "resumo": "Unidade fiscaliza serviços eleitorais e orienta Zonas Eleitorais em Mato Grosso.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/institucional/corregedoria-regional-eleitoral/vice-presidencia-e-corregedorial-regional-eleitoral",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "A Vice-Presidência e Corregedoria Regional Eleitoral é a unidade do Tribunal Regional Eleitoral encarregada de fiscalizar a regularidade dos serviços eleitorais em todo o Estado de Mato Grosso.",
-        "Entre suas atribuições também está a expedição de orientações sobre procedimentos e rotinas que devem ser observadas pelas Zonas Eleitorais do estado.",
-        "A titularidade da função é exercida pelo Vice-Presidente e Corregedor Regional Eleitoral, que é eleito entre os membros do Tribunal."
-      ],
-      "link": "/materia/atribuicoes-da-vice-presidencia-e-corregedoria-do-tre-mt.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-leva-vacinacao-contra-a-influenza-ao-mato-grosso-",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá leva vacinação contra a Influenza ao Mato Grosso AgroFestival",
-      "resumo": "Ação ocorre de 7 a 9 de agosto no Parque Novo Mato Grosso e integra estratégia para ampliar a baixa cobertura vacinal na capital.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-leva-vacinacao-ao-mato-grosso-agrofestival-e-reforca-protecao-contra-influenza",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "Estadão MT",
-        "O Livre",
-        "O Documento",
-        "Muvuca Popular"
+        "Prefeitura de Cuiabá",
+        "estadomaior.com.br",
+        "LOCAL MT"
       ],
       "quentura": 10,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá realiza uma ação especial de vacinação entre os dias 7 e 9 de agosto na primeira edição do Mato Grosso AgroFestival, no Parque Novo Mato Grosso. A iniciativa da Secretaria Municipal de Saúde (SMS) ocorre na sexta, no sábado e no domingo, com equipes da Secretaria Adjunta de Atenção Primária no estande da prefeitura.",
-        "O atendimento nos três dias de evento oferece doses contra diversas doenças, com foco na imunização contra a Influenza, que registra baixa cobertura entre os públicos prioritários. Os moradores podem atualizar a caderneta com vacinas como tríplice viral, hepatite B, Covid-19 para pessoas acima de 12 anos e HPV, mediante apresentação de documento oficial com foto ou cartão do SUS.",
-        "A meta estabelecida pelo Ministério da Saúde é de 90% para cada grupo prioritário, mas dados de 5 de agosto de 2026 apontam índices abaixo do recomendado. Entre crianças de 6 meses a menores de 6 anos a cobertura é de 37,72%, entre idosos de 60 anos ou mais chega a 40,13% e entre gestantes atinge 61%.",
-        "De acordo com o Boletim Epidemiológico de Vigilância dos Vírus Respiratórios de Cuiabá, de janeiro a julho de 2026 foram registrados 2.348 casos de Influenza A e B na população alvo, incluindo 957 ocorrências em crianças de 0 a 6 anos e 172 em idosos. No mesmo período, a doença causou 14 mortes no município."
+        "A primeira edição do Mato Grosso AgroFestival começa nesta sexta-feira (7) e segue até domingo (9) no Parque Novo Mato Grosso, em Cuiabá. Promovido pela Prefeitura de Cuiabá, por meio da Secretaria Municipal de Cultura, o evento reúne música sertaneja, rodeio, atrações culturais e gastronomia regional.",
+        "A abertura dos portões na sexta-feira ocorre às 18h30, com o Rodeio Cutiano às 19h, apresentação de Siriri e abertura da etapa internacional da Professional Bull Riders (PBR) às 20h30. A noite conta com shows de Cezar & Paulinho às 23h e João Bosco & Vinícius à 1h. No sábado (8), a programação traz disputas de rodeio e shows de George Henrique & Rodrigo às 23h e de Yuri & Gustavo.",
+        "No domingo (9), a programação inicia com a Procissão dos Caminhoneiros, Cavalgada, bênção dos veículos e missa campal a São Cristóvão, além de almoço com costelão ao meio-dia. Durante a tarde e a noite, haverá apresentações de Holy Praise, Violada Cuiabana, Power Rock Trio, Sara & Lívia, Rafa Garcia, Trio Maravilha e Bison & Comassetto, além da final do Rodeio Cutiano, apresentação de Cururu, decisão da PBR e show de Di Paullo & Paulino às 22h30.",
+        "O festival é realizado em parceria com o Governo de Mato Grosso, por meio da Secretaria de Estado de Cultura, Esporte e Lazer (Secel), Instituto Cordemato e Ministério do Esporte, com recursos de emendas parlamentares. A estrutura conta com praça de alimentação, espaços de networking e atrações para toda a família."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-leva-vacinacao-contra-a-influenza-ao-mato-grosso-.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
+      "link": "/materia/primeira-edicao-do-mato-grosso-agrofestival-comeca-nesta-sexta-feira-e.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-oficializa-edson-brasil-na-secretaria-de-obras",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá oficializa Edson Brasil na Secretaria de Obras",
-      "resumo": "Reginaldo Alves Teixeira, que respondia interinamente pela pasta de Obras e pela Educação, foi efetivado na Educação de forma definitiva.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeitura-oficializa-engenheiro-edson-brasil-como-secretario-de-obras-de-cuiaba",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "CircuitoMT",
-        "LOCAL MT",
-        "pnbonline.com.br",
-        "FOLHAMAX"
-      ],
-      "quentura": 5,
-      "uf": "mt",
-      "corpo": [
-        "O prefeito de Cuiabá, Abilio Brunini, oficializou nesta quarta-feira (5) Edson Nivaldo Brasil de Oliveira como secretário municipal de Infraestrutura e Obras. Reginaldo Alves Teixeira, que respondia pela pasta e também interinamente pela Educação, foi efetivado como secretário municipal de Educação, Cultura, Esporte e Lazer de forma definitiva. O novo secretário de Obras já está atuando nesta quinta-feira (6).",
-        "Engenheiro civil formado pela Universidade Federal de Mato Grosso (UFMT) e em Direito pela Universidade de Cuiabá (UNIC), Edson Brasil possui mais de dez anos de experiência em gestão pública, projetos de infraestrutura e fiscalização de obras públicas. Ele atuou na Secretaria de Estado de Infraestrutura e Logística de Mato Grosso (Sinfra-MT) em funções de superintendência e coordenação técnica, e trabalhou na iniciativa privada em projetos de infraestrutura e construção de pontes, além de atuar na docência.",
-        "Sua formação inclui mestrado internacional em BIM Management para Infraestrutura e especializações em Engenharia Rodoviária, Engenharia e Segurança do Trabalho, Administração Pública e Gestão Governamental. Entre seus trabalhos estão a coordenação técnica da retomada das obras do BRT em Cuiabá, a gestão de obras remanescentes da Copa do Mundo, a condução de projetos de pavimentação e drenagem urbana, e a retomada do Hospital Universitário Júlio Müller e da Zona de Processamento de Exportação de Cáceres.",
-        "O prefeito Abilio Brunini afirmou que as nomeações fortalecem a gestão e asseguram a continuidade dos projetos estratégicos da Prefeitura. A nomeação de Edson Brasil busca manter o ritmo das obras estruturantes em andamento na capital, enquanto a efetivação de Reginaldo Teixeira consolida o trabalho na rede municipal de ensino."
-      ],
-      "link": "/materia/prefeitura-de-cuiaba-oficializa-edson-brasil-na-secretaria-de-obras.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": "O histórico registra caso parecido em 7 de agosto de 2026, quando Abilio Brunini oficializou Edson Brasil na Obras e efetivou Reginaldo Teixeira na Educação. O novo secretário de Obras já está atuando desde quinta-feira, 6 de fevereiro.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-cooperacao-entre-tre-mt-e-sesp-mt-visa-compartilhamento-de-dados-biometricos/@@images/image-0-52d52b8cfe68b2638df6ecaacbcf04b3.jpeg",
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-registro-de-candidaturas-eleicoes-2026/@@images/image-0-4c79d62155a7e7efc8271b6f5b09be01.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-mt-e-sesp-mt-discutem-acordo-para-compartilhar-dados-biometricos",
+      "id": "ilm:partidos-tem-ate-15-de-agosto-para-registrar-candidaturas-para-as-elei",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "TRE-MT e Sesp-MT discutem acordo para compartilhar dados biométricos",
-      "resumo": "A assinatura do Acordo de Cooperação entre os órgãos está prevista para a próxima semana, na sede da Sesp-MT.",
+      "titulo": "Partidos têm até 15 de agosto para registrar candidaturas para as Eleições 2026",
+      "resumo": "Até a manhã de sexta-feira (07.08), o TRE-MT recebeu 42 pedidos de registro e quatro Demonstrativos de Regularidade de Atos Partidários.",
       "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/cooperacao-entre-tre-mt-e-sesp-mt-visa-compartilhamento-de-dados-biometricos",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/partidos-tem-ate-15-08-para-registrar-candidaturas-as-eleicoes-2026",
       "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
+      "pautadoPor": [
+        "Primeira Hora"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso e a Secretaria de Estado de Segurança Pública discutiram a minuta de um Acordo de Cooperação em reunião realizada nesta quinta-feira. A proposta prevê o compartilhamento de informações cadastrais e biométricas, atendendo a uma demanda do Tribunal Superior Eleitoral e respeitando as normas da Lei Geral de Proteção de Dados.",
-        "Pelo texto discutido, os cadastros biométricos realizados pela Sesp-MT poderão compor a base de dados da Justiça Eleitoral para fortalecer o Banco de Dados da Identificação Civil Nacional. Em contrapartida, o TSE disponibilizará informações à Sesp-MT para atividades de segurança pública, com o TRE-MT atuando como intermediador e acompanhando tecnicamente a implementação.",
-        "A reunião contou com a presença da presidente do TRE-MT, desembargadora Serly Marcondes Alves, e da secretária de Estado de Segurança Pública, coronel PM Susane Tamanho, além de juízes, diretores e assessores dos dois órgãos. A assinatura do documento está agendada para ocorrer na próxima semana na sede da Sesp-MT."
+        "Os partidos políticos, federações e coligações têm até o dia 15 de agosto para solicitar o registro de candidaturas às Eleições Gerais de 2026 junto à Justiça Eleitoral. Em Mato Grosso, os pedidos encaminhados ao Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) são inseridos na plataforma DivulgaCandContas à medida que a documentação é protocolada.",
+        "Até a manhã de sexta-feira (07.08), o TRE-MT havia recebido 42 pedidos de registros de candidaturas e quatro Demonstrativos de Regularidade de Atos Partidários (DRAPs). Em 2022, última eleição geral realizada, foram 525 pedidos para os cargos de governador(a), vice-governador(a), senador(a), 1º e 2º suplentes, deputado(a) federal e deputado(a) estadual, além de 49 análises de DRAPs.",
+        "O secretário judiciário do TRE-MT, Carlos Luanga Ribeiro Lima, orientou os partidos a não deixarem o envio dos documentos para os últimos dias do prazo, possibilitando tempo hábil para sanar inconsistências. A presidente do TRE-MT, desembargadora Serly Marcondes Alves, declarou que o cumprimento das normas e prazos estabelecidos é indispensável para a regularidade do processo eleitoral.",
+        "Os procedimentos para os registros são regidos pela Resolução nº 23.754, de 02 de março de 2026, do Tribunal Superior Eleitoral (TSE). O pedido é realizado por meio do sistema CANDex, que opera em ambiente web com acesso por credenciais do Gov.br ou e-Título, exige o registro direto das atas de convenções e emite alertas sobre percentuais de gênero."
       ],
-      "link": "/materia/tre-mt-e-sesp-mt-discutem-acordo-para-compartilhar-dados-biometricos.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
+      "link": "/materia/partidos-tem-ate-15-de-agosto-para-registrar-candidaturas-para-as-elei.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
       "original": true,
-      "contexto": null,
+      "contexto": "Os partidos políticos, federações e coligações têm até o dia 15 de agosto para encaminhar os pedidos de registro de candidatura ao Tribunal Regional Eleitoral de Mato Grosso. Até a manhã de 7 de agosto, o TRE-MT recebeu 42 solicitações, enquanto na eleição geral de 2022 foram contabilizados 525 pedidos.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -700,11 +637,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:sema-mt-informa-indisponibilidade-tecnica-nos-sistemas-siga-sisflora-e",
+      "id": "ilm:sema-mt-registra-indisponibilidade-nos-sistemas-siga-sisflora-e-simcar",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Sema-MT informa indisponibilidade técnica nos sistemas SIGA, SISFLORA e SIMCAR",
-      "resumo": "A Superintendência de Tecnologia da Informação do órgão ambiental atua para solucionar a falha, mas ainda não há previsão de retorno dos serviços.",
+      "titulo": "Sema-MT registra indisponibilidade nos sistemas SIGA, SISFLORA e SIMCAR",
+      "resumo": "Problemas técnicos no SIGA deixaram os serviços fora do ar e a Superintendência de Tecnologia da Informação trabalha para solucionar a falha, ainda sem previsão de retorno.",
       "fonte": "Meridiano, com informações de Sema-MT",
       "origemLink": "https://www.sema.mt.gov.br/site/index.php/sema/últimos-avisos/7090-aviso-indisponibilidade-de-sistemas",
       "origemNome": "Sema-MT",
@@ -712,44 +649,13 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Secretaria de Estado de Meio Ambiente (Sema-MT) informou que o sistema SIGA está fora do ar devido à ocorrência de problemas técnicos. A falha impacta diretamente o funcionamento do SISFLORA e do SIMCAR.",
-        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No entanto, o órgão comunicou que ainda não há previsão para o retorno dos serviços.",
-        "A Sema-MT divulgará a normalização da situação assim que os sistemas voltarem a funcionar, utilizando seus canais oficiais para o aviso."
+        "A Secretaria de Estado de Meio Ambiente (Sema-MT) informou que o sistema SIGA está fora do ar devido a problemas técnicos. A indisponibilidade afeta diretamente o funcionamento dos sistemas SISFLORA e SIMCAR.",
+        "A Superintendência de Tecnologia da Informação do órgão ambiental está empenhada em solucionar o problema. No entanto, ainda não há previsão para o retorno dos serviços.",
+        "O órgão comunicou que a informação sobre o retorno à normalidade será divulgada em seus canais oficiais assim que a situação for reestabelecida."
       ],
-      "link": "/materia/sema-mt-informa-indisponibilidade-tecnica-nos-sistemas-siga-sisflora-e.html",
-      "iso": "2026-08-07T13:59:47.379Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-lanca-sistema-pardal-2026-para-recebimento-de-denuncias/@@images/image-0-db3b636adeea516ecbcaa219cb0ddd2c.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:tre-mt-lanca-sistema-pardal-2026-para-recebimento-de-denuncias",
-      "chapeu": "Nosso texto",
-      "editoria": "brasil",
-      "titulo": "TRE-MT lança sistema Pardal 2026 para recebimento de denúncias",
-      "resumo": "A nova versão da ferramenta traz inteligência artificial para categorizar denúncias e estará disponível a partir de 16 de agosto.",
-      "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/tre-mt-lanca-sistema-pardal-2026-para-recebimento-de-denuncias",
-      "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) realizará no próximo dia 13 de agosto, às 9h, uma entrevista coletiva à imprensa na Sala de Reuniões do Tribunal, em Cuiabá, para lançar o sistema Pardal 2026. O objetivo é apresentar as mudanças incorporadas à ferramenta para as Eleições Gerais deste ano.",
-        "A principal novidade da plataforma é a alteração do layout e a incorporação de uma aplicação de Inteligência Artificial (IA) destinada a categorizar as denúncias feitas pelos eleitores conforme a natureza de cada uma. A inovação auxiliará o trabalho de analistas da Justiça Eleitoral no encaminhamento das informações aos órgãos responsáveis.",
-        "O sistema estará disponível a partir de 16 de agosto, data de início da propaganda eleitoral. A ferramenta permitirá que os cidadãos encaminhem denúncias diretamente aos Tribunais Regionais Eleitorais, que respondem pelo exercício do poder de polícia sobre a propaganda eleitoral.",
-        "A entrevista coletiva ocorrerá na Sala de Reuniões do TRE-MT, situada na Av. Historiador Rubens de Mendonça, n° 4750, Centro Político e Administrativo, em Cuiabá-MT."
-      ],
-      "link": "/materia/tre-mt-lanca-sistema-pardal-2026-para-recebimento-de-denuncias.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
+      "link": "/materia/sema-mt-registra-indisponibilidade-nos-sistemas-siga-sisflora-e-simcar.html",
+      "iso": "2026-08-07T16:37:45.081Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -761,61 +667,30 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:justica-barra-bloqueio-de-r-15-milhoes-da-prefeitura-de-cuiaba",
+      "id": "ilm:horto-florestal-tote-garcia-recebe-r-32-5-mil-em-novos-equipamentos-em",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Justiça barra bloqueio de R$ 15 milhões da Prefeitura de Cuiabá",
-      "resumo": "Decisão judicial aponta necessidade de novas provas e determina que Ministério Público apresente plano emergencial para eventual uso da verba.",
+      "titulo": "Horto Florestal Tote Garcia recebe R$ 32,5 mil em novos equipamentos em Cuiabá",
+      "resumo": "A aquisição foi viabilizada pelo Juizado Volante Ambiental e pelo Ministério Público para reforçar a produção de mudas e a arborização urbana na capital.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/justica-reconhece-avancos-da-prefeitura-e-mantem-contas-sem-bloqueio-de-r-15-milhoes",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/horto-florestal-recebe-novos-equipamentos-para-fortalecer-acoes-de-arborizacao-em-cuiaba",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Documento",
-        "Primeira Página",
-        "Isso É Notícia"
+        "Prefeitura de Cuiabá",
+        "Muvuca Popular",
+        "Só Notícias"
       ],
       "quentura": 4,
       "uf": "mt",
       "corpo": [
-        "A atuação da Procuradoria Geral do Município evitou o bloqueio de R$ 15 milhões das contas da Prefeitura de Cuiabá. A decisão foi proferida na terça-feira (4) pelo juiz Emerson Luis Pereira Cajango, da Vara Especializada do Meio Ambiente de Cuiabá.",
-        "O magistrado reconheceu que o Município apresentou elementos sobre os esforços na política de bem-estar animal. A decisão considerou uma vistoria realizada pelo Juizado Especial Volante Ambiental em abril deste ano, que registrou condições adequadas na unidade municipal.",
-        "O Ministério Público havia reiterado o pedido de bloqueio sob alegação de descumprimento de Termo de Ajustamento de Conduta. O juiz entendeu que há controvérsias e que faltam elementos técnicos suficientes para a indisponibilidade dos recursos neste momento.",
-        "O magistrado determinou que a Delegacia Especializada do Meio Ambiente e a Perícia Oficial e Identificação Técnica enviem documentos de diligências de julho em até dez dias. O Ministério Público terá 15 dias para apresentar um plano emergencial detalhando a aplicação do valor, caso o bloqueio seja autorizado futuramente."
+        "O Horto Florestal Tote Garcia, em Cuiabá, recebeu nesta quinta-feira (6) um novo conjunto de equipamentos para as atividades de produção de mudas, manutenção da área e apoio às ações de arborização urbana.",
+        "A aquisição teve investimento de R$ 32,5 mil, viabilizado por projeto aprovado pelo Juizado Volante Ambiental (Juvam), em parceria com o Ministério Público. O lote conta com seis roçadeiras multifuncionais, quatro perfuradores de solo, duas motosserras e quatro sopradores, além de correntes, sabres, brocas, lâminas e ferramentas manuais.",
+        "Os perfuradores de solo serão empregados no preparo de covas para o plantio de árvores em vias e espaços públicos. Já as roçadeiras, motosserras e sopradores integrarão os serviços diários de limpeza, conservação e manejo da vegetação executados pela equipe do local.",
+        "O diretor de Planejamento Ambiental da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, Fábio Moura, afirmou que os materiais serão utilizados desde a produção de mudas até os serviços de arborização. Com os novos itens, a unidade amplia sua capacidade operacional."
       ],
-      "link": "/materia/justica-barra-bloqueio-de-r-15-milhoes-da-prefeitura-de-cuiaba.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/775394?width=502px&amp;quality=80",
-      "fotoAlt": null,
-      "fotoLarg": 600,
-      "municipio": "primavera",
-      "municipioNome": "Primavera do Leste",
-      "id": "ilm:almt-publica-decretos-que-convocam-plebiscitos-sobre-limites-territori",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "ALMT publica decretos que convocam plebiscitos sobre limites territoriais",
-      "resumo": "Os decretos propõem consultas populares para decidir o desmembramento e incorporação de áreas entre municípios de Mato Grosso.",
-      "fonte": "Meridiano, com informações de Assembleia de MT",
-      "origemLink": "https://www.al.mt.gov.br/midia/texto/decretos-convocam-plebiscitos-para-desmembramento-de-nova-poxoreu-e-ilhas-de-ocupacao/visualizar",
-      "origemNome": "Assembleia de MT",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": "mt",
-      "corpo": [
-        "A Assembleia Legislativa de Mato Grosso publicou no Diário Oficial Eletrônico convocações para plebiscitos envolvendo as populações de Primavera do Leste, Poxoréu, Cotriguaçu e Colniza. Os decretos legislativos partiram da Comissão de Revisão Territorial dos Municípios e das Cidades e foram aprovados em sessão plenária após reuniões técnicas sobre o Estudo de Viabilidade Municipal.",
-        "O Decreto Legislativo nº 82 convoca consulta para Primavera do Leste e Poxoréu sobre o desmembramento do distrito de Nova Poxoréu e sua incorporação a Primavera do Leste. O distrito tem cerca de 20 mil habitantes e fica a pouco mais de 5 km de Primavera do Leste e cerca de 50 km da sede de Poxoréu.",
-        "O Decreto Legislativo nº 83 convoca plebiscito para Cotriguaçu e Colniza referente ao desmembramento das Ilhas de Ocupação do Projeto de Assentamento Nova Cotriguaçu. A área corresponde a 250 lotes em mais de 100 mil hectares que pertencem a Colniza, mas mantêm vínculo funcional, econômico e social com Cotriguaçu.",
-        "Os decretos propõem que as consultas ocorram no mesmo dia das eleições gerais, por meio de voto secreto com respostas “sim” ou “não”. As alterações territoriais serão aprovadas caso a maioria dos eleitores manifeste voto favorável nas urnas."
-      ],
-      "link": "/materia/almt-publica-decretos-que-convocam-plebiscitos-sobre-limites-territori.html",
-      "iso": "2026-08-07T13:59:50.533Z",
-      "hora": "09h59",
+      "link": "/materia/horto-florestal-tote-garcia-recebe-r-32-5-mil-em-novos-equipamentos-em.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -827,27 +702,132 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-mt-suspende-expediente-nos-dias-10-e-11-de-agosto",
+      "id": "ilm:justica-eleitoral-de-mt-suspende-expediente-nos-dias-10-e-11-de-agosto",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "TRE-MT suspende expediente nos dias 10 e 11 de agosto",
-      "resumo": "A sessão plenária do dia 10 foi transferida para o dia 14 do mesmo mês, às 14h, por videoconferência.",
+      "titulo": "Justiça Eleitoral de MT suspende expediente nos dias 10 e 11 de agosto",
+      "resumo": "A medida abrange a sede do TRE-MT e os Cartórios Eleitorais, com retorno das atividades agendado para a quarta-feira, 12 de agosto.",
       "fonte": "Meridiano, com informações de TRE-MT",
       "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/justica-eleitoral-suspende-expediente-nos-dias-10-08-e-11-08",
       "origemNome": "TRE-MT",
-      "pautadoPor": [],
-      "quentura": 0,
+      "pautadoPor": [
+        "g1 MT"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "A Justiça Eleitoral de Mato Grosso informou que o expediente e os atendimentos ao público estarão suspensos nos dias 10 e 11 de agosto, segunda e terça-feira. A medida atinge a sede do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) e os Cartórios Eleitorais. O retorno das atividades ocorre na quarta-feira, 12 de agosto.",
-        "A suspensão do dia 10 consta na Portaria Nº 311/2026, assinada pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. O feriado do dia 11 refere-se à Criação dos Cursos Jurídicos no Brasil, data que comemora o Dia do Advogado e o Dia do Estudante, instituída no âmbito federal pela Lei nº 5.010/1966.",
-        "Os prazos processuais que se iniciam ou se completam nos dias de suspensão do expediente serão automaticamente prorrogados para o primeiro dia útil seguinte. A sessão plenária marcada para o dia 10 de agosto foi transferida para o dia 14 do mesmo mês, às 14h, por videoconferência, conforme a mesma portaria."
+        "A Justiça Eleitoral de Mato Grosso suspenderá o expediente e o atendimento ao público na sede do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) e nos Cartórios Eleitorais nos dias 10 e 11 de agosto, segunda e terça-feira. O retorno das atividades ocorrerá na quarta-feira, 12 de agosto.",
+        "A suspensão do expediente do dia 10 consta na Portaria Nº 311/2026, assinada pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. Já o feriado de 11 de agosto refere-se à Criação dos Cursos Jurídicos no Brasil, instituído no âmbito federal pela Lei nº 5.010/1966.",
+        "A data de 11 de agosto remete à criação da Faculdade de Direito de São Paulo e da Faculdade de Direito de Olinda, em 1827. A ocasião comemora o Dia do Advogado e o Dia do Estudante.",
+        "Os prazos processuais que se iniciarem ou completarem nos dias de suspensão ficam automaticamente prorrogados para o primeiro dia útil seguinte. Além disso, a sessão plenária do dia 10 de agosto foi transferida para o dia 14 do mesmo mês, às 14h, por videoconferência."
       ],
-      "link": "/materia/tre-mt-suspende-expediente-nos-dias-10-e-11-de-agosto.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
+      "link": "/materia/justica-eleitoral-de-mt-suspende-expediente-nos-dias-10-e-11-de-agosto.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
       "original": true,
-      "contexto": "A suspensão atinge a sede do Tribunal Regional Eleitoral de Mato Grosso e os Cartórios Eleitorais. O retorno das atividades ocorre na quarta-feira, 12 de agosto. A sessão plenária foi transferida para o dia 14 do mesmo mês, às 14h.",
+      "contexto": "A suspensão afeta o atendimento ao público na sede do TRE-MT, nos cartórios eleitorais e pessoas com prazos processuais, que ficam prorrogados para o primeiro dia útil seguinte. O retorno das atividades ocorre em 12 de agosto, e a sessão plenária do dia 10 foi transferida para 14 de agosto, às 14h. O histórico registra um caso parecido em 7 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://storage.al.mt.gov.br/api/v1/download/image/775394?width=502px&amp;quality=80",
+      "fotoAlt": null,
+      "fotoLarg": 600,
+      "municipio": "primavera",
+      "municipioNome": "Primavera do Leste",
+      "id": "ilm:almt-publica-decretos-convocando-plebiscitos-em-quatro-municipios-de-m",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "ALMT publica decretos convocando plebiscitos em quatro municípios de Mato Grosso",
+      "resumo": "As consultas populares tratam da alteração territorial de Nova Poxoréu e das Ilhas de Ocupação do Projeto de Assentamento Nova Cotriguaçu.",
+      "fonte": "Meridiano, com informações de Assembleia de MT",
+      "origemLink": "https://www.al.mt.gov.br/midia/texto/decretos-convocam-plebiscitos-para-desmembramento-de-nova-poxoreu-e-ilhas-de-ocupacao/visualizar",
+      "origemNome": "Assembleia de MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": "mt",
+      "corpo": [
+        "A Assembleia Legislativa de Mato Grosso (ALMT) publicou, no Diário Oficial Eletrônico desta quarta-feira (22), convocatórias para plebiscitos que envolvem as populações de Primavera do Leste, Poxoréu, Cotriguaçu e Colniza. De autoria da Comissão de Revisão Territorial dos Municípios e das Cidades, os decretos haviam sido aprovados em sessão plenária no dia 15 de julho, após reuniões técnicas sobre o Estudo de Viabilidade Municipal.",
+        "O Decreto Legislativo nº 82 convoca a consulta para decidir sobre o desmembramento do distrito de Nova Poxoréu, pertencente a Poxoréu, e sua incorporação a Primavera do Leste. O local possui cerca de 20 mil habitantes e fica a pouco mais de 5 km de Primavera do Leste e a cerca de 50 km da sede de Poxoréu. A proposta prevê a votação pela Justiça Eleitoral no próximo 4 de outubro, mesma data das eleições gerais.",
+        "O Decreto Legislativo nº 83 estabelece o plebiscito para consultar os moradores de Cotriguaçu e Colniza sobre o desmembramento das Ilhas de Ocupação do Projeto de Assentamento Nova Cotriguaçu. A área compreende 250 lotes em mais de 100 mil hectares de Colniza, mas tem prestação de serviços essenciais realizada por Cotriguaçu via subprefeitura do Distrito de Nova União. A votação também é proposta para ocorrer junto com as próximas eleições.",
+        "As convocações seguem os parâmetros da Lei Complementar nº 230, de 15 de abril de 2026. A legislação determina que o plebiscito seja único e consulte os dois municípios envolvidos, sendo necessária a aprovação da maioria dos eleitores para que o processo seja concluído com a publicação da lei estadual dos novos limites territoriais."
+      ],
+      "link": "/materia/almt-publica-decretos-convocando-plebiscitos-em-quatro-municipios-de-m.html",
+      "iso": "2026-08-07T16:37:47.933Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": "O arquivo registra matérias semelhantes sobre a convocação de plebiscitos territoriais pela ALMT em quatro municípios em três ocasiões, nos dias 4 e 5 de agosto de 2026. A consulta afeta os moradores de Primavera do Leste, Poxoréu, Cotriguaçu e Colniza, incluindo cerca de 20 mil habitantes do distrito de Nova Poxoréu. A votação está prevista para ser realizada pela Justiça Eleitoral no dia 4 de outubro, na mesma.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:prefeitura-de-cuiaba-fiscaliza-publicidade-irregular-na-avenida-palmir",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Prefeitura de Cuiabá fiscaliza publicidade irregular na Avenida Palmiro Paes de Barros",
+      "resumo": "A ação autuou duas farmácias com multa de R$ 1.509,10 e retirou materiais afixados em áreas públicas como calçadas, postes e canteiros centrais.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/operacao-cidade-limpa-une-orientacao-e-fiscalizacao-para-preservar-espacos-publicos",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "Portal 93",
+        "folhaestado.com.br",
+        "O Mato Grosso"
+      ],
+      "quentura": 4,
+      "uf": "mt",
+      "corpo": [
+        "A Prefeitura de Cuiabá realizou, na quarta-feira (5), mais uma etapa da Operação Cidade Limpa na Avenida Palmiro Paes de Barros. A ação envolveu a Secretaria Municipal de Ordem Pública (Sorp) e a Empresa Cuiabana de Zeladoria e Serviços Urbanos (Limpurb) para orientar comerciantes e remover publicidades irregulares instaladas em espaços públicos.",
+        "Durante a fiscalização, duas farmácias foram autuadas por propaganda irregular em via pública, com aplicação de multa no valor de R$ 1.509,10 e prazo de 10 dias para apresentação de recurso. Em fase anterior, executada na Avenida dos Florais e na via de acesso ao distrito de Nossa Senhora da Guia, as equipes haviam retirado mais de 40 painéis fixos, além de banners, cartazes e placas menores.",
+        "A secretária municipal de Ordem Pública, Juliana Chiquito Palhares, acompanhou as equipes no local. As restrições de anúncios em postes, canteiros centrais, pontos de ônibus, árvores e calçadas estão previstas na Lei Municipal nº 443/2017, alterada pela Lei nº 514/2022, e na legislação ambiental. Segundo o agente de Fiscalização e Regulação Paulo Edson Morais, os autos de infração são emitidos de imediato ao localizar o infrator ou após levantamento de informações.",
+        "A coordenação de Atividades Econômicas da Sorp explicou que a desobstrução dos passeios garante o trânsito de pedestres, incluindo pessoas com deficiência visual e mobilidade reduzida. A fiscalização foi acompanhada pelo vendedor autônomo Cláudio Charles Rodrigues e pelo comerciante Valdir Pereira de Castro, atuante no ramo de combustíveis desde 1988."
+      ],
+      "link": "/materia/prefeitura-de-cuiaba-fiscaliza-publicidade-irregular-na-avenida-palmir.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:justica-nega-bloqueio-de-r-15-milhoes-nas-contas-da-prefeitura-de-cuia",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Justiça nega bloqueio de R$ 15 milhões nas contas da Prefeitura de Cuiabá",
+      "resumo": "O juiz Emerson Luis Pereira Cajango determinou a produção de novas provas antes de reavaliar o pedido do Ministério Público referente à política de bem-estar animal.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/justica-reconhece-avancos-da-prefeitura-e-mantem-contas-sem-bloqueio-de-r-15-milhoes",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "Estadão MT",
+        "Primeira Página",
+        "Ponto na Curva",
+        "Muvuca Popular"
+      ],
+      "quentura": 4,
+      "uf": "mt",
+      "corpo": [
+        "A Justiça indeferiu o pedido do Ministério Público de bloqueio de R$ 15 milhões das contas da Prefeitura de Cuiabá. A decisão foi proferida na terça-feira (4) pelo juiz Emerson Luis Pereira Cajango, da Vara Especializada do Meio Ambiente de Cuiabá.",
+        "O magistrado entendeu que o Município demonstrou esforços na política de bem-estar animal e que são necessárias novas provas técnicas antes de qualquer constrição de recursos. A Procuradoria Geral do Município apresentou documentos sobre o Programa Reação Animal 24 Horas, o abrigo municipal e o Fundo Municipal de Bem-Estar Animal (Funbea), além do registro de uma vistoria realizada pelo Juizado Especial Volante Ambiental (Juvam) em abril.",
+        "Na decisão, o juiz determinou que a Delegacia Especializada do Meio Ambiente (Dema) e a Perícia Oficial e Identificação Técnica (Politec) enviem, em até dez dias, relatórios e documentos de diligências feitas no fim de julho. O Ministério Público terá 15 dias para apresentar um plano emergencial sobre a aplicação dos R$ 15 milhões caso o bloqueio venha a ser autorizado futuramente.",
+        "O processo foi encaminhado ao Centro Judiciário de Solução de Conflitos e Cidadania (Cejusc) Ambiental para tentativa de conciliação sobre o cumprimento do Termo de Ajustamento de Conduta (TAC). O pedido de indisponibilidade das contas da Prefeitura segue indeferido até a análise dos novos elementos técnicos."
+      ],
+      "link": "/materia/justica-nega-bloqueio-de-r-15-milhoes-nas-contas-da-prefeitura-de-cuia.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -857,59 +837,93 @@
       "fotoLarg": 600,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:almt-ocupa-5-posicao-nacional-em-interacoes-nas-redes-sociais",
+      "id": "ilm:almt-e-a-5-assembleia-com-mais-interacoes-nas-redes-no-primeiro-semest",
       "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "ALMT ocupa 5ª posição nacional em interações nas redes sociais",
-      "resumo": "",
+      "editoria": "brasil",
+      "titulo": "ALMT é a 5ª assembleia com mais interações nas redes no primeiro semestre de 2026",
+      "resumo": "Com 179.675 interações mensuradas pela Social Media Gov, a Casa ficou à frente das assembleias do Rio de Janeiro, Minas Gerais, Ceará e Amazonas.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/almt-esta-entre-as-cinco-assembleias-com-mais-interacoes-nas-redes-sociais/visualizar",
       "origemNome": "Assembleia de MT",
       "pautadoPor": [],
       "quentura": 0,
-      "uf": "mt",
+      "uf": null,
       "corpo": [
-        "A Assembleia Legislativa de Mato Grosso alcançou o quinto lugar entre os parlamentos estaduais brasileiros com maior número de interações nas redes sociais durante o primeiro semestre de 2026. Os perfis institucionais registraram 179.675 interações no período, conforme levantamento divulgado pela plataforma Social Media Gov.",
-        "Com o resultado, a Casa de Leis mato-grossense ficou posicionada à frente das assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas. O secretário de Comunicação Social da ALMT, coronel Henrique Santos, declarou que a posição reflete a ampliação do contato com os cidadãos e a transparência da comunicação.",
-        "A gerente de Gestão de Redes e Publicidade Institucional, Noemia Almeida, atribuiu o desempenho ao trabalho integrado de uma equipe composta por nove servidores e uma jovem aprendiz, em conjunto com setores como jornalismo, fotografia, TV Assembleia e Rádio Assembleia.",
-        "O parlamento estadual acumula outras premiações recentes concedidas pelo Social Media Gov. Em 2025, a instituição obteve o segundo lugar com a assistente virtual “Alê” no 14º Redes WeGov e, neste ano, conquistou o primeiro lugar no 15º Redes WeGov por meio do projeto “Termômetro de Notícias”."
+        "A Assembleia Legislativa de Mato Grosso (ALMT) alcançou a quinta colocação no ranking nacional de interações em redes sociais entre os parlamentos estaduais no primeiro semestre de 2026. Segundo levantamento da plataforma Social Media Gov, os perfis institucionais da Casa de Leis registraram 179.675 interações no período.",
+        "Na classificação nacional, a ALMT superou as assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas. O secretário de Comunicação Social da ALMT, coronel Henrique Santos, e a gerente de Gestão de Redes e Publicidade Institucional, Noemia Almeida, atribuíram o resultado ao trabalho conjunto das equipes. A área específica de redes e publicidade conta com nove servidores e uma jovem aprendiz.",
+        "A produção do conteúdo digital envolve de forma integrada as áreas de redes sociais, publicidade institucional, jornalismo, fotografia, TV Assembleia e Rádio Assembleia. A estrutura desenvolve notícias, vídeos, campanhas e transmissões sobre os temas do Poder Legislativo.",
+        "O resultado soma-se a premiações anteriores da comunicação do órgão. Em 2025, a ALMT obteve o segundo lugar no Prêmio Social Media Gov, no 14º Redes WeGov, com a assistente virtual “Alê”. No 15º Redes WeGov, conquistou o primeiro lugar com o “Termômetro de Notícias”, projeto baseado em inteligência artificial, automação e análise de dados. Além disso, um artigo científico sobre o \"Termômetro de Notícias\", elaborado por Noemia Almeida e revisado por William Monteiro e Yuri Daltro Caseiro, foi aprovado para apresentação no Congresso Brasileiro de Comunicação Pública."
       ],
-      "link": "/materia/almt-ocupa-5-posicao-nacional-em-interacoes-nas-redes-sociais.html",
-      "iso": "2026-08-07T13:59:50.533Z",
-      "hora": "09h59",
+      "link": "/materia/almt-e-a-5-assembleia-com-mais-interacoes-nas-redes-no-primeiro-semest.html",
+      "iso": "2026-08-07T16:37:47.933Z",
+      "hora": "12h37",
       "original": true,
-      "contexto": "O histórico registra outros quatro casos em agosto de 2026 sobre a mesma posição da Assembleia Legislativa de Mato Grosso. O levantamento da plataforma Social Media Gov aponta 179.675 interações no primeiro semestre de 2026. A instituição ficou à frente das assembleias legislativas do Rio de Janeiro, Minas Gerais, Ceará e Amazonas.",
+      "contexto": "O histórico do MERIDIANO registra três matérias sobre a quinta posição da ALMT em interações nas redes digitais no primeiro semestre de 2026, veiculadas nos dias 4 e 5 de agosto de 2026. Em 2025, o órgão havia alcançado o segundo lugar no Prêmio Social Media Gov.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/reuniao-com-emissoras-alinha-procedimentos-do-horario-eleitoral-gratuito-3/@@images/image-0-e5c9ce372195cded9de9f0649c2993fa.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:tre-mt-divulga-relatorio-sobre-propostas-do-dialogo-pela-equidade-raci",
+      "id": "ilm:tre-mt-reune-emissoras-para-discutir-regras-do-horario-eleitoral-gratu",
       "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "TRE-MT divulga relatório sobre propostas do Diálogo pela Equidade Racial",
-      "resumo": "Documento reúne sínteses de palestras e demandas da sociedade civil discutidas em evento do Tribunal Regional Eleitoral.",
+      "editoria": "brasil",
+      "titulo": "TRE-MT reúne emissoras para discutir regras do Horário Eleitoral Gratuito",
+      "resumo": "Encontro apresentou as novas funcionalidades do Sistema HEG-Mídias, que calcula automaticamente a distribuição de tempo das cotas de propaganda eleitoral.",
       "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/tre-mt-publica-relatorio-de-avaliacao-do-evento-dialogo-pela-equidade-racial",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/reuniao-com-emissoras-alinha-procedimentos-do-horario-eleitoral-gratuito",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "Representantes de emissoras de rádio e televisão de Mato Grosso participaram de reunião preparatória por meio da plataforma Zoom, na terça-feira (04.08), promovida pelo Tribunal Regional Eleitoral de Mato Grosso (TRE-MT). O encontro tratou de regras gerais, prazos e operacionalização do Horário Eleitoral Gratuito, além de apresentar as novas funcionalidades do Sistema HEG-Mídias.",
+        "A transmissão é obrigatória para emissoras de rádio, inclusive comunitárias, televisão em VHF e UHF e canais por assinatura do Poder Legislativo, conforme a Lei nº 9.504/1997 e a Resolução TSE nº 23.610/2019. Na reunião, a Rádio Vila Real (grupo Gazeta) e a TV Centro América (grupo Globo) foram oficializadas como as emissoras geradoras do sinal em rede nas Eleições 2026.",
+        "A juíza auxiliar da Propaganda, Glenda Moreira Borges, declarou que a preparação visa garantir organização, transparência e igualdade de oportunidade entre candidaturas. Uma das novidades para as Eleições Gerais de 2026 é o Sistema HEG-Mídias, ferramenta que disponibiliza as informações das emissoras na página oficial e dispensa o credenciamento individual perante cada partido, coligação ou federação.",
+        "A coordenadora do Horário Eleitoral Gratuito e juíza auxiliar da Presidência do TRE-MT, Edna Ederli Coutinho, explicou que o sistema fará automaticamente a distribuição das cotas de propaganda destinadas a mulheres, pessoas negras e pessoas indígenas. Para o envio do material, os partidos e federações devem se cadastrar junto às emissoras, que não estão obrigadas a veicular conteúdos de agremiações não credenciadas."
+      ],
+      "link": "/materia/tre-mt-reune-emissoras-para-discutir-regras-do-horario-eleitoral-gratu.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": "A obrigatoriedade da transmissão afeta emissoras de rádio, incluindo comunitárias, canais de televisão em VHF e UHF e canais por assinatura do Poder Legislativo. O histórico registra uma reunião semelhante do TRE-MT com emissoras sobre as regras do Horário Eleitoral Gratuito em 7 de agosto de 2026.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:agentes-da-sorp-passam-por-capacitacao-para-aplicar-nova-lei-de-fiscal",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Agentes da Sorp passam por capacitação para aplicar nova lei de fiscalização em Cuiabá",
+      "resumo": "O treinamento orientou os fiscais sobre a Lei Complementar nº 589/2025, que prevê nove tipos de infrações e penalidades para irregularidades em imóveis urbanos.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/capacitacao-orienta-fiscais-sobre-aplicacao-da-lei-complementar-no-589-durante-periodo-de-queimadas",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "Prefeitura de Cuiabá",
+        "O Livre"
+      ],
+      "quentura": 3,
       "uf": "mt",
       "corpo": [
-        "O Tribunal Regional Eleitoral de Mato Grosso publicou em 31 de julho a síntese das propostas da sociedade civil colhidas durante o evento Diálogo pela Equidade Racial. A divulgação foi realizada pelo Comitê Gestor de Promoção de Políticas para a Equidade Racial em cumprimento à determinação da Presidência do Tribunal.",
-        "O documento reúne palestras e manifestações de representantes civis e de órgãos do Poder Judiciário. Entre os registros constam as exposições da jornalista e pesquisadora da Secretaria de Estado de Ciência, Tecnologia e Inovação Julianne Caju e da docente Dejenana Campos, integrante do Laboratório Nenhuma a Menos.",
-        "A pedido da Presidência, exercida pela desembargadora Serly Marcondes Alves, o Tribunal realizou uma avaliação interna com servidores sobre as demandas divididas em eixos estratégicos. A partir desse diagnóstico, a equipe do TRE-MT desenvolve novas ferramentas de Tecnologia da Informação e gestão.",
-        "O comitê realizará uma avaliação completa com todos os membros integrantes, contando com o apoio consultivo das professoras Julianne Caju e Dejenana Campos. A transmissão completa do evento está disponível no canal da Justiça Eleitoral no YouTube."
+        "Agentes de fiscalização da Secretaria Municipal de Ordem Pública (Sorp) participaram do Programa de Fiscalização Integrada (Profisc). O treinamento buscou orientar a aplicação da Lei Complementar nº 589/2025, padronizar procedimentos e fortalecer a atuação das equipes durante o período de estiagem, momento em que aumenta o risco de queimadas em terrenos particulares na capital.",
+        "Aprovada em 22 de dezembro de 2025 e regulamentada pelo Decreto Municipal nº 11.767/2026, a Lei Complementar nº 589 estabelece nove tipos de infrações administrativas em terrenos baldios e imóveis abandonados. A norma fixa multas com base na Unidade Padrão Municipal (UPM), endurece punições para reincidentes e detalha ações contra matagais, descarte irregular de resíduos, vetores de doenças e focos de incêndio.",
+        "O secretário municipal adjunto de Ordem Pública, Robson Pereira, explicou que a iniciativa alinha a legislação vigente e integra o trabalho da Sorp com a Defesa Civil. Já o agente de regulação e fiscalização e instrutor do curso, Joelton do Nascimento, afirmou que a nova lei reorganiza o fluxo de fiscalização e responsabiliza proprietários que omitirem a manutenção de imóveis que favoreçam queimadas. O instrutor reforçou que os fiscais devem medir áreas e registrar evidências na emissão dos autos de infração.",
+        "O agente de regulação e fiscalização Fabiano Magalhães de Souza relatou que as discussões permitiram alinhar entendimentos sobre o combate a queimadas e a fiscalização de terrenos baldios. Segundo ele, o treinamento traz segurança jurídica para as ações em campo e melhora o atendimento prestado aos cidadãos."
       ],
-      "link": "/materia/tre-mt-divulga-relatorio-sobre-propostas-do-dialogo-pela-equidade-raci.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
+      "link": "/materia/agentes-da-sorp-passam-por-capacitacao-para-aplicar-nova-lei-de-fiscal.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
       "original": true,
-      "contexto": null,
+      "contexto": "A fiscalização atinge proprietários de terrenos baldios e imóveis abandonados em Cuiabá, que passam a responder por nove tipos de infrações administrativas. O histórico recente do município inclui outro treinamento de servidores em 2 de agosto de 2026, quando 19 funcionários da Limpurb foram capacitados.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -919,11 +933,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:governo-sanciona-lei-de-seguranca-escolar-em-mato-grosso",
+      "id": "ilm:mato-grosso-sanciona-lei-que-cria-politica-de-seguranca-nas-escolas",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Governo sanciona lei de segurança escolar em Mato Grosso",
-      "resumo": "Norma estabelece diretrizes para prevenção da violência, implantação de câmeras e uso de botões de pânico nas escolas estaduais.",
+      "titulo": "Mato Grosso sanciona lei que cria política de segurança nas escolas",
+      "resumo": "Aprovada pela Assembleia Legislativa em 23 de junho de 2026, a Lei nº 13.459 prevê videomonitoramento, botões de pânico e planos de segurança na rede estadual.",
       "fonte": "Meridiano, com informações de Assembleia de MT",
       "origemLink": "https://www.al.mt.gov.br/midia/texto/lei-cria-politica-permanente-de-seguranca-e-protecao-no-ambiente-escolar-em-mt/visualizar",
       "origemNome": "Assembleia de MT",
@@ -931,116 +945,47 @@
       "quentura": 0,
       "uf": "mt",
       "corpo": [
-        "O Governo de Mato Grosso sancionou a Lei nº 13.459, que cria a Política Estadual Permanente de Segurança, Prevenção e Proteção no Ambiente Escolar. A norma foi aprovada pela Assembleia Legislativa em 23 de junho de 2026 e publicada no Diário Oficial, definindo diretrizes para as unidades de ensino da rede estadual.",
-        "A legislação tem como finalidade garantir um ambiente escolar seguro, prevenir atos de violência e resguardar a integridade física, psíquica e moral de alunos, professores e da comunidade escolar. O texto prevê princípios como proteção integral de crianças e adolescentes, dignidade humana, integração de setores e preservação de dados pessoais.",
-        "Entre as determinações, a lei exige que cada instituição de ensino elabore um Plano de Segurança Escolar com protocolos de emergência e ações contra bullying e cyberbullying. Também está prevista a instalação gradual de sistemas de videomonitoramento, respeitando a privacidade e a Lei Geral de Proteção de Dados Pessoais.",
-        "As escolas deverão receber, de forma progressiva, dispositivos de alerta emergencial como o botão de pânico, com possibilidade de integração com órgãos de segurança pública. A execução da política fica condicionada à disponibilidade orçamentária, à regulamentação do Poder Executivo e a critérios de prioridade para áreas vulneráveis."
+        "O Governo de Mato Grosso sancionou a Lei nº 13.459, que institui a Política Estadual Permanente de Segurança, Prevenção e Proteção no Ambiente Escolar. A norma foi aprovada pela Assembleia Legislativa em 23 de junho de 2026 e publicada no Diário Oficial.",
+        "A legislação estabelece diretrizes para proteger a integridade de estudantes, professores e comunidade escolar, além de promover a cultura de paz nas unidades da rede estadual. O texto prevê a integração entre as áreas de educação, segurança pública, saúde e assistência social, com foco prioritário em escolas situadas em áreas de maior vulnerabilidade e índices de violência.",
+        "Entre as determinações, o Poder Público deverá desenvolver programas voltados à mediação de conflitos, práticas restaurativas e ao combate ao bullying e ao cyberbullying. As instituições de ensino deverão elaborar um Plano de Segurança Escolar específico, com protocolos de prevenção e procedimentos de resposta para emergências.",
+        "A lei prevê a implantação gradual de câmeras de videomonitoramento — com restrições de uso, vedação em locais íntimos e respeito à Lei Geral de Proteção de Dados Pessoais (LGPD) — e de botões de pânico integrados à segurança pública. A execução das medidas depende de regulamentação do Executivo e de disponibilidade orçamentária."
       ],
-      "link": "/materia/governo-sanciona-lei-de-seguranca-escolar-em-mato-grosso.html",
-      "iso": "2026-08-07T13:59:50.533Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": "O histórico registra outros três casos parecidos em 7 de agosto de 2026. A medida afeta alunos, professores e a comunidade escolar da rede estadual de Mato Grosso.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": null,
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:horto-florestal-tote-garcia-recebe-novos-equipamentos-em-cuiaba",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Horto Florestal Tote Garcia recebe novos equipamentos em Cuiabá",
-      "resumo": "A entrega dos materiais ocorreu nesta quinta-feira e foi viabilizada por projeto aprovado pelo Juvam com investimento de R$ 32,5 mil.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/horto-florestal-recebe-novos-equipamentos-para-fortalecer-acoes-de-arborizacao-em-cuiaba",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "Estadão MT",
-        "Muvuca Popular"
-      ],
-      "quentura": 2,
-      "uf": "mt",
-      "corpo": [
-        "O Horto Florestal Tote Garcia, localizado em Cuiabá, recebeu um novo conjunto de equipamentos para reforçar a produção de mudas, a manutenção da área e as ações de arborização urbana. A entrega dos materiais aconteceu nesta quinta-feira.",
-        "A aquisição foi viabilizada por meio de um projeto aprovado pelo Juizado Volante Ambiental, em parceria com o Ministério Público. O investimento total foi de R$ 32,5 mil, aplicado diretamente na compra dos materiais.",
-        "O lote de equipamentos inclui seis roçadeiras multifuncionais, quatro perfuradores de solo, duas motosserras, quatro sopradores, além de correntes, sabres, brocas, lâminas e ferramentas manuais. Os itens são destinados ao manejo da vegetação e à conservação da unidade.",
-        "Segundo o diretor de Planejamento Ambiental da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, Fábio Moura, os materiais representam um avanço para a estrutura de trabalho do local e para as atividades diárias de arborização do município."
-      ],
-      "link": "/materia/horto-florestal-tote-garcia-recebe-novos-equipamentos-em-cuiaba.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
+      "link": "/materia/mato-grosso-sanciona-lei-que-cria-politica-de-seguranca-nas-escolas.html",
+      "iso": "2026-08-07T16:37:47.933Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": null,
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-cooperacao-entre-tre-mt-e-sesp-mt-visa-compartilhamento-de-dados-biometricos/@@images/image-0-52d52b8cfe68b2638df6ecaacbcf04b3.jpeg",
       "fotoAlt": null,
       "fotoLarg": 0,
-      "municipio": "cuiaba",
-      "municipioNome": "Cuiabá",
-      "id": "ilm:projeto-educapet-conscientiza-cerca-de-480-alunos-em-cuiaba",
-      "chapeu": "Nosso texto",
-      "editoria": "regional",
-      "titulo": "Projeto EducaPet conscientiza cerca de 480 alunos em Cuiabá",
-      "resumo": "Ação na EMEB Aristotelino Alves Praeiro marcou o reinício da programação do projeto para o segundo semestre, com palestras e presença do Bope.",
-      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/educapet-leva-conscientizacao-para-cerca-de-480-alunos",
-      "origemNome": "Prefeitura de Cuiabá",
-      "pautadoPor": [
-        "O Documento",
-        "Muvuca Popular",
-        "Só Notícias"
-      ],
-      "quentura": 3,
-      "uf": "mt",
-      "corpo": [
-        "Alunos da EMEB Aristotelino Alves Praeiro, localizada no bairro Primeiro de Março, em Cuiabá, receberam a equipe da Bem Estar Animal (BEA) e do Bope para uma tarde de conscientização sobre proteção e bem-estar animal. O evento ocorreu na quadra da escola, que reuniu aproximadamente 480 estudantes da Educação Infantil e do Ensino Fundamental.",
-        "A iniciativa marcou o reinício da programação do projeto EducaPet para o segundo semestre e consistiu em uma palestra educativa e orientativa. O trabalho foi conduzido por Maria Eduarda Reis, assessora da Bem Estar Animal, e pela médica veterinária e assessora técnica da BEA, Maria Elisa Pereira Martins.",
-        "Policiais do Bope participaram da ação acompanhados de dois cães treinados, a fêmea Dakota e o macho Max, que interagiram com as crianças. A diretora da unidade escolar, Lucélia Pereira dos Santos, acompanhou a atividade, que também contou com a participação de alunos como Rebeca, Tífany e Dawid.",
-        "A programação do EducaPet prevê outras quatro ações até o fim do ano, ocorrendo uma por mês, sempre no período da tarde, às 15h. As próximas edições estão agendadas para a EMEB Gracildes de Melo Dantas em setembro, EMEB Dr. Fabio Firmino Leite em outubro, EMEB Prof. Firmo José Rodrigues em novembro e EMEB Tereza de Benguela em dezembro."
-      ],
-      "link": "/materia/projeto-educapet-conscientiza-cerca-de-480-alunos-em-cuiaba.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.tre-mt.jus.br/imagens/fotos/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas-entre-eleitores-candidatos-indigenas-e-representantes-de-igrejas/@@images/image-0-f355d17eb327ce79266cf7e07034a72b.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": "barradogarcas",
-      "municipioNome": "Barra do Garças",
-      "id": "ilm:barra-do-garcas-sedia-audiencia-publica-do-tre-mt-sobre-as-eleicoes",
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:tre-mt-e-sesp-mt-discutem-acordo-para-compartilhamento-de-dados-biomet",
       "chapeu": "Nosso texto",
       "editoria": "brasil",
-      "titulo": "Barra do Garças sedia audiência pública do TRE-MT sobre as eleições",
-      "resumo": "Evento reuniu cerca de 100 pessoas no Tribunal do Júri para discutir o pleito de 2026 e a segurança das urnas eletrônicas",
+      "titulo": "TRE-MT e Sesp-MT discutem acordo para compartilhamento de dados biométricos",
+      "resumo": "Proposta solicitada pelo TSE prevê integração com o Banco de Dados da Identificação Civil Nacional e assinatura prevista para a próxima semana",
       "fonte": "Meridiano, com informações de TRE-MT",
-      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Julho/audiencia-publica-em-barra-do-garcas-reune-publico-de-100-pessoas",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/cooperacao-entre-tre-mt-e-sesp-mt-visa-compartilhamento-de-dados-biometricos",
       "origemNome": "TRE-MT",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Barra do Garças recebeu, nesta sexta-feira (31), o ciclo de Audiências Públicas sobre as Eleições Gerais de 2026. O evento ocorreu no Tribunal do Júri do Fórum da Comarca e reuniu um público de cerca de 100 pessoas de nove municípios do Vale do Araguaia.",
-        "A abertura foi realizada pela presidente do TRE-MT, desembargadora Serly Marcondes Alves. A mesa foi coordenada pelo juiz-membro substituto Flávio Fraga e Silva, e contou com as participações do assessor jurídico Hernandésio de Lima e do coordenador de Sistemas Eleitorais e Logística, Salomão Fortaleza.",
-        "Representantes do Ministério Público Estadual, do Poder Judiciário, gestões municipais, partidos políticos, indígenas, candidatos, líderes religiosos, movimentos comunitários, voluntários e alunos participaram da atividade. Durante o evento, o público levantou questões sobre acessibilidade, denúncias de assédio eleitoral, uso de redes sociais, treinamento de mesários e o aplicativo Pardal.",
-        "As próximas edições das audiências públicas estão programadas para ocorrer em Cáceres, no dia 07 de agosto, e em Cuiabá, no dia 14 de agosto. O ciclo abrange seis polos regionais de Mato Grosso."
+        "O Tribunal Regional Eleitoral de Mato Grosso (TRE-MT) e a Secretaria de Estado de Segurança Pública (Sesp-MT) reuniram-se nesta quinta-feira (06.08) para tratar da minuta de um Acordo de Cooperação focado no compartilhamento de dados cadastrais e biométricos. A iniciativa atende a uma demanda do Tribunal Superior Eleitoral (TSE) e segue as diretrizes da Lei Geral de Proteção de Dados (LGPD).",
+        "Com o acordo, os cadastros biométricos efetuados pela Sesp-MT poderão compor a base da Justiça Eleitoral e do Banco de Dados da Identificação Civil Nacional. O TSE, por sua vez, fornecerá à secretaria informações necessárias para atividades de segurança pública. Cabe ao TRE-MT intermediar a cooperação e fazer o acompanhamento técnico das etapas.",
+        "A assinatura formal do documento deve ocorrer na próxima semana, na sede da Sesp-MT. Trataram da proposta a presidente do TRE-MT, desembargadora Serly Marcondes Alves, a secretária da Sesp-MT, coronel PM Susane Tamanho, e o secretário de Tecnologia da Informação do tribunal, Leon Manoel Filho.",
+        "O encontro teve a presença da juíza auxiliar Edna Coutinho, do diretor-geral Mauro Diogo, dos assessores Sueli Shimada, Marlus Boletta e Hernandésio de Lima, do representante Gabriel Soares, do coordenador Salomão Fortaleza e de demais integrantes da Sesp-MT."
       ],
-      "link": "/materia/barra-do-garcas-sedia-audiencia-publica-do-tre-mt-sobre-as-eleicoes.html",
-      "iso": "2026-08-07T13:59:53.570Z",
-      "hora": "09h59",
+      "link": "/materia/tre-mt-e-sesp-mt-discutem-acordo-para-compartilhamento-de-dados-biomet.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
       "original": true,
-      "contexto": "O histórico registra outras três reuniões ou audiências preparatórias para as eleições de 2026 realizadas em agosto de 2026. A atividade reuniu representantes de nove municípios do Vale do Araguaia, além de gestões municipais, partidos políticos, indígenas, candidatos, líderes religiosos, movimentos comunitários, voluntários e alunos. As próximas edições estão programadas para os dias 07 e 14 de agosto de 2026,.",
+      "contexto": "O compartilhamento atinge os cadastros biométricos da Sesp-MT, a base da Justiça Eleitoral e o Banco de Dados da Identificação Civil Nacional. A assinatura formal do Acordo de Cooperação está prevista para a próxima semana na sede da Sesp-MT.",
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
@@ -1050,29 +995,60 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:cuiaba-envia-kits-cirurgicos-para-upas-e-policlinca",
+      "id": "ilm:prefeito-abilio-brunini-recebe-medalha-merito-tatico-policial-da-rotam",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Cuiaba envia kits cirurgicos para UPAs e Policlinca",
-      "resumo": "A Prefeitura de Cuiaba distribuiu 108 kits cirurgicos reutilizaveis para quatro UPAs e para a Policlinica do Pedra 90, em entrega realizada na terca-feira.",
+      "titulo": "Prefeito Abilio Brunini recebe Medalha Mérito Tático Policial da Rotam",
+      "resumo": "A honraria foi entregue pela secretária de Estado de Segurança Pública, Suzane Tamanho, em solenidade realizada no auditório do Ministério Público de Mato Grosso na quinta-feira (6).",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/cuiaba-reforca-atendimento-nas-upas-com-envio-de-108-kits-para-pequenas-cirurgias",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/prefeito-abilio-brunini-recebe-medalha-merito-tatico-da-rotam",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "O Livre",
-        "Prefeitura de Cuiabá"
+        "Estadão MT",
+        "O Livre"
       ],
       "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiaba, por meio da Secretaria Municipal de Saude e da Secretaria Adjunta de Atencao Secundaria, enviou 108 kits para pequenas cirurgias as unidades de urgencia e emergencia da capital. Os materiais foram adquiridos por R$ 23.220 e a entrega ocorreu na terca-feira.",
-        "Foram contempladas a UPA Pascoal Ramos, UPA Morada do Ouro, UPA Leblon, UPA Verdão e a Policlinica do Pedra 90. Juntas, as quatro UPAs atendem em media cerca de 1.600 pacientes por dia, sendo aproximadamente 400 usuarios em cada unidade.",
-        "Os conjuntos sao compostos por instrumentos cirurgicos reutilizaveis em aco inoxidavel, como cabo de bisturi nº 3, pincas Halstead Mosquito curva e reta, pincas Adson com e sem dente, tesouras cirurgicas, porta agulhas e estojo metalico perfurado para esterilizacao em autoclave.",
-        "O material atende procedimentos de baixa complexidade, a exemplo de suturas, retirada de cistos, lipomas, unhas encravadas, drenagem de abscessos, remocao de corpos estranhos, limpeza de ferimentos e retirada de pontos. O secretario adjunto de Atencao Secundaria, Odair Mendonca, afirmou que o investimento fortalece a capacidade de resposta das unidades."
+        "O prefeito de Cuiabá, Abilio Brunini, recebeu a Medalha Mérito Tático Policial, a mais alta honraria concedida pelo Batalhão de Rondas Ostensivas Tático Móvel (Rotam) da Polícia Militar de Mato Grosso. A solenidade foi realizada na quinta-feira (6), no auditório do Ministério Público de Mato Grosso.",
+        "A entrega foi feita pela secretária de Estado de Segurança Pública, Suzane Tamanho. Durante a cerimônia, a secretária municipal de Habitação e Regularização Fundiária, Michelle Dreher, também foi homenageada. A honraria foi criada pelo Decreto Estadual nº 626, de 6 de julho de 2016.",
+        "O comandante do Batalhão Rotam, tenente coronel Fábio Ribeiro, afirmou que a medalha representa o reconhecimento institucional aos policiais militares e às autoridades civis que contribuíram para o desenvolvimento da unidade e para a preservação da ordem pública.",
+        "Ao receber a homenagem, o prefeito Abilio Brunini declarou que o reconhecimento é um incentivo para fortalecer a parceria entre a Prefeitura de Cuiabá e as forças de segurança no combate à criminalidade."
       ],
-      "link": "/materia/cuiaba-envia-kits-cirurgicos-para-upas-e-policlinca.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
+      "link": "/materia/prefeito-abilio-brunini-recebe-medalha-merito-tatico-policial-da-rotam.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.tre-mt.jus.br/imagens/fotos/tre-mt-emissoras-devem-observar-vedacoes-da-legislacao-eleitoral-a-partir-de-06-08/@@images/image-0-921765658ebe5679c33cfaa00a6cb04c.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:emissoras-de-radio-e-tv-devem-observar-vedacoes-a-partir-de-06-de-agos",
+      "chapeu": "Nosso texto",
+      "editoria": "brasil",
+      "titulo": "Emissoras de rádio e TV devem observar vedações a partir de 06 de agosto",
+      "resumo": "As regras previstas na Lei 9.504/1997 e na Resolução TSE 23.610/2019 buscam assegurar a igualdade de oportunidades entre os concorrentes nas Eleições Gerais de 2026.",
+      "fonte": "Meridiano, com informações de TRE-MT",
+      "origemLink": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Agosto/emissoras-devem-observar-vedacoes-da-legislacao-eleitoral-a-partir-de-06-08",
+      "origemNome": "TRE-MT",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A partir desta quinta-feira (06.08), começam a vigorar novas restrições da legislação eleitoral para veículos de rádio e televisão em todo o país. A medida abrange a programação normal e os noticiários das emissoras com o objetivo de assegurar a igualdade entre candidatas, candidatos, partidos políticos, federações e coligações nas Eleições Gerais de 2026.",
+        "Conforme a Lei nº 9.504/1997 e a Resolução TSE nº 23.610/2019, fica proibida a transmissão de imagens de pesquisas ou consultas populares nas quais seja possível identificar o eleitor entrevistado ou em que haja manipulação de dados. As emissoras também não podem veicular propaganda política na programação, conceder tratamento privilegiado a concorrentes — inclusive por retransmissão de lives eleitorais — nem exibir filmes, novelas e minisséries com alusão ou crítica a candidatos ou partidos, ressalvados os programas jornalísticos e debates.",
+        "A legislação veda ainda a divulgação de nome de programa que faça referência a candidata ou candidato escolhido em convenção, mesmo que o programa já existisse previamente ou que o nome seja o mesmo utilizado na urna eletrônica. O descumprimento dessa exigência pode resultar no cancelamento do registro da atração.",
+        "Segundo a juíza auxiliar da Presidência do Tribunal Regional Eleitoral de Mato Grosso (TRE-MT), Edna Coutinho, as vedações integram as normas que disciplinam a propaganda eleitoral e visam garantir isonomia entre os participantes. O secretário judiciário do TRE-MT, Carlos Luanga, orientou as rádios e TVs a cumprirem as normas vigentes para evitar irregularidades."
+      ],
+      "link": "/materia/emissoras-de-radio-e-tv-devem-observar-vedacoes-a-partir-de-06-de-agos.html",
+      "iso": "2026-08-07T16:37:52.018Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1084,27 +1060,60 @@
       "fotoLarg": 0,
       "municipio": "cuiaba",
       "municipioNome": "Cuiabá",
-      "id": "ilm:prefeitura-de-cuiaba-realiza-operacao-cidade-limpa-na-avenida-palmiro-",
+      "id": "ilm:vigilancia-sanitaria-de-cuiaba-implanta-gestao-de-qualidade-baseada-na",
       "chapeu": "Nosso texto",
       "editoria": "regional",
-      "titulo": "Prefeitura de Cuiabá realiza Operação Cidade Limpa na Avenida Palmiro Paes de Barros",
-      "resumo": "A ação conjunta entre a Sorp e a Limpurb removeu publicidade irregular e orientou comerciantes na quarta-feira.",
+      "titulo": "Vigilância Sanitária de Cuiabá implanta gestão de qualidade baseada na ISO 9001",
+      "resumo": "O município segue modelo da Anvisa para aprimorar processos internos e reduzir a burocracia, mantendo fiscalizações contínuas na capital.",
       "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
-      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/operacao-cidade-limpa-une-orientacao-e-fiscalizacao-para-preservar-espacos-publicos",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/vigilancia-sanitaria-de-cuiaba-reforca-atuacao-diaria-na-protecao-da-saude-da-populacao",
       "origemNome": "Prefeitura de Cuiabá",
       "pautadoPor": [
-        "omatogrosso.com"
+        "estadomaior.com.br"
       ],
       "quentura": 2,
       "uf": "mt",
       "corpo": [
-        "A Prefeitura de Cuiabá deu continuidade à Operação Cidade Limpa na Avenida Palmiro Paes de Barros, com foco na orientação de comerciantes e na remoção de publicidade irregular em espaços públicos. A iniciativa, iniciada na quarta-feira (5), é realizada pela Secretaria Municipal de Ordem Pública em parceria com a Empresa Cuiabana de Zeladoria e Serviços Urbanos.",
-        "A secretária municipal de Ordem Pública, Juliana Chiquito Palhares, acompanhou as equipes para esclarecer dúvidas sobre a legislação que proíbe a fixação de cartazes, banners e cavaletes em postes, árvores, canteiros centrais e calçadas. Durante a mobilização na quarta-feira, duas farmácias foram autuadas por publicidade irregular em via pública, com multa de R$ 1.509,10 e prazo de 10 dias para apresentação de recurso.",
-        "As diretrizes da operação seguem a Lei Municipal nº 443/2017, alterada pela Lei nº 514/2022. Em etapa anterior nas vias Avenida dos Florais e na de acesso ao distrito de Nossa Senhora da Guia, as equipes recolheram mais de 40 painéis fixos, além de banners, cartazes e placas menores."
+        "A Secretaria Municipal de Saúde de Cuiabá está em processo de implantação de um Sistema de Gestão da Qualidade baseado na norma ISO 9001 na Coordenadoria de Vigilância Sanitária. A iniciativa segue o modelo de maturidade tecnológica da Agência Nacional de Vigilância Sanitária (Anvisa) e busca aprimorar processos internos, ampliar a transparência e reduzir a burocracia.",
+        "A atuação do órgão no município inclui fiscalização, licenciamento, monitoramento, orientação técnica e educação em saúde. O trabalho abrange o controle da qualidade de água, alimentos, medicamentos, vacinas, cosméticos, saneantes e produtos para a saúde, além de vistorias em hospitais, clínicas, laboratórios, restaurantes, supermercados e eventos.",
+        "Segundo a secretária municipal de Saúde, Deisi Bocalon, as inspeções e orientações técnicas buscam garantir que produtos, serviços e ambientes ofereçam segurança. As ações do município integram o Sistema Nacional de Vigilância Sanitária (SNVS), sob coordenação da Anvisa, articulando União, estados e municípios para resposta a situações de risco e emergências de saúde pública.",
+        "As atividades foram registradas no contexto do Dia Nacional da Vigilância Sanitária, celebrado em 5 de agosto. A data foi instituída pela Lei Federal nº 13.098/2015 em homenagem ao médico e sanitarista Oswaldo Cruz."
       ],
-      "link": "/materia/prefeitura-de-cuiaba-realiza-operacao-cidade-limpa-na-avenida-palmiro-.html",
-      "iso": "2026-08-07T13:59:54.173Z",
-      "hora": "09h59",
+      "link": "/materia/vigilancia-sanitaria-de-cuiaba-implanta-gestao-de-qualidade-baseada-na.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": "cuiaba",
+      "municipioNome": "Cuiabá",
+      "id": "ilm:projeto-educapet-reune-cerca-de-480-alunos-em-acao-sobre-bem-estar-ani",
+      "chapeu": "Nosso texto",
+      "editoria": "regional",
+      "titulo": "Projeto EducaPet reúne cerca de 480 alunos em ação sobre bem-estar animal em Cuiabá",
+      "resumo": "Atividade na EMEB Aristotelino Alves Praeiro marcou a retomada do projeto no segundo semestre, com palestras e presença de cães do Bope.",
+      "fonte": "Meridiano, com informações de Prefeitura de Cuiabá",
+      "origemLink": "https://www.cuiaba.mt.gov.br/noticias/educapet-leva-conscientizacao-para-cerca-de-480-alunos",
+      "origemNome": "Prefeitura de Cuiabá",
+      "pautadoPor": [
+        "Só Notícias"
+      ],
+      "quentura": 2,
+      "uf": "mt",
+      "corpo": [
+        "A equipe da Bem Estar Animal (BEA) e policiais do Bope realizaram, na tarde de quarta-feira (5), uma ação educativa do projeto EducaPet na quadra da EMEB Aristotelino Alves Praeiro, no bairro Primeiro de Março, em Cuiabá. O evento reuniu aproximadamente 480 alunos da Educação Infantil e do Ensino Fundamental para conscientização sobre proteção e combate ao crime de maus-tratos contra animais.",
+        "A palestra foi conduzida por Maria Eduarda Reis, assessora da BEA, e Maria Elisa Pereira Martins, médica veterinária e assessora técnica da instituição. Durante a atividade, os policiais integraram a programação com os cães treinados Dakota e Max, que interagiram com estudantes como Rebeca, de 8 anos, Tífany, de 6 anos, e Dawid, de 8 anos. A diretora da unidade escolar, Lucélia Pereira dos Santos, também esteve presente.",
+        "O evento marcou o reinício da programação do EducaPet para o segundo semestre. Outras quatro ações serão realizadas até o fim do ano, uma por mês, sempre no período da tarde, às 15h. As atividades seguintes ocorrerão na EMEB Gracildes de Melo Dantas (10 de setembro), EMEB Dr. Fabio Firmino Leite (22 de outubro), EMEB Prof. Firmo José Rodrigues (12 de novembro) e EMEB Tereza de Benguela (3 de dezembro)."
+      ],
+      "link": "/materia/projeto-educapet-reune-cerca-de-480-alunos-em-acao-sobre-bem-estar-ani.html",
+      "iso": "2026-08-07T16:37:52.281Z",
+      "hora": "12h37",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -1115,296 +1124,71 @@
     {
       "municipio": null,
       "municipioNome": null,
-      "seSabe": [
-        "Que o assunto estaria sendo veiculado por cinco diferentes publicações da imprensa.",
-        "Que a ação policial mencionada envolveria o roubo e desvio de cargas de soja.",
-        "Que o estado de Mato Grosso seria o cenário principal das ocorrências citadas.",
-        "Que a operação policial estaria ligada ao GCCO sob a denominação Cerco Final."
-      ],
-      "falta": [
-        "Confirmação oficial por parte do GCCO ou da Secretaria de Segurança Pública de Mato Grosso.",
-        "O número do procedimento policial ou judicial relativo às prisões e investigações.",
-        "Dados detalhados e oficiais sobre o total exato da carga de soja recuperada."
-      ],
+      "seSabe": [],
+      "falta": [],
       "ondeCirculou": [
         {
-          "veiculo": "O Livre",
-          "titulo": "Polícia mira quadrilha que roubava cargas de soja em Mato Grosso",
-          "link": "https://olivre.com.br/policia-mira-quadrilha-que-roubava-cargas-de-soja-em-mato-grosso/"
+          "veiculo": "Muvuca Popular",
+          "titulo": "PL muda vice de Wellington e troca Marcelo Maluf por Alencar Farina",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZ0MwWFd1N1ptQ3FUUm1fZEdIcnhOcnpBenJLaEtoeE5BSUtTNy13X0VkQlhMdzhTbGlMWGdZLTFXQ08zZnk2TzRYN0pDSWpVRFlkNmpKMGM4Vkk5WFppbmlDdFVZS3paUEMxV2IyLWc3VW03dzdRSWtlWEJIQVp5OWh1RnYzZVphSEZMalBlWWdqcU9oZ2o5Wm5kYjZrNDNLMjhLRE9UaWpsWDI3LUNpT21B?oc=5"
         },
         {
           "veiculo": "Estadão MT",
-          "titulo": "Polícia prende grupo suspeito de roubar 197 toneladas de soja em rodovias de MT",
-          "link": "https://www.estadaomatogrosso.com.br/policia/policia-prende-grupo-suspeito-de-roubar-197-toneladas-de-soja-em-rodovias-de-mt/143545"
+          "titulo": "Marcelo Maluf acusa Wellington de quebrar palavra após ser retirado da vice",
+          "link": "https://www.estadaomatogrosso.com.br/eleicoes-2026/marcelo-maluf-acusa-wellington-de-quebrar-palavra-apos-ser-retirado-da-vice/143559"
         },
         {
           "veiculo": "VG Notícias",
-          "titulo": "Polícia mira esquema que desviou 197 toneladas de soja em MT",
-          "link": "https://www.vgnoticias.com.br/policia/policia-mira-esquema-que-desviou-197-toneladas-de-soja-em-mt/150130"
+          "titulo": "Após perder vaga de vice para médico, Maluf acusa Wellington de “apodrecer a boa política”",
+          "link": "https://www.vgnoticias.com.br/politica/apos-perder-vaga-de-vice-para-medico-maluf-acusa-wellington-de-apodrecer-a-boa-politica/150155"
         },
         {
-          "veiculo": "CenárioMT",
-          "titulo": "Exportação de Soja em Julho Cresce 9,3% em Volume e movimenta o Agro de Mato Grosso",
-          "link": "https://cenariomt.com.br/agro/exportacao-de-soja-em-julho-cresce-93-em-volume-e-movimenta-o-agro-de-mato-grosso/"
+          "veiculo": "Fatos de Mato Grosso",
+          "titulo": "Wellington Fagundes terá Alencar Farina como vice na disputa pelo governo de MT",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQYkJaM3RSc1pTSWNzb0pxcF8xZmR2X3NkcjhCVEdHRlBpcWNtd292Z3hHVHdSSWNIbmhOOXo0RnFfMkxVNFNDUXYyLUU4dEdfdzZaci15MmFBQVVxWHJSV05TUUcwMUlMZ21ZQm1MSlJIbkdtVHFPMnFjeHpLSVFDT0V5Q1ZtdHhGVTBzU2txbEd1cmJONnpyXzRjRC1hVUFwZEdoTTBlN3NPMlZPN1M1NERleS1jVlNLMlNOeURtNldyanREZjlUeWdFMA?oc=5"
         },
         {
-          "veiculo": "Só Notícias",
-          "titulo": "GCCO identifica envolvidos em roubo de carga e deflagra operação Cerco Final em Mato Grosso",
-          "link": "https://www.sonoticias.com.br/policia/gcco-identifica-envolvidos-em-roubo-de-carga-e-deflagra-operacao-cerco-final-em-mato-grosso/"
-        }
-      ],
-      "link": "/materia/nc-operacao-policial-miraria-esquema-de-roubo-de-soja-em-mato-grosso.html",
-      "corpo": [
-        "Cinco publicações veiculam a ocorrência de uma operação policial voltada a desarticular um esquema de desvio e roubo de cargas de soja no estado de Mato Grosso. As informações apontam que a ação seria conduzida pelo GCCO e estaria batizada como Operação Cerco Final, mirando suspeitos de subtrair o equivalente a 197 toneladas do grão em rodovias locais.",
-        "As manchetes divergem, contudo, quanto ao desdobramento imediato da ação: enquanto parte dos veículos relata que a polícia apenas mira e investiga o grupo criminoso, outros afirmam categoricamente que prisões já teriam sido efetivadas. Além disso, uma das publicações aborda um tema econômico distinto ao noticiar o crescimento de 9,3% no volume das exportações de soja no mês de julho, sem conexão direta explícita com as diligências policiais.",
-        "O material em circulação sugere que estaria em curso um cerco a atividades ilícitas voltadas ao escoamento irregular de produção agrícola nas estradas mato-grossenses. Permanece em aberto a reconciliação entre os relatos de mera investigação e a efetivação de prisões, bem como a confirmação oficial dos dados volumétricos da carga apreendida ou desviada."
-      ],
-      "id": "circ:operacao-policial-miraria-esquema-de-roubo-de-soja-em-mato-grosso",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Operação policial miraria esquema de roubo de soja em Mato Grosso",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:02:57.117Z",
-      "hora": "10h02"
-    },
-    {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
-      "seSabe": [
-        "Que o assunto está sendo publicado por cinco veículos de imprensa.",
-        "Que haveria uma operação policial em andamento no estado de Mato Grosso.",
-        "Que a Polícia Civil seria citada em relação a uma operação chamada Entreposto."
-      ],
-      "falta": [
-        "Confirmação oficial do número exato de toneladas de soja subtraídas.",
-        "Identificação precisa dos alvos e do número de suspeitos detidos.",
-        "Manifestação formal da Polícia Civil sobre os desdobramentos da operação."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "g1 MT",
-          "titulo": "Grupo suspeito de roubar toneladas de soja é alvo de operação em MT",
-          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/07/grupo-suspeito-de-roubar-toneladas-de-soja-e-alvo-de-operacao-em-mt.ghtml"
-        },
-        {
-          "veiculo": "Estadão MT",
-          "titulo": "Polícia prende grupo suspeito de roubar 197 toneladas de soja em rodovias de MT",
-          "link": "https://www.estadaomatogrosso.com.br/policia/policia-prende-grupo-suspeito-de-roubar-197-toneladas-de-soja-em-rodovias-de-mt/143545"
-        },
-        {
-          "veiculo": "Muvuca Popular",
-          "titulo": "Trio é alvo de operação por sequestrar motorista e roubar caminhão em Várzea Grande",
-          "link": "https://www.muvucapopular.com.br/2026/08/07/trio-e-alvo-de-operacao-por-sequestrar-motorista-e-roubar-caminhao-em-varzea-grande/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=trio-e-alvo-de-operacao-por-sequestrar-motorista-e-roubar-caminhao-em-varzea-grande"
-        },
-        {
-          "veiculo": "CenárioMT",
-          "titulo": "Polícia Civil deflagra Operação Entreposto contra grupo criminoso especializado em roubos de cargas de soja em rodovias de Mato Grosso",
-          "link": "https://cenariomt.com.br/mato-grosso/rondonopolis/policia-civil-deflagra-operacao-entreposto-contra-grupo-criminoso-especializado-em-roubos-de-cargas-de-soja-em-rodovias-de-mato-grosso/"
+          "veiculo": "O Livre",
+          "titulo": "Empresário Marcelo Maluf diz que foi dispensado da aliança de vice por Wellington Fagundes",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd0xqUDJzVWNJNWJTanBwWE4xS1lMSExQNW9fX2RfZDFocTQ5MkZUTmxrM2RVaDN1Y1JzTUo5S1BfRUR0cktObUtxaG9fWmRoMnlWUnJhRDlqTldVb1NaamVpUnBTcS1RNzROWmVBZXBpMUxjckFYZUZmOV82VUJoSjRVUFNPN2dYZEpTWTVFV21xeDh2eTNraldhQ2NiZTNzcHlxai1vdVZOenN5UmRTM0lTbw?oc=5"
         },
         {
           "veiculo": "Só Notícias",
-          "titulo": "Polícia faz operação para prender quadrilha que roubou quase 200 toneladas de soja em Mato Grosso",
-          "link": "https://www.sonoticias.com.br/policia/quadrilha-investigada-por-roubos-de-quase-200-toneladas-de-soja-e-alvo-de-operacao-em-mato-grosso/"
+          "titulo": "PL descarta Maluf e muda candidato a vice na chapa com Wellington",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTVpMN05rQ3RWOFZVOHF5MTE5LWt6QTExY3E3UlFBMVlMSzd2TEhUT0c1eFhrNFlURUJUR0MwVExTRS1MdzVNV3JuTHVDQUZDTDQ3UUhjYmw0UTY4ekJRT19aM1RkQUFwcFRuYlJVQlo5YUhkbXk3VWhxemdJZC1OT1hRNEoxcnpJNS1qMG1OLVdvUU8yR0tJNjdpdXRiZ0JwS1VRNXZzbU0?oc=5"
         }
       ],
-      "link": "/materia/nc-operacao-visaria-grupo-suspeito-de-roubar-soja-em-mato-grosso.html",
+      "link": "/materia/nc-pl-teria-trocado-candidato-a-vice-de-wellington-fagundes-ao-governo-de.html",
       "corpo": [
-        "As publicações veiculam que uma operação policial estaria em curso no estado de Mato Grosso contra um grupo suspeito de roubar toneladas de soja em rodovias. A Polícia Civil seria o órgão responsável pela deflagração da chamada Operação Entreposto.",
-        "As manchetes divergem quanto à natureza da ação e ao alvo: enquanto algumas apontam a prisão de um grupo ou trio suspeito de roubar entre 197 toneladas e quase 200 toneladas de soja, outras especificam o sequestro de um motorista e o roubo de um caminhão no município de Várzea Grande.",
-        "O material em circulação apontaria a existência de uma quadrilha especializada em roubos de cargas agrícolas nas rodovias estaduais."
+        "O partido PL teria decidido alterar o candidato a vice-governador na chapa de Wellington Fagundes na disputa pelo governo de MT. A agremiação teria substituído a indicação de um empresário pela escolha de um médico para compor a vaga. O empresário preterido teria afirmado que foi dispensado da aliança diretamente por Wellington Fagundes. Após ser retirado do posto, ele teria acusado o político de "
       ],
-      "id": "circ:operacao-visaria-grupo-suspeito-de-roubar-soja-em-mato-grosso",
+      "id": "circ:pl-teria-trocado-candidato-a-vice-de-wellington-fagundes-ao-governo-de",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Operação visaria grupo suspeito de roubar soja em Mato Grosso",
+      "titulo": "PL teria trocado candidato a vice de Wellington Fagundes ao governo de MT",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:03:15.348Z",
-      "hora": "10h03"
-    },
-    {
-      "municipio": "sinop",
-      "municipioNome": "Sinop",
-      "seSabe": [
-        "Que seis veículos da imprensa publicam informações sobre a cobrança na Estrada Selene.",
-        "Que a Prefeitura de Sinop estaria envolvida na fiscalização e na cobrança.",
-        "Que uma empresa estaria se comprometendo a acelerar os trabalhos na via.",
-        "Que uma das publicações menciona o valor de R$ 10,4 milhões para a obra."
-      ],
-      "falta": [
-        "Confirmação oficial da prefeitura sobre a cobrança.",
-        "Identificação da empresa responsável pela execução da obra.",
-        "Documentação ou termo de compromisso formal entre as partes.",
-        "Detalhes sobre o contrato de R$ 10,4 milhões citado em parte das publicações."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Expressão Notícias",
-          "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQWJWaXljbUE2MEtNMGYtNTdWQVdjY0Y3ZzZQbWZBUVJZLXhGQy1uQWdBMnFzZW1GeV9qMkhhTGhtdnIxU09sczRtZ0RqSEMwVUZiRzdmZ3RvUC1zWE1iLXQ1dW5XaW9zSVNxTXlKXzhYUld0WGtnMk1WUTVTeVBFMVVPV28xNmJid21pZ0F3eF9ZSDJkaWhEX0VEQ1huS2Rob2FwZDdBM0hiSWVnN1BZWFNVaUtuR0x5V0dTZWx3?oc=5"
-        },
-        {
-          "veiculo": "PORTAL MATO GROSSO",
-          "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFFKMDhuVlcxaTFHdHlzVjlPUHlNUkxxRWIzWUdLaktMNmM4eWxDS1NRcDFEWFVqcEF2bVhKZXdTZE9hVlluZHl3M01NNW03bm9WckdFa3BwbUNqYWlPVE9ydDQ5cFVSOS1Wbk9zYkRoZjY5MXpZbC0taThCWmdpU1lTNnRMMDhBSUtSektnbng0dTRHdkVtM1hYcUwtYUF2eGF6cWwzUkszNF8zZmJ3dldvMlI5UXE1bEEzR0FYNlVONEh0azlOWmZsYTRoVEVmdEE?oc=5"
-        },
-        {
-          "veiculo": "MOMENTO MT",
-          "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPdzhfUzlZMVVKRWlWeHMwNXdEdmJiaWx5ZlZ6c0ZMYU1PYTJQS0MyT3h3ZHg1TGNHZVZBWXBzdk1MTWZoTnJKMUNOdXNQeERaU2hsdXhJY3dJVWxobmluakQ1WWdaOG03NVJEc19PT09leUhIR2Rsb3ZBRjRuYmVFcGlzYURXQTJIQVlXMjh6S3pzVEFSbEVCVnNfUG9UVF9QV2F5bW9vYnA5RkJJUHh4eEFFMUhXZi1xWTcxZi1mckMyUS0xYk9XaTltUQ?oc=5"
-        },
-        {
-          "veiculo": "rdmonline.com.br",
-          "titulo": "Sinop cobra empresa por atraso em obra de R$ 10,4 milhões na Estrada Selene",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZGZadXZ2NGFLeGdFVDlzczluR2hIVDBhREM1WWFpR0xXdmFZUGdmRG43MjQ0RVFDeWhtN1RTdnlCVEw1bUhpa2VkakJvWXdMQzNKQjlEUjlabVJoY0k3dlhyN01fX3VNcmtWS0JjRW50MVNadklIMmdfcHFGdV9JN3VWVjZaQkFWOFVnbUo0RzMyQnhiWGRCc1A5ZWJ3LTRD?oc=5"
-        },
-        {
-          "veiculo": "Portal 93",
-          "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene - Portal 93",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSWMtTVdjb0pYTUVCQVJhZHFLUzhKYjllRG1raHFVamZSb3ZmTHF1YjZSVVVYRzhPeWpsZ0MtMkFYamg0eC1uZktTbVpxV1MxZWdZdkVkb01aNTI3SzB4Tzk1d0RjOHVfUHNZWl93RU81cTFhNnFLOU1oTnF2ZmxqLUZRVUZkNHJPQnZZTzFjaFZyQjk3QjgyamdMOTJwdEN3bTl5VVRiZFkwTG9mUlHSAbMBQVVfeXFMTno2R1VkbGR1V1oxOWZVc0xISlgxa2Z3LVF3Wnl2LTRwLVVHZmQzRm9VUmhkX2hIMFdBNkhyY21zVTUwcnVQbHRKa081N09SUnFPdTBhdHV2NG9hSGNWZTMtaGhldkh0OEdiWlA1aWhpYWxSWV9PQWNiUGtsdTMzVWxoUGxBcjRZbUtBSjAtR0I4NFVnaTdoMGI2WnlsQUl0eXNfNU15ck84WThRd1FiUW5VaWc?oc=5"
-        },
-        {
-          "veiculo": "mtagora.com.br",
-          "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNY0pqQzJYNkRxcmNXcVh4aTZ3NHppX0tGNnh5aklsX0d0eHpOQ3lQSjFnQk1xX0RNMkJIRWFzdkdnTUxXb3hGck1QYmRrWjV2Yy14NTVjM09vVXAxVjdwVHJHWXdNMFdMZmVnVlg0TFFzNmF4dTNKQWxrVTVHNVprTnpVWlZpT1ZjRTdNZC1LalVtbXA0WWZKZjBza045V0dFUUpfX1hSbjRqY1RsR3JMeUxpcnNkVWVGZXVOSmJn?oc=5"
-        }
-      ],
-      "link": "/materia/nc-obra-na-estrada-selene-em-sinop-teria-cobranca-de-prefeitura.html",
-      "corpo": [
-        "Seis publicações veiculam que uma empresa estaria se comprometendo a acelerar uma obra na Estrada Selene após cobrança da Prefeitura de Sinop. A administração municipal estaria intensificando a fiscalización e cobrando agilidade na conclusão dos serviços na via.",
-        "Uma das publicações acrescenta que a obra citada envolveria um valor de R$ 10,4 milhões e que haveria cobrança por atraso por parte do órgão público. As demais matérias concentram-se no compromisso assumido pela empresa após a exigência municipal.",
-        "A circulação simultânea da informação em seis veículos da imprensa marca o atual estágio do caso. Nenhuma fonte oficial divulgou ainda documentos que atestem o teor do acordo ou o estágio contratual."
-      ],
-      "id": "circ:obra-na-estrada-selene-em-sinop-teria-cobranca-de-prefeitura",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Obra na Estrada Selene em Sinop teria cobrança de prefeitura",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:04:04.379Z",
-      "hora": "10h04"
-    },
-    {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
-      "seSabe": [
-        "Que o assunto está sendo publicado por cinco veículos da imprensa regional.",
-        "Que a Prefeitura de Várzea Grande e o Corpo de Bombeiros são citados na parceria.",
-        "Que Nova Santa Helena, Paranatinga e Canarana aparecem como locais de atuação dos bombeiros."
-      ],
-      "falta": [
-        "Confirmação oficial por parte da Prefeitura de Várzea Grande.",
-        "Confirmação oficial por parte do Corpo de Bombeiros.",
-        "Apresentação do termo ou documento de renovação da parceria.",
-        "Datas exatas e números de procedimento referentes aos acordos citados."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Isso É Notícia",
-          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em VG",
-          "link": "https://issoenoticia.com.br/prefeitura-e-corpo-de-bombeiros-renovam-parceria-para-fortalecer-combate-as-queimadas-em-vg/"
-        },
-        {
-          "veiculo": "CenárioMT",
-          "titulo": "Corpo de Bombeiros mantém força-tarefa e combate incêndios florestais em Nova Santa Helena, Paranatinga e Canarana",
-          "link": "https://cenariomt.com.br/mato-grosso/corpo-de-bombeiros-mantem-forca-tarefa-e-combate-incendios-florestais-em-nova-santa-helena-paranatinga-e-canarana/"
-        },
-        {
-          "veiculo": "oempallador.com.br",
-          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWEtXY2R2a04tdG9JLTFWQ0hZOS0xRm5xS0NXQVBUTEVJLWpEeWFpMGk1TXItbmZBa2ZQbVkyb1VfMjVoX3FrdUhRaDZCSHlLcTJ6OUdEd3EtSGFHVjFiWWhHTzNGdTEwX3AwMzgxTGExNUVTZ1lTcURxN0FMejdQYVVIUjdOcXZ2UXNFQ01TVVZNY0M2M0pwWklkYTU5SUlUc1lHam9ZSmJyamhlN2YzbTNBZHJrekVLLUIxZDY3MjBtWVoydUxQeXZ3?oc=5"
-        },
-        {
-          "veiculo": "EXCLUSIVO NEWS",
-          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRUIyTFJ1Sko3alIwOXJvRWMzazVGYlg1U0Mwc2lLMkl1MkNCbWMzaFE1ZklLX1ljUGVscFZjemdpM0FLNFZFX0pjbzVfQlpTNUxvakpHeXZZTVIxOHNqZDN4Y0F3NWRKUjRLbHFlS2U0RlBUVGFhQlJKbWlqYUFJV0g4Q1J2YWFYODZIMXUtaVVVUHZkNnJydDFIc1V4SHItWlJkdExsWXcyWGVibnVQRmp4cklaMVVFbVNpUEtiV0dVNm1XaEg2V3FDM01GYXo4dXNQSkJaQ0N6ZGhaVjExMWtJbGpWcEsydDBheGdvdWtVdmhZ?oc=5"
-        },
-        {
-          "veiculo": "Notícia Max",
-          "titulo": "Várzea Grande reforça combate às queimadas e renova parceria com Corpo de Bombeiros",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU15WjJMRldxeWdFUHZ2S0tON1lQWVFxODJfMFJsUjdrbXR0R3hBaWRXU3UzaHhxYlA2RlRxaVlPODROMXFOSnRVaVZvMHNXeWVoV0JkT2g3bVl1dF9EMnRMeGsyLUhLZVpuRFF3WjVLNm5fM3pyX2RYMEVwSTZva0xDVWdoeVYwV3ZhelEyeE16X1hRTDFocGlUX2hmNTZzRVo5NEVNT3JfWVFWZmlGVThUSW9Oa1NlLWxybTRXVGhWWVdGTk00?oc=5"
-        }
-      ],
-      "link": "/materia/nc-parceria-contra-queimadas-estaria-sendo-renovada-em-varzea-grande.html",
-      "corpo": [
-        "Cinco publicações veiculam a informação de que a Prefeitura e o Corpo de Bombeiros teriam renovado parceria para fortalecer o combate às queimadas em Várzea Grande. A força-tarefa dos bombeiros também estaria atuando no combate a incêndios florestais em Nova Santa Helena, Paranatinga e Canarana.",
-        "As matérias circulam na imprensa regional sem menção a datas específicas ou documentos oficiais publicados. Não há registro formal da renovação nos canais institucionais dos órgãos citados até o momento."
-      ],
-      "id": "circ:parceria-contra-queimadas-estaria-sendo-renovada-em-varzea-grande",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Parceria contra queimadas estaria sendo renovada em Várzea Grande",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:04:18.576Z",
-      "hora": "10h04"
-    },
-    {
-      "municipio": "vg",
-      "municipioNome": "Várzea Grande",
-      "seSabe": [
-        "Que o assunto estaria sendo publicado por cinco veículos da imprensa.",
-        "Que a Prefeitura de Várzea Grande seria citada em todas as publicações.",
-        "Que o Corpo de Bombeiros figuraria em algumas das notas divulgadas."
-      ],
-      "falta": [
-        "Confirmação de fonte oficial sobre a convocação da audiência pública.",
-        "Registro documental da renovação de parceria com o Corpo de Bombeiros.",
-        "Divulgação da data e do local dos eventos anunciados."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "noveen.com.br",
-          "titulo": "Prefeitura convida população para discutir futuro do saneamento em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMUNLRVNmajJGcnJlQ2tNSTBpbmhZekViQmI1S2xhUXlFUTRUQUlrcXZqVXkwbmVVZU05b1JkNWJtOE1DTDF2U293SmhNbVFOdl8xQWx6ajFsVnNSc05PS2l2S0hpaXNMU2Zmam16RnpxWkVsTmljcFN6SmczSDRxZG5ZMEFNcGRyOFFOcHZZZTFValAwZWVLWTY3STVJOFEzOXprMGhlQXZlUnJHaDluZ0s2NUh3dmNIV2NBd1dsa2xlZw?oc=5"
-        },
-        {
-          "veiculo": "Prefeitura Municipal de Várzea Grande - Página Inicial",
-          "titulo": "Prefeitura mobiliza toda a cidade e convida população para audiência que vai definir o futuro do saneamento em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNWHExWUU2dXBXTnF2TERDS2FoSldRcHd3b2tmM2h1VVJDQ1hSMGx4TzZlZ0oycENLRUdnUTMtNTdwUF9lRDVRbkQ0U0treUNLcl9aLWRsYUV0bzBLbHZzMW5TZ3J0blBaSXllbEdYODVibjB3STZQN3djb2RGVmg2azgtcldwc1VLQ0pqdUNENzJVYVFiTXp4RFlwTnU0SWV4YjBxbUd3RHZDMW9zRnI1M3FkSDVtazlHMnBKWlFaU2wtOXpGMW1PcFJpVHhpeGJGWEx3enp5by1ncVE3RUVXQVVkT1k2WVlqYXV3b1M0T09qOU1hdEtjQWtpN1BldjJ2V0ExVw?oc=5"
-        },
-        {
-          "veiculo": "oempallador.com.br",
-          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWEtXY2R2a04tdG9JLTFWQ0hZOS0xRm5xS0NXQVBUTEVJLWpEeWFpMGk1TXItbmZBa2ZQbVkyb1VfMjVoX3FrdUhRaDZCSHlLcTJ6OUdEd3EtSGFHVjFiWWhHTzNGdTEwX3AwMzgxTGExNUVTZ1lTcURxN0FMejdQYVVIUjdOcXZ2UXNFQ01TVVZNY0M2M0pwWklkYTU5SUlUc1lHam9ZSmJyamhlN2YzbTNBZHJrekVLLUIxZDY3MjBtWVoydUxQeXZ3?oc=5"
-        },
-        {
-          "veiculo": "EXCLUSIVO NEWS",
-          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRUIyTFJ1Sko3alIwOXJvRWMzazVGYlg1U0Mwc2lLMkl1MkNCbWMzaFE1ZklLX1ljUGVscFZjemdpM0FLNFZFX0pjbzVfQlpTNUxvakpHeXZZTVIxOHNqZDN4Y0F3NWRKUjRLbHFlS2U0RlBUVGFhQlJKbWlqYUFJV0g4Q1J2YWFYODZIMXUtaVVVUHZkNnJydDFIc1V4SHItWlJkdExsWXcyWGVibnVQRmp4cklaMVVFbVNpUEtiV0dVNm1XaEg2V3FDM01GYXo4dXNQSkJaQ0N6ZGhaVjExMWtJbGpWcEsydDBheGdvdWtVdmhZ?oc=5"
-        },
-        {
-          "veiculo": "LOCAL MT",
-          "titulo": "Prefeitura mobiliza toda a cidade e convida população para audiência que vai definir o futuro do saneamento em Várzea Grande",
-          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQNHZjQkZ4NnNPLWxsRUNySkdmT3FpaGFkNDUtb2U2SGprVDNCSV9ralRtaUw3S2Uwc1V3WkhwSUxLUU95eFRmQmtKbFZEN2paZ3hCdVpCbTdkU0QteTRqNi1jT0RHQmdPWWFFTFRab0M0ZXoxZmRlWG1jWF9BbUpka3RubXRTWUN5WHpHLUxVamplWFU1RkZDZG1uMjg4dlA2Z091VjUxXzVtOVJrRGJfeV9CTXQ0X3pWRUtuVkJYSGljNEgwT1FlTERLZkIwSlY5cjNvRXpYN1VVWENVTGwzRE1BTW5qN25aTTZwSXJ6ejhka2hO?oc=5"
-        }
-      ],
-      "link": "/materia/nc-varzea-grande-discutiria-saneamento-e-parceria-com-bombeiros.html",
-      "corpo": [
-        "As publicações que veiculam o tema alegam que a Prefeitura de Várzea Grande estaria convidando a população para uma audiência sobre o futuro do saneamento e renovando uma parceria com o Corpo de Bombeiros. As informações trazem duas frentes distintas de atuação municipal no município.",
-        "Os veículos que publicaram divergem quanto ao foco principal das notas, dividindo-se entre a mobilização para o debate de saneamento e o reforço no combate às queimadas em conjunto com a corporação. Não há menção a datas específicas ou locais determinados para os eventos citados.",
-        "Estaria em jogo a definição de políticas públicas de saneamento básico e a estratégia de prevenção a incêndios na região."
-      ],
-      "id": "circ:varzea-grande-discutiria-saneamento-e-parceria-com-bombeiros",
-      "editoria": "regional",
-      "uf": "mt",
-      "titulo": "Várzea Grande discutiria saneamento e parceria com Bombeiros",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:04:58.787Z",
-      "hora": "10h04"
+      "iso": "2026-08-07T16:44:15.169Z",
+      "hora": "12h44"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "O assunto estaria sendo veiculado por quatro veículos de imprensa.",
-        "A Força Nacional atuaria na região por um período de 180 dias.",
-        "A Terra Indígena Sararé, no Mato Grosso, seria o local da operação.",
-        "A atuação envolveria o combate a garimpo ilegal e a facções criminosas."
+        "Que cinco veículos de imprensa veiculam relatos sobre a autorização da medida.",
+        "Que as publicações mencionam a Força Nacional e o prazo de 180 dias.",
+        "Que o estado de Mato Grosso é citado como local da atuação."
       ],
       "falta": [
-        "A publicação do ato de autorização no Diário Oficial da União.",
-        "O detalhamento do efetivo que seria empregado na operação.",
-        "A manifestação oficial do Ministério da Justiça e Segurança Pública."
+        "Publicação do ato formal de autorização no Diário Oficial da União.",
+        "Confirmação oficial do Governo sobre o envio do efetivo.",
+        "Identificação oficial da portaria ou documento que regulamenta a operação."
       ],
       "ondeCirculou": [
+        {
+          "veiculo": "Muvuca Popular",
+          "titulo": "Governo autoriza Força Nacional por 180 dias na Terra Indígena Sararé",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQmdoNUxaVWw5c1JCRnBQU01wZTdVaEI5aFRacGNyakQ0WVJnWWtMeXBuVEhMazV3Z0RMbV8ycWkzRHNLWkhsT1pveTROc1dCR3NIZlM1UWtoTmE1UzQ4cXc0dEZFeHNfSFZjX0I3Z0t6MnZyUzNLMlBmQmp3RnZ6TGRuVmpPbzUxcG9WbVBKVHZtQjNjaGlDdUM1OWxreXdyTEFEdVIzWGNidjM3M2FwSHVVMnk?oc=5"
+        },
         {
           "veiculo": "O Documento",
           "titulo": "Força Nacional atuará por 180 dias na Terra Indígena atingida por garimpo e facção criminosa",
@@ -1416,173 +1200,351 @@
           "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/07/forca-nacional-e-autorizada-a-atuar-por-180-dias-na-terra-indigena-sarare-em-mt.ghtml"
         },
         {
-          "veiculo": "Primeira Página",
-          "titulo": "Força Nacional atuará por 180 dias na Terra Indígena Sararé atingida por garimpo e facção criminosa",
-          "link": "https://primeirapagina.com.br/seguranca/forca-nacional-atuara-por-180-dias-na-terra-indigena-sarare-atingida-por-garimpo-e-faccao-criminosa/"
+          "veiculo": "VG Notícias",
+          "titulo": "Força Nacional atuará por 180 dias contra garimpo ilegal em MT",
+          "link": "https://www.vgnoticias.com.br/cidades/forca-nacional-atuara-por-180-dias-contra-garimpo-ilegal-em-mt/150141"
         },
         {
-          "veiculo": "G1",
+          "veiculo": "Isso É Notícia",
           "titulo": "Força Nacional é autorizada a atuar por 180 dias na Terra Indígena Sararé, em MT",
-          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOaExMM2tNTUVCWGFSQnlMczYwV2pPOFo4LTY1ZXBhV0pvZVNabllLUmozT0VJNFhjM2FubFg1dnRtbzZQT1BISDNIbFVhbWtPY0YyNFctejkyRl9OY3o0YllVaXRmZnI4cHZxLVE3alNWNGJtdjc0WjZDLWVTa01yNWFTbHMzZ0s0dzFOUFFvR01IOVBKY1d0clVFZEFRTTZhdXlCZm5DaUNlQUFiRUJ4SmFtanRYTjliX0xqTTlWSkpFWGFsRmlua2k3WVNTbTB1TnFhRDVFZ2t0S3ZuTWJ6eWRxVmpKUdIB5gFBVV95cUxOaExMM2tNTUVCWGFSQnlMczYwV2pPOFo4LTY1ZXBhV0pvZVNabllLUmozT0VJNFhjM2FubFg1dnRtbzZQT1BISDNIbFVhbWtPY0YyNFctejkyRl9OY3o0YllVaXRmZnI4cHZxLVE3alNWNGJtdjc0WjZDLWVTa01yNWFTbHMzZ0s0dzFOUFFvR01IOVBKY1d0clVFZEFRTTZhdXlCZm5DaUNlQUFiRUJ4SmFtanRYTjliX0xqTTlWSkpFWGFsRmlua2k3WVNTbTB1TnFhRDVFZ2t0S3ZuTWJ6eWRxVmpKUQ?oc=5"
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPckhZNUxvVnkzVEtKLTRtMjNib2xBNWFsZHBhdW5GWG52aXgwZHFjMGpzMGRBUzJBSnNBX1QxNk03cEJMc1dDWUh2RVFSTTlxQjZBQTVJZGgxRTNSc3BRSnFGelQtdFNqUjVlTy1lREQzRlk5a2tmcmxkd2hJXzRiUDJpOE5EWTNIcm1ZMlRHXzdUZmVRdTdKcmtTWGtDRFFiajNKZVFiY0o3eHZY?oc=5"
         }
       ],
-      "link": "/materia/nc-forca-nacional-atuaria-na-terra-indigena-sarare-por-180-dias.html",
+      "link": "/materia/nc-governo-teria-autorizado-forca-nacional-por-180-dias-em-terra-indigena.html",
       "corpo": [
-        "A atuação da Força Nacional de Segurança Pública na Terra Indígena Sararé estaria autorizada pelo período de 180 dias. A medida, segundo o noticiário, ocorreria em área afetada por atividades de garimpo e pela presença de facção criminosa.",
-        "As publicações divergem quanto ao detalhamento do anúncio, com algumas citando nominalmente a Terra Indígena Sararé e o estado de Mato Grosso, enquanto outras tratam apenas do prazo e do contexto de criminalidade. Não há, no entanto, divergência sobre a duração prevista de 180 dias para a suposta operação.",
-        "O deslocamento de efetivo federal para regiões de conflito e exploração ilegal costuma integrar protocolos de cooperação entre os ministérios competentes e os governos estaduais. A oficialização da ordem de emprego depende de publicação nos canais oficiais do governo federal."
+        "O Governo teria autorizado o emprego da Força Nacional pelo período de 180 dias em Mato Grosso. A medida estaria relacionada a ações de segurança em território indígena no estado.",
+        "A maioria das publicações especifica que a atuação ocorreria na Terra Indígena Sararé. Os veículos convergem quanto ao prazo estipulado para a permanência da tropa na região.",
+        "A mobilização das forças seria voltada ao combate do garimpo ilegal na localidade. As matérias indicam ainda que a área afetada estaria sob a ação de facção criminosa."
       ],
-      "id": "circ:forca-nacional-atuaria-na-terra-indigena-sarare-por-180-dias",
+      "id": "circ:governo-teria-autorizado-forca-nacional-por-180-dias-em-terra-indigena",
       "editoria": "regional",
       "uf": "mt",
-      "titulo": "Força Nacional atuaria na Terra Indígena Sararé por 180 dias",
+      "titulo": "Governo teria autorizado Força Nacional por 180 dias em Terra Indígena de MT",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-07T14:05:40.613Z",
-      "hora": "10h05"
+      "iso": "2026-08-07T16:44:42.398Z",
+      "hora": "12h44"
+    },
+    {
+      "municipio": "vg",
+      "municipioNome": "Várzea Grande",
+      "seSabe": [
+        "Que o assunto está sendo publicado por cinco veículos de imprensa.",
+        "Que as matérias mencionam a Prefeitura e o Corpo de Bombeiros em Várzea Grande.",
+        "Que há citações a debate sobre saneamento e à Terra Indígena Tadarimana."
+      ],
+      "falta": [
+        "Publicação dos termos de parceria ou atos normativos em diário oficial.",
+        "Confirmação de data, horário e local para a discussão sobre saneamento.",
+        "Manifestação oficial da Prefeitura de Várzea Grande e do Corpo de Bombeiros.",
+        "Identificação da prefeitura responsável pela formação da brigada na TI Tadarimana."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CONEXÃO MT",
+          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONzNzM0pvazN3SHlmX0VnSXNTVEVmUFJsS2FLaVJNX1lRMUdWekxJYlNKOVBhY1BWZkJjcVVkcGRJN3VjMWJJTEh4U0JjaF9qWld1WjZpNFFrSW9zMlozbGRiRnZONjR1RXNrdWttQXN0MG1KbHN1OGZEcU9xQWVBZU5VR1ZkT2x5b3o2aHZpakwtRF9mWXdfYUpBYkxONjlQaWJVNjBaM2xjRDBEUlViWmI4MzZYY2MyRGQxcUxTZW9Yb3VmYm1VM2ltbGZmRUkzZ1pBTGxOR3hEelpnN3JKSg?oc=5"
+        },
+        {
+          "veiculo": "EXCLUSIVO NEWS",
+          "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRUIyTFJ1Sko3alIwOXJvRWMzazVGYlg1U0Mwc2lLMkl1MkNCbWMzaFE1ZklLX1ljUGVscFZjemdpM0FLNFZFX0pjbzVfQlpTNUxvakpHeXZZTVIxOHNqZDN4Y0F3NWRKUjRLbHFlS2U0RlBUVGFhQlJKbWlqYUFJV0g4Q1J2YWFYODZIMXUtaVVVUHZkNnJydDFIc1V4SHItWlJkdExsWXcyWGVibnVQRmp4cklaMVVFbVNpUEtiV0dVNm1XaEg2V3FDM01GYXo4dXNQSkJaQ0N6ZGhaVjExMWtJbGpWcEsydDBheGdvdWtVdmhZ?oc=5"
+        },
+        {
+          "veiculo": "Notícia Max",
+          "titulo": "Várzea Grande reforça combate às queimadas e renova parceria com Corpo de Bombeiros",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU15WjJMRldxeWdFUHZ2S0tON1lQWVFxODJfMFJsUjdrbXR0R3hBaWRXU3UzaHhxYlA2RlRxaVlPODROMXFOSnRVaVZvMHNXeWVoV0JkT2g3bVl1dF9EMnRMeGsyLUhLZVpuRFF3WjVLNm5fM3pyX2RYMEVwSTZva0xDVWdoeVYwV3ZhelEyeE16X1hRTDFocGlUX2hmNTZzRVo5NEVNT3JfWVFWZmlGVThUSW9Oa1NlLWxybTRXVGhWWVdGTk00?oc=5"
+        },
+        {
+          "veiculo": "noveen.com.br",
+          "titulo": "Prefeitura convida população para discutir futuro do saneamento em Várzea Grande",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMUNLRVNmajJGcnJlQ2tNSTBpbmhZekViQmI1S2xhUXlFUTRUQUlrcXZqVXkwbmVVZU05b1JkNWJtOE1DTDF2U293SmhNbVFOdl8xQWx6ajFsVnNSc05PS2l2S0hpaXNMU2Zmam16RnpxWkVsTmljcFN6SmczSDRxZG5ZMEFNcGRyOFFOcHZZZTFValAwZWVLWTY3STVJOFEzOXprMGhlQXZlUnJHaDluZ0s2NUh3dmNIV2NBd1dsa2xlZw?oc=5"
+        },
+        {
+          "veiculo": "folhaestado.com.br",
+          "titulo": "Prefeitura forma brigada indígena para combater queimadas na TI Tadarimana",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOXNaUUZwRDZxOTJpUExxZmtueC1jVjhfbklLM19QbXRmcks0NnZXcjdWQU9rYi1ZSEdSWXV4TXR2MnE1czIzV0IxdEJ0YWQ5SVJoMjhtRkFRbW5pWnpHbzhrTnB1REZIU0pzVzd0MGJtbHlYZllKeU8xaDBIbERocFY0S3hIUTB4VEFaaTBNOEc2RnJzemhnUVJKSE1aTVBfN2VVdg?oc=5"
+        }
+      ],
+      "link": "/materia/nc-prefeitura-de-varzea-grande-teria-renovado-parceria-para-combate-a-que.html",
+      "corpo": [
+        "A Prefeitura de Várzea Grande e o Corpo de Bombeiros teriam renovado uma parceria voltada ao fortalecimento do combate a queimadas. A alegação estaria sendo veiculada por publicações de imprensa sem, contudo, registro oficial localizado até o momento.",
+        "Outras informações divulgadas pelas publicações indicariam um convite da prefeitura para a população discutir o futuro do saneamento em Várzea Grande. Além disso, uma das matérias citaria a formação de uma brigada indígena para atuar na Terra Indígena Tadarimana.",
+        "Os conteúdos divergiram entre si ao alternar o foco entre ações urbanas de saneamento, acordos institucionais e formação de brigadas comunitárias. Não haveria detalhes sobre termos assinados, prazos de consulta pública ou atos normativos das medidas citadas."
+      ],
+      "id": "circ:prefeitura-de-varzea-grande-teria-renovado-parceria-para-combate-a-que",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Prefeitura de Várzea Grande teria renovado parceria para combate a queimadas",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-07T16:45:06.222Z",
+      "hora": "12h45"
+    },
+    {
+      "municipio": "rondonopolis",
+      "municipioNome": "Rondonópolis",
+      "seSabe": [
+        "Que o assunto está sendo noticiado por ao menos quatro veículos de imprensa.",
+        "Que as publicações atribuem a ação à Polícia Civil de Mato Grosso.",
+        "Que os relatos citam o município de Rondonópolis como local de atuação policial.",
+        "Que há divergência nas matérias sobre o volume exato da soja desviada."
+      ],
+      "falta": [
+        "Confirmação oficial da Polícia Civil sobre a deflagração da operação e prisões.",
+        "Número do procedimento investigatório ou dos mandados judiciais expedidos.",
+        "Posicionamento da defesa do empresário mencionado nas matérias.",
+        "Balanço oficial e definitivo sobre a quantidade de carga envolvida."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "Primeira Hora",
+          "titulo": "Polícia Civil de Rondonópolis cumpre mandados contra grupo criminoso que roubou 197 toneladas de soja em MT",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZ1lpM2EzQnE3WWZqWDhsR0pTYU8yaXB3bVhYRDFhYTZ6WUtMQmpjVU14VEs2T2dELWZxSGdMTjRWODVyMEROcU9KN3NKQ01zbGtRUUFuNDlNYkVnU0FCNWdyck5ZWXVDa3B2eGpqdjVRNWR0SnpoX2g5UWFndzNyblF3MTRtWVFVYm11V3dBY1N6aUQ2cGpmWXE2LUwwcXZVR2xHWDRfRGd3YlRLWkZtcWtGd0NHUzFadTFYLXVCVThjcWxWYlBjNDJsdXJBckh5aUE?oc=5"
+        },
+        {
+          "veiculo": "O Documento",
+          "titulo": "Saiba quem é o empresário preso pela Polícia Civil por desviar quase 200 toneladas de soja em MT",
+          "link": "https://odocumento.com.br/saiba-quem-e-o-empresario-preso-por-desviar-quase-200-toneladas-de-soja-em-mt/"
+        },
+        {
+          "veiculo": "g1 MT",
+          "titulo": "Grupo suspeito de roubar toneladas de soja é alvo de operação em MT",
+          "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/08/07/grupo-suspeito-de-roubar-toneladas-de-soja-e-alvo-de-operacao-em-mt.ghtml"
+        },
+        {
+          "veiculo": "Isso É Notícia",
+          "titulo": "Grupo é alvo de investigação por esquema que roubou 197 toneladas de soja em MT; veja vídeos",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYW5CYnJockJCSEduY0s2Q3ZTR3JoX1A5X1VmbE5BdjZERWdRRWRsdndEVkx0VTVQbGZUa1huRFNjUGctUURxQWZRdXlkZjVyRHNaNkNGY21fR0Nmbk1HTklXZkVLaXprWlpIYVFIVjZYaU5Cd0h0Qmtnb21HcUFyUlZ6enVuM0J4S2hKckR4Q1ZXMUdvcFB4TFEzeks1alZHdU9EVWxtX1ZSVjBzMVFhYjNtLWlpbjdGb2Q3Ng?oc=5"
+        }
+      ],
+      "link": "/materia/nc-grupo-estaria-sendo-investigado-por-desvio-de-toneladas-de-soja-em-mt.html",
+      "corpo": [
+        "Uma operação da Polícia Civil estaria em andamento no Estado de Mato Grosso para apurar o desvio de cargas de soja. A ação miraria um grupo suspeito de integrar um esquema criminoso de roubo do grão. Um empresário teria sido detido no âmbito das investigações.",
+        "As publicações que divulgaram a ocorrência citam a atuação da Polícia Civil de Rondonópolis no cumprimento de mandados. Os textos divergem sobre o volume de grãos envolvido, mencionado como 197 toneladas em umas e quase 200 toneladas em outras. Parte das matérias aponta ainda a existência de registros em vídeo sobre o caso.",
+        "O procedimento investigativo buscaria apurar a conduta de suspeitos no roubo de carga no estado. As diligências teriam como objetivo esclarecer o funcionamento e a extensão do suposto grupo."
+      ],
+      "id": "circ:grupo-estaria-sendo-investigado-por-desvio-de-toneladas-de-soja-em-mt",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Grupo estaria sendo investigado por desvio de toneladas de soja em MT",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-07T16:45:35.522Z",
+      "hora": "12h45"
+    },
+    {
+      "municipio": null,
+      "municipioNome": null,
+      "seSabe": [
+        "O assunto está sendo noticiado por três veículos de imprensa.",
+        "As publicações citam o envolvimento de um carro e uma van.",
+        "Os relatos convergem sobre o total de seis pessoas feridas."
+      ],
+      "falta": [
+        "Confirmação oficial do acidente por parte dos órgãos de trânsito ou resgate.",
+        "Data e horário exatos em que a colisão teria acontecido.",
+        "Identificação oficial e estado de saúde atualizado das vítimas."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "O Documento",
+          "titulo": "Colisão entre carro de passeio e van deixa seis pessoas feridas em rodovia federal",
+          "link": "https://odocumento.com.br/colisao-entre-carro-de-passeio-e-van-deixa-seis-pessoas-feridas-em-rodovia-federal-em-mt/"
+        },
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Acidente entre carro e van na BR-070 deixa seis pessoas feridas e mobiliza bombeiros em Campo Verde",
+          "link": "https://cenariomt.com.br/mato-grosso/campo-verde/acidente-entre-carro-e-van-na-br-070-deixa-seis-pessoas-feridas-e-mobiliza-bombeiros-em-campo-verde/"
+        },
+        {
+          "veiculo": "Só Notícias",
+          "titulo": "Seis pessoas ficam feridas em colisão entre carro e van em Mato Grosso",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPc3NPcWlfOHk2LTJ4ZlUxWGZCdG02cUhrNXUyQ2VsQzltMDh3NEtNVHo4NkZ4UGZQMEVCT0E3TmJKVXJXY2stSEJZUmFoT0xjSkhyRG1ad21KTk1LZ1YxYVo2S1dVSkpiNHBNem9aQzBPbmhTWUR0NHc2SXhIdUdRblNJVXY1YS1MdlhUQmNjQy13cnNrYWpMb2JqcEluQWJ5clVXMlA3Tlo0NVE?oc=5"
+        }
+      ],
+      "link": "/materia/nc-acidente-entre-carro-e-van-em-mato-grosso-teria-deixado-seis-feridos.html",
+      "corpo": [
+        "Uma colisão entre um carro de passeio e uma van teria deixado seis pessoas feridas em Mato Grosso. A ocorrência teria mobilizado equipes do Corpo de Bombeiros para o atendimento no local.",
+        "As publicações que veiculam a notícia apontam que a colisão teria ocorrido na rodovia federal BR-070. O ponto do acidente estaria localizado no município de Campo Verde.",
+        "Não há divergências entre os relatos publicados quanto ao número total de feridos na colisão. O estado de saúde das vítimas e a dinâmica do acidente não teriam sido informados."
+      ],
+      "id": "circ:acidente-entre-carro-e-van-em-mato-grosso-teria-deixado-seis-feridos",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Acidente entre carro e van em Mato Grosso teria deixado seis feridos",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-07T16:46:24.200Z",
+      "hora": "12h46"
+    },
+    {
+      "municipio": "sinop",
+      "municipioNome": "Sinop",
+      "seSabe": [
+        "Que três veículos de imprensa publicaram matérias sobre o atropelamento em Sinop.",
+        "Que a vítima seria uma criança e teria sido encaminhada para hospitalização.",
+        "Que a ocorrência teria acontecido após a vítima descer de um automóvel."
+      ],
+      "falta": [
+        "Confirmação da ocorrência por órgãos oficiais de trânsito ou de segurança pública.",
+        "Posição da unidade de saúde sobre a admissão e o estado da vítima.",
+        "Apresentação do boletim de ocorrência e verificação do local exato."
+      ],
+      "ondeCirculou": [
+        {
+          "veiculo": "CenárioMT",
+          "titulo": "Criança é atropelada por Fiat Palio após descer de carro em rua do bairro Residencial Adriano Leitão em Sinop",
+          "link": "https://cenariomt.com.br/mato-grosso/sinop/crianca-e-atropelada-por-fiat-palio-apos-descer-de-carro-em-rua-do-bairro-residencial-adriano-leitao-em-sinop/"
+        },
+        {
+          "veiculo": "Estadão MT",
+          "titulo": "Criança é atropelada após descer de carro e tentar atravessar rua em Sinop",
+          "link": "https://www.estadaomatogrosso.com.br/cidades/crianca-e-atropelada-apos-descer-de-carro-e-tentar-atravessar-rua-em-sinop/143552"
+        },
+        {
+          "veiculo": "Só Notícias",
+          "titulo": "Criança é hospitalizada após ser atropelada por carro em Sinop",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRGkwRXdzY21FVUxNRDFhcjJad1NRMUlNS0hoUWpFTXU5Yk5tTmQtdkZ0cVlMTVhDYlBuX0NlTWZkbkVYbWROM2hPcE5Kb210V3NNSHZTZGs3a2NKbDRhRHBmeDJvbUxZOG5DS0pWaUtlSXhyLW5XRjlldHFHcG9mejZlSmEtUW5jTE9kTmhXb0xMSUpLM25tdmJxSEo5TUdW?oc=5"
+        }
+      ],
+      "link": "/materia/nc-crianca-teria-sido-atropelada-e-hospitalizada-em-rua-de-sinop.html",
+      "corpo": [
+        "Uma criança teria sido atropelada por um automóvel no município de Sinop. O fato teria ocorrido no momento em que a vítima desembarcava de um veículo e tentava atravessar a via pública.",
+        "As publicações sobre o caso apresentariam divergências quanto aos detalhes da ocorrência. Uma das matérias indicaria que o atropelamento teria envolvido um modelo Fiat Palio no bairro Residencial Adriano Leitão, enquanto outras citariam apenas um carro em rua da cidade.",
+        "A criança teria sido hospitalizada em decorrência do impacto, segundo relatos da imprensa local. O registro oficial do acidente e a confirmação do socorro médico não estariam validados por autoridades."
+      ],
+      "id": "circ:crianca-teria-sido-atropelada-e-hospitalizada-em-rua-de-sinop",
+      "editoria": "regional",
+      "uf": "mt",
+      "titulo": "Criança teria sido atropelada e hospitalizada em rua de Sinop",
+      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
+      "iso": "2026-08-07T16:46:47.221Z",
+      "hora": "12h46"
     }
   ],
   "pautas": [
     {
-      "titulo": "Polícia mira quadrilha que roubava cargas de soja em Mato Grosso",
-      "veiculo": "O Livre",
-      "editoria": "regional",
-      "quentura": 7,
+      "titulo": "PL muda vice de Wellington e troca Marcelo Maluf por Alencar Farina",
+      "veiculo": "Muvuca Popular",
+      "quentura": 8,
       "tambemEm": [
         "Estadão MT",
         "VG Notícias",
-        "CenárioMT"
+        "Fatos de Mato Grosso"
       ]
     },
     {
-      "titulo": "Polícia prende grupo suspeito de roubar 197 toneladas de soja em rodovias de MT",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "O Livre",
-        "g1 MT",
-        "Muvuca Popular"
-      ]
-    },
-    {
-      "titulo": "Polícia faz operação para prender quadrilha que roubou quase 200 toneladas de soja em Mato Grosso",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Estadão MT",
-        "O Livre",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Grupo suspeito de roubar toneladas de soja é alvo de operação em MT",
-      "veiculo": "g1 MT",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Estadão MT",
-        "Muvuca Popular",
-        "CenárioMT"
-      ]
-    },
-    {
-      "titulo": "Grupo fazia motoristas reféns e roubou 197 toneladas de soja em rodovias de MT",
-      "veiculo": "Muvuca Popular",
+      "titulo": "Após perder vaga de vice para médico, Maluf acusa Wellington de “apodrecer a boa política”",
+      "veiculo": "VG Notícias",
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
         "Estadão MT",
         "O Documento",
-        "g1 MT"
+        "Muvuca Popular"
       ]
     },
     {
-      "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-      "veiculo": "Expressão Notícias",
+      "titulo": "Marcelo Maluf acusa Wellington de quebrar palavra após ser retirado da vice",
+      "veiculo": "Estadão MT",
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "PORTAL MATO GROSSO",
-        "MOMENTO MT",
-        "rdmonline.com.br"
+        "VG Notícias",
+        "O Livre",
+        "Muvuca Popular"
       ]
     },
     {
-      "titulo": "Prefeitura de Sinop intensifica fiscalização na Estrada Selene e cobra agilidade na conclusão das obras",
-      "veiculo": "PORTAL MATO GROSSO",
+      "titulo": "PL descarta Maluf e muda candidato a vice na chapa com Wellington",
+      "veiculo": "Só Notícias",
+      "quentura": 5,
+      "tambemEm": [
+        "Estadão MT",
+        "VG Notícias",
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "Wellington Fagundes terá Alencar Farina como vice na disputa pelo governo de MT",
+      "veiculo": "Fatos de Mato Grosso",
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "MOMENTO MT",
-        "rdmonline.com.br",
-        "Portal 93"
+        "Estadão MT",
+        "VG Notícias",
+        "O Livre"
       ]
     },
     {
-      "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene - Portal 93",
-      "veiculo": "Portal 93",
-      "editoria": "regional",
-      "quentura": 5,
+      "titulo": "Empresário Marcelo Maluf diz que foi dispensado da aliança de vice por Wellington Fagundes",
+      "veiculo": "O Livre",
+      "quentura": 4,
       "tambemEm": [
-        "PORTAL MATO GROSSO",
-        "MOMENTO MT",
-        "rdmonline.com.br"
+        "Estadão MT",
+        "Fatos de Mato Grosso",
+        "Muvuca Popular"
       ]
     },
     {
-      "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-      "veiculo": "MOMENTO MT",
-      "editoria": "regional",
-      "quentura": 5,
+      "titulo": "Maluf ataca PL e Wellington após perder vaga de vice: \"quem pretende governar Estado precisa demonstrar que sua palavra tem valor\"",
+      "veiculo": "Só Notícias",
+      "quentura": 4,
       "tambemEm": [
-        "PORTAL MATO GROSSO",
-        "rdmonline.com.br",
-        "Portal 93"
+        "Estadão MT",
+        "VG Notícias",
+        "Fatos de Mato Grosso"
       ]
     },
     {
-      "titulo": "Após cobrança da Prefeitura, empresa se compromete a acelerar obra na Estrada Selene",
-      "veiculo": "mtagora.com.br",
-      "editoria": "regional",
-      "quentura": 5,
+      "titulo": "Governo autoriza Força Nacional por 180 dias na Terra Indígena Sararé",
+      "veiculo": "Muvuca Popular",
+      "quentura": 4,
       "tambemEm": [
-        "PORTAL MATO GROSSO",
-        "MOMENTO MT",
-        "rdmonline.com.br"
+        "O Documento",
+        "g1 MT",
+        "VG Notícias"
       ]
     },
     {
-      "titulo": "Sinop cobra empresa por atraso em obra de R$ 10,4 milhões na Estrada Selene",
-      "veiculo": "rdmonline.com.br",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "PORTAL MATO GROSSO",
-        "MOMENTO MT",
-        "Portal 93"
-      ]
-    },
-    {
-      "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em VG",
-      "veiculo": "Isso É Notícia",
+      "titulo": "PL muda tudo na última hora e troca Maluf por Alencar Farina na vice de Wellington",
+      "veiculo": "Estadão MT",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "CenárioMT",
-        "oempallador.com.br",
-        "EXCLUSIVO NEWS"
+        "VG Notícias",
+        "Fatos de Mato Grosso",
+        "Muvuca Popular"
       ]
     },
     {
-      "titulo": "Polícia mira esquema que desviou 197 toneladas de soja em MT",
+      "titulo": "Força Nacional atuará por 180 dias contra garimpo ilegal em MT",
       "veiculo": "VG Notícias",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Estadão MT",
-        "O Livre",
-        "Muvuca Popular"
+        "O Documento",
+        "g1 MT",
+        "Isso É Notícia"
+      ]
+    },
+    {
+      "titulo": "Força Nacional atuará por 180 dias na Terra Indígena atingida por garimpo e facção criminosa",
+      "veiculo": "O Documento",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 MT",
+        "VG Notícias",
+        "Isso É Notícia"
+      ]
+    },
+    {
+      "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
+      "veiculo": "CONEXÃO MT",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "EXCLUSIVO NEWS",
+        "Notícia Max",
+        "noveen.com.br"
       ]
     },
     {
@@ -1591,30 +1553,41 @@
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Isso É Notícia",
-        "oempallador.com.br",
-        "Notícia Max"
+        "CONEXÃO MT",
+        "Notícia Max",
+        "noveen.com.br"
       ]
     },
     {
-      "titulo": "Prefeitura e Corpo de Bombeiros renovam parceria para fortalecer combate às queimadas em Várzea Grande",
-      "veiculo": "oempallador.com.br",
+      "titulo": "Força Nacional é autorizada a atuar por 180 dias na Terra Indígena Sararé, em MT",
+      "veiculo": "g1 MT",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Isso É Notícia",
-        "EXCLUSIVO NEWS",
-        "Notícia Max"
+        "O Documento",
+        "VG Notícias",
+        "Isso É Notícia"
       ]
     },
     {
-      "titulo": "Veja quem são os candidatos a vice-governador em Mato Grosso em 2026",
+      "titulo": "Polícia Civil de Rondonópolis cumpre mandados contra grupo criminoso que roubou 197 toneladas de soja em MT",
       "veiculo": "Primeira Hora",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
+        "O Documento",
         "g1 MT",
-        "O GLOBO"
+        "Isso É Notícia"
+      ]
+    },
+    {
+      "titulo": "Força Nacional é autorizada a atuar por 180 dias na Terra Indígena Sararé, em MT",
+      "veiculo": "Isso É Notícia",
+      "quentura": 4,
+      "tambemEm": [
+        "O Documento",
+        "g1 MT",
+        "VG Notícias"
       ]
     },
     {
@@ -1623,20 +1596,20 @@
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Prefeitura Municipal de Várzea Grande - Página Inicial",
-        "oempallador.com.br",
-        "EXCLUSIVO NEWS"
+        "CONEXÃO MT",
+        "EXCLUSIVO NEWS",
+        "plantaonews.com.br"
       ]
     },
     {
-      "titulo": "Força Nacional atuará por 180 dias na Terra Indígena atingida por garimpo e facção criminosa",
-      "veiculo": "O Documento",
+      "titulo": "PL bate o martelo e escolhe Alencar Farina como vice de Wellington em MT",
+      "veiculo": "VG Notícias",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "g1 MT",
-        "Primeira Página",
-        "G1"
+        "Estadão MT",
+        "Fatos de Mato Grosso",
+        "Muvuca Popular"
       ]
     }
   ]
