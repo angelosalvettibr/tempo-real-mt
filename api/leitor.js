@@ -358,6 +358,23 @@ export default async function handler(req, res){
     return res.status(200).json({ ok:true, termos: idx.slice(0, 200) });
   }
 
+  /* ---- quem sao os assinantes, para o robo produzir para eles ---- */
+  if (acao === 'assinantes') {
+    if (String(corpo.chave || '') !== (process.env.CHAVE_ROBO || '')) return res.status(200).json({ ok:false });
+    if (!ligado()) return res.status(200).json({ ok:true, lista: [] });
+
+    let idx = [];
+    try { idx = JSON.parse(await redis('GET', 'assinantes') || '[]'); } catch {}
+
+    // Cada um com a descricao dele: e ela que define a pauta.
+    const lista = [];
+    for (const nome of idx.slice(0, 30)) {
+      const perfil = await redis('GET', `perfil:${nome}`);
+      if (perfil && String(perfil).trim().length >= 30) lista.push({ apelido: nome, perfil });
+    }
+    return res.status(200).json({ ok:true, lista });
+  }
+
   /* ------------------------------------------------ perfil em texto ------
      Etiqueta por palavra e fragil: "concessao rodoviaria" so casa com quem
      escreve exatamente isso, e nao pega "leilao da BR-381" nem "audiencia
@@ -375,6 +392,18 @@ export default async function handler(req, res){
     if (corpo.por === 'gravar') {
       const txt = String(corpo.perfil || '').replace(/[<>]/g,'').trim().slice(0, 1500);
       await redis('SET', `perfil:${nome}`, txt);
+
+      // Quem escreve uma descricao vira assinante: o robo passa a produzir
+      // para ele, em vez de so filtrar o que ja publicou.
+      let idx = [];
+      try { idx = JSON.parse(await redis('GET','assinantes') || '[]'); } catch {}
+      if (txt.length >= 30 && !idx.includes(nome)) {
+        idx.unshift(nome);
+        await redis('SET', 'assinantes', JSON.stringify(idx.slice(0, 60)));
+      }
+      if (txt.length < 30) {
+        await redis('SET', 'assinantes', JSON.stringify(idx.filter(x => x !== nome)));
+      }
       return res.status(200).json({ ok:true, perfil: txt });
     }
     return res.status(200).json({ ok:true, perfil: (await redis('GET', `perfil:${nome}`)) || '' });
