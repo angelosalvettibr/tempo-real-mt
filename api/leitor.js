@@ -15,6 +15,30 @@ const URL_KV   = process.env.KV_REST_API_URL   || '';
 const TOKEN_KV = process.env.KV_REST_API_TOKEN || '';
 // Booleano de verdade. Antes devolvia o proprio token, que vazava na resposta.
 const CHAVE_IA = process.env.GEMINI_API_KEY || '';
+
+// O Gemini devolve 503 quando esta sobrecarregado, e passa em segundos. Sem
+// retry o leitor recebe "IA HTTP 503" e tem que tentar de novo na mao — foi o
+// que aconteceu na primeira visita da conta que mais importa.
+async function chamarIA(corpo, tentativas = 3){
+  let erro;
+  for (let n = 0; n < tentativas; n++) {
+    try {
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
+        method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(corpo)
+      });
+      if (r.ok) return await r.json();
+      if (r.status !== 503 && r.status !== 429) {
+        const cru = await r.text();
+        let motivo = cru.replace(/\s+/g,' ').slice(0,140);
+        try { motivo = JSON.parse(cru)?.error?.message || motivo; } catch {}
+        throw new Error(String(motivo).slice(0, 140));
+      }
+      erro = new Error('o serviço está sobrecarregado');
+    } catch (e) { erro = e; }
+    await new Promise(r => setTimeout(r, 1200 * (n + 1)));
+  }
+  throw erro || new Error('IA indisponível');
+}
 const ligado = () => Boolean(URL_KV && TOKEN_KV);
 
 // Uma chamada ao Redis pela API REST do Upstash.
@@ -449,13 +473,8 @@ FORMATO — exatamente isto, uma por linha, sem markdown:
 numero | setor | motivo curto`;
 
     try {
-      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
-        method:'POST', headers:{ 'Content-Type':'application/json' },
-        body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }],
-          generationConfig:{ temperature:0.2, maxOutputTokens:1500 } })
-      });
-      if (!r.ok) throw new Error('IA HTTP ' + r.status);
-      const j = await r.json();
+      const j = await chamarIA({ contents:[{ parts:[{ text: prompt }] }],
+        generationConfig:{ temperature:0.2, maxOutputTokens:1500 } });
       const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '').replace(/\*\*/g,'');
 
       const escolhidas = t.split(/\n/)
@@ -507,13 +526,8 @@ TERMO: (o termo de busca final, 1 a 4 palavras, sem genéricas)
 EXPLICA: (uma frase dizendo o que esse termo vai trazer)`;
 
     try {
-      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=' + CHAVE_IA, {
-        method:'POST', headers:{ 'Content-Type':'application/json' },
-        body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }],
-          generationConfig:{ temperature:0.3, maxOutputTokens:600 } })
-      });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      const j = await r.json();
+      const j = await chamarIA({ contents:[{ parts:[{ text: prompt }] }],
+        generationConfig:{ temperature:0.3, maxOutputTokens:600 } });
       const t = (j?.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '').replace(/\*\*/g,'').trim();
 
       const perg = (t.match(/PERGUNTA\s*:\s*(.+)/i)?.[1] || '').trim();
