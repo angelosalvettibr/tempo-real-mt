@@ -469,10 +469,9 @@ footer li{margin-bottom:6px;font-family:var(--mono);font-size:11px;color:var(--t
       <button data-f="capa" aria-pressed="true">Capa</button>
       <button data-f="brasil" aria-pressed="false">Brasil</button>
       <button data-f="internacional" aria-pressed="false">Mundo</button>
-      <button data-f="regional" aria-pressed="false" id="btEstado">Meu estado</button>
-      <span class="sel-estado">
-        <label for="selEstado">estado</label>
-        <select id="selEstado">
+      <button data-f="regional" aria-pressed="false" id="btEstado">Estados</button>
+      <span class="sel-estado" id="cxEstado" hidden>
+        <select id="selEstado" aria-label="escolher estado">
           <option value="mt">Mato Grosso</option>
           <option value="rs">Rio Grande do Sul</option>
           <option value="rj">Rio de Janeiro</option>
@@ -598,8 +597,16 @@ const CIDADES_RESERVA = { mt:[{id:'cuiaba',nome:'Cuiabá'},{id:'vg',nome:'Várze
 const cidadesDe = uf => (ED.cidades && ED.cidades[uf]) || CIDADES_RESERVA[uf] || [];
 // o estado fica no endereco (#rs), entao a escolha sobrevive ao recarregar
 // e o link pode ser compartilhado ja no estado certo
-let estado = (location.hash.replace('#','') || 'mt').toLowerCase();
-if (!ESTADOS[estado]) estado = 'mt';
+/* A capa abria em Mato Grosso para todo mundo — quem chegava de fora via
+   Cuiaba na primeira tela, sem ter pedido. Agora ela abre em Brasil, e o
+   estado so entra quando o leitor escolhe. Quem ja escolheu antes continua
+   onde estava. */
+let estado = (location.hash.replace('#','') || '').toLowerCase();
+if (!ESTADOS[estado]) {
+  try { estado = (localStorage.getItem('meridiano_estado') || '').toLowerCase(); } catch {}
+}
+let estadoEscolhido = Boolean(ESTADOS[estado]);
+if (!ESTADOS[estado]) estado = 'mt';   // valor de trabalho, nao de exibicao
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const faz = iso => { const m = Math.round((Date.now()-Date.parse(iso))/60000);
@@ -858,8 +865,13 @@ async function novidades(){
 // procurar em qual editoria caiu.
 function ultimas(){
   const caixa = $('#ultimas');
+  /* A faixa mostrava tudo, inclusive materia regional — e quem chegava de
+     fora via Cuiaba na primeira tela, antes de qualquer coisa. Enquanto o
+     leitor nao escolhe um estado, ela fica no que e de todo mundo: Brasil e
+     Mundo. Escolhido o estado, a praca dele volta a aparecer. */
   const lista = [...ED.itens, ...(ED.circulando || [])]
     .filter(i => i.titulo && i.iso && i.link)
+    .filter(i => estadoEscolhido || i.editoria !== 'regional')
     .sort((a,b) => Date.parse(b.iso) - Date.parse(a.iso))
     .filter((i,n,a) => a.findIndex(x => x.titulo === i.titulo) === n)
     .slice(0, 6);
@@ -893,6 +905,12 @@ function pintar(){
       : ED.itens.filter(i => i.editoria === filtro);
 
   if (filtro === 'regional') {
+    // Abrir a aba ja e pedir: a partir daqui o jornal pode falar da praca.
+    if (!estadoEscolhido) {
+      estadoEscolhido = true;
+      try { localStorage.setItem('meridiano_estado', estado); } catch {}
+      aplicarEstado();
+    }
     montarCidades(lista);
     if (cidade) lista = lista.filter(i => i.municipio === cidade);
   } else {
@@ -1202,13 +1220,22 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
 
 function aplicarEstado(){
   $('#selEstado').value = estado;
-  const p = $('#praca'); if (p) p.textContent = 'edição ' + ESTADOS[estado];
-  $('#btEstado').textContent = ESTADOS[estado];
-  location.hash = estado;
+  // O seletor so aparece na aba dos estados: na capa ele nao tem o que fazer.
+  const cx = $('#cxEstado');
+  if (cx) cx.hidden = (filtro !== 'regional');
+  /* Estes dois escreviam o nome da praca antes de o leitor pedir — e era por
+     isso que "Mato Grosso" e "edicao Mato Grosso" apareciam para quem nunca
+     tinha escolhido nada. So passam a dizer o estado depois da escolha. */
+  const p = $('#praca');
+  if (p) p.textContent = estadoEscolhido ? 'edição ' + ESTADOS[estado] : 'Brasil · Mundo · Estados';
+  $('#btEstado').textContent = estadoEscolhido ? ESTADOS[estado] : 'Estados';
+  if (estadoEscolhido) location.hash = estado;
   pintar();
 }
 $('#selEstado').addEventListener('change', e => {
   estado = e.target.value;
+  estadoEscolhido = true;
+  try { localStorage.setItem('meridiano_estado', estado); } catch {}
   cidade = null;
   // quem escolhe um estado quer ver aquele estado: leva junto para a aba
   filtro = 'regional';
