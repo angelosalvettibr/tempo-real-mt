@@ -15,6 +15,7 @@ import { detectarMunicipio, destaques, foraDaPraca, ehNacional } from './municip
 import { lerDiario, ASSOCIACOES } from './diario.mjs';
 import { focus, comoTexto } from './bancocentral.mjs';
 import { resolver, lerDescobertas, gravarDescobertas } from './descobridor.mjs';
+import { edicaoDe, gravar as gravarAssinante, trilhasDe } from './assinante.mjs';
 import { OFICIAIS } from './oficiais.mjs';
 
 // A memoria do arquivo era declarada dentro do bloco da reescrita, entao o
@@ -1360,6 +1361,77 @@ if (process.env.CHAVE_ROBO && process.env.URL_SITE) {
     }
   } catch (e) {
     console.log('     aviso estados: ' + String(e.message).slice(0, 50));
+  }
+}
+
+/* ========================= EDIÇÃO DOS ASSINANTES ========================
+   O jornal publico decide o que publicar pelo criterio dele. Isso nao serve a
+   quem paga: a NORA escreveu uma descricao impecavel sobre concessoes e
+   agencias, e a pagina veio quase vazia — porque o jornal nao tinha produzido
+   nada daquilo. Filtrar o vazio devolve vazio.
+
+   Aqui a logica inverte: a descricao do assinante define a PAUTA. O robo
+   produz para ele, mesmo que a materia nao entre na edicao publica.
+
+   O que nao muda e a procedencia: mesmo documento, mesmo selo, mesma
+   licenca. Quem paga compra atencao dirigida, nao metodo mais frouxo.     */
+if (GERAL && process.env.CHAVE_ROBO && process.env.URL_SITE) {
+  try {
+    const base = process.env.URL_SITE.replace(/\/+$/,'') + '/api/leitor';
+    const r = await fetch(base, { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ acao:'assinantes', chave: process.env.CHAVE_ROBO }) });
+    const assinantes = ((await r.json().catch(() => ({}))).lista) || [];
+
+    if (assinantes.length) {
+      console.log(`\n  6. ASSINANTES — ${assinantes.length}`);
+
+      for (const a of assinantes) {
+        console.log(`\n     ${a.apelido}`);
+
+        const jaFeitas = new Set(publicados.map(p => p.titulo));
+        const res = await edicaoDe(a, F.itens, async (i) => {
+          // Materia que ja saiu na edicao publica entra sem custo nenhum.
+          const igual = publicados.find(p => parecidas(p.titulo, i.titulo) >= 0.55);
+          if (igual) return { ...igual, doPublico: true };
+
+          if (carteiraAcabou()) return null;
+          if (!podeAdaptar(i.link)) return null;
+          if (jaFeitas.has(i.titulo)) return null;
+
+          const texto = await textoCompleto(i.link, 12000);
+          if (!texto || texto.length < 300) return null;
+          const m = await reescrever({ fonte: i.veiculo, titulo: i.titulo, texto });
+          if (!m || !m.titulo) return null;
+
+          const arq = 'as-' + slug(m.titulo) + '.html';
+          await writeFile('materia/' + arq, pagina({
+            id: 'as:' + slug(m.titulo), nivel:'confirmado',
+            chapeu: 'Nosso texto', titulo: m.titulo, linhaFina: m.linhaFina,
+            corpo: m.corpo, origemNome: i.veiculo, radar:false, checar:[]
+          }, { link: i.link, municipio: '' }, new Date().toISOString()), 'utf8');
+
+          jaFeitas.add(m.titulo);
+          return {
+            id: 'as:' + slug(m.titulo), titulo: m.titulo,
+            resumo: m.linhaFina, link: 'materia/' + arq,
+            fonte: i.veiculo, origemNome: i.veiculo, origemLink: i.link,
+            nivel: 'confirmado', iso: new Date().toISOString(),
+            hora: horaBR(new Date().toISOString())
+          };
+        }, { teto: 12, log: t => console.log(t) });
+
+        await gravarAssinante(a.apelido, {
+          trilhas: res.trilhas || [],
+          itens: res.itens || [],
+          perfil: String(a.perfil).slice(0, 400)
+        });
+
+        const novas = (res.itens || []).filter(x => !x.doPublico).length;
+        console.log(`     ${(res.itens || []).length} materias · ${novas} escritas so para ele`);
+      }
+    }
+  } catch (e) {
+    console.log('     aviso assinantes: ' + String(e.message).slice(0, 60));
   }
 }
 
