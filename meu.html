@@ -346,7 +346,11 @@ async function aplicarPerfil(){
         itens: base.map(i => ({ titulo:i.titulo, resumo:i.resumo || '' })) }) });
     const j = await r.json();
 
-    if (!j.ok) { alvo.innerHTML = `<p class="vazio">${esc(j.msg || 'não consegui filtrar agora')}</p>`; return; }
+    if (!j.ok) {
+      alvo.innerHTML = `<p class="vazio">${esc(j.msg || 'não consegui filtrar agora')}<br>
+        <span style="font-size:13px">Tente de novo em alguns segundos — costuma ser sobrecarga momentânea.</span></p>`;
+      return;
+    }
     const esc2 = (j.escolhidas || []).filter(x => base[x.n]);
     if (!esc2.length) {
       alvo.innerHTML = '<p class="vazio">Nada do período combina com essa descrição.<br>Vale conferir se ela não está específica demais — ou esperar a próxima rodada.</p>';
