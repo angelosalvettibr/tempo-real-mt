@@ -71,6 +71,12 @@ h1{font-family:var(--tit);font-size:clamp(28px,5.4vw,40px);font-weight:900;lette
   color:var(--rosso);border-bottom:1px solid var(--linha);padding-bottom:8px;margin-bottom:2px;
   display:flex;align-items:baseline;gap:10px}
 .setor h3 span{margin-left:auto;font-size:9.5px;color:var(--fraco)}
+.suaed{border:1px solid var(--tinta);background:var(--papel);padding:0;margin:22px 0 8px}
+.suaed .cab{background:var(--tinta);color:var(--papel);padding:13px 18px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.suaed .cab b{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.suaed .cab span{font-size:13.5px;opacity:.75;margin-left:auto;font-family:var(--txt)}
+.suaed .dentro{padding:4px 20px 14px}
+.suaed .nota{font-size:13.5px;color:var(--fraco);line-height:1.55;padding:13px 0 4px}
 .aprendeu{background:var(--areia);border-left:3px solid var(--verde);padding:11px 15px;margin:14px 0;
   font-size:13.5px;line-height:1.55;color:var(--tinta2)}
 .aprendeu b{color:var(--tinta)}
@@ -183,6 +189,8 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
         <div class="c"><b>caso</b><p><em>No que deu.</em> Uma história específica que você marcou dentro da matéria. O jornal avisa quando ela mudar — quando aparecer o documento, quando sair a decisão.</p></div>
       </div>
 
+      <div id="sua-edicao"></div>
+
       <div class="bloco">
         <h2>O que você quer acompanhar</h2>
         <div class="perfil">
@@ -239,11 +247,45 @@ const ROT   = { confirmado:'confirmado em documento', atribuido:'atribuído a fo
 
     montarAssuntos();
     montarPerfil();
+    suaEdicao();
 
   } catch {
     alvo.innerHTML = '<p class="vazio">Não consegui carregar. Tente de novo.</p>';
   }
 })();
+
+/* ===================== A EDIÇÃO FEITA PARA VOCÊ =========================
+   Diferente de tudo o mais nesta pagina. O resto FILTRA o que o jornal ja
+   publicou; isto e o que o robo produziu especificamente para esta conta, a
+   partir da descricao — indo as fontes que servem a ela, mesmo que a materia
+   nao entre na edicao publica.                                            */
+async function suaEdicao(){
+  const alvo = document.getElementById('sua-edicao');
+  if (!alvo || !ap) return;
+  try {
+    const r = await fetch(`dados/assinantes/${encodeURIComponent(ap)}.json?t=${Date.now()}`, { cache:'no-store' });
+    if (!r.ok) { alvo.innerHTML = ''; return; }
+    const j = await r.json();
+    const itens = j.itens || [];
+    if (!itens.length) { alvo.innerHTML = ''; return; }
+
+    const h = Math.round((Date.now() - Date.parse(j.gerado)) / 3600000);
+    const proprias = itens.filter(x => !x.doPublico).length;
+
+    alvo.innerHTML = `<div class="suaed">
+      <div class="cab"><b>a sua edição</b>
+        <span>${itens.length} ${itens.length === 1 ? 'matéria' : 'matérias'}${proprias ? ` · ${proprias} ${proprias === 1 ? 'escrita' : 'escritas'} para você` : ''} · ${h < 1 ? 'agora' : h === 1 ? 'há 1 hora' : `há ${h} horas`}</span></div>
+      <div class="dentro">
+        ${itens.map(i => `<a class="mat" href="${esc(i.link)}">
+          <h3>${esc(i.titulo)}</h3>
+          <p>${esc(i.resumo || '')}</p>
+          <div class="pe">${esc(i.origemNome || i.fonte || '')} · ${esc(i.hora || '')}${i.doPublico ? ' · também na edição pública' : ''}</div>
+        </a>`).join('')}
+        <p class="nota">O robô lê a sua descrição a cada rodada e vai às fontes que servem a ela. As marcadas como escritas para você não estão na edição pública — foram produzidas porque você pediu esse assunto.</p>
+      </div>
+    </div>`;
+  } catch { alvo.innerHTML = ''; }
+}
 
 /* ===================== PERFIL EM TEXTO =================================
    Etiqueta por palavra e fragil. A descricao captura a intencao — e o agente
