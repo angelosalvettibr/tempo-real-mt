@@ -48,6 +48,9 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
 .corpo ul{margin:0 0 21px 20px}
 .corpo li{margin-bottom:11px}
 .apura{border:1px solid var(--tinta);margin:30px 0;background:#fff}
+.apura>.cab{backgroumargin:0 0 21px 20px}
+.corpo li{margin-bottom:11px}
+.apura{border:1px solid var(--tinta);margin:30px 0;background:#fff}
 .apura>.cab{background:var(--tinta);color:var(--papel);padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
 .apura .miolo{padding:17px 19px}
 .apura .raciocinio{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.62;color:#3C3C3C;margin-bottom:15px}
@@ -192,17 +195,17 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <span class="selo">Com informações de Prefeitura de Cuiabá</span>
   <span class="chapeu">Cuiabá</span>
   <h1>Horto Florestal Tote Garcia recebe novos equipamentos para arborização em Cuiabá</h1>
-  <p class="linha-fina">A aquisição teve investimento de R$ 32,5 mil por meio de projeto aprovado pelo Juvam em parceria com o Ministério Público.</p>
-  <div class="assina">Redação Meridiano · 07/08/2026, 09:21:38</div>
+  <p class="linha-fina">A aquisição de R$ 32,5 mil foi viabilizada por projeto do Juizado Volante Ambiental e Ministério Público para reforçar a produção de mudas e manutenção.</p>
+  <div class="assina">Redação Meridiano · 08/08/2026, 06:03:34</div>
 
   
 
   
 
-  <div class="corpo"><p>O Horto Florestal Tote Garcia, em Cuiabá, recebeu nesta quinta-feira (6) um novo conjunto de equipamentos destinado a reforçar a produção de mudas, a manutenção da área e as ações de arborização urbana na capital.</p>
-<p>A entrega dos materiais foi viabilizada por meio de um projeto aprovado pelo Juizado Volante Ambiental (Juvam), em parceria com o Ministério Público, com investimento de R$ 32,5 mil. O lote inclui seis roçadeiras multifuncionais, quatro perfuradores de solo, duas motosserras e quatro sopradores, além de correntes, sabres, brocas, lâminas e ferramentas manuais.</p>
-<p>Os perfuradores de solo serão utilizados no preparo de covas para a implantação de árvores em vias e espaços públicos. As roçadeiras, motosserras e sopradores vão integrar os serviços diários de limpeza, conservação e manejo da vegetação executados pela equipe da unidade.</p>
-<p>Segundo o diretor de Planejamento Ambiental da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, Fábio Moura, os equipamentos serão aplicados nas atividades rotineiras do espaço, abrangendo da produção de mudas aos serviços de arborização do município. Com os novos itens, o local amplia sua capacidade operacional.</p></div>
+  <div class="corpo"><p>O Horto Florestal Tote Garcia, em Cuiabá, recebeu nesta quinta-feira (6) um novo conjunto de equipamentos para reforçar as atividades de produção de mudas, manutenção do local e ações de arborização urbana.</p>
+<p>A aquisição no valor de R$ 32,5 mil foi viabilizada por meio de um projeto aprovado pelo Juizado Volante Ambiental (Juvam), em parceria com o Ministério Público. Os itens comprados incluem seis roçadeiras multifuncionais, quatro perfuradores de solo, duas motosserras e quatro sopradores, além de correntes, sabres, brocas, lâminas e ferramentas manuais.</p>
+<p>Os perfuradores de solo serão utilizados no preparo de covas para o plantio de árvores em vias e espaços públicos. Já as roçadeiras, motosserras e sopradores integrarão os serviços diários de limpeza e manejo da vegetação executados pela equipe do local.</p>
+<p>O diretor de Planejamento Ambiental da Secretaria Municipal de Planejamento e Desenvolvimento Urbano, Fábio Moura, informou que o maquinário será empregado no trabalho diário da unidade, abrangendo desde o cultivo das mudas até o atendimento aos programas de arborização da cidade.</p></div>
 
   
 
@@ -216,10 +219,7 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
   <div id="ctx-area"></div>
 
 
-  <div class="contexto">
-    <b>O que isso quer dizer</b>
-    <p>Os equipamentos serão utilizados pela equipe do Horto Florestal Tote Garcia nos serviços diários de conservação e manejo. As ações de arborização atendem a população de Cuiabá com o plantio em vias e espaços públicos.</p>
-  </div>
+  
 
   <details class="proced">
     <summary><b>Como esta matéria foi apurada</b><span>procedência, checagem e documento</span></summary>
@@ -392,6 +392,16 @@ h1{font-size:clamp(27px,4.4vw,40px);font-weight:800;letter-spacing:-.032em;line-
           }
           else {
             sg.classList.remove('on'); sg.textContent = 'Acompanhar este caso';
+            var v = document.getElementById('seg-nota'); if (v) v.remove();
+          }
+        })
+        .catch(function(){ sg.disabled = false; });
+    });
+  }
+})();
+</script>
+</body>
+</html>companhar este caso';
             var v = document.getElementById('seg-nota'); if (v) v.remove();
           }
         })
