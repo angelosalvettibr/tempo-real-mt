@@ -1,26 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-09T15:25:27.084Z",
-  "modelo": "gemini-flash-lite-latest",
+  "gerado": "2026-08-09T19:57:28.522Z",
+  "modelo": "gemini-flash-latest",
   "numeros": {
-    "pauta": 44,
+    "pauta": 42,
     "fonteLivre": 17,
-    "confirmadas": 1,
-    "publicadas": 9,
+    "confirmadas": 3,
+    "publicadas": 13,
     "resgatadas": 0,
-    "semFonte": 16
+    "semFonte": 7
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 24,
-    "entregando": 10,
-    "itens": 61,
+    "checadas": 32,
+    "responderam": 25,
+    "entregando": 11,
+    "itens": 59,
     "lista": [
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -28,8 +28,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -48,7 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 8,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -67,15 +67,6 @@
         "id": "g1mundo",
         "nome": "g1 Mundo",
         "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -100,6 +91,24 @@
       },
       {
         "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
         "itens": 1,
@@ -113,13 +122,13 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 500"
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -136,8 +145,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -145,17 +154,17 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 415"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,12 +181,12 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,15 +271,6 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
@@ -280,8 +280,26 @@
       },
       {
         "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -292,31 +310,100 @@
   "cidades": [],
   "itens": [
     {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:pesquisadores-usam-sensores-em-tubaroes-para-melhorar-previsao-de-fura",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Pesquisadores usam sensores em tubarões para melhorar previsão de furacões",
+      "resumo": "Dispositivos instalados nos animais medem temperatura, profundidade e salinidade do oceano para enviar os dados a satélites.",
+      "fonte": "Meridiano, com informações de Agência Brasil",
+      "origemLink": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-08/cientistas-recorrem-aos-tubaroes-para-melhorar-previsao-sobre-furacoes",
+      "origemNome": "Agência Brasil",
+      "pautadoPor": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ],
+      "quentura": 2,
+      "uf": null,
+      "corpo": [
+        "Pesquisadores da Universidade de Delaware estão testando o uso de tubarões como observadores de dados oceânicos em tempo quase real. O objetivo é utilizar sensores acoplados aos animais para alimentar modelos oceanográficos, atmosféricos e climáticos, ajudando a compreender o potencial de furacões antes que atinjam a costa.",
+        "Os sensores são pequenos dispositivos eletrônicos que registram a condutividade elétrica do oceano — indicador relacionado à salinidade —, a temperatura e a profundidade enquanto os peixes nadam e mergulham. A equipe dá preferência a espécies de tubarões que vêm à superfície com frequência suficiente para que as informações sejam transmitidas aos satélites.",
+        "Segundo Aaron Carlisle, pesquisador principal e professor da Escola de Ciências Marinhas e Políticas da universidade, a pesquisa busca medir o conteúdo de calor da camada mista do oceano, que determina a intensidade dos furacões. Uma camada mista mais quente retém o calor que alimenta essas tempestades.",
+        "Anteriormente, a marcação de tubarões rastreava apenas as rotas de viagem e os habitats dos animais. Sensores acoplados a espécies marinhas já eram utilizados em elefantes-marinhos nas regiões polares, mas os tubarões foram escolhidos para este estudo por serem abundantes, amplamente distribuídos e de acesso mais fácil do que mamíferos marinhos protegidos."
+      ],
+      "link": "/materia/pesquisadores-usam-sensores-em-tubaroes-para-melhorar-previsao-de-fura.html",
+      "iso": "2026-08-08T19:21:00.000Z",
+      "hora": "15h21",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
       "foto": "https://images.theconversation.com/files/752875/original/file-20260807-50-os9mgk.jpg?ixlib=rb-4.1.1&amp;rect=520%2C0%2C2586%2C1293&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:brasil-e-argentina-rebaixam-nivel-de-relacoes-diplomaticas-apos-acusac",
+      "id": "ilm:relacoes-entre-brasil-e-argentina-sofrem-rebaixamento-apos-atritos-ent",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Brasil e Argentina rebaixam nível de relações diplomáticas após acusações entre presidentes",
-      "resumo": "Os governos convocaram embaixadores para consultas e reduziram a representação após a participação de Javier Milei na campanha de Flávio Bolsonaro em julho de 2026.",
+      "titulo": "Relações entre Brasil e Argentina sofrem rebaixamento após atritos entre Milei e Lula",
+      "resumo": "A crise diplomática incluiu convocação de embaixadores após a participação do presidente argentino no lançamento da campanha eleitoral de Flávio Bolsonaro em julho de 2026.",
       "fonte": "Meridiano, com informações de The Conversation",
       "origemLink": "https://theconversation.com/encontros-e-desencontros-as-questoes-de-fundo-da-relacao-brasil-argentina-289281",
       "origemNome": "The Conversation",
-      "pautadoPor": [],
-      "quentura": 0,
+      "pautadoPor": [
+        "Folha Mundo"
+      ],
+      "quentura": 1,
       "uf": null,
       "corpo": [
-        "As relações diplomáticas entre o Brasil e a Argentina foram rebaixadas para o nível de encarregado de negócios, acompanhadas pela convocação de embaixadores para consultas. A medida ocorreu após acusações mútuas entre os presidentes dos dois países, intensificadas depois que o mandatário argentino, Javier Milei, participou do lançamento da campanha eleitoral de Flávio Bolsonaro em julho de 2026.",
-        "A divergência entre os chefes de Estado reflete tensionamentos acumulados. O desalinhamento ideológico teve início em 2019, durante as gestões de Alberto Fernández e Jair Bolsonaro, período em que os encontros bilaterais foram reduzidos. Houve uma exceção em 2023, quando os governos de Fernández e Luiz Inácio Lula da Silva aprovaram o Plano de Ação para o Relançamento da Aliança Estratégica Brasil-Argentina.",
-        "Apesar dos atritos entre as autoridades, os episódios individuais não alteram obrigatoriamente as relações econômicas e sociais estabelecidas entre os países há mais de 200 anos. Estruturadas por acordos do Mercosul, criado em 1991, as trocas comerciais mantêm sua relevância, tendo a Argentina figurado como o terceiro maior parceiro comercial do Brasil em 2025.",
-        "No cenário doméstico, Milei depende de coalizões para governar e se aproxima de um novo período eleitoral. O presidente argentino tem atuado em eventos políticos fora de seu país e manifestado apoio a governos latino-americanos de direita para projetar influência internacional diante de desafios internos."
+        "A participação do presidente da Argentina, Javier Milei, no lançamento da campanha eleitoral de Flávio Bolsonaro em julho de 2026 gerou uma série de acusações entre os governos de Brasil e Argentina. O atrito diplomático resultou na convocação de embaixadores para consultas e no rebaixamento das relações entre os dois países para o nível de encarregado de negócios.",
+        "Os desentendimentos entre os chefes de Estado dos dois países vêm de anos anteriores. O desalinhamento ideológico teve início em 2019, durante as gestões de Alberto Fernández e Jair Bolsonaro, período em que os encontros bilaterais foram reduzidos. A exceção ocorreu em 2023, quando Fernández e Lula aprovaram o Plano de Ação para o Relançamento da Aliança Estratégica Brasil-Argentina. Além disso, Bolsonaro e Lula não compareceram diretamente às posses dos mandatários argentinos.",
+        "Apesar das críticas entre os líderes, a relação estrutural entre as nações possui mais de 200 anos e inclui a criação do Mercosul em 1991 e o Protocolo de Ushuaia em 1998. Os mecanismos regulam fluxos comerciais e de pessoas, além de condicionar a integração à manutenção da democracia. No âmbito econômico, a Argentina figurou como o terceiro maior parceiro comercial do Brasil em 2025.",
+        "No cenário doméstico, Milei depende de coalizões para governabilidade e se aproxima de um período eleitoral com possibilidade de reeleição. O presidente argentino, que já esteve em eventos políticos no Brasil, apoia governos de direita na América Latina como forma de projeção internacional e busca de apoio político direto."
       ],
-      "link": "/materia/brasil-e-argentina-rebaixam-nivel-de-relacoes-diplomaticas-apos-acusac.html",
+      "link": "/materia/relacoes-entre-brasil-e-argentina-sofrem-rebaixamento-apos-atritos-ent.html",
       "iso": "2026-08-07T22:10:04.000Z",
       "hora": "18h10",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": null,
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:antonio-guterres-divulga-mensagem-pelos-81-anos-do-ataque-atomico-a-na",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "António Guterres divulga mensagem pelos 81 anos do ataque atômico a Nagasaki",
+      "resumo": "O líder da ONU declarou que os gastos militares globais atingiram US$ 2,9 trilhões e defendeu a diplomacia e a cooperação em vez do uso de armas nucleares.",
+      "fonte": "Meridiano, com informações de ONU News - Perspectiva Global Reportagens Humanas",
+      "origemLink": "https://news.un.org/feed/view/pt/story/2026/08/1853965",
+      "origemNome": "ONU News - Perspectiva Global Reportagens Humanas",
+      "pautadoPor": [
+        "Euronews"
+      ],
+      "quentura": 1,
+      "uf": null,
+      "corpo": [
+        "Neste 9 de agosto, a ONU lembrou os 81 anos do ataque com bomba atômica dos Estados Unidos à cidade de Nagasaki, no Japão. O secretário-geral da instituição, António Guterres, divulgou uma mensagem em homenagem às vítimas e aos sobreviventes, chamados em japonês de hibakusha.",
+        "Para Guterres, os sobreviventes transformaram a dor e o sofrimento em uma mensagem de resiliência, reconciliação e esperança. O líder das Nações Unidas afirmou que o mundo deve se lembrar do evento em meio a profundas tensões geopolíticas, ressaltando que a humanidade não deveria viver sob ameaça permanente.",
+        "As despesas militares globais somam US$ 2,9 trilhões, com crescimento registrado pelo 11º ano consecutivo. O secretário-geral apontou que o caminho para a paz depende de confiança, pontes, cooperação e diplomacia, e não do fortalecimento do arsenal nuclear.",
+        "Guterres declarou que Nagasaki serve como aviso e guia para sustentar a paz por um propósito comum. Ele pontuou ainda que governos consideram abertamente a aquisição de armas de destruição em massa e que os instrumentos para conter a corrida armamentista precisam ser atualizados para lidar com a ameaça da inteligência artificial."
+      ],
+      "link": "/materia/antonio-guterres-divulga-mensagem-pelos-81-anos-do-ataque-atomico-a-na.html",
+      "iso": "2026-08-09T12:00:00.000Z",
+      "hora": "08h00",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -328,11 +415,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:cardeal-baldo-reina-se-manifesta-sobre-caso-do-predio-spin-time-em-rom",
+      "id": "ilm:cardeal-de-roma-se-manifesta-sobre-desocupacao-de-predio-com-400-morad",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Cardeal Baldo Reina se manifesta sobre caso do prédio Spin Time em Roma",
-      "resumo": "O prefeito Roberto Gualtieri assinou medida para transferir cerca de 400 pessoas para habitações temporárias por até 60 dias após incêndio no local.",
+      "titulo": "Cardeal de Roma se manifesta sobre desocupação de prédio com 400 moradores",
+      "resumo": "Baldo Reina criticou o encerramento do caso Spin Time apenas com o despejo das famílias, que estão em acampamentos após um incêndio no local.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/cardeal-reina-sobre-spin-time.html",
       "origemNome": "Vatican News",
@@ -340,12 +427,12 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O cardeal Baldo Reina, vigário geral do Papa para a Diocese de Roma, divulgou um comunicado no dia 8 de agosto sobre a situação do prédio Spin Time, localizado na via Santa Croce in Gerusalemme, em Roma. O imóvel está sob apreensão após um incêndio ocorrido em 29 de julho, deixando cerca de 400 moradores impedidos de retornar e abrigados em acampamentos há uma semana.",
-        "A manifestação do cardeal ocorreu na véspera da assinatura de uma medida pelo prefeito Roberto Gualtieri. A determinação inicia a transferência das famílias e demais moradores para soluções habitacionais com duração máxima de 60 dias, enquanto a prefeitura dá continuidade ao processo de aquisição do prédio.",
-        "No comunicado, Reina afirmou que seria errado encerrar o caso apenas com a desocupação e declarou que Cristo se identifica com quem ficou sem teto. O cardeal definiu a comunidade do Spin Time como um laboratório de convivência entre jovens, migrantes, idosos e pessoas de diferentes culturas e religiões, ressaltando que o local foi objeto de estudos, atenção da mídia e controvérsias políticas.",
-        "Reina também abordou o risco de a capital perder sua identidade e questionou a capacidade de criar oportunidades de fraternidade. Ele declarou que a Igreja de Roma estará presente e ao lado das pessoas que manifestam sofrimento."
+        "O cardeal vigário-geral do Papa para a Diocese de Roma, Baldo Reina, divulgou um comunicado no dia 8 de agosto sobre o prédio Spin Time, situado na via Santa Croce in Gerusalemme. O imóvel foi apreendido após um incêndio ocorrido em 29 de julho, deixando cerca de 400 pessoas impedidas de retornar e abrigadas em acampamentos há uma semana.",
+        "O pronunciamento precede a assinatura de uma medida pelo prefeito Roberto Gualtieri para transferir os moradores para soluções habitacionais com duração máxima de 60 dias. Durante esse prazo, a prefeitura deve dar prosseguimento ao processo de aquisição do edifício.",
+        "Reina declarou que seria um erro finalizar a questão apenas com o desocupamento do prédio e afirmou que Cristo se identifica com quem fica sem teto. O cardeal descreveu o local como um laboratório de convivência que reunia jovens, migrantes, idosos e pessoas de diversas culturas e religiões.",
+        "Ao manifestar preocupação com o risco de a cidade perder sua identidade ligada à fraternidade, Reina afirmou que a Igreja de Roma continuará ao lado das pessoas que expressam sofrimento."
       ],
-      "link": "/materia/cardeal-baldo-reina-se-manifesta-sobre-caso-do-predio-spin-time-em-rom.html",
+      "link": "/materia/cardeal-de-roma-se-manifesta-sobre-desocupacao-de-predio-com-400-morad.html",
       "iso": "2026-08-09T14:39:00.000Z",
       "hora": "10h39",
       "original": true,
@@ -354,61 +441,61 @@
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/ansa/2026/06/15/14/1781527273779.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "foto": "https://globalvoices.org/wp-content/uploads/2026/08/pexels-iwaria-76107965-8657107-800x450.webp",
       "fotoAlt": null,
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-faz-apelo-pela-paz-no-sudao-na-russia-e-na-ucrania",
+      "id": "ilm:jovens-africanos-utilizam-inteligencia-artificial-para-construir-a-paz",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Papa Leão XIV faz apelo pela paz no Sudão, na Rússia e na Ucrânia",
-      "resumo": "Durante o Angelus, o Pontífice pediu o fim dos ataques contra civis e o avanço da diplomacia.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-xiv-pos-angelus-apelo-paz-sudao-russia-ucrania-guerra.html",
-      "origemNome": "Vatican News",
+      "titulo": "Jovens africanos utilizam inteligência artificial para construir a paz",
+      "resumo": "O uso da tecnologia pela juventude levanta questões sobre os métodos aplicados e os desafios associados a esse processo.",
+      "fonte": "Meridiano, com informações de Global Voices (EN)",
+      "origemLink": "https://globalvoices.org/2026/08/09/can-ai-help-build-peace-african-youth-are-showing-a-path-forward/",
+      "origemNome": "Global Voices (EN)",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV realizou um apelo pela paz durante a oração do Angelus no domingo, 9 de agosto. O Pontífice mencionou a situação no Sudão e pediu o fim dos ataques na Rússia e na Ucrânia.",
-        "O Papa expressou proximidade espiritual com o povo do Sudão e mencionou a situação na cidade de El-Obeid. Ele cobrou que as autoridades garantam corredores humanitários para a população civil e pediu que a comunidade internacional apoie um cessar-fogo imediato.",
-        "Sobre a Rússia e a Ucrânia, o Santo Padre citou o aumento de vítimas civis, incluindo crianças, decorrentes do conflito em curso. Ele pediu que o direito humanitário seja respeitado e que cessem os ataques contra alvos civis por ambas as partes.",
-        "O Papa afirmou que a guerra gera mais guerra e provoca sofrimento. Ele declarou que é o momento de interromper a violência para dar espaço ao diálogo e à diplomacia em busca da paz."
+        "Jovens africanos estão utilizando a inteligência artificial com o objetivo de construir a paz.",
+        "A aplicação da tecnologia envolve discussões sobre como a juventude no continente africano emprega a inteligência artificial na construção da paz.",
+        "O processo de utilização da inteligência artificial para a promoção da paz também traz desafios associados."
       ],
-      "link": "/materia/papa-leao-xiv-faz-apelo-pela-paz-no-sudao-na-russia-e-na-ucrania.html",
-      "iso": "2026-08-09T10:32:00.000Z",
-      "hora": "06h32",
+      "link": "/materia/jovens-africanos-utilizam-inteligencia-artificial-para-construir-a-paz.html",
+      "iso": "2026-08-09T05:06:34.000Z",
+      "hora": "01h06",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
       "selo": "Confirmado oficialmente"
     },
     {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2019/09/21/2019.09.21%20Foto%20per%20notiziario%20in%20latino%2006.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
+      "foto": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/august/10P_Tempel2_Globular_M30_20260729_DEBartlett.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+      "fotoAlt": "messier",
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-anuncia-viagem-apostolica-a-america-latina-para-novembro",
+      "id": "ilm:imagem-telescopica-registra-passagem-do-cometa-tempel-2-proximo-ao-mes",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Papa Leão XIV anuncia viagem apostólica à América Latina para novembro",
-      "resumo": "O boletim em latim do Vatican News detalhou os temas da audiência geral e a viagem que passará por Uruguai, Argentina e Peru.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/hebdomada-papae-noticias-latim-vatican-news-8-agosto-2026.html",
-      "origemNome": "Vatican News",
+      "titulo": "Imagem telescópica registra passagem do cometa Tempel 2 próximo ao Messier 30",
+      "resumo": "O registro feito em 29 de julho mostra o cometa a 3,5 minutos-luz de distância, enquanto o aglomerado estelar Messier 30 está localizado a cerca de 28.000 anos-luz.",
+      "fonte": "Meridiano, com informações de NASA",
+      "origemLink": "https://science.nasa.gov/image-article/apod/apod-2026-august-8-a-messier-moment-for-tempel-2/",
+      "origemNome": "NASA",
       "pautadoPor": [],
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O boletim Hebdomada Papae do Vatican News divulgou as atividades do Papa Leão XIV, incluindo a audiência geral realizada na Basílica vaticana. A catechese tratou da verdade da preghiera na Igreja e da dimensão ecclesiale da preghiera liturgica, após uma pausa no mês de julho em razão do calor em Roma.",
-        "Durante o evento, que contou com 5 mil fiéis, o Papa abordou a importância da liturgia e enviou um videomessagem aos Cavalieri di Colombo na 144.ma Supreme Convention em Denver, nos Estados Unidos, expressando gratidão pela generosidade da ordem.",
-        "O boletim também confirmou a viagem apostólica do Papa Leão XIV ao Uruguai, Argentina e Peru, programada para o período de 6 a 17 novembro. A agenda papal recente incluiu ainda uma visita à Umbria para o evento GO! Franciscan Youth Meeting e uma mensagem ao Congresso mondiale di SIGNIS."
+        "Uma imagem telescópica registrada no dia 29 de julho capturou o cometa periódico 10P/Tempel 2 em aproximação aparente no céu com o aglomerado estelar globular Messier 30. O registro fotográfico de Dan Bartlett mostra a cabeleira esverdeada e difusa do cometa à esquerda do quadro.",
+        "A trilha de poeira orbital do cometa, de aspecto tênue e estreito, aparenta atravessar o aglomerado estelar Messier 30, também chamado de M30. O cometa Tempel 2 encontrava-se a 3,5 minutos-luz de distância, enquanto o aglomerado Messier 30 está a cerca de 28.000 anos-luz.",
+        "O aglomerado Messier 30 é a 30ª entrada no catálogo do astrônomo do século 18 Charles Messier, criado para listar objetos que não se moviam contra as estrelas de fundo e não eram cometas. No telescópio do astrônomo, tanto o 10P/Tempel 2 quanto o aglomerado distante apareciam como objetos tênues e nebulosos de aspecto semelhante.",
+        "A imagem foi publicada no serviço Astronomy Picture of the Day, editado por Jerry Bonnell, Cecilia Chirenti, Robert Nemiroff e Keighley Rockcliffe. A plataforma é mantida pela"
       ],
-      "link": "/materia/papa-leao-xiv-anuncia-viagem-apostolica-a-america-latina-para-novembro.html",
-      "iso": "2026-08-08T16:56:00.000Z",
-      "hora": "12h56",
+      "link": "/materia/imagem-telescopica-registra-passagem-do-cometa-tempel-2-proximo-ao-mes.html",
+      "iso": "2026-08-08T04:05:00.000Z",
+      "hora": "00h05",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -420,11 +507,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:honduras-ocupa-o-sexto-lugar-em-ranking-de-crises-humanitarias-neglige",
+      "id": "ilm:honduras-e-o-sexto-pais-com-crise-de-deslocamento-mais-negligenciada-n",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Honduras ocupa o sexto lugar em ranking de crises humanitárias negligenciadas",
-      "resumo": "Relatório publicado em 10 de junho aponta que milhares de pessoas enfrentam deslocamentos internos devido à violência e à crise climática.",
+      "titulo": "Honduras é o sexto país com crise de deslocamento mais negligenciada no mundo",
+      "resumo": "Relatório do Conselho Norueguês para Refugiados aponta que violência e eventos climáticos obrigam milhares de pessoas a mudar de cidade ou bairro dentro do próprio país.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/mundo/news/2026-08/honduras-deslocados-crise-humanitaria-conselho-noruega-refugiado.html",
       "origemNome": "Vatican News",
@@ -432,14 +519,76 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "Honduras ocupa a sexta posição no ranking de crises de deslocamento mais negligenciadas do mundo, elaborado pelo Conselho Norueguês para Refugiados e publicado em 10 de junho. O relatório aponta que a emergência humanitária afeta milhares de pessoas no país e recebe pouca atenção internacional em relação à gravidade das necessidades.",
-        "O deslocamento interno no país ocorre quando os moradores deixam suas residências e se mudam de cidade em cidade ou de bairro em bairro. Muitas famílias fogem da violência ligada ao crime organizado, ameaças de gangues, extorsão e controle territorial por grupos armados.",
-        "A crise de segurança é agravada pelas mudanças climáticas na América Central, com furacões, inundações, secas prolongadas e perdas de safras que atingem as comunidades rurais. Os furacões Eta e Iota atingiram Honduras em 2020 e destruíram casas, infraestruturas e meios de subsistência.",
-        "A capital Tegucigalpa, São Pedro Sula e outras áreas urbanas acolheram milhares de pessoas que fugiam das regiões afetadas pela violência. Os recém-chegados costumam se instalar em subúrbios assolados pela pobreza em busca de trabalho, moradia e serviços essenciais."
+        "Honduras ocupa o sexto lugar no ranking das crises de deslocamento mais negligenciadas do mundo, de acordo com relatório do Conselho Norueguês para Refugiados (NRC) publicado em 10 de junho. O levantamento indica que o país enfrenta uma emergência humanitária que afeta milhares de pessoas com pouca atenção internacional.",
+        "Os deslocamentos ocorrem dentro do próprio território nacional, com moradores mudando de cidade ou de bairro. A fuga das famílias é motivada pela violência ligada ao crime organizado, ameaças de gangues, extorsão e controle territorial por grupos armados. Cidades como a capital Tegucigalpa e São Pedro Sula acolheram milhares de pessoas em seus subúrbios.",
+        "A situação é agravada por fatores ambientais na América Central, como furacões, inundações, secas e perda de safras. Em 2020, os furacões Eta e Iota causaram destruição de residências, infraestrutura e meios de subsistência, forçando milhares de moradores a abandonarem suas casas.",
+        "Por não cruzarem as fronteiras do país, os deslocados internos de Honduras recebem menos ajuda financeira, menor cobertura da mídia e pouca pressão política, permanecendo em situação de vulnerabilidade e insegurança."
       ],
-      "link": "/materia/honduras-ocupa-o-sexto-lugar-em-ranking-de-crises-humanitarias-neglige.html",
+      "link": "/materia/honduras-e-o-sexto-pais-com-crise-de-deslocamento-mais-negligenciada-n.html",
       "iso": "2026-08-08T16:24:00.000Z",
       "hora": "12h24",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2019/09/21/2019.09.21%20Foto%20per%20notiziario%20in%20latino%2006.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:papa-leao-xiv-fara-viagem-a-america-latina-de-6-a-17-de-novembro",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Papa Leão XIV fará viagem à América Latina de 6 a 17 de novembro",
+      "resumo": "Pontífice também retomou as audiências gerais na Basílica de São Pedro para 5 mil pessoas e enviou mensagens aos Cavaleiros de Colombo e à SIGNIS.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/hebdomada-papae-noticias-latim-vatican-news-8-agosto-2026.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O Papa Leão XIV fará uma viagem apostólica ao Uruguai, Argentina e Peru entre os dias 6 e 17 de novembro, atendendo ao convite dos chefes de Estado e das autoridades eclesiásticas dos respectivos países. O anúncio foi veiculado no boletim em latim Hebdomada Papae, do Vatican News, em 8 de agosto de 2026.",
+        "Após a pausa do mês de julho, o Pontífice realizou a audiência geral de quarta-feira na Basílica de São Pedro devido ao calor em Roma. Diante de 5 mil fiéis presentes, ele proferiu a quinta catequese sobre a Constituição conciliar \"Sacrosanctum Concilium\", dedicada à dimensão eclesial da oração litúrgica.",
+        "Em videomensagem enviada à 144ª Convenção Suprema dos Cavaleiros de Colombo, realizada em Denver, nos Estados Unidos, o Papa destacou a generosidade da ordem e afirmou que as obras de caridade promovem a unidade e a comunhão. Ele também enviou mensagem ao Congresso mundial da SIGNIS, apontando a verdade e o respeito à dignidade humana como princípios orientadores da comunicação.",
+        "O Papa esteve pela segunda vez na Úmbria para o encerramento do evento internacional \"GO! Franciscan Youth Meeting\", voltado para jovens entre 18 e 33 anos, no ano em que se celebra o oitavo centenário do Trânsito do Santo."
+      ],
+      "link": "/materia/papa-leao-xiv-fara-viagem-a-america-latina-de-6-a-17-de-novembro.html",
+      "iso": "2026-08-08T16:56:00.000Z",
+      "hora": "12h56",
+      "original": true,
+      "contexto": null,
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/ansa/2026/06/15/14/1781527273779.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:papa-leao-xiv-faz-apelo-pela-paz-no-sudao-e-pelo-fim-dos-ataques-entre",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Papa Leão XIV faz apelo pela paz no Sudão e pelo fim dos ataques entre Rússia e Ucrânia",
+      "resumo": "No Angelus deste domingo, 9 de agosto, o Pontífice pediu corredores humanitários em El-Obeid e defendeu a diplomacia para interromper a espiral de violência nas duas regiões.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-xiv-pos-angelus-apelo-paz-sudao-russia-ucrania-guerra.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "No Angelus deste domingo, 9 de agosto, o Papa Leão XIV fez um apelo em favor da paz no Sudão e pelo fim dos ataques a civis na guerra entre a Rússia e a Ucrânia. O Pontífice manifestou proximidade espiritual com as populações atingidas pelos conflitos nas duas regiões.",
+        "Sobre o Sudão, o Papa declarou acompanhar com preocupação a situação no país, com destaque para a cidade de El-Obeid. Ele pediu às autoridades a garantia de corredores humanitários para a população e solicitou que a comunidade internacional apoie um cessar-fogo imediato.",
+        "Ao tratar do conflito entre Rússia e Ucrânia, o Santo Padre citou relatos de vítimas civis inocentes, incluindo crianças. Ele defendeu o respeito ao direito humanitário e a interrupção dos ataques a alvos civis por ambas as partes, afirmando que a guerra gera mais guerra e que é necessário dar espaço à diplomacia e ao diálogo.",
+        "O Papa também pediu orações para que o Senhor sustente os que sofrem e converta os corações dos que semeiam a violência. As declarações foram veiculadas pela Vatican News, em reportagem de Raimundo de Lima."
+      ],
+      "link": "/materia/papa-leao-xiv-faz-apelo-pela-paz-no-sudao-e-pelo-fim-dos-ataques-entre.html",
+      "iso": "2026-08-09T10:32:00.000Z",
+      "hora": "06h32",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -451,11 +600,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:caritas-italiana-atua-na-venezuela-apos-terremoto",
+      "id": "ilm:caritas-italiana-presta-assistencia-a-vitimas-de-terremoto-na-venezuel",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Caritas Italiana atua na Venezuela apos terremoto",
-      "resumo": "A missao ocorre ate 11 de agosto para prestar assistencia concreta aos afetados pelo tremor de junho.",
+      "titulo": "Caritas Italiana presta assistência a vítimas de terremoto na Venezuela",
+      "resumo": "Missão liderada pelo padre Marco Pagniello atua no país até 11 de agosto com distribuição de alimentos, remédios e apoio psicológico às famílias atingidas.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/venezuela-padre-pagniello-em-meio-dor-uma-igreja-que-nao-desiste.html",
       "origemNome": "Vatican News",
@@ -463,75 +612,14 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "A Caritas Italiana atua na Venezuela para prestar assistencia concreta a populacao afetada pelo terremoto ocorrido em junho. A presenca no pais sul-americano acontece ate 11 de agosto, com o objetivo de encontrar uma comunidade que precisa reencontrar a esperanca. O padre Marco Pagniello descreve uma situacao de profunda devastacao, comparada a um apocalipse, com luto pelas vitimas e busca por desaparecidos.",
-        "A comunidade cristao transforma instalacoes em centros de acolhimento e distribuicao de ajuda. Paroquias, voluntarios e fieis fornecem refeicoes, medicamentos, roupas e bens de primeira necessidade, alem de assistencia espiritual. Milhares de familias sao ajudadas e centenas de refeicoes sao preparadas diariamente, com foco na infancia e nos vulneraveis.",
-        "As necessidades urgentes incluem assistencia medica, medicamentos, alimentos e moradia. A reconstrucao tambem abrange acompanhamento psicologico e espiritual, promocion de inclusao profissional e ajuda para encontrar casa e futuro. A delegacao italiana visita dioceses atingidas e se encontra com bispos, sacerdotes, religiosos e comunidades paroquiais."
+        "A Caritas Italiana realiza uma missão na Venezuela entre os dias 4 e 11 de agosto para prestar assistência à população afetada pelo terremoto ocorrido em junho. A ação é acompanhada pelo padre Marco Pagniello, diretor da instituição e diretor do Setor de Pastoral da Conferência Episcopal Italiana.",
+        "Em visita ao local, que inclui a região de La Guaira e dioceses atingidas, a delegação acompanha o trabalho de paróquias, voluntários e fiéis. As estruturas locais foram transformadas em centros de acolhimento para a distribuição de refeições, medicamentos, roupas, moradia temporária e atendimento espiritual.",
+        "Em uma das paróquias visitadas, milhares de famílias recebem ajuda e centenas de refeições são preparadas diariamente para a população, com atenção a crianças e vulneráveis. Segundo o padre Marco Pagniello, a reconstrução exige também acompanhamento psicológico e espiritual, além de incentivo à inclusão profissional e busca por moradia.",
+        "A missão busca identificar as necessidades mais urgentes em conjunto com a rede internacional da Caritas para definir a contribuição futura da Igreja italiana no país. O trabalho prioriza o atendimento às populações mais atingidas durante o processo de recuperação."
       ],
-      "link": "/materia/caritas-italiana-atua-na-venezuela-apos-terremoto.html",
+      "link": "/materia/caritas-italiana-presta-assistencia-a-vitimas-de-terremoto-na-venezuel.html",
       "iso": "2026-08-08T15:51:00.000Z",
       "hora": "11h51",
-      "original": true,
-      "contexto": null,
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/07/signis-archibishop-2.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:congresso-signis-2026-debate-comunicacao-digital-e-evangelizacao",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "Congresso SIGNIS 2026 debate comunicação digital e evangelização",
-      "resumo": "O arcebispo Fortunatus Nwachukwu afirmou no evento em Kigali que o discipulado deve preceder a visibilidade na rede.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/signis-kigali-ruanda-africa-irmas-vaticano-comunicacao-evangelho.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "O arcebispo Fortunatus Nwachukwu, secretário do Dicastério para a Evangelização, participou da primeira sessão plenária do Congresso Mundial SIGNIS 2026 em Kigali, Ruanda. O evento teve como tema central a comunicação digital para a harmonia cultural e o bem-estar ambiental.",
-        "Durante a plenária, o secretário afirmou que a humanidade enfrenta a escolha entre viver em um mundo de confusão e barulho ou reconstruir uma cidade em comunhão com Deus. Ele mencionou o convite do Papa Leão XIV para a construção de uma civilização do amor realizada por discípulos com câmeras, microfones e laptops.",
-        "Em entrevista à mídia vaticana, o arcebispo declarou que o comunicador cristão precisa ser discípulo antes de ser protagonista. A identidade desse profissional deve se fundamentar na formação humana e espiritual antes da criação de plataformas digitais.",
-        "A terceira e última manhã do congresso foi dedicada à contribuição das religiosas católicas para a Igreja e a sociedade, contando com a participação da irmã Jane Wakahiu, vice-presidente."
-      ],
-      "link": "/materia/congresso-signis-2026-debate-comunicacao-digital-e-evangelizacao.html",
-      "iso": "2026-08-08T14:10:00.000Z",
-      "hora": "10h10",
-      "original": true,
-      "contexto": "O Congresso Mundial SIGNIS 2026 foi tema de outras quatro coberturas no arquivo do Meridiano entre os dias 5 e 8 de agosto de 2026. O evento encerrou sua terceira e última manhã com debates sobre a contribuição das religiosas católicas.",
-      "nivel": "confirmado",
-      "selo": "Confirmado oficialmente"
-    },
-    {
-      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/08/cabo-verde-c-500-1.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
-      "fotoAlt": null,
-      "fotoLarg": 0,
-      "municipio": null,
-      "municipioNome": null,
-      "id": "ilm:comissao-executiva-nacional-c500-faz-pre-avaliacao-em-cabo-verde",
-      "chapeu": "Nosso texto",
-      "editoria": "internacional",
-      "titulo": "Comissão Executiva Nacional C500 faz pré-avaliação em Cabo Verde",
-      "resumo": "O encontro no Bispado debateu o I Ciclo do projeto que celebra os quinhentos anos da Diocese de Santiago.",
-      "fonte": "Meridiano, com informações de Vatican News",
-      "origemLink": "https://www.vaticannews.va/pt/africa/news/2026-08/cabo-verde-comissao-executiva-nacional-c500-faz-pre-avaliacao.html",
-      "origemNome": "Vatican News",
-      "pautadoPor": [],
-      "quentura": 0,
-      "uf": null,
-      "corpo": [
-        "A Comissão Executiva Nacional do Projeto da Celebração dos 500 Anos da Diocese de Santiago realizou reunião de pré-avaliação no sábado 1 de agosto, no Bispado, na cidade da Praia, ilha de Santiago. O encontro ocorreu sob a presidência do Padre António Ferreira para apreciar e deliberar sobre o Processo de Avaliação e o Relatório de Execução do I Ciclo do Projeto C500, correspondente ao período 2023/24–2025/26.",
-        "O projeto possui duração de 10 anos, abrangendo o período de 2023 a 2033, e inclui tanto Cabo Verde quanto a diáspora. O objetivo central consiste em apresentar a gênese da Igreja no país e seu percurso ao longo de 500 anos. O gestor do projeto, Pedro Moreira, apontou momentos marcantes voltados para dentro e para fora do país, na Europa e nas Américas, e afirmou que a iniciativa superou as expectativas.",
-        "Entre os desafios do projeto figura o Arquivo da Diocese de Santiago, com iniciativas em curso para preservar a história do povo das ilhas. Sob o lema Fundamentos, Memória e Gratidão — Rumo ao II Ciclo, a comissão determinou que o mês de agosto será dedicado à avaliação dos três anos iniciais e ao lançamento do II Ciclo, voltado para a África.",
-        "A avaliação do mês de agosto abrangerá atividades realizadas, resultados obtidos, participação comunitária, coordenação, comunicação, documentação, gestão financeira, prestação de contas e articulação com estruturas diocesanas e paroquiais, a Diocese de Mindelo, a diáspora e parceiros. Após a reunião, serão divulgadas as deliberações, o calendário do processo e as formas de participação."
-      ],
-      "link": "/materia/comissao-executiva-nacional-c500-faz-pre-avaliacao-em-cabo-verde.html",
-      "iso": "2026-08-08T11:10:00.000Z",
-      "hora": "07h10",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -543,11 +631,11 @@
       "fotoLarg": 0,
       "municipio": null,
       "municipioNome": null,
-      "id": "ilm:papa-leao-xiv-envia-carta-sobre-os-900-anos-das-reliquias-de-santa-agu",
+      "id": "ilm:papa-leao-xiv-nomeia-cardeal-pietro-parolin-legado-pontificio-para-ato",
       "chapeu": "Nosso texto",
       "editoria": "internacional",
-      "titulo": "Papa Leão XIV envia carta sobre os 900 anos das relíquias de Santa Águeda",
-      "resumo": "O cardeal secretário de Estado Pietro Parolin foi nomeado legado pontifício para as celebrações marcadas para os dias 16 e 17 de agosto de 2026.",
+      "titulo": "Papa Leão XIV nomeia cardeal Pietro Parolin legado pontifício para atos em Catânia",
+      "resumo": "Em carta, o pontífice tratou do IX Centenário do retorno das relíquias de Santa Águeda, marcado para 16 e 17 de agosto de 2026.",
       "fonte": "Meridiano, com informações de Vatican News",
       "origemLink": "https://www.vaticannews.va/pt/papa/news/2026-08/papa-leao-xiv-parolin-legado-pontificio-celebracoes-santa-agueda.html",
       "origemNome": "Vatican News",
@@ -555,14 +643,76 @@
       "quentura": 0,
       "uf": null,
       "corpo": [
-        "O Papa Leão XIV enviou uma carta ao cardeal secretário de Estado Pietro Parolin na qual afirma que a comunidade eclesial contempla a vitória da graça sobre a violência, da fé sobre o medo e da caridade sobre a morte no martírio de Santa Águeda. Parolin foi nomeado legado pontifício para as celebrações previstas para os dias 16 e 17 de agosto de 2026, por ocasião do IX Centenário do retorno das relíquias da mártir a Catânia.",
-        "Na mensagem, o pontífice lembra que Santa Águeda morreu sob tortura ainda na adolescência por não ter renegado a fé durante as perseguições anticristãs do imperador romano Décio no século III. O texto aponta que a mártir participou da Páscoa de Cristo e resplandece como um testemunho da força que o Senhor infunde àqueles que perseveram firmes nas tentações e provações.",
-        "Conhecida como a Santuzza em Catânia, onde é padroeira, Santa Águeda permanece como uma presença viva que guarda a memória cristã do povo. A carta menciona que ela convida à coerência evangélica de vida, à esperança e à caridade, tornando visível a comunhão dos santos.",
-        "O documento reforça nos fiéis a consciência de que a Igreja peregrina na terra é sustentada pela intercessão e pelo exemplo daqueles que já se tornaram participantes da glória celestial. As comemorações centrais ocorrem nos dias 16 e 17 de agosto de 2026."
+        "O Papa Leão XIV enviou uma carta ao cardeal secretário de Estado Pietro Parolin, nomeado como legado pontifício para as celebrações dos dias 16 e 17 de agosto de 2026. As datas marcam o IX Centenário do retorno das relíquias da mártir Santa Águeda a Catânia.",
+        "Na mensagem, o pontífice afirmou que o martírio da santa representa a vitória da graça sobre a violência, da fé sobre o medo e da caridade sobre a morte. Ele apontou que a trajetória de Santa Águeda serve como testemunho da força concedida aos que mantêm a firmeza diante de tentações e provações.",
+        "Santa Águeda morreu na adolescência, sob tortura, por recusar renegar a fé durante as perseguições anticristãs do imperador romano Décio, no século III. Chamada de \"Santuzza\" em Catânia, cidade da qual é padroeira, ela foi definida pelo Papa como uma presença viva que guarda a memória cristã do povo.",
+        "A carta reforça que o exemplo e a intercessão daqueles que alcançaram a glória celestial sustentam a Igreja peregrina na terra. O documento registra ainda que a data convida os fiéis à coerência evangélica de vida, à esperança e à caridade."
       ],
-      "link": "/materia/papa-leao-xiv-envia-carta-sobre-os-900-anos-das-reliquias-de-santa-agu.html",
+      "link": "/materia/papa-leao-xiv-nomeia-cardeal-pietro-parolin-legado-pontificio-para-ato.html",
       "iso": "2026-08-08T10:20:00.000Z",
       "hora": "06h20",
+      "original": true,
+      "contexto": "As celebrações do IX Centenário estão agendadas para os dias 16 e 17 de agosto de 2026 na cidade de Catânia. O histórico reúne duas ocorrências semelhantes registradas em 8 de agosto de 2026 sobre a nomeação do cardeal Pietro Parolin e o envio da carta papal.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/agosto/07/signis-archibishop-2.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:arcebispo-defende-discipulado-na-comunicacao-no-congresso-signis-2026",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Arcebispo defende discipulado na comunicação no Congresso SIGNIS 2026",
+      "resumo": "Em Kigali, dom Fortunatus Nwachukwu afirmou que a comunicação digital é um espaço de evangelização e defendeu a construção de uma civilização do amor.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/vaticano/news/2026-08/signis-kigali-ruanda-africa-irmas-vaticano-comunicacao-evangelho.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "O arcebispo Fortunatus Nwachukwu, secretário do Dicastério para a Evangelização, afirmou que o comunicador cristão deve ser discípulo antes de ser protagonista. A declaração foi feita durante o Congresso Mundial SIGNIS 2026, em Kigali, Ruanda.",
+        "Na primeira sessão plenária do evento, dedicada à comunicação digital para a harmonia cultural e o bem-estar ambiental, o religioso destacou que a comunicação digital é um espaço de evangelização no qual o discipulado deve preceder a visibilidade. Segundo ele, a humanidade enfrenta a escolha entre permanecer no barulho e na confusão ou reconstruir uma cidade de comunhão com Deus.",
+        "Dom Nwachukwu também retomou o convite do Papa Leão XIV para a construção de uma civilização do amor. Conforme o arcebispo, a tarefa é realizada por discípulos que carregam câmeras, microfones e laptops, cuja identidade se fundamenta na formação humana e espiritual antes de criarem uma plataforma digital.",
+        "A terceira e última manhã do congresso foi dedicada à contribuição das religiosas católicas para a Igreja e a sociedade. O debate contou com a participação da irmã Jane Wakahiu, vice-presidente da organização."
+      ],
+      "link": "/materia/arcebispo-defende-discipulado-na-comunicacao-no-congresso-signis-2026.html",
+      "iso": "2026-08-08T14:10:00.000Z",
+      "hora": "10h10",
+      "original": true,
+      "contexto": "O histórico do arquivo registra quatro relatos sobre o Congresso SIGNIS entre os dias 7 e 8 de agosto de 2026. O evento afeta comunicadores cristãos e religiosas católicas que atuam na comunicação digital.",
+      "nivel": "confirmado",
+      "selo": "Confirmado oficialmente"
+    },
+    {
+      "foto": "https://www.vaticannews.va/content/dam/vaticannews/multimedia/2026/giugno/18/20260809_vangelo-di-domenica_Wikimedia-Commons_Codex-Egberti-fol.-27v_sec.-X_Gesu-cammina-.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+      "fotoAlt": null,
+      "fotoLarg": 0,
+      "municipio": null,
+      "municipioNome": null,
+      "id": "ilm:liturgia-do-19-domingo-do-tempo-comum-destaca-presenca-de-deus-nas-adv",
+      "chapeu": "Nosso texto",
+      "editoria": "internacional",
+      "titulo": "Liturgia do 19º Domingo do Tempo Comum destaca presença de Deus nas adversidades",
+      "resumo": "Texto divulgado pelo Vatican News reúne passagens do 1º Livro dos Reis e do Evangelho de Mateus sobre episódios vividos pelo Profeta Elias, por Jesus e pelos discípulos.",
+      "fonte": "Meridiano, com informações de Vatican News",
+      "origemLink": "https://www.vaticannews.va/pt/igreja/news/2026-08/reflexao-19-domingo-tempo-comum.html",
+      "origemNome": "Vatican News",
+      "pautadoPor": [],
+      "quentura": 0,
+      "uf": null,
+      "corpo": [
+        "A liturgia do 19º Domingo do Tempo Comum aborda a presença e a ação de Deus em momentos de adversidade, com trechos do 1º Livro dos Reis e do capítulo 14 do Evangelho de Mateus. A reflexão foi divulgada pelo Vatican News.",
+        "No 1º Livro dos Reis, o Profeta Elias enfrenta perseguição e sofre ao fugir por ter se mantido fiel a Deus e lutado pela preservação do autêntico culto. Na narrativa, Deus se faz presente a Elias por meio de uma brisa leve.",
+        "O capítulo 14 de Mateus apresenta Jesus orientando os discípulos a embarcarem para a outra margem do mar, após a multiplicação dos pães e peixes e de curar doentes. Durante a noite, a embarcação é agitada pelo vento e os discípulos sentem pavor ao avistar um vulto.",
+        "Ao se aproximar, Jesus diz aos discípulos para não terem medo. Pedro pede para ir ao seu encontro sobre as águas e começa a caminhar, mas afunda ao temer o vento, sendo socorrido por Jesus, que questiona a sua dúvida antes de subir na barca e fazer o vento cessar."
+      ],
+      "link": "/materia/liturgia-do-19-domingo-do-tempo-comum-destaca-presenca-de-deus-nas-adv.html",
+      "iso": "2026-08-08T06:00:00.000Z",
+      "hora": "02h00",
       "original": true,
       "contexto": null,
       "nivel": "confirmado",
@@ -574,15 +724,15 @@
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que haveria uma rejeição de Israel a um plano para Gaza.",
-        "Que o plano teria apoio dos Estados Unidos e de Donald Trump.",
-        "Que o Hamas teria aceitado a proposta em questão."
+        "Que três veículos de imprensa publicaram matérias sobre a rejeição do plano por Israel.",
+        "Que as manchetes citam o envolvimento de Israel, Estados Unidos, Donald Trump e Hamas.",
+        "Que as publicações divergiram sobre a autoria exata e as condições da proposta."
       ],
       "falta": [
-        "O teor oficial e integral do plano mencionado pelas publicações.",
-        "A manifestação formal do governo de Israel sobre o caso.",
-        "A confirmação oficial por parte dos Estados Unidos e do Hamas."
+        "Manifestação oficial do governo de Israel confirmando a rejeição do plano.",
+        "Posicionamento oficial dos Estados Unidos ou de Donald Trump sobre a existência do plano.",
+        "Declaração oficial do Hamas referente ao aceite ou à exigência de desarmamento.",
+        "Apresentação de documento oficial ou registro formal das negociações citadas."
       ],
       "ondeCirculou": [
         {
@@ -591,125 +741,40 @@
           "link": "http://pt.euronews.com/2026/08/09/israel-rejeita-plano-dos-eua-para-gaza-aceite-pelo-hamas"
         },
         {
-          "veiculo": "AP Photo/Jehad Alshrafi - Jehad Alshrafi",
-          "titulo": "Israel rejeita plano para Gaza apoiado por Trump e exige desarmamento total do Hamas",
-          "link": "https://www.rfi.fr/br/mundo/20260809-netanyahu-rejeita-plano-para-gaza-apoiado-por-trump-e-exige-desarmamento-total-do-hamas"
-        },
-        {
           "veiculo": "Folha Mundo",
           "titulo": "Israel rejeita plano de Trump para desarmar Hamas",
           "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/israel-rejeita-plano-de-trump-para-desarmar-hamas.shtml"
+        },
+        {
+          "veiculo": "AP Photo/Jehad Alshrafi - Jehad Alshrafi",
+          "titulo": "Israel rejeita plano para Gaza apoiado por Trump e exige desarmamento total do Hamas",
+          "link": "https://www.rfi.fr/br/mundo/20260809-netanyahu-rejeita-plano-para-gaza-apoiado-por-trump-e-exige-desarmamento-total-do-hamas"
         }
       ],
-      "link": "/materia/nc-israel-rejeitaria-plano-para-gaza-apoiado-pelos-eua.html",
+      "link": "/materia/nc-israel-teria-rejeitado-plano-para-gaza-associado-aos-eua-e-a-trump.html",
       "corpo": [
-        "O governo de Israel estaria rejeitando uma proposta de acordo para a Faixa de Gaza. O plano em questão teria o apoio dos Estados Unidos e de Donald Trump, além de ter contado com a aceitação do Hamas.",
-        "As publicações divergem quanto ao teor exato das exigências israelenses na negociação. Enquanto alguns veículos relatam apenas a rejeição ao plano e a aceitação pelo grupo palestino, outros acrescentam que Israel exigiria o desarmamento total do Hamas.",
-        "A situação envolveria o futuro político e militar do enclave palestino. O impasse diplomático estaria em curso entre as partes envolvidas."
+        "As publicações que veiculam a informação apresentam divergências em relação aos detalhes do plano. Enquanto um veículo afirma que a proposta seria dos Estados Unidos e aceita pelo Hamas, outros indicam que o texto teria autoria ou apoio de Donald Trump. Há também divergência sobre os termos, variando entre um plano para desarmar o grupo e a exigência israelense de desarmamento total."
       ],
-      "id": "circ:israel-rejeitaria-plano-para-gaza-apoiado-pelos-eua",
+      "id": "circ:israel-teria-rejeitado-plano-para-gaza-associado-aos-eua-e-a-trump",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "Israel rejeitaria plano para Gaza apoiado pelos EUA",
+      "titulo": "Israel teria rejeitado plano para Gaza associado aos EUA e a Trump",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:21:16.120Z",
-      "hora": "11h21"
+      "iso": "2026-08-09T19:55:41.536Z",
+      "hora": "15h55"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por três veículos da imprensa.",
-        "Que há menção a exigências do governo do Irã direcionadas aos Estados Unidos.",
-        "Que o tema envolve a situação e a possível reabertura do Estreito de Ormuz."
+        "Que o assunto está sendo veiculado por dois meios de comunicação.",
+        "Que as publicações alegam fiscalização da Espanha sobre passageiros da Itália.",
+        "Que os relatos mencionam o controle aplicado a 15% dos viajantes."
       ],
       "falta": [
-        "Divulgação oficial do documento ou da lista exata de exigências iranianas.",
-        "Manifestação formal do governo dos Estados Unidos sobre as condições impostas.",
-        "Confirmação de prazos ou status atual do fechamento da via marítima por fontes oficiais."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "© AP/Amirhosein Khorgooi",
-          "titulo": "Estreito de Ormuz continuará fechado até EUA aceitarem 'todas as nossas condições', alerta Irã",
-          "link": "https://www.rfi.fr/br/mundo/20260809-estreito-de-ormuz-continuar%C3%A1-fechado-at%C3%A9-eua-aceitarem-todas-as-condi%C3%A7%C3%B5es-alerta-ir%C3%A3"
-        },
-        {
-          "veiculo": "Folha Mundo",
-          "titulo": "Irã apresenta lista de exigências aos EUA para reabrir estreito de Hormuz",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/ira-apresenta-lista-de-exigencias-aos-eua-para-reabrir-estreito-de-hormuz.shtml"
-        },
-        {
-          "veiculo": "g1 Mundo",
-          "titulo": "Irã exige indenização dos EUA para reabrir Estreito de Ormuz",
-          "link": "https://g1.globo.com/mundo/noticia/2026/08/09/ira-exige-indenizacao-dos-eua-para-reabrir-estreito-de-ormuz.ghtml"
-        }
-      ],
-      "link": "/materia/nc-ira-exigiria-condicoes-e-indenizacao-dos-eua-para-reabrir-ormuz.html",
-      "corpo": [
-        "O governo do Irã estaria impondo exigências para a reabertura do Estreito de Ormuz. A medida dependeria da aceitação de termos e do pagamento de indenizações pelos Estados Unidos.",
-        "As publicações divergem sobre o teor exato das exigências apresentadas. Enquanto alguns veículos mencionam uma lista geral de condições e um alerta de que o bloqueio continuará, outros destacam especificamente a exigência de indenização financeira.",
-        "A restrição na rota marítima afetaria o escoamento global de petróleo e a estabilidade comercial na região."
-      ],
-      "id": "circ:ira-exigiria-condicoes-e-indenizacao-dos-eua-para-reabrir-ormuz",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Irã exigiria condições e indenização dos EUA para reabrir Ormuz",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:21:56.376Z",
-      "hora": "11h21"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por duas publicações na imprensa.",
-        "Que a alegação envolve crianças nascidas na guerra do Sudão.",
-        "Que os menores estariam sem registro oficial."
-      ],
-      "falta": [
-        "Dados numéricos sobre o total de crianças afetadas.",
-        "Confirmação por parte de órgãos oficiais ou agências humanitárias.",
-        "Identificação de locais específicos e períodos exatos dos nascimentos."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Folha Mundo",
-          "titulo": "As crianças invisíveis do Sudão nascidas na guerra e sem registro",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/as-criancas-invisiveis-do-sudao-nascidas-na-guerra-e-sem-registro.shtml"
-        },
-        {
-          "veiculo": "BBC Brasil",
-          "titulo": "As crianças invisíveis do Sudão nascidas na guerra e sem registro",
-          "link": "https://www.bbc.com/portuguese/articles/clyq9n36532o?at_medium=RSS&amp;at_campaign=rss"
-        }
-      ],
-      "link": "/materia/nc-criancas-no-sudao-estariam-sem-registro-nascimentos-guerra.html",
-      "corpo": [
-        "Duas publicações veiculam informações sobre a existência de crianças no Sudão que teriam nascido durante o período de guerra e estariam sem registro oficial. O teor da alegação aponta para uma condição de invisibilidade desses menores decorrente do conflito armado no país.",
-        "As manchetes que circulam sobre o tema não trazem divergências entre si, repetindo exatamente a mesma formulação sobre a situação das crianças afetadas pela guerra. Não há menção a locais específicos, datas exatas, contagens numéricas ou órgãos governamentais citados nas informações divulgadas até o momento.",
-        "O que estaria em jogo seria a garantia de documentação e identidade legal para uma parcela da população infantil nascida em meio aos confrontos. A ausência de registros oficiais pode impactar o acesso a direitos básicos e à assistência humanitária para esses menores."
-      ],
-      "id": "circ:criancas-no-sudao-estariam-sem-registro-nascimentos-guerra",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Crianças no Sudão estariam sem registro nascimentos guerra",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:22:36.822Z",
-      "hora": "11h22"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos da imprensa.",
-        "Que a Espanha estaria fiscalizando viajantes procedentes da Itália.",
-        "Que o controle já teria atingido quinze por cento dos passageiros."
-      ],
-      "falta": [
-        "Confirmação oficial do governo espanhol sobre o início da fiscalização.",
-        "Dados detalhados de órgãos de imigração sobre os pontos e datas dos controles.",
-        "Posicionamento formal das autoridades italianas sobre a suposta medida."
+        "Manifestação oficial dos governos da Espanha ou da Itália.",
+        "Identificação dos órgãos responsáveis e dos locais onde ocorreriam os controles.",
+        "Confirmação oficial sobre o percentual de passageiros fiscalizados."
       ],
       "ondeCirculou": [
         {
@@ -723,98 +788,57 @@
           "link": "http://pt.euronews.com/my-europe/2026/08/09/espanha-ja-controlou-15-dos-passageiros-provenientes-de-italia"
         }
       ],
-      "link": "/materia/nc-espanha-teria-iniciado-controle-de-viajantes-da-italia.html",
+      "link": "/materia/nc-espanha-estaria-fiscalizando-entrada-de-viajantes-da-italia-apos-dispu.html",
       "corpo": [
-        "A Espanha estaria fiscalizando a entrada de viajantes procedentes da Itália como uma resposta direta a uma disputa migratória em curso. A informação é veiculada por duas publicações da imprensa internacional.",
-        "As publicações apontam que o controle já teria alcançado quinze por cento dos passageiros provenientes do território italiano. As ações de fiscalização estariam concentradas nos pontos de chegada de vozes e rotas originadas na Itália.",
-        "A medida estaria inserida no contexto de atritos diplomáticos e políticos relacionados à gestão de fluxos migratórios na região europeia."
+        "A Espanha estaria fiscalizando a entrada de viajantes vindos da Itália como resposta a uma disputa migratória entre os dois países. A medida envolveria a checagem direcionada de pessoas oriundas do território italiano.",
+        "Conforme as publicações sobre o tema, as autoridades espanholas já teriam controlado 15% dos passageiros provenientes da Itália. Os relatos veiculados associam essa intensificação das inspeções diretamente ao impasse diplomático envolvendo políticas migratórias.",
+        "A ação estaria sendo adotada no âmbito do acirramento das divergências entre as nações. Não há, contudo, dados ou comunicados emitidos por canais oficiais que confirmem a implementação dessas fiscalizações."
       ],
-      "id": "circ:espanha-teria-iniciado-controle-de-viajantes-da-italia",
+      "id": "circ:espanha-estaria-fiscalizando-entrada-de-viajantes-da-italia-apos-dispu",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "Espanha teria iniciado controle de viajantes da Itália",
+      "titulo": "Espanha estaria fiscalizando entrada de viajantes da Itália após disputa",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:23:17.005Z",
-      "hora": "11h23"
+      "iso": "2026-08-09T19:56:32.344Z",
+      "hora": "15h56"
     },
     {
       "municipio": null,
       "municipioNome": null,
       "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos da imprensa.",
-        "Que haveria uma declaração atribuída a Benjamin Netanyahu sobre o programa nuclear iraniano.",
-        "Que um ataque teria atingido uma refinaria saudita na costa do Mar Vermelho."
+        "Que o assunto está sendo publicado por dois veículos de imprensa.",
+        "Que as alegações envolvem o Irã, os Estados Unidos e o Estreito de Ormuz."
       ],
       "falta": [
-        "Confirmação oficial do governo da Arábia Saudita sobre o suposto ataque à refinaria.",
-        "Manifestação de autoridades do Iêmen ou de representantes houthis sobre a autoria da ação.",
-        "Verificação oficial do número de mortes apontado em uma das publicações."
+        "Manifestação ou confirmação oficial por parte do governo do Irã ou dos Estados Unidos.",
+        "Detalhamento oficial sobre quais seriam todas as condições exigidas pelo governo iraniano.",
+        "Especificação sobre os valores ou termos da indenização mencionada nas publicações."
       ],
       "ondeCirculou": [
         {
-          "veiculo": "Folha Mundo",
-          "titulo": "Netanyahu diz que Irã não terá arma nuclear, e houthis atacam refinaria saudita na costa do Mar Vermelho",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/08/netanyahu-diz-que-ira-nao-tera-arma-nuclear-e-houthis-atacam-refinaria-saudita-na-costa-do-mar-vermelho.shtml"
+          "veiculo": "© AP/Amirhosein Khorgooi",
+          "titulo": "Estreito de Ormuz continuará fechado até EUA aceitarem 'todas as nossas condições', alerta Irã",
+          "link": "https://www.rfi.fr/br/mundo/20260809-estreito-de-ormuz-continuar%C3%A1-fechado-at%C3%A9-eua-aceitarem-todas-as-condi%C3%A7%C3%B5es-alerta-ir%C3%A3"
         },
         {
-          "veiculo": "Euronews",
-          "titulo": "Iémen: ataque houthi mata 11 e atinge refinaria saudita",
-          "link": "http://pt.euronews.com/2026/08/09/iemen-ataque-houthi-mata-11-e-atinge-refinaria-saudita"
+          "veiculo": "g1 Mundo",
+          "titulo": "Irã exige indenização dos EUA para reabrir Estreito de Ormuz",
+          "link": "https://g1.globo.com/mundo/noticia/2026/08/09/ira-exige-indenizacao-dos-eua-para-reabrir-estreito-de-ormuz.ghtml"
         }
       ],
-      "link": "/materia/nc-netanyahu-nega-arma-iraniana-e-refinaria-saudita-sofreria-ataque-houth.html",
+      "link": "/materia/nc-ira-manteria-estreito-de-ormuz-fechado-e-exigiria-indenizacao-dos-eua.html",
       "corpo": [
-        "As publicações veiculam que o governo israelense teria afirmado que o Irã não disporia de armamento nuclear, ao mesmo tempo em que rebeldes houthis teriam realizado uma ofensiva contra uma refinaria na costa saudita do Mar Vermelho.",
-        "As manchetes divergem quanto à natureza e às consequências do episódio. Enquanto a primeira publicação relaciona a declaração a um ataque sem menção a vítimas, a segunda aponta o Iêmen como origem da ação e afirma que onze pessoas teriam morrido na refinaria saudita atingida.",
-        "O cenário envolveria a escalada de tensões geopolíticas na região do Mar Vermelho, com o envolvimento de múltiplos atores estatais e milicianos em supostos confrontos transfronteiriços."
+        "O Irã teria alertado que o Estreito de Ormuz continuaria fechado até que os Estados Unidos aceitassem exigências formuladas pelo país. A reabertura da via marítima estaria condicionada ao cumprimento dos termos estipulados pelas autoridades iranianas.",
+        "As publicações veiculadas apresentam abordagens distintas sobre o teor das demandas iranianas. Enquanto um relato cita a exigência de aceitação de todas as condições impostas, outro especifica o pedido de pagamento de uma indenização por parte dos Estados Unidos.",
+        "Ainda não haveria posicionamento público oficial das autoridades competentes de nenhum dos dois países sobre os alertas divulgados. O aceite de tais exigências seria o fator apontado para a eventual reabertura da navegação no local."
       ],
-      "id": "circ:netanyahu-nega-arma-iraniana-e-refinaria-saudita-sofreria-ataque-houth",
+      "id": "circ:ira-manteria-estreito-de-ormuz-fechado-e-exigiria-indenizacao-dos-eua",
       "editoria": "internacional",
       "uf": null,
-      "titulo": "Netanyahu nega arma iraniana e refinaria saudita sofreria ataque houthi",
+      "titulo": "Irã manteria Estreito de Ormuz fechado e exigiria indenização dos EUA",
       "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:23:57.480Z",
-      "hora": "11h23"
-    },
-    {
-      "municipio": null,
-      "municipioNome": null,
-      "seSabe": [
-        "Que o assunto está sendo publicado por dois veículos da imprensa.",
-        "Que a confirmação envolveria o cargo de procurador-geral dos Estados Unidos.",
-        "Que o nomeado seria um ex-advogado de Donald Trump.",
-        "Que a tramitação teria ocorrido no Senado norte-americano."
-      ],
-      "falta": [
-        "Registro oficial da votação em fontes do governo dos Estados Unidos.",
-        "Manifestação formal do Senado ou do Departamento de Justiça.",
-        "Confirmação da data exata da suposta sessão de aprovação."
-      ],
-      "ondeCirculou": [
-        {
-          "veiculo": "Euronews",
-          "titulo": "EUA: confirmação de Todd Blanche como procurador-geral gera receios sobre independência da Justiça",
-          "link": "http://pt.euronews.com/2026/08/09/eua-confirmacao-de-todd-blanche-como-procurador-geral-gera-receios-sobre-independencia-da-"
-        },
-        {
-          "veiculo": "© Rod Lamkey, Jr. / AP",
-          "titulo": "Senado confirma ex-advogado de Trump como procurador-geral dos EUA",
-          "link": "https://www.rfi.fr/br/am%C3%A9ricas/20260808-senado-confirma-ex-advogado-de-trump-como-procurador-geral-dos-eua"
-        }
-      ],
-      "link": "/materia/nc-senado-dos-eua-teria-confirmado-ex-advogado-de-trump-como-procurador-g.html",
-      "corpo": [
-        "O Senado dos Estados Unidos teria confirmado um ex-advogado de Donald Trump para o cargo de procurador-geral do país. A indicação e a suposta confirmação estariam gerando receios sobre a independência da Justiça norte-americana.",
-        "As publicações divergem quanto ao foco principal das",
-        "Estaria em jogo a percepção pública sobre a autonomia do sistema judicial em relação ao Poder Executivo. A nomeação envolve figuras centrais da política nacional e órgãos de cúpula do governo federal."
-      ],
-      "id": "circ:senado-dos-eua-teria-confirmado-ex-advogado-de-trump-como-procurador-g",
-      "editoria": "internacional",
-      "uf": null,
-      "titulo": "Senado dos EUA teria confirmado ex-advogado de Trump como procurador-geral",
-      "aviso": "Esta informação está circulando na imprensa. Procuramos registro oficial e não localizamos até o fechamento desta edição. Isso não significa que seja falsa — significa que não está confirmada.",
-      "iso": "2026-08-09T15:24:38.023Z",
-      "hora": "11h24"
+      "iso": "2026-08-09T19:57:27.589Z",
+      "hora": "15h57"
     }
   ],
   "pautas": [
@@ -824,8 +848,8 @@
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "AP Photo/Jehad Alshrafi - Jehad Alshrafi",
-        "Folha Mundo"
+        "Folha Mundo",
+        "AP Photo/Jehad Alshrafi - Jehad Alshrafi"
       ]
     },
     {
@@ -834,18 +858,8 @@
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "Euronews",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Estreito de Ormuz continuará fechado até EUA aceitarem 'todas as nossas condições', alerta Irã",
-      "veiculo": "© AP/Amirhosein Khorgooi",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
         "Folha Mundo",
-        "g1 Mundo"
+        "Euronews"
       ]
     },
     {
@@ -859,35 +873,6 @@
       ]
     },
     {
-      "titulo": "Irã exige indenização dos EUA para reabrir Estreito de Ormuz",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© AP/Amirhosein Khorgooi",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Irã apresenta lista de exigências aos EUA para reabrir estreito de Hormuz",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© AP/Amirhosein Khorgooi",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "As crianças invisíveis do Sudão nascidas na guerra e sem registro",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
       "titulo": "Espanha fiscaliza entrada de viajantes da Itália como resposta à disputa migratória",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
@@ -897,12 +882,21 @@
       ]
     },
     {
-      "titulo": "Netanyahu diz que Irã não terá arma nuclear, e houthis atacam refinaria saudita na costa do Mar Vermelho",
-      "veiculo": "Folha Mundo",
+      "titulo": "Estreito de Ormuz continuará fechado até EUA aceitarem 'todas as nossas condições', alerta Irã",
+      "veiculo": "© AP/Amirhosein Khorgooi",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Irã exige indenização dos EUA para reabrir Estreito de Ormuz",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© AP/Amirhosein Khorgooi"
       ]
     },
     {
@@ -912,60 +906,6 @@
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Iémen: ataque houthi mata 11 e atinge refinaria saudita",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "EUA: confirmação de Todd Blanche como procurador-geral gera receios sobre independência da Justiça",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "© Rod Lamkey, Jr. / AP"
-      ]
-    },
-    {
-      "titulo": "Ucrânia nega ter como alvo a Bulgária após explosão de drone perto de gasoduto, Kiev abre inquérito",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP - Emrah Gurel"
-      ]
-    },
-    {
-      "titulo": "As crianças invisíveis do Sudão nascidas na guerra e sem registro",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Kiev promete investigar queda de drone perto de gasoduto na Bulgária, que convoca embaixadora ucraniana",
-      "veiculo": "AP - Emrah Gurel",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Senado confirma ex-advogado de Trump como procurador-geral dos EUA",
-      "veiculo": "© Rod Lamkey, Jr. / AP",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
       ]
     }
   ]
