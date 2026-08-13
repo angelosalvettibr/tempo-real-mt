@@ -1,26 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-12T20:23:24.780Z",
+  "gerado": "2026-08-13T00:11:54.835Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 39,
-    "fonteLivre": 57,
-    "confirmadas": 7,
+    "pauta": 41,
+    "fonteLivre": 48,
+    "confirmadas": 8,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 1
+    "semFonte": 2
   },
   "fontes": {
     "checadas": 30,
-    "responderam": 25,
-    "entregando": 13,
-    "itens": 96,
+    "responderam": 24,
+    "entregando": 12,
+    "itens": 89,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -40,15 +49,6 @@
         "id": "vaticano",
         "nome": "Vatican News",
         "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -81,15 +81,6 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
@@ -111,7 +102,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 2,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +111,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 2,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -186,7 +177,16 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -201,15 +201,6 @@
         "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +226,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +235,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,6 +271,15 @@
       },
       {
         "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -300,6 +300,15 @@
       "quentura": 1,
       "tambemEm": [
         "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Quase 2 meses após terremotos, Venezuela não sabe número de desaparecidos",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     }
   ]
