@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-14T16:39:53.953Z",
+  "gerado": "2026-08-14T20:04:33.514Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 45,
-    "fonteLivre": 55,
-    "confirmadas": 6,
+    "pauta": 49,
+    "fonteLivre": 53,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 8
   },
   "fontes": {
     "checadas": 32,
     "responderam": 25,
     "entregando": 13,
-    "itens": 100,
+    "itens": 102,
     "lista": [
       {
         "tipo": "pauta",
@@ -55,6 +55,15 @@
       },
       {
         "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
         "itens": 11,
@@ -63,10 +72,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 10,
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,9 +91,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 7,
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,7 +102,7 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -102,25 +111,7 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 2,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -130,6 +121,15 @@
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
         "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,15 +163,6 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -181,8 +172,17 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -240,12 +240,12 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -312,21 +312,57 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Ceuta teme nova entrada em massa de migrantes este sábado",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "© AP Photo / Bernat Armangue"
-      ]
-    },
-    {
-      "titulo": "Candidato com cara de lata de lixo recebe um quarto dos votos contra 'pai do Brexit'; conheça personagem",
+      "titulo": "Brasil notifica governo dos EUA sobre início de processo de reciprocidade contra tarifas",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "O que o Brasil ganha e o que arrisca ao acionar lei para revidar 'tarifaço' dos EUA?",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Volta a Portugal: ciclista do Reino Unido morre atropelado por carro em contramão",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "França: Conselho Constitucional derruba a proibição de redes sociais para menores de 15 anos",
+      "veiculo": "© Christophe BONNET",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Ciclista britânico de 19 anos morre em acidente durante campeonato em Portugal",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Conselho Constitucional francês rejeita restrição etária das redes e aprova eutanásia",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© Christophe BONNET"
       ]
     },
     {
@@ -345,15 +381,6 @@
       "quentura": 1,
       "tambemEm": [
         "© Andreea Alexandru / AP"
-      ]
-    },
-    {
-      "titulo": "Líder da ultradireita supera candidato 'cara de lata de lixo' em eleição no Reino Unido",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
       ]
     }
   ]
