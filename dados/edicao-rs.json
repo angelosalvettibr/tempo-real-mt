@@ -1,15 +1,15 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-14T11:20:38.095Z",
+  "gerado": "2026-08-14T16:45:11.107Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 128,
-    "fonteLivre": 51,
-    "confirmadas": 12,
+    "pauta": 124,
+    "fonteLivre": 55,
+    "confirmadas": 8,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 94
+    "semFonte": 90
   },
   "fontes": {
     "checadas": 42,
@@ -22,15 +22,6 @@
         "id": "camara-caxias",
         "nome": "Câmara de Caxias do Sul",
         "itens": 15,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1rs",
-        "nome": "g1 RS",
-        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -100,17 +91,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
+        "id": "g1rs",
+        "nome": "g1 RS",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -126,10 +108,28 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
         "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -145,9 +145,18 @@
       },
       {
         "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 5,
+        "id": "sema-rs",
+        "nome": "Sema-RS",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,18 +172,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 3,
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -208,15 +208,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "pauta",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 0,
@@ -226,6 +217,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +244,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,13 +411,47 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Viaduto da Borges, no Centro de Porto Alegre, terá segurança privada 24 horas por dia",
-      "veiculo": "TV Pampa",
+      "titulo": "Prefeitura de Caxias do Sul pede autorização para financiar até R$ 490 milhões",
+      "veiculo": "Serra em Pauta",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
-        "Prefeitura de Porto Alegre",
-        "Correio do Povo"
+        "GZH",
+        "Rádio Solaris",
+        "Radio Caxias FM"
+      ]
+    },
+    {
+      "titulo": "Notícias - Rio Grande do Sul - Chuva dá uma trégua ao RS, mas retorna junto com onda de calor na próxima semana",
+      "veiculo": "PORTAL FARRAPO",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "Canal Rural",
+        "MetSul Meteorologia",
+        "CONCERTO | Home"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Caxias encaminha projeto para financiar até R$ 490 milhões em obras",
+      "veiculo": "Rádio Solaris",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "Serra em Pauta",
+        "Radio Caxias FM",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Contratação de financiamento de R$ 490 milhões pela prefeitura de Caxias deve ser debatida na Câmara nas próximas semanas",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Serra em Pauta",
+        "Radio Caxias FM",
+        "Rádio Solaris"
       ]
     },
     {
@@ -426,51 +460,60 @@
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Serra em Pauta",
         "Jornal do Comércio",
-        "Rádio Solaris"
+        "Rádio Solaris",
+        "Serra em Pauta"
       ]
     },
     {
-      "titulo": "Viaduto Otávio Rocha terá vigilância patrimonial 24 horas",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "GZH",
-        "TV Pampa",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Viaduto Otávio Rocha terá vigilância patrimonial 24 horas",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "GZH",
-        "TV Pampa",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Caxias encaminha projeto para financiar até R$ 490 milhões em obras",
+      "titulo": "Prefeitura propõe atualização da Planta de Valores do IPTU em Caxias do Sul",
       "veiculo": "Rádio Solaris",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "GZH",
+        "Serra em Pauta",
+        "Jornal do Comércio",
         "Radio Caxias FM"
       ]
     },
     {
-      "titulo": "Prefeitura de Porto Alegre perde R$ 1 milhão de convênio com o MinC para oficinas musicais em escolas",
+      "titulo": "Quinteto Persch leva acordeon à música de concerto no Capitólio",
       "veiculo": "Sul21",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Sul 21",
-        "GZH"
+        "Prefeitura de Porto Alegre",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Quinteto Persch leva acordeon à música de concerto no Capitólio",
+      "veiculo": "Sul 21",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Sul21",
+        "Prefeitura de Porto Alegre"
+      ]
+    },
+    {
+      "titulo": "Gaeco faz operação na Câmara de Pelotas e mira presidente e dois vereadores",
+      "veiculo": "A Hora do Sul",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "GZH",
+        "Rádio Acústica FM"
+      ]
+    },
+    {
+      "titulo": "Presidente da Câmara de Pelotas e dois vereadores são alvo de operação do Ministério Público",
+      "veiculo": "Rádio Acústica FM",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "GZH",
+        "A Hora do Sul"
       ]
     },
     {
@@ -479,18 +522,19 @@
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Serra em Pauta",
         "Rádio Solaris",
-        "Radio Caxias FM"
+        "Radio Caxias FM",
+        "Serra em Pauta"
       ]
     },
     {
-      "titulo": "Contratação de financiamento de R$ 490 milhões pela prefeitura de Caxias deve ser debatido na Câmara nas próximas semanas",
-      "veiculo": "GZH",
+      "titulo": "Executivo encaminha à Câmara pedido para contratar financiamento de até R$ 490 milhões",
+      "veiculo": "Radio Caxias FM",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Radio Caxias FM",
+        "Serra em Pauta",
+        "GZH",
         "Rádio Solaris"
       ]
     },
@@ -506,95 +550,52 @@
       ]
     },
     {
-      "titulo": "Viaduto Otávio Rocha terá vigilância patrimonial privada 24 horas em Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "quentura": 3,
+      "titulo": "Homem é preso com drogas e 47 munições no bairro Santa Maria, em Aracaju",
+      "veiculo": "A8 Sergipe",
+      "editoria": "regional",
+      "quentura": 2,
       "tambemEm": [
-        "Prefeitura de Porto Alegre",
-        "TV Pampa"
+        "PORTAL FARRAPO",
+        "Diário de Santa Maria"
       ]
     },
     {
-      "titulo": "Prefeitura propõe atualização da Planta de Valores do IPTU em Caxias do Sul",
-      "veiculo": "Rádio Solaris",
+      "titulo": "12 são presos em operação contra golpe do falso advogado que fez idosa de Santa Maria perder R$ 150 mil",
+      "veiculo": "PORTAL FARRAPO",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Serra em Pauta",
+        "A8 Sergipe",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Três vereadores de Pelotas são alvo de operação do MP | Gaúcha Atualidade",
+      "veiculo": "GZH",
+      "quentura": 2,
+      "tambemEm": [
+        "A Hora do Sul",
+        "Rádio Acústica FM"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Pelotas abre seleção para nova gestão da UPA Areal",
+      "veiculo": "Clic Camaquã",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
         "Jornal do Comércio",
-        "Radio Caxias FM"
+        "GZH"
       ]
     },
     {
-      "titulo": "Patrono da 53ª Feira do Livro de Santa Maria vende mais de 1,5 mil exemplares de novo livro em um único dia",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "UFSM",
-        "jornaldogarcia.com.br",
-        "Jornal de Brasília"
-      ]
-    },
-    {
-      "titulo": "Daniel Tonetto reúne leitores por 12 horas e vende 1.556 livros em um único dia na Feira do Livro de Santa Maria",
-      "veiculo": "Jornal de Brasília",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "UFSM",
-        "Diário de Santa Maria",
-        "jornaldogarcia.com.br"
-      ]
-    },
-    {
-      "titulo": "Município monitora nível da Lagoa dos Patos",
-      "veiculo": "Prefeitura de Pelotas",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Terra",
-        "Claudemir Pereira"
-      ]
-    },
-    {
-      "titulo": "Prefeitura perde R$ 1 milhão de convênio para projeto em comunidades carentes",
+      "titulo": "Presidente da Câmara de Pelotas, Michel Promove, e mais dois vereadores são alvo de operação do Ministério Público",
       "veiculo": "GZH",
       "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Sul21",
-        "Sul 21"
-      ]
-    },
-    {
-      "titulo": "Prefeitura deve retomar projeto da Policlínica após contratação de financiamento",
-      "veiculo": "Radio Caxias FM",
-      "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "GZH",
-        "Rádio Solaris"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Porto Alegre perde R$ 1 milhão de convênio com o MinC para oficinas musicais em escolas",
-      "veiculo": "Sul 21",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Porto Alegre perde R$ 1 milhão de convênio com o MinC para oficinas musicais em escolas",
-      "veiculo": "Sul 21",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "GZH"
+        "A Hora do Sul",
+        "Rádio Acústica FM"
       ]
     }
   ]
