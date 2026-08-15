@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-15T11:48:00.187Z",
+  "gerado": "2026-08-15T14:59:18.779Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 48,
+    "pauta": 51,
     "fonteLivre": 46,
-    "confirmadas": 3,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 8
+    "semFonte": 11
   },
   "fontes": {
-    "checadas": 29,
+    "checadas": 30,
     "responderam": 23,
     "entregando": 13,
-    "itens": 94,
+    "itens": 97,
     "lista": [
       {
         "tipo": "pauta",
@@ -27,18 +27,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -55,18 +46,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -81,10 +63,37 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 6,
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -118,15 +127,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
         "itens": 1,
@@ -140,26 +140,26 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
         "respondeu": false,
-        "erro": "HTTP 429"
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,8 +181,17 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 415"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -199,6 +208,15 @@
       },
       {
         "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
@@ -208,12 +226,12 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "acnur",
+        "nome": "Acnur",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -226,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -285,22 +294,48 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Terremoto de magnitude 7,7 mata ao menos 38 na Indonésia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© BASARNAS via AP",
-        "Euronews"
-      ]
-    },
-    {
       "titulo": "Ex-professor de Cambridge que se demitiu após acusação de plágio é encontrado morto",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
         "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Hezbollah ameaça retaliar após ataque israelense que deixou 11 mortos no sul do Líbano",
+      "veiculo": "© AP/Mohammed Zaatari",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Os pedreiros que encontraram tesouro de R$ 54 milhões em moedas e barras de ouro em parede de casa na Bélgica",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Os pedreiros que encontraram tesouro de R$ 54 milhões em moedas e barras de ouro em parede de casa na Bélgica",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Ataques de Israel matam ao menos nove pessoas no sul do Líbano",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© AP/Mohammed Zaatari"
       ]
     },
     {
