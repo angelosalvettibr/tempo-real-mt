@@ -1,35 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-15T22:54:10.076Z",
+  "gerado": "2026-08-16T09:05:52.359Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 44,
-    "fonteLivre": 41,
-    "confirmadas": 5,
+    "pauta": 42,
+    "fonteLivre": 32,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 10
+    "semFonte": 12
   },
   "fontes": {
     "checadas": 31,
-    "responderam": 23,
-    "entregando": 12,
-    "itens": 85,
+    "responderam": 24,
+    "entregando": 11,
+    "itens": 74,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -46,17 +37,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 9,
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -66,16 +57,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -90,10 +72,19 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -109,17 +100,17 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 1,
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 1,
         "ok": true,
         "respondeu": true,
@@ -154,17 +145,26 @@
       },
       {
         "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 415"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -217,15 +217,6 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -235,8 +226,17 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,21 +271,21 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "acnur",
         "nome": "Acnur",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -303,99 +303,107 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Terramoto de 7,7 graus mata pelo menos 38 pessoas na Indonésia",
+      "titulo": "F-18 espanhóis da NATO abatem drone no espaço aéreo da Roménia",
       "veiculo": "Euronews",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "AP Photo/Dieudonne Dirole - Dieudonne Dirole",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Entrada da China na ação do Brasil na OMC ajuda a combater guerra tarifária contra os EUA?",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
         "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Caça abate drone militar que invadiu espaço aéreo da Romênia durante missão da Otan",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Terremoto de magnitude 7,7 mata 47 pessoas e provoca destruição na Indonésia",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
       ]
     },
     {
       "titulo": "Os pedreiros que encontraram tesouro de R$ 54 milhões em moedas e barras de ouro em parede de casa na Bélgica",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "g1 Mundo"
+        "BBC Brasil"
       ]
     },
     {
       "titulo": "ONU alerta: Ebola mata uma pessoa a cada 30 minutos na República Democrática do Congo",
       "veiculo": "AP Photo/Dieudonne Dirole - Dieudonne Dirole",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
+        "BBC Brasil"
       ]
     },
     {
       "titulo": "Bombardeios dos EUA na América Latina entram em perigosa normalização",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Cecília Bastos/ USP",
-        "g1 Mundo"
+        "Cecília Bastos/ USP"
       ]
     },
     {
-      "titulo": "Os pedreiros que encontraram tesouro de R$ 54 milhões em moedas e barras de ouro em parede de casa na Bélgica",
-      "veiculo": "g1 Mundo",
+      "titulo": "Hezbollah ameaça retaliar após ataque israelense que deixou 11 mortos no sul do Líbano",
+      "veiculo": "© AP/Mohammed Zaatari",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
         "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Como fica o Brasil na globalização sem os EUA e com a China",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     },
     {
       "titulo": "Os pedreiros que encontraram tesouro de R$ 54 milhões em moedas e barras de ouro em parede de casa na Bélgica",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
+        "Folha Mundo"
       ]
     },
     {
-      "titulo": "USP segue como a melhor da América Latina; universidades dos EUA lideram ranking mundial",
-      "veiculo": "g1 Mundo",
+      "titulo": "Ataques de Israel matam ao menos 11 pessoas no sul do Líbano",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Cecília Bastos/ USP",
-        "Folha Mundo"
+        "© AP/Mohammed Zaatari"
       ]
     },
     {
       "titulo": "USP segue como a melhor da América Latina no ranking de Xangai; Paris lidera fora do eixo EUA-Reino Unido",
       "veiculo": "Cecília Bastos/ USP",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Indonésia contabiliza estragos após terremoto de magnitude 7,7 e teme aumento do número de vítimas",
-      "veiculo": "© BASARNAS via AP",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Hezbollah ameaça retaliar após ataque israelense que deixou 11 mortos no sul do Líbano",
-      "veiculo": "© AP/Mohammed Zaatari",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
