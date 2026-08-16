@@ -1,12 +1,12 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-16T11:53:17.903Z",
+  "gerado": "2026-08-16T15:00:35.115Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 189,
+    "pauta": 194,
     "fonteLivre": 67,
-    "confirmadas": 7,
+    "confirmadas": 12,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 47
@@ -15,8 +15,17 @@
     "checadas": 131,
     "responderam": 83,
     "entregando": 31,
-    "itens": 256,
+    "itens": 261,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -30,6 +39,24 @@
         "tipo": "pauta",
         "id": "cnn",
         "nome": "CNN Brasil",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1politica",
+        "nome": "g1 Política",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -63,15 +90,6 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "usp",
         "nome": "Jornal da USP",
@@ -99,27 +117,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
+        "tipo": "resgate",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -136,8 +136,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -145,8 +145,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "estadao",
+        "nome": "Estadão",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -163,6 +163,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1economia",
+        "nome": "g1 Economia",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "infomoney",
         "nome": "InfoMoney",
         "itens": 8,
@@ -172,27 +190,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "jota",
         "nome": "JOTA",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "ab-politica",
+        "nome": "Agência Brasil",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -316,6 +316,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "valor",
+        "nome": "Valor",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "zh",
         "nome": "Zero Hora",
         "itens": 0,
@@ -327,15 +336,6 @@
         "tipo": "pauta",
         "id": "correiobraz",
         "nome": "Correio Braziliense",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -442,17 +442,17 @@
       },
       {
         "tipo": "livre",
-        "id": "stj",
-        "nome": "STJ",
+        "id": "stf",
+        "nome": "STF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 401"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "stf",
-        "nome": "STF",
+        "id": "stj",
+        "nome": "STJ",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -487,8 +487,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "anp",
+        "nome": "ANP",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,8 +496,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anp",
-        "nome": "ANP",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -525,15 +525,6 @@
         "tipo": "livre",
         "id": "unicamp",
         "nome": "Unicamp",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -577,6 +568,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "cgu",
         "nome": "CGU",
         "itens": 0,
@@ -595,8 +595,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
+        "id": "icmbio",
+        "nome": "ICMBio",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -604,8 +604,8 @@
       },
       {
         "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -649,6 +649,15 @@
       },
       {
         "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "cidades",
         "nome": "Ministério das Cidades",
         "itens": 0,
@@ -660,15 +669,6 @@
         "tipo": "livre",
         "id": "trabalho",
         "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -820,12 +820,12 @@
       },
       {
         "tipo": "livre",
-        "id": "cnj",
-        "nome": "CNJ",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -838,12 +838,12 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
+        "id": "cnj",
+        "nome": "CNJ",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -910,8 +910,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ana",
-        "nome": "ANA",
+        "id": "aneel",
+        "nome": "Aneel",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -928,8 +928,8 @@
       },
       {
         "tipo": "livre",
-        "id": "aneel",
-        "nome": "Aneel",
+        "id": "ana",
+        "nome": "ANA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1045,6 +1045,15 @@
       },
       {
         "tipo": "livre",
+        "id": "pncp",
+        "nome": "Portal Nacional de Contratações Públicas",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 401"
+      },
+      {
+        "tipo": "livre",
         "id": "stj-inf",
         "nome": "STJ",
         "itens": 0,
@@ -1054,12 +1063,12 @@
       },
       {
         "tipo": "livre",
-        "id": "pncp",
-        "nome": "Portal Nacional de Contratações Públicas",
+        "id": "sudene",
+        "nome": "Sudene",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 401"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -1099,8 +1108,8 @@
       },
       {
         "tipo": "livre",
-        "id": "sudene",
-        "nome": "Sudene",
+        "id": "ibama-inf",
+        "nome": "Ibama — licenciamento",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1108,8 +1117,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama-inf",
-        "nome": "Ibama — licenciamento",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1123,15 +1132,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       },
       {
         "tipo": "livre",
@@ -1153,8 +1153,8 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1162,8 +1162,8 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1203,186 +1203,187 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "O candidato mais rico da disputa à Presidência em 2026",
-      "veiculo": "R7",
-      "quentura": 8,
+      "titulo": "Lotofácil hoje: resultado do concurso 3763 e números sorteados",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 6,
+      "tambemEm": [
+        "g1 Economia",
+        "Metrópoles",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Quina hoje: resultado do concurso 7093 e números sorteados",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "g1 Economia",
+        "Metrópoles",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Lula usa helicóptero para ir a lançamento de campanha em SP",
+      "veiculo": "Metrópoles",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "Exame",
+        "g1 Política",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro inicia campanha à Presidência no Rio de Janeiro",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Janja homenageia Marisa Letícia em ato de lançamento da campanha de Lula",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "Poder360",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Quem é Anelize Carriconde, candidata a deputada federal pelo Rio Grande do Sul nas eleições de 2026",
+      "veiculo": "GZH",
+      "quentura": 4,
       "tambemEm": [
         "BBC Brasil",
-        "g1 Política",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Renan Santos critica mais Flávio Bolsonaro do que Lula nas redes",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Homem é alvo de busca após ameaças a Flávio Bolsonaro nas redes",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "Exame",
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Morador de Minas é alvo de busca após ameaçar Flávio Bolsonaro nas redes",
-      "veiculo": "Correio Braziliense",
-      "quentura": 5,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Após ameaça, campanha de Flávio Bolsonaro fala em ação ágil da Polícia e destaca episódio de 2018",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
-        "Exame",
-        "Congresso em Foco",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Eleições 2026: Veja a declaração de bens dos candidatos à Presidência",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 5,
-      "tambemEm": [
         "JOTA",
-        "CartaCapital",
-        "GZH"
+        "R7"
       ]
     },
     {
-      "titulo": "Quem é Rodrigo Cebola, candidato a deputado federal pelo Rio Grande do Sul nas eleições de 2026",
+      "titulo": "Quem é Adavilson Tchá-tchá, candidato a deputado federal pelo Rio Grande do Sul nas eleições de 2026",
       "veiculo": "GZH",
       "quentura": 4,
       "tambemEm": [
-        "g1 Política",
+        "BBC Brasil",
         "JOTA",
-        "Valor Econômico"
+        "R7"
       ]
     },
     {
-      "titulo": "Quem é Pompeo de Mattos, candidato a deputado federal pelo Rio Grande do Sul nas eleições de 2026",
-      "veiculo": "GZH",
-      "quentura": 4,
-      "tambemEm": [
-        "g1 Política",
-        "JOTA",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Homem é levado para depor suspeito de postar ameaça a Flávio Bolsonaro",
-      "veiculo": "CartaCapital",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Romário deixa o PL e declara apoio a Eduardo Paes no governo do Rio",
-      "veiculo": "Correio Braziliense",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "CartaCapital",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Romário deixa PL e anuncia apoio a Eduardo Paes ao governo do Rio",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "Correio Braziliense",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Em 1ª live de campanha, Renan fala em vingança e critica Lula e Flávio",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Zema, Caiado e Renan miram críticas a Lula nas redes",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Onde o Brasil deveria apostar na indústria de semicondutores?",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Como chegam Renan, Caiado e Zema para o início da campanha presidencial",
+      "titulo": "Em discurso em ato inaugural da campanha de Lula, Janja reverencia ex-primeira-dama Marisa Letícia",
       "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 4,
       "tambemEm": [
-        "g1 Política",
-        "Poder360"
+        "Folha",
+        "Poder360",
+        "Metrópoles"
       ]
     },
     {
-      "titulo": "Motta e Alcolumbre se aproximam de Lula. Flávio Bolsonaro gosta | Estadão Analisa",
-      "veiculo": "Estadão",
-      "quentura": 2,
+      "titulo": "Michelle Bolsonaro registra candidatura ao Senado e declara R$ 4 milhões em bens",
+      "veiculo": "CartaCapital",
+      "quentura": 4,
       "tambemEm": [
-        "g1 Política",
-        "Poder360"
+        "g1",
+        "Congresso em Foco",
+        "g1 Política"
       ]
     },
     {
-      "titulo": "Eleições ao Senado: Lula foca em governabilidade e Flávio em enfrentamento ao STF; veja candidatos e estratégias",
-      "veiculo": "g1 Política",
+      "titulo": "Mega-Sena 3045 tem resultados divulgados; confira",
+      "veiculo": "GZH",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Economia",
+        "Metrópoles",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Protesto com rojões contra Tarcísio atrasa evento de lançamento da campanha em Osasco",
+      "veiculo": "Folha",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "JOTA",
+        "g1 Política",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Márcio Jambo, candidato ao governo de Alagoas, declara não ter bens ao TSE",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
         "CartaCapital"
       ]
     },
     {
-      "titulo": "Inelegível até 2032, Pablo Marçal é lançado como candidato à Presidência pelo PRTB",
-      "veiculo": "BBC Brasil",
+      "titulo": "Janja homenageia Marisa e reforça apoio feminino a Lula: \"Admiração\"",
+      "veiculo": "Metrópoles",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "CartaCapital",
-        "R7"
+        "Exame",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro inicia campanha à Presidência no Rio de Janeiro",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Ao vivo: Flávio Bolsonaro faz 1º ato de campanha em Copacabana",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "g1",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Lula faz primeiro evento de campanha à reeleição no berço político do PT, em São Paulo",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Poder360",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Eleições 2026: TRE-RJ muda 268 locais de votação no estado",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "Exame"
+      ]
+    },
+    {
+      "titulo": "Casas Bahia tem prejuízo de R$ 10,1 bi e avalia recuperação extrajudicial ou judicial",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "InfoMoney"
       ]
     }
   ]

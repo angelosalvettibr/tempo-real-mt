@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-16T11:50:13.074Z",
+  "gerado": "2026-08-16T14:57:28.806Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 31,
+    "pauta": 38,
+    "fonteLivre": 23,
     "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 10
+    "semFonte": 7
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 24,
-    "entregando": 11,
-    "itens": 71,
+    "checadas": 29,
+    "responderam": 23,
+    "entregando": 10,
+    "itens": 61,
     "lista": [
       {
         "tipo": "pauta",
@@ -48,25 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +57,16 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
-        "itens": 7,
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,7 +75,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -122,13 +113,13 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
+        "respondeu": true,
+        "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "dw",
-        "nome": "DW Brasil",
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -158,13 +149,13 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,8 +163,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,15 +181,6 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -210,6 +192,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,6 +226,15 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -253,26 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +268,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,43 +285,46 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "'Nunca cogitamos não lançar': o relato de um cientista que ajudou a fabricar a bomba atômica que devastou Nagasaki",
-      "veiculo": "g1 Mundo",
+      "titulo": "Caça da Otan abate suposto drone russo no espaço aéreo da Romênia",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Terremoto de magnitude 7,7 mata ao menos 51 pessoas e deixa 5 mil desabrigados na Indonésia",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
+        "Euronews",
         "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "O bunker da Guerra Fria transformado em apartamentos de luxo para 'sobreviver ao fim do mundo'",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
       ]
     },
     {
       "titulo": "F-18 espanhóis da NATO abatem drone no espaço aéreo da Roménia",
       "veiculo": "Euronews",
       "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Caça abate drone militar que invadiu espaço aéreo da Romênia durante missão da Otan",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "'Nunca cogitamos não lançar': o relato de um cientista que ajudou a fabricar a bomba atômica que devastou Nagasaki",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Entrada da China na ação do Brasil na OMC ajuda a combater guerra tarifária contra os EUA?",
+      "titulo": "'Nunca cogitamos não lançar': o relato de um cientista que ajudou a fabricar a bomba atômica que devastou Nagasaki",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -339,16 +333,7 @@
       ]
     },
     {
-      "titulo": "Caça abate drone militar que invadiu espaço aéreo da Romênia durante missão da Otan",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Terremoto de magnitude 7,7 mata 47 pessoas e provoca destruição na Indonésia",
+      "titulo": "O bunker da Guerra Fria transformado em apartamentos de luxo para 'sobreviver ao fim do mundo'",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -357,26 +342,8 @@
       ]
     },
     {
-      "titulo": "'Nunca cogitamos não lançar': o relato de cientista que ajudou a fabricar a bomba atômica que devastou Nagasaki",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
       "titulo": "O bunker da Guerra Fria transformado em apartamentos de luxo para 'sobreviver ao fim do mundo'",
       "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Como fica o Brasil na globalização sem os EUA e com a China",
-      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
