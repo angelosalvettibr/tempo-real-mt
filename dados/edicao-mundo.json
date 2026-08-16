@@ -1,26 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-16T19:02:59.402Z",
+  "gerado": "2026-08-16T22:52:14.647Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 38,
-    "fonteLivre": 20,
-    "confirmadas": 3,
+    "pauta": 40,
+    "fonteLivre": 18,
+    "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 3
   },
   "fontes": {
     "checadas": 30,
-    "responderam": 24,
-    "entregando": 10,
+    "responderam": 23,
+    "entregando": 9,
     "itens": 58,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -37,18 +46,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,16 +84,7 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -136,8 +127,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -145,8 +136,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -163,8 +154,26 @@
       },
       {
         "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,12 +190,66 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -208,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -223,69 +286,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
