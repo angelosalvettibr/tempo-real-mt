@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-17T11:58:58.621Z",
+  "gerado": "2026-08-17T15:00:16.766Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 16,
-    "confirmadas": 8,
+    "pauta": 39,
+    "fonteLivre": 24,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 4
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 23,
-    "entregando": 9,
-    "itens": 57,
+    "checadas": 31,
+    "responderam": 25,
+    "entregando": 12,
+    "itens": 63,
     "lista": [
       {
         "tipo": "pauta",
@@ -48,7 +48,16 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,15 +66,6 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -76,6 +76,33 @@
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -118,26 +145,8 @@
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -151,15 +160,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 429"
       },
       {
         "tipo": "livre",
@@ -235,15 +235,6 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -262,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +277,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,12 +303,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Lula e Flávio Bolsonaro mobilizam apoiantes no primeiro dia de campanha sob a sombra da pressão de Trump",
+      "titulo": "Trump ameaça atacar Omã por negociações com o Irã",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Trump ameaça bombardear Omã caso este país impeça as negociações entre os EUA e o Irão",
       "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "Folha Mundo"
       ]
     },
     {
@@ -318,15 +336,6 @@
       "quentura": 1,
       "tambemEm": [
         "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Lula e Flávio Bolsonaro disputam as ruas no 1º dia da campanha; veja como foram os atos",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
       ]
     }
   ]
