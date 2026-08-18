@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-18T11:59:24.362Z",
+  "gerado": "2026-08-18T15:19:17.983Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 44,
+    "pauta": 43,
+    "fonteLivre": 49,
     "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 3
   },
   "fontes": {
     "checadas": 31,
     "responderam": 24,
     "entregando": 13,
-    "itens": 85,
+    "itens": 92,
     "lista": [
       {
         "tipo": "pauta",
@@ -57,6 +57,15 @@
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -66,7 +75,7 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
-        "itens": 8,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -81,10 +90,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 7,
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -99,19 +108,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 2,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -136,15 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -181,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -244,15 +235,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -262,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +262,35 @@
       },
       {
         "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,52 +303,31 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Bombardeio russo mata ao menos dez pessoas na Ucrânia; Moscou relata ataques com mais de 600 drones",
-      "veiculo": "© Володимир Зеленський / Telegram",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "© AP Photo/Pavel Bednyakov",
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
       "titulo": "Rússia mata 10 na Ucrânia; Kiev faz mega-ataque a Moscou",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
         "© Володимир Зеленський / Telegram",
-        "© AP Photo/Pavel Bednyakov"
+        "g1 Mundo"
       ]
     },
     {
-      "titulo": "Moscou enfrenta restrições de combustível provocadas por escalada de ataques ucranianos",
-      "veiculo": "© AP Photo/Pavel Bednyakov",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© Володимир Зеленський / Telegram",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Ucrânia lança mais de 600 drones contra Moscou",
+      "titulo": "Rússia ameaça Reino Unido após Ucrânia lançar 'chuva de drones' a Moscou",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "© Володимир Зеленський / Telegram"
+        "Folha Mundo"
       ]
     },
     {
-      "titulo": "Trump ameaça atacar Omã por negociações com o Irã",
-      "veiculo": "Folha Mundo",
+      "titulo": "Bombardeio russo mata ao menos dez pessoas na Ucrânia; Moscou relata ataques com mais de 600 drones",
+      "veiculo": "© Володимир Зеленський / Telegram",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "RFI Brasil"
+        "Folha Mundo"
       ]
     }
   ]
