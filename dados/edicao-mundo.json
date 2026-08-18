@@ -1,26 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-17T22:58:16.119Z",
+  "gerado": "2026-08-18T09:54:31.534Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 30,
+    "pauta": 44,
+    "fonteLivre": 39,
     "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 4
+    "semFonte": 6
   },
   "fontes": {
-    "checadas": 33,
+    "checadas": 32,
     "responderam": 25,
-    "entregando": 12,
-    "itens": 73,
+    "entregando": 13,
+    "itens": 83,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -45,28 +54,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 6,
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +66,25 @@
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -154,30 +163,21 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 429"
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -199,6 +199,15 @@
       },
       {
         "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -217,12 +226,12 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "acnur",
+        "nome": "Acnur",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -235,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,8 +280,17 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -295,24 +304,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
       }
     ]
   },
@@ -320,6 +311,33 @@
   "itens": [],
   "circulando": [],
   "pautas": [
+    {
+      "titulo": "Após ameaçar Omã, Donald Trump quer transformar Estreito de Ormuz em território norte-americano",
+      "veiculo": "RFI Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Ataque a tiros em escola nas Filipinas deixa dois mortos",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Tiroteio em escola nas Filipinas deixa dois estudantes mortos",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
     {
       "titulo": "Kushner e Netanyahu discutem desarmamento do Hamas e nova fase do plano para Gaza",
       "veiculo": "AP Photo/Abdel Kareem Hana - Abdel Kareem Hana",
@@ -330,21 +348,12 @@
       ]
     },
     {
-      "titulo": "Hayden Panettiere: o que se sabe sobre a morte da atriz de 'Heroes' aos 36 anos",
-      "veiculo": "BBC Brasil",
+      "titulo": "Trump ameaça atacar Omã por negociações com o Irã",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Hayden Panettiere: autoridades investigam morte enquanto imprensa dos EUA aponta para “overdose”",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
+        "RFI Brasil"
       ]
     },
     {
