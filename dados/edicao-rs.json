@@ -1,22 +1,31 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-18T10:01:18.226Z",
+  "gerado": "2026-08-18T12:05:39.689Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 124,
-    "fonteLivre": 46,
-    "confirmadas": 17,
+    "pauta": 122,
+    "fonteLivre": 59,
+    "confirmadas": 24,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 75
+    "semFonte": 73
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 170,
+    "itens": 181,
     "lista": [
+      {
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "assessoria",
         "id": "camara-caxias",
@@ -37,15 +46,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-pelotas",
-        "nome": "Pelotas",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-rs-caxiasdosu",
         "nome": "Caxias do Sul",
         "itens": 12,
@@ -55,7 +55,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -64,7 +64,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -90,9 +90,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
+        "tipo": "pauta",
+        "id": "gn-rs-pelotas",
+        "nome": "Pelotas",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -111,6 +111,15 @@
         "tipo": "pauta",
         "id": "sul21",
         "nome": "Sul21",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -136,8 +145,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -145,18 +154,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 4,
+        "id": "sema-rs",
+        "nome": "Sema-RS",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -334,8 +334,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -416,8 +416,8 @@
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "guaiba.com.br",
         "GZH",
+        "Rádio Guaíba",
         "Terra"
       ]
     },
@@ -427,13 +427,23 @@
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "guaiba.com.br",
         "GZH",
+        "Rádio Guaíba",
         "Terra"
       ]
     },
     {
-      "titulo": "Polícia investiga morte de criança de 4 anos em Porto Alegre após agressões; menina foi levada à UPA pela tia",
+      "titulo": "Polícia investiga morte de criança de 4 anos em Porto Alegre",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 RS",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Polícia investiga morte de criança de 4 anos em Porto Alegre",
       "veiculo": "G1",
       "editoria": "regional",
       "quentura": 4,
@@ -451,12 +461,40 @@
       ]
     },
     {
-      "titulo": "Candidatos a governador no RS: veja a lista das eleições 2026",
-      "veiculo": "Valor Econômico",
+      "titulo": "ENTREVISTA: delegada explica as dificuldades na investigação da morte da menina de 4 anos | Gaúcha+",
+      "veiculo": "GZH",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 RS",
+        "G1"
+      ]
+    },
+    {
+      "titulo": "'A investigação vai dizer se foi vítima de tortura', afirma delegado sobre morte de criança de 4 anos em Porto Alegre",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "G1",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "'Lesões na cabeça, nádegas e pernas', relata delegada sobre morte de criança de 4 anos em Porto Alegre",
+      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "GZH"
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Adolescente de 14 anos é morta a facadas e polícia investiga ex-padrasto por feminicídio no RS",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
       ]
     },
     {
@@ -470,58 +508,30 @@
       ]
     },
     {
-      "titulo": "ENTREVISTA: delegada explica as dificuldades na investigação da morte da menina de 4 anos | Gaúcha+",
-      "veiculo": "GZH",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 RS",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "'A investigação vai dizer se foi vítima de tortura', afirma delegado sobre morte de criança de 4 anos em Porto Alegre",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "G1",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Três florenses disputam vagas de deputado nas Eleições 2026",
-      "veiculo": "Rádio Solaris",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "'Lesões na cabeça, nádegas e pernas', relata delegada sobre morte de criança de 4 anos em Porto Alegre",
-      "veiculo": "g1 RS",
+      "titulo": "Granizo e ventos: o que sabemos sobre novo ciclone que vai atingir o Brasil",
+      "veiculo": "CNN Brasil",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "G1"
+        "g1 RS"
       ]
     },
     {
-      "titulo": "Ciclone extratropical deve atingir várias regiões do Brasil nos próximos dias",
-      "veiculo": "Olhar Digital",
+      "titulo": "Prefeitura de Santa Cruz divulga lista de classificados para o Loteamento Santa Maria II",
+      "veiculo": "gaz.com.br",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Diário de Santa Maria"
+      ]
+    },
+    {
+      "titulo": "Candidatos a governador no RS: veja a lista das eleições 2026",
+      "veiculo": "Valor Econômico",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
         "GZH"
-      ]
-    },
-    {
-      "titulo": "Adolescente de 14 anos é morta a facadas e polícia investiga ex-padrasto por feminicídio no RS",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "G1"
       ]
     },
     {
@@ -543,39 +553,30 @@
       ]
     },
     {
+      "titulo": "Prefeitura recebe propostas de 12 empresas para contrato de até 3 mil câmeras em Santa Maria",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "gaz.com.br"
+      ]
+    },
+    {
+      "titulo": "Três vias terão mudança de sentido em Caxias do Sul",
+      "veiculo": "Rádio Solaris",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
       "titulo": "Caxias do Sul amplia formação em educação antirracista nas escolas municipais",
       "veiculo": "Serra em Pauta",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
         "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Corsan realiza 79 obras e ações em oito municípios da Região Metropolitana nesta semana",
-      "veiculo": "realnews.com.br",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "difusora973fm.com.br"
-      ]
-    },
-    {
-      "titulo": "Prefeitura anuncia Auxílio Esportivo para investir e fortalecer o esporte em Canoas",
-      "veiculo": "Agência GBC",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "realnews.com.br"
-      ]
-    },
-    {
-      "titulo": "Quatro obras renascentistas são roubadas de museu na Itália",
-      "veiculo": "artequeacontece",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Assine Abril"
       ]
     }
   ]
