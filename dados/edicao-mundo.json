@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-18T15:19:17.983Z",
+  "gerado": "2026-08-18T19:37:50.435Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 49,
+    "pauta": 41,
+    "fonteLivre": 54,
     "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 30,
     "responderam": 24,
-    "entregando": 13,
-    "itens": 92,
+    "entregando": 14,
+    "itens": 94,
     "lista": [
       {
         "tipo": "pauta",
@@ -30,6 +30,24 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -45,28 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,7 +84,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 7,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -102,7 +102,7 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 4,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +120,7 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 2,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -135,18 +135,27 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 500"
       },
       {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -158,8 +167,17 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
         "respondeu": false,
-        "erro": "HTTP 415"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -181,26 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,6 +217,24 @@
       },
       {
         "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -226,12 +244,12 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -253,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -264,33 +282,6 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -306,19 +297,9 @@
       "titulo": "Rússia mata 10 na Ucrânia; Kiev faz mega-ataque a Moscou",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© Володимир Зеленський / Telegram",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Rússia ameaça Reino Unido após Ucrânia lançar 'chuva de drones' a Moscou",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "© Володимир Зеленський / Telegram"
       ]
     },
     {
