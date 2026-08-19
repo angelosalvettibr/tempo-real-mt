@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-19T15:20:20.352Z",
+  "gerado": "2026-08-19T19:22:18.742Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 45,
-    "fonteLivre": 50,
-    "confirmadas": 0,
+    "pauta": 47,
+    "fonteLivre": 49,
+    "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 6
+    "semFonte": 12
   },
   "fontes": {
     "checadas": 31,
-    "responderam": 24,
-    "entregando": 14,
-    "itens": 95,
+    "responderam": 22,
+    "entregando": 12,
+    "itens": 96,
     "lista": [
       {
         "tipo": "pauta",
@@ -37,18 +37,18 @@
       },
       {
         "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
-        "itens": 11,
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 10,
+        "id": "vaticano",
+        "nome": "Vatican News",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,7 +84,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 6,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,16 +93,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -135,15 +126,6 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
@@ -163,12 +145,39 @@
       },
       {
         "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -183,15 +192,6 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -226,17 +226,17 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "acnur",
+        "nome": "Acnur",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -303,6 +303,80 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "Estados Unidos: Trump anuncia encontro com Kim Jong-un ainda este ano",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Coreia do Norte esnoba abertura proposta por Trump a Kim Jong-un",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Irmã de Kim Jong-un diz não ter 'qualquer interesse' em decisão de Trump de reduzir manobras com Coreia do Sul",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Trump pressiona por encontro com Kim Jong-un ainda este ano",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Morre aos 101 anos o preso mais velho dos EUA — que recebeu oito vezes a 'última refeição', mas não foi executado",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Morre aos 101 anos o preso mais velho dos EUA — que recebeu oito vezes a 'última refeição', mas não foi executado",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Israel abre inquéritos criminais às mortes de Hind Rajab e de socorristas palestinianos",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "União Europeia apoia Tribunal Penal Internacional após novas sanções dos EUA",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© Eva Plevier / Pool ANP via AP"
+      ]
+    },
+    {
       "titulo": "França promulga lei que permite assistência para morrer",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
@@ -321,12 +395,12 @@
       ]
     },
     {
-      "titulo": "Irmã de Kim Jong-un diz não ter 'qualquer interesse' em decisão de Trump de reduzir manobras com Coreia do Sul",
-      "veiculo": "g1 Mundo",
+      "titulo": "Exército de Israel investigará morte da menina Hind Rajab e de socorristas em Gaza",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "Euronews"
       ]
     },
     {
@@ -335,25 +409,7 @@
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "TPI diz que sanções dos EUA são 'ataque flagrante' à independência da Corte; UE declara apoio",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "© Eva Plevier / Pool ANP via AP"
-      ]
-    },
-    {
-      "titulo": "Trump pressiona por encontro com Kim Jong Un ainda este ano",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
+        "Euronews"
       ]
     }
   ]
