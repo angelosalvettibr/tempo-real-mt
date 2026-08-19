@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-08-19T12:01:35.612Z",
+  "gerado": "2026-08-19T15:21:16.626Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 202,
-    "fonteLivre": 87,
-    "confirmadas": 33,
+    "pauta": 206,
+    "fonteLivre": 88,
+    "confirmadas": 24,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 29
+    "semFonte": 30
   },
   "fontes": {
-    "checadas": 131,
+    "checadas": 130,
     "responderam": 83,
     "entregando": 30,
-    "itens": 289,
+    "itens": 294,
     "lista": [
       {
         "tipo": "pauta",
@@ -28,8 +28,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "exame",
-        "nome": "Exame",
+        "id": "cartacapital",
+        "nome": "CartaCapital",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "congresso",
+        "nome": "Congresso em Foco",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -63,9 +72,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "cartacapital",
-        "nome": "CartaCapital",
+        "tipo": "pauta",
+        "id": "jota",
+        "nome": "JOTA",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -82,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,8 +100,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -136,17 +145,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "congresso",
-        "nome": "Congresso em Foco",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "jota",
-        "nome": "JOTA",
+        "id": "exame",
+        "nome": "Exame",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -180,9 +180,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-economia",
-        "nome": "Agência Brasil",
+        "tipo": "resgate",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -199,9 +199,27 @@
       },
       {
         "tipo": "livre",
+        "id": "ab-geral",
+        "nome": "Agência Brasil",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ab-politica",
         "nome": "Agência Brasil",
         "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -225,28 +243,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
-        "id": "ab-geral",
+        "id": "ab-economia",
         "nome": "Agência Brasil",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -307,6 +307,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "valor",
         "nome": "Valor",
         "itens": 0,
@@ -322,24 +331,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
-        "id": "cartacapital",
-        "nome": "CartaCapital",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -406,8 +397,8 @@
       },
       {
         "tipo": "livre",
-        "id": "embrapa",
-        "nome": "Embrapa",
+        "id": "conab",
+        "nome": "Conab",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -415,8 +406,8 @@
       },
       {
         "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
+        "id": "embrapa",
+        "nome": "Embrapa",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -487,15 +478,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "anp",
         "nome": "ANP",
         "itens": 0,
@@ -507,6 +489,15 @@
         "tipo": "livre",
         "id": "inmet",
         "nome": "Inmet",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,15 +550,6 @@
       },
       {
         "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
         "itens": 0,
@@ -577,12 +559,12 @@
       },
       {
         "tipo": "livre",
-        "id": "cgu",
-        "nome": "CGU",
+        "id": "pf",
+        "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -595,8 +577,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
+        "id": "cgu",
+        "nome": "CGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -613,8 +595,17 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -622,8 +613,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -646,15 +637,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -685,8 +667,26 @@
       },
       {
         "tipo": "livre",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "inpe",
         "nome": "Inpe",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -730,24 +730,6 @@
       },
       {
         "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "itamaraty",
-        "nome": "Itamaraty",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "antt",
         "nome": "ANTT",
         "itens": 0,
@@ -759,6 +741,15 @@
         "tipo": "livre",
         "id": "tcu",
         "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "itamaraty",
+        "nome": "Itamaraty",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -793,8 +784,8 @@
       },
       {
         "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
+        "id": "planalto",
+        "nome": "Planalto",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -802,8 +793,8 @@
       },
       {
         "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
+        "id": "agu",
+        "nome": "AGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -865,15 +856,6 @@
       },
       {
         "tipo": "livre",
-        "id": "saude-fed",
-        "nome": "Ministério da Saúde",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "justica",
         "nome": "Ministério da Justiça",
         "itens": 0,
@@ -883,8 +865,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cnmp",
-        "nome": "CNMP",
+        "id": "saude-fed",
+        "nome": "Ministério da Saúde",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -901,8 +883,26 @@
       },
       {
         "tipo": "livre",
+        "id": "cnmp",
+        "nome": "CNMP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "anac",
         "nome": "Anac",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "aneel",
+        "nome": "Aneel",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -928,15 +928,6 @@
       },
       {
         "tipo": "livre",
-        "id": "aneel",
-        "nome": "Aneel",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "anatel",
         "nome": "Anatel",
         "itens": 0,
@@ -955,6 +946,15 @@
       },
       {
         "tipo": "livre",
+        "id": "mdic",
+        "nome": "MDIC",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "minas",
         "nome": "Ministério de Minas e Energia",
         "itens": 0,
@@ -966,15 +966,6 @@
         "tipo": "livre",
         "id": "portos",
         "nome": "Ministério de Portos e Aeroportos",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mdic",
-        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1036,15 +1027,6 @@
       },
       {
         "tipo": "livre",
-        "id": "pncp",
-        "nome": "Portal Nacional de Contratações Públicas",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 401"
-      },
-      {
-        "tipo": "livre",
         "id": "stj-inf",
         "nome": "STJ",
         "itens": 0,
@@ -1063,35 +1045,17 @@
       },
       {
         "tipo": "livre",
+        "id": "pncp",
+        "nome": "Portal Nacional de Contratações Públicas",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 401"
+      },
+      {
+        "tipo": "livre",
         "id": "sudene",
         "nome": "Sudene",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "camara-inf",
-        "nome": "Câmara dos Deputados",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "codevasf",
-        "nome": "Codevasf",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "sudam",
-        "nome": "Sudam",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1108,8 +1072,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama-inf",
-        "nome": "Ibama — licenciamento",
+        "id": "sudam",
+        "nome": "Sudam",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1117,8 +1081,26 @@
       },
       {
         "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
+        "id": "codevasf",
+        "nome": "Codevasf",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "camara-inf",
+        "nome": "Câmara dos Deputados",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ibama-inf",
+        "nome": "Ibama — licenciamento",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1144,6 +1126,15 @@
       },
       {
         "tipo": "livre",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ipea-inf",
         "nome": "Ipea",
         "itens": 0,
@@ -1153,8 +1144,8 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
+        "id": "gov-br",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1162,8 +1153,8 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1180,8 +1171,8 @@
       },
       {
         "tipo": "livre",
-        "id": "stf",
-        "nome": "STF",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1189,8 +1180,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inmet",
-        "nome": "Inmet",
+        "id": "stf",
+        "nome": "STF",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1203,94 +1194,107 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Carreta teria invadido contramão e atingido micro-ônibus; 23 morreram",
-      "veiculo": "Metrópoles",
+      "titulo": "Lula é aprovado por 54% e desaprovado por 45% no DF, diz pesquisa",
+      "veiculo": "Poder360",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "g1",
-        "Poder360",
-        "Correio Braziliense"
+        "CartaCapital",
+        "Congresso em Foco",
+        "Folha"
       ]
     },
     {
-      "titulo": "Morre Glória Menezes, pioneira das novelas no Brasil, aos 91 anos",
+      "titulo": "Petrobras confirma descoberta de petróleo na Foz do Amazonas",
+      "veiculo": "gauchazh.clicrbs.com.br",
+      "quentura": 3,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Economia"
+      ]
+    },
+    {
+      "titulo": "Batida entre micro-ônibus e carreta causa mais de 20 mortes no Paraná",
       "veiculo": "CartaCapital",
+      "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "BBC Brasil",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Lula diz estar \"otimista\" com aprovação do fim da taxa das blusinhas",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Trump anuncia suspensão das novas tarifas de 50% sobre produtos canadenses",
-      "veiculo": "Estadão",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "O Brasil dá adeus a Glória Menezes, a eterna dama da tevê brasileira",
-      "veiculo": "Correio Braziliense",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "CartaCapital"
+        "Poder360",
+        "R7",
+        "gauchazh.clicrbs.com.br"
       ]
     },
     {
       "titulo": "Descoberta na Foz do Amazonas só será 'passaporte para o futuro' se modelo adotado no pré-sal mudar, diz ex-diretor da Petrobras",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 Economia",
+        "gauchazh.clicrbs.com.br"
+      ]
+    },
+    {
+      "titulo": "Lula e Flávio Bolsonaro empatam no 1º turno entre eleitores do DF, mostra pesquisa",
+      "veiculo": "CartaCapital",
+      "editoria": "brasil",
       "quentura": 2,
+      "tambemEm": [
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Descoberta na Foz do Amazonas só será 'passaporte para o futuro' se modelo adotado no pré-sal mudar, diz ex-diretor da Petrobras",
+      "veiculo": "g1 Economia",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "gauchazh.clicrbs.com.br"
+      ]
+    },
+    {
+      "titulo": "A Foz do Amazonas e o futuro da exploração de petróleo no Brasil - O Assunto #1786",
+      "veiculo": "g1 Economia",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "gauchazh.clicrbs.com.br"
+      ]
+    },
+    {
+      "titulo": "Luis Felipe Salomão assume presidência do STJ com foco em celeridade e redução de processos",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "JOTA",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Jóquei morre dias após queda em páreo do Jockey Club, no Rio",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "😭 não é só choro: como o emoji virou o mais popular do mundo em 2025; veja o ranking",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 1,
       "tambemEm": [
         "g1 Economia"
       ]
     },
     {
-      "titulo": "Lula diz que fim da taxa das blusinhas é ‘questão de justiça’",
-      "veiculo": "CartaCapital",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Glória Menezes: relembre papéis marcantes da 'primeira-dama' que comoveu gerações e ajudou a escrever a história da TV brasileira",
-      "veiculo": "BBC Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "CartaCapital",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Lula diz que aprovação do fim da taxa das blusinhas no Congresso é 'questão de justiça'",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Delegado da PF é alvo de operação por vazamento de informações",
-      "veiculo": "Metrópoles",
+      "titulo": "😭 não é só choro: como o emoji virou o mais popular do mundo em 2025; veja o ranking",
+      "veiculo": "g1 Economia",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
@@ -1298,73 +1302,66 @@
       ]
     },
     {
-      "titulo": "Paraná Pesquisa: Tarcísio chega a 50% e abre 16 pontos de vantagem sobre Haddad em SP",
-      "veiculo": "InfoMoney",
+      "titulo": "Astrônomos descobrem estrela mais &#8216;rápida&#8217; conhecida na Via Láctea",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "CartaCapital"
+        "g1"
       ]
     },
     {
-      "titulo": "Filho de policial militar é alvo de operação suspeito de participar roubos em Cuiabá",
+      "titulo": "Cientistas descobrem estrela capaz de 'sentir' a rotação do buraco negro da Via Láctea; entenda",
       "veiculo": "g1",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "Metrópoles"
+        "CNN Brasil"
       ]
     },
     {
-      "titulo": "Candidato a suplente de senador no Piauí é intimado a trocar foto de Jesus na urna",
+      "titulo": "Para 69% das pessoas, falsificação é maior risco ao comprar remédios na internet, diz pesquisa",
       "veiculo": "Folha",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "JOTA"
+        "Poder360"
       ]
     },
     {
-      "titulo": "TSE libera R$ 2,3 bi após PT desistir de ação sobre Fundo",
+      "titulo": "Tesouro dos EUA anuncia que dobrará recompra de títulos de longo prazo após maior nível em 19 anos",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Impeachment de ministro do STF é bandeira de campanha e difícil de executar, diz Gilmar Mendes",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 1,
+      "tambemEm": [
+        "Exame"
+      ]
+    },
+    {
+      "titulo": "PF investiga fraudes na regularização de migrantes no RJ",
       "veiculo": "Poder360",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "Congresso em Foco"
+        "R7"
       ]
     },
     {
-      "titulo": "Descoberta na Foz do Amazonas só será 'passaporte para o futuro' se modelo adotado no pré-sal mudar, diz ex-diretor da Petrobras",
-      "veiculo": "g1 Economia",
+      "titulo": "Michelle lidera disputa pelo Senado no DF, diz pesquisa",
+      "veiculo": "Poder360",
       "editoria": "brasil",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "A acirrada disputa pelo Senado em São Paulo, segundo o Paraná Pesquisas",
-      "veiculo": "CartaCapital",
-      "quentura": 1,
-      "tambemEm": [
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Salomão assume a presidência do STJ em meio a investigações envolvendo outros ministros",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "A disputa entre Tarcísio e Haddad em SP, segundo nova pesquisa",
-      "veiculo": "CartaCapital",
-      "quentura": 1,
-      "tambemEm": [
-        "InfoMoney"
+        "CartaCapital"
       ]
     }
   ]

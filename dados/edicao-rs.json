@@ -1,22 +1,31 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-19T12:05:58.455Z",
+  "gerado": "2026-08-19T15:24:56.999Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 128,
-    "fonteLivre": 44,
-    "confirmadas": 9,
+    "fonteLivre": 58,
+    "confirmadas": 10,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 85
+    "semFonte": 89
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 172,
+    "itens": 186,
     "lista": [
+      {
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "assessoria",
         "id": "camara-caxias",
@@ -55,7 +64,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -64,7 +73,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -129,7 +138,16 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -138,15 +156,6 @@
         "tipo": "assessoria",
         "id": "defesacivil-rs",
         "nome": "Defesa Civil do RS",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
         "itens": 5,
         "ok": true,
         "respondeu": true,
@@ -171,15 +180,6 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "jc",
         "nome": "Jornal do Comércio",
@@ -190,21 +190,21 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "matinal",
         "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -334,8 +334,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -412,79 +412,57 @@
   "pautas": [
     {
       "titulo": "Pelotas decreta luto oficial de três dias pela morte da atriz Glória Menezes",
-      "veiculo": "gauchazh.clicrbs.com.br",
-      "editoria": "regional",
-      "quentura": 8,
-      "tambemEm": [
-        "Sul21",
-        "g1 RS",
-        "Prefeitura de Pelotas"
-      ]
-    },
-    {
-      "titulo": "Prefeitura decreta luto oficial pela morte de Glória Menezes",
-      "veiculo": "Prefeitura de Pelotas",
-      "editoria": "regional",
-      "quentura": 7,
-      "tambemEm": [
-        "g1 RS",
-        "G1",
-        "gauchazh.clicrbs.com.br"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Pelotas decreta luto oficial de 3 dias após morte de Glória Menezes",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Prefeitura de Pelotas",
-        "Jornal do Comércio",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Pelotas decreta luto oficial de 3 dias após morte de Glória Menezes",
-      "veiculo": "G1",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "g1 RS",
-        "Prefeitura de Pelotas",
-        "Jornal do Comércio"
-      ]
-    },
-    {
-      "titulo": "Atriz Glória Menezes morre aos 91 anos, no Rio",
-      "veiculo": "Sul21",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "g1 RS",
-        "gauchazh.clicrbs.com.br",
-        "atlaspublico.com.br"
-      ]
-    },
-    {
-      "titulo": "Pelotas decreta emergência após 152 milímetros de chuva em três dias",
-      "veiculo": "Jornal do Comércio",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "g1 RS",
-        "G1",
-        "Prefeitura de Pelotas"
+        "Sul21",
+        "Prefeitura de Pelotas",
+        "Jornal do Comércio"
       ]
     },
     {
       "titulo": "Governo decreta luto oficial de três dias pelo falecimento da atriz Glória Menezes",
       "veiculo": "atlaspublico.com.br",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 4,
       "tambemEm": [
         "Sul21",
+        "Prefeitura de Pelotas",
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Prefeitura decreta luto oficial pela morte de Glória Menezes",
+      "veiculo": "Prefeitura de Pelotas",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
         "g1 RS",
-        "Prefeitura de Pelotas"
+        "G1",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Pelotas decreta luto oficial de 3 dias após morte de Glória Menezes",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Prefeitura de Pelotas",
+        "Jornal do Comércio",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Atriz Glória Menezes morre aos 91 anos, no Rio",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 RS",
+        "GZH",
+        "atlaspublico.com.br"
       ]
     },
     {
@@ -493,111 +471,130 @@
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
+        "g1 RS",
         "abcmais.com",
         "Agência GBC"
-      ]
-    },
-    {
-      "titulo": "Campanha de vacinação aplica mais de 80 doses em ação no Santa Maria",
-      "veiculo": "REDE BRASIL DE TELEVISÃO",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Paralelo 29",
-        "Diário de Santa Maria",
-        "Guarany Junior"
-      ]
-    },
-    {
-      "titulo": "Pelotas decreta nova situação de emergência",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "g1 RS",
-        "Jornal do Comércio",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Festival de Cinema de Gramado homenageia Glória Menezes e Laura Cardoso após mortes das atrizes",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Sul21",
-        "Prefeitura de Pelotas",
-        "gauchazh.clicrbs.com.br"
-      ]
-    },
-    {
-      "titulo": "Guarda os dinossauros mais antigos do mundo e a primeira universidade federal fora de uma capital: a cidade no centro geográfico do Rio Grande do Sul",
-      "veiculo": "Canal Rural",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "CAU/BR",
-        "Jornal do Comércio",
-        "Neo Mondo"
       ]
     },
     {
       "titulo": "Menina de 11 anos é encontrada e Polícia esclarece desaparecimento em Canoas",
       "veiculo": "abcmais.com",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
+        "g1 RS",
         "jornaltimoneiro.com.br",
         "Agência GBC"
       ]
     },
     {
-      "titulo": "Criança desaparecida em Canoas é localizada pela Polícia Civil após buscas que envolveram mais de 50 agentes",
-      "veiculo": "Agência GBC",
+      "titulo": "Suspeitos de chacina com quatro mortos na zona norte de Porto Alegre são alvo de operação da Polícia Civil",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "jornaltimoneiro.com.br",
-        "abcmais.com"
+        "g1 RS",
+        "Fatos de Mato Grosso"
       ]
     },
     {
-      "titulo": "Porto Alegre celebra 100 anos do Serviço de Recreação Pública com programação a partir desta sexta",
-      "veiculo": "Prefeitura de Porto Alegre",
+      "titulo": "Lotofácil 3765 divide bolada de quase R$ 4 milhões entre Minas Gerais e Rio Grande do Sul",
+      "veiculo": "estadao.com.br",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Correio do Povo"
+        "Jornal do Comércio",
+        "Neo Mondo",
+        "O TEMPO"
       ]
     },
     {
-      "titulo": "Aplicativo do transporte coletivo de Santa Maria começa a funcionar nesta quarta com recarga e pagamento por Pix e outras notícias",
-      "veiculo": "Diário de Santa Maria",
+      "titulo": "Pelotas decreta emergência após 152 milímetros de chuva em três dias",
+      "veiculo": "Jornal do Comércio",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Paralelo 29",
-        "REDE BRASIL DE TELEVISÃO"
+        "G1",
+        "Prefeitura de Pelotas",
+        "GZH"
       ]
     },
     {
-      "titulo": "Novo aplicativo do transporte coletivo é apresentado à Prefeitura de Santa Maria; sistema terá Pix",
+      "titulo": "Prefeitura de Santa Maria realiza Dia D da Campanha Nacional de Multivacinação no sábado (22) em 12 unidades de saúde; veja onde se vacinar",
       "veiculo": "Paralelo 29",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Diário de Santa Maria",
-        "REDE BRASIL DE TELEVISÃO"
+        "Prefeitura de Porto Alegre",
+        "Guarany Junior"
       ]
     },
     {
-      "titulo": "Protetor de animais, idoso de 75 anos é agredido em Canoas; Polícia apreende arma do agressor",
-      "veiculo": "Agência GBC",
+      "titulo": "Caso Samylle: mãe de menina de 4 anos que chegou morta a UPA presta depoimento à polícia e diz que não via filha há dois meses",
+      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "jornaltimoneiro.com.br",
-        "abcmais.com"
+        "abcmais.com",
+        "jornaltimoneiro.com.br"
+      ]
+    },
+    {
+      "titulo": "Previsão do tempo: Ciclone extratropical deve se formar na quinta (20)",
+      "veiculo": "CNN Brasil",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "radiominuano.com.br"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre do Norte abre credenciamento para plantões médicos no hospital",
+      "veiculo": "Fatos de Mato Grosso",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "GZH",
+        "felipevieira.com.br"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre do Norte abre credenciamento para plantões médicos no hospital",
+      "veiculo": "Fatos de Mato Grosso",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "GZH",
+        "felipevieira.com.br"
+      ]
+    },
+    {
+      "titulo": "Justiça proíbe a prefeitura de Porto Alegre de exigir comprovante de residência para concessão de passe-livre nos ônibus a passageiros com deficiência e baixa renda",
+      "veiculo": "osul.com.br",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "felipevieira.com.br"
+      ]
+    },
+    {
+      "titulo": "Justiça proíbe a prefeitura de Porto Alegre de exigir comprovante de residência para concessão de passe-livre nos ônibus a passageiros com deficiência e baixa renda",
+      "veiculo": "osul.com.br",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "felipevieira.com.br"
+      ]
+    },
+    {
+      "titulo": "'Legado gigante': artistas lamentam morte de Glória Menezes no Festival de Cinema de Gramado",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Prefeitura de Pelotas",
+        "GZH"
       ]
     }
   ]
