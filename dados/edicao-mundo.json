@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-18T22:58:24.725Z",
+  "gerado": "2026-08-19T09:55:54.830Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 56,
-    "confirmadas": 2,
+    "pauta": 45,
+    "fonteLivre": 55,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 4
   },
   "fontes": {
     "checadas": 30,
     "responderam": 24,
     "entregando": 14,
-    "itens": 95,
+    "itens": 99,
     "lista": [
       {
         "tipo": "pauta",
@@ -27,19 +27,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,16 +39,16 @@
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 10,
+        "tipo": "livre",
+        "id": "vaticano",
+        "nome": "Vatican News",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -67,6 +58,15 @@
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,27 +82,18 @@
       },
       {
         "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 4,
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,6 +111,15 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -149,15 +149,6 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
         "respondeu": true,
         "erro": null
       },
@@ -181,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -244,15 +235,6 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -262,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +268,24 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,21 +294,39 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Rússia mata 10 na Ucrânia; Kiev faz mega-ataque a Moscou",
-      "veiculo": "Folha Mundo",
+      "titulo": "Os gêmeos que se casaram com irmãs gêmeas em celebração feita por padres gêmeos e com coroinhas gêmeos",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "© Володимир Зеленський / Telegram"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Bombardeio russo mata ao menos dez pessoas na Ucrânia; Moscou relata ataques com mais de 600 drones",
-      "veiculo": "© Володимир Зеленський / Telegram",
+      "titulo": "Os gêmeos que se casaram com irmãs gêmeas em celebração feita por padres gêmeos e com coroinhas gêmeos",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "O caso da menina de 10 anos traficada do Peru para o Equador para se casar com um homem de 50",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "O caso da menina de 10 anos traficada do Peru para o Equador para se casar com um homem de 50",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     }
   ]
