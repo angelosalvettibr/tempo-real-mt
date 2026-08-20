@@ -1,22 +1,31 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-08-20T12:08:35.020Z",
+  "gerado": "2026-08-20T16:00:39.033Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 125,
-    "fonteLivre": 45,
-    "confirmadas": 8,
+    "pauta": 123,
+    "fonteLivre": 55,
+    "confirmadas": 12,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 80
+    "semFonte": 81
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 170,
+    "itens": 178,
     "lista": [
+      {
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "assessoria",
         "id": "camara-caxias",
@@ -46,7 +55,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -55,7 +64,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -66,15 +75,6 @@
         "tipo": "pauta",
         "id": "gn-rs",
         "nome": "Rio Grande do Sul",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -108,6 +108,15 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "resgate",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
@@ -130,15 +139,6 @@
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
         "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,6 +190,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 0,
@@ -208,15 +217,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -298,8 +298,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "fiergs",
-        "nome": "Fiergs",
+        "id": "seapi-rs",
+        "nome": "Agricultura RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -307,8 +307,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "seapi-rs",
-        "nome": "Agricultura RS",
+        "id": "fiergs",
+        "nome": "Fiergs",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -334,8 +334,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,23 +411,83 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "O Rio Grande do Sul é um dos Estados brasileiros com mais denúncias de violência na Central de Atendimento à Mulher este ano",
-      "veiculo": "Grupo Ceres de Comunicação",
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
       "editoria": "regional",
-      "quentura": 6,
+      "quentura": 5,
       "tambemEm": [
         "JOTA Info",
         "CNN Brasil",
-        "Correio do Povo"
+        "Agrolink"
+      ]
+    },
+    {
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "JOTA Info",
+        "CNN Brasil",
+        "Agrolink"
+      ]
+    },
+    {
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "JOTA Info",
+        "CNN Brasil",
+        "Agrolink"
+      ]
+    },
+    {
+      "titulo": "Polícia prende tio de menina de quatro anos morta em Porto Alegre",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 RS",
+        "Terra"
+      ]
+    },
+    {
+      "titulo": "Polícia prende tio de menina de quatro anos morta em Porto Alegre",
+      "veiculo": "GZH",
+      "quentura": 4,
+      "tambemEm": [
+        "g1 RS",
+        "Terra"
+      ]
+    },
+    {
+      "titulo": "Ciclone extratropical pode provocar rajadas de até 100 km/h no Sul e ventos fortes no Sudeste",
+      "veiculo": "Notícias Agrícolas",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Rádio Pampa",
+        "Terra",
+        "www.gov.br"
+      ]
+    },
+    {
+      "titulo": "Por que o Sul do Brasil vive temporada histórica de tornados em 2026",
+      "veiculo": "Agrolink",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Estratégia Concursos"
       ]
     },
     {
       "titulo": "Mãe de menina de 4 anos levada morta para UPA em Porto Alegre revela à polícia detalhes",
       "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 3,
       "tambemEm": [
-        "g1 RS",
         "GZH"
       ]
     },
@@ -435,9 +495,8 @@
       "titulo": "Mãe de menina de 4 anos levada morta para UPA em Porto Alegre revela à polícia detalhes",
       "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 3,
       "tambemEm": [
-        "g1 RS",
         "GZH"
       ]
     },
@@ -451,133 +510,80 @@
       ]
     },
     {
-      "titulo": "Câmara debate preparação de Porto Alegre para cheias e aprova três projetos",
-      "veiculo": "Jornal do Comércio",
+      "titulo": "» Ação do TCE-RS contribui para regra sobre convocação de suplentes na Câmara de Porto Alegre",
+      "veiculo": "Jornal A Plateia",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "felipevieira.com.br",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Câmara debate preparação de Porto Alegre para cheias e aprova três projetos",
-      "veiculo": "Jornal do Comércio",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "felipevieira.com.br",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Quatro autoras gaúchas lançam obras em Porto Alegre e levam projeto literário ao Uruguai, por Felipe Vieira",
-      "veiculo": "felipevieira.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Correio do Povo",
         "Jornal do Comércio"
       ]
     },
     {
-      "titulo": "“Charge Mestra\" exibe obras de três cartunistas gaúchos em Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "felipevieira.com.br"
-      ]
-    },
-    {
-      "titulo": "Selton Mello recebe Kikito de Cristal no Festival de Cinema de Gramado: 'Primeiro prêmio que recebo sem os meus pais'",
+      "titulo": "Caso Samylle: tio de menina de 4 anos morta no RS é preso; perícia confirmou politraumatismo como causa da morte",
       "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 2,
-      "tambemEm": [
-        "Serra em Pauta",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "FEMINICÍDIO: padrasto confessa ter matado a adolescente de 14 anos em Encantado | Gaúcha+",
-      "veiculo": "GZH",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Caso Samylle: mãe tinha a guarda, mas não via a filha de 4 anos 'nem por vídeochamada', diz delegada",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
       "tambemEm": [
         "GZH"
       ]
     },
     {
-      "titulo": "Fiergs fará projeto para abertura do Travessão Solferino em Caxias do Sul",
-      "veiculo": "Serra em Pauta",
+      "titulo": "RS terá temporais e ventos de até 100 km/h com chegada de ciclone extratropical",
+      "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Radio Caxias FM"
+        "Notícias Agrícolas",
+        "GZH"
       ]
     },
     {
       "titulo": "Polícia encontrou vídeos de testes de armas fabricadas em impressoras 3D em celulares de suspeitos; operação prendeu 16 no RS",
       "veiculo": "g1 RS",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
+        "G1",
         "Agência GBC"
       ]
     },
     {
-      "titulo": "Parte de valor devolvido pela Câmara irá custear estrutura da 42ª Feira do Livro e retomada de grupos artísticos, em Caxias do Sul",
-      "veiculo": "GZH",
+      "titulo": "Polícia encontrou vídeos de testes de armas fabricadas em impressoras 3D em celulares de suspeitos; operação prendeu 16 no RS",
+      "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Radio Caxias FM"
-      ]
-    },
-    {
-      "titulo": "Candidatos a governador do RS em 2026: veja nomes, números e biografias",
-      "veiculo": "InfoMoney",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "Entenda por que polícia descarta vicaricídio após ex-padrasto confessar ter matado adolescente de 14 anos no RS",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Samae investe R$ 5,9 milhões em reservatório para reforçar água em Forqueta",
-      "veiculo": "Serra em Pauta",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Rádio Solaris"
-      ]
-    },
-    {
-      "titulo": "Canoas passa de um ano sem feminicídios e reforça ações de proteção às mulheres – Notícias",
-      "veiculo": "Notícias – Porto Alegre 24 Horas",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
+        "g1 RS",
         "Agência GBC"
+      ]
+    },
+    {
+      "titulo": "Galeria de Menção Honrosa no Concurso para a Sede Administrativa da Câmara de Vereadores de Porto Alegre / A3 arquitetura.engenharia - 17",
+      "veiculo": "ArchDaily",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Jornal do Comércio"
+      ]
+    },
+    {
+      "titulo": "Câmara debate preparação de Porto Alegre para cheias e aprova três projetos",
+      "veiculo": "Jornal do Comércio",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "ArchDaily",
+        "Jornal A Plateia"
+      ]
+    },
+    {
+      "titulo": "Câmara debate preparação de Porto Alegre para cheias e aprova três projetos",
+      "veiculo": "Jornal do Comércio",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "ArchDaily",
+        "Jornal A Plateia"
       ]
     }
   ]
