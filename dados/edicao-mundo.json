@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-20T23:03:38.403Z",
+  "gerado": "2026-08-21T09:58:42.909Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 50,
-    "confirmadas": 3,
+    "pauta": 42,
+    "fonteLivre": 48,
+    "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 6
   },
   "fontes": {
-    "checadas": 29,
-    "responderam": 24,
-    "entregando": 13,
-    "itens": 91,
+    "checadas": 30,
+    "responderam": 22,
+    "entregando": 12,
+    "itens": 90,
     "lista": [
       {
         "tipo": "pauta",
@@ -48,15 +48,15 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -72,19 +72,19 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 6,
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,16 +93,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 4,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -118,18 +109,18 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 1,
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 1,
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -140,17 +131,35 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -163,6 +172,15 @@
       },
       {
         "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -208,21 +226,21 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -268,15 +286,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -285,8 +294,35 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Quem é Natalie Harp, assessora que se tornou presença constante ao lado de Trump",
-      "veiculo": "BBC Brasil",
+      "titulo": "Espanha transfere centenas de migrantes da praia de Ceuta para abrigos temporários",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "O vendedor de carros da Bélgica que se tornou príncipe após ter parentesco com a família real confirmado",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Piloto morre após choque de avião com helicóptero da polícia nos Estados Unidos",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "VÍDEO: Piloto morre após avião bater em helicóptero da polícia nos EUA",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -294,12 +330,21 @@
       ]
     },
     {
-      "titulo": "Quem é Natalie Harp, assessora de Trump que nunca tira folgas e tem aval para falar em nome dele",
-      "veiculo": "Folha Mundo",
+      "titulo": "O vendedor de carros da Bélgica que se tornou príncipe após ter parentesco com a família real confirmado",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Espanha realoca migrantes em Ceuta e prepara transferência de 500 menores para o continente",
+      "veiculo": "RFI Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
       ]
     }
   ]
