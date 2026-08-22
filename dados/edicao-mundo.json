@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-22T19:05:48.009Z",
+  "gerado": "2026-08-22T22:57:02.982Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 40,
-    "confirmadas": 6,
+    "pauta": 44,
+    "fonteLivre": 34,
+    "confirmadas": 7,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 31,
-    "responderam": 22,
-    "entregando": 12,
-    "itens": 83,
+    "checadas": 29,
+    "responderam": 20,
+    "entregando": 11,
+    "itens": 78,
     "lista": [
       {
         "tipo": "pauta",
@@ -36,28 +36,19 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
         "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 7,
+        "id": "vaticano",
+        "nome": "Vatican News",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -72,18 +63,27 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 6,
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 5,
         "ok": true,
         "respondeu": true,
@@ -103,15 +103,6 @@
         "id": "nasa",
         "nome": "NASA",
         "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,12 +154,21 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -226,6 +226,15 @@
       },
       {
         "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -235,12 +244,12 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -262,35 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,31 +285,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Como o governo brasileiro vê o telefonema com Trump — e o impacto nas eleições",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Deputada dos EUA vê tentativa de Trump de interferir na eleição do Brasil e diz que democratas agirão",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Em ligação com Lula, Trump quis saber sobre eleições no Brasil e ouviu que processo corre bem e de forma confiável",
+      "titulo": "Como a falta de mulheres na China faz homens caírem em golpes de falsas noivas e perderem milhões",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Como a falta de mulheres na China faz homens caírem em golpes de falsas noivas e perderem milhões",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     }
   ]
