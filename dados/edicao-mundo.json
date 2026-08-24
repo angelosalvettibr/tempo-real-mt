@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-23T22:55:07.167Z",
+  "gerado": "2026-08-24T10:28:42.632Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 39,
-    "fonteLivre": 16,
-    "confirmadas": 2,
+    "fonteLivre": 21,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 4
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 28,
-    "responderam": 21,
-    "entregando": 10,
-    "itens": 55,
+    "checadas": 31,
+    "responderam": 22,
+    "entregando": 11,
+    "itens": 60,
     "lista": [
       {
         "tipo": "pauta",
@@ -46,15 +46,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
         "itens": 6,
@@ -64,17 +55,35 @@
       },
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -91,15 +100,6 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 1,
@@ -108,7 +108,25 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -145,24 +163,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -181,6 +181,15 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -190,8 +199,71 @@
       },
       {
         "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,53 +289,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -276,43 +303,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Zelenski diz que eleições durante guerra 'dividiriam a Ucrânia'",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "AP Photo/Alex Brandon - Alex Brandon",
-        "BBC Brasil",
-        "g1 Mundo"
-      ]
-    },
-    {
       "titulo": "Rússia quer aumentar produção de mísseis e recrutar 300 mil novos soldados para guerra na Ucrânia, afirma Zelensky",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "AP Photo/Alex Brandon - Alex Brandon",
-        "Folha Mundo"
+        "AP Photo/Alex Brandon - Alex Brandon"
       ]
     },
     {
       "titulo": "Zelensky descarta realizar eleições em tempo de guerra: ‘destruiriam a Ucrânia’",
       "veiculo": "AP Photo/Alex Brandon - Alex Brandon",
       "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Zelensky precisa ser questionado sobre corrupção no seu governo, diz ministro demitido na Ucrânia",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "g1 Mundo"
       ]
     }
   ]
