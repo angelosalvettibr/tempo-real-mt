@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-26T12:08:51.931Z",
+  "gerado": "2026-08-26T17:01:18.940Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 38,
-    "fonteLivre": 50,
-    "confirmadas": 2,
+    "pauta": 40,
+    "fonteLivre": 54,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 4
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 30,
     "responderam": 22,
     "entregando": 12,
-    "itens": 88,
+    "itens": 94,
     "lista": [
       {
         "tipo": "pauta",
@@ -37,9 +37,18 @@
       },
       {
         "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -54,19 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -100,15 +100,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 4,
@@ -117,10 +108,19 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -226,6 +226,15 @@
       },
       {
         "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -235,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,17 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -277,24 +286,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -303,8 +294,17 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "França presta homenagem a Dolly Parton, ícone americana da música country, que morreu aos 80 anos",
-      "veiculo": "Wade Payne/Invision/AP - Wade Payne",
+      "titulo": "Avalanche de lama no Nepal e Tibete: o que se sabe até agora e o que falta esclarecer",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Avalanche de lama no Nepal e no Tibete: INFOGRÁFICO mostra local do desastre",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -312,12 +312,21 @@
       ]
     },
     {
-      "titulo": "A vida e os sucessos de Dolly Parton, a lenda da música country que morreu aos 80 anos",
-      "veiculo": "BBC Brasil",
+      "titulo": "Estados Unidos: fãs prestam homenagem a Dolly Parton",
+      "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Wade Payne/Invision/AP - Wade Payne"
+      ]
+    },
+    {
+      "titulo": "França presta homenagem a Dolly Parton, ícone americana da música country, que morreu aos 80 anos",
+      "veiculo": "Wade Payne/Invision/AP - Wade Payne",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
       ]
     }
   ]
