@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-26T10:11:51.947Z",
+  "gerado": "2026-08-26T12:08:51.931Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 45,
-    "fonteLivre": 54,
+    "pauta": 38,
+    "fonteLivre": 50,
     "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 8
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 29,
+    "checadas": 31,
     "responderam": 22,
     "entregando": 12,
-    "itens": 99,
+    "itens": 88,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "euronews",
@@ -36,9 +27,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -63,19 +54,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 9,
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 9,
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -85,6 +76,15 @@
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,13 +120,22 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 3,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -163,6 +172,15 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -181,15 +199,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -201,6 +210,60 @@
         "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -226,53 +289,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -285,78 +303,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "França presta homenagem a Dolly Parton, ícone americana da música country, morta aos 80 anos",
+      "titulo": "França presta homenagem a Dolly Parton, ícone americana da música country, que morreu aos 80 anos",
       "veiculo": "Wade Payne/Invision/AP - Wade Payne",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Em imagens: mundo presta tributo à rainha da música country Dolly Parton",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Wade Payne/Invision/AP - Wade Payne"
+        "BBC Brasil"
       ]
     },
     {
       "titulo": "A vida e os sucessos de Dolly Parton, a lenda da música country que morreu aos 80 anos",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Wade Payne/Invision/AP - Wade Payne",
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "“Única e insubstituível”: figuras públicas e celebridades homenageiam Dolly Parton",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Wade Payne/Invision/AP - Wade Payne"
-      ]
-    },
-    {
-      "titulo": "Governo Trump pausa processos de vistos para imigrantes em todo o mundo",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Governo Trump suspende agendamento de entrevistas para vistos de imigrantes em todo o mundo, incluindo o Brasil",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Indicado por Trump para ser embaixador no Brasil diz que não vai se envolver nas eleições, mas fala em 'impasse'",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Nomeado para embaixada dos EUA diz que não vai se envolver em eleição no Brasil",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
       ]
     }
   ]
