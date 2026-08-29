@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-29T13:49:57.417Z",
+  "gerado": "2026-08-29T17:41:23.354Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 47,
+    "pauta": 44,
+    "fonteLivre": 37,
     "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 23,
-    "entregando": 14,
-    "itens": 88,
+    "checadas": 31,
+    "responderam": 24,
+    "entregando": 13,
+    "itens": 81,
     "lista": [
       {
         "tipo": "pauta",
@@ -45,28 +45,19 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 9,
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +66,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +102,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -167,8 +158,26 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
         "respondeu": false,
-        "erro": "HTTP 415"
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -183,15 +192,6 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -231,7 +231,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -244,8 +244,17 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -255,15 +264,6 @@
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +286,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,40 +303,12 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "EUA fecham acordo para controlar reservas de petróleo da Venezuela, diz Trump",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP - Matias Delacroix",
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Acordo petrolífero bilionário entre EUA e Venezuela ainda deixa muitas perguntas sem resposta",
-      "veiculo": "AP - Matias Delacroix",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Islândia vai às urnas em referendo sobre adesão à UE",
+      "titulo": "Islândia: referendo sobre adesão à UE regista elevada participação numa disputa renhida",
       "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Trump diz ter fechado 'maior acordo petrolífero da história' com a Venezuela, envolvendo 65 bilhões de barris",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
       ]
     },
     {
