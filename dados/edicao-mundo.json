@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-08-30T13:49:27.783Z",
+  "gerado": "2026-08-30T18:03:50.488Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
-    "fonteLivre": 22,
+    "pauta": 43,
+    "fonteLivre": 24,
     "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 14
+    "semFonte": 18
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 24,
+    "checadas": 31,
+    "responderam": 22,
     "entregando": 11,
-    "itens": 64,
+    "itens": 67,
     "lista": [
       {
         "tipo": "pauta",
@@ -48,25 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 4,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +57,16 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,6 +75,15 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -131,13 +131,13 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 503"
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -145,8 +145,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -167,8 +167,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -199,6 +199,15 @@
       },
       {
         "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
@@ -210,15 +219,6 @@
         "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,26 +244,17 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +277,24 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -293,6 +302,17 @@
   "itens": [],
   "circulando": [],
   "pautas": [
+    {
+      "titulo": "Islândia recusa em plebiscito retomar negociações de adesão à União Europeia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 5,
+      "tambemEm": [
+        "BBC Brasil",
+        "AP Photo/Marco Di Marco - Marco Di Marco",
+        "Euronews"
+      ]
+    },
     {
       "titulo": "Islândia rejeita aderir à União Europeia em referendo que revela divisão no país",
       "veiculo": "BBC Brasil",
@@ -302,16 +322,6 @@
         "AP Photo/Marco Di Marco - Marco Di Marco",
         "Euronews",
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Islândia recusa em plebiscito retomar negociações com a União Europeia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Marco Di Marco - Marco Di Marco",
-        "BBC Brasil"
       ]
     },
     {
@@ -325,13 +335,93 @@
       ]
     },
     {
-      "titulo": "Ataque a tiros deixa um morto e cinco feridos em rave na Suíça",
+      "titulo": "'Fui sequestrada pela Coreia do Norte e forçada a casar com um soldado americano'",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Euronews",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Sorridente e com mensagem religiosa, Maduro aparece em fotos na prisão nos EUA",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "'Fui sequestrada pela Coreia do Norte e forçada a casar com um soldado americano'",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Islândia: alívio e tristeza após referendo rejeitar negociações com UE",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "O diretor de escola que salvou 900 estudantes das inundações no Nepal",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Islândia rejeita negociações de adesão: UE reage com cautela",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
         "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "A mãe e a filha detidas pelo ICE em hospital após sofrerem acidente de carro: 'Socorro, por favor, socorro!'",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "A mãe e a filha detidas pelo ICE em hospital após sofrerem acidente de carro: 'Socorro, por favor, socorro!'",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Perfil de Nicolás Maduro publica fotos do ex-presidente da Venezuela na prisão",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "O diretor de escola que salvou 900 estudantes das inundações no Nepal",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     },
     {
@@ -353,15 +443,6 @@
       ]
     },
     {
-      "titulo": "O que faz Cuba depender do exterior para alimentar sua população",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
       "titulo": "Líder supremo do Irã pede união do mundo islâmico contra Estados Unidos e Israel",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
@@ -371,44 +452,8 @@
       ]
     },
     {
-      "titulo": "Islândia referendo UE: “Não” lidera com 51,8% com contagem em curso",
+      "titulo": "Islândia rejeita negociações de adesão e dá forte golpe no alargamento da UE",
       "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Suíça: pelo menos um morto em tiroteio numa rave em Aarau",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Ataque a tiros em festa rave na Suíça mata uma pessoa e fere cinco",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "A pequena cidade escocesa que procura migrantes para estancar a queda da população",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "O que faz Cuba depender do exterior para alimentar sua população",
-      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -416,8 +461,8 @@
       ]
     },
     {
-      "titulo": "A pequena cidade escocesa que procura migrantes para estancar a queda da população",
-      "veiculo": "BBC Brasil",
+      "titulo": "Islândia diz \"Não\" a novas negociações de adesão à UE num referendo renhido",
+      "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
