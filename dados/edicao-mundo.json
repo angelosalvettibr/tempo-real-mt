@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-02T12:45:53.970Z",
+  "gerado": "2026-09-02T17:52:48.057Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 46,
-    "fonteLivre": 51,
+    "pauta": 45,
+    "fonteLivre": 53,
     "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 4
   },
   "fontes": {
     "checadas": 30,
     "responderam": 24,
     "entregando": 12,
-    "itens": 97,
+    "itens": 98,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -36,9 +27,27 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "vaticano",
+        "nome": "Vatican News",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -55,27 +64,9 @@
       },
       {
         "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 7,
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -90,10 +81,19 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 6,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -109,15 +109,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 3,
@@ -126,16 +117,16 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
       },
       {
-        "tipo": "resgate",
+        "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -154,6 +145,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
@@ -163,12 +163,12 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -181,12 +181,12 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -226,26 +226,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,6 +253,15 @@
       },
       {
         "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
         "itens": 0,
@@ -280,8 +271,17 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -294,17 +294,35 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "'Bomba atômica' e 'terremoto político': o que imprensa internacional disse sobre mensagens entre Vorcaro e Moraes",
+      "titulo": "Moeda de US$ 1 com rosto de Trump começa a ser vendida nos EUA",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "Euronews"
       ]
     },
     {
-      "titulo": "'Bomba atômica' e 'terremoto político': o que imprensa internacional disse sobre mensagens entre Vorcaro e Moraes",
-      "veiculo": "BBC Brasil",
+      "titulo": "EUA: Trump é o primeiro presidente em funções a aparecer numa moeda de 1 dólar",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Acusado de matar Charlie Kirk se declara inocente; juiz decide que pode haver pena de morte",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Juiz manda a julgamento acusado de matar Charlie Kirk, abrindo caminho para pena de morte",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
