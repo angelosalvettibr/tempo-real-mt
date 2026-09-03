@@ -1,26 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-03T17:49:21.495Z",
+  "gerado": "2026-09-03T20:57:33.815Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 46,
-    "fonteLivre": 45,
+    "pauta": 47,
+    "fonteLivre": 56,
     "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 0
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 24,
-    "entregando": 12,
-    "itens": 91,
+    "checadas": 31,
+    "responderam": 25,
+    "entregando": 13,
+    "itens": 103,
     "lista": [
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -28,8 +28,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -64,9 +64,18 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,16 +84,16 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 7,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 7,
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -145,15 +154,6 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
@@ -181,6 +181,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -208,17 +217,17 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "acnur",
+        "nome": "Acnur",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -255,15 +264,6 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,11 +286,39 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": []
+  "pautas": [
+    {
+      "titulo": "Trump critica Espanha na sequência da crise em Ceuta: \"É um país arruinado\"",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Crise migratória em Ceuta provoca atos em várias cidades da Espanha e amplia pressão sobre Sánchez",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    }
+  ]
 }
