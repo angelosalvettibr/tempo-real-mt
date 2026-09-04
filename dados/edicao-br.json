@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-09-03T21:06:48.000Z",
+  "gerado": "2026-09-04T00:00:44.296Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 208,
-    "fonteLivre": 64,
-    "confirmadas": 16,
+    "pauta": 212,
+    "fonteLivre": 68,
+    "confirmadas": 30,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 44
+    "semFonte": 55
   },
   "fontes": {
-    "checadas": 128,
-    "responderam": 79,
+    "checadas": 130,
+    "responderam": 82,
     "entregando": 29,
-    "itens": 272,
+    "itens": 280,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "cartacapital",
+        "nome": "CartaCapital",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -55,6 +64,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "metropoles",
         "nome": "Metrópoles",
         "itens": 12,
@@ -73,24 +91,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "r7",
         "nome": "R7",
         "itens": 12,
@@ -102,6 +102,15 @@
         "tipo": "resgate",
         "id": "correiobraz",
         "nome": "Correio Braziliense",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -136,8 +145,26 @@
       },
       {
         "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -163,26 +190,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "poder360",
         "nome": "Poder360",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -208,18 +217,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "cartacapital",
-        "nome": "CartaCapital",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "g1economia",
         "nome": "g1 Economia",
-        "itens": 9,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -236,6 +236,15 @@
       {
         "tipo": "livre",
         "id": "ab-geral",
+        "nome": "Agência Brasil",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-economia",
         "nome": "Agência Brasil",
         "itens": 4,
         "ok": true,
@@ -256,15 +265,6 @@
         "id": "unesp",
         "nome": "Jornal da Unesp",
         "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-economia",
-        "nome": "Agência Brasil",
-        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -361,6 +361,15 @@
       },
       {
         "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 405"
+      },
+      {
+        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
@@ -370,17 +379,8 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
+        "id": "embrapa",
+        "nome": "Embrapa",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -388,8 +388,8 @@
       },
       {
         "tipo": "livre",
-        "id": "embrapa",
-        "nome": "Embrapa",
+        "id": "conab",
+        "nome": "Conab",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -460,15 +460,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "anp",
         "nome": "ANP",
         "itens": 0,
@@ -480,6 +471,15 @@
         "tipo": "livre",
         "id": "inmet",
         "nome": "Inmet",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "livre",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -541,6 +541,15 @@
       },
       {
         "tipo": "livre",
+        "id": "prf",
+        "nome": "Polícia Rodoviária Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
@@ -556,24 +565,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "prf",
-        "nome": "Polícia Rodoviária Federal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       },
       {
         "tipo": "livre",
@@ -604,8 +595,17 @@
       },
       {
         "tipo": "livre",
-        "id": "mj",
-        "nome": "Ministério da Justiça",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -613,8 +613,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
+        "id": "mj",
+        "nome": "Ministério da Justiça",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -640,15 +640,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "cidades",
         "nome": "Ministério das Cidades",
         "itens": 0,
@@ -660,6 +651,15 @@
         "tipo": "livre",
         "id": "trabalho",
         "nome": "Ministério do Trabalho",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -694,8 +694,8 @@
       },
       {
         "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
+        "id": "inss",
+        "nome": "INSS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -703,8 +703,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inss",
-        "nome": "INSS",
+        "id": "funai",
+        "nome": "Funai",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -793,8 +793,8 @@
       },
       {
         "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -802,8 +802,8 @@
       },
       {
         "tipo": "livre",
-        "id": "defesa",
-        "nome": "Ministério da Defesa",
+        "id": "agu",
+        "nome": "AGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -820,8 +820,8 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
+        "id": "cvm",
+        "nome": "CVM",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -829,8 +829,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -856,6 +856,15 @@
       },
       {
         "tipo": "livre",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "saude-fed",
         "nome": "Ministério da Saúde",
         "itens": 0,
@@ -874,15 +883,6 @@
       },
       {
         "tipo": "livre",
-        "id": "justica",
-        "nome": "Ministério da Justiça",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "cnmp",
         "nome": "CNMP",
         "itens": 0,
@@ -892,8 +892,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ana",
-        "nome": "ANA",
+        "id": "anac",
+        "nome": "Anac",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -903,6 +903,15 @@
         "tipo": "livre",
         "id": "aneel",
         "nome": "Aneel",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ana",
+        "nome": "ANA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -928,8 +937,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anac",
-        "nome": "Anac",
+        "id": "infrasa",
+        "nome": "Infra S.A.",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -937,8 +946,8 @@
       },
       {
         "tipo": "livre",
-        "id": "infrasa",
-        "nome": "Infra S.A.",
+        "id": "mdic",
+        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -957,15 +966,6 @@
         "tipo": "livre",
         "id": "portos",
         "nome": "Ministério de Portos e Aeroportos",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mdic",
-        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1063,15 +1063,6 @@
       },
       {
         "tipo": "livre",
-        "id": "sudam",
-        "nome": "Sudam",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "integra",
         "nome": "Ministério da Integração",
         "itens": 0,
@@ -1094,8 +1085,17 @@
         "nome": "Câmara dos Deputados",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "sudam",
+        "nome": "Sudam",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -1126,8 +1126,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ons",
-        "nome": "ONS",
+        "id": "ipea-inf",
+        "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -1135,8 +1135,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ipea-inf",
-        "nome": "Ipea",
+        "id": "ons",
+        "nome": "ONS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -1153,8 +1153,26 @@
       },
       {
         "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "embrapa",
         "nome": "Embrapa",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1176,184 +1194,199 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Governo critica início do veto à venda de carne brasileira para União Europeia e cita possibilidade de 'medidas de reciprocidade'",
-      "veiculo": "g1",
+      "titulo": "Moraes pede a Fachin investigação de Mendonça no inquérito das fake news",
+      "veiculo": "InfoMoney",
       "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 Economia",
-        "g1 Política",
-        "Agro"
-      ]
-    },
-    {
-      "titulo": "Governo critica início do veto à venda de carne brasileira para União Europeia e cita possibilidade de 'medidas de reciprocidade'",
-      "veiculo": "g1 Economia",
-      "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 15,
       "tambemEm": [
         "g1",
-        "g1 Política",
-        "Agro"
+        "CartaCapital",
+        "Exame"
       ]
     },
     {
-      "titulo": "Governo critica início do veto à venda de carne brasileira para União Europeia e cita possibilidade de 'medidas de reciprocidade'",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1",
-        "g1 Economia",
-        "Agro"
-      ]
-    },
-    {
-      "titulo": "Governo critica início do veto à venda de carne brasileira para União Europeia e cita possibilidade de 'medidas de reciprocidade'",
-      "veiculo": "Agro",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "g1",
-        "g1 Economia",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Renan Santos protocola pedido de impeachment contra Alexandre de Moraes e Dias Toffoli",
-      "veiculo": "Valor Econômico",
-      "quentura": 3,
-      "tambemEm": [
-        "Congresso em Foco",
-        "Poder360",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Ministros do STF ignoram caso Master na primeira sessão após revelação de mensagens de Vorcaro a Moraes",
-      "veiculo": "GZH",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "Valor Econômico",
-        "estadao.com.br"
-      ]
-    },
-    {
-      "titulo": "Gilmar defende retirada de delegados da PF dos gabinetes do STF",
+      "titulo": "Leia decisão em que Moraes pede ação de Fachin contra Mendonça",
       "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 14,
       "tambemEm": [
-        "g1 Política",
-        "R7"
+        "g1",
+        "CartaCapital",
+        "Exame"
       ]
     },
     {
-      "titulo": "Gloria Steinem, um ícone do feminismo americano que se infiltrou na Playboy para denunciar as condições de trabalho das mulheres",
+      "titulo": "Fachin cobra explicações de Moraes, Mendonça, Gonet e diretor da PF",
+      "veiculo": "Migalhas",
+      "quentura": 14,
+      "tambemEm": [
+        "g1",
+        "CartaCapital",
+        "Exame"
+      ]
+    },
+    {
+      "titulo": "Moraes pede a Fachin investigação de André Mendonça por abuso de autoridade",
       "veiculo": "Folha",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 14,
       "tambemEm": [
-        "BBC Brasil",
-        "Correio Braziliense"
+        "g1",
+        "CartaCapital",
+        "Exame"
       ]
     },
     {
-      "titulo": "Análise: Delações já fechadas pressionam Vorcaro",
-      "veiculo": "CNN Brasil",
+      "titulo": "Moraes encaminha a Fachin pedido de investigação contra Mendonça",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 14,
       "tambemEm": [
-        "Valor Econômico",
-        "estadao.com.br"
+        "g1",
+        "CartaCapital",
+        "Exame"
       ]
     },
     {
-      "titulo": "“Decisões de Moraes não devem ser reconhecidas”, diz Renan Santos",
-      "veiculo": "Poder360",
+      "titulo": "Moraes pede investigação de André Mendonça a Fachin por abuso de autoridade e escala tensão no STF",
+      "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 13,
       "tambemEm": [
-        "InfoMoney",
-        "Valor Econômico"
+        "g1",
+        "CartaCapital",
+        "Congresso em Foco"
       ]
     },
     {
-      "titulo": "Lula tem 68,3% ante 24,4% de Flávio no 2º turno no PI, diz pesquisa",
-      "veiculo": "Poder360",
+      "titulo": "Alexandre de Moraes envia a Fachin pedido de investigação contra André Mendonça",
+      "veiculo": "Folha",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 12,
       "tambemEm": [
         "CartaCapital",
+        "Exame",
         "BBC Brasil"
       ]
     },
     {
-      "titulo": "Gilmar propõe a Fachin proibir delegados da PF como funcionários de gabinetes de ministros do STF",
+      "titulo": "Datafolha: 47% rejeitam Flávio Bolsonaro, e 45%, Lula",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 12,
       "tambemEm": [
-        "Poder360",
-        "R7"
+        "CartaCapital",
+        "Exame",
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Gloria Steinem, um ícone do feminismo americano que se infiltrou na Playboy para denunciar as condições de trabalho das mulheres",
-      "veiculo": "BBC Brasil",
+      "titulo": "Datafolha, 2º turno: Lula, 46%; Flávio Bolsonaro, 44%",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 12,
       "tambemEm": [
-        "Folha",
-        "Correio Braziliense"
+        "CartaCapital",
+        "Exame",
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Ibovespa fecha estável e interrompe rali de 11 altas; dólar cai pela 4ª sessão",
+      "titulo": "Fachin dá 5 dias para que Mendonça, Moraes, PGR e Polícia Federal prestem informações sobre crise no STF",
+      "veiculo": "g1",
+      "editoria": "brasil",
+      "quentura": 11,
+      "tambemEm": [
+        "Exame",
+        "BBC Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Moraes cita &#8216;fortes indícios&#8217; de crimes e encaminha a Fachin pedido de investigação contra Mendonça",
+      "veiculo": "CartaCapital",
+      "editoria": "brasil",
+      "quentura": 11,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Datafolha: Lula tem 38% e Flávio, 33% no primeiro turno; Cury vai a 8%",
+      "veiculo": "Valor Econômico",
+      "quentura": 11,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Datafolha: Lula tem 46% e Flávio Bolsonaro, 44% das intenções de voto no 2º turno",
       "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 11,
       "tambemEm": [
-        "Poder360",
-        "InfoMoney"
-      ]
-    },
-    {
-      "titulo": "Damares obtém 41 assinaturas em pedido de impeachment contra Moraes",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Valor Econômico",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Gilmar Mendes propõe a Fachin vetar delegados da PF em gabinetes do STF",
-      "veiculo": "R7",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Morre Gloria Steinem, ícone do feminismo nos EUA, aos 92 anos",
-      "veiculo": "Correio Braziliense",
-      "quentura": 2,
-      "tambemEm": [
+        "CartaCapital",
         "BBC Brasil",
-        "Folha"
+        "g1 Política"
       ]
     },
     {
-      "titulo": "PGR fecha acordo de delação com empresário que fez pagamentos a 'Dark Horse'",
-      "veiculo": "Valor Econômico",
-      "quentura": 2,
+      "titulo": "Fachin dá 5 dias para que Mendonça, Moraes, PGR e Polícia Federal prestem informações sobre crise no STF",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 10,
       "tambemEm": [
-        "CNN Brasil",
+        "g1",
+        "Exame",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Moraes pede providências a Fachin contra Mendonça por abuso de autoridade e favorecer grupo político",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 10,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "Congresso em Foco"
+      ]
+    },
+    {
+      "titulo": "Datafolha: Lula tem 38% e Flávio, 33% no primeiro turno; distância cai a 5 pontos",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 10,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Datafolha: Flávio Bolsonaro tem 47% de rejeição, e Lula, 45%",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 10,
+      "tambemEm": [
+        "CartaCapital",
+        "g1 Política",
         "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Datafolha: Lula tem 38% no primeiro turno; Flávio Bolsonaro, 33%",
+      "veiculo": "CartaCapital",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "Exame",
+        "BBC Brasil",
+        "g1 Política"
       ]
     }
   ]

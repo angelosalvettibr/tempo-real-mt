@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-03T20:57:33.815Z",
+  "gerado": "2026-09-03T23:58:47.558Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 47,
-    "fonteLivre": 56,
+    "pauta": 46,
+    "fonteLivre": 54,
     "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 0
   },
   "fontes": {
-    "checadas": 31,
-    "responderam": 25,
+    "checadas": 33,
+    "responderam": 26,
     "entregando": 13,
-    "itens": 103,
+    "itens": 100,
     "lista": [
       {
         "tipo": "pauta",
@@ -48,6 +48,15 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -64,33 +73,6 @@
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
         "itens": 8,
@@ -100,9 +82,9 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 6,
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +93,25 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -136,6 +136,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -217,15 +226,6 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -235,12 +235,12 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "acnur",
+        "nome": "Acnur",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -264,6 +264,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,6 +298,15 @@
       },
       {
         "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -301,24 +319,5 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": [
-    {
-      "titulo": "Trump critica Espanha na sequência da crise em Ceuta: \"É um país arruinado\"",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Crise migratória em Ceuta provoca atos em várias cidades da Espanha e amplia pressão sobre Sánchez",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    }
-  ]
+  "pautas": []
 }
