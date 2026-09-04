@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-04T17:34:56.127Z",
+  "gerado": "2026-09-04T20:43:15.112Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
+    "pauta": 46,
     "fonteLivre": 56,
-    "confirmadas": 1,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 3
   },
   "fontes": {
-    "checadas": 31,
-    "responderam": 25,
+    "checadas": 30,
+    "responderam": 24,
     "entregando": 13,
-    "itens": 98,
+    "itens": 102,
     "lista": [
       {
         "tipo": "pauta",
@@ -64,9 +64,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 10,
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,9 +82,9 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 7,
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,7 +93,16 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 5,
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -103,15 +112,6 @@
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
         "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -158,22 +158,13 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,6 +181,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -199,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,15 +235,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -253,8 +244,17 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,17 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "acnur",
-        "nome": "Acnur",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +280,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,51 +294,30 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "ONU aprova novo mapa-múndi menos distorcido; só EUA votam contra",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
       "titulo": "Como Nepal resgatou dois sobreviventes em túnel nove dias após avalanche que deixou mais de 1,3 mil mortos",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
+        "BBC Brasil"
       ]
     },
     {
       "titulo": "Como Nepal resgatou dois sobreviventes em túnel nove dias após avalanche que deixou mais de 1,3 mil mortos",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Equipes resgatam dois trabalhadores presos em túnel no Nepal",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Rússia tenta matar chefe do Serviço de Segurança da Ucrânia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Drone russo atinge sede do Serviço de Segurança da Ucrânia, no centro de Kiev",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
+        "g1 Mundo"
       ]
     }
   ]
