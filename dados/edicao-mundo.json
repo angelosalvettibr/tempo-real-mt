@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-04T12:43:17.606Z",
+  "gerado": "2026-09-04T17:34:56.127Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 44,
-    "fonteLivre": 48,
-    "confirmadas": 0,
+    "pauta": 42,
+    "fonteLivre": 56,
+    "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 5
   },
   "fontes": {
-    "checadas": 32,
+    "checadas": 31,
     "responderam": 25,
     "entregando": 13,
-    "itens": 92,
+    "itens": 98,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -37,9 +28,18 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 11,
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,7 +48,16 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 11,
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -64,15 +73,6 @@
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
         "itens": 8,
@@ -81,19 +81,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 6,
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 4,
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -140,15 +140,6 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
         "respondeu": true,
         "erro": null
       },
@@ -156,6 +147,15 @@
         "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,17 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -208,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -231,7 +222,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -240,12 +231,12 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -312,21 +303,51 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "VÍDEO: Nepalês resgatado em túnel 9 dias depois da avalanche diz que ficou preso para salvar colegas: 'Não seria correto fugir'",
+      "titulo": "Como Nepal resgatou dois sobreviventes em túnel nove dias após avalanche que deixou mais de 1,3 mil mortos",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
+        "BBC Brasil",
         "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Como Nepal resgatou dois sobreviventes em túnel nove dias após avalanche que deixou mais de 1,3 mil mortos",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
+        "g1 Mundo"
       ]
     },
     {
       "titulo": "Equipes resgatam dois trabalhadores presos em túnel no Nepal",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Rússia tenta matar chefe do Serviço de Segurança da Ucrânia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Drone russo atinge sede do Serviço de Segurança da Ucrânia, no centro de Kiev",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
       ]
     }
   ]
