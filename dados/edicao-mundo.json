@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-05T16:45:52.510Z",
+  "gerado": "2026-09-05T20:17:16.126Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 42,
-    "fonteLivre": 43,
-    "confirmadas": 4,
+    "fonteLivre": 40,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 8
   },
   "fontes": {
     "checadas": 31,
     "responderam": 25,
     "entregando": 13,
-    "itens": 85,
+    "itens": 82,
     "lista": [
       {
         "tipo": "pauta",
@@ -54,19 +54,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 6,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,8 +73,8 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -91,9 +82,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 6,
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -102,7 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +102,16 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +120,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -136,15 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -208,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -240,7 +231,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -255,15 +246,6 @@
         "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +271,26 @@
       },
       {
         "tipo": "livre",
+        "id": "acnur",
+        "nome": "Acnur",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,12 +303,60 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "EUA dizem ter atacado 3 petroleiros iranianos após seus navios de guerra serem alvejados",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "EUA dizem ter atacado 3 petroleiros iranianos após seus navios de guerra serem alvejados",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Irão: EUA atacam petroleiro iraniano perto da ilha de Kharg",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
       "titulo": "Bolívia: explosões em base militar fazem pelo menos 2 mortos e 81 feridos",
       "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
         "BBC Brasil",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Exército dos EUA diz que atacou três petroleiros do Irã em Hormuz",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Irã acusa EUA de ataque a petroleiro em meio à escalada de tensões no Oriente Médio",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
         "Folha Mundo"
       ]
     },
