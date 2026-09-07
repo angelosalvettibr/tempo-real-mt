@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-07T14:15:14.686Z",
+  "gerado": "2026-09-07T21:29:04.499Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 26,
-    "confirmadas": 2,
+    "pauta": 46,
+    "fonteLivre": 30,
+    "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 11
+    "semFonte": 14
   },
   "fontes": {
     "checadas": 30,
     "responderam": 24,
-    "entregando": 11,
-    "itens": 67,
+    "entregando": 13,
+    "itens": 76,
     "lista": [
       {
         "tipo": "pauta",
@@ -30,7 +30,7 @@
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -39,7 +39,7 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,7 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 5,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -66,7 +66,7 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 5,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -81,19 +81,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 3,
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -103,6 +103,24 @@
         "id": "nasa",
         "nome": "NASA",
         "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -127,21 +145,12 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -151,15 +160,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -226,15 +226,6 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -246,6 +237,15 @@
         "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -294,13 +294,112 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "'Profundamente chocado' com vitória da extrema direita, premiê da Alemanha diz que não deixa o cargo",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Após vitória histórica em eleições regionais, direita radical alemã busca apoio para formar governo na Saxônia",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "RFI Brasil",
+        "Folha Mundo"
+      ]
+    },
+    {
       "titulo": "União com esquerda radical pode viabilizar governo de extrema direita na Alemanha após vitória em eleição estadual",
       "veiculo": "RFI Brasil",
       "editoria": "internacional",
-      "quentura": 4,
+      "quentura": 2,
       "tambemEm": [
         "BBC Brasil",
-        "AP Photo/Matthias Schrader - Matthias Schrader",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "O que falta para a AfD formar um governo na Saxônia-Anhalt, na Alemanha",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Os novos vídeos que indicam possível papel de agente da Arábia Saudita no 11 de Setembro",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Trump sugere trocar nome do Novo México para ‘Nova América’",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Os novos vídeos que indicam possível papel de agente da Arábia Saudita no 11 de Setembro",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Trump cogita rebatizar Novo México de Nova América e provoca reação",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Memória do nazismo já não basta para conter avanço da extrema direita na Alemanha, diz pesquisador",
+      "veiculo": "RFI Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "UE anuncia pacote de 200 milhões de euros para a Groenlândia e reafirma apoio diante das ambições de Trump",
+      "veiculo": "© Mads Claus Rasmussen/Ritzau Scanpix via AP",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Funeral de Ratko Mladic, o 'açougueiro da Bósnia', reúne multidão e provoca indignação da UE",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© AP Photo/ Darko Vojinovic"
+      ]
+    },
+    {
+      "titulo": "Funeral do criminoso de guerra Ratko Mladic reúne milhares de pessoas em Belgrado",
+      "veiculo": "© AP Photo/ Darko Vojinovic",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
         "Folha Mundo"
       ]
     },
@@ -314,84 +413,12 @@
       ]
     },
     {
-      "titulo": "Sem controle, novos modelos de IA representam 'risco existencial para a humanidade', diz ONU",
-      "veiculo": "AP Photo/Kiichiro Sato - Kiichiro Sato",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
       "titulo": "A rede de propaganda pró-Rússia que explora violência sexual e usa mulheres do Exército ucraniano como isca",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Avalanche mata ao menos 11 alpinistas na Rússia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "ONU: chefe dos direitos humanos alerta para risco existencial da IA",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP Photo/Kiichiro Sato - Kiichiro Sato"
-      ]
-    },
-    {
-      "titulo": "O dilema da Europa após direita radical na Alemanha obter vitória inédita desde a 2ª Guerra",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "'Choque fascista': imprensa francesa reage à vitória da extrema direita na Alemanha",
-      "veiculo": "AP Photo/Matthias Schrader - Matthias Schrader",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "Avalanche em montanha deixa ao menos 11 mortos no norte do Cáucaso, na Rússia",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Direita radical na Alemanha tem vitória estadual inédita desde a 2ª Guerra Mundial, mas não consegue maioria para formar governo",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "Na TV alemã, líder de extrema direita vencedor da eleição é interrompido em quase todas as respostas",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "RFI Brasil"
       ]
     }
   ]
