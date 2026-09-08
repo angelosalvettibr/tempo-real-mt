@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-09-07T21:31:48.905Z",
+  "gerado": "2026-09-08T00:20:48.450Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 194,
+    "pauta": 197,
     "fonteLivre": 28,
-    "confirmadas": 9,
+    "confirmadas": 12,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 48
+    "semFonte": 53
   },
   "fontes": {
-    "checadas": 130,
-    "responderam": 83,
+    "checadas": 129,
+    "responderam": 81,
     "entregando": 27,
-    "itens": 219,
+    "itens": 222,
     "lista": [
       {
         "tipo": "pauta",
@@ -46,15 +46,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "cnn",
         "nome": "CNN Brasil",
         "itens": 12,
@@ -64,8 +55,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
+        "id": "g1politica",
+        "nome": "g1 Política",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -126,6 +117,15 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "folha",
+        "nome": "Folha",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "resgate",
         "id": "correiobraz",
         "nome": "Correio Braziliense",
@@ -172,9 +172,27 @@
       },
       {
         "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "congresso",
         "nome": "Congresso em Foco",
         "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-politica",
+        "nome": "Agência Brasil",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,18 +208,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
-        "itens": 3,
+        "id": "g1economia",
+        "nome": "g1 Economia",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -210,7 +219,7 @@
         "tipo": "livre",
         "id": "ab-justica",
         "nome": "Agência Brasil",
-        "itens": 3,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -220,15 +229,6 @@
         "id": "nasa",
         "nome": "NASA",
         "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
-        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -289,8 +289,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -298,8 +298,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -352,21 +352,21 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 405"
-      },
-      {
-        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -433,15 +433,6 @@
       },
       {
         "tipo": "livre",
-        "id": "fapesp",
-        "nome": "Agência FAPESP",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ibge",
         "nome": "IBGE",
         "itens": 0,
@@ -451,8 +442,17 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "fapesp",
+        "nome": "Agência FAPESP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "anp",
+        "nome": "ANP",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -460,8 +460,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anp",
-        "nome": "ANP",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,6 +559,15 @@
       },
       {
         "tipo": "livre",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "cgu",
         "nome": "CGU",
         "itens": 0,
@@ -570,15 +579,6 @@
         "tipo": "livre",
         "id": "icmbio",
         "nome": "ICMBio",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -622,8 +622,8 @@
       },
       {
         "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -640,8 +640,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -649,8 +649,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -712,6 +712,15 @@
       },
       {
         "tipo": "livre",
+        "id": "itamaraty",
+        "nome": "Itamaraty",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "antt",
         "nome": "ANTT",
         "itens": 0,
@@ -730,15 +739,6 @@
       },
       {
         "tipo": "livre",
-        "id": "itamaraty",
-        "nome": "Itamaraty",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ans",
         "nome": "ANS",
         "itens": 0,
@@ -748,8 +748,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ipea",
-        "nome": "Ipea",
+        "id": "mpf",
+        "nome": "MPF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -757,8 +757,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mpf",
-        "nome": "MPF",
+        "id": "ipea",
+        "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -802,8 +802,8 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
+        "id": "cvm",
+        "nome": "CVM",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -811,8 +811,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -856,21 +856,21 @@
       },
       {
         "tipo": "livre",
-        "id": "cnmp",
-        "nome": "CNMP",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "dpu",
         "nome": "Defensoria Pública da União",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "cnmp",
+        "nome": "CNMP",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -883,8 +883,8 @@
       },
       {
         "tipo": "livre",
-        "id": "aneel",
-        "nome": "Aneel",
+        "id": "anm",
+        "nome": "ANM",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -901,8 +901,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anm",
-        "nome": "ANM",
+        "id": "aneel",
+        "nome": "Aneel",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1063,15 +1063,6 @@
       },
       {
         "tipo": "livre",
-        "id": "camara-inf",
-        "nome": "Câmara dos Deputados",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "sudam",
         "nome": "Sudam",
         "itens": 0,
@@ -1090,8 +1081,26 @@
       },
       {
         "tipo": "livre",
+        "id": "camara-inf",
+        "nome": "Câmara dos Deputados",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "ibama-inf",
         "nome": "Ibama — licenciamento",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1117,15 +1126,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ipea-inf",
         "nome": "Ipea",
         "itens": 0,
@@ -1137,15 +1137,6 @@
         "tipo": "livre",
         "id": "gov-br",
         "nome": "gov.br",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1197,18 +1188,7 @@
       "titulo": "Quaest, 2º turno: Lula, 41%; Flávio Bolsonaro, 41%",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 18,
-      "tambemEm": [
-        "g1",
-        "CartaCapital",
-        "Exame"
-      ]
-    },
-    {
-      "titulo": "Ato de Flávio Bolsonaro na av. Paulista vira protesto contra Moraes e reúne quase 30 mil: 'Última semana me fez estar aqui'",
-      "veiculo": "BBC Brasil",
-      "editoria": "brasil",
-      "quentura": 12,
+      "quentura": 19,
       "tambemEm": [
         "CartaCapital",
         "Exame",
@@ -1216,179 +1196,186 @@
       ]
     },
     {
-      "titulo": "Quaest: Lula e Flávio Bolsonaro empatam numericamente em cenário de 2º turno",
-      "veiculo": "Folha",
+      "titulo": "Lula e Flávio empatam no 2º turno, diz Quaest",
+      "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 11,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Quaest: Lula cai e empata numericamente com Flávio Bolsonaro no 2º turno",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 11,
-      "tambemEm": [
-        "g1",
-        "g1 Política",
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "‘Vou indicar 5 ministros ao STF, porque Moraes vai cair’, diz Flávio Bolsonaro em ato na Paulista",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 11,
+      "quentura": 10,
       "tambemEm": [
         "CartaCapital",
-        "BBC Brasil",
-        "Congresso em Foco"
-      ]
-    },
-    {
-      "titulo": "Quaest: 50% desaprovam e 43% aprovam o governo Lula",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 9,
-      "tambemEm": [
-        "g1",
         "Exame",
         "g1 Política"
       ]
     },
     {
-      "titulo": "Quaest: Lula e Flávio Bolsonaro empatam com 41% no 2º turno",
-      "veiculo": "Metrópoles",
+      "titulo": "Quaest: Lula lidera no primeiro turno com 36% contra Flávio que registra 29%",
+      "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 9,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Quaest: no 1º turno, Lula tem 36%; Flávio, 29%; e Cury, 8%",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 9,
+      "quentura": 10,
       "tambemEm": [
         "Exame",
         "g1 Política",
-        "Folha"
-      ]
-    },
-    {
-      "titulo": "No ápice, ato com Flávio Bolsonaro reúne 28,5 mil pessoas na Paulista, aponta metodologia da USP",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 8,
-      "tambemEm": [
-        "Exame",
-        "BBC Brasil",
         "Poder360"
       ]
     },
     {
-      "titulo": "Erika Hilton critica boneco de Trump em ato de Flávio Bolsonaro na Paulista",
-      "veiculo": "Metrópoles",
+      "titulo": "Na Avenida Paulista, Flávio Bolsonaro associa Moraes a Lula e diz que indicará ‘5 ministros’",
+      "veiculo": "JOTA",
       "editoria": "brasil",
-      "quentura": 8,
+      "quentura": 9,
       "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Quaest: Lula e Flávio empatam com 41% em eventual 2º turno",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "CartaCapital",
         "Exame",
-        "BBC Brasil",
         "g1 Política"
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro chama 8 de janeiro de farsa, diz que STF não é Alexandre de Moraes e que 'povo quer mudança' em ato na Paulista",
+      "titulo": "Pesquisa Quaest: Lula e Flávio empatam com 41% no 2º turno",
+      "veiculo": "Valor Econômico",
+      "quentura": 9,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Quaest: Lula lidera entre quem teve ganho de renda, Flávio entre quem perdeu poder de compra",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 9,
+      "tambemEm": [
+        "CartaCapital",
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Quaest: Flávio Bolsonaro tem 55% de rejeição e Lula, 53%",
       "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 8,
       "tambemEm": [
         "CartaCapital",
         "Exame",
-        "BBC Brasil"
+        "Poder360"
       ]
     },
     {
-      "titulo": "Quaest: 32% dizem que Lula e PT vencerem é o melhor resultado; 24% responderam a volta da família Bolsonaro",
-      "veiculo": "g1",
+      "titulo": "Quaest: Lula e Flávio empatam no segundo turno com 41%",
+      "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 8,
       "tambemEm": [
         "Exame",
         "g1 Política",
-        "Folha"
+        "Poder360"
       ]
     },
     {
       "titulo": "Quaest: 50% desaprovam e 43% aprovam governo Lula",
       "veiculo": "g1 Política",
       "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Quaest, 1º turno: Lula, 36%; Flávio Bolsonaro, 29%; Cury, 8%; Renan, 3%; Caiado, 3%; Zema, 2%",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
       "quentura": 7,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Ato de Flávio Bolsonaro na av. Paulista vira protesto contra Moraes e reúne quase 30 mil: 'Última semana me fez estar aqui'",
+      "veiculo": "BBC Brasil",
+      "editoria": "brasil",
+      "quentura": 6,
+      "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro diz que é preciso &#8216;proteger o STF de Alexandre de Moraes&#8217;",
+      "veiculo": "CartaCapital",
+      "editoria": "brasil",
+      "quentura": 6,
       "tambemEm": [
         "g1",
-        "Exame",
-        "CNN Brasil"
+        "BBC Brasil",
+        "g1 Política"
       ]
     },
     {
-      "titulo": "Quaest: Lula lidera com 36% no 1º turno; Flávio tem 29% e Cury marca 8%",
-      "veiculo": "Metrópoles",
+      "titulo": "Quaest: entre jovens, medo de Lula supera o de Bolsonaro — entre idosos, é o contrário",
+      "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 6,
       "tambemEm": [
+        "CartaCapital",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Renan diz que liderança de Lula e Flávio é “prisão mental”",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "CartaCapital",
         "Exame",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Monitor da USP estima 28,5 mil pessoas em ato de Flávio Bolsonaro na Avenida Paulista",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
         "g1 Política",
-        "CNN Brasil"
+        "JOTA"
       ]
     },
     {
-      "titulo": "Assista à íntegra do discurso de Flávio Bolsonaro na Paulista",
-      "veiculo": "Poder360",
+      "titulo": "Rock in Rio 2026: Gilberto Gil se apresenta no palco Mundo",
+      "veiculo": "g1",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 3,
       "tambemEm": [
-        "Exame",
-        "BBC Brasil",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Quaest, 1º turno: Lula, 36%; Flávio Bolsonaro, 29%; Cury, 8%; Renan, 3%; Caiado, 3%; Zema, 2%",
-      "veiculo": "g1 Política",
-      "editoria": "brasil",
-      "quentura": 6,
-      "tambemEm": [
-        "Exame",
-        "CNN Brasil",
         "Folha"
       ]
     },
     {
-      "titulo": "Quaest, 1º turno: Lula, 36%; Flávio Bolsonaro, 29%; Cury, 8%; Renan, 3%; Caiado, 3%; Zema, 2%",
-      "veiculo": "g1 Política",
+      "titulo": "Flávio na Paulista: \"quem vota em Lula está votando em Moraes\"",
+      "veiculo": "Congresso em Foco",
       "editoria": "brasil",
-      "quentura": 6,
+      "quentura": 3,
       "tambemEm": [
-        "Exame",
-        "CNN Brasil",
-        "Folha"
-      ]
-    },
-    {
-      "titulo": "USP estima 28.500 em ato de Flávio na avenida Paulista",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 6,
-      "tambemEm": [
-        "Exame",
         "BBC Brasil",
-        "g1 Política"
+        "g1 Política",
+        "JOTA"
       ]
     }
   ]
