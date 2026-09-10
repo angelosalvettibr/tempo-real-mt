@@ -1,20 +1,20 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-09-10T17:44:15.353Z",
+  "gerado": "2026-09-10T20:51:52.377Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 213,
-    "fonteLivre": 83,
-    "confirmadas": 23,
+    "pauta": 212,
+    "fonteLivre": 84,
+    "confirmadas": 28,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 27
+    "semFonte": 37
   },
   "fontes": {
     "checadas": 130,
     "responderam": 83,
-    "entregando": 30,
+    "entregando": 29,
     "itens": 296,
     "lista": [
       {
@@ -91,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -100,8 +100,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -154,8 +154,17 @@
       },
       {
         "tipo": "resgate",
-        "id": "migalhas",
-        "nome": "Migalhas",
+        "id": "estadao",
+        "nome": "Estadão",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usp",
+        "nome": "Jornal da USP",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -181,8 +190,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "estadao",
-        "nome": "Estadão",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -208,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usp",
-        "nome": "Jornal da USP",
+        "id": "ab-economia",
+        "nome": "Agência Brasil",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -217,7 +226,7 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-economia",
+        "id": "ab-politica",
         "nome": "Agência Brasil",
         "itens": 9,
         "ok": true,
@@ -246,25 +255,7 @@
         "tipo": "pauta",
         "id": "infomoney",
         "nome": "InfoMoney",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 2,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -273,15 +264,15 @@
         "tipo": "pauta",
         "id": "globorural",
         "nome": "Agro",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "unesp",
-        "nome": "Jornal da Unesp",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
         "itens": 1,
         "ok": true,
         "respondeu": true,
@@ -388,15 +379,6 @@
       },
       {
         "tipo": "livre",
-        "id": "conab",
-        "nome": "Conab",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "embrapa",
         "nome": "Embrapa",
         "itens": 0,
@@ -406,12 +388,12 @@
       },
       {
         "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
+        "id": "conab",
+        "nome": "Conab",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -430,6 +412,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -469,12 +460,12 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -487,8 +478,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inmet",
-        "nome": "Inmet",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -514,8 +505,26 @@
       },
       {
         "tipo": "livre",
+        "id": "unesp",
+        "nome": "Jornal da Unesp",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "unicamp",
         "nome": "Unicamp",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -543,15 +552,6 @@
         "tipo": "livre",
         "id": "prf",
         "nome": "Polícia Rodoviária Federal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -604,15 +604,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "mj",
         "nome": "Ministério da Justiça",
         "itens": 0,
@@ -622,8 +613,17 @@
       },
       {
         "tipo": "livre",
-        "id": "transportes",
-        "nome": "Ministério dos Transportes",
+        "id": "ibama",
+        "nome": "Ibama",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "fazenda",
+        "nome": "Ministério da Fazenda",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -631,8 +631,8 @@
       },
       {
         "tipo": "livre",
-        "id": "fazenda",
-        "nome": "Ministério da Fazenda",
+        "id": "transportes",
+        "nome": "Ministério dos Transportes",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -703,15 +703,6 @@
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "fiocruz",
         "nome": "Fiocruz",
         "itens": 0,
@@ -727,6 +718,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "dnit",
+        "nome": "Dnit",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "tcu",
+        "nome": "TCU",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -748,26 +757,8 @@
       },
       {
         "tipo": "livre",
-        "id": "tcu",
-        "nome": "TCU",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ans",
         "nome": "ANS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "mpf",
-        "nome": "MPF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -784,17 +775,17 @@
       },
       {
         "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
+        "id": "mpf",
+        "nome": "MPF",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
+        "id": "planalto",
+        "nome": "Planalto",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -811,8 +802,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cnj",
-        "nome": "CNJ",
+        "id": "agu",
+        "nome": "AGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -820,12 +811,12 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
+        "id": "cnj",
+        "nome": "CNJ",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -838,12 +829,12 @@
       },
       {
         "tipo": "livre",
-        "id": "stm",
-        "nome": "STM",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -856,8 +847,17 @@
       },
       {
         "tipo": "livre",
-        "id": "justica",
-        "nome": "Ministério da Justiça",
+        "id": "stm",
+        "nome": "STM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "saude-fed",
+        "nome": "Ministério da Saúde",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -865,8 +865,8 @@
       },
       {
         "tipo": "livre",
-        "id": "saude-fed",
-        "nome": "Ministério da Saúde",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -910,8 +910,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anm",
-        "nome": "ANM",
+        "id": "aneel",
+        "nome": "Aneel",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -919,8 +919,8 @@
       },
       {
         "tipo": "livre",
-        "id": "aneel",
-        "nome": "Aneel",
+        "id": "anm",
+        "nome": "ANM",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -946,15 +946,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mdic",
-        "nome": "MDIC",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "minas",
         "nome": "Ministério de Minas e Energia",
         "itens": 0,
@@ -966,6 +957,15 @@
         "tipo": "livre",
         "id": "portos",
         "nome": "Ministério de Portos e Aeroportos",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "mdic",
+        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1072,8 +1072,8 @@
       },
       {
         "tipo": "livre",
-        "id": "sudam",
-        "nome": "Sudam",
+        "id": "codevasf",
+        "nome": "Codevasf",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1081,8 +1081,8 @@
       },
       {
         "tipo": "livre",
-        "id": "codevasf",
-        "nome": "Codevasf",
+        "id": "sudam",
+        "nome": "Sudam",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1108,21 +1108,21 @@
       },
       {
         "tipo": "livre",
-        "id": "ccee",
-        "nome": "CCEE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "livre",
         "id": "ipeadata",
         "nome": "Ipea — Carta de Conjuntura",
         "itens": 0,
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ccee",
+        "nome": "CCEE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -1153,8 +1153,8 @@
       },
       {
         "tipo": "livre",
-        "id": "embrapa",
-        "nome": "Embrapa",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1162,8 +1162,8 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
+        "id": "embrapa",
+        "nome": "Embrapa",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1194,14 +1194,56 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Apple lança linha iPhone 18 e apresenta inédito modelo dobrável",
+      "titulo": "AtlasIntel: Flávio tem 46,4% no segundo turno e Lula registra 46,2%",
+      "veiculo": "Correio Braziliense",
+      "quentura": 6,
+      "tambemEm": [
+        "CartaCapital",
+        "Exame",
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Dino cita elo com PCC em investigação sobre desvio de emendas no caso &#8216;Dark Horse&#8217;",
       "veiculo": "CartaCapital",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Política",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Augusto Cury diz que pode apoiar Flávio no 2º turno se ele 'provar que não tem corrupção' em Dark Horse",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Dark Horse \"não tem um centavo de dinheiro público\", diz Flávio",
+      "veiculo": "Congresso em Foco",
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
         "BBC Brasil",
-        "g1 Economia",
-        "Valor Econômico"
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Flávio tem 46,4% contra 46,2% de Lula em 2º turno, diz Atlas/Bloomberg",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "Exame",
+        "BBC Brasil",
+        "g1 Política"
       ]
     },
     {
@@ -1210,9 +1252,9 @@
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "CartaCapital",
         "BBC Brasil",
-        "Valor Econômico"
+        "JOTA",
+        "Estadão"
       ]
     },
     {
@@ -1221,102 +1263,97 @@
       "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "CartaCapital",
         "g1 Economia",
-        "Valor Econômico"
+        "JOTA",
+        "Estadão"
       ]
     },
     {
-      "titulo": "CBF fecha direitos de transmissão da Copa do Brasil por R$ 4 bi",
-      "veiculo": "Poder360",
+      "titulo": "Guto Miguel salva três match points e vai à semifinal do US Open juvenil",
+      "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "CartaCapital",
-        "Exame",
-        "Correio Braziliense"
+        "GZH"
       ]
     },
     {
-      "titulo": "CBF define os mandos de campo das semifinais da Copa do Brasil",
+      "titulo": "Augusto Cury indica que pode apoiar Flávio Bolsonaro no segundo turno",
       "veiculo": "CartaCapital",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "Exame",
-        "Poder360",
+        "Congresso em Foco",
+        "g1 Política",
         "Correio Braziliense"
       ]
     },
     {
-      "titulo": "CBF escolhe Brasília para primeira final em jogo único da Copa do Brasil",
-      "veiculo": "Exame",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "Poder360",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "iPhone Duo: confira 10 detalhes escondidos do dobrável da Apple",
-      "veiculo": "Estadão",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "BBC Brasil",
-        "g1 Economia"
-      ]
-    },
-    {
-      "titulo": "CBF confirmará Brasília como sede da final única da Copa do Brasil",
-      "veiculo": "Correio Braziliense",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "Exame",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Apple apresenta novo iPhone 18 que será lançado em 18 de setembro nos Estados Unidos",
-      "veiculo": "Valor Econômico",
-      "quentura": 3,
-      "tambemEm": [
-        "CartaCapital",
-        "BBC Brasil",
-        "g1 Economia"
-      ]
-    },
-    {
-      "titulo": "Bia Kicis e Pollon destinaram emendas a entidade ligada ao caso Frias",
+      "titulo": "Tarcísio elogia Fachin e defende apuração de caso “Dark Horse”",
       "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Congresso em Foco",
+        "CartaCapital",
         "g1 Política"
       ]
     },
     {
-      "titulo": "Proibido no Brasil, Polymarket mostra Flávio com mais chance que Lula",
-      "veiculo": "Poder360",
+      "titulo": "Cury diz que não apoiaria Lula no segundo turno em \"hipótese alguma\"",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "CartaCapital",
+        "g1 Política",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "TRE indefere candidaturas de Jeremias do Banco ao governo, Pastor Gilvan ao Senado e 61 postulantes a deputado estadual",
+      "veiculo": "g1",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "BBC Brasil",
         "CNN Brasil"
       ]
     },
     {
-      "titulo": "Flávio passa Lula como presidente mais provável, segundo Polymarket",
+      "titulo": "Nestlé aumenta compras de cacau no Brasil",
       "veiculo": "CNN Brasil",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Sem ‘feel good factor’, só restará a Lula dobrar a aposta na tese do remédio amargo",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
         "BBC Brasil",
-        "Poder360"
+        "g1 Economia"
+      ]
+    },
+    {
+      "titulo": "Real Time Big Data: Flávio Bolsonaro tem 42% e Lula, 39%, no Rio Grande do Sul",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Congresso em Foco",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Por que a Apple não lançou o iPhone 18 ‘normal’?",
+      "veiculo": "Estadão",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Economia"
       ]
     },
     {
@@ -1325,53 +1362,17 @@
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "CNN Brasil",
-        "Poder360"
+        "Congresso em Foco",
+        "Correio Braziliense"
       ]
     },
     {
-      "titulo": "Sharon Stone diz que aderiu ao celibato e que ainda não encontrou o grande amor de sua vida",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 1,
+      "titulo": "iPhone Duo: confira 10 detalhes escondidos do dobrável da Apple",
+      "veiculo": "Estadão",
+      "quentura": 2,
       "tambemEm": [
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "Greve na Caixa e paralisação no BB: veja como fica o atendimento",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
+        "BBC Brasil",
         "g1 Economia"
-      ]
-    },
-    {
-      "titulo": "Nubank começa a oferecer serviços financeiros nos EUA com contas, cartões e remessas",
-      "veiculo": "g1 Economia",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "Exame"
-      ]
-    },
-    {
-      "titulo": "Sobrinho é preso ao dar paulada no tio; vítima levou 240 pontos na cabeça",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "R7"
-      ]
-    },
-    {
-      "titulo": "Renan Santos diz que crise no STF é disputa de Poder com guerra entre &#8216;facções&#8217;",
-      "veiculo": "InfoMoney",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "JOTA"
       ]
     }
   ]
