@@ -1,26 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-12T23:56:59.622Z",
+  "gerado": "2026-09-13T13:18:13.340Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
-    "fonteLivre": 42,
-    "confirmadas": 4,
+    "pauta": 40,
+    "fonteLivre": 22,
+    "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 1
+    "semFonte": 0
   },
   "fontes": {
     "checadas": 30,
     "responderam": 25,
-    "entregando": 13,
-    "itens": 84,
+    "entregando": 12,
+    "itens": 62,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -37,45 +46,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 5,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -90,10 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 5,
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -102,7 +75,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 4,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,16 +84,16 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 2,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 2,
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -135,9 +108,36 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -199,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,6 +235,15 @@
       },
       {
         "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -246,15 +255,6 @@
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -292,15 +292,5 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": [
-    {
-      "titulo": "Trump diz que houthis do Iêmen pediram aos EUA para não intervir em conflito com Arábia Saudita",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "© Airbus DS 2026"
-      ]
-    }
-  ]
+  "pautas": []
 }
