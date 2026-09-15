@@ -1,21 +1,21 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-09-14T21:53:45.551Z",
+  "gerado": "2026-09-15T00:35:34.333Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 119,
-    "fonteLivre": 50,
-    "confirmadas": 11,
+    "pauta": 120,
+    "fonteLivre": 48,
+    "confirmadas": 13,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 87
+    "semFonte": 83
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 169,
+    "itens": 168,
     "lista": [
       {
         "tipo": "assessoria",
@@ -28,8 +28,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
+        "id": "g1rs",
+        "nome": "g1 RS",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -39,6 +39,15 @@
         "tipo": "pauta",
         "id": "gn-rs-caxiasdosu",
         "nome": "Caxias do Sul",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -72,27 +81,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "sul21",
         "nome": "Sul21",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1rs",
-        "nome": "g1 RS",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -117,10 +108,19 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 10,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -165,7 +165,7 @@
         "tipo": "assessoria",
         "id": "gov-rs",
         "nome": "Governo do RS",
-        "itens": 4,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,12 +190,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "gzh",
+        "nome": "GZH",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -208,12 +208,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -316,8 +316,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -361,8 +361,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,111 +411,98 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Obras da Corsan avançam em três bairros de Cachoeira do Sul nesta semana",
-      "veiculo": "Fatos 24h",
+      "titulo": "Corsan mantém esta semana cronograma de obras de saneamento em Cachoeira",
+      "veiculo": "ocorreio.com.br",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Rádio Solaris",
         "Leouve",
         "Alcir 61"
       ]
     },
     {
-      "titulo": "Corsan mantém esta semana cronograma de obras de saneamento em Cachoeira",
-      "veiculo": "- Portal OCorreio",
+      "titulo": "Gaudêncio e Tati Portella são atrações gratuitas da Semana Farroupilha no Canoas Shopping",
+      "veiculo": "INFO DO VALE",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Leouve",
-        "Fatos 24h",
-        "Alcir 61"
+        "DuduNews",
+        "Agência GBC"
+      ]
+    },
+    {
+      "titulo": "Mano Lima e Daniel Torres são algumas das grandes atrações da semana Farroupilha de Canoas nesta segunda",
+      "veiculo": "DuduNews",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "INFO DO VALE",
+        "Agência GBC"
+      ]
+    },
+    {
+      "titulo": "Governo federal anuncia novos investimentos para sistema de proteção da região Metropolitana de Porto Alegre",
+      "veiculo": "Brasil de Fato",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Mano Lima e Daniel Torres são atrações da Semana Farroupilha de Canoas nesta segunda; Veja a programação",
+      "veiculo": "Agência GBC",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "DuduNews",
+        "INFO DO VALE"
       ]
     },
     {
       "titulo": "Samae mantém obras em 14 regiões de Caxias do Sul durante esta semana",
       "veiculo": "Leouve",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
         "Rádio Solaris",
-        "Fatos 24h",
-        "- Portal OCorreio"
+        "ocorreio.com.br"
       ]
     },
     {
-      "titulo": "Grêmio acerta com Renato Portaluppi, perfil do treinador antecipa chegada, mas deleta",
-      "veiculo": "Correio do Povo",
-      "quentura": 3,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Atrasos, custos e licenciamento de obras são temas de workshop gratuito em Campo Grande",
-      "veiculo": "RCN 67",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Campo Grande",
-        "capitalnews.com.br"
-      ]
-    },
-    {
-      "titulo": "‘As Leves e Discretas’: palhaças questionam cultura gaúcha na Semana Farroupilha",
-      "veiculo": "Sul 21",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "Prefeitura Municipal Alvorada"
-      ]
-    },
-    {
-      "titulo": "Novos radares de sinal vermelho entrarão em funcionamento em Porto Alegre",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Brasil de Fato"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Pelotas (RS) sanciona lei que restringe publicidade de bets no município",
-      "veiculo": "Focus Gaming News",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Portal O Dia"
-      ]
-    },
-    {
-      "titulo": "Corsan avança em obras de saneamento e ações no Centro e Vale do Taquari nesta semana",
-      "veiculo": "Alcir 61",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Fatos 24h",
-        "- Portal OCorreio"
-      ]
-    },
-    {
-      "titulo": "Obras provocam bloqueios em diversas ruas de Caxias do Sul nesta semana",
-      "veiculo": "Rádio Solaris",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Leouve",
-        "Fatos 24h"
-      ]
-    },
-    {
-      "titulo": "Seilog-MS destina R$ 6 milhões para obras em aeródromo de Campo Grande",
-      "veiculo": "capitalnews.com.br",
+      "titulo": "Corsan mantém 45 frentes de obras e ações em seis cidades da Serra Gaúcha",
+      "veiculo": "Leouve",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "RCN 67"
+        "ocorreio.com.br"
+      ]
+    },
+    {
+      "titulo": "Corsan mantém 45 frentes de obras e ações em seis cidades da Serra Gaúcha",
+      "veiculo": "Leouve",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "ocorreio.com.br"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Santa Maria consegue renegociar mais de R$ 19,3 milhões por meio do programa de recuperação fiscal",
+      "veiculo": "Paralelo 29",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Diário de Santa Maria"
+      ]
+    },
+    {
+      "titulo": "Mais de R$ 19,3 milhões em dívidas são renegociados no Refis de Santa Maria",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Paralelo 29"
       ]
     },
     {
@@ -528,57 +515,66 @@
       ]
     },
     {
-      "titulo": "Mano Lima e Daniel Torres são algumas das grandes atrações da semana Farroupilha de Canoas nesta segunda",
-      "veiculo": "DuduNews",
+      "titulo": "Novos radares de sinal vermelho entrarão em funcionamento em Porto Alegre",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Agência GBC"
+        "Brasil de Fato"
       ]
     },
     {
-      "titulo": "Governo federal anuncia novos investimentos para sistema de proteção da região Metropolitana de Porto Alegre",
-      "veiculo": "Brasil de Fato",
+      "titulo": "Novos radares de sinal vermelho entrarão em funcionamento em Porto Alegre",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "GZH"
+        "Brasil de Fato"
       ]
     },
     {
-      "titulo": "Governo federal anuncia novos investimentos para sistema de proteção da região Metropolitana de Porto Alegre",
-      "veiculo": "Brasil de Fato",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Mano Lima e Daniel Torres são atrações da Semana Farroupilha de Canoas nesta segunda; Veja a programação",
-      "veiculo": "Agência GBC",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "DuduNews"
-      ]
-    },
-    {
-      "titulo": "Governo assina contrato de cessão de área para TUP no Porto do Rio Grande",
-      "veiculo": "Agência iNFRA",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Catve"
-      ]
-    },
-    {
-      "titulo": "&#8216;As Leves e Discretas&#8217;: palhaças questionam cultura gaúcha na Semana Farroupilha",
+      "titulo": "PF envia a Gilmar e Zanin íntegra de material do celular de Vorcaro",
       "veiculo": "Sul21",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Sul 21"
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Pelotas (RS) sanciona lei que restringe publicidade de bets no município",
+      "veiculo": "Focus Gaming News",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Portal O Dia"
+      ]
+    },
+    {
+      "titulo": "Corsan avança em obras de saneamento e ações no Centro e Vale do Taquari nesta semana",
+      "veiculo": "Alcir 61",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "ocorreio.com.br"
+      ]
+    },
+    {
+      "titulo": "BTG/Nexus: Lula marca 47% e supera Flávio Bolsonaro no 2º turno por um ponto",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Sílvio Mendes sanciona lei que autoriza empréstimo de até R$ 700 milhões para Prefeitura de Teresina",
+      "veiculo": "Portal O Dia",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Focus Gaming News"
       ]
     }
   ]
