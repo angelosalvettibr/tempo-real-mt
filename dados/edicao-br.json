@@ -1,21 +1,21 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-09-16T00:12:26.301Z",
+  "gerado": "2026-09-16T13:36:38.081Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 208,
-    "fonteLivre": 84,
-    "confirmadas": 29,
+    "pauta": 209,
+    "fonteLivre": 85,
+    "confirmadas": 22,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 41
+    "semFonte": 55
   },
   "fontes": {
-    "checadas": 130,
-    "responderam": 83,
+    "checadas": 129,
+    "responderam": 81,
     "entregando": 31,
-    "itens": 292,
+    "itens": 294,
     "lista": [
       {
         "tipo": "pauta",
@@ -64,8 +64,17 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
+        "id": "zh",
+        "nome": "Zero Hora",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -82,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -145,6 +154,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "congresso",
         "nome": "Congresso em Foco",
         "itens": 11,
@@ -171,27 +189,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "poder360",
         "nome": "Poder360",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -207,10 +207,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 9,
+        "tipo": "livre",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -235,15 +235,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "g1economia",
         "nome": "g1 Economia",
         "itens": 6,
@@ -252,10 +243,19 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "ab-geral",
         "nome": "Agência Brasil",
-        "itens": 4,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -316,8 +316,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "valor",
-        "nome": "Valor",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +325,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,21 +379,21 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 405"
-      },
-      {
-        "tipo": "livre",
         "id": "senado",
         "nome": "Agência Senado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -415,8 +415,8 @@
       },
       {
         "tipo": "livre",
-        "id": "stj",
-        "nome": "STJ",
+        "id": "tse",
+        "nome": "TSE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -424,8 +424,8 @@
       },
       {
         "tipo": "livre",
-        "id": "tse",
-        "nome": "TSE",
+        "id": "stj",
+        "nome": "STJ",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -487,8 +487,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inmet",
-        "nome": "Inmet",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,8 +496,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -523,26 +523,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "prf",
-        "nome": "Polícia Rodoviária Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,8 +541,26 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "pf",
         "nome": "Polícia Federal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "prf",
+        "nome": "Polícia Rodoviária Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -586,8 +586,8 @@
       },
       {
         "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -595,8 +595,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
+        "id": "icmbio",
+        "nome": "ICMBio",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -622,15 +622,6 @@
       },
       {
         "tipo": "livre",
-        "id": "fazenda",
-        "nome": "Ministério da Fazenda",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "transportes",
         "nome": "Ministério dos Transportes",
         "itens": 0,
@@ -640,8 +631,17 @@
       },
       {
         "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
+        "id": "fazenda",
+        "nome": "Ministério da Fazenda",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "cidades",
+        "nome": "Ministério das Cidades",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -658,8 +658,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cidades",
-        "nome": "Ministério das Cidades",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -673,6 +673,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -694,17 +703,8 @@
       },
       {
         "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
+        "id": "dnit",
+        "nome": "Dnit",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -712,8 +712,8 @@
       },
       {
         "tipo": "livre",
-        "id": "dnit",
-        "nome": "Dnit",
+        "id": "funai",
+        "nome": "Funai",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -757,8 +757,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mpf",
-        "nome": "MPF",
+        "id": "ans",
+        "nome": "ANS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -766,8 +766,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ans",
-        "nome": "ANS",
+        "id": "mpf",
+        "nome": "MPF",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -802,15 +802,6 @@
       },
       {
         "tipo": "livre",
-        "id": "defesa",
-        "nome": "Ministério da Defesa",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "cnj",
         "nome": "CNJ",
         "itens": 0,
@@ -820,12 +811,12 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
+        "id": "defesa",
+        "nome": "Ministério da Defesa",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -838,17 +829,17 @@
       },
       {
         "tipo": "livre",
-        "id": "antaq",
-        "nome": "Antaq",
+        "id": "cvm",
+        "nome": "CVM",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "stm",
-        "nome": "STM",
+        "id": "antaq",
+        "nome": "Antaq",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -883,6 +874,15 @@
       },
       {
         "tipo": "livre",
+        "id": "stm",
+        "nome": "STM",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "dpu",
         "nome": "Defensoria Pública da União",
         "itens": 0,
@@ -894,6 +894,15 @@
         "tipo": "livre",
         "id": "anac",
         "nome": "Anac",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "aneel",
+        "nome": "Aneel",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -919,15 +928,6 @@
       },
       {
         "tipo": "livre",
-        "id": "aneel",
-        "nome": "Aneel",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "anatel",
         "nome": "Anatel",
         "itens": 0,
@@ -946,6 +946,15 @@
       },
       {
         "tipo": "livre",
+        "id": "minas",
+        "nome": "Ministério de Minas e Energia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "mdic",
         "nome": "MDIC",
         "itens": 0,
@@ -957,15 +966,6 @@
         "tipo": "livre",
         "id": "portos",
         "nome": "Ministério de Portos e Aeroportos",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "minas",
-        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1000,8 +1000,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cade",
-        "nome": "Cade",
+        "id": "tst",
+        "nome": "TST",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1009,8 +1009,8 @@
       },
       {
         "tipo": "livre",
-        "id": "tst",
-        "nome": "TST",
+        "id": "cade",
+        "nome": "Cade",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1081,15 +1081,6 @@
       },
       {
         "tipo": "livre",
-        "id": "camara-inf",
-        "nome": "Câmara dos Deputados",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "sudam",
         "nome": "Sudam",
         "itens": 0,
@@ -1099,8 +1090,26 @@
       },
       {
         "tipo": "livre",
+        "id": "camara-inf",
+        "nome": "Câmara dos Deputados",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "fetch failed"
+      },
+      {
+        "tipo": "livre",
         "id": "ibama-inf",
         "nome": "Ibama — licenciamento",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1135,15 +1144,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "gov-br",
         "nome": "gov.br",
         "itens": 0,
@@ -1153,8 +1153,8 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
+        "id": "stf",
+        "nome": "STF",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1177,15 +1177,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "stf",
-        "nome": "STF",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -1194,131 +1185,158 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "&#8216;Pode chorar&#8217;: Gilmar Mendes e André Mendonça protagonizam bate-boca no STF",
-      "veiculo": "CartaCapital",
-      "editoria": "brasil",
-      "quentura": 6,
+      "titulo": "Crise no STF: as três lições do Chile para o Brasil",
+      "veiculo": "Estadão",
+      "quentura": 10,
       "tambemEm": [
-        "BBC Brasil",
-        "Congresso em Foco",
-        "JOTA"
+        "g1",
+        "CartaCapital",
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Nunes Marques se declara impedido em sessão sobre Moraes e Vorcaro",
-      "veiculo": "migalhas.com.br",
+      "titulo": "Crise no STF: Lula diz que quem cometeu erro tem que pagar e cita Moraes",
+      "veiculo": "g1",
+      "editoria": "brasil",
       "quentura": 5,
       "tambemEm": [
         "BBC Brasil",
-        "JOTA",
-        "Valor Econômico"
+        "Congresso em Foco",
+        "g1 Política"
       ]
     },
     {
-      "titulo": "Dino pede que STF acione Lula e Itamaraty sobre sanções dos EUA",
-      "veiculo": "Poder360",
+      "titulo": "Crise no STF: Lula diz que quem cometeu erro tem que pagar e cita Moraes",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 4,
+      "quentura": 5,
       "tambemEm": [
-        "CartaCapital",
-        "Exame",
-        "migalhas.com.br"
+        "g1",
+        "BBC Brasil",
+        "Congresso em Foco"
       ]
     },
     {
-      "titulo": "Crise no STF: as três lições do Chile para o Brasil",
-      "veiculo": "Estadão",
-      "quentura": 4,
-      "tambemEm": [
-        "CartaCapital",
-        "migalhas.com.br"
-      ]
-    },
-    {
-      "titulo": "Campanha de Flávio quer impedir Moraes de assumir STF, mas se divide quanto a estratégia",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "R7",
-        "migalhas.com.br",
-        "Estadão"
-      ]
-    },
-    {
-      "titulo": "Vasco vence Santa Fe e se classifica para a semifinal da Sul-Americana",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
-      "quentura": 3,
-      "tambemEm": [
-        "CNN Brasil"
-      ]
-    },
-    {
-      "titulo": "'Pode chorar': os bate-bocas entre ministros na sessão sobre caso Moraes-Vorcaro",
+      "titulo": "Como foi o papel de cada ministro em sessão tensa e inédita no STF",
       "veiculo": "BBC Brasil",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 5,
       "tambemEm": [
         "Congresso em Foco",
-        "migalhas.com.br",
-        "Estadão"
+        "CNN Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "'Me respeite, Gilmar', 'assumam que estão ferrados': ministros do STF têm embate no celular antes de sessão",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 4,
+      "tambemEm": [
+        "BBC Brasil",
+        "Congresso em Foco",
+        "CNN Brasil"
       ]
     },
     {
       "titulo": "Caso Moraes pode voltar ao STF já com novo ministro indicado por Lula",
       "veiculo": "Congresso em Foco",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
-        "BBC Brasil",
+        "CNN Brasil",
+        "g1 Política",
         "Estadão"
       ]
     },
     {
-      "titulo": "Por que Kassio Nunes Marques se declarou impedido de analisar futuro de Moraes",
-      "veiculo": "BBC Brasil",
+      "titulo": "Operação em 19 estados contra o crime organizado cumpre 106 mandados de prisão",
+      "veiculo": "Folha",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "JOTA",
-        "Valor Econômico",
-        "migalhas.com.br"
+        "CartaCapital",
+        "g1 Política",
+        "InfoMoney"
       ]
     },
     {
-      "titulo": "Lula resiste à crise do STF e Flávio Bolsonaro vai para a defensiva",
+      "titulo": "Megaoperação cumpre 106 prisões e bloqueia mais de R$ 500 milhões do crime organizado",
       "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Metrópoles",
-        "Estadão"
+        "g1 Política",
+        "Folha",
+        "InfoMoney"
       ]
     },
     {
-      "titulo": "Real Time: Lula tem 19 pontos de vantagem sobre Flávio em Alagoas",
-      "veiculo": "Exame",
+      "titulo": "Operação cumpre 106 prisões e 173 mandados de busca contra o crime organizado",
+      "veiculo": "InfoMoney",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Poder360",
-        "JOTA"
+        "CartaCapital",
+        "g1 Política",
+        "Folha"
       ]
     },
     {
-      "titulo": "Gilmar e Mendonca sobem o tom e gritam no STF: \"pode chorar\"",
+      "titulo": "Prévia do PIB cai 0,2% em julho de 2026, diz BC",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "CartaCapital",
+        "g1 Política",
+        "g1 Economia"
+      ]
+    },
+    {
+      "titulo": "\"O Supremo sem os ministros de Lula, tem solução\", diz Flávio",
       "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "g1",
+        "g1 Política",
+        "R7"
+      ]
+    },
+    {
+      "titulo": "Operação contra crime organizado cumpre 106 mandados de prisão em 19 estados",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "CartaCapital",
+        "Folha",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Lula diz que reforma no Judiciário ‘vai acontecer’ e que todos têm de ser investigados",
+      "veiculo": "R7",
+      "quentura": 3,
+      "tambemEm": [
+        "Congresso em Foco",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Messi fará despedida da Argentina no estádio onde estreou em casa",
+      "veiculo": "Metrópoles",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
         "CartaCapital",
-        "migalhas.com.br"
+        "Poder360"
       ]
     },
     {
-      "titulo": "Mendonça rebate Gilmar: \"não ponha palavras na minha boca\"",
-      "veiculo": "Congresso em Foco",
+      "titulo": "Quaest: 49% não consideram Lula honesto; 42% dizem o mesmo sobre Flávio Bolsonaro",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
@@ -1327,49 +1345,32 @@
       ]
     },
     {
-      "titulo": "'Não aponte o dedo pra mim': o bate-boca entre Gilmar Mendes e André Mendonça",
-      "veiculo": "BBC Brasil",
+      "titulo": "'Prévia do PIB' do Banco Central tem retração de 0,2% em julho",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
       "quentura": 2,
       "tambemEm": [
-        "CartaCapital",
-        "Congresso em Foco"
-      ]
-    },
-    {
-      "titulo": "Lula recua no 1º turno e perde vantagem sobre Flávio no 2º, mostra Indexa Broadcast",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Exame",
+        "g1 Economia",
         "Poder360"
       ]
     },
     {
-      "titulo": "O que é pedido de vista e o que acontece agora no caso Alexandre de Moraes?",
-      "veiculo": "BBC Brasil",
+      "titulo": "'Prévia do PIB' do Banco Central tem retração de 0,2% em julho",
+      "veiculo": "g1 Economia",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "R7"
+        "g1 Política",
+        "Poder360"
       ]
     },
     {
-      "titulo": "Quatro podem ser indiciados por homicídio por queda de prédio, diz polícia",
-      "veiculo": "Metrópoles",
+      "titulo": "Messi se despedirá da seleção Argentina em amistoso em outubro",
+      "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Folha"
-      ]
-    },
-    {
-      "titulo": "Sul-Americana: veja classificados e confrontos das semifinais",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
+        "Poder360",
         "Metrópoles"
       ]
     }
