@@ -1,18 +1,18 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-17T00:20:22.151Z",
+  "gerado": "2026-09-17T13:23:51.726Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 45,
-    "fonteLivre": 66,
-    "confirmadas": 9,
+    "pauta": 46,
+    "fonteLivre": 65,
+    "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 9
   },
   "fontes": {
-    "checadas": 29,
+    "checadas": 30,
     "responderam": 24,
     "entregando": 14,
     "itens": 111,
@@ -27,9 +27,18 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -39,24 +48,6 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -66,15 +57,24 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -91,17 +91,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 7,
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -118,6 +118,15 @@
       },
       {
         "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 3,
@@ -127,24 +136,24 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
+        "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -163,8 +172,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,8 +181,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -235,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -285,7 +294,43 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Kosovo: tribunal de crimes de guerra condena Hashim Thaçi a 25 anos e desencadeia protestos em massa",
+      "titulo": "O livro que acusa o rei Charles de palavras 'insensíveis' após morte de Diana e que causa crise no palácio de Buckingham",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Rússia pressiona Trump a não aprovar novas sanções",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Por que o Brasil sempre abre a Assembleia Geral da ONU",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Fiji declara emergência nacional por alta de casos de HIV",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Fiji declara emergência nacional de VIH após disparo de novos casos",
       "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
@@ -294,12 +339,39 @@
       ]
     },
     {
-      "titulo": "Tribunal condena ex-presidente do Kosovo a 25 anos de prisão por crimes de guerra",
+      "titulo": "Estados Unidos: Congresso aprova sanções à Rússia que afetam China e Índia",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Buckingham nega acusações do irmão da princesa Diana contra Charles III",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "O livro que acusa o rei Charles de palavras 'insensíveis' após morte de Diana e que causa crise no palácio de Buckingham",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Trump volta a negar visto de presidente da Autoridade Palestina às vésperas de Assembleia-Geral da ONU",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "BBC Brasil"
       ]
     }
   ]
