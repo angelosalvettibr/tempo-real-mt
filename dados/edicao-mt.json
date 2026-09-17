@@ -1,21 +1,21 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-09-16T18:14:43.776Z",
+  "gerado": "2026-09-17T00:25:28.605Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 189,
+    "pauta": 110,
     "fonteLivre": 24,
-    "confirmadas": 9,
+    "confirmadas": 6,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 162
+    "semFonte": 101
   },
   "fontes": {
     "checadas": 51,
-    "responderam": 22,
-    "entregando": 20,
-    "itens": 213,
+    "responderam": 13,
+    "entregando": 13,
+    "itens": 134,
     "lista": [
       {
         "tipo": "assessoria",
@@ -55,6 +55,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "issoenoticia",
+        "nome": "Isso É Notícia",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "vgnoticias",
         "nome": "VG Notícias",
         "itens": 12,
@@ -67,69 +76,6 @@
         "id": "cenariomt",
         "nome": "CenárioMT",
         "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-cuiaba",
-        "nome": "Cuiabá",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-varzeagran",
-        "nome": "Várzea Grande",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt",
-        "nome": "Mato Grosso",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-sorriso",
-        "nome": "Sorriso",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "issoenoticia",
-        "nome": "Isso É Notícia",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-rondonopol",
-        "nome": "Rondonópolis",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-mt-cap",
-        "nome": "Cuiabá",
-        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -154,15 +100,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "sonoticias",
-        "nome": "Só Notícias",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "primeirapagina",
         "nome": "Primeira Página",
         "itens": 10,
@@ -172,8 +109,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-mt-sinop",
-        "nome": "Sinop",
+        "id": "sonoticias",
+        "nome": "Só Notícias",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -216,13 +153,67 @@
         "erro": "HTTP 404"
       },
       {
-        "tipo": "resgate",
-        "id": "reportermt",
-        "nome": "Repórter MT",
+        "tipo": "pauta",
+        "id": "gn-mt-cap",
+        "nome": "Cuiabá",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-sinop",
+        "nome": "Sinop",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-varzeagran",
+        "nome": "Várzea Grande",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-rondonopol",
+        "nome": "Rondonópolis",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt",
+        "nome": "Mato Grosso",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-cuiaba",
+        "nome": "Cuiabá",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-mt-sorriso",
+        "nome": "Sorriso",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
       },
       {
         "tipo": "resgate",
@@ -230,8 +221,17 @@
         "nome": "Hipernotícias",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 503"
+      },
+      {
+        "tipo": "resgate",
+        "id": "reportermt",
+        "nome": "Repórter MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 503"
       },
       {
         "tipo": "assessoria",
@@ -316,15 +316,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-mt",
-        "nome": "Corpo de Bombeiros de MT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "tjmt",
         "nome": "TJMT",
         "itens": 0,
@@ -336,6 +327,15 @@
         "tipo": "assessoria",
         "id": "defesacivil-mt",
         "nome": "Defesa Civil de MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "bombeiros-mt",
+        "nome": "Corpo de Bombeiros de MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -460,8 +460,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sanecap",
-        "nome": "Sanecap",
+        "id": "dae-vg",
+        "nome": "DAE Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -469,8 +469,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "dae-vg",
-        "nome": "DAE Várzea Grande",
+        "id": "sanecap",
+        "nome": "Sanecap",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,200 +496,167 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Operação apreende veículos e prende suspeito de fraude de R$ 246 mil",
-      "veiculo": "VG Notícias",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Isso É Notícia",
-        "g1 MT",
-        "Só Notícias"
-      ]
-    },
-    {
-      "titulo": "Operação policial apura golpe com cheques sem fundos de R$ 246 mil em Lucas do Rio Verde",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "O Livre",
-        "Isso É Notícia",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop participa da entrega de 796 casas e destaca atuação na oferta habitacional",
-      "veiculo": "MOMENTO MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Só Notícias",
-        "REDE BRASIL DE TELEVISÃO",
-        "LEIAGORA"
-      ]
-    },
-    {
-      "titulo": "Pacaembu entrega 796 casas em novo bairro planejado de Sinop; projeto terá 1,6 mil moradias",
-      "veiculo": "Só Notícias",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "MOMENTO MT",
-        "REDE BRASIL DE TELEVISÃO",
-        "LEIAGORA"
-      ]
-    },
-    {
-      "titulo": "TCE dá até 16 de novembro para empresa devolver R$ 248 mil a Várzea Grande",
-      "veiculo": "fatosdematogrosso.com.br",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Isso É Notícia",
-        "MOMENTO MT",
-        "O Livre"
-      ]
-    },
-    {
-      "titulo": "Sinop amplia oferta habitacional com entrega de 796 casas; novo bairro será entregue nesta quarta (16)",
-      "veiculo": "LEIAGORA",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Só Notícias",
-        "MOMENTO MT",
-        "REDE BRASIL DE TELEVISÃO"
-      ]
-    },
-    {
-      "titulo": "Empresários são alvos de operação por golpe de R$ 246 mil em venda de veículos em MT",
-      "veiculo": "Isso É Notícia",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 MT",
-        "VG Notícias",
-        "Só Notícias"
-      ]
-    },
-    {
-      "titulo": "Apostas de MT levam R$ 4,4 milhões na Lotofácil da Independência",
-      "veiculo": "fatosdematogrosso.com.br",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "g1 MT",
-        "Primeira Página"
-      ]
-    },
-    {
-      "titulo": "Instituição financeira abre vagas em Cuiabá",
-      "veiculo": "Muvuca Popular",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "O Livre",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Balcão de Empregos oferta mais de 600 vagas em Várzea Grande",
-      "veiculo": "Isso É Notícia",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "MOMENTO MT",
-        "fatosdematogrosso.com.br",
-        "O Livre"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop participa da entrega de 796 casas e destaca atuação na oferta habitacional",
-      "veiculo": "REDE BRASIL DE TELEVISÃO",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Só Notícias",
-        "MOMENTO MT",
-        "LEIAGORA"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Sinop participa da entrega de 796 casas e destaca atuação na oferta habitacional",
-      "veiculo": "REDE BRASIL DE TELEVISÃO",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Só Notícias",
-        "MOMENTO MT",
-        "LEIAGORA"
-      ]
-    },
-    {
-      "titulo": "Empresários são alvos de operação por golpe de R$ 246 mil em venda de veículos em MT",
+      "titulo": "Prêmio de R$ 4,4 milhões da Lotofácil da Independência atrai curiosos à única lotérica em município no 'coração do Brasil': ‘querem saber quem é o sortudo’",
       "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Isso É Notícia",
         "VG Notícias",
-        "Só Notícias"
+        "Primeira Página"
       ]
     },
     {
-      "titulo": "Balcão de Empregos oferta mais de 600 vagas em Várzea Grande",
-      "veiculo": "MOMENTO MT",
+      "titulo": "PF prende dois suspeitos de lavagem de dinheiro em Sergipe",
+      "veiculo": "Isso É Notícia",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "Isso É Notícia",
-        "fatosdematogrosso.com.br",
         "O Livre"
       ]
     },
     {
-      "titulo": "Motorista é preso suspeito de tentar carregar quase R$ 110 mil em soja com documento falso",
+      "titulo": "AMM mantém votos de 99 prefeitos e aguarda decisão para retomar eleição",
+      "veiculo": "VG Notícias",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Estadão MT",
+        "Muvuca Popular"
+      ]
+    },
+    {
+      "titulo": "Lotofácil 3781: sorteio após Lotofácil da Independência tem prêmio avaliado em R$ 2 milhões",
       "veiculo": "Primeira Página",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "O Documento",
-        "VG Notícias",
+        "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Candidatos ao Governo de MT cumprem agendas nesta quarta-feira (16)",
+      "veiculo": "g1 MT",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Primeira Página"
+      ]
+    },
+    {
+      "titulo": "Sinop é selecionada em grupo exclusivo de 50 cidades brasileiras para pesquisa nacional",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Muvuca Popular"
+      ]
+    },
+    {
+      "titulo": "7ª etapa do Campeonato Mato-Grossense de Motocross será realizado neste fim de semana",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "“Não, senhora; tchau”, afirma prefeito de Sinop ao ser questionado sobre apoio a Wellington",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Estadão MT"
+      ]
+    },
+    {
+      "titulo": "Dois homens são presos por crimes sexuais em Mato Grosso",
+      "veiculo": "Só Notícias",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "O Livre"
+      ]
+    },
+    {
+      "titulo": "Polilaminina: Medicamento que pode ajudar pacientes com lesão a recuperar movimentos começa testes em humanos",
+      "veiculo": "Primeira Página",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
         "Só Notícias"
       ]
     },
     {
-      "titulo": "Possível ossada humana é encontrada em canteiro de obras em VG",
-      "veiculo": "rdnews.com.br",
+      "titulo": "Motorista de carro de luxo é indiciado por homicídio doloso após morte de entregador em Cuiabá",
+      "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "g1 MT",
-        "Olhar Direto",
-        "G1"
+        "Muvuca Popular"
       ]
     },
     {
-      "titulo": "Idoso é preso em MT tentando desviar carga de soja de R$ 109 mil com documentação falsa",
-      "veiculo": "O Documento",
+      "titulo": "Cidade de MT é selecionada para Pesquisa Nacional de Demanda Turística",
+      "veiculo": "Muvuca Popular",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "VG Notícias",
-        "Só Notícias",
-        "Primeira Página"
+        "CenárioMT"
       ]
     },
     {
-      "titulo": "Motorista é preso com ordem falsa para carregar carga de soja de R$ 109 mil em Mato Grosso",
+      "titulo": "Pesquisadores iniciam testes de substância que pode ajudar na recuperação de movimentos após lesão medular",
       "veiculo": "Só Notícias",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "O Documento",
-        "VG Notícias",
         "Primeira Página"
+      ]
+    },
+    {
+      "titulo": "Polícia conclui inquérito e indicia motorista de BMW por homicídio doloso em Cuiabá",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Justiça mantém eleição da AMM barrada, urna com 99 votos é lacrada e Maninho segue à espera",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "VG Notícias"
+      ]
+    },
+    {
+      "titulo": "Sorriso recebe 300 pilotos para a 7ª etapa do Mato-Grossense de Motocross",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Muvuca Popular"
+      ]
+    },
+    {
+      "titulo": "Atendimentos do Viver Bem crescem 12,3% e superam 19 mil em 2026",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "VG Notícias"
+      ]
+    },
+    {
+      "titulo": "Prefeito de Sinop deixa entrevista ao ser questionado se apoia Wellington ao Governo",
+      "veiculo": "Estadão MT",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Muvuca Popular"
       ]
     }
   ]
