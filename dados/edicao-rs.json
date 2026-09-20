@@ -1,26 +1,35 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-09-20T13:09:45.876Z",
+  "gerado": "2026-09-20T17:33:04.037Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 112,
-    "fonteLivre": 46,
-    "confirmadas": 9,
+    "pauta": 105,
+    "fonteLivre": 62,
+    "confirmadas": 14,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 80
+    "semFonte": 67
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 21,
-    "entregando": 18,
-    "itens": 158,
+    "responderam": 22,
+    "entregando": 19,
+    "itens": 167,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "fiergs",
         "nome": "Fiergs",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 15,
         "ok": true,
         "respondeu": true,
@@ -72,10 +81,10 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 11,
+        "tipo": "assessoria",
+        "id": "poa",
+        "nome": "Prefeitura de Porto Alegre",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -90,36 +99,18 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "g1rs",
         "nome": "g1 RS",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "poa",
-        "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-caxiasdosu",
-        "nome": "Caxias do Sul",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -129,6 +120,15 @@
         "tipo": "pauta",
         "id": "gn-rs-pelotas",
         "nome": "Pelotas",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-caxiasdosu",
+        "nome": "Caxias do Sul",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -139,6 +139,15 @@
         "id": "sema-rs",
         "nome": "Sema-RS",
         "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,15 +199,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "pauta",
         "id": "gzh",
         "nome": "GZH",
         "itens": 0,
@@ -214,6 +214,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -316,8 +325,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -325,8 +334,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -385,15 +394,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
       }
     ]
   },
@@ -411,53 +411,74 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Frente fria aumenta risco de temporais e tempestades nesta segunda-feira",
-      "veiculo": "agoralaguna.com.br",
+      "titulo": "Ciclone coloca Sul e parte do Sudeste em alerta para tempestades neste domingo",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Sul21",
+        "CNN Brasil",
+        "correiobraziliense.com.br"
+      ]
+    },
+    {
+      "titulo": "Ex-vereador de Pelotas é condenado a 84 anos por crimes sexuais",
+      "veiculo": "Leouve",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Sul21",
-        "4oito",
-        "Sul 21"
+        "GZH",
+        "Clic Camaquã"
       ]
     },
     {
       "titulo": "Ex-vereador de Pelotas recebe segunda condenação por estupro de vulnerável",
       "veiculo": "Clic Camaquã",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Polícia Civil investiga tentativa de linchamento após invasão de casa em Pelotas",
-      "veiculo": "Studio Notícias",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "terra.com.br",
-        "Rádio Acústica FM"
+        "GZH",
+        "Leouve"
       ]
     },
     {
       "titulo": "Alerta de tempestade: frente fria amplia instabilidade na Região Sul",
       "veiculo": "Sul21",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "agoralaguna.com.br",
-        "Sul 21"
+        "Impactto News",
+        "Terra",
+        "Agora Laguna"
       ]
     },
     {
-      "titulo": "Alerta de tempestade: frente fria amplia instabilidade na Região Sul",
-      "veiculo": "Sul 21",
+      "titulo": "Ciclone extratropical coloca Sul em alerta de perigo",
+      "veiculo": "correiobraziliense.com.br",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Sul21",
-        "agoralaguna.com.br"
+        "CNN Brasil",
+        "Terra"
+      ]
+    },
+    {
+      "titulo": "Ex-vereador de Pelotas é condenado por estupro de vulnerável pela segunda vez; penas somadas chegam a cem anos de prisão",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Clic Camaquã",
+        "Leouve"
+      ]
+    },
+    {
+      "titulo": "Ex-vereador de Pelotas é condenado por estupro de vulnerável pela segunda vez; penas somadas chegam a cem anos de prisão | Zona Sul",
+      "veiculo": "GZH",
+      "quentura": 2,
+      "tambemEm": [
+        "Clic Camaquã",
+        "Leouve"
       ]
     },
     {
@@ -470,44 +491,35 @@
       ]
     },
     {
-      "titulo": "Prefeitura de Caxias investiga suspeita de uso da estrutura pública para campanha eleitoral",
-      "veiculo": "Studio Notícias",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "“Um encontro de luzes e imagens que atravessa o oceano”que atravessa o oceano — começa a turnê presencial da 6ª Temporada de Exibição de Obras Audiovisuais da China no Brasil",
-      "veiculo": "Brasília in Foco",
+      "titulo": "Nova frente fria traz alerta de tempestade e granizo para a Região Sul",
+      "veiculo": "Impactto News",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Brasil 247"
+        "Sul21"
       ]
     },
     {
-      "titulo": "Risco de temporais severos é alto a muito alto no Sul de SC nesta segunda-feira",
-      "veiculo": "4oito",
+      "titulo": "RS tem risco de tempestades severas, granizo e rajadas acima de 100 km/h nesta segunda",
+      "veiculo": "Agora RS",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "agoralaguna.com.br"
+        "Agora Laguna"
       ]
     },
     {
-      "titulo": "Temporada de Exibição de Obras Audiovisuais Chinesas no Brasil é lançada em cidade da Paraíba",
-      "veiculo": "Brasil 247",
+      "titulo": "Dino cita Master e determina revisão de regras da CVM",
+      "veiculo": "Sul21",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Brasília in Foco"
+        "Correio do Povo"
       ]
     },
     {
       "titulo": "Ex-aliado de ACM Neto, prefeito declara apoio a Jerônimo e cita obras em Santa Maria da Vitória",
-      "veiculo": "Panorama da Bahia",
+      "veiculo": "panoramadabahia.com.br",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
@@ -515,21 +527,12 @@
       ]
     },
     {
-      "titulo": "Dia do Gaúcho: tradição, orgulho e oportunidades",
-      "veiculo": "Portal do Cooperativismo Financeiro",
+      "titulo": "RS disponibiliza 700 vagas em concursos públicos",
+      "veiculo": "Correio do Povo",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Dia do Gaúcho: erva-mate atravessa fronteiras, mantém raízes indígenas e tem até sommelier; saiba tudo sobre o chimarrão (até como prepará-lo)",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Portal do Cooperativismo Financeiro"
+        "GZH"
       ]
     },
     {
@@ -538,25 +541,16 @@
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Panorama da Bahia"
+        "panoramadabahia.com.br"
       ]
     },
     {
-      "titulo": "Desfile Farroupilha provoca bloqueios no trânsito em Caxias do Sul neste domingo (20)",
-      "veiculo": "Leouve",
+      "titulo": "Com salários de até R$ 30 mil, RS tem 17 concursos públicos com inscrições abertas",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Agência GBC"
-      ]
-    },
-    {
-      "titulo": "Desfile Farroupilha provoca bloqueios no trânsito em Caxias do Sul neste domingo (20)",
-      "veiculo": "Leouve",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Agência GBC"
+        "Correio do Povo"
       ]
     },
     {
@@ -565,17 +559,24 @@
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "terra.com.br"
+        "Correio do Povo"
       ]
     },
     {
-      "titulo": "Ex-vereador de Pelotas é condenado por estupro de vulnerável pela segunda vez; penas somadas chegam a cem anos de prisão",
-      "veiculo": "GZH",
+      "titulo": "Tempestade com vento de até 100 km/h coloca RS em alerta neste fim de semana; veja onde",
+      "veiculo": "abcmais.com",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Clic Camaquã"
+        "Terra"
       ]
+    },
+    {
+      "titulo": "Mais de 625 mil pessoas fazem a Prova Nacional Docente neste domingo",
+      "veiculo": "diariosm.com.br",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
     }
   ]
 }
