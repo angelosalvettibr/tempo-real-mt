@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-21T00:10:55.636Z",
+  "gerado": "2026-09-21T15:06:07.437Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 44,
-    "fonteLivre": 22,
-    "confirmadas": 0,
+    "pauta": 49,
+    "fonteLivre": 32,
+    "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 15
+    "semFonte": 10
   },
   "fontes": {
-    "checadas": 30,
+    "checadas": 32,
     "responderam": 25,
-    "entregando": 11,
-    "itens": 66,
+    "entregando": 12,
+    "itens": 81,
     "lista": [
       {
         "tipo": "pauta",
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 6,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -66,7 +66,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,6 +75,24 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -91,18 +109,9 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -122,22 +131,13 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 500"
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -163,8 +163,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,12 +172,12 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "fetch failed"
       },
       {
         "tipo": "livre",
@@ -190,12 +190,12 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -210,6 +210,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +295,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,55 +312,69 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Ucrânia lança cerca de 450 drones contra Moscou no maior ataque à capital russa, diz prefeito",
-      "veiculo": "BBC Brasil",
+      "titulo": "Lula se reúne com Mamdani, prefeito de NY, que também receberá Trump; veja encontros antes da Assembleia Geral da ONU",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 4,
       "tambemEm": [
-        "Euronews",
+        "© AP/Keith Srakocic/ Eraldo Peres/ Adam Gray",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "A nova e implacável tática russa contra moradores da capital da Ucrânia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Em Nova York, Lula se reúne com Mamdani e Bernie Sanders antes de discurso na ONU",
+      "veiculo": "© AP/Keith Srakocic/ Eraldo Peres/ Adam Gray",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
         "Folha Mundo",
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Ucrânia lança ataque de drones contra Moscou e mata 3 no último dia das eleições parlamentares",
+      "titulo": "Lula marca encontros com Bernie Sanders, Mamdani e presidente do Uruguai em NY",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews",
+        "© AP/Keith Srakocic/ Eraldo Peres/ Adam Gray",
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Ucrânia lançou mais de 1.000 drones em ataque contra a Rússia neste domingo",
+      "titulo": "9 pontos da entrevista com irmão da princesa Diana — e o que eles revelam sobre a monarquia britânica",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Novo avanço da AfD em eleições regionais alemãs abala governo, mas chanceler rejeita renunciar",
-      "veiculo": "AP Photo/Markus Schreiber - Markus Schreiber",
+      "titulo": "9 pontos da entrevista com irmão da princesa Diana — e o que eles revelam sobre a monarquia britânica",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Euronews",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Eleições regionais alemãs: projeções apontam vitória da AfD e do partido de esquerda Die Linke",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Markus Schreiber - Markus Schreiber",
         "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "A nova e implacável tática russa contra moradores da capital da Ucrânia",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
       ]
     },
     {
@@ -355,84 +387,21 @@
       ]
     },
     {
-      "titulo": "Partido de extrema esquerda na Alemanha vence eleições em Berlim",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Brasil, UE, Canadá e Quênia lançam manifesto pelo multilateralismo às vésperas de Assembleia Geral da ONU",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Coreia do Norte lança “míssil balístico suspeito” no Mar do Japão",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP Photo/Ahn Young-joon - Ahn Young-joon"
-      ]
-    },
-    {
-      "titulo": "Extrema direita cresce, mas não chega a novo governo na Alemanha; Merz vê desastre",
+      "titulo": "Lula vai à ONU acenar ao eleitor antes da eleição e pode encontrar Trump",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "AP Photo/Markus Schreiber - Markus Schreiber"
+        "g1 Mundo"
       ]
     },
     {
-      "titulo": "Meloni anuncia proibição de burca e niqab na escola",
-      "veiculo": "Euronews",
+      "titulo": "Ucrânia lança cerca de 450 drones contra Moscou no maior ataque à capital russa, diz prefeito",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Giorgia Meloni diz que Itália proibirá véus em escolas e limitará número de alunos estrangeiros",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Russos votam no último dia das eleições legislativas",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Coreia do Norte realiza novos testes de mísseis balísticos após rejeitar resolução da AIEA",
-      "veiculo": "AP Photo/Ahn Young-joon - Ahn Young-joon",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Moscovo alvo do “maior ataque” registado na capital russa até agora, diz autarca",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
       ]
     }
   ]
