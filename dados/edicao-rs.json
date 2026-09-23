@@ -1,22 +1,31 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-09-23T00:23:52.930Z",
+  "gerado": "2026-09-23T13:42:38.533Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 129,
-    "fonteLivre": 50,
-    "confirmadas": 13,
+    "pauta": 126,
+    "fonteLivre": 59,
+    "confirmadas": 16,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 76
+    "semFonte": 73
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 179,
+    "itens": 185,
     "lista": [
+      {
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "assessoria",
         "id": "fiergs",
@@ -28,8 +37,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-caxiasdosu",
-        "nome": "Caxias do Sul",
+        "id": "g1rs",
+        "nome": "g1 RS",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -39,6 +48,15 @@
         "tipo": "pauta",
         "id": "gn-rs-pelotas",
         "nome": "Pelotas",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-caxiasdosu",
+        "nome": "Caxias do Sul",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,27 +109,9 @@
       },
       {
         "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1rs",
-        "nome": "g1 RS",
-        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -130,6 +130,15 @@
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
         "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -154,18 +163,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
         "id": "gov-rs",
         "nome": "Governo do RS",
-        "itens": 4,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -199,21 +199,21 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "pauta",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -361,15 +361,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-santoangelo",
-        "nome": "Câmara de Santo Ângelo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "santoangelo",
         "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
@@ -379,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "caxias",
-        "nome": "Prefeitura de Caxias do Sul",
+        "id": "camara-santoangelo",
+        "nome": "Câmara de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -390,6 +381,15 @@
         "tipo": "assessoria",
         "id": "camara-caxias",
         "nome": "Câmara de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "caxias",
+        "nome": "Prefeitura de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -414,11 +414,22 @@
       "titulo": "Temporais no RS deixam mais de 700 pessoas desabrigadas",
       "veiculo": "Sul21",
       "editoria": "regional",
-      "quentura": 8,
+      "quentura": 5,
       "tambemEm": [
-        "g1 RS",
+        "viva.com.br",
         "Jornal de Brasília",
         "Canal Rural"
+      ]
+    },
+    {
+      "titulo": "Caravana do Emprego chega a Canoas com mais de 100 vagas de trabalho disponíveis",
+      "veiculo": "DuduNews",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "– Prefeitura Municipal de Canoas",
+        "realnews.com.br",
+        "Seguinte"
       ]
     },
     {
@@ -427,161 +438,157 @@
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
+        "g1 RS",
         "Sul21",
-        "Canal Rural",
-        "Notícias Agrícolas"
-      ]
-    },
-    {
-      "titulo": "Chuvas deixam quatro mortos e mais de 3.000 pessoas fora de casa no RS",
-      "veiculo": "Folha de S.Paulo",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Sul21",
-        "Jornal de Brasília",
-        "Canal Rural"
-      ]
-    },
-    {
-      "titulo": "Wellinton Fernandes é prata no lançamento do disco, e Brasil tem primeira medalha no atletismo nos Jogos Sul-Americanos",
-      "veiculo": "GZH",
-      "quentura": 4,
-      "tambemEm": [
-        "Prefeitura de Lages",
-        "Prefeitura Municipal de Araçatuba"
-      ]
-    },
-    {
-      "titulo": "Atleta araçatubense conquista tricampeonato brasileiro no lançamento do dardo",
-      "veiculo": "Prefeitura Municipal de Araçatuba",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Prefeitura de Lages",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Atleta araçatubense conquista tricampeonato brasileiro no lançamento do dardo",
-      "veiculo": "Prefeitura Municipal de Araçatuba",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Prefeitura de Lages",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Atletas de Lages conquistam 15 medalhas na Copa Brasil de Tênis de Mesa",
-      "veiculo": "Prefeitura de Lages",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Prefeitura Municipal de Araçatuba",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Atletas de Lages conquistam 15 medalhas na Copa Brasil de Tênis de Mesa",
-      "veiculo": "Prefeitura de Lages",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Prefeitura Municipal de Araçatuba",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Transporte Solidário atende mais de 9,8 mil passageiros durante a Operação Inverno 2026",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Terra"
-      ]
-    },
-    {
-      "titulo": "Caravana de Empregos leva oportunidades de trabalho ao bairro Guajuviras",
-      "veiculo": "canoas.rs.gov.br",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "BNamericas",
-        "realnews.com.br"
-      ]
-    },
-    {
-      "titulo": "Caravana de Empregos oferece cerca de 100 vagas no bairro Guajuviras, em Canoas",
-      "veiculo": "realnews.com.br",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "canoas.rs.gov.br",
-        "Seguinte"
-      ]
-    },
-    {
-      "titulo": "Rua General Salustiano terá bloqueio para serviço de drenagem",
-      "veiculo": "noticiasdaaldeia.com.br",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Diário de Santa Maria"
-      ]
-    },
-    {
-      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
-      "veiculo": "Estratégia Concursos",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "JOTA Info"
-      ]
-    },
-    {
-      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
-      "veiculo": "Estratégia Concursos",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "JOTA Info"
-      ]
-    },
-    {
-      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
-      "veiculo": "Estratégia Concursos",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "JOTA Info"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Santa Maria anuncia obra de drenagem em trecho da Rua General Neto; licitação terá valor de R$ 2,4 milhões com recursos do Estado",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "noticiasdaaldeia.com.br"
+        "G1"
       ]
     },
     {
       "titulo": "Temperatura varia de 5 °C a 26 °C entre hoje e sexta-feira.",
       "veiculo": "O Nacional",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 3,
       "tambemEm": [
-        "Metrô News Jornal"
+        "g1 RS",
+        "Terra",
+        "Correio do Povo"
       ]
     },
     {
       "titulo": "Canoas terá cerca de 100 vagas de emprego em ação no Guajuviras nesta quarta; veja como participar",
       "veiculo": "Seguinte",
       "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "realnews.com.br",
+        "DuduNews",
+        "Prefeitura de Aracaju"
+      ]
+    },
+    {
+      "titulo": "Caravana de Empregos oferece cerca de 100 vagas no bairro Guajuviras, em Canoas",
+      "veiculo": "realnews.com.br",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "– Prefeitura Municipal de Canoas",
+        "Seguinte",
+        "DuduNews"
+      ]
+    },
+    {
+      "titulo": "Primeiro dia da primavera tem chuva forte, temporais e queda de temperatura no Centro-Sul",
+      "veiculo": "Notícias Agrícolas",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "Agora Litoral"
+      ]
+    },
+    {
+      "titulo": "Mais de 110 mil pessoas seguem sem luz, 3,9 mil estão fora de casa e ruas continuam inundadas após chuva no RS",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Jornal de Brasília",
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Mais de 110 mil pessoas seguem sem luz, 3,9 mil estão fora de casa e ruas continuam inundadas após chuva no RS",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "Jornal de Brasília"
+      ]
+    },
+    {
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "JOTA Info",
+        "UOL Notícias"
+      ]
+    },
+    {
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "JOTA Info",
+        "UOL Notícias"
+      ]
+    },
+    {
+      "titulo": "Concursos Sul: as principais OPORTUNIDADES de 2026!",
+      "veiculo": "Estratégia Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "JOTA Info",
+        "UOL Notícias"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Santa Maria anuncia obra de drenagem em trecho da Rua General Neto; licitação terá valor de R$ 2,4 milhões com recursos do Estado",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Prefeitura de Pelotas",
+        "Vale Notícia"
+      ]
+    },
+    {
+      "titulo": "Caravana de Empregos leva oportunidades de trabalho ao bairro Guajuviras",
+      "veiculo": "– Prefeitura Municipal de Canoas",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "realnews.com.br",
+        "DuduNews"
+      ]
+    },
+    {
+      "titulo": "Wellinton Fernandes é prata no lançamento do disco, e Brasil tem primeira medalha no atletismo nos Jogos Sul-Americanos",
+      "veiculo": "GZH",
+      "quentura": 2,
+      "tambemEm": [
+        "Prefeitura de Lages"
+      ]
+    },
+    {
+      "titulo": "Imagens mostram carro destruído após ser arrastado por correnteza em tragédia que matou irmãos no RS",
+      "veiculo": "Clic Camaquã",
+      "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "realnews.com.br"
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Obras de drenagem evitam alagamentos no Parque Alvorada, em Dourados",
+      "veiculo": "A Crítica de Campo Grande",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Arena de Notícias"
+      ]
+    },
+    {
+      "titulo": "Canoas abre inscrições para 6ª Conferência Municipal do Meio Ambiente e Saneamento Ambiental",
+      "veiculo": "Notícias da Aldeia",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Seguinte"
       ]
     }
   ]
