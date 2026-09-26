@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-25T18:30:21.364Z",
+  "gerado": "2026-09-26T00:31:46.705Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 44,
+    "pauta": 39,
     "fonteLivre": 63,
-    "confirmadas": 6,
+    "confirmadas": 5,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 0
   },
   "fontes": {
-    "checadas": 32,
+    "checadas": 33,
     "responderam": 26,
     "entregando": 13,
-    "itens": 107,
+    "itens": 102,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "livre",
         "id": "conversation",
@@ -36,10 +27,19 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 12,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,7 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 11,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
-        "itens": 11,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,33 +75,15 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 5,
         "ok": true,
         "respondeu": true,
@@ -118,17 +100,26 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 4,
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -136,10 +127,10 @@
       },
       {
         "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 4,
+        "ok": true,
         "respondeu": true,
         "erro": null
       },
@@ -151,6 +142,24 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 406"
+      },
+      {
+        "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -181,15 +190,6 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -199,12 +199,12 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -226,12 +226,12 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -244,6 +244,15 @@
       },
       {
         "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -253,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -310,24 +319,5 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": [
-    {
-      "titulo": "Líderes de Paquistão, Líbano e de país que está afundando discursam no 4º dia de Assembleia Geral da ONU; SIGA",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "O que você precisa saber da Assembleia Geral da ONU até agora",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    }
-  ]
+  "pautas": []
 }
