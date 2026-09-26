@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-26T12:59:59.606Z",
+  "gerado": "2026-09-26T17:44:46.157Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 40,
-    "fonteLivre": 58,
-    "confirmadas": 2,
+    "fonteLivre": 54,
+    "confirmadas": 6,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 2
+    "semFonte": 5
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 33,
     "responderam": 26,
     "entregando": 13,
-    "itens": 98,
+    "itens": 94,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "livre",
         "id": "conversation",
@@ -54,6 +45,15 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
@@ -72,18 +72,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 5,
         "ok": true,
         "respondeu": true,
@@ -100,17 +91,17 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -135,7 +126,34 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
+      },
+      {
+        "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -154,6 +172,15 @@
       },
       {
         "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
@@ -163,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -181,12 +208,12 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -201,15 +228,6 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -306,15 +324,41 @@
       "titulo": "Rússia e Ucrânia trocam ataques e deixam 7 mortos em meio à intensificação da guerra aérea",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
+      "quentura": 3,
+      "tambemEm": [
+        "Folha Mundo",
+        "Euronews.com"
+      ]
+    },
+    {
+      "titulo": "Vice de Xi Jinping não cita a Rússia ao comentar Guerra na Ucrânia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Papa Leão 14 se encontra com imigrantes antes de grande missa na Champs-Élysées, em Paris",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Gregorio Borgia - Gregorio Borgia"
+      ]
+    },
+    {
+      "titulo": "Vídeo. Pelo menos seis mortos nos últimos ataques russos à Ucrânia",
+      "veiculo": "Euronews.com",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     },
     {
       "titulo": "Pelo menos seis mortos nos últimos ataques russos à Ucrânia",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
         "g1 Mundo"
