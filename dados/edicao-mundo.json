@@ -1,24 +1,33 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-09-29T14:50:19.595Z",
+  "gerado": "2026-09-29T22:12:06.632Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 47,
-    "fonteLivre": 45,
+    "pauta": 45,
+    "fonteLivre": 64,
     "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 6
+    "semFonte": 3
   },
   "fontes": {
     "checadas": 32,
-    "responderam": 25,
-    "entregando": 12,
-    "itens": 92,
+    "responderam": 26,
+    "entregando": 13,
+    "itens": 109,
     "lista": [
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
         "itens": 12,
@@ -46,27 +55,18 @@
       },
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 8,
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,8 +82,26 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -99,19 +117,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 2,
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +129,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 2,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -131,17 +140,17 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
       },
       {
         "tipo": "livre",
@@ -154,12 +163,12 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 429"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -181,15 +190,6 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,15 +244,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -264,6 +255,15 @@
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -312,25 +312,7 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Brasil seguir nacionalismo de Trump seria ruim para o mundo, diz Piketty à BBC",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Falta de recursos em agência da ONU pode deixar 8,3 milhões de refugiados sem assistência",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP - Marwan Ali"
-      ]
-    },
-    {
-      "titulo": "Estônia acusa Rússia por ataque a fábrica de drones; Kremlin nega",
+      "titulo": "Suprema Corte autoriza Trump a deportar imigrantes para países terceiros",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -339,16 +321,7 @@
       ]
     },
     {
-      "titulo": "ONU alerta que cortes na ajuda internacional ameaçam assistência a mais de 8 milhões de refugiados",
-      "veiculo": "AP - Marwan Ali",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Estônia acusa Rússia de estar por trás de ataque incendiário; Kremlin nega",
+      "titulo": "Suprema Corte permite que Trump volte a deportar imigrantes para países com os quais não têm ligação",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -357,12 +330,12 @@
       ]
     },
     {
-      "titulo": "Brasil seguir nacionalismo de Trump seria ruim para o mundo, diz Piketty à BBC News Brasil",
-      "veiculo": "BBC Brasil",
+      "titulo": "Espanha propõe medidas emergenciais em resposta aos protestos contra a crise habitacional",
+      "veiculo": "RFI Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
+        "Folha Mundo"
       ]
     }
   ]
