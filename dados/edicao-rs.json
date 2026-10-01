@@ -1,31 +1,22 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-09-30T22:16:53.252Z",
+  "gerado": "2026-10-01T15:30:24.598Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 123,
-    "fonteLivre": 63,
-    "confirmadas": 27,
+    "fonteLivre": 52,
+    "confirmadas": 16,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 84
+    "semFonte": 75
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 186,
+    "itens": 175,
     "lista": [
-      {
-        "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 15,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "assessoria",
         "id": "fiergs",
@@ -57,15 +48,6 @@
         "tipo": "pauta",
         "id": "gn-rs-cap",
         "nome": "Porto Alegre",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-pelotas",
-        "nome": "Pelotas",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -108,6 +90,15 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "assessoria",
         "id": "defesacivil-rs",
         "nome": "Defesa Civil do RS",
@@ -129,7 +120,7 @@
         "tipo": "pauta",
         "id": "gn-rs-canoas",
         "nome": "Canoas",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -138,16 +129,16 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 8,
+        "tipo": "pauta",
+        "id": "gn-rs-pelotas",
+        "nome": "Pelotas",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,9 +154,18 @@
       },
       {
         "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
         "id": "gov-rs",
         "nome": "Governo do RS",
-        "itens": 4,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,6 +190,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 0,
@@ -208,15 +217,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -361,15 +361,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "camara-santoangelo",
         "nome": "Câmara de Santo Ângelo",
         "itens": 0,
@@ -379,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "caxias",
-        "nome": "Prefeitura de Caxias do Sul",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -390,6 +381,15 @@
         "tipo": "assessoria",
         "id": "camara-caxias",
         "nome": "Câmara de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "caxias",
+        "nome": "Prefeitura de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,170 +411,188 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Justiça condena Porto Alegre em R$ 50 milhões por omissão na enchente",
-      "veiculo": "Bom Dia Advogado",
+      "titulo": "Prefeitura de Porto Alegre fecha preventivamente duas comportas contra enchentes na Zona Norte",
+      "veiculo": "Jornal O Sul",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 9,
       "tambemEm": [
-        "Exame",
-        "Matinal"
+        "Sul21",
+        "Diário Gaúcho",
+        "prefeitura.poa.br"
       ]
     },
     {
-      "titulo": "Candidatos ao governo do RS participam de debate na RBS TV; VEJA COMO FOI",
+      "titulo": "Prefeitura de Porto Alegre fecha preventivamente duas comportas contra enchentes na Zona Norte",
+      "veiculo": "Jornal O Sul",
+      "editoria": "regional",
+      "quentura": 9,
+      "tambemEm": [
+        "Sul21",
+        "Diário Gaúcho",
+        "prefeitura.poa.br"
+      ]
+    },
+    {
+      "titulo": "Sete comportas são fechadas para conter avanço das águas na zona norte de Porto Alegre",
+      "veiculo": "Clic Camaquã",
+      "editoria": "regional",
+      "quentura": 8,
+      "tambemEm": [
+        "Sul21",
+        "Diário Gaúcho",
+        "prefeitura.poa.br"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre: Comportas de proteção dos pôlderes 7 e 8 são fechadas preventivamente",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 8,
+      "tambemEm": [
+        "Diário Gaúcho",
+        "prefeitura.poa.br",
+        "Jornal O Sul"
+      ]
+    },
+    {
+      "titulo": "Sete comportas de proteção contra cheias na zona norte da Capital são fechadas de forma preventiva",
+      "veiculo": "Diário Gaúcho",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "prefeitura.poa.br",
+        "Jornal O Sul"
+      ]
+    },
+    {
+      "titulo": "Sete comportas de proteção contra cheias na zona norte da Capital são fechadas de forma preventiva",
+      "veiculo": "Diário Gaúcho",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "prefeitura.poa.br",
+        "Jornal O Sul"
+      ]
+    },
+    {
+      "titulo": "Comportas de proteção dos pôlderes 7 e 8 são fechadas preventivamente",
+      "veiculo": "prefeitura.poa.br",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Diário Gaúcho",
+        "Jornal O Sul"
+      ]
+    },
+    {
+      "titulo": "Comportas de proteção dos pôlderes 7 e 8 são fechadas preventivamente",
+      "veiculo": "prefeitura.poa.br",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Diário Gaúcho",
+        "Jornal O Sul"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre fecha comportas na Zona Norte para evitar avanço da água após elevação do nível dos rios",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "Sul21",
+        "Jornal O Sul",
+        "Clic Camaquã"
+      ]
+    },
+    {
+      "titulo": "Mãe e filha encontradas mortas no RS: pais da mulher também foram assassinados; polícia apura se crimes têm relação",
       "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "g1.globo.com",
-        "Brasil de Fato",
+        "Terra",
         "Correio do Povo"
       ]
     },
     {
-      "titulo": "Candidatos ao governo do estado tem embates sobre educação, segurança e reconstrução em debate na RBS TV",
-      "veiculo": "Brasil de Fato",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 RS",
-        "g1.globo.com"
-      ]
-    },
-    {
-      "titulo": "Mãe e filha são encontradas mortas em casa no interior de Candelária",
+      "titulo": "Mãe e filha mortas em Candelária: polícia investiga relação com assassinato dos pais da mulher",
       "veiculo": "Correio do Povo",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "g1 RS"
+        "g1 RS",
+        "Terra"
       ]
     },
     {
-      "titulo": "✉️ Justiça condena prefeitura por omissão na enchente, MP apresenta novas denúncias contra a Smed e mais notícias desta quarta",
-      "veiculo": "Matinal",
+      "titulo": "Sabatina com GABRIEL SOUZA, candidato ao Governo do RS | Gaúcha | 1º/10/2026",
+      "veiculo": "gauchazh.clicrbs.com.br",
+      "quentura": 2,
+      "tambemEm": [
+        "Estadão",
+        "UOL Notícias"
+      ]
+    },
+    {
+      "titulo": "Chuva do dia 21 causa mais de 100 pontos de danos em Caxias do Sul",
+      "veiculo": "Radio Caxias FM",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Bom Dia Advogado",
-        "GZH"
+        "gauchazh.clicrbs.com.br",
+        "Canal Rural"
       ]
     },
     {
-      "titulo": "✉️ Justiça condena prefeitura por omissão na enchente, MP apresenta novas denúncias contra a Smed e mais notícias desta quarta",
-      "veiculo": "Matinal",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Bom Dia Advogado",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Inter sofre duas novas derrotas na Justiça",
-      "veiculo": "GZH",
-      "quentura": 2,
-      "tambemEm": [
-        "Matinal"
-      ]
-    },
-    {
-      "titulo": "Debate ao governo da RBS TV tem disputa sobre ritmo da reconstrução pós-enchentes e rumos da educação no RS",
-      "veiculo": "g1.globo.com",
+      "titulo": "Polícia investiga duplo assassinato de mãe e filha com sinais de extrema violência no interior de Candelária",
+      "veiculo": "Terra",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
         "g1 RS",
-        "Brasil de Fato"
+        "Correio do Povo"
       ]
     },
     {
-      "titulo": "Daniel cobra de Lula obras apresentadas por Caiado e diz que Goiás teve de assumir projetos",
-      "veiculo": "Diário de Goiás",
+      "titulo": "Polícia investiga duplo assassinato de mãe e filha com sinais de extrema violência no interior de Candelária",
+      "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Jornal Opção"
-      ]
-    },
-    {
-      "titulo": "ELEIÇÕES 2026: Canoas amplia oferta de ônibus neste domingo",
-      "veiculo": "abcmais.com",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Prefeitura Municipal de Macaé"
+        "g1 RS",
+        "Correio do Povo"
       ]
     },
     {
       "titulo": "Novo rompimento de adutora pode causar falta de água em mais de 90 bairros de Caxias do Sul",
-      "veiculo": "GZH",
+      "veiculo": "gauchazh.clicrbs.com.br",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "radiosolaris.com.br"
+        "Radio Caxias FM",
+        "Rádio Solaris"
       ]
     },
     {
-      "titulo": "Novo rompimento de adutora reduz abastecimento pelo Sistema Faxinal em Caxias",
-      "veiculo": "radiosolaris.com.br",
+      "titulo": "Após 17 anos de espera, prefeitura inaugura nova unidade de saúde na zona leste de Porto Alegre",
+      "veiculo": "Diário Gaúcho",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "GZH"
+        "Jornal O Sul"
       ]
     },
     {
-      "titulo": "Construído com a Holanda, projeto adapta as cinco ilhas de Porto Alegre ao risco de novas enchentes",
-      "veiculo": "Exame",
+      "titulo": "Após 17 anos de espera, prefeitura inaugura nova unidade de saúde na zona leste de Porto Alegre",
+      "veiculo": "Diário Gaúcho",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Bom Dia Advogado"
-      ]
-    },
-    {
-      "titulo": "Construído com a Holanda, projeto adapta as cinco ilhas de Porto Alegre ao risco de novas enchentes",
-      "veiculo": "Exame",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Bom Dia Advogado"
-      ]
-    },
-    {
-      "titulo": "Corpos de mãe e filha mortas no RS foram encontrados por babá; mulher tinha gêmeos de 9 meses e outra menina de 10 anos",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "4ª Maratona Internacional de Santa Maria reúne cerca de 4,5 mil atletas",
-      "veiculo": "sesc-rs.com.br",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Diário de Santa Maria"
-      ]
-    },
-    {
-      "titulo": "Daniel acusa governo Lula de abandonar obras prioritárias em Goiás",
-      "veiculo": "Jornal Opção",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Diário de Goiás"
-      ]
-    },
-    {
-      "titulo": "Novos buracos surgem em vias centrais após chuvas em Santa Maria e provocam interdições parciais; veja os pontos",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "sesc-rs.com.br"
+        "Jornal O Sul"
       ]
     }
   ]
