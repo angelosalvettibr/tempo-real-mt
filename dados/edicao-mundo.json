@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-03T17:56:12.296Z",
+  "gerado": "2026-10-03T21:02:29.972Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 56,
+    "pauta": 42,
+    "fonteLivre": 57,
     "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 7
   },
   "fontes": {
-    "checadas": 33,
-    "responderam": 26,
+    "checadas": 31,
+    "responderam": 25,
     "entregando": 13,
-    "itens": 97,
+    "itens": 99,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -36,9 +45,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -49,15 +58,6 @@
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -117,18 +117,18 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
+        "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
         "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 1,
         "ok": true,
         "respondeu": true,
@@ -136,24 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
-      },
-      {
-        "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -176,8 +158,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -217,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -226,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +235,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -321,13 +303,13 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Por que eleição brasileira é teste para estratégia de Trump na América Latina",
-      "veiculo": "BBC Brasil",
+      "titulo": "Copiloto da Flydubai usou machado para atacar comandante, dizem Emirados Árabes",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "RFI Brasil",
-        "Folha Mundo"
+        "BBC Brasil",
+        "Euronews"
       ]
     },
     {
@@ -351,32 +333,33 @@
     {
       "titulo": "Quase 500 mil pessoas protestam em Madrid pela crise da habitação",
       "veiculo": "Euronews",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Copiloto da Flydubai usou machado para atacar comandante, dizem Emirados Árabes",
-      "veiculo": "Folha Mundo",
+      "titulo": "Emirados Árabes Unidos dizem que copiloto da FlyDubai atacou piloto com machado num ato “terrorista”",
+      "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Por que eleição brasileira é teste para estratégia de Trump na América Latina",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
       ]
     },
     {
       "titulo": "‘Cavalo de Troia’: Flávio Bolsonaro é peça de estratégia de Trump para ampliar poder na América Latina",
       "veiculo": "RFI Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Eleição no Brasil pode ser freio ou impulso a projeto de Trump na América Latina, diz pesquisadora",
-      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
