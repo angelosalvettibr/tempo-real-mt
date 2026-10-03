@@ -1,26 +1,35 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-10-02T22:13:10.649Z",
+  "gerado": "2026-10-03T13:26:10.003Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 127,
-    "fonteLivre": 50,
-    "confirmadas": 15,
+    "pauta": 128,
+    "fonteLivre": 56,
+    "confirmadas": 12,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 80
+    "semFonte": 76
   },
   "fontes": {
     "checadas": 42,
     "responderam": 21,
     "entregando": 18,
-    "itens": 177,
+    "itens": 184,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "fiergs",
         "nome": "Fiergs",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 15,
         "ok": true,
         "respondeu": true,
@@ -37,17 +46,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-caxiasdosu",
-        "nome": "Caxias do Sul",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
-        "nome": "Porto Alegre",
+        "id": "gn-rs-pelotas",
+        "nome": "Pelotas",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -64,8 +64,26 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-rs-caxiasdosu",
+        "nome": "Caxias do Sul",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-rs",
         "nome": "Rio Grande do Sul",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-portoalegr",
+        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -82,15 +100,6 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
         "id": "gzh",
         "nome": "GZH",
         "itens": 12,
@@ -99,10 +108,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-pelotas",
-        "nome": "Pelotas",
-        "itens": 11,
+        "tipo": "resgate",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,16 +138,7 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -154,8 +154,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
+        "id": "mprs",
+        "nome": "MPRS",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -163,9 +163,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 4,
+        "id": "gov-rs",
+        "nome": "Governo do RS",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -190,6 +190,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
         "id": "correiodopovo",
         "nome": "Correio do Povo",
         "itens": 0,
@@ -208,15 +217,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
@@ -226,8 +226,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -316,6 +316,15 @@
       },
       {
         "tipo": "assessoria",
+        "id": "bombeiros-rs",
+        "nome": "Corpo de Bombeiros do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "pc-rs",
         "nome": "Polícia Civil do RS",
         "itens": 0,
@@ -325,8 +334,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "bombeiros-rs",
-        "nome": "Corpo de Bombeiros do RS",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,15 +388,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "caxias",
         "nome": "Prefeitura de Caxias do Sul",
         "itens": 0,
@@ -416,94 +416,83 @@
       "editoria": "regional",
       "quentura": 5,
       "tambemEm": [
-        "PCI Concursos",
-        "Terra",
+        "Qconcursos Folha Dirigida",
+        "pciconcursos.com.br",
         "Blog Gran Cursos Online"
       ]
     },
     {
-      "titulo": "Prefeitura credencia empresas para regularização de até 5,8 mil lotes em Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "PCI Concursos",
-        "Terra",
-        "Blog Gran Cursos Online"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Porto Alegre amplia diálogo com entidades para melhorar gestão do Funcriança",
-      "veiculo": "Terra",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Correio do Povo",
-        "PCI Concursos"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Porto Alegre amplia diálogo com entidades para melhorar gestão do Funcriança",
-      "veiculo": "Terra",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Correio do Povo",
-        "PCI Concursos"
-      ]
-    },
-    {
-      "titulo": "Justiça condena Porto Alegre a pagar R$ 50 milhões após enchente de 2024",
-      "veiculo": "Rádio Metrópole",
+      "titulo": "Eleições com chuva? Temporais voltam ao RS na véspera do primeiro turno; confira previsão do tempo",
+      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Folha de S.Paulo"
+        "G1",
+        "Correio do Povo"
       ]
     },
     {
-      "titulo": "Justiça condena Porto Alegre a pagar R$ 50 milhões após enchente de 2024",
-      "veiculo": "Rádio Metrópole",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha de S.Paulo"
-      ]
-    },
-    {
-      "titulo": "Justiça condena Porto Alegre a pagar multa de R$ 50 milhões por enchente de 2024",
-      "veiculo": "Folha de S.Paulo",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Rádio Metrópole"
-      ]
-    },
-    {
-      "titulo": "Justiça condena Porto Alegre a pagar multa de R$ 50 milhões por enchente de 2024",
-      "veiculo": "Folha de S.Paulo",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Rádio Metrópole"
-      ]
-    },
-    {
-      "titulo": "Operação de trânsito para Atlético x Bragantino na Arena MRV, neste sábado (3)",
-      "veiculo": "Prefeitura de Belo Horizonte",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Leouve"
-      ]
-    },
-    {
-      "titulo": "Polícia Civil apreende sete veículos avaliados em R$ 1 milhão em Caxias do Sul",
+      "titulo": "Colombiano foragido da polícia de Caxias do Sul é preso em Goiás",
       "veiculo": "Leouve",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
         "Rádio Solaris"
+      ]
+    },
+    {
+      "titulo": "Tempestades severas voltam a atingir o Estado no sábado (3)",
+      "veiculo": "Portal do Estado do Rio Grande do Sul",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Sul21",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Desobrigada a votar, população 70+ ultrapassa 10% do eleitorado pela primeira vez na história",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "defensoria.rs.def.br"
+      ]
+    },
+    {
+      "titulo": "Defensoria Pública do Estado atuará pela primeira vez no âmbito eleitoral",
+      "veiculo": "defensoria.rs.def.br",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Sul21"
+      ]
+    },
+    {
+      "titulo": "Homem morre e outras três pessoas ficam feridas após explosão de forno de fundição em empresa de Caxias",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Temporais voltam ao RS neste fim de semana",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Homem é atingido por 'panelão' com material de fundição e morre no RS; dois ficam feridos",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "GZH"
       ]
     },
     {
@@ -516,60 +505,57 @@
       ]
     },
     {
-      "titulo": "SMAP representa Rio Grande no IntegraSIM 2026, encontro nacional sobre inspeção municipal e agroindústria",
-      "veiculo": "Prefeitura Municipal de Rio Grande/RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Senado Federal"
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Rio do Sul reforça sinalização em trecho onde motoristas receberam multas",
-      "veiculo": "gcd.com.br",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Senado Federal"
-      ]
-    },
-    {
-      "titulo": "Ônibus do transporte coletivo de Santa Maria terão passe livre e horários de dia útil no domingo",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Paralelo 29"
-      ]
-    },
-    {
-      "titulo": "Obras de drenagem alteram trânsito em dois pontos de Caxias do Sul neste sábado (3)",
-      "veiculo": "Leouve",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Prefeitura de Belo Horizonte"
-      ]
-    },
-    {
-      "titulo": "Cheia do Rio Jacuí obriga 80 pessoas a sair de casa em Eldorado do Sul",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Senado Federal"
-      ]
-    },
-    {
-      "titulo": "Painel indica que El Ninõ pode ser um dos mais intensos desde 1950",
+      "titulo": "Chuvas no RS: TRE orienta eleitores a conferirem local de votação antes das eleições",
       "veiculo": "Sul21",
       "editoria": "regional",
       "quentura": 0,
       "tambemEm": []
     },
     {
-      "titulo": "Em clima de Feira do Livro, personalidades caxienses indicam as leituras que marcaram suas vidas",
+      "titulo": "Nova coleção de moda une arte personalidades femininas na Évidence",
       "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "O dilema eleitoral (por Adriano Skrebsky Reinheimer)",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "O dia em que Lula derrotou a Globo (por Everton Gimenis)",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "Não use o acostamento (por Delmar Bertuol)",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "Por um Manifesto da Amizade no limite da hiperguerra eleitoral (por Ronaldo Queiroz)",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "ATU pisa no acelerador e faz cobrança pública de dívida da prefeitura",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 0,
+      "tambemEm": []
+    },
+    {
+      "titulo": "Processo seletivo Prefeitura de Pelotas RS abre 27 vagas Saúde e Administração",
+      "veiculo": "Qconcursos Folha Dirigida",
       "editoria": "regional",
       "quentura": 0,
       "tambemEm": []
