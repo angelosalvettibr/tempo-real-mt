@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-03T13:22:58.496Z",
+  "gerado": "2026-10-03T17:56:12.296Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 44,
-    "fonteLivre": 55,
-    "confirmadas": 4,
+    "pauta": 41,
+    "fonteLivre": 56,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 0
+    "semFonte": 7
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 33,
     "responderam": 26,
-    "entregando": 12,
-    "itens": 99,
+    "entregando": 13,
+    "itens": 97,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -45,6 +36,15 @@
         "erro": null
       },
       {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
@@ -57,25 +57,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 8,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -91,18 +73,45 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 8,
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +120,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 3,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -127,6 +136,24 @@
       },
       {
         "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
+      },
+      {
+        "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 500"
+      },
+      {
+        "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -177,7 +204,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "This operation was aborted"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -235,15 +262,6 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -253,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +289,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -301,5 +319,69 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": []
+  "pautas": [
+    {
+      "titulo": "Por que eleição brasileira é teste para estratégia de Trump na América Latina",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "RFI Brasil",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Madri reúne 70 mil em protesto e amplia pressão sobre governo Sánchez; atos se espalham pelo país",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Copiloto usou machado em ataque a comandante de avião para Israel",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Quase 500 mil pessoas protestam em Madrid pela crise da habitação",
+      "veiculo": "Euronews",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Copiloto da Flydubai usou machado para atacar comandante, dizem Emirados Árabes",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "‘Cavalo de Troia’: Flávio Bolsonaro é peça de estratégia de Trump para ampliar poder na América Latina",
+      "veiculo": "RFI Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Eleição no Brasil pode ser freio ou impulso a projeto de Trump na América Latina, diz pesquisadora",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    }
+  ]
 }
