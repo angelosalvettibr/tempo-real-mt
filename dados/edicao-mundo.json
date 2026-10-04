@@ -1,35 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-03T21:02:29.972Z",
+  "gerado": "2026-10-04T00:32:32.852Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
-    "fonteLivre": 57,
-    "confirmadas": 3,
+    "pauta": 40,
+    "fonteLivre": 42,
+    "confirmadas": 2,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 7
+    "semFonte": 8
   },
   "fontes": {
     "checadas": 31,
     "responderam": 25,
-    "entregando": 13,
-    "itens": 99,
+    "entregando": 11,
+    "itens": 82,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -46,8 +37,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -63,10 +54,19 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,24 +82,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
         "itens": 6,
@@ -109,8 +91,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -158,13 +140,22 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 415"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,8 +163,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -199,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -208,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +226,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +235,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,6 +271,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -303,13 +303,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Copiloto da Flydubai usou machado para atacar comandante, dizem Emirados Árabes",
+      "titulo": "Por que a Espanha, que construía casas demais, vive hoje uma grave crise de moradia",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Por que a Espanha, que construía casas demais, vive hoje uma grave crise de moradia",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
+        "BBC Brasil"
       ]
     },
     {
@@ -319,15 +327,6 @@
       "quentura": 1,
       "tambemEm": [
         "Euronews"
-      ]
-    },
-    {
-      "titulo": "Copiloto usou machado em ataque a comandante de avião para Israel",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
       ]
     },
     {
@@ -355,6 +354,15 @@
       "quentura": 1,
       "tambemEm": [
         "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Copiloto da Flydubai usou machado para atacar comandante, dizem Emirados Árabes",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
       ]
     },
     {
