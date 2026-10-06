@@ -1,26 +1,35 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-10-06T15:08:22.577Z",
+  "gerado": "2026-10-06T22:44:55.529Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 127,
-    "fonteLivre": 55,
-    "confirmadas": 11,
+    "fonteLivre": 43,
+    "confirmadas": 10,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 83
+    "semFonte": 87
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 23,
-    "entregando": 20,
-    "itens": 182,
+    "responderam": 18,
+    "entregando": 15,
+    "itens": 170,
     "lista": [
       {
         "tipo": "assessoria",
         "id": "fiergs",
         "nome": "Fiergs",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 15,
         "ok": true,
         "respondeu": true,
@@ -55,8 +64,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs",
-        "nome": "Rio Grande do Sul",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -64,8 +73,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
+        "id": "gn-rs",
+        "nome": "Rio Grande do Sul",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -102,7 +111,7 @@
         "tipo": "resgate",
         "id": "gzh",
         "nome": "GZH",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +129,7 @@
         "tipo": "pauta",
         "id": "gn-rs-pelotas",
         "nome": "Pelotas",
-        "itens": 10,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,25 +138,7 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
-        "itens": 6,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -162,42 +153,6 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "ssp-rs",
-        "nome": "Secretaria de Segurança do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "saude-rs",
-        "nome": "Secretaria de Saúde do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "jc",
         "nome": "Jornal do Comércio",
@@ -205,15 +160,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -235,12 +181,30 @@
       },
       {
         "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "resgate",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "resgate",
@@ -252,13 +216,13 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "tipo": "assessoria",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
       },
       {
         "tipo": "assessoria",
@@ -334,8 +298,53 @@
       },
       {
         "tipo": "assessoria",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "ssp-rs",
+        "nome": "Secretaria de Segurança do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "bombeiros-rs",
         "nome": "Corpo de Bombeiros do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "tce-rs",
+        "nome": "TCE-RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "saude-rs",
+        "nome": "Secretaria de Saúde do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -352,8 +361,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "tce-rs",
-        "nome": "TCE-RS",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -372,15 +381,6 @@
         "tipo": "assessoria",
         "id": "santoangelo",
         "nome": "Prefeitura de Santo Ângelo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,178 +411,66 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Resultado das eleições 2026 em Esperança do Sul (RS): como foi a votação no seu local de votação; consulte por zona eleitoral",
-      "veiculo": "G1",
-      "editoria": "regional",
-      "quentura": 15,
-      "tambemEm": [
-        "Sul21",
-        "g1 RS",
-        "Câmara de Vereadores de Jaraguá do Sul"
-      ]
-    },
-    {
       "titulo": "Resultado das eleições 2026 em Caxias do Sul (RS): votação para presidente no Prefeitura Municipal de Caxias do Sul, na 16ª zona eleitoral",
       "veiculo": "G1",
       "editoria": "regional",
-      "quentura": 14,
+      "quentura": 12,
       "tambemEm": [
         "g1 RS",
-        "Câmara de Vereadores de Jaraguá do Sul",
-        "Metrópoles"
+        "Metrópoles",
+        "GZH"
       ]
     },
     {
-      "titulo": "Área para novo Aeroporto Regional de Santa Maria é indicada às margens da BR-287",
-      "veiculo": "osepeense.com",
+      "titulo": "Resultado das eleições 2026 em Santa Maria (RS): como foi a votação nos locais de votação da 135ª Zona Eleitoral",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 8,
+      "tambemEm": [
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Mulher de 32 anos é morta em Caxias do Sul e RS chega a 60 feminicídios em 2026",
+      "veiculo": "Correio do Povo",
+      "quentura": 5,
+      "tambemEm": [
+        "Sul21",
+        "g1 RS",
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Mulher encontrada morta em área de mata é a 60ª vítima de feminicídio no RS em 2026",
+      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 4,
       "tambemEm": [
-        "Diário de Santa Maria",
-        "Jornal do Comércio",
-        "Gazeta Hoje"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente na Escola M.E.F. Leopoldo Klepker, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Ginásio Comunidade Linha Wink (Antiga Escola ), na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente na Escola M.E.F. Linha São Jacó, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Salão da Comunidade Evangélica Luterana Concórdia, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Sociedade Cultural Linha Germano, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Grêmio Cultural e Recreativo Teutoniense, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Colégio Teutônia, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente na Escola M.E.F. Mal. Arthur da Costa e Silva, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Ginásio Associação Educativa Linha Catarina, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Ginásio da Comunidade Católica de Canabarro, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Sociedade Esportiva e Recreativa Linha Pontes Filho, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Resultado das eleições 2026 em Teutônia (RS): votação para presidente no Salão da Comunidade Evangélica Redentor, na 125ª zona eleitoral",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "G1",
-        "Metrópoles"
-      ]
-    },
-    {
-      "titulo": "Chuva pela manhã e sol à tarde: veja a previsão do tempo para o RS nesta terça-feira",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Terra",
-        "PORTAL FARRAPO",
+        "Sul21",
+        "Sul 21",
         "Correio do Povo"
       ]
     },
     {
-      "titulo": "Provável localização do novo Aeroporto Regional de Santa Maria é divulgada",
-      "veiculo": "Alcir 61",
+      "titulo": "Em clima de celebração, a segunda edição do concurso Rainha da Primavera coroou nesta terça-feira (6) a nova representante da terceira idade de Canoas. Integrado à 27ª Semana da Pessoa Idosa, o evento foi realizado no Centro de Convivência do Idos",
+      "veiculo": "Instagram",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Diário de Santa Maria",
-        "osepeense.com",
-        "Gazeta Hoje"
+        "– Prefeitura Municipal de Canoas",
+        "Prefeitura de Aracaju",
+        "Santa Maria – 24 horas"
+      ]
+    },
+    {
+      "titulo": "Indicada área considerada mais adequada para a construção do novo Aeroporto Regional de Santa Maria",
+      "veiculo": "Rádio Santiago FM",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Gazeta Hoje",
+        "Alcir 61",
+        "Jornal O Sepeense"
       ]
     },
     {
@@ -591,9 +479,112 @@
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "Diário de Santa Maria",
-        "osepeense.com",
-        "Alcir 61"
+        "Alcir 61",
+        "Rádio Santiago FM",
+        "Jornal O Sepeense"
+      ]
+    },
+    {
+      "titulo": "Área para novo Aeroporto Regional de Santa Maria é indicada às margens da BR-287",
+      "veiculo": "Jornal O Sepeense",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Gazeta Hoje",
+        "Alcir 61",
+        "Rádio Santiago FM"
+      ]
+    },
+    {
+      "titulo": "Provável localização do novo Aeroporto Regional de Santa Maria é divulgada",
+      "veiculo": "Alcir 61",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Gazeta Hoje",
+        "Rádio Santiago FM",
+        "Jornal O Sepeense"
+      ]
+    },
+    {
+      "titulo": "\"Trabalhadora, faceira e amava um pagode\": quem era a mulher morta a facadas na Restinga; caso é tratado como feminicídio",
+      "veiculo": "GZH",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 RS",
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Davi Alcolumbre prevê primeira votação da PEC do fim da escala 6X1 na semana que vem",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Correio do Povo",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Luciano Zucco define equipe de transição",
+      "veiculo": "Correio do Povo",
+      "quentura": 2,
+      "tambemEm": [
+        "Sul21"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Cotiporã (RS): como foi a votação no seu local de votação; consulte por zona eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Veranópolis (RS): como foi a votação no seu local de votação; consulte por zona eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Parobé (RS): como foi a votação nos locais de votação da 55ª Zona Eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Victor Graeff (RS): como foi a votação nos locais de votação da 117ª Zona Eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Vicente Dutra (RS): como foi a votação nos locais de votação da 94ª Zona Eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Resultado das eleições 2026 em Cotiporã (RS): como foi a votação nos locais de votação da 88ª Zona Eleitoral",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "G1"
       ]
     }
   ]
