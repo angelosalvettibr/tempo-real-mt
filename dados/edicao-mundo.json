@@ -1,35 +1,44 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-06T00:03:10.188Z",
+  "gerado": "2026-10-06T15:11:59.924Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 41,
-    "fonteLivre": 45,
-    "confirmadas": 1,
+    "fonteLivre": 56,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 18
+    "semFonte": 9
   },
   "fontes": {
-    "checadas": 32,
+    "checadas": 33,
     "responderam": 26,
-    "entregando": 13,
-    "itens": 86,
+    "entregando": 12,
+    "itens": 97,
     "lista": [
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -45,27 +54,27 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -75,16 +84,7 @@
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 6,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,7 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 4,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -109,18 +109,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 2,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 1,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,10 +120,19 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 1,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
       },
       {
         "tipo": "pauta",
@@ -244,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,6 +289,15 @@
       },
       {
         "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -312,84 +321,69 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "'Virada surpreendente': como imprensa internacional repercutiu vitória de Flávio Bolsonaro sobre Lula no 1º turno",
-      "veiculo": "BBC Brasil",
+      "titulo": "Premiê espanhol tentará aprovar dois novos decretos sobre moradia antes de eleições antecipadas",
+      "veiculo": "AP Photo/Bernat Armangue - Bernat Armangue",
       "editoria": "internacional",
-      "quentura": 4,
+      "quentura": 1,
       "tambemEm": [
-        "RFI Brasil",
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro e Lula disputarão segundo turno; desafio da esquerda é mobilizar abstencionistas",
+      "titulo": "Após convocar eleições, governo da Espanha reedita decretos de moradia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Bernat Armangue - Bernat Armangue"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro e Lula: as propostas dos candidatos à Presidência que disputam o 2º turno",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Ressurgimento de Bolsonaro expõe a fraqueza de Lula, diz jornal econômico mais importante do mundo",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Bélgica: físico ganha Nobel por transformar gelo da Antártida em telescópio",
+      "veiculo": "pt.euronews.com",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Ressurgimento de Bolsonaro expõe a fraqueza de Lula, diz jornal econômico mais importante do mundo",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "‘Não existe cenário tranquilo para a democracia brasileira’, diz analista sobre disputa entre Flávio e Lula",
       "veiculo": "RFI Brasil",
       "editoria": "internacional",
-      "quentura": 4,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "O que está por trás da euforia do mercado com vantagem de Flávio Bolsonaro no 1º turno",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "RFI Brasil",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Netanyahu deseja 'grande' vitória a Flávio Bolsonaro no 2º turno",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "Lula x Flávio no 2º turno: para onde vão os votos de Cury, Renan e Caiado?",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "© RFI/Márcio Resende.",
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "'Grande vitória', diz Trump sobre Flávio Bolsonaro ter ficado à frente no 1º turno da eleição",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
         "BBC Brasil"
       ]
     },
     {
-      "titulo": "Houthis anunciam ataques contra Arábia Saudita após ofensiva do governo do Iêmen",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "De bloqueios escolares à violência: o que está a impulsionar os protestos estudantis em França",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Queda de aeronave militar mata 32 pessoas na Nigéria",
+      "titulo": "Televangelista americano Jim Bakker, envolvido em escândalos de fraude e sexo, morre aos 86 anos",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -398,84 +392,12 @@
       ]
     },
     {
-      "titulo": "Bolsa de Valores de São Paulo dispara após resultado eleitoral de Flávio Bolsonaro",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Turquia e Paquistão enviam forças para ajudar Arábia Saudita contra os houthis",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Avião militar cai na Nigéria com 32 pessoas a bordo",
+      "titulo": "Televangelista Jim Bakker morre aos 86; pastor perdeu império religioso após escândalo sexual",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Protestos em escolas tomam a França, e estudante perde a mão em embate com polícia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Imprensa internacional vê força da direita e cita 'troféu que falta para Trump' após avanço de Flávio sobre Lula",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Embaixada e consulados dos EUA retomam atendimentos após suspensão por 'possível ameaça'",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro vence na América Latina em número de votos; Lula ganha em Buenos Aires",
-      "veiculo": "© RFI/Márcio Resende.",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "EUA retomam atendimento na embaixada e nos consulados nesta segunda",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Quem são os senadores eleitos em 2026: veja os resultados por Estado",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews"
       ]
     }
   ]
