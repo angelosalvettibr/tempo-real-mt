@@ -1,35 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-08T15:35:32.872Z",
+  "gerado": "2026-10-08T23:18:50.350Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
-    "fonteLivre": 64,
-    "confirmadas": 2,
+    "pauta": 40,
+    "fonteLivre": 69,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 4
   },
   "fontes": {
-    "checadas": 32,
+    "checadas": 31,
     "responderam": 25,
     "entregando": 14,
-    "itens": 106,
+    "itens": 109,
     "lista": [
       {
         "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -54,10 +54,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 10,
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,9 +82,18 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -100,18 +109,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +120,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 2,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -145,15 +145,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
-      },
-      {
-        "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -165,6 +156,15 @@
         "tipo": "resgate",
         "id": "dw",
         "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -190,21 +190,21 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -219,15 +219,6 @@
         "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -312,46 +303,35 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Vídeo. França: estudantes enfrentam polícia em protestos escolares",
-      "veiculo": "Euronews.com",
-      "quentura": 2,
+      "titulo": "A fúria de estudantes que ocupam as ruas da França em protesto: 'Ficamos sem professores por semanas'",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
       "tambemEm": [
-        "AP Photo/Thibault Camus - Thibault Camus",
-        "Folha Mundo"
+        "AP Photo/Thibault Camus - Thibault Camus"
+      ]
+    },
+    {
+      "titulo": "Itália: reforma eleitoral de Meloni aprovada por voto secreto",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Andrew Medichini - Andrew Medichini"
+      ]
+    },
+    {
+      "titulo": "Nova lei eleitoral é aprovada na Itália e reacende disputa entre governo e oposição",
+      "veiculo": "AP Photo/Andrew Medichini - Andrew Medichini",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
       ]
     },
     {
       "titulo": "Estudantes voltam às ruas na França em '4º ato' de protestos por melhores condições de ensino",
       "veiculo": "AP Photo/Thibault Camus - Thibault Camus",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Por que nós, estudantes, estamos nas ruas da França",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Thibault Camus - Thibault Camus",
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Nobel de Literatura: quem é a escritora Anne Carson e quais livros ela publicou no Brasil",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Andy Kropa/Invision/AP - Andy Kropa"
-      ]
-    },
-    {
-      "titulo": "'Ousada e inventiva': canadense Anne Carson vence Prêmio Nobel de Literatura",
-      "veiculo": "Andy Kropa/Invision/AP - Andy Kropa",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
