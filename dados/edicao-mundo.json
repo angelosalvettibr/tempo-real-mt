@@ -1,24 +1,33 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-12T17:47:40.744Z",
+  "gerado": "2026-10-13T00:35:50.584Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 32,
+    "pauta": 42,
+    "fonteLivre": 41,
     "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 9
+    "semFonte": 7
   },
   "fontes": {
     "checadas": 32,
     "responderam": 26,
     "entregando": 13,
-    "itens": 75,
+    "itens": 83,
     "lista": [
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
         "itens": 12,
@@ -36,18 +45,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -63,19 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,7 +75,16 @@
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
-        "itens": 3,
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -100,17 +100,17 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
         "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -120,7 +120,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 1,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -140,17 +140,17 @@
         "nome": "DW Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 500"
-      },
-      {
-        "tipo": "resgate",
-        "id": "dw",
-        "nome": "DW Brasil",
-        "itens": 0,
-        "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
       },
       {
         "tipo": "livre",
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -312,51 +312,13 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Rússia ignora cessar-fogo energético de Trump e ataca usina na Ucrânia",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Bilal Hussein - Bilal Hussein",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Zelensky diz que Rússia mantém ataques à Ucrânia apesar de cessar-fogo anunciado por Trump",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Bilal Hussein - Bilal Hussein",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "UE diz que vai apoiar trégua energética entre Rússia e Ucrânia proposta por Trump",
-      "veiculo": "AP Photo/Bilal Hussein - Bilal Hussein",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
-      ]
-    },
-    {
       "titulo": "Aeroporto da capital saudita fecha após ataques houthis; veja vídeo",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "AP Photo/Baraa Anwer - Baraa Anwer"
-      ]
-    },
-    {
-      "titulo": "Guerra nuclear e uso malicioso da IA podem acabar com a humanidade até 2100, alertam cientistas",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
+        "AP Photo/Baraa Anwer - Baraa Anwer",
+        "Euronews.com"
       ]
     },
     {
@@ -365,13 +327,21 @@
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "Euronews.com"
       ]
     },
     {
-      "titulo": "Incêndio noturno devasta mercado coberto mais antigo de Paris",
-      "veiculo": "Euronews",
+      "titulo": "Premiê britânico reacende debate sobre brexit e diz esperar acordo com União Europeia no próximo mês",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews.com"
+      ]
+    },
+    {
+      "titulo": "Vídeo. França: vídeo mostra incêndio em mercado histórico de Paris",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
@@ -387,12 +357,19 @@
       ]
     },
     {
-      "titulo": "Uso malicioso da IA e guerra nuclear podem levar à extinção da humanidade até 2100, diz relatório",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
+      "titulo": "Primeiro-ministro britânico diz que Rússia interferiu na votação do Brexit",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Vídeo. Arábia Saudita: vídeo mostra ataque ao Aeroporto Internacional King Khalid",
+      "veiculo": "Euronews.com",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
       ]
     }
   ]
