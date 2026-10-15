@@ -1,21 +1,21 @@
 {
   "uf": "mt",
   "estado": "Mato Grosso",
-  "gerado": "2026-10-14T18:35:35.066Z",
+  "gerado": "2026-10-15T00:32:41.569Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 192,
+    "pauta": 193,
     "fonteLivre": 87,
-    "confirmadas": 41,
+    "confirmadas": 43,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 129
+    "semFonte": 112
   },
   "fontes": {
-    "checadas": 51,
+    "checadas": 52,
     "responderam": 28,
     "entregando": 26,
-    "itens": 279,
+    "itens": 280,
     "lista": [
       {
         "tipo": "assessoria",
@@ -30,7 +30,7 @@
         "tipo": "assessoria",
         "id": "pjc-mt",
         "nome": "Polícia Judiciária Civil de MT",
-        "itens": 15,
+        "itens": 14,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -135,10 +135,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "issoenoticia",
         "nome": "Isso É Notícia",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -147,16 +147,7 @@
         "tipo": "assessoria",
         "id": "sefaz-mt",
         "nome": "Sefaz-MT",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "olivre",
-        "nome": "O Livre",
-        "itens": 10,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -165,6 +156,15 @@
         "tipo": "pauta",
         "id": "muvuca",
         "nome": "Muvuca Popular",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "olivre",
+        "nome": "O Livre",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -228,7 +228,7 @@
         "tipo": "assessoria",
         "id": "bombeiros-mt",
         "nome": "Corpo de Bombeiros de MT",
-        "itens": 8,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -244,12 +244,21 @@
       },
       {
         "tipo": "assessoria",
-        "id": "almt",
-        "nome": "Assembleia de MT",
-        "itens": 3,
+        "id": "sinfra-mt",
+        "nome": "Sinfra-MT",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "issoenoticia",
+        "nome": "Isso É Notícia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -271,8 +280,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "hipernoticias",
-        "nome": "Hipernotícias",
+        "id": "reportermt",
+        "nome": "Repórter MT",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,8 +289,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "reportermt",
-        "nome": "Repórter MT",
+        "id": "hipernoticias",
+        "nome": "Hipernotícias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -291,6 +300,15 @@
         "tipo": "assessoria",
         "id": "gov-mt",
         "nome": "Governo de MT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "almt",
+        "nome": "Assembleia de MT",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -370,15 +388,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "sinfra-mt",
-        "nome": "Sinfra-MT",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "tce-mt",
         "nome": "TCE-MT",
         "itens": 0,
@@ -433,15 +442,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-vg",
-        "nome": "Câmara de Várzea Grande",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "sorriso",
         "nome": "Prefeitura de Sorriso",
         "itens": 0,
@@ -460,8 +460,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "dae-vg",
-        "nome": "DAE Várzea Grande",
+        "id": "camara-vg",
+        "nome": "Câmara de Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -471,6 +471,15 @@
         "tipo": "assessoria",
         "id": "sanecap",
         "nome": "Sanecap",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "dae-vg",
+        "nome": "DAE Várzea Grande",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,195 +505,176 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Sargento da PM é encontrado morto após mais de 20 horas de buscas em região de mata em MT",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 7,
-      "tambemEm": [
-        "Estadão MT",
-        "O Livre",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "PM foge de ataque de abelhas, se perde na mata e é encontrado morto em MT",
-      "veiculo": "O Livre",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Sargento da PM é encontrado morto em mata após 20 horas de buscas em Tangará da Serra",
-      "veiculo": "O Livre",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "VÍDEO: PM é encontrado morto após desaparecer com dois homens em área de mata em MT",
-      "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "O Documento",
-        "O Livre",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Obras alteram trânsito entre Cuiabá e Rondonópolis",
-      "veiculo": "FOLHAMAX",
-      "editoria": "regional",
-      "quentura": 6,
-      "tambemEm": [
-        "O Documento",
-        "Muvuca Popular",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Sargento encontrado morto havia sido atacado por enxame de abelhas",
-      "veiculo": "VG Notícias",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "O Documento",
-        "O Livre",
-        "g1 MT"
-      ]
-    },
-    {
-      "titulo": "Sargento da PM é encontrado morto e dois homens são resgatados com vida em mata de Tangará da Serra",
-      "veiculo": "CenárioMT",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Estadão MT",
-        "O Documento",
-        "O Livre"
-      ]
-    },
-    {
-      "titulo": "Policial encontrado morto em mata foi atacado por abelhas durante trilha em MT",
+      "titulo": "Batida entre caminhões deixa 2 mortos e provoca incêndio na BR-364 em MT; vídeo",
       "veiculo": "g1 MT",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 3,
       "tambemEm": [
         "Estadão MT",
-        "O Documento",
-        "O Livre"
+        "O Documento"
       ]
     },
     {
-      "titulo": "Governo licita obras para asfaltar ruas em mais dois bairros em Cuiabá",
-      "veiculo": "Muvuca Popular",
+      "titulo": "Márcia Pinheiro tem melhora lenta e progressiva, diz Emanuel Pinheiro",
+      "veiculo": "Fatos de Mato Grosso",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 2,
       "tambemEm": [
-        "O Documento",
-        "CenárioMT",
-        "FOLHAMAX"
+        "VG Notícias",
+        "Primeira Página"
       ]
     },
     {
-      "titulo": "Paula Calil esclarece denominação das Salas de Imprensa da Câmara de Cuiabá",
+      "titulo": "Vídeos: Batida entre carretas deixa um morto e provoca incêndio na BR-364",
       "veiculo": "Estadão MT",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Esportes & Notícias",
-        "HiperNotícias - Você bem informado"
-      ]
-    },
-    {
-      "titulo": "Governo licita obras para asfaltar ruas em mais dois bairros em Cuiabá",
-      "veiculo": "NOTÍCIA E FATOS",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "O Documento",
-        "Muvuca Popular",
-        "CenárioMT"
-      ]
-    },
-    {
-      "titulo": "Estado licita quase R$ 13 milhões para obras de asfalto em mais dois bairros em Cuiabá",
-      "veiculo": "O Documento",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Muvuca Popular",
-        "CenárioMT",
-        "FOLHAMAX"
-      ]
-    },
-    {
-      "titulo": "Governo de MT licita R$ 12,6 milhões para pavimentação e drenagem no Parque Cuiabá e São Sebastião",
-      "veiculo": "CenárioMT",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "O Documento",
-        "Muvuca Popular",
-        "NOTÍCIA E FATOS"
-      ]
-    },
-    {
-      "titulo": "Paula calil admite sonho de disputar Prefeitura de Cuiabá, mas diz que foco atual é na reeleição",
-      "veiculo": "Esportes & Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "HiperNotícias - Você bem informado"
-      ]
-    },
-    {
-      "titulo": "Paula calil admite sonho de disputar Prefeitura de Cuiabá, mas diz que foco atual é na reeleição",
-      "veiculo": "Esportes & Notícias",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "HiperNotícias - Você bem informado"
-      ]
-    },
-    {
-      "titulo": "Paula Calil admite sonho de disputar Prefeitura de Cuiabá, mas prioriza reeleição | HiperNotícias - Você bem informado",
-      "veiculo": "HiperNotícias - Você bem informado",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "Esportes & Notícias"
-      ]
-    },
-    {
-      "titulo": "Paula Calil admite sonho de disputar Prefeitura de Cuiabá, mas prioriza reeleição | HiperNotícias - Você bem informado",
-      "veiculo": "HiperNotícias - Você bem informado",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Estadão MT",
-        "Esportes & Notícias"
-      ]
-    },
-    {
-      "titulo": "PF combate esquema de migração irregular para os Estados Unidos",
-      "veiculo": "Isso É Notícia",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
         "O Documento",
         "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Batida entre veículos de carga provoca incêndio e deixa um morto em MT; veja vídeos",
+      "veiculo": "O Documento",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Estadão MT",
+        "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Governo de MT licita R$ 12,6 milhões para asfaltar ruas do Parque Cuiabá e São Sebastião",
+      "veiculo": "O Livre",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Olhar Direto",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Governo licita obras para asfaltar ruas em mais dois bairros em Cuiabá",
+      "veiculo": "LOCAL MT",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "O Livre",
+        "Olhar Direto"
+      ]
+    },
+    {
+      "titulo": "Concurso Câmara de Cuiabá MT: assinado contrato com banca e edital já pode sair",
+      "veiculo": "JC Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Blog Gran Cursos Online",
+        "Estratégia Concursos"
+      ]
+    },
+    {
+      "titulo": "Concurso Câmara de Cuiabá MT: assinado contrato com banca e edital já pode sair",
+      "veiculo": "JC Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Blog Gran Cursos Online",
+        "Estratégia Concursos"
+      ]
+    },
+    {
+      "titulo": "Governo licita obras para asfaltar ruas em mais dois bairros em Cuiabá",
+      "veiculo": "Olhar Direto",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "O Livre",
+        "LOCAL MT"
+      ]
+    },
+    {
+      "titulo": "Várzea Grande abre seletivo com 5.156 vagas na educação e salário de até R$ 4.670",
+      "veiculo": "Fatos de Mato Grosso",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Qconcursos Folha Dirigida",
+        "Prefeitura Municipal de Várzea Grande - Página Inicial"
+      ]
+    },
+    {
+      "titulo": "Várzea Grande abre processo seletivo para contratação de profissionais da Educação em 2027",
+      "veiculo": "Prefeitura Municipal de Várzea Grande - Página Inicial",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "noveen.com.br",
+        "Fatos de Mato Grosso"
+      ]
+    },
+    {
+      "titulo": "Defensor pede novo processo administrativo contra juíza por conduta durante júri",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Estadão MT"
+      ]
+    },
+    {
+      "titulo": "MEI poderá faturar até R$ 140 mil e ter dívidas perdoadas; veja o que muda",
+      "veiculo": "Primeira Página",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Márcia Pinheiro completa um mês internada após AVC e ex-prefeito cita recuperação lenta; &#8216;uma vitória a cada dia&#8217;",
+      "veiculo": "Primeira Página",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Fatos de Mato Grosso"
+      ]
+    },
+    {
+      "titulo": "Câmara aprova aumento do teto de receita do MEI para R$ 140 mil",
+      "veiculo": "CenárioMT",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Primeira Página"
+      ]
+    },
+    {
+      "titulo": "Secretaria seleciona professores de MT para atividades pedagógicas com bolsa de R$ 2,5 mil",
+      "veiculo": "Só Notícias",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "CenárioMT"
+      ]
+    },
+    {
+      "titulo": "Sobe para dois o número de mortos em colisão entre caminhões na rodovia BR-364",
+      "veiculo": "O Documento",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 MT"
+      ]
+    },
+    {
+      "titulo": "Empresas de MT têm até quinta para solicitar adesão ao Simples Nacional 2027",
+      "veiculo": "Muvuca Popular",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Fecomércio MT"
       ]
     }
   ]
