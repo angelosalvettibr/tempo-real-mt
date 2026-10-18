@@ -1,35 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-18T17:17:41.160Z",
+  "gerado": "2026-10-18T20:31:59.908Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 25,
-    "confirmadas": 2,
+    "pauta": 37,
+    "fonteLivre": 20,
+    "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 6
+    "semFonte": 4
   },
   "fontes": {
     "checadas": 31,
     "responderam": 26,
-    "entregando": 13,
-    "itens": 65,
+    "entregando": 12,
+    "itens": 57,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -46,9 +37,18 @@
       },
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,7 +57,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -66,24 +66,6 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -100,8 +82,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -118,8 +100,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 1,
         "ok": true,
         "respondeu": true,
@@ -135,9 +117,27 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,6 +235,15 @@
       },
       {
         "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -253,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +280,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,15 +295,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -303,60 +303,39 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "Trump declara apoio a Netanyahu nas eleições de Israel e chama premiê de parceiro pela paz",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
       "titulo": "Incêndio em base militar no Canadá deixa 4 mortos; governo descarta terrorismo",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Euronews",
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Vários mortos e feridos após incidente em base militar do Canadá",
-      "veiculo": "Euronews",
+      "titulo": "Donald Trump declara apoio a Netanyahu na eleição de Israel",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Folha Mundo",
-        "g1 Mundo"
+        "Folha Mundo"
       ]
     },
     {
       "titulo": "Incêndio de grandes proporções em base militar no Canadá deixa mortos e feridos",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Euronews",
         "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Protestos contra custo de vida se espalham na Europa após manifestações na França",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "50 detidos em protestos contra o custo de vida em Milão, Turim e Bolonha",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "França em choque após dia de caos nas manifestações contra o custo de vida",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
       ]
     }
   ]
