@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-10-21T13:47:50.440Z",
+  "gerado": "2026-10-21T18:37:57.092Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 207,
-    "fonteLivre": 86,
-    "confirmadas": 25,
+    "pauta": 212,
+    "fonteLivre": 87,
+    "confirmadas": 17,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 39
+    "semFonte": 47
   },
   "fontes": {
     "checadas": 130,
     "responderam": 80,
     "entregando": 30,
-    "itens": 293,
+    "itens": 299,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -82,8 +91,17 @@
       },
       {
         "tipo": "resgate",
-        "id": "zh",
-        "nome": "Zero Hora",
+        "id": "valor",
+        "nome": "Valor",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -100,17 +118,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "valor",
-        "nome": "Valor",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "zh",
+        "nome": "Zero Hora",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -163,8 +172,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
+        "id": "g1politica",
+        "nome": "g1 Política",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -198,18 +207,18 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
-        "itens": 9,
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "g1politica",
-        "nome": "g1 Política",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -225,10 +234,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 9,
+        "tipo": "pauta",
+        "id": "g1economia",
+        "nome": "g1 Economia",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -237,16 +246,7 @@
         "tipo": "livre",
         "id": "ab-geral",
         "nome": "Agência Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
-        "itens": 5,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -264,7 +264,7 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -316,15 +316,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "valor",
         "nome": "Valor",
         "itens": 0,
@@ -334,8 +325,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "migalhas",
-        "nome": "Migalhas",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -345,6 +336,15 @@
         "tipo": "pauta",
         "id": "r7",
         "nome": "R7",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
+        "id": "migalhas",
+        "nome": "Migalhas",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -429,7 +429,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 401"
       },
       {
         "tipo": "livre",
@@ -469,15 +469,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "anp",
         "nome": "ANP",
         "itens": 0,
@@ -489,6 +480,15 @@
         "tipo": "livre",
         "id": "inmet",
         "nome": "Inmet",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -532,8 +532,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "prf",
+        "nome": "Polícia Rodoviária Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -559,8 +559,8 @@
       },
       {
         "tipo": "livre",
-        "id": "prf",
-        "nome": "Polícia Rodoviária Federal",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -586,8 +586,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mma",
-        "nome": "Ministério do Meio Ambiente",
+        "id": "icmbio",
+        "nome": "ICMBio",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -595,8 +595,8 @@
       },
       {
         "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
+        "id": "mma",
+        "nome": "Ministério do Meio Ambiente",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -631,24 +631,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mds",
-        "nome": "Ministério do Desenvolvimento Social",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "transportes",
         "nome": "Ministério dos Transportes",
         "itens": 0,
@@ -658,8 +640,26 @@
       },
       {
         "tipo": "livre",
+        "id": "mds",
+        "nome": "Ministério do Desenvolvimento Social",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "mme",
         "nome": "Ministério de Minas e Energia",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -685,17 +685,17 @@
       },
       {
         "tipo": "livre",
-        "id": "inss",
-        "nome": "INSS",
+        "id": "fiocruz",
+        "nome": "Fiocruz",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
-        "id": "funai",
-        "nome": "Funai",
+        "id": "inss",
+        "nome": "INSS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -712,12 +712,12 @@
       },
       {
         "tipo": "livre",
-        "id": "fiocruz",
-        "nome": "Fiocruz",
+        "id": "funai",
+        "nome": "Funai",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -730,6 +730,15 @@
       },
       {
         "tipo": "livre",
+        "id": "antt",
+        "nome": "ANTT",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "itamaraty",
         "nome": "Itamaraty",
         "itens": 0,
@@ -739,12 +748,12 @@
       },
       {
         "tipo": "livre",
-        "id": "antt",
-        "nome": "ANTT",
+        "id": "ans",
+        "nome": "ANS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -757,8 +766,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ans",
-        "nome": "ANS",
+        "id": "ipea",
+        "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -775,15 +784,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ipea",
-        "nome": "Ipea",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
         "id": "planalto",
         "nome": "Planalto",
         "itens": 0,
@@ -793,8 +793,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cnj",
-        "nome": "CNJ",
+        "id": "agu",
+        "nome": "AGU",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -811,8 +811,8 @@
       },
       {
         "tipo": "livre",
-        "id": "agu",
-        "nome": "AGU",
+        "id": "cnj",
+        "nome": "CNJ",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -901,8 +901,8 @@
       },
       {
         "tipo": "livre",
-        "id": "anm",
-        "nome": "ANM",
+        "id": "ana",
+        "nome": "ANA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -910,8 +910,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ana",
-        "nome": "ANA",
+        "id": "anm",
+        "nome": "ANM",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -964,8 +964,8 @@
       },
       {
         "tipo": "livre",
-        "id": "bndes",
-        "nome": "BNDES",
+        "id": "portos",
+        "nome": "Ministério de Portos e Aeroportos",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -973,8 +973,8 @@
       },
       {
         "tipo": "livre",
-        "id": "portos",
-        "nome": "Ministério de Portos e Aeroportos",
+        "id": "bndes",
+        "nome": "BNDES",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1054,24 +1054,6 @@
       },
       {
         "tipo": "livre",
-        "id": "codevasf",
-        "nome": "Codevasf",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "camara-inf",
-        "nome": "Câmara dos Deputados",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "sudam",
         "nome": "Sudam",
         "itens": 0,
@@ -1083,6 +1065,24 @@
         "tipo": "livre",
         "id": "integra",
         "nome": "Ministério da Integração",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "codevasf",
+        "nome": "Codevasf",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "camara-inf",
+        "nome": "Câmara dos Deputados",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1108,6 +1108,15 @@
       },
       {
         "tipo": "livre",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ccee",
         "nome": "CCEE",
         "itens": 0,
@@ -1123,15 +1132,6 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       },
       {
         "tipo": "livre",
@@ -1194,186 +1194,195 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Pesquisa Palver mostra Flávio Bolsonaro numericamente à frente de Lula",
-      "veiculo": "CartaCapital",
+      "titulo": "Campanha de Lula comemora dados da pesquisa Quaest que mostram empate técnico com Flávio",
+      "veiculo": "Exame",
       "editoria": "brasil",
-      "quentura": 17,
+      "quentura": 10,
       "tambemEm": [
-        "g1",
-        "Exame",
-        "Congresso em Foco"
+        "CartaCapital",
+        "Congresso em Foco",
+        "JOTA"
       ]
     },
     {
-      "titulo": "Última pesquisa Datafolha para presidente no segundo turno testa se Lula vira sobre Flávio Bolsonaro após debate da Globo",
-      "veiculo": "Valor Econômico",
-      "quentura": 17,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Debate presidencial da Globo: data, horário e onde assistir ao último confronto de Lula e Flávio Bolsonaro",
-      "veiculo": "Valor Econômico",
-      "quentura": 16,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro lidera numericamente, mas segue empatado com Lula, diz pesquisa Meio/Ideia",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 15,
-      "tambemEm": [
-        "g1",
-        "Exame",
-        "CartaCapital"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro deve ignorar desafio de quebra de sigilo proposto por Lula",
+      "titulo": "Flávio Bolsonaro diz que abre sigilo se Lula abrir o de Marcola, e campanha formaliza condição ao TSE",
       "veiculo": "Folha",
       "editoria": "brasil",
-      "quentura": 12,
+      "quentura": 9,
       "tambemEm": [
-        "g1",
+        "Exame",
+        "Congresso em Foco",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Quaest mostra Lula à frente de Flávio Bolsonaro em potencial de voto no 2º turno",
+      "veiculo": "CartaCapital",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "Exame",
+        "Congresso em Foco",
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Globo/Quaest registra diferença de um ponto entre Flávio Bolsonaro e Lula",
+      "veiculo": "JOTA",
+      "editoria": "brasil",
+      "quentura": 8,
+      "tambemEm": [
+        "Exame",
         "CartaCapital",
         "Congresso em Foco"
       ]
     },
     {
-      "titulo": "Lula condiciona ida ao debate na Globo à abertura de sigilos de Flávio",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
+      "titulo": "Palver: Flávio Bolsonaro tem 50% e Lula, 48%, em empate técnico",
+      "veiculo": "Correio Braziliense",
       "quentura": 8,
       "tambemEm": [
-        "g1 Política",
-        "Folha",
-        "GZH"
+        "Exame",
+        "CartaCapital",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Última pesquisa Datafolha para presidente no segundo turno testa se Lula vira sobre Flávio Bolsonaro após debate da Globo",
+      "veiculo": "Valor Econômico",
+      "quentura": 7,
+      "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "JOTA"
       ]
     },
     {
       "titulo": "Campanha de Flávio rejeita proposta de Lula sobre quebra de sigilos",
       "veiculo": "Correio Braziliense",
-      "quentura": 8,
+      "quentura": 7,
       "tambemEm": [
-        "g1",
+        "Exame",
         "BBC Brasil",
+        "g1 Política"
+      ]
+    },
+    {
+      "titulo": "Flávio diz que governo Lula é “fake” e Brasil está sem presidente",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "Exame",
+        "Folha",
+        "Valor Econômico"
+      ]
+    },
+    {
+      "titulo": "Lula ou Flávio? Como estão as pesquisas a quatro dias do 2º turno",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "Exame",
+        "CartaCapital",
+        "JOTA"
+      ]
+    },
+    {
+      "titulo": "Após desafio de Lula, Flávio prococola no TSE pedido de quebra de sigilo de aliados do presidente",
+      "veiculo": "Exame",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "g1 Política",
+        "Folha",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Pesquisa Meio/Ideia mostra Flávio com 51,1% e Lula com 48,9% dos votos válidos no segundo turno",
+      "veiculo": "GZH",
+      "quentura": 5,
+      "tambemEm": [
+        "Exame",
+        "CartaCapital",
         "Congresso em Foco"
       ]
     },
     {
-      "titulo": "Flávio e Lula seguem tecnicamente empatados, mostra pesquisa Futura",
-      "veiculo": "CartaCapital",
+      "titulo": "Campanha se apoia em queda de rejeição de Lula para virar sobre Flávio",
+      "veiculo": "Poder360",
       "editoria": "brasil",
-      "quentura": 7,
+      "quentura": 4,
       "tambemEm": [
         "Exame",
-        "Congresso em Foco",
-        "g1 Política"
+        "BBC Brasil",
+        "Folha"
       ]
     },
     {
       "titulo": "Lula envia documento ao TSE que autoriza a quebra de sigilos bancário, fiscal e telefônico se Flávio fizer o mesmo",
       "veiculo": "GZH",
-      "quentura": 5,
-      "tambemEm": [
-        "Congresso em Foco",
-        "CNN Brasil",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Com Tarcísio, Flávio Bolsonaro realiza seu último ato de campanha em SP",
-      "veiculo": "Metrópoles",
-      "editoria": "brasil",
       "quentura": 4,
       "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política",
-        "Valor Econômico"
+        "Exame",
+        "Poder360",
+        "Correio Braziliense"
       ]
     },
     {
-      "titulo": "Flávio Bolsonaro prioriza ofensiva digital e debate da Globo na reta final do segundo turno",
+      "titulo": "Debate presidencial da Globo: data, horário e onde assistir ao último confronto de Lula e Flávio Bolsonaro",
       "veiculo": "Valor Econômico",
       "quentura": 4,
       "tambemEm": [
-        "Congresso em Foco",
         "g1 Política",
-        "Folha"
+        "JOTA",
+        "Poder360"
       ]
     },
     {
-      "titulo": "Lula sanciona hoje aumento do teto do MEI e envia PEC de ônibus gratuito aos finais de semana",
-      "veiculo": "Exame",
+      "titulo": "Flávio diz que aceita abrir sigilo se Marcola fizer o mesmo",
+      "veiculo": "Poder360",
       "editoria": "brasil",
       "quentura": 3,
       "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Ao Vivo | Barraco, bate-boca e denúncia de bomba: como foi o debate entre Flávio e Lula",
-      "veiculo": "Estadão",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "TSE manda Lula suspender propaganda que associa Flávio a assédio",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
+        "BBC Brasil",
+        "Folha",
         "GZH"
       ]
     },
     {
-      "titulo": "\"ViraPix\": Flávio Bolsonaro promete programa de cashback em contas",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Perfis usam mulheres de IA em campanha por Flávio e Lula para vender conteúdo adulto",
-      "veiculo": "BBC Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Política",
-        "Correio Braziliense"
-      ]
-    },
-    {
-      "titulo": "Trump faz doação sem precedentes de US$ 277 milhões na reta final das eleições de meio de mandato",
-      "veiculo": "Folha",
-      "editoria": "brasil",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Com o apoio de ex-presidentes do STF, Comissão Arns lança manifesto pela democracia",
+      "titulo": "Especialistas da ONU questionam a conduta da Meta na eleição brasileira",
       "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 3,
       "tambemEm": [
+        "Congresso em Foco",
+        "g1 Política",
         "Poder360"
+      ]
+    },
+    {
+      "titulo": "Na TV, Lula critica 'tesouraço' de Flávio Bolsonaro e exibe depoimento de ex-ministro de Jair; candidato do PL trata de mulheres e relembra debate",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "JOTA",
+        "Valor Econômico",
+        "Correio Braziliense"
+      ]
+    },
+    {
+      "titulo": "Em resposta a 'desafio' de Lula, Flávio impõe condições ao petista para liberar sigilos",
+      "veiculo": "g1 Política",
+      "editoria": "brasil",
+      "quentura": 3,
+      "tambemEm": [
+        "Exame",
+        "Folha",
+        "Correio Braziliense"
       ]
     }
   ]

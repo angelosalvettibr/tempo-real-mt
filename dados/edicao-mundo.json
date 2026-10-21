@@ -1,26 +1,53 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-21T13:45:08.682Z",
+  "gerado": "2026-10-21T18:35:31.138Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 64,
+    "pauta": 39,
+    "fonteLivre": 72,
     "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 4
+    "semFonte": 2
   },
   "fontes": {
-    "checadas": 32,
-    "responderam": 25,
+    "checadas": 30,
+    "responderam": 24,
     "entregando": 14,
-    "itens": 104,
+    "itens": 111,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -37,9 +64,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 11,
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -64,42 +91,6 @@
       },
       {
         "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
         "itens": 8,
@@ -109,9 +100,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +111,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 3,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,7 +120,16 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 3,
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -142,15 +142,6 @@
         "ok": true,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
       },
       {
         "tipo": "pauta",
@@ -204,7 +195,7 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -253,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -295,15 +286,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -312,26 +294,8 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Itália cria novo crime para punir violência em manifestações; medida faz parte de pacote de segurança",
-      "veiculo": "RFI Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Eleição no Brasil é a mais importante para o mundo fora dos EUA em 2026, diz Daron Acemoglu",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Eleição no Brasil é a mais importante para o mundo fora dos EUA em 2026, diz Daron Acemoglu",
-      "veiculo": "BBC Brasil",
+      "titulo": "Milei chama \"ditador inaceitável\" a Sánchez e o governante espanhol responde: \"Sim, sou de esquerda\"",
+      "veiculo": "Euronews",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -339,11 +303,12 @@
       ]
     },
     {
-      "titulo": "Vídeo. Itália: novo decreto institui crime de participação violenta em manifestações",
-      "veiculo": "Euronews.com",
+      "titulo": "Milei chama primeiro-ministro da Espanha de ditador",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "RFI Brasil"
+        "Euronews"
       ]
     }
   ]
