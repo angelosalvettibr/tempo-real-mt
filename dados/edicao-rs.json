@@ -1,21 +1,21 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-10-25T00:18:36.946Z",
+  "gerado": "2026-10-25T13:17:17.418Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 123,
-    "fonteLivre": 69,
-    "confirmadas": 12,
+    "pauta": 116,
+    "fonteLivre": 73,
+    "confirmadas": 15,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 76
+    "semFonte": 68
   },
   "fontes": {
     "checadas": 42,
     "responderam": 24,
     "entregando": 21,
-    "itens": 192,
+    "itens": 189,
     "lista": [
       {
         "tipo": "assessoria",
@@ -46,7 +46,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -55,7 +55,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -82,8 +82,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
+        "id": "gzh",
+        "nome": "GZH",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -91,8 +91,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -117,10 +117,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-pelotas",
-        "nome": "Pelotas",
+        "tipo": "assessoria",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
         "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "ssp-rs",
+        "nome": "Secretaria de Segurança do RS",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,16 +138,7 @@
         "tipo": "pauta",
         "id": "gn-rs-canoas",
         "nome": "Canoas",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 9,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -180,9 +180,9 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
+        "tipo": "pauta",
+        "id": "gn-rs-pelotas",
+        "nome": "Pelotas",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -190,8 +190,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "ssp-rs",
-        "nome": "Secretaria de Segurança do RS",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -226,21 +226,21 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
-      },
-      {
-        "tipo": "pauta",
         "id": "gzh",
         "nome": "GZH",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -361,15 +361,6 @@
       },
       {
         "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "camara-santoangelo",
         "nome": "Câmara de Santo Ângelo",
         "itens": 0,
@@ -379,8 +370,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -390,6 +381,15 @@
         "tipo": "assessoria",
         "id": "caxias",
         "nome": "Prefeitura de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,56 +411,156 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Homem ameaça vizinhas com arma após roubar bandeira de apoio a Lula em Porto Alegre",
-      "veiculo": "Sul21",
+      "titulo": "Concurso GM de Santa Maria de Jetibá ES: 50 oportunidades",
+      "veiculo": "Focus Concursos",
       "editoria": "regional",
-      "quentura": 4,
+      "quentura": 3,
       "tambemEm": [
-        "g1 RS",
+        "G1",
+        "Diário de Santa Maria"
+      ]
+    },
+    {
+      "titulo": "Clima: domingo de 2º turno tem chuva no Sul e calor de até 40ºC no Nordeste",
+      "veiculo": "Metrópoles",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Agora RS",
+        "Brasil 61",
         "Correio do Povo"
       ]
     },
     {
-      "titulo": "Polícia apreende arma após ameaça a mulheres em Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 2,
+      "titulo": "Onde votar? Saiba como consultar seu local de votação",
+      "veiculo": "GZH",
+      "quentura": 3,
       "tambemEm": [
         "Sul21",
-        "Terra"
+        "Santa Maria – 24 horas",
+        "Correio do Povo"
       ]
     },
     {
-      "titulo": "Polícia apreende arma após ameaça a mulheres em Porto Alegre",
-      "veiculo": "Correio do Povo",
+      "titulo": "Porto Alegre transfere ponto facultativo do Dia do Servidor para 30 de outubro",
+      "veiculo": "Prefeitura de Porto Alegre",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "Sul21",
-        "Terra"
+        "g1 RS",
+        "Jornal do Comércio"
       ]
     },
     {
-      "titulo": "Apoiadores de Lula se reúnem para caminhada e ato em Porto Alegre",
-      "veiculo": "g1 RS",
+      "titulo": "Porto Alegre transfere ponto facultativo do Dia do Servidor para 30 de outubro",
+      "veiculo": "Prefeitura de Porto Alegre",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "g1 RS",
+        "Jornal do Comércio"
+      ]
+    },
+    {
+      "titulo": "Consulte o local de votação antes de sair de casa; saiba como",
+      "veiculo": "Sul21",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Sul21",
+        "Correio do Povo",
         "GZH"
       ]
     },
     {
-      "titulo": "Prefeitura promove educação ambiental em comemoração a 33°Semana Interamericana da Água",
-      "veiculo": "– Prefeitura Municipal de Canoas",
-      "editoria": "regional",
+      "titulo": "TSE: Nunes Marques acompanha abertura de sua seção eleitoral em Brasília",
+      "veiculo": "Correio do Povo",
       "quentura": 2,
       "tambemEm": [
-        "Instagram"
+        "Sul21"
       ]
     },
     {
-      "titulo": "Chuvas intensas provocam alagamentos, interrompem travessia e deixam desabrigados no RS",
+      "titulo": "Mulher esfaqueada morre no Hospital Cristo Redentor, em Porto Alegre",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Mulher esfaqueada morre no Hospital Cristo Redentor, em Porto Alegre",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Previsão do tempo hoje para Porto Alegre (RS): sol com algumas nuvens; chove rápido durante o dia e à noite",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Prefeitura de Porto Alegre"
+      ]
+    },
+    {
+      "titulo": "Pesquisa Datafolha mostra Flávio Bolsonaro com 51% e Lula com 49% dos votos válidos no segundo turno",
+      "veiculo": "GZH",
+      "quentura": 2,
+      "tambemEm": [
+        "Sul21"
+      ]
+    },
+    {
+      "titulo": "Brasil vai às urnas com chuva no Centro-Sul e sol no Nordeste",
+      "veiculo": "Correio do Povo",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Quaest: no 2º turno, Flávio Bolsonaro registra 51% e Lula 49% dos votos válidos",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Flávio Bolsonaro vota no RJ e convoca eleitores: &#8216;chegou a hora da mudança&#8217;",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Homem é preso com meio quilo de cocaína no bairro Jardelino Ramos, em Caxias do Sul",
+      "veiculo": "Rádio Solaris",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Brasil: ser ou não ser (por Luiz Marques)",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Do hospital à mesa do restaurante: como os robôs estão ganhando espaço na Serra Gaúcha",
       "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 1,
@@ -469,111 +569,12 @@
       ]
     },
     {
-      "titulo": "Chuvas provocam alagamentos e interrompem travessia no RS",
-      "veiculo": "G1",
+      "titulo": "Previsão do tempo hoje para Caxias do Sul (RS): tempo chuvoso de manhã; aberturas de sol à tarde e pancadas de chuva que vão até a noite",
+      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Canela é um dos sete municípios gaúchos contemplados pelo projeto Redes Verdes Vivas, iniciativa que reúne ações de sustentabilidade, educação ambiental e valorização das mulheres do meio rural. O prefeito Gilberto Cezar participou do seminário inici",
-      "veiculo": "Instagram",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Canela é um dos sete municípios gaúchos contemplados pelo projeto Redes Verdes Vivas, iniciativa que reúne ações de sustentabilidade, educação ambiental e valorização das mulheres do meio rural. O prefeito Gilberto Cezar participou do seminário inici",
-      "veiculo": "Instagram",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Tenente da reserva aponta arma após tirar bandeira do PT de mulheres no RS",
-      "veiculo": "UOL Notícias",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Inmet alerta para temporais no Centro-Sul no fim de semana",
-      "veiculo": "Agência Brasil",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Rádio Acústica FM"
-      ]
-    },
-    {
-      "titulo": "Rompimento de adutora pode afetar abastecimento de água na região do bairro Reolon, em Caxias do Sul",
-      "veiculo": "Leouve",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Radio Caxias FM"
-      ]
-    },
-    {
-      "titulo": "A partir desta segunda-feira (26), a Unidade Básica de Saúde (UBS) Nova Niterói ficará fechada temporariamente para reforma em Canoas. Os moradores do bairro Niterói poderão buscar assistência nas UBSs Niterói e João de Barro. A previsão é de que o",
-      "veiculo": "Instagram",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "abc+"
-      ]
-    },
-    {
-      "titulo": "Unidade de Saúde Nova Niterói fecha temporariamente para reforma a partir desta segunda-feira",
-      "veiculo": "abc+",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Instagram"
-      ]
-    },
-    {
-      "titulo": "Homem morre em confronto com a polícia em Caxias do Sul",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Leouve"
-      ]
-    },
-    {
-      "titulo": "UM SÉCULO DE PIONEIRISMO, INCLUSÃO E CIDADANIA | Associação Pestalozzi de Canoas celebra 100 anos de história no Brasil",
-      "veiculo": "Notícias da Aldeia",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "abc+"
-      ]
-    },
-    {
-      "titulo": "Rompimento de adutora pode afetar abastecimento de água no Reolon e região neste sábado",
-      "veiculo": "Radio Caxias FM",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Leouve"
-      ]
-    },
-    {
-      "titulo": "Associação Pestalozzi de Canoas completa 100 anos; confira programação especial",
-      "veiculo": "abc+",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Notícias da Aldeia"
+        "Correio do Povo"
       ]
     }
   ]
