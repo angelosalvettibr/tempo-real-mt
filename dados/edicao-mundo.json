@@ -1,26 +1,44 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-28T15:04:47.115Z",
+  "gerado": "2026-10-28T22:32:38.981Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 59,
-    "confirmadas": 4,
+    "pauta": 41,
+    "fonteLivre": 55,
+    "confirmadas": 9,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 7
+    "semFonte": 5
   },
   "fontes": {
-    "checadas": 30,
-    "responderam": 24,
-    "entregando": 13,
-    "itens": 102,
+    "checadas": 31,
+    "responderam": 25,
+    "entregando": 12,
+    "itens": 96,
     "lista": [
       {
         "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -36,24 +54,6 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
@@ -63,9 +63,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -81,19 +81,19 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 8,
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 6,
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,16 +111,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 3,
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -154,12 +145,30 @@
       },
       {
         "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 429"
+      },
+      {
+        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -172,15 +181,6 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 415"
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
@@ -190,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -199,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,6 +286,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,74 +303,48 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Flávio Bolsonaro chega aos EUA; ACOMPANHE",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 5,
-      "tambemEm": [
-        "AP - Luis Nova",
-        "Euronews",
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "O que se sabe sobre saída de Flávio Bolsonaro do Brasil",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 4,
-      "tambemEm": [
-        "AP - Luis Nova",
-        "Euronews",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro desembarca na Flórida",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 4,
-      "tambemEm": [
-        "AP - Luis Nova",
-        "Euronews",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Flávio Bolsonaro já aterrou nos Estados Unidos. Estratega de Milei terá participado na operação",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Donald Trump diz que aprovaria visto para Flávio Bolsonaro após fuga do Brasil",
-      "veiculo": "AP - Luis Nova",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "'Confusão sobre paradeiro de Flávio Bolsonaro': imprensa mundial repercute fuga de senador para os EUA",
+      "titulo": "Morre aos 92 anos juiz que julgava caso de Maduro nos EUA",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "China vê vitória de Lula como revés para influência de Trump na América Latina",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
         "BBC Brasil"
       ]
     },
     {
-      "titulo": "Quais seriam os caminhos possíveis para Flávio ficar legalmente nos EUA",
-      "veiculo": "BBC Brasil",
+      "titulo": "Morre Dolores Huerta, pioneira na luta por direitos de trabalhadores rurais nos EUA, aos 96 anos",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Morre aos 92 anos juiz que conduzia caso de Maduro em NY",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Relação entre Trump e Lula pode azedar mais?",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
       ]
     }
   ]
