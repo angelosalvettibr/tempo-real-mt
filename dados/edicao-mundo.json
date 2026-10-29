@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-29T15:12:01.101Z",
+  "gerado": "2026-10-29T22:45:04.921Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 38,
-    "fonteLivre": 64,
+    "pauta": 46,
+    "fonteLivre": 69,
     "confirmadas": 7,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 0
+    "semFonte": 6
   },
   "fontes": {
     "checadas": 31,
     "responderam": 26,
     "entregando": 13,
-    "itens": 102,
+    "itens": 115,
     "lista": [
       {
         "tipo": "pauta",
@@ -37,6 +37,15 @@
       },
       {
         "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
         "itens": 12,
@@ -46,17 +55,17 @@
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -82,9 +91,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 7,
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,16 +102,25 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 7,
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 6,
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -112,24 +130,6 @@
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -147,6 +147,15 @@
         "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -172,15 +181,6 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
@@ -199,8 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,8 +235,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,17 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -273,6 +264,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -301,5 +301,60 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": []
+  "pautas": [
+    {
+      "titulo": "Ícone de 'X-Men' e 'Star Trek', ator Patrick Stewart morre aos 86 anos",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Patrick Stewart, estrela de “Star Trek” e “X-Men”, morre aos 86 anos",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Eleições nos EUA 2026: acompanhe as últimas notícias sobre as midterms",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "França, atentado em Trappes: suspeito admite ter visado muçulmanos e pessoas de origem africana",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Emma Da Silva - Emma Da Silva"
+      ]
+    },
+    {
+      "titulo": "Notícias do dia | 29 de outubro 2026 - Noite",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Homem preso após ataque racista na França admite ter visado ‘pessoas de origem muçulmana e africana’",
+      "veiculo": "AP Photo/Emma Da Silva - Emma Da Silva",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    }
+  ]
 }
