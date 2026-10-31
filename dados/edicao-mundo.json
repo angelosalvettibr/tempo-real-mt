@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-10-30T22:15:19.644Z",
+  "gerado": "2026-10-31T14:34:38.929Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 73,
-    "confirmadas": 1,
+    "pauta": 44,
+    "fonteLivre": 56,
+    "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 11
   },
   "fontes": {
-    "checadas": 32,
-    "responderam": 26,
-    "entregando": 13,
-    "itens": 116,
+    "checadas": 30,
+    "responderam": 25,
+    "entregando": 12,
+    "itens": 100,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -28,35 +37,8 @@
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -72,9 +54,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -91,18 +73,36 @@
       },
       {
         "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 7,
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,16 +120,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -142,15 +133,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
       },
       {
         "tipo": "livre",
@@ -195,12 +177,12 @@
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "This operation was aborted"
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -208,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,6 +253,15 @@
       },
       {
         "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
         "itens": 0,
@@ -295,15 +286,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -312,8 +294,47 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Binance sofre ataque hacker de US$ 6,3 bilhões: por que Coreia do Norte pode estar por trás do possível maior roubo da história das criptomoedas",
+      "titulo": "A história de como uma sobrevivente de violência sexual do século 15 buscou justiça",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Presidente polaco acusa governo de \"golpe de Estado\" e entra à força no Tribunal Constitucional",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "A história de como uma sobrevivente de violência sexual do século 15 buscou justiça",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "BBC Brasil",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "A história de como uma sobrevivente de violência sexual do século 15 buscou justiça",
       "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Eleições nos EUA 2026: acompanhe as últimas notícias sobre as midterms",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
@@ -321,19 +342,57 @@
       ]
     },
     {
-      "titulo": "Ataque à Binance: como aconteceu e quem está por trás",
-      "veiculo": "Euronews",
+      "titulo": "Presidente da Polônia convoca reuniões após crise no Tribunal Constitucional e acusação de golpe",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "Euronews"
       ]
     },
     {
-      "titulo": "Maior assalto bancário da história: ataque à Binance abala setor cripto",
+      "titulo": "Notícias do dia | 31 de outubro 2026 - Tarde",
       "veiculo": "Euronews",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Zelenskyy agradece 500 mísseis dos EUA, mas alerta que entrega pode demorar anos",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Notícias do dia | 31 de outubro 2026 - Manhã",
+      "veiculo": "Euronews",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "EUA aprovam venda de 500 mísseis Patriot à Ucrânia por US$ 2,1 bilhões",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Direita acusa governo da Polônia de golpe após suspensão do presidente do Tribunal Constitucional",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews"
       ]
     }
   ]
