@@ -1,26 +1,35 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-11-03T03:34:29.663Z",
+  "gerado": "2026-11-03T16:13:49.101Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 119,
-    "fonteLivre": 60,
-    "confirmadas": 21,
+    "pauta": 122,
+    "fonteLivre": 14,
+    "confirmadas": 5,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 69
+    "semFonte": 89
   },
   "fontes": {
     "checadas": 42,
-    "responderam": 24,
-    "entregando": 21,
-    "itens": 179,
+    "responderam": 16,
+    "entregando": 13,
+    "itens": 136,
     "lista": [
       {
         "tipo": "pauta",
         "id": "g1rs",
         "nome": "g1 RS",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-caxiasdosu",
+        "nome": "Caxias do Sul",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,15 +82,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-caxiasdosu",
-        "nome": "Caxias do Sul",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "gn-rs-santamaria",
         "nome": "Santa Maria",
         "itens": 11,
@@ -109,45 +109,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "defesacivil-rs",
-        "nome": "Defesa Civil do RS",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "ssp-rs",
-        "nome": "Secretaria de Segurança do RS",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "saude-rs",
-        "nome": "Secretaria de Saúde do RS",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 7,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -156,7 +120,7 @@
         "tipo": "pauta",
         "id": "gn-rs-pelotas",
         "nome": "Pelotas",
-        "itens": 5,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -171,42 +135,6 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "seapi-rs",
-        "nome": "Agricultura RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "educacao-rs",
-        "nome": "Secretaria de Educação do RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "jc",
         "nome": "Jornal do Comércio",
@@ -214,6 +142,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -235,21 +172,21 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "brasil247rs",
         "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "resgate",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "resgate",
@@ -261,13 +198,13 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "tipo": "assessoria",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
       },
       {
         "tipo": "assessoria",
@@ -334,8 +271,35 @@
       },
       {
         "tipo": "assessoria",
+        "id": "seapi-rs",
+        "nome": "Agricultura RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "emater",
         "nome": "Emater",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "ssp-rs",
+        "nome": "Secretaria de Segurança do RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -352,8 +316,44 @@
       },
       {
         "tipo": "assessoria",
+        "id": "defesacivil-rs",
+        "nome": "Defesa Civil do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "tce-rs",
         "nome": "TCE-RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "saude-rs",
+        "nome": "Secretaria de Saúde do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "educacao-rs",
+        "nome": "Secretaria de Educação do RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -379,8 +379,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
+        "id": "caxias",
+        "nome": "Prefeitura de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -388,8 +388,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "caxias",
-        "nome": "Prefeitura de Caxias do Sul",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,161 +411,188 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Escolas do Litoral Norte recebem mais de R$ 1,3 milhão em obras concluídas pelo Estado",
-      "veiculo": "Rádio Maristela",
+      "titulo": "Termina nesta terça-feira prazo para inscrições em concurso da prefeitura de Porto Alegre",
+      "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Jornal O Sul"
-      ]
-    },
-    {
-      "titulo": "Homem atropela 3 pessoas ao lado da Arena do Grêmio em noite de jogo, tenta fugir e é preso",
-      "veiculo": "abc+",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Cemitérios municipais recebem mais de 40 mil pessoas no Dia de Finados em Santos",
-      "veiculo": "Prefeitura de Santos |",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Rádio Caxias",
-        "Diário de Santa Maria"
-      ]
-    },
-    {
-      "titulo": "Missa de Finados reúne mais de 1,3 mil pessoas no Memorial Crematório São José em Caxias do Sul",
-      "veiculo": "Rádio Caxias",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Leouve",
-        "Prefeitura de Santos |"
-      ]
-    },
-    {
-      "titulo": "Temporal com granizo e ventos fortes deixa rastro de destruição no Paraná",
-      "veiculo": "Fato Novo",
-      "editoria": "regional",
-      "quentura": 2,
+      "quentura": 8,
       "tambemEm": [
         "g1 RS",
-        "Agora RS"
+        "PEBSP",
+        "Expansão"
       ]
     },
     {
-      "titulo": "Em quatro meses, escolas estaduais de 35 municípios gaúchos recebem investimento de R$ 50 milhões",
-      "veiculo": "Jornal O Sul",
+      "titulo": "Termina nesta terça-feira prazo para inscrições em concurso da prefeitura de Porto Alegre",
+      "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 8,
       "tambemEm": [
-        "Rádio Maristela"
+        "g1 RS",
+        "PEBSP",
+        "Expansão"
       ]
     },
     {
-      "titulo": "Em quatro meses, escolas estaduais de 35 municípios gaúchos recebem investimento de R$ 50 milhões",
-      "veiculo": "Jornal O Sul",
+      "titulo": "STJ retoma julgamento da Boate Kiss nesta terça-feira (3)",
+      "veiculo": "CNN Brasil",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 7,
       "tambemEm": [
-        "Rádio Maristela"
-      ]
-    },
-    {
-      "titulo": "Em quatro meses, escolas estaduais de 35 municípios gaúchos recebem investimento de R$ 50 milhões",
-      "veiculo": "Jornal O Sul",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Rádio Maristela"
-      ]
-    },
-    {
-      "titulo": "'Quando fui levantar, não tinha mais força', diz homem atropelado em frente à Arena durante jogo do Grêmio",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "abc+"
-      ]
-    },
-    {
-      "titulo": "No final de setembro, a Prefeitura de Canoas autorizou o início da construção de três pontos de apoio para os motoboys e motogirls que trabalham na cidade. O prazo inicial de entrega é em dezembro, mas pode ser prorrogado. O investimento é de R$ 495",
-      "veiculo": "Instagram",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "abc+"
-      ]
-    },
-    {
-      "titulo": "Pontos de apoio para os motoboys podem ser entregues até dezembro em Canoas",
-      "veiculo": "abc+",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Instagram"
-      ]
-    },
-    {
-      "titulo": "Quatro pessoas são presas por tráfico de drogas e perturbação do sossego em Caxias do Sul",
-      "veiculo": "Leouve",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
+        "Sul21",
+        "g1 RS",
         "Rádio Caxias"
       ]
     },
     {
-      "titulo": "VÍDEO: Três pessoas são atropeladas em frente à Arena do Grêmio após jogo da Copa do Brasil; uma vítima está em estado grave",
+      "titulo": "Feirão de empregos oferece 589 vagas em Porto Alegre nesta terça-feira; veja como participar",
       "veiculo": "g1 RS",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 5,
       "tambemEm": [
-        "abc+"
+        "Terra",
+        "Expansão",
+        "CNN Brasil"
       ]
     },
     {
-      "titulo": "Cemitérios de Santa Maria esperam até 20 mil pessoas no feriado de Finados; limpeza e segurança foram reforçadas",
-      "veiculo": "Diário de Santa Maria",
+      "titulo": "Saiba quais serviços de limpeza a Prefeitura realizará nesta terça, 3",
+      "veiculo": "Prefeitura de Aracaju",
       "editoria": "regional",
-      "quentura": 1,
+      "quentura": 5,
       "tambemEm": [
-        "Prefeitura de Santos |"
+        "Sul21",
+        "Terra",
+        "Prefeitura de Porto Alegre"
       ]
     },
     {
-      "titulo": "CIDADE. Integrado à Feisma, Santa Summit 2026 apresenta ao público o tema “Inovação em movimento”",
-      "veiculo": "Claudemir Pereira",
+      "titulo": "‘Casa das Gurias’ estreia durante a Feira do Livro de Porto Alegre",
+      "veiculo": "Expansão",
       "editoria": "regional",
-      "quentura": 0,
-      "tambemEm": []
+      "quentura": 4,
+      "tambemEm": [
+        "g1 RS",
+        "Terra",
+        "GZH"
+      ]
     },
     {
-      "titulo": "Diversificação de culturas protege lavouras contra extremos climáticos e eleva produtividade",
-      "veiculo": "Agência FAPESP",
+      "titulo": "Chuva pode chegar a 93 mm em 24 horas no Rio Grande do Sul",
+      "veiculo": "Canal Rural",
       "editoria": "regional",
-      "quentura": 0,
-      "tambemEm": []
+      "quentura": 4,
+      "tambemEm": [
+        "Secretaria do Meio Ambiente e Infraestrutura",
+        "Globo Rural",
+        "Instagram"
+      ]
     },
     {
-      "titulo": "ESPETÁCULO. Teatro Por Que Não? apresenta “Protocolo Inimigo” em duas novas sessões em novembro",
-      "veiculo": "Claudemir Pereira",
-      "editoria": "regional",
-      "quentura": 0,
-      "tambemEm": []
-    },
-    {
-      "titulo": "Melo cogita aumento nas passagens de ônibus em Porto Alegre após fim da escala 6x1",
+      "titulo": "O que muda para Trump se os democratas vencerem as eleições de meio de mandato nos EUA? | Timeline",
       "veiculo": "GZH",
+      "quentura": 3,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "HANDSON, Vereador 2012 em Santa Maria",
+      "veiculo": "CBN Amazônia",
       "editoria": "regional",
-      "quentura": 0,
-      "tambemEm": []
+      "quentura": 3,
+      "tambemEm": [
+        "Rádio Guaíba",
+        "Real News",
+        "Blog do Didi Galvão"
+      ]
+    },
+    {
+      "titulo": "Mais de 55 milhões de americanos já votaram nas eleições de meio de mandato",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 3,
+      "tambemEm": [
+        "Correio do Povo",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "UFSM - RS abre concurso para professores do magistério superior",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "PEBSP"
+      ]
+    },
+    {
+      "titulo": "Sul entra em alerta para temporais, granizo e chuva acima de 100 mm com formação de ciclone extratropical",
+      "veiculo": "Notícias Agrícolas",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "VEJA"
+      ]
+    },
+    {
+      "titulo": "Obras do Samae provocam bloqueios em ruas de três bairros de Caxias do Sul nesta semana",
+      "veiculo": "Rádio Solaris",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Rádio Caxias",
+        "Tua Rádio"
+      ]
+    },
+    {
+      "titulo": "O alerta para temporais e chuva volumosa na região Sul",
+      "veiculo": "VEJA",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "g1 RS",
+        "Notícias Agrícolas"
+      ]
+    },
+    {
+      "titulo": "Detonação de rochas vai bloquear ERS-122 nesta terça-feira em Caxias do Sul",
+      "veiculo": "Rádio Caxias",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Rádio Solaris",
+        "CNN Brasil"
+      ]
+    },
+    {
+      "titulo": "Governo do Estado avança no mapeamento topográfico do território do Rio Grande do Sul",
+      "veiculo": "Secretaria do Meio Ambiente e Infraestrutura",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Canal Rural",
+        "Instagram"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Trindade - PE divulga edital retificado de concurso público",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "PEBSP"
+      ]
+    },
+    {
+      "titulo": "Entenda como funcionam as eleições de meio de mandato nos EUA e por que a apuração pode levar dias",
+      "veiculo": "Correio do Povo",
+      "quentura": 2,
+      "tambemEm": [
+        "Sul21",
+        "GZH"
+      ]
     }
   ]
 }
