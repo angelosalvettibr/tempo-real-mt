@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-03T23:17:40.862Z",
+  "gerado": "2026-11-04T16:14:17.293Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 46,
-    "fonteLivre": 58,
-    "confirmadas": 7,
+    "pauta": 45,
+    "fonteLivre": 63,
+    "confirmadas": 5,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 14
+    "semFonte": 9
   },
   "fontes": {
-    "checadas": 29,
-    "responderam": 24,
-    "entregando": 13,
-    "itens": 104,
+    "checadas": 31,
+    "responderam": 25,
+    "entregando": 14,
+    "itens": 108,
     "lista": [
       {
         "tipo": "pauta",
@@ -27,7 +27,7 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
+        "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
         "itens": 12,
@@ -45,6 +45,15 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
@@ -54,19 +63,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 9,
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -82,8 +82,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -93,16 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 5,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +102,7 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 4,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +111,25 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
+        "itens": 5,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -144,18 +153,18 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 406"
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -172,17 +181,26 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "This operation was aborted"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -199,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -226,15 +244,6 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "eeas-pt",
         "nome": "Serviço Diplomático da UE",
         "itens": 0,
@@ -277,6 +286,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -285,147 +303,87 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Eleições de meio de mandato nos EUA: quando saem os resultados finais?",
-      "veiculo": "AP Photo/Camden Hall - Camden Hall",
-      "editoria": "internacional",
-      "quentura": 7,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo",
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Veja mapas de apuração das eleições de meio de mandato nos EUA",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 5,
-      "tambemEm": [
-        "BBC Brasil",
-        "Euronews",
-        "AP Photo/Camden Hall - Camden Hall"
-      ]
-    },
-    {
-      "titulo": "Quando sairão os resultados das eleições de meio de mandato nos EUA?",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 5,
-      "tambemEm": [
-        "Folha Mundo",
-        "Euronews",
-        "AP Photo/Camden Hall - Camden Hall"
-      ]
-    },
-    {
-      "titulo": "3 cenários possíveis para os resultados das eleições de meio de mandato nos EUA",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 5,
-      "tambemEm": [
-        "Folha Mundo",
-        "Euronews",
-        "AP Photo/Camden Hall - Camden Hall"
-      ]
-    },
-    {
-      "titulo": "Governo Trump intensifica caça a eleitores estrangeiros nas eleições de meio de mandato",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 4,
-      "tambemEm": [
-        "BBC Brasil",
-        "AP Photo/Camden Hall - Camden Hall"
-      ]
-    },
-    {
-      "titulo": "O que são as eleições de meio de mandato dos EUA e por que elas podem selar o futuro de Trump?",
+      "titulo": "Quem são os grandes vencedores das eleições americanas",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 4,
       "tambemEm": [
         "Folha Mundo",
-        "AP Photo/Camden Hall - Camden Hall"
-      ]
-    },
-    {
-      "titulo": "Acompanhe apuração dos 7 estados que concentram principais disputas pelo controle do Senado dos EUA",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "Euronews",
+        "AP Photo/Vahid Salemi - Vahid Salemi",
         "g1 Mundo"
       ]
     },
     {
-      "titulo": "Senado em equilíbrio precário: disputas que vão decidir as intercalares nos EUA",
-      "veiculo": "Euronews",
+      "titulo": "Após derrota de partido de Trump nas eleições, Irã descarta mudança na política americana",
+      "veiculo": "AP Photo/Vahid Salemi - Vahid Salemi",
       "editoria": "internacional",
-      "quentura": 3,
+      "quentura": 2,
       "tambemEm": [
         "BBC Brasil",
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Da imigração às urnas: brasileiros disputam eleições hoje nos EUA",
-      "veiculo": "RFI Brasil",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "BBC Brasil",
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Por que a disputa pelo Senado no Texas pode ser decisiva nas eleições dos EUA",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "Folha Mundo",
-        "Euronews",
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "Eleições nos EUA: primeiras urnas fecham em dois estados; ACOMPANHE",
+      "titulo": "Deb Haaland é eleita primeira mulher indígena governadora nos EUA",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "Folha Mundo",
-        "RFI Brasil"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Eleições nos EUA: como apoio a Israel e guerra em Gaza afetam disputa ao Senado",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Euronews",
-        "RFI Brasil"
-      ]
-    },
-    {
-      "titulo": "Quem eram as 9 vítimas fatais da queda de avião na Flórida",
-      "veiculo": "BBC Brasil",
+      "titulo": "Democratas vencem eleições nos EUA com promessa de barrar data centers",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "'Eram a luz da vida dos pais': quem eram o casal e os filhos mortos em queda de jatinho na Flórida",
+      "titulo": "Eleições de meio de mandato de 2026: as vitórias históricas e os marcos inéditos do pleito",
+      "veiculo": "© Julia Demaree Nikhinson / AP",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Eleições nos EUA: sete brasileiros são eleitos deputados estaduais",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "China diz estar disposta a seguir trabalhando com EUA após vitória democrata nas eleições de meio de mandato",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "© Julia Demaree Nikhinson / AP"
+      ]
+    },
+    {
+      "titulo": "Deb Haaland é eleita primeira mulher indígena governadora nos EUA",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Quem é Abdul El-Sayed, primeiro muçulmano eleito senador nos EUA",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     }
   ]
