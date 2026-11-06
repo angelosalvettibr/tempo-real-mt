@@ -1,21 +1,21 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-05T23:35:18.697Z",
+  "gerado": "2026-11-06T15:55:02.604Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 41,
-    "fonteLivre": 69,
-    "confirmadas": 1,
+    "pauta": 39,
+    "fonteLivre": 64,
+    "confirmadas": 7,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 5
   },
   "fontes": {
-    "checadas": 31,
-    "responderam": 25,
+    "checadas": 30,
+    "responderam": 23,
     "entregando": 14,
-    "itens": 110,
+    "itens": 103,
     "lista": [
       {
         "tipo": "pauta",
@@ -37,9 +37,18 @@
       },
       {
         "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,25 +57,7 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 10,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +66,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,16 +84,16 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 7,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 6,
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +102,7 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 4,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -121,6 +112,15 @@
         "id": "usgs",
         "nome": "USGS",
         "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,26 +163,26 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "livre",
         "id": "scidev",
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -199,15 +199,6 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
         "itens": 0,
@@ -219,6 +210,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -264,6 +255,15 @@
         "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -286,15 +286,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
       }
     ]
   },
@@ -303,47 +294,48 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Presidente do Paraguai demite-se após escândalo do Ueno Bank",
-      "veiculo": "Euronews.com",
+      "titulo": "Justiça dos EUA bloqueia início da construção do 'Arco do Triunfo' em Washington",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "Folha Mundo"
+        "g1 Mundo",
+        "Euronews"
       ]
     },
     {
-      "titulo": "Escândalo do Ueno Bank foi estopim, mas não causa da queda de Peña",
-      "veiculo": "Folha Mundo",
+      "titulo": "Juíza trava construção do enorme “arco do triunfo” de Trump nos EUA",
+      "veiculo": "Euronews",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Justiça dos EUA bloqueia gigantesco projeto de Arco do Triunfo de Trump",
+      "veiculo": "g1 Mundo",
       "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "Presidente do Paraguai demite-se após escândalo do Ueno Bank",
+      "veiculo": "Euronews",
       "quentura": 1,
       "tambemEm": [
         "Euronews.com"
       ]
     },
     {
-      "titulo": "Vice que deve assumir Presidência do Paraguai também é acusado de envolvimento em escândalo",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
+      "titulo": "Paraguai enfrenta colapso do Ueno Bank e crise política para Santiago Peña",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Ameaças de bomba obrigam voos na Europa a fazer pousos de emergência; o que se sabe",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP - Peter Morrison"
-      ]
-    },
-    {
-      "titulo": "O que se sabe sobre os falsos alertas de bomba que perturbam o tráfego aéreo na Europa",
-      "veiculo": "AP - Peter Morrison",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
+        "Euronews"
       ]
     }
   ]
