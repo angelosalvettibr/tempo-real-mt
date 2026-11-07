@@ -1,35 +1,26 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-07T14:55:41.264Z",
+  "gerado": "2026-11-07T21:46:27.964Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 43,
-    "fonteLivre": 48,
-    "confirmadas": 6,
+    "pauta": 38,
+    "fonteLivre": 45,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 13
+    "semFonte": 6
   },
   "fontes": {
     "checadas": 31,
-    "responderam": 25,
+    "responderam": 24,
     "entregando": 13,
-    "itens": 91,
+    "itens": 83,
     "lista": [
       {
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -57,7 +48,16 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -66,7 +66,7 @@
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
-        "itens": 8,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -75,7 +75,16 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 7,
+        "itens": 6,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,15 +93,6 @@
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -108,18 +108,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 3,
         "ok": true,
         "respondeu": true,
@@ -130,6 +121,15 @@
         "id": "usgs",
         "nome": "USGS",
         "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -185,8 +185,8 @@
         "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 415"
       },
       {
         "tipo": "livre",
@@ -208,8 +208,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,73 +303,21 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Santiago Peña é preso em casa após sofrer impeachment no Paraguai",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 5,
-      "tambemEm": [
-        "AP Photo/Jorge Saenz - Jorge Saenz",
-        "Folha Mundo",
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Vice assume presidência do Paraguai após Santiago Peña sofrer impeachment e ser detido",
-      "veiculo": "AP Photo/Jorge Saenz - Jorge Saenz",
-      "editoria": "internacional",
-      "quentura": 4,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo",
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Paraguai destitui presidente Santiago Peña em plena crise do banco Ueno",
-      "veiculo": "Euronews.com",
-      "quentura": 3,
-      "tambemEm": [
-        "AP Photo/Jorge Saenz - Jorge Saenz",
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Depois de impeachment e prisão, Santiago Peña é levado a unidade militar no Paraguai",
+      "titulo": "Ucrânia relata cortes de energia em cinco regiões após ataque massivo da Rússia",
       "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 3,
-      "tambemEm": [
-        "AP Photo/Jorge Saenz - Jorge Saenz",
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Manifestações tomam a capital do Paraguai e Santiago Peña é levado a unidade militar",
-      "veiculo": "AP Photo/Jorge Saenz - Jorge Saenz",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Senado do Paraguai aprova impeachment de Santiago Peña após escândalo, e vice assume",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "AP Photo/Jorge Saenz - Jorge Saenz",
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Ueno Bank: escândalo que levou à queda do presidente do Paraguai pode ser comparado ao do Banco Master?",
-      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "Euronews.com"
+      ]
+    },
+    {
+      "titulo": "Ex-presidente do Paraguai, Santiago Peña presta depoimento após ser colocado em prisão domiciliar",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Jorge Saenz - Jorge Saenz"
       ]
     },
     {
@@ -391,8 +339,8 @@
       ]
     },
     {
-      "titulo": "Quem é Pedro Alliana, o novo presidente do Paraguai com quem o poderoso Partido Colorado tenta se recuperar",
-      "veiculo": "BBC Brasil",
+      "titulo": "Vice assume presidência do Paraguai após Santiago Peña sofrer impeachment e ser detido",
+      "veiculo": "AP Photo/Jorge Saenz - Jorge Saenz",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -400,27 +348,8 @@
       ]
     },
     {
-      "titulo": "França mobiliza 70 mil agentes para protestos; agência denuncia agressão policial contra jornalistas",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "AP Photo/Thibault Camus - Thibault Camus"
-      ]
-    },
-    {
-      "titulo": "Lula deseja êxito a Pedro Alliana, novo presidente do Paraguai após queda de Peña",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "França mobiliza 70 mil policiais para novos protestos em meio a denúncias de agressões contra jornalistas",
-      "veiculo": "AP Photo/Thibault Camus - Thibault Camus",
-      "editoria": "internacional",
+      "titulo": "Ucrânia: ataques russos na região de Kiev ferem cinco e danificam ponte e rede energética",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
