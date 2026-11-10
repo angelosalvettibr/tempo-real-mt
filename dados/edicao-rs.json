@@ -1,31 +1,22 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-11-09T18:49:20.168Z",
+  "gerado": "2026-11-10T04:11:08.021Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 123,
-    "fonteLivre": 68,
+    "pauta": 126,
+    "fonteLivre": 55,
     "confirmadas": 17,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 76
+    "semFonte": 81
   },
   "fontes": {
     "checadas": 42,
     "responderam": 24,
     "entregando": 21,
-    "itens": 191,
+    "itens": 181,
     "lista": [
-      {
-        "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
-        "itens": 15,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "pauta",
         "id": "g1rs",
@@ -46,7 +37,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
+        "id": "gn-rs-portoalegr",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -55,7 +46,7 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
+        "id": "gn-rs-cap",
         "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
@@ -102,7 +93,7 @@
         "tipo": "resgate",
         "id": "gzh",
         "nome": "GZH",
-        "itens": 11,
+        "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +111,16 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 10,
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -162,24 +162,6 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "assessoria",
         "id": "seapi-rs",
         "nome": "Agricultura RS",
@@ -190,9 +172,27 @@
       },
       {
         "tipo": "assessoria",
+        "id": "ssp-rs",
+        "nome": "Secretaria de Segurança do RS",
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
         "id": "educacao-rs",
         "nome": "Secretaria de Educação do RS",
         "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "gov-rs",
+        "nome": "Governo do RS",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "brasil247rs",
+        "nome": "Portal do Estado",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +262,8 @@
       },
       {
         "tipo": "resgate",
-        "id": "brasil247rs",
-        "nome": "Portal do Estado",
+        "id": "matinal",
+        "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -352,26 +352,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "ssp-rs",
-        "nome": "Secretaria de Segurança do RS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
         "id": "tce-rs",
         "nome": "TCE-RS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "santoangelo",
-        "nome": "Prefeitura de Santo Ângelo",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -388,8 +370,26 @@
       },
       {
         "tipo": "assessoria",
+        "id": "santoangelo",
+        "nome": "Prefeitura de Santo Ângelo",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "caxias",
         "nome": "Prefeitura de Caxias do Sul",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -411,169 +411,183 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Rio do Sul realiza mutirão de limpeza após enchente; Mercado Público reabre na quarta-feira",
-      "veiculo": "Santa Catarina em Pauta",
+      "titulo": "Prefeitura da Capital anuncia ampliação do videomonitoramento e mudança na taxa de iluminação pública",
+      "veiculo": "Sul21",
+      "editoria": "regional",
+      "quentura": 7,
+      "tambemEm": [
+        "Correio do Povo",
+        "Sul 21",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura anuncia taxa de iluminação progressiva, que aumentará custo para um terço dos consumidores de Porto Alegre",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Prefeitura anuncia taxa de iluminação progressiva, que aumentará custo para um terço dos consumidores de Porto Alegre",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Prefeitura da Capital anuncia ampliação do videomonitoramento e mudança na taxa de iluminação pública",
+      "veiculo": "Sul 21",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura da Capital anuncia ampliação do videomonitoramento e mudança na taxa de iluminação pública",
+      "veiculo": "Sul 21",
+      "editoria": "regional",
+      "quentura": 6,
+      "tambemEm": [
+        "Sul21",
+        "Correio do Povo",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura anuncia cobrança escalonada da iluminação pública, com aumento para um terço dos consumidores de Porto Alegre",
+      "veiculo": "Correio do Povo",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "Sul21",
+        "Sul 21",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura anuncia cobrança escalonada da iluminação pública, com aumento para um terço dos consumidores de Porto Alegre",
+      "veiculo": "Correio do Povo",
+      "editoria": "regional",
+      "quentura": 5,
+      "tambemEm": [
+        "Sul21",
+        "Sul 21",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Prefeitura anuncia cobrança escalonada da iluminação pública, com aumento para um terço dos consumidores de Porto Alegre",
+      "veiculo": "Correio do Povo",
+      "quentura": 5,
+      "tambemEm": [
+        "Sul21",
+        "Sul 21",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Porto Alegre registra 108 ocorrências de trânsito no fim de semana",
+      "veiculo": "Prefeitura de Porto Alegre",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
         "Prefeitura de Pelotas",
-        "Portal GCD",
-        "Rádio Sintonia FM"
+        "GZH"
       ]
     },
     {
-      "titulo": "Prefeitura reabre disputa para transformar antiga área de invasão em novo parque de Porto Alegre",
-      "veiculo": "GZH",
+      "titulo": "Obras de R$ 13 milhões para drenagem no Vasco Pires",
+      "veiculo": "Diário da Manhã Pelotas",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Prefeitura de Porto Alegre"
+        "GZH",
+        "Rádio Metropolitana Porto"
       ]
     },
     {
-      "titulo": "Prefeitura reabre disputa para transformar antiga área de invasão em novo parque de Porto Alegre",
-      "veiculo": "GZH",
+      "titulo": "Castelo de Santa Maria da Feira entra em obras de requalificação com investimento de 4,2 milhões de euros",
+      "veiculo": "Rádio Metropolitana Porto",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Prefeitura de Porto Alegre"
+        "Diário da Manhã Pelotas",
+        "OvarNews"
       ]
     },
     {
-      "titulo": "Rio do Sul realiza mutirão de limpeza após enchente e prepara reabertura do Mercado Público",
-      "veiculo": "Portal GCD",
+      "titulo": "Orla do Lami, em Porto Alegre, recebe obras de novos sanitários públicos",
+      "veiculo": "Jornal O Sul",
       "editoria": "regional",
       "quentura": 2,
-      "tambemEm": [
-        "Santa Catarina em Pauta",
-        "Rádio Sintonia FM"
-      ]
-    },
-    {
-      "titulo": "Mutirão de limpeza pós-enchente mobiliza equipes em diferentes regiões de Rio do Sul",
-      "veiculo": "Rádio Sintonia FM",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Santa Catarina em Pauta",
-        "Portal GCD"
-      ]
-    },
-    {
-      "titulo": "Sol predomina no RS nesta segunda-feira; temperaturas seguem amenas",
-      "veiculo": "Correio do Povo",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Aracaju",
-        "Diário de Santa Maria"
-      ]
-    },
-    {
-      "titulo": "Sistema Menino Deus tem parada programada para sequência das obras de ampliação",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "A Hora do Sul"
-      ]
-    },
-    {
-      "titulo": "Corsan divulga atualização semanal de obras e ações realizadas no Estado",
-      "veiculo": "CORSAN",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Estação FM"
-      ]
-    },
-    {
-      "titulo": "Nova Rodoviária de São Vicente é inaugurada após três anos de obras",
-      "veiculo": "Grupo Jota Sidney",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "G1"
-      ]
-    },
-    {
-      "titulo": "Nova Rodoviária de São Vicente é inaugurada após três anos de obras",
-      "veiculo": "G1",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Grupo Jota Sidney"
-      ]
-    },
-    {
-      "titulo": "Confira as obras que serão realizadas pela CSG nas rodovias estaduais concedidas no Vale do Caí e na Serra Gaúcha",
-      "veiculo": "Estação FM",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "CORSAN"
-      ]
-    },
-    {
-      "titulo": "Fux suspende todas as ações judiciais contra proibição de bets no país",
-      "veiculo": "Sul21",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Trecho da Rua Floriano Peixoto tem bloqueio total nesta segunda-feira em Santa Maria",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Pelotas tem 23 obras públicas paradas e adere a programa para tentar retomá-las",
-      "veiculo": "A Hora do Sul",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Prefeitura de Porto Alegre"
-      ]
-    },
-    {
-      "titulo": "A raposa da responsabilidade fiscal (por Henrique Morrone)",
-      "veiculo": "Sul21",
-      "editoria": "regional",
-      "quentura": 1,
       "tambemEm": [
         "GZH"
       ]
     },
     {
-      "titulo": "VÍDEO: Perseguição a caminhão em alta velocidade termina com prisão em Esteio",
+      "titulo": "Santa Maria terá treinamento contra cheias em Arroio Grande",
+      "veiculo": "Real News",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "RCN 67"
+      ]
+    },
+    {
+      "titulo": "Chuvas deixam feridos, desabrigados e casas destelhadas no Sul",
+      "veiculo": "Agência Brasil",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Homem arremessa pedra contra carro da Prefeitura de Canoas e é preso",
       "veiculo": "abc+",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Terra"
+        "Agência GBC"
       ]
     },
     {
-      "titulo": "VÍDEO: Perseguição a caminhão em alta velocidade termina com prisão em Esteio",
-      "veiculo": "abc+",
+      "titulo": "Prefeitura retoma mutirão contra o Aedes nesta quarta no Santa Maria e Maracanã",
+      "veiculo": "RCN 67",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Terra"
+        "Real News"
       ]
     },
     {
-      "titulo": "Motorista de carreta foge na contramão e é preso após ser perseguido por cerca de 18 km no RS; VÍDEO",
-      "veiculo": "g1 RS",
+      "titulo": "Pelotas assina contrato de R$ 12,9 milhões para obras de drenagem no Vasco Pires",
+      "veiculo": "GZH",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "G1"
+        "Diário da Manhã Pelotas"
+      ]
+    },
+    {
+      "titulo": "Homem é preso após jogar pedra em carro da Prefeitura de Canoas",
+      "veiculo": "Agência GBC",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "abc+"
       ]
     }
   ]
