@@ -1,24 +1,33 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-12T16:49:01.585Z",
+  "gerado": "2026-11-12T23:32:39.980Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 56,
-    "confirmadas": 4,
+    "pauta": 46,
+    "fonteLivre": 57,
+    "confirmadas": 6,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 3
+    "semFonte": 4
   },
   "fontes": {
-    "checadas": 30,
+    "checadas": 31,
     "responderam": 25,
     "entregando": 13,
-    "itens": 96,
+    "itens": 103,
     "lista": [
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
         "itens": 12,
@@ -27,9 +36,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "tipo": "livre",
+        "id": "vaticano",
+        "nome": "Vatican News",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -45,10 +54,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "vaticano",
-        "nome": "Vatican News",
-        "itens": 11,
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -90,15 +99,6 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
@@ -108,19 +108,10 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 2,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,7 +120,16 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 2,
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -144,6 +144,15 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
+      },
+      {
         "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
@@ -151,6 +160,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -169,15 +187,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 403"
       },
       {
         "tipo": "livre",
@@ -235,8 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -262,8 +271,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,8 +280,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -294,30 +303,38 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Paraguai: autoridades fazem buscas em residência oficial de ex-presidente Santiago Peña",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "A acirrada disputa que levou democrata a se tornar 1º senador negro eleito pelo Mississippi em 140 anos",
+      "titulo": "O que se sabe de falha na Microsoft que deixou fora do ar Outlook e afetou Teams, Microsoft 365 e outras plataformas",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "Euronews.com"
       ]
     },
     {
-      "titulo": "Mississippi elege democrata Scott Colom, primeiro senador negro pelo estado dos EUA em 150 anos",
+      "titulo": "Microsoft: falha no Outlook e Teams deixa milhares de utilizadores sem email",
+      "veiculo": "Euronews.com",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Vice da Indonésia renuncia após Justiça questionar formação escolar",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "BBC Brasil"
+        "AP Photo/Tatan Syuflana - Tatan Syuflana"
+      ]
+    },
+    {
+      "titulo": "Renúncia de vice-presidente da Indonésia, acusado de mentir sobre diploma, aumenta pressão sobre governo",
+      "veiculo": "AP Photo/Tatan Syuflana - Tatan Syuflana",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
       ]
     }
   ]
