@@ -1,22 +1,31 @@
 {
   "uf": "br",
   "estado": "Brasil",
-  "gerado": "2026-11-11T16:09:10.520Z",
+  "gerado": "2026-11-12T00:35:12.966Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 224,
+    "pauta": 230,
     "fonteLivre": 89,
-    "confirmadas": 20,
+    "confirmadas": 25,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 55
+    "semFonte": 45
   },
   "fontes": {
     "checadas": 130,
     "responderam": 78,
     "entregando": 32,
-    "itens": 313,
+    "itens": 319,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "g1",
+        "nome": "g1",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "exame",
@@ -55,8 +64,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "folha",
-        "nome": "Folha",
+        "id": "uol",
+        "nome": "UOL",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,8 +82,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "uol",
-        "nome": "UOL",
+        "id": "jota",
+        "nome": "JOTA",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -90,9 +99,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "jota",
-        "nome": "JOTA",
+        "tipo": "resgate",
+        "id": "r7",
+        "nome": "R7",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -145,26 +154,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1",
-        "nome": "g1",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "correiobraz",
-        "nome": "Correio Braziliense",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "r7",
-        "nome": "R7",
+        "id": "folha",
+        "nome": "Folha",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -181,9 +172,27 @@
       },
       {
         "tipo": "resgate",
+        "id": "correiobraz",
+        "nome": "Correio Braziliense",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "estadao",
         "nome": "Estadão",
         "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "bbcbr",
+        "nome": "BBC Brasil",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -198,9 +207,9 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "ab-justica",
-        "nome": "Agência Brasil",
+        "tipo": "pauta",
+        "id": "infomoney",
+        "nome": "InfoMoney",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -216,9 +225,27 @@
         "erro": null
       },
       {
+        "tipo": "livre",
+        "id": "ab-justica",
+        "nome": "Agência Brasil",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
         "tipo": "pauta",
-        "id": "bbcbr",
-        "nome": "BBC Brasil",
+        "id": "g1economia",
+        "nome": "g1 Economia",
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ab-politica",
+        "nome": "Agência Brasil",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -243,37 +270,10 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1economia",
-        "nome": "g1 Economia",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-politica",
-        "nome": "Agência Brasil",
-        "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "infomoney",
-        "nome": "InfoMoney",
-        "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "livre",
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -307,8 +307,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "oglobo",
-        "nome": "O Globo",
+        "id": "gazetapovo",
+        "nome": "Gazeta do Povo",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -316,8 +316,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gazetapovo",
-        "nome": "Gazeta do Povo",
+        "id": "oglobo",
+        "nome": "O Globo",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -415,6 +415,15 @@
       },
       {
         "tipo": "livre",
+        "id": "gov-br",
+        "nome": "gov.br",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
         "id": "tse",
         "nome": "TSE",
         "itens": 0,
@@ -426,15 +435,6 @@
         "tipo": "livre",
         "id": "stj",
         "nome": "STJ",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "gov-br",
-        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -487,8 +487,8 @@
       },
       {
         "tipo": "livre",
-        "id": "inmet",
-        "nome": "Inmet",
+        "id": "mapa",
+        "nome": "Ministério da Agricultura",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -496,12 +496,12 @@
       },
       {
         "tipo": "livre",
-        "id": "mapa",
-        "nome": "Ministério da Agricultura",
+        "id": "inmet",
+        "nome": "Inmet",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 500"
       },
       {
         "tipo": "livre",
@@ -550,8 +550,8 @@
       },
       {
         "tipo": "livre",
-        "id": "saude",
-        "nome": "Ministério da Saúde",
+        "id": "pf",
+        "nome": "Polícia Federal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -568,8 +568,8 @@
       },
       {
         "tipo": "livre",
-        "id": "pf",
-        "nome": "Polícia Federal",
+        "id": "saude",
+        "nome": "Ministério da Saúde",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -613,8 +613,8 @@
       },
       {
         "tipo": "livre",
-        "id": "ibama",
-        "nome": "Ibama",
+        "id": "icmbio",
+        "nome": "ICMBio",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -622,8 +622,8 @@
       },
       {
         "tipo": "livre",
-        "id": "icmbio",
-        "nome": "ICMBio",
+        "id": "ibama",
+        "nome": "Ibama",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -658,8 +658,8 @@
       },
       {
         "tipo": "livre",
-        "id": "trabalho",
-        "nome": "Ministério do Trabalho",
+        "id": "mme",
+        "nome": "Ministério de Minas e Energia",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -667,8 +667,8 @@
       },
       {
         "tipo": "livre",
-        "id": "mme",
-        "nome": "Ministério de Minas e Energia",
+        "id": "trabalho",
+        "nome": "Ministério do Trabalho",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -793,8 +793,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cnj",
-        "nome": "CNJ",
+        "id": "planalto",
+        "nome": "Planalto",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -802,8 +802,8 @@
       },
       {
         "tipo": "livre",
-        "id": "planalto",
-        "nome": "Planalto",
+        "id": "cnj",
+        "nome": "CNJ",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -820,8 +820,8 @@
       },
       {
         "tipo": "livre",
-        "id": "govbr",
-        "nome": "gov.br",
+        "id": "cvm",
+        "nome": "CVM",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -829,8 +829,8 @@
       },
       {
         "tipo": "livre",
-        "id": "cvm",
-        "nome": "CVM",
+        "id": "govbr",
+        "nome": "gov.br",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -874,12 +874,12 @@
       },
       {
         "tipo": "livre",
-        "id": "dpu",
-        "nome": "Defensoria Pública da União",
+        "id": "justica",
+        "nome": "Ministério da Justiça",
         "itens": 0,
         "ok": false,
-        "respondeu": true,
-        "erro": null
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -892,12 +892,12 @@
       },
       {
         "tipo": "livre",
-        "id": "justica",
-        "nome": "Ministério da Justiça",
+        "id": "dpu",
+        "nome": "Defensoria Pública da União",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -955,15 +955,6 @@
       },
       {
         "tipo": "livre",
-        "id": "mdic",
-        "nome": "MDIC",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "minas",
         "nome": "Ministério de Minas e Energia",
         "itens": 0,
@@ -973,8 +964,8 @@
       },
       {
         "tipo": "livre",
-        "id": "portos",
-        "nome": "Ministério de Portos e Aeroportos",
+        "id": "mdic",
+        "nome": "MDIC",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -984,6 +975,15 @@
         "tipo": "livre",
         "id": "bndes",
         "nome": "BNDES",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "portos",
+        "nome": "Ministério de Portos e Aeroportos",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1027,8 +1027,8 @@
       },
       {
         "tipo": "livre",
-        "id": "pncp",
-        "nome": "Portal Nacional de Contratações Públicas",
+        "id": "in-dou",
+        "nome": "Imprensa Nacional",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1036,8 +1036,8 @@
       },
       {
         "tipo": "livre",
-        "id": "in-dou",
-        "nome": "Imprensa Nacional",
+        "id": "pncp",
+        "nome": "Portal Nacional de Contratações Públicas",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1056,24 +1056,6 @@
         "tipo": "livre",
         "id": "epe",
         "nome": "EPE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "integra",
-        "nome": "Ministério da Integração",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "sudam",
-        "nome": "Sudam",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -1108,6 +1090,24 @@
       },
       {
         "tipo": "livre",
+        "id": "integra",
+        "nome": "Ministério da Integração",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "sudam",
+        "nome": "Sudam",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ibama-inf",
         "nome": "Ibama — licenciamento",
         "itens": 0,
@@ -1126,15 +1126,6 @@
       },
       {
         "tipo": "livre",
-        "id": "ipeadata",
-        "nome": "Ipea — Carta de Conjuntura",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ons",
         "nome": "ONS",
         "itens": 0,
@@ -1144,12 +1135,30 @@
       },
       {
         "tipo": "livre",
+        "id": "ipeadata",
+        "nome": "Ipea — Carta de Conjuntura",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "ipea-inf",
         "nome": "Ipea",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "camara",
+        "nome": "Agência Câmara Notícias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -1171,15 +1180,6 @@
       },
       {
         "tipo": "livre",
-        "id": "camara",
-        "nome": "Agência Câmara Notícias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "inmet",
         "nome": "Inmet",
         "itens": 0,
@@ -1194,182 +1194,187 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Reforma tributária: sem benefícios aprovados pelo Congresso, imposto do governo cairia de 11,3% para 8,5% em 2027, estima Receita",
-      "veiculo": "g1 Economia",
+      "titulo": "Quina 7165 sorteia prêmio de R$ 9 milhões hoje (11/11). Veja resultado",
+      "veiculo": "Metrópoles",
       "editoria": "brasil",
-      "quentura": 4,
+      "quentura": 6,
       "tambemEm": [
-        "g1 Política",
-        "InfoMoney",
-        "JOTA"
+        "UOL",
+        "InfoMoney"
       ]
     },
     {
-      "titulo": "Reforma tributária: sem benefícios aprovados pelo Congresso, imposto do governo cairia de 11,3% para 8,5% em 2027, estima Receita",
+      "titulo": "Câmara torna crime hediondo maus-tratos que resultem na morte de cães e gatos",
+      "veiculo": "Folha",
+      "editoria": "brasil",
+      "quentura": 6,
+      "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "UOL"
+      ]
+    },
+    {
+      "titulo": "Câmara aprova projeto que torna hediondos maus-tratos que resultarem em morte de animal",
       "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 4,
+      "quentura": 6,
       "tambemEm": [
-        "g1 Economia",
-        "InfoMoney",
-        "JOTA"
+        "CartaCapital",
+        "Congresso em Foco",
+        "UOL"
       ]
     },
     {
-      "titulo": "Reforma tributária: governo vai propor que pagamento da CBS comece em fevereiro, diz secretário da Receita Federal",
-      "veiculo": "g1 Economia",
+      "titulo": "Câmara aprova tornar crime hediondo os maus-tratos a animais que resultarem em morte",
+      "veiculo": "CartaCapital",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 6,
       "tambemEm": [
-        "g1 Política",
-        "Poder360"
+        "Congresso em Foco",
+        "UOL",
+        "Folha"
       ]
     },
     {
-      "titulo": "Reforma tributária: governo vai propor que pagamento da CBS comece em fevereiro, diz secretário da Receita Federal",
-      "veiculo": "g1 Política",
+      "titulo": "Câmara aprova projeto que torna maus-tratos a animais crime hediondo",
+      "veiculo": "Metrópoles",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 5,
       "tambemEm": [
-        "g1 Economia",
-        "Poder360"
+        "CartaCapital",
+        "UOL",
+        "Folha"
       ]
     },
     {
-      "titulo": "Jensen Huang: O papel do CEO da Nvidia investigado por caso com suposta espiã na guerra tecnológica entre EUA e China",
-      "veiculo": "BBC Brasil",
+      "titulo": "Câmara torna crime hediondo maus-tratos que resultem na morte de cães e gatos",
+      "veiculo": "UOL",
       "editoria": "brasil",
-      "quentura": 3,
+      "quentura": 5,
       "tambemEm": [
-        "CNN Brasil",
-        "Valor Econômico",
-        "Migalhas"
+        "CartaCapital",
+        "Congresso em Foco",
+        "Folha"
       ]
     },
     {
-      "titulo": "Flávio Dino sinaliza flexibilização das regras para o fim da escala 6x1",
+      "titulo": "Câmara transforma maus-tratos com morte de cães e gatos em crime hediondo",
+      "veiculo": "UOL",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "CartaCapital",
+        "Congresso em Foco",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Câmara aprova punição mais rigorosa por morte de cães e gatos",
+      "veiculo": "Congresso em Foco",
+      "editoria": "brasil",
+      "quentura": 5,
+      "tambemEm": [
+        "CartaCapital",
+        "UOL",
+        "Folha"
+      ]
+    },
+    {
+      "titulo": "Senadores articulam derrubar ‘jabuti’ sobre cigarros eletrônicos aprovado pela Câmara",
       "veiculo": "R7",
-      "quentura": 3,
+      "quentura": 5,
       "tambemEm": [
-        "Congresso em Foco",
-        "Folha",
-        "Migalhas"
-      ]
-    },
-    {
-      "titulo": "Depois de cobrança, Lula se reunirá com indígenas na COP31",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Rubio teria alertado Trump sobre suposta espiã em caso Nvidia, diz fonte",
-      "veiculo": "CNN Brasil",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Valor Econômico"
-      ]
-    },
-    {
-      "titulo": "Lula inaugura política externa 4.0 e cobra países ricos na COP31",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
-        "Poder360"
-      ]
-    },
-    {
-      "titulo": "Governo vai propor adiamento da cobrança da CBS para fevereiro",
-      "veiculo": "Poder360",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Economia",
+        "Exame",
+        "CartaCapital",
         "g1 Política"
       ]
     },
     {
-      "titulo": "Receita confirma reforma tributária em 2027 e promete não multar erros de boa-fé",
-      "veiculo": "InfoMoney",
+      "titulo": "Governo descarta adiamento da reforma tributária",
+      "veiculo": "g1 Política",
       "editoria": "brasil",
-      "quentura": 2,
+      "quentura": 4,
       "tambemEm": [
         "g1 Economia",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Dino diz que decidirá sobre regras para o fim da 6x1 até sexta-feira",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "R7",
-        "Migalhas"
-      ]
-    },
-    {
-      "titulo": "JOTA Principal &#124; Governo mantém cronograma da reforma tributária, e Fazenda corre para aprovar medidas no Congresso",
-      "veiculo": "JOTA",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "g1 Economia",
-        "g1 Política"
-      ]
-    },
-    {
-      "titulo": "Lula cobra países ricos na COP31: \"devem cumprir seus compromissos\"",
-      "veiculo": "Congresso em Foco",
-      "editoria": "brasil",
-      "quentura": 2,
-      "tambemEm": [
-        "Poder360",
-        "JOTA"
-      ]
-    },
-    {
-      "titulo": "Fim da 6x1: Dino decidirá regras de implementação até sexta-feira",
-      "veiculo": "Migalhas",
-      "quentura": 2,
-      "tambemEm": [
-        "Congresso em Foco",
         "R7"
       ]
     },
     {
-      "titulo": "Relacionamento de CEO da Nvidia com suposta espiã facilitou envio de US$ 7,5 bilhões em chips para a China, diz site",
-      "veiculo": "Valor Econômico",
-      "quentura": 2,
+      "titulo": "Quina hoje, concurso 7165: confira o resultado sorteado nesta quarta-feira (11)",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 3,
       "tambemEm": [
-        "BBC Brasil",
-        "CNN Brasil"
+        "UOL",
+        "Metrópoles"
       ]
     },
     {
-      "titulo": "PL prepara ofensiva jurídica e internacional pelo 8 de Janeiro",
+      "titulo": "Confira o resultado da Lotofácil 3827, sorteada hoje (11/11)",
       "veiculo": "Metrópoles",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "Exame"
+        "InfoMoney"
       ]
     },
     {
-      "titulo": "Reforma tributária: governo adia para março emissão de notas fiscais do Simples Nacional, exceto de prestação de serviço",
+      "titulo": "Lotofácil hoje, concurso 3827: confira o resultado sorteado nesta quarta-feira (11)",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Americanas tem prejuízo de R$352 mi no 3º trimestre",
+      "veiculo": "CNN Brasil",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "InfoMoney"
+      ]
+    },
+    {
+      "titulo": "Quina tem prêmio acumulado de R$ 8,7 milhões; confira dezenas sorteadas",
+      "veiculo": "UOL",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "InfoMoney",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "Com atrasos do agro, lucro do BB cai a R$ 1,3 bi no 3º trimestre",
+      "veiculo": "Poder360",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "InfoMoney",
+        "Metrópoles"
+      ]
+    },
+    {
+      "titulo": "CVC (CVCB3) tem lucro líquido ajustado de R$ 3,7 mi no 3º trimestre, queda de 94,1%",
+      "veiculo": "InfoMoney",
+      "editoria": "brasil",
+      "quentura": 2,
+      "tambemEm": [
+        "CNN Brasil",
+        "Poder360"
+      ]
+    },
+    {
+      "titulo": "Governo descarta adiamento da reforma tributária",
       "veiculo": "g1 Economia",
       "editoria": "brasil",
-      "quentura": 1,
+      "quentura": 2,
       "tambemEm": [
-        "g1 Política"
+        "g1 Política",
+        "R7"
       ]
     }
   ]
