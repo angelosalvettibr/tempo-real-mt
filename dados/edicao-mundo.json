@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-12T00:33:38.408Z",
+  "gerado": "2026-11-12T16:49:01.585Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 40,
-    "fonteLivre": 59,
-    "confirmadas": 3,
+    "fonteLivre": 56,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 0
+    "semFonte": 3
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 30,
     "responderam": 25,
     "entregando": 13,
-    "itens": 99,
+    "itens": 96,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -27,9 +36,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -39,15 +48,6 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -57,24 +57,6 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -84,6 +66,24 @@
         "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 7,
         "ok": true,
         "respondeu": true,
@@ -100,18 +100,27 @@
       },
       {
         "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 4,
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 4,
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -127,15 +136,6 @@
       },
       {
         "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 1,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
         "id": "dw",
         "nome": "DW Brasil",
         "itens": 0,
@@ -144,27 +144,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
-      },
-      {
         "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -178,6 +160,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -244,15 +235,6 @@
       },
       {
         "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -264,6 +246,15 @@
         "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -301,5 +292,33 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": []
+  "pautas": [
+    {
+      "titulo": "Paraguai: autoridades fazem buscas em residência oficial de ex-presidente Santiago Peña",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "A acirrada disputa que levou democrata a se tornar 1º senador negro eleito pelo Mississippi em 140 anos",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Mississippi elege democrata Scott Colom, primeiro senador negro pelo estado dos EUA em 150 anos",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    }
+  ]
 }
