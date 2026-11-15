@@ -1,27 +1,36 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-15T15:37:25.777Z",
+  "gerado": "2026-11-15T22:47:46.298Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 23,
-    "confirmadas": 1,
+    "pauta": 38,
+    "fonteLivre": 18,
+    "confirmadas": 6,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 11
+    "semFonte": 10
   },
   "fontes": {
     "checadas": 31,
-    "responderam": 26,
-    "entregando": 11,
-    "itens": 63,
+    "responderam": 25,
+    "entregando": 9,
+    "itens": 56,
     "lista": [
       {
         "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
         "id": "euronews",
         "nome": "Euronews",
-        "itens": 12,
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -30,15 +39,6 @@
         "tipo": "livre",
         "id": "vaticano",
         "nome": "Vatican News",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -48,7 +48,7 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -64,24 +64,6 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
         "itens": 3,
@@ -91,18 +73,18 @@
       },
       {
         "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 2,
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 1,
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -126,6 +108,15 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
+      },
+      {
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
@@ -136,8 +127,26 @@
       },
       {
         "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "globalvoices-pt",
         "nome": "Global Voices",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -235,24 +244,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "unicef-br",
-        "nome": "Unicef",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -262,8 +253,17 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,8 +280,8 @@
       },
       {
         "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -289,8 +289,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "unicef-br",
+        "nome": "Unicef",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,13 +303,48 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "De onde surgiu a teoria de que haverá um 'apagão mundial' no dia 17 de novembro (e por que ele é improvável)",
+      "titulo": "A mulher que está há anos presa em ilha paradisíaca por problema com visto: 'Viajaria até algemada, amarrada e amordaçada'",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "O ídolo do judô que está sacudindo a eleição presidencial da França com candidatura surpresa",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "A mulher que está há anos presa em ilha paradisíaca por problema com visto: 'Viajaria até algemada'",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Guatemala decreta estado de emergência após ataque que matou deputado e três policiais",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Guatemala decreta estado de sítio em duas regiões após morte de deputado e policiais",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
       ]
     },
     {
@@ -327,7 +362,7 @@
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews"
+        "Euronews.com"
       ]
     },
     {
@@ -341,61 +376,15 @@
     },
     {
       "titulo": "Estados Unidos: dois aviões colidem no aeroporto internacional de Miami",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
       ]
     },
     {
-      "titulo": "Advogado brasileiro é encontrado morto na Espanha, diz jornal local",
-      "veiculo": "g1 Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Notícias do dia | 15 de novembro 2026 - Tarde",
-      "veiculo": "Euronews",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Advogado brasileiro que defendeu ex-chefe da inteligência da Venezuela é encontrado morto em Madri",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
-      ]
-    },
-    {
-      "titulo": "Como troca de cabos levou ao maior caos aéreo nos EUA desde o 11 de Setembro, segundo o governo Trump",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Apagão em 17 de novembro é verdade? De onde surgiu a teoria e por que ela é improvável",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Troca de cabos causou suspensão que afetou mais de 28 mil voos nos EUA",
-      "veiculo": "Folha Mundo",
+      "titulo": "Dos tatames ao Eliseu? Veja as reações à candidatura do judoca Teddy Riner à presidência da França",
+      "veiculo": "RFI Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
