@@ -1,26 +1,35 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-17T04:30:01.125Z",
+  "gerado": "2026-11-17T17:35:47.421Z",
   "modelo": "(nenhum)",
   "numeros": {
     "pauta": 39,
-    "fonteLivre": 49,
-    "confirmadas": 1,
+    "fonteLivre": 54,
+    "confirmadas": 3,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 7
+    "semFonte": 0
   },
   "fontes": {
-    "checadas": 31,
+    "checadas": 30,
     "responderam": 25,
-    "entregando": 14,
-    "itens": 88,
+    "entregando": 13,
+    "itens": 93,
     "lista": [
       {
-        "tipo": "resgate",
+        "tipo": "pauta",
         "id": "euronews",
         "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -39,15 +48,6 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -57,6 +57,15 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 8,
         "ok": true,
         "respondeu": true,
@@ -66,6 +75,15 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
+        "itens": 8,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -75,7 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 5,
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -84,15 +102,6 @@
         "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -100,8 +109,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -111,25 +120,7 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 2,
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -153,22 +144,13 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 406"
-      },
-      {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 0,
         "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
+        "respondeu": true,
+        "erro": null
       },
       {
         "tipo": "livre",
@@ -192,6 +174,15 @@
         "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
+      },
+      {
+        "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -253,6 +244,15 @@
       },
       {
         "tipo": "livre",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -264,15 +264,6 @@
         "tipo": "livre",
         "id": "oms-news",
         "nome": "OMS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -301,69 +292,5 @@
   "cidades": [],
   "itens": [],
   "circulando": [],
-  "pautas": [
-    {
-      "titulo": "'Meu nome é Pattinson, Robert Pattinson': como o astro de Crepúsculo virou o novo James Bond, o 007",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 2,
-      "tambemEm": [
-        "Euronews.com",
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Robert Pattinson é anunciado como novo James Bond 007",
-      "veiculo": "Euronews.com",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
-      ]
-    },
-    {
-      "titulo": "Vídeo. Robert Pattinson é anunciado como novo James Bond 007",
-      "veiculo": "Euronews",
-      "quentura": 2,
-      "tambemEm": [
-        "BBC Brasil",
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Justiça dos EUA marca novo julgamento de Lindsay Clancy, acusada de matar os três filhos",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "BBC Brasil"
-      ]
-    },
-    {
-      "titulo": "Cinco países da UE lançam plano para enviar migrantes expulsos a centros de deportação em Ruanda",
-      "veiculo": "AP Photo/Heinz-Peter Bader - Heinz-Peter Bader",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Euronews.com"
-      ]
-    },
-    {
-      "titulo": "Por que Lindsay Clancy, acusada de matar os 3 filhos, será julgada novamente no ano que vem",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Cinco países europeus preparam anúncio do primeiro centro de repatriamento de migrantes no Ruanda",
-      "veiculo": "Euronews.com",
-      "quentura": 1,
-      "tambemEm": [
-        "AP Photo/Heinz-Peter Bader - Heinz-Peter Bader"
-      ]
-    }
-  ]
+  "pautas": []
 }
