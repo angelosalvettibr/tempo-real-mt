@@ -1,35 +1,35 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-11-19T00:18:41.594Z",
+  "gerado": "2026-11-19T17:23:38.697Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 131,
-    "fonteLivre": 63,
+    "pauta": 130,
+    "fonteLivre": 75,
     "confirmadas": 16,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 78
+    "semFonte": 82
   },
   "fontes": {
     "checadas": 43,
     "responderam": 24,
     "entregando": 21,
-    "itens": 194,
+    "itens": 205,
     "lista": [
       {
-        "tipo": "pauta",
-        "id": "g1rs",
-        "nome": "g1 RS",
-        "itens": 12,
+        "tipo": "assessoria",
+        "id": "mprs",
+        "nome": "MPRS",
+        "itens": 15,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-portoalegr",
-        "nome": "Porto Alegre",
+        "id": "g1rs",
+        "nome": "g1 RS",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,6 +73,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-rs-portoalegr",
+        "nome": "Porto Alegre",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-rs-canoas",
         "nome": "Canoas",
         "itens": 12,
@@ -81,9 +90,9 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "sul21",
-        "nome": "Sul21",
+        "tipo": "pauta",
+        "id": "gn-rs-santamaria",
+        "nome": "Santa Maria",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -108,10 +117,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-santamaria",
-        "nome": "Santa Maria",
-        "itens": 11,
+        "tipo": "resgate",
+        "id": "sul21",
+        "nome": "Sul21",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "poa",
+        "nome": "Prefeitura de Porto Alegre",
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -127,27 +145,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "poa",
-        "nome": "Prefeitura de Porto Alegre",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
         "id": "defesacivil-rs",
         "nome": "Defesa Civil do RS",
         "itens": 8,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "pc-rs",
-        "nome": "Polícia Civil do RS",
-        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -166,6 +166,15 @@
         "id": "sema-rs",
         "nome": "Sema-RS",
         "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "pc-rs",
+        "nome": "Polícia Civil do RS",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -198,15 +207,6 @@
         "erro": null
       },
       {
-        "tipo": "assessoria",
-        "id": "mprs",
-        "nome": "MPRS",
-        "itens": 3,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "jc",
         "nome": "Jornal do Comércio",
@@ -214,15 +214,6 @@
         "ok": false,
         "respondeu": true,
         "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -235,6 +226,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "matinal",
+        "nome": "Matinal",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
         "id": "sul21",
         "nome": "Sul21",
         "itens": 0,
@@ -244,12 +244,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "matinal",
-        "nome": "Matinal",
+        "id": "gzh",
+        "nome": "GZH",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 403"
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -420,64 +420,49 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Melo anuncia que pedirá arquivamento de projeto que muda taxa de iluminação pública em Porto Alegre",
-      "veiculo": "Sul 21",
-      "quentura": 6,
-      "tambemEm": [
-        "g1 RS",
-        "GZH",
-        "G1"
-      ]
-    },
-    {
-      "titulo": "\"Em um primeiro momento, investimentos não serão realizados\", diz secretária sobre recuo em projeto da taxa de iluminação em Porto Alegre",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Prefeitura de Porto Alegre",
-        "O Cafezinho",
-        "Sul 21"
-      ]
-    },
-    {
-      "titulo": "\"Em um primeiro momento, investimentos não serão realizados\", diz secretária sobre recuo em projeto da taxa de iluminação em Porto Alegre",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 4,
-      "tambemEm": [
-        "Prefeitura de Porto Alegre",
-        "O Cafezinho",
-        "Sul 21"
-      ]
-    },
-    {
-      "titulo": "Prefeitura e IFSul projetam Casa Semente",
-      "veiculo": "Prefeitura de Pelotas",
-      "editoria": "regional",
+      "titulo": "PF investiga vice-presidente do TCE-RS por suspeita de corrupção e tráfico de influência",
+      "veiculo": "Correio do Povo",
       "quentura": 3,
       "tambemEm": [
         "g1 RS",
-        "G1",
-        "Agência GBC"
+        "GOV.BR"
       ]
     },
     {
-      "titulo": "Preso durante força-tarefa após ataques com oito mortos em Porto Alegre foge do Palácio da Polícia",
-      "veiculo": "G1",
+      "titulo": "Prefeitura de Canoas quer captar R$ 172 milhões para quitação de dívidas",
+      "veiculo": "Jornal do Comércio",
       "editoria": "regional",
       "quentura": 3,
       "tambemEm": [
-        "g1 RS",
+        "Instagram",
         "abc+"
       ]
     },
     {
-      "titulo": "VÍDEO | Tartaruga interrompe voo da Azul em Porto Alegre",
-      "veiculo": "GZH",
+      "titulo": "Inscrições em edital para projetos de Teatro de Rua terminam nesta sexta",
+      "veiculo": "Prefeitura de Porto Alegre",
+      "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "g1 RS",
+        "Terra"
+      ]
+    },
+    {
+      "titulo": "Santa Maria adota turno único em parte da prefeitura",
+      "veiculo": "Real News",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Diário de Santa Maria",
+        "Claudemir Pereira"
+      ]
+    },
+    {
+      "titulo": "Foragido após prisão em força-tarefa de ataques com oito mortos em Porto Alegre se entrega à polícia",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
         "Terra"
       ]
     },
@@ -491,94 +476,63 @@
       ]
     },
     {
-      "titulo": "A Câmara de Vereadores de Canoas rejeitou, no final da tarde desta quarta-feira (18), o pedido da Prefeitura para contratar um empréstimo de R$ 172 milhões. A votação terminou com 13 votos favoráveis, sete contrários e uma ausência. A aprovação exigia",
-      "veiculo": "Instagram",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "abc+"
-      ]
-    },
-    {
-      "titulo": "Série de ataques a tiros em Porto Alegre e Alvorada: Quatro são presos e um adolescente é apreendido durante operação",
+      "titulo": "Pedido para autorizar empréstimo de R$ 172 milhões volta à Câmara de Canoas; entenda",
       "veiculo": "abc+",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "g1 RS",
-        "G1"
+        "Jornal do Comércio",
+        "Instagram"
       ]
     },
     {
-      "titulo": "Após incêndio e limpeza, começa a primeira etapa das obras de restauro da Igreja Matriz de Flores da Cunha",
-      "veiculo": "GZH",
+      "titulo": "Prefeitura realiza serviços de cata-treco, capina e roçagem nesta quinta (19)",
+      "veiculo": "Portal da Prefeitura de Uberlândia",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Rádio Solaris",
-        "Rádio Caxias"
+        "Prefeitura de Aracaju"
       ]
     },
     {
-      "titulo": "Primeira Expoceva reúne 25 cervejarias e dá destaque ao polo cervejeiro de Porto Alegre",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Primeira Expoceva reúne 25 cervejarias e dá destaque ao polo cervejeiro de Porto Alegre",
-      "veiculo": "Prefeitura de Porto Alegre",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Obras de restauro da Igreja Matriz de Flores da Cunha começam seis meses após incêndio",
-      "veiculo": "Rádio Solaris",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Rádio Caxias",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Obras de restauro da Igreja Matriz de Flores da Cunha são lançadas oficialmente",
+      "titulo": "Prefeitura de Caxias do Sul abre inscrições para cursos gratuitos de qualificação profissional para o verão 2027",
       "veiculo": "Rádio Caxias",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Rádio Solaris",
-        "GZH"
+        "Prefeitura de Aracaju"
       ]
     },
     {
-      "titulo": "Preso durante força-tarefa após ataques com oito mortos em Porto Alegre foge do Palácio da Polícia",
+      "titulo": "Ex-secretário do RS e deputado por cinco mandatos: quem é Edson Brum, vice-presidente do TCE-RS suspeito de corrupção pela PF",
       "veiculo": "g1 RS",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "G1",
-        "abc+"
+        "Correio do Povo"
       ]
     },
     {
-      "titulo": "4º Festival de Cinema de Canoas terá exibição de 37 curtas-metragens e programação cultural gratuita – Prefeitura Municipal de Canoas",
-      "veiculo": "Real News",
+      "titulo": "Porto Alegre abre seleção de projetos de teatro de rua com R$ 400 mil em recursos",
+      "veiculo": "Terra",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
         "Prefeitura de Porto Alegre"
       ]
     },
     {
-      "titulo": "'Acredite se quiser, a gente tá com uma tartaruga na proa': piloto relata situação inusitada no aeroporto de Porto Alegre; VÍDEO",
-      "veiculo": "g1 RS",
+      "titulo": "Porto Alegre abre seleção de projetos de teatro de rua com R$ 400 mil em recursos",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Prefeitura de Porto Alegre"
+      ]
+    },
+    {
+      "titulo": "Manifestação em Porto Alegre pede união contra o racismo",
+      "veiculo": "Agência Brasil",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
@@ -586,12 +540,48 @@
       ]
     },
     {
-      "titulo": "Vereadores de Canoas rejeitam mais uma vez empréstimo de R$ 172 milhões pedido pela Prefeitura",
-      "veiculo": "abc+",
+      "titulo": "Mercado Central abre até a meia-noite nesta quinta-feira",
+      "veiculo": "Prefeitura de Pelotas",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Instagram"
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Vice-presidente do TCE-RS suspeito de corrupção tem celular apreendido em operação da PF",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "Preso que fugiu algemado do Palácio da Polícia se entrega em Porto Alegre",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Preso que fugiu algemado do Palácio da Polícia se entrega em Porto Alegre",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Saiba quais serviços de limpeza a Prefeitura realizará nesta quinta, 19",
+      "veiculo": "Prefeitura de Aracaju",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Portal da Prefeitura de Uberlândia"
       ]
     }
   ]
