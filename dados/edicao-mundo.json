@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-22T16:20:42.146Z",
+  "gerado": "2026-11-22T23:39:08.605Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 40,
-    "fonteLivre": 32,
-    "confirmadas": 1,
+    "pauta": 46,
+    "fonteLivre": 25,
+    "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 13
+    "semFonte": 20
   },
   "fontes": {
     "checadas": 32,
     "responderam": 26,
     "entregando": 11,
-    "itens": 72,
+    "itens": 71,
     "lista": [
+      {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "livre",
         "id": "vaticano",
@@ -27,19 +36,10 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 9,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -48,7 +48,16 @@
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
-        "itens": 7,
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 8,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -58,42 +67,6 @@
         "id": "g1mundo",
         "nome": "g1 Mundo",
         "itens": 7,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "nasa",
-        "nome": "NASA",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
-        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -109,8 +82,35 @@
       },
       {
         "tipo": "livre",
+        "id": "globalvoices-en",
+        "nome": "Global Voices (EN)",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "nasa",
+        "nome": "NASA",
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "conversation",
         "nome": "The Conversation",
+        "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 2,
         "ok": true,
         "respondeu": true,
@@ -235,6 +235,15 @@
       },
       {
         "tipo": "livre",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "wikinews-es",
         "nome": "Wikinoticias",
         "itens": 0,
@@ -253,8 +262,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -271,26 +280,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -304,6 +295,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "voa-pt",
+        "nome": "Voz da América",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -312,21 +312,66 @@
   "circulando": [],
   "pautas": [
     {
+      "titulo": "COP31 termina sem acordo após impasse sobre combustíveis fósseis",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "AP Photo/Khalil Hamra - Khalil Hamra"
+      ]
+    },
+    {
       "titulo": "Eisenkot convida partido de Netanyahu para negociar coalizão em Israel",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 2,
       "tambemEm": [
-        "Euronews"
+        "Euronews.com"
       ]
     },
     {
-      "titulo": "COP31 termina sem acordo após impasse sobre combustíveis fósseis",
+      "titulo": "Como dois refrigeradores abandonados pelo exército dos EUA na Toscana deram origem ao sorvete italiano",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "'Fui coagida a ter um filho': como um bilionário enganou a DJ de sucesso Liv Nervo para que ela engravidasse",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Como dois refrigeradores abandonados pelo exército dos EUA na Toscana deram origem ao sorvete italiano",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "AP Photo/Khalil Hamra - Khalil Hamra"
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "'Fui coagida a ter um filho': como um bilionário enganou a DJ de sucesso Liv Nervo para que ela engravidasse",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "ONU lamenta 'fracasso' da COP31 após impasse sobre combustíveis fósseis",
+      "veiculo": "AP Photo/Khalil Hamra - Khalil Hamra",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
       ]
     },
     {
@@ -348,12 +393,29 @@
       ]
     },
     {
+      "titulo": "Vídeo. COP31 fracassa: UE e outros países rejeitam acordo climático final",
+      "veiculo": "Euronews.com",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Khalil Hamra - Khalil Hamra"
+      ]
+    },
+    {
       "titulo": "Como um adolescente e sua mãe ajudaram a resgatar uma garota desaparecida após um encontro em um jogo online",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
         "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Presidência turca anuncia rejeição do acordo final da COP31, após mais de 2 semanas de negociações",
+      "veiculo": "AP Photo/Khalil Hamra - Khalil Hamra",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Euronews.com"
       ]
     },
     {
@@ -403,27 +465,10 @@
     },
     {
       "titulo": "Gadi Eisenkot convida o partido Likud de Netanyahu para negociações de coligação",
-      "veiculo": "Euronews",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
         "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Vídeo. Gadi Eisenkot convida o partido Likud de Netanyahu para negociações de coligação",
-      "veiculo": "Euronews",
-      "quentura": 1,
-      "tambemEm": [
-        "Folha Mundo"
-      ]
-    },
-    {
-      "titulo": "Ao menos duas pessoas morrem e 10 estão desaparecidas após ataque russo em Kiev",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 Mundo"
       ]
     }
   ]
