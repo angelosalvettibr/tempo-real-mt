@@ -1,31 +1,22 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-21T23:05:50.384Z",
+  "gerado": "2026-11-22T16:20:42.146Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 37,
-    "fonteLivre": 37,
-    "confirmadas": 5,
+    "pauta": 40,
+    "fonteLivre": 32,
+    "confirmadas": 1,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 4
+    "semFonte": 13
   },
   "fontes": {
-    "checadas": 31,
-    "responderam": 25,
+    "checadas": 32,
+    "responderam": 26,
     "entregando": 11,
-    "itens": 74,
+    "itens": 72,
     "lista": [
-      {
-        "tipo": "pauta",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
       {
         "tipo": "livre",
         "id": "vaticano",
@@ -36,9 +27,9 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "folhamundo",
-        "nome": "Folha Mundo",
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 11,
         "ok": true,
         "respondeu": true,
@@ -48,15 +39,42 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 8,
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "folhamundo",
+        "nome": "Folha Mundo",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
+        "itens": 7,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "rfi",
+        "nome": "RFI Brasil",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
         "itens": 6,
         "ok": true,
         "respondeu": true,
@@ -66,25 +84,7 @@
         "tipo": "livre",
         "id": "nasa",
         "nome": "NASA",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
         "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "ab-inter",
-        "nome": "Agência Brasil",
-        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -99,19 +99,19 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "rfi",
-        "nome": "RFI Brasil",
+        "tipo": "livre",
+        "id": "ab-inter",
+        "nome": "Agência Brasil",
         "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 3,
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
+        "itens": 2,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -126,9 +126,18 @@
         "erro": null
       },
       {
+        "tipo": "pauta",
+        "id": "euronews",
+        "nome": "Euronews",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 406"
+      },
+      {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "onu",
+        "nome": "ONU News",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -136,8 +145,8 @@
       },
       {
         "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -163,21 +172,21 @@
       },
       {
         "tipo": "livre",
+        "id": "scidev",
+        "nome": "SciDev.Net",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "usgs",
         "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 404"
-      },
-      {
-        "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "This operation was aborted"
       },
       {
         "tipo": "livre",
@@ -235,15 +244,6 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -253,8 +253,8 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -264,6 +264,15 @@
         "tipo": "livre",
         "id": "irini-news",
         "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -303,7 +312,34 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "'O câncer muda você': princesa Kate Middleton fala sobre doença em documentário da BBC",
+      "titulo": "Eisenkot convida partido de Netanyahu para negociar coalizão em Israel",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Euronews"
+      ]
+    },
+    {
+      "titulo": "COP31 termina sem acordo após impasse sobre combustíveis fósseis",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "AP Photo/Khalil Hamra - Khalil Hamra"
+      ]
+    },
+    {
+      "titulo": "Ataque russo perto de Kiev, na Ucrânia, atinge prédio de apartamentos e deixa mortos e feridos",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Os 20 melhores destinos de viagem em 2027",
       "veiculo": "g1 Mundo",
       "editoria": "internacional",
       "quentura": 1,
@@ -312,7 +348,25 @@
       ]
     },
     {
-      "titulo": "'O câncer muda você': princesa Kate fala sobre doença em documentário da BBC",
+      "titulo": "Como um adolescente e sua mãe ajudaram a resgatar uma garota desaparecida após um encontro em um jogo online",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "A 'utopia socialista' que levou um grupo de australianos idealistas ao Paraguai há mais de 130 anos",
+      "veiculo": "g1 Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Os 20 melhores destinos de viagem em 2027",
       "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
@@ -321,8 +375,17 @@
       ]
     },
     {
-      "titulo": "O que uma antiga cidade subterrânea da Turquia pode nos ensinar sobre como escapar do calor e do frio extremos",
-      "veiculo": "g1 Mundo",
+      "titulo": "Como um adolescente e sua mãe ajudaram a resgatar uma garota desaparecida após um encontro em um jogo online",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "COP31: novo projeto de acordo volta a omitir abandono dos combustíveis fósseis",
+      "veiculo": "AP Photo/Khalil Hamra - Khalil Hamra",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -330,8 +393,33 @@
       ]
     },
     {
-      "titulo": "O que uma antiga cidade subterrânea da Turquia pode nos ensinar sobre como escapar do calor e do frio extremos",
+      "titulo": "A 'utopia socialista' que levou um grupo de australianos idealistas ao Paraguai há mais de 130 anos",
       "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 Mundo"
+      ]
+    },
+    {
+      "titulo": "Gadi Eisenkot convida o partido Likud de Netanyahu para negociações de coligação",
+      "veiculo": "Euronews",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Vídeo. Gadi Eisenkot convida o partido Likud de Netanyahu para negociações de coligação",
+      "veiculo": "Euronews",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Ao menos duas pessoas morrem e 10 estão desaparecidas após ataque russo em Kiev",
+      "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
