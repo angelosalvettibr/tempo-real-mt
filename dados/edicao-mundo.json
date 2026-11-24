@@ -1,22 +1,31 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-24T05:59:21.669Z",
+  "gerado": "2026-11-24T19:34:06.280Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 42,
-    "fonteLivre": 45,
-    "confirmadas": 3,
+    "pauta": 45,
+    "fonteLivre": 59,
+    "confirmadas": 4,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 5
+    "semFonte": 13
   },
   "fontes": {
     "checadas": 30,
-    "responderam": 22,
-    "entregando": 11,
-    "itens": 87,
+    "responderam": 24,
+    "entregando": 14,
+    "itens": 104,
     "lista": [
+      {
+        "tipo": "pauta",
+        "id": "bbcbrasil",
+        "nome": "BBC Brasil",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "folhamundo",
@@ -45,9 +54,18 @@
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "bbcbrasil",
-        "nome": "BBC Brasil",
+        "tipo": "livre",
+        "id": "ec-noticias",
+        "nome": "Comissão Europeia",
+        "itens": 11,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "conversation",
+        "nome": "The Conversation",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -64,27 +82,9 @@
       },
       {
         "tipo": "livre",
-        "id": "ec-noticias",
-        "nome": "Comissão Europeia",
-        "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "onu",
         "nome": "ONU News",
-        "itens": 6,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "conversation",
-        "nome": "The Conversation",
-        "itens": 6,
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -93,7 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 4,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -102,7 +102,16 @@
         "tipo": "pauta",
         "id": "g1mundo",
         "nome": "g1 Mundo",
-        "itens": 4,
+        "itens": 3,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -112,6 +121,24 @@
         "id": "globalvoices-en",
         "nome": "Global Voices (EN)",
         "itens": 2,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "globalvoices-pt",
+        "nome": "Global Voices",
+        "itens": 1,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 1,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -145,30 +172,12 @@
       },
       {
         "tipo": "livre",
-        "id": "globalvoices-en",
-        "nome": "Global Voices (EN)",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "globalvoices-pt",
-        "nome": "Global Voices",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "fetch failed"
-      },
-      {
-        "tipo": "livre",
-        "id": "scidev",
-        "nome": "SciDev.Net",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
+        "erro": "HTTP 404"
       },
       {
         "tipo": "livre",
@@ -181,8 +190,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "usgs",
+        "nome": "USGS",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -190,17 +199,8 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 504"
-      },
-      {
-        "tipo": "livre",
-        "id": "voa-pt",
-        "nome": "Voz da América",
+        "id": "scidev",
+        "nome": "SciDev.Net",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -217,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -244,17 +244,8 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "voa-pt",
+        "nome": "Voz da América",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -280,8 +271,17 @@
       },
       {
         "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -294,26 +294,55 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Donald Trump insta a Nvidia a voltar a contratar o antigo CEO Jensen Huang",
-      "veiculo": "Euronews.com",
-      "quentura": 2,
+      "titulo": "Em vitória de Lula, ajuste fiscal é aprovado sem alterações e segue para sanção",
+      "veiculo": "RFI Brasil",
+      "editoria": "internacional",
+      "quentura": 3,
       "tambemEm": [
-        "BBC Brasil",
-        "Euronews"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "A reviravolta que fez Jensen Huang voltar ao comando da Nvidia após escândalo de traição e espionagem",
-      "veiculo": "BBC Brasil",
-      "editoria": "internacional",
-      "quentura": 1,
+      "titulo": "Coreia do Sul manda residentes de ilha abrigar-se após aviões russos se aproximarem do espaço aéreo",
+      "veiculo": "Euronews.com",
+      "quentura": 2,
       "tambemEm": [
+        "© Sipa / Vitaliy Ankov",
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Coreia do Sul: aviões russos provocam alerta de segurança ao penetrar em zona limite de espaço aéreo",
+      "veiculo": "© Sipa / Vitaliy Ankov",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "Folha Mundo",
         "Euronews.com"
       ]
     },
     {
-      "titulo": "Polícia britânica evacua 12 mil pessoas de show de rapper após liberação de 'substância desconhecida'",
-      "veiculo": "g1 Mundo",
+      "titulo": "Coreia do Sul emite alerta à população após incursão de aviões da Rússia",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 2,
+      "tambemEm": [
+        "© Sipa / Vitaliy Ankov",
+        "Euronews.com"
+      ]
+    },
+    {
+      "titulo": "Brasil terá recessão se Lula não fizer ajuste fiscal mais robusto, diz Eduardo Giannetti",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Papa Francisco afirma em diário que teria visto o Diabo três vezes e as 'portas do inferno'",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
@@ -321,20 +350,66 @@
       ]
     },
     {
-      "titulo": "Milhares de pessoas são retiradas da maior arena do Reino Unido após liberação de substância desconhecida",
+      "titulo": "Gisèle Pelicot diz que editora usou fotos íntimas sem consentimento para promover livro de psicanalista",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Estados Unidos: Donald Trump pede à Nvidia que readmita Jensen Huang como CEO",
-      "veiculo": "Euronews",
+      "titulo": "Gisèle Pelicot tem fotos nuas divulgadas para promover livro e denuncia: 'Me sinto novamente humilhada, exposta e ferida'",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Euronews.com"
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Papa Francisco relata encontros com Diabo em diário publicado em livro póstumo",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "A cantora iraniana que levou 74 chicotadas por se apresentar sem véu no YouTube",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "Folha Mundo"
+      ]
+    },
+    {
+      "titulo": "Irã aplica 74 chibatadas em cantora por se apresentar sem véu",
+      "veiculo": "Folha Mundo",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "BBC Brasil"
+      ]
+    },
+    {
+      "titulo": "Plano de Moretti é um 'primeiro passo', e governo Lula pode fazer outros ajustes fiscais no futuro, afirma Laura Carvalho",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
+      ]
+    },
+    {
+      "titulo": "Câmara aprova ajuste fiscal de Lula: por que pacote é tão polêmico e não deve ser suficiente, segundo economistas",
+      "veiculo": "BBC Brasil",
+      "editoria": "internacional",
+      "quentura": 1,
+      "tambemEm": [
+        "RFI Brasil"
       ]
     }
   ]

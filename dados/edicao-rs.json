@@ -1,22 +1,31 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-11-24T06:01:25.954Z",
+  "gerado": "2026-11-24T19:37:49.122Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 130,
-    "fonteLivre": 59,
-    "confirmadas": 23,
+    "pauta": 129,
+    "fonteLivre": 67,
+    "confirmadas": 15,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 81
+    "semFonte": 73
   },
   "fontes": {
     "checadas": 43,
     "responderam": 23,
     "entregando": 20,
-    "itens": 189,
+    "itens": 196,
     "lista": [
+      {
+        "tipo": "assessoria",
+        "id": "camara-caxias",
+        "nome": "Câmara de Caxias do Sul",
+        "itens": 15,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
       {
         "tipo": "pauta",
         "id": "g1rs",
@@ -30,15 +39,6 @@
         "tipo": "pauta",
         "id": "gn-rs-pelotas",
         "nome": "Pelotas",
-        "itens": 12,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,6 +73,15 @@
       },
       {
         "tipo": "pauta",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
         "id": "gn-rs-santamaria",
         "nome": "Santa Maria",
         "itens": 12,
@@ -99,18 +108,27 @@
         "erro": null
       },
       {
-        "tipo": "resgate",
-        "id": "gzh",
-        "nome": "GZH",
-        "itens": 12,
+        "tipo": "pauta",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
+        "itens": 11,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
+        "tipo": "resgate",
+        "id": "gzh",
+        "nome": "GZH",
+        "itens": 10,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "poa",
+        "nome": "Prefeitura de Porto Alegre",
         "itens": 10,
         "ok": true,
         "respondeu": true,
@@ -129,25 +147,7 @@
         "tipo": "assessoria",
         "id": "defesacivil-rs",
         "nome": "Defesa Civil do RS",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "poa",
-        "nome": "Prefeitura de Porto Alegre",
         "itens": 9,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "sema-rs",
-        "nome": "Sema-RS",
-        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -156,7 +156,7 @@
         "tipo": "assessoria",
         "id": "pc-rs",
         "nome": "Polícia Civil do RS",
-        "itens": 6,
+        "itens": 7,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -172,8 +172,8 @@
       },
       {
         "tipo": "assessoria",
-        "id": "gov-rs",
-        "nome": "Governo do RS",
+        "id": "educacao-rs",
+        "nome": "Secretaria de Educação do RS",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -181,9 +181,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "educacao-rs",
-        "nome": "Secretaria de Educação do RS",
-        "itens": 4,
+        "id": "gov-rs",
+        "nome": "Governo do RS",
+        "itens": 3,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -226,21 +226,21 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "HTTP 404"
-      },
-      {
-        "tipo": "pauta",
         "id": "matinal",
         "nome": "Matinal",
         "itens": 0,
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -370,6 +370,15 @@
       },
       {
         "tipo": "assessoria",
+        "id": "sema-rs",
+        "nome": "Sema-RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "camara-santoangelo",
         "nome": "Câmara de Santo Ângelo",
         "itens": 0,
@@ -390,15 +399,6 @@
         "tipo": "assessoria",
         "id": "caxias",
         "nome": "Prefeitura de Caxias do Sul",
-        "itens": 0,
-        "ok": false,
-        "respondeu": false,
-        "erro": "sem pagina nem sitemap"
-      },
-      {
-        "tipo": "assessoria",
-        "id": "camara-caxias",
-        "nome": "Câmara de Caxias do Sul",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -426,167 +426,166 @@
       "quentura": 4,
       "tambemEm": [
         "Prefeitura Municipal de Botucatu",
-        "Diário de Santa Maria",
+        "realnews.com.br",
         "Claudemir Pereira"
-      ]
-    },
-    {
-      "titulo": "Melo ainda não definiu substituto para Liliana Cardoso na Secretaria de Cultura de Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "PCI Concursos"
-      ]
-    },
-    {
-      "titulo": "Melo ainda não definiu substituto para Liliana Cardoso na Secretaria de Cultura de Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "PCI Concursos"
-      ]
-    },
-    {
-      "titulo": "Melo ainda não definiu substituto para Liliana Cardoso na Secretaria de Cultura de Porto Alegre",
-      "veiculo": "Correio do Povo",
-      "quentura": 3,
-      "tambemEm": [
-        "PCI Concursos"
-      ]
-    },
-    {
-      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
-      "veiculo": "PCI Concursos",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
-      "veiculo": "PCI Concursos",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
-      "veiculo": "PCI Concursos",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Governo federal aprova ajuda humanitária de R$ 4,7 milhões para Tupanciretã",
-      "veiculo": "Sul 21",
-      "quentura": 3,
-      "tambemEm": [
-        "g1 RS",
-        "Partido dos Trabalhadores",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Pelotas prorroga emergência em saúde por mais 12 meses diante da pressão por doenças respiratórias",
-      "veiculo": "GZH",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Pelotas",
-        "Real News"
       ]
     },
     {
       "titulo": "Federasul recebe homenagem pelo centenário na Câmara de Porto Alegre",
       "veiculo": "Jornal do Comércio",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
+        "G1",
         "Sul 21"
       ]
     },
     {
-      "titulo": "Prefeitura prorroga situação de emergência em saúde",
-      "veiculo": "Prefeitura de Pelotas",
+      "titulo": "Caravana de Empregos oferece mais de 130 vagas no setor do varejo nesta terça-feira em Canoas",
+      "veiculo": "– Prefeitura Municipal de Canoas",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 3,
       "tambemEm": [
-        "GZH",
-        "Real News"
-      ]
-    },
-    {
-      "titulo": "Pelotas anuncia prorrogação da emergência em saúde por 12 meses",
-      "veiculo": "Real News",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Pelotas",
+        "Instagram",
+        "Notícias da Aldeia",
         "GZH"
       ]
     },
     {
-      "titulo": "Governos federal e do RS liberam R$ 21 milhões para Tupanciretã após destruição causada por supercélula",
-      "veiculo": "g1 RS",
+      "titulo": "Nesta terça-feira (24), o governo estadual abriu a licitação para as obras do Colégio Tereza Francescutti, em Canoas. O valor total separado para a reconstrução do espaço é de R$ 26,8 milhões. A instituição foi atingida pela enchente de maio de 2024 e seg",
+      "veiculo": "Instagram",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "Sul 21",
+        "– Prefeitura Municipal de Canoas",
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Vereador faz críticas à obra do Perau e a telhas armazenadas; confira o que diz a prefeitura de Santa Maria",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Prefeitura de Pelotas",
+        "Paralelo 29"
+      ]
+    },
+    {
+      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
         "Correio do Povo"
       ]
     },
     {
-      "titulo": "\"Quando cheguei no hospital, vi um cenário de guerra\", conta superintendente da Defesa Civil de Tupanciretã",
-      "veiculo": "GZH",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Pelotas",
-        "– Prefeitura Municipal de Canoas"
-      ]
-    },
-    {
-      "titulo": "Região Sul segue em alerta laranja após tempestades do fim de semana",
-      "veiculo": "Agência Brasil",
+      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
+      "veiculo": "PCI Concursos",
       "editoria": "regional",
       "quentura": 2,
       "tambemEm": [
-        "GZH",
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "IFRS - RS abre seleção para professores substitutos no Campus Porto Alegre",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "ATENÇÃO | Prefeitura esclarece etapas do programa Canoas Minha Casa e orienta beneficiários",
+      "veiculo": "Notícias da Aldeia",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "abc+"
+      ]
+    },
+    {
+      "titulo": "Prefeitura faz mutirão de limpeza no Fátima",
+      "veiculo": "Prefeitura de Pelotas",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Diário de Santa Maria"
+      ]
+    },
+    {
+      "titulo": "Prefeitura esclarece etapas do programa Canoas Minha Casa e orienta beneficiários",
+      "veiculo": "abc+",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Notícias da Aldeia"
+      ]
+    },
+    {
+      "titulo": "» Com R$ 8 bilhões aplicados em rodovias, Estado qualifica malha rodoviária, amplia pavimentações e conclui acessos asfálticos",
+      "veiculo": "Jornal A Plateia",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
         "Portal do Estado do Rio Grande do Sul"
       ]
     },
     {
-      "titulo": "Super Feirão Zero Dívida 2026 permite redução de débitos de contribuintes com prefeitura de Porto Alegre",
-      "veiculo": "Correio do Povo",
+      "titulo": "Prefeitura de Santa Maria doa 400 quilos de ração para cães e gatos ao município de Tupanciretã",
+      "veiculo": "realnews.com.br",
       "editoria": "regional",
-      "quentura": 2,
+      "quentura": 1,
       "tambemEm": [
-        "Sul 21"
+        "Paralelo 29"
       ]
     },
     {
-      "titulo": "Canoas envia equipe da Defesa Civil para auxiliar cidade de Tupanciretã",
-      "veiculo": "– Prefeitura Municipal de Canoas",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Prefeitura de Pelotas",
-        "GZH"
-      ]
-    },
-    {
-      "titulo": "Previsão do tempo hoje para Porto Alegre (RS): sol com algumas nuvens; chove rápido durante o dia e à noite",
+      "titulo": "Tupanciretã, ainda em recuperação após chuva da semana passada, enfrenta novo temporal; saiba até quando",
       "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Rádio Guaíba"
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Após 18 anos de investigação, Justiça condena Prefeitura de Pelotas a restaurar Castelo Simões Lopes",
+      "veiculo": "A Hora do Sul",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "GZH"
+      ]
+    },
+    {
+      "titulo": "Notícia - Prefeitura Mais Perto de Você: serviços gratuitos estarão disponíveis no Jardim Santa Maria I nes...",
+      "veiculo": "Prefeitura Municipal de Botucatu",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Paralelo 29"
+      ]
+    },
+    {
+      "titulo": "Famílias que vivem há 20 anos em área rural de Pelotas terão imóveis regularizados",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Real News"
+      ]
+    },
+    {
+      "titulo": "Com R$ 8 bilhões aplicados em rodovias, Estado qualifica malha rodoviária, amplia pavimentações e conclui acessos asfálticos",
+      "veiculo": "Portal do Estado do Rio Grande do Sul",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Jornal A Plateia"
       ]
     }
   ]
