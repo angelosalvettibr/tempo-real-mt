@@ -1,12 +1,12 @@
 {
   "uf": "mundo",
   "estado": "Mundo",
-  "gerado": "2026-11-26T04:08:56.468Z",
+  "gerado": "2026-11-26T18:24:51.551Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 39,
-    "fonteLivre": 65,
-    "confirmadas": 2,
+    "pauta": 38,
+    "fonteLivre": 60,
+    "confirmadas": 0,
     "publicadas": 0,
     "resgatadas": 0,
     "semFonte": 4
@@ -14,13 +14,22 @@
   "fontes": {
     "checadas": 30,
     "responderam": 24,
-    "entregando": 15,
-    "itens": 104,
+    "entregando": 13,
+    "itens": 98,
     "lista": [
       {
         "tipo": "pauta",
         "id": "folhamundo",
         "nome": "Folha Mundo",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "resgate",
+        "id": "euronews",
+        "nome": "Euronews",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -48,7 +57,7 @@
         "tipo": "livre",
         "id": "ec-noticias",
         "nome": "Comissão Europeia",
-        "itens": 11,
+        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -57,24 +66,6 @@
         "tipo": "pauta",
         "id": "bbcbrasil",
         "nome": "BBC Brasil",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "resgate",
-        "id": "euronews",
-        "nome": "Euronews",
-        "itens": 10,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
-        "id": "onu",
-        "nome": "ONU News",
         "itens": 9,
         "ok": true,
         "respondeu": true,
@@ -91,18 +82,9 @@
       },
       {
         "tipo": "livre",
-        "id": "usgs",
-        "nome": "USGS",
-        "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "g1mundo",
-        "nome": "g1 Mundo",
-        "itens": 4,
+        "id": "onu",
+        "nome": "ONU News",
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -111,7 +93,7 @@
         "tipo": "pauta",
         "id": "rfi",
         "nome": "RFI Brasil",
-        "itens": 3,
+        "itens": 5,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -120,7 +102,16 @@
         "tipo": "livre",
         "id": "ab-inter",
         "nome": "Agência Brasil",
-        "itens": 3,
+        "itens": 4,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "usgs",
+        "nome": "USGS",
+        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -144,18 +135,18 @@
         "erro": null
       },
       {
-        "tipo": "livre",
-        "id": "irini-news",
-        "nome": "Operação EUNAVFOR MED Irini",
-        "itens": 1,
-        "ok": true,
+        "tipo": "pauta",
+        "id": "dw",
+        "nome": "DW Brasil",
+        "itens": 0,
+        "ok": false,
         "respondeu": true,
         "erro": null
       },
       {
         "tipo": "pauta",
-        "id": "dw",
-        "nome": "DW Brasil",
+        "id": "g1mundo",
+        "nome": "g1 Mundo",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -181,17 +172,17 @@
       },
       {
         "tipo": "livre",
-        "id": "eeas-pt",
-        "nome": "Serviço Diplomático da UE",
+        "id": "wikinews-es",
+        "nome": "Wikinoticias",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 429"
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
+        "id": "eeas-pt",
+        "nome": "Serviço Diplomático da UE",
         "itens": 0,
         "ok": false,
         "respondeu": false,
@@ -208,6 +199,15 @@
       },
       {
         "tipo": "livre",
+        "id": "oms-news",
+        "nome": "OMS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "livre",
         "id": "voa-pt",
         "nome": "Voz da América",
         "itens": 0,
@@ -217,8 +217,8 @@
       },
       {
         "tipo": "livre",
-        "id": "oms-news",
-        "nome": "OMS",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
         "itens": 0,
         "ok": false,
         "respondeu": true,
@@ -253,15 +253,6 @@
       },
       {
         "tipo": "livre",
-        "id": "wikinews-es",
-        "nome": "Wikinoticias",
-        "itens": 0,
-        "ok": false,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "livre",
         "id": "unicef-br",
         "nome": "Unicef",
         "itens": 0,
@@ -286,6 +277,15 @@
         "ok": false,
         "respondeu": true,
         "erro": null
+      },
+      {
+        "tipo": "livre",
+        "id": "irini-news",
+        "nome": "Operação EUNAVFOR MED Irini",
+        "itens": 0,
+        "ok": false,
+        "respondeu": true,
+        "erro": null
       }
     ]
   },
@@ -294,25 +294,24 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Acidente com caminhão-tanque deixa pelo menos 30 mortos no Egito",
-      "veiculo": "Folha Mundo",
-      "editoria": "internacional",
+      "titulo": "Vídeo. Asteroide Dimorphos: novas imagens revelam cratera do impacto da NASA",
+      "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
-        "g1 Mundo"
+        "BBC Brasil"
       ]
     },
     {
-      "titulo": "Caminhão-tanque pega fogo e deixa ao menos 30 mortos no Egito; veja VÍDEO",
-      "veiculo": "g1 Mundo",
+      "titulo": "O que revelam imagens do asteroide atingido deliberadamente pela Nasa para testar defesas da Terra",
+      "veiculo": "BBC Brasil",
       "editoria": "internacional",
       "quentura": 1,
       "tambemEm": [
-        "Folha Mundo"
+        "Euronews.com"
       ]
     },
     {
-      "titulo": "Estados Unidos: Exército detona explosivos tóxicos no Iowa e gera receios de contaminação",
+      "titulo": "Indonésia: equipas de resgate procuram 13 mineiros presos em mina ilegal inundada",
       "veiculo": "Euronews.com",
       "quentura": 1,
       "tambemEm": [
@@ -320,7 +319,7 @@
       ]
     },
     {
-      "titulo": "Exército dos EUA detona toneladas de explosivos com chumbo em Iowa",
+      "titulo": "Inundação em mina deixa ao menos 13 mortos na Indonésia",
       "veiculo": "Folha Mundo",
       "editoria": "internacional",
       "quentura": 1,
