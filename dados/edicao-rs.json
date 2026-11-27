@@ -1,21 +1,21 @@
 {
   "uf": "rs",
   "estado": "Rio Grande do Sul",
-  "gerado": "2026-11-26T18:29:11.132Z",
+  "gerado": "2026-11-27T04:10:51.877Z",
   "modelo": "(nenhum)",
   "numeros": {
-    "pauta": 129,
-    "fonteLivre": 70,
-    "confirmadas": 17,
+    "pauta": 131,
+    "fonteLivre": 69,
+    "confirmadas": 25,
     "publicadas": 0,
     "resgatadas": 0,
-    "semFonte": 79
+    "semFonte": 72
   },
   "fontes": {
-    "checadas": 42,
-    "responderam": 25,
-    "entregando": 22,
-    "itens": 199,
+    "checadas": 43,
+    "responderam": 24,
+    "entregando": 21,
+    "itens": 200,
     "lista": [
       {
         "tipo": "assessoria",
@@ -30,6 +30,15 @@
         "tipo": "pauta",
         "id": "g1rs",
         "nome": "g1 RS",
+        "itens": 12,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "pauta",
+        "id": "gn-rs-cap",
+        "nome": "Porto Alegre",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -55,8 +64,8 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-cap",
-        "nome": "Porto Alegre",
+        "id": "gn-rs",
+        "nome": "Rio Grande do Sul",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -73,17 +82,17 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs-canoas",
-        "nome": "Canoas",
+        "id": "gn-rs-santamaria",
+        "nome": "Santa Maria",
         "itens": 12,
         "ok": true,
         "respondeu": true,
         "erro": null
       },
       {
-        "tipo": "pauta",
-        "id": "gn-rs-santamaria",
-        "nome": "Santa Maria",
+        "tipo": "resgate",
+        "id": "sul21",
+        "nome": "Sul21",
         "itens": 12,
         "ok": true,
         "respondeu": true,
@@ -109,18 +118,9 @@
       },
       {
         "tipo": "pauta",
-        "id": "gn-rs",
-        "nome": "Rio Grande do Sul",
+        "id": "gn-rs-canoas",
+        "nome": "Canoas",
         "itens": 11,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "pauta",
-        "id": "sul21",
-        "nome": "Sul21",
-        "itens": 10,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -129,7 +129,16 @@
         "tipo": "assessoria",
         "id": "poa",
         "nome": "Prefeitura de Porto Alegre",
-        "itens": 10,
+        "itens": 9,
+        "ok": true,
+        "respondeu": true,
+        "erro": null
+      },
+      {
+        "tipo": "assessoria",
+        "id": "ssp-rs",
+        "nome": "Secretaria de Segurança do RS",
+        "itens": 9,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -147,7 +156,7 @@
         "tipo": "assessoria",
         "id": "saude-rs",
         "nome": "Secretaria de Saúde do RS",
-        "itens": 7,
+        "itens": 6,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -163,18 +172,9 @@
       },
       {
         "tipo": "assessoria",
-        "id": "seapi-rs",
-        "nome": "Agricultura RS",
+        "id": "educacao-rs",
+        "nome": "Secretaria de Educação do RS",
         "itens": 5,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "ssp-rs",
-        "nome": "Secretaria de Segurança do RS",
-        "itens": 4,
         "ok": true,
         "respondeu": true,
         "erro": null
@@ -183,15 +183,6 @@
         "tipo": "assessoria",
         "id": "pc-rs",
         "nome": "Polícia Civil do RS",
-        "itens": 4,
-        "ok": true,
-        "respondeu": true,
-        "erro": null
-      },
-      {
-        "tipo": "assessoria",
-        "id": "educacao-rs",
-        "nome": "Secretaria de Educação do RS",
         "itens": 4,
         "ok": true,
         "respondeu": true,
@@ -235,12 +226,12 @@
       },
       {
         "tipo": "pauta",
-        "id": "correiodopovo",
-        "nome": "Correio do Povo",
+        "id": "sul21",
+        "nome": "Sul21",
         "itens": 0,
         "ok": false,
         "respondeu": false,
-        "erro": "HTTP 404"
+        "erro": "HTTP 403"
       },
       {
         "tipo": "pauta",
@@ -250,6 +241,15 @@
         "ok": false,
         "respondeu": false,
         "erro": "HTTP 403"
+      },
+      {
+        "tipo": "pauta",
+        "id": "correiodopovo",
+        "nome": "Correio do Povo",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "HTTP 404"
       },
       {
         "tipo": "pauta",
@@ -343,6 +343,15 @@
       },
       {
         "tipo": "assessoria",
+        "id": "seapi-rs",
+        "nome": "Agricultura RS",
+        "itens": 0,
+        "ok": false,
+        "respondeu": false,
+        "erro": "sem pagina nem sitemap"
+      },
+      {
+        "tipo": "assessoria",
         "id": "emater",
         "nome": "Emater",
         "itens": 0,
@@ -411,171 +420,86 @@
   "circulando": [],
   "pautas": [
     {
-      "titulo": "Sol predomina no RS nesta quinta-feira",
-      "veiculo": "Correio do Povo",
-      "quentura": 9,
+      "titulo": "Prefeitura Municipal de São Caetano do Sul",
+      "veiculo": "Prefeitura de São Caetano do Sul",
+      "editoria": "regional",
+      "quentura": 4,
+      "tambemEm": [
+        "PCI Concursos",
+        "GZH",
+        "Expansão"
+      ]
+    },
+    {
+      "titulo": "Zucco anuncia mais secretários e criação de Conselho de Desenvolvimento Econômico no RS",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Jornal O Sul",
+        "Correio do Povo"
+      ]
+    },
+    {
+      "titulo": "SMTT organiza trânsito para eventos neste fim de semana",
+      "veiculo": "Prefeitura de Aracaju",
+      "editoria": "regional",
+      "quentura": 2,
+      "tambemEm": [
+        "Instagram",
+        "Sul 21"
+      ]
+    },
+    {
+      "titulo": "Eduardo Leite visita Pelotas, reabre biblioteca pública, autografa livro biográfico e inaugura obras em escolas na sexta (27)",
+      "veiculo": "Portal do Estado do Rio Grande do Sul",
+      "editoria": "regional",
+      "quentura": 2,
       "tambemEm": [
         "Diário da Manhã Pelotas",
-        "Prefeitura de Pelotas",
-        "Jornal Tradição Regional"
+        "GZH"
       ]
     },
     {
       "titulo": "Com investimento de R$ 13,5 milhões, obras de ampliação da estação do BRT de Santa Maria vão duplicar capacidade de atendimento",
       "veiculo": "Agência Brasília",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 2,
       "tambemEm": [
-        "REDE BRASIL DE TELEVISÃO",
-        "Diário de Santa Maria",
-        "EG NEWS"
-      ]
-    },
-    {
-      "titulo": "Com investimento de R$ 13,5 milhões, obras de ampliação da estação do BRT de Santa Maria vão duplicar capacidade de atendimento",
-      "veiculo": "Foco Nacional",
-      "editoria": "regional",
-      "quentura": 5,
-      "tambemEm": [
-        "Agência Brasília",
         "REDE BRASIL DE TELEVISÃO",
         "Diário de Santa Maria"
       ]
     },
     {
-      "titulo": "Com investimento de R$ 13,5 milhões, obras de ampliação da estação do BRT de Santa Maria vão duplicar capacidade de atendimento",
-      "veiculo": "EG NEWS",
+      "titulo": "Estrada da Barra, em Pelotas, será reconstruída com investimento de mais de R$ 4 milhões",
+      "veiculo": "GZH",
       "editoria": "regional",
-      "quentura": 5,
+      "quentura": 1,
       "tambemEm": [
-        "Agência Brasília",
-        "REDE BRASIL DE TELEVISÃO",
-        "Diário de Santa Maria"
+        "Prefeitura de Pelotas"
       ]
     },
     {
-      "titulo": "Câmara de Porto Alegre aprova política de defesa dos direitos de LGBTQIA+",
-      "veiculo": "Sul21",
+      "titulo": "Justiça manda soltar vereador de Porto Alegre e outros 3 réus presos em investigação sobre desvio milionário de emendas",
+      "veiculo": "g1 RS",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "Sul 21",
-        "Jornal do Comércio"
+        "Sul 21"
       ]
     },
     {
-      "titulo": "Karla Gomes acompanha obras de recapeamento no Jardim Santa Maria",
-      "veiculo": "REDE BRASIL DE TELEVISÃO",
+      "titulo": "Canoas abre programação oficial do Natal 2026",
+      "veiculo": "– Prefeitura Municipal de Canoas",
       "editoria": "regional",
-      "quentura": 3,
+      "quentura": 1,
       "tambemEm": [
-        "Agência Brasília",
-        "EG NEWS",
-        "Foco Nacional"
+        "Sul 21"
       ]
     },
     {
-      "titulo": "Motocicleta é furtada de estacionamento de shopping em Santa Maria",
-      "veiculo": "Diário de Santa Maria",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Agência Brasília",
-        "EG NEWS",
-        "Foco Nacional"
-      ]
-    },
-    {
-      "titulo": "Celina Leão visita nova Feira Permanente de Santa Maria , que recebeu R$ 12,5 milhões em investimentos",
-      "veiculo": "GPS Brasília Portal de Notícias do DF",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Agência Brasília",
-        "EG NEWS",
-        "Foco Nacional"
-      ]
-    },
-    {
-      "titulo": "Pelotas disputa a final da CCDF nesta segunda-feira (30)",
+      "titulo": "Reconstrução da Estrada da Barra tem contrato assinado para começar as obras",
       "veiculo": "Prefeitura de Pelotas",
-      "editoria": "regional",
-      "quentura": 3,
-      "tambemEm": [
-        "Diário da Manhã Pelotas",
-        "Jornal Tradição Regional",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Câmara de Porto Alegre aprova política de defesa dos direitos de LGBTQIA+",
-      "veiculo": "Sul 21",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "Jornal do Comércio"
-      ]
-    },
-    {
-      "titulo": "Câmara de Porto Alegre aprova política de defesa dos direitos de LGBTQIA+",
-      "veiculo": "Sul 21",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Sul21",
-        "Jornal do Comércio"
-      ]
-    },
-    {
-      "titulo": "Jovem de 26 anos é morto a tiros dentro de carro na Zona Norte de Porto Alegre",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 2,
-      "tambemEm": [
-        "Brasil 247",
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Canaliza Caxias dá início às primeiras obras de drenagem e saneamento neste sábado",
-      "veiculo": "Rádio Caxias",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Rádio Solaris"
-      ]
-    },
-    {
-      "titulo": "Porto Alegre entrega obra de R$ 60 milhões contra enchentes com 8 bombas e 7 comportas para reforçar a proteção da Zona Norte",
-      "veiculo": "Brasil 247",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "g1 RS"
-      ]
-    },
-    {
-      "titulo": "Advogados usavam maletas para infiltrar eletrônicos em presídio de alta segurança no RS, diz polícia",
-      "veiculo": "g1 RS",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Saiba quais serviços de limpeza a Prefeitura realizará nesta quinta, 26",
-      "veiculo": "Prefeitura de Aracaju",
-      "editoria": "regional",
-      "quentura": 1,
-      "tambemEm": [
-        "Correio do Povo"
-      ]
-    },
-    {
-      "titulo": "Patrimônio cultural do RS, Theatro São Pedro reabre após mais de um ano de obras e investimento superior a R$ 21 milhões",
-      "veiculo": "g1 RS",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
@@ -583,12 +507,84 @@
       ]
     },
     {
-      "titulo": "Sessão pública do edital para reformulação da saída do Túnel da Conceição será nesta quinta",
-      "veiculo": "Prefeitura de Porto Alegre",
+      "titulo": "Faltando poucas semanas para o fim do ano, o trânsito sobre o túnel da Domingos Martins já está quase todo liberado. A previsão do Departamento Nacional de Infraestrutura de Transportes (Dnit) foi divulgada no início deste mês. Atualmente, quatro das cin",
+      "veiculo": "Instagram",
       "editoria": "regional",
       "quentura": 1,
       "tambemEm": [
-        "Correio do Povo"
+        "Prefeitura de Aracaju"
+      ]
+    },
+    {
+      "titulo": "Sobrinho de Brilhante Ustra assumirá vaga de deputado na Câmara pelo RS",
+      "veiculo": "g1 RS",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "G1"
+      ]
+    },
+    {
+      "titulo": "Sobrinho de Brilhante Ustra assumirá vaga de deputado na Câmara pelo RS",
+      "veiculo": "G1",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "g1 RS"
+      ]
+    },
+    {
+      "titulo": "Dois homens são presos ao tentar furtar fios de poste no bairro Pio X, em Caxias do Sul",
+      "veiculo": "GZH",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Prefeitura de São Caetano do Sul"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de São José do Inhacorá - RS abre concurso para diversos níveis de escolaridade",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Prefeitura de São Caetano do Sul"
+      ]
+    },
+    {
+      "titulo": "Prefeitura de São José do Inhacorá - RS abre seleção para Agente de Saúde e de Endemias",
+      "veiculo": "PCI Concursos",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Prefeitura de São Caetano do Sul"
+      ]
+    },
+    {
+      "titulo": "Karla Gomes acompanha obras de recapeamento no Jardim Santa Maria",
+      "veiculo": "REDE BRASIL DE TELEVISÃO",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Agência Brasília"
+      ]
+    },
+    {
+      "titulo": "Esquema clandestino de anabolizantes que movimentou R$ 173 milhões é alvo de operação da Polícia Federal no RS, SC e PR",
+      "veiculo": "Terra",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Governo Federal"
+      ]
+    },
+    {
+      "titulo": "Motocicleta é furtada de estacionamento de shopping em Santa Maria",
+      "veiculo": "Diário de Santa Maria",
+      "editoria": "regional",
+      "quentura": 1,
+      "tambemEm": [
+        "Agência Brasília"
       ]
     }
   ]
